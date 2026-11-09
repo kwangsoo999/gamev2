@@ -66,9 +66,11 @@ export function setupGameSockets(io: Server) {
     socket.on('player:combat_action', (data: { actionType?: string; skillId?: string; targetId?: string }, ack?: (result: any) => void) => {
       try {
         const characterId = requireJoined(socket);
-        const result = combat.attack(characterId, {
-          actionType: data?.actionType, skillId: data?.skillId, targetId: data?.targetId || '',
-        });
+        const result = data?.actionType === 'skill' && data?.skillId === 'skill_heal'
+          ? { ...combat.heal(characterId, data.skillId), damage: 0, critical: false, monster: null, rewards: null }
+          : combat.attack(characterId, {
+              actionType: data?.actionType, skillId: data?.skillId, targetId: data?.targetId || '',
+            });
         io.to(result.player.regionId).emit('combat:result', {
           characterId, actionType: result.actionType, skillId: result.skillId,
           damage: result.damage, critical: result.critical, monster: result.monster,
