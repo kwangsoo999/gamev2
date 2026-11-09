@@ -31,7 +31,7 @@ export async function registerApi(username: string, email: string, password: str
     if (!res.ok || !json.success) {
       return { success: false, error: json.error || json.message || 'Đăng ký tài khoản thất bại.' };
     }
-    return { success: true, data: json.data };
+    return { success: true, data: { token: json.data.token, account: json.data.account || json.data.user } };
   } catch (err: any) {
     return { success: false, error: err.message || 'Không thể kết nối đến máy chủ xác thực.' };
   }
