@@ -317,7 +317,7 @@ export class WorldScene extends Phaser.Scene {
   /**
    * Casts a Full HD 256px Skill VFX with exact pivot alignment
    */
-  public castSkillVfx(vfxKey: string) {
+  public castSkillVfx(vfxKey: string, sendCombat: boolean = true) {
     const def: SkillVfxDefinition | undefined = SKILL_VFX_REGISTRY[vfxKey];
     if (!def) {
       console.warn(`[SkillVFX] Unknown skill VFX: ${vfxKey}`);
@@ -354,7 +354,7 @@ export class WorldScene extends Phaser.Scene {
     const serverTarget = this.serverMonsters
       .filter((m) => m.alive && m.regionId === this.currentRegionId)
       .sort((a, b) => Phaser.Math.Distance.Between(spawnX, spawnY, a.x, a.y) - Phaser.Math.Distance.Between(spawnX, spawnY, b.x, b.y))[0];
-    if (mappedSkillId && serverTarget) {
+    if (sendCombat && mappedSkillId && serverTarget) {
       networkService.sendCombatAction('skill', mappedSkillId, serverTarget.id);
     }
     if (mappedSkillId && this.threeVfx) {
@@ -436,7 +436,11 @@ export class WorldScene extends Phaser.Scene {
     } else {
       this.isActionLocked = false;
     }
-    this.castSkillVfx('vfx_sword_slash');
+    const target = this.serverMonsters
+      .filter((m) => m.alive && m.regionId === this.currentRegionId)
+      .sort((a, b) => Phaser.Math.Distance.Between(this.player.x, this.player.y, a.x, a.y) - Phaser.Math.Distance.Between(this.player.x, this.player.y, b.x, b.y))[0];
+    if (target) networkService.sendCombatAction('basic_attack', undefined, target.id);
+    this.castSkillVfx('vfx_sword_slash', false);
   }
 
   /**
@@ -897,6 +901,8 @@ export class WorldScene extends Phaser.Scene {
       if (this.currentCharacter && state.characterId === this.currentCharacter.id) {
         Object.assign(this.currentCharacter, state);
         this.isDead = state.dead;
+        this.currentRegionId = state.regionId;
+        if (this.player && Number.isFinite(state.x) && Number.isFinite(state.y)) this.player.setPosition(state.x, state.y);
         window.dispatchEvent(new CustomEvent('elysia-player-state', { detail: state }));
       }
     };
