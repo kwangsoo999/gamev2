@@ -45,6 +45,7 @@ export class WorldScene extends Phaser.Scene {
   }> = new Map();
   private lastNetworkSync = 0;
   private currentRegionId = 'VIL_STARTER';
+  private serverMonsters: any[] = [];
 
   constructor() {
     super({ key: 'WorldScene' });
@@ -335,22 +336,27 @@ export class WorldScene extends Phaser.Scene {
 
     // Three.js Modular VFX Engine integration
     const skillIdMap: Record<string, string> = {
-      vfx_sword_slash: 'skill_sword_slash',
+      vfx_sword_slash: 'skill_slash',
       vfx_fireball: 'skill_fireball',
-      vfx_frost_nova: 'skill_frost_nova',
-      vfx_lightning_strike: 'skill_lightning_strike',
-      vfx_holy_smite: 'skill_holy_smite',
-      vfx_divine_heal: 'skill_divine_heal',
+      vfx_frost_nova: '',
+      vfx_lightning_strike: '',
+      vfx_holy_smite: '',
+      vfx_divine_heal: '',
       vfx_sword_combo: 'skill_sword_combo',
-      vfx_divine_shield: 'skill_divine_shield',
-      vfx_spin_slash: 'skill_spin_slash',
-      vfx_earth_stomp: 'skill_heavy_cleave',
-      vfx_shadow_step: 'skill_homing_missile',
-      vfx_dash_strike: 'skill_arrow_shot',
+      vfx_divine_shield: '',
+      vfx_spin_slash: '',
+      vfx_earth_stomp: '',
+      vfx_shadow_step: '',
+      vfx_dash_strike: '',
     };
 
     const mappedSkillId = skillIdMap[vfxKey];
-    networkService.sendCombatAction('skill', mappedSkillId || vfxKey, nearestDummy?.id, spawnX, spawnY);
+    const serverTarget = this.serverMonsters
+      .filter((m) => m.alive && m.regionId === this.currentRegionId)
+      .sort((a, b) => Phaser.Math.Distance.Between(spawnX, spawnY, a.x, a.y) - Phaser.Math.Distance.Between(spawnX, spawnY, b.x, b.y))[0];
+    if (mappedSkillId && serverTarget) {
+      networkService.sendCombatAction('skill', mappedSkillId, serverTarget.id);
+    }
     if (mappedSkillId && this.threeVfx) {
       const sourcePos = { x: spawnX, y: spawnY };
       const targetPos = nearestDummy
@@ -358,16 +364,8 @@ export class WorldScene extends Phaser.Scene {
         : { x: spawnX + (facingLeft ? -220 : 220), y: spawnY };
 
       this.threeVfx.castSkill(mappedSkillId, sourcePos, targetPos, {
-        onImpact: () => {
-          if (nearestDummy && !nearestDummy.isDead) {
-            this.hitDummy(nearestDummy, def.name);
-          }
-        },
-        onDamageFrame: () => {
-          if (nearestDummy && !nearestDummy.isDead) {
-            this.hitDummy(nearestDummy, def.name);
-          }
-        },
+        onImpact: () => {},
+        onDamageFrame: () => {},
       });
     }
 
@@ -879,22 +877,45 @@ export class WorldScene extends Phaser.Scene {
   private initMultiplayerNetwork(spawnX: number, spawnY: number) {
     networkService.connect();
 
-    const charId = this.currentCharacter?.id || 'char_local_001';
+    const charId = this.currentCharacter?.id || '';
     const charName = this.currentCharacter?.name || 'ELYSIA_NOVICE_FEMALE_001';
     const classId = this.currentCharacter?.classId || 'novice';
     const gender = this.currentCharacter?.gender || 'female';
     const level = this.currentCharacter?.level || 1;
 
-    networkService.joinGame({
-      characterId: charId,
-      name: charName,
-      classId,
-      gender,
-      level,
-      regionId: this.currentRegionId,
-      x: spawnX,
-      y: spawnY,
+    networkService.joinGame(charId, (result) => {
+      if (!result?.success) this.showSkillBanner(result?.error || 'Không thể tham gia máy chủ.');
     });
+
+    networkService.onWorldMonsters = (monsters) => { this.serverMonsters = monsters || []; };
+    networkService.onMonsterRespawned = (monster) => {
+      const index = this.serverMonsters.findIndex((m) => m.id === monster.id);
+      if (index >= 0) this.serverMonsters[index] = monster;
+      else this.serverMonsters.push(monster);
+    };
+    networkService.onPlayerState = (state) => {
+      if (this.currentCharacter && state.characterId === this.currentCharacter.id) {
+        Object.assign(this.currentCharacter, state);
+        this.isDead = state.dead;
+        window.dispatchEvent(new CustomEvent('elysia-player-state', { detail: state }));
+      }
+    };
+    networkService.onCombatResult = (result) => {
+      if (result?.monster) {
+        const index = this.serverMonsters.findIndex((m) => m.id === result.monster.id);
+        if (index >= 0) this.serverMonsters[index] = result.monster;
+        window.dispatchEvent(new CustomEvent('elysia-target-hit', { detail: {
+          name: result.monster.name, hp: result.monster.hp, maxHp: result.monster.maxHp, level: result.monster.level,
+        }}));
+        window.dispatchEvent(new CustomEvent('elysia-floating-dmg', { detail: {
+          x: window.innerWidth / 2, y: window.innerHeight / 2 - 50, damage: result.damage, isCrit: result.critical,
+        }}));
+      }
+    };
+    networkService.onCombatRewards = (rewards) => {
+      this.showSkillBanner(`+${rewards.exp} EXP  +${rewards.gold} Gold${rewards.drops?.length ? ` • ${rewards.drops.length} vật phẩm` : ''}`);
+      window.dispatchEvent(new CustomEvent('elysia-combat-rewards', { detail: rewards }));
+    };
 
     networkService.onWorldPlayers = (players: RemotePlayer[]) => {
       for (const p of players) {
