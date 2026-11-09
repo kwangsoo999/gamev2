@@ -199,7 +199,7 @@ export class WorldScene extends Phaser.Scene {
     });
 
     // The starter village is a protected safe zone: no local combat dummies or fake loot.
-    this.initMultiplayerNetwork(spawnX, spawnY);
+    this.initMultiplayerNetwork();
 
   }
 
@@ -609,6 +609,10 @@ export class WorldScene extends Phaser.Scene {
 
   public updatePlayerCharacter(char: CharacterEntity) {
     this.currentCharacter = char;
+    if (this.player && Number.isFinite(char.x) && Number.isFinite(char.y)) {
+      this.player.setPosition(char.x, char.y);
+      this.shadow?.setPosition(char.x, char.y);
+    }
     if (this.nameplate) {
       this.nameplate.setText(char.name);
     }
@@ -639,7 +643,7 @@ export class WorldScene extends Phaser.Scene {
     }
 
     // A character is only allowed into multiplayer after its account-owned record exists.
-    this.initMultiplayerNetwork(char.x, char.y);
+    this.initMultiplayerNetwork();
 
     // Update HUD
     const hudDisplay = document.getElementById('active-character-display');
@@ -828,20 +832,13 @@ export class WorldScene extends Phaser.Scene {
   /**
    * Connects to Authoritative Socket.IO Gateway
    */
-  private initMultiplayerNetwork(spawnX: number, spawnY: number) {
+  private initMultiplayerNetwork() {
     if (!this.currentCharacter || this.networkStarted) return;
     this.networkStarted = true;
     networkService.connect();
 
     const charId = this.currentCharacter.id;
-    const charName = this.currentCharacter.name;
-    const classId = this.currentCharacter.classId;
-    const gender = this.currentCharacter.gender;
-    const level = this.currentCharacter.level;
-
-    networkService.joinGame(charId, (result) => {
-      if (!result?.success) this.showSkillBanner(result?.error || 'Không thể tham gia máy chủ.');
-    });
+    
 
     networkService.onWorldMonsters = (monsters) => { this.serverMonsters = monsters || []; };
     networkService.onMonsterRespawned = (monster) => {
@@ -904,17 +901,6 @@ export class WorldScene extends Phaser.Scene {
         remote.nameplate.destroy();
         remote.titleplate.destroy();
         this.remotePlayers.delete(data.socketId);
-      }
-    };
-
-    networkService.onPlayerAction = (data) => {
-      const remote = this.remotePlayers.get(data.socketId);
-      if (remote && data.skillId && this.threeVfx) {
-        this.threeVfx.castSkill(
-          data.skillId,
-          { x: remote.sprite.x, y: remote.sprite.y },
-          { x: remote.sprite.x + (remote.sprite.flipX ? -150 : 150), y: remote.sprite.y }
-        );
       }
     };
   }
