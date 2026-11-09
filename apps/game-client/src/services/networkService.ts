@@ -24,6 +24,7 @@ export class NetworkService {
   public onCombatRewards?: (data: any) => void;
   public onPlayerState?: (data: CombatSnapshot) => void;
   public onWorldMonsters?: (monsters: any[]) => void;
+  public onMonsterRespawned?: (monster: any) => void;
   public onChatReceived?: (msg: ChatMessagePayload) => void;
   public onConnectionError?: (message: string) => void;
 
@@ -44,6 +45,7 @@ export class NetworkService {
     this.socket.on('player:left', (data) => this.onPlayerLeft?.(data));
     this.socket.on('player:state', (data: CombatSnapshot) => this.onPlayerState?.(data));
     this.socket.on('world:monsters', (data: any[]) => this.onWorldMonsters?.(data));
+    this.socket.on('world:monster_respawned', (monster: any) => this.onMonsterRespawned?.(monster));
     this.socket.on('combat:result', (data) => this.onCombatResult?.(data));
     this.socket.on('combat:rewards', (data) => this.onCombatRewards?.(data));
     this.socket.on('combat:error', (data) => this.onConnectionError?.(data.message));
