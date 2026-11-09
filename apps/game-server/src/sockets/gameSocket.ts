@@ -105,6 +105,17 @@ export function setupGameSockets(io: Server) {
       } catch (error: any) { ack?.({ success: false, error: error.message }); }
     });
 
+
+    socket.on('player:use_item', (data: { itemId?: string }, ack?: (result: any) => void) => {
+      try {
+        const characterId = requireJoined(socket);
+        const result = combat.useItem(characterId, String(data?.itemId || ''));
+        socket.emit('player:state', result.player);
+        socket.emit('inventory:item_used', result);
+        ack?.({ success: true, data: result });
+      } catch (error: any) { ack?.({ success: false, error: error.message }); }
+    });
+
     socket.on('player:respawn', (_data: unknown, ack?: (result: any) => void) => {
       try {
         const characterId = requireJoined(socket);
