@@ -24,7 +24,7 @@ export class WorldMapModal {
     backdrop.id = 'modal-world-map';
 
     backdrop.innerHTML = `
-      <div class="elysia-modal-window" style="width: 860px; max-width: 95vw; height: 560px; max-height: 90vh;">
+      <div class="elysia-modal-window mien-mong-map-window" style="width: 860px; max-width: 95vw; height: 560px; max-height: 90vh;">
         <!-- HEADER -->
         <div class="elysia-window-header">
           <div class="elysia-window-title">
@@ -35,7 +35,7 @@ export class WorldMapModal {
         </div>
 
         <!-- CONTINENT MAP DISPLAY -->
-        <div style="flex: 1; position: relative; background: radial-gradient(circle, #152238 0%, #070d18 90%); overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <div class="mien-mong-map-canvas" style="flex: 1; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
           <!-- Fantasy Map Grid / Compass Lines -->
           <svg style="position: absolute; width: 100%; height: 100%; opacity: 0.15;" xmlns="http://www.w3.org/2000/svg">
             <circle cx="50%" cy="50%" r="180" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="6 4" />
