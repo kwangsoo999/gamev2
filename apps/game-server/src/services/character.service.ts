@@ -16,7 +16,9 @@ export class CharacterService {
       stats?: PrimaryAttributes;
     }
   ): Promise<CharacterEntity> {
+    if (!payload || typeof payload !== 'object') throw new Error('Dữ liệu nhân vật không hợp lệ.');
     const { name, gender, classId, appearance, stats } = payload;
+    if (gender !== 'male' && gender !== 'female') throw new Error('Giới tính nhân vật không hợp lệ.');
 
     // 1. Validate name
     const nameCheck = validateCharacterName(name);
@@ -50,11 +52,13 @@ export class CharacterService {
       throw new Error('Tài khoản đã đạt giới hạn tối đa 4 nhân vật.');
     }
 
+    const safeHairColor = typeof appearance?.hairColor === 'string' && /^#[0-9a-fA-F]{6}$/.test(appearance.hairColor) ? appearance.hairColor : '#1a1a24';
+    const safeEyeColor = typeof appearance?.eyeColor === 'string' && /^#[0-9a-fA-F]{6}$/.test(appearance.eyeColor) ? appearance.eyeColor : '#2563eb';
     const defaultAppearance: CharacterAppearance = {
       gender,
       hairstyleId: appearance?.hairstyleId || (gender === 'female' ? 'f_long' : 'm_short'),
-      hairColor: appearance?.hairColor || '#1a1a24',
-      eyeColor: appearance?.eyeColor || '#2563eb',
+      hairColor: safeHairColor,
+      eyeColor: safeEyeColor,
       outfitId: appearance?.outfitId || 'novice_tunic',
     };
 
@@ -78,7 +82,7 @@ export class CharacterService {
       ],
       regionId: 'VIL_STARTER',
       x: 1000,
-      y: 1000,
+      y: 1350,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
