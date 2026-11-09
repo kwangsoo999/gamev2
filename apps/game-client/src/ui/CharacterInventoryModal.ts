@@ -29,32 +29,31 @@ export class CharacterInventoryModal {
   private isOpen = false;
 
   // Available stat points to distribute
-  private availableStatPoints = 15;
+  private availableStatPoints = 9;
 
-  // 9 Core MMORPG Attributes
+  // 9 Core MMORPG Attributes matching Miền Mộng UI
   private attributes: AttributeData[] = [
-    { key: 'str', name: 'Sức Mạnh', abbr: 'STR', val: 14, allocated: 0, desc: 'Tăng Sát Thương Vật Lý (+2.5 ATK / điểm)' },
-    { key: 'vit', name: 'Thể Lực', abbr: 'VIT', val: 12, allocated: 0, desc: 'Tăng Lượng Máu Tối Đa (+18 HP / điểm) & Giáp Cơ Bản' },
-    { key: 'agi', name: 'Nhanh Nhẹn', abbr: 'AGI', val: 13, allocated: 0, desc: 'Tăng Tốc Độ Đánh (+1.2%) & Khả Năng Né Tránh' },
-    { key: 'dex', name: 'Khéo Léo', abbr: 'DEX', val: 10, allocated: 0, desc: 'Tăng Độ Chính Xác Đòn Đánh & Xuyên Thấu Giáp' },
-    { key: 'int', name: 'Trí Tuệ', abbr: 'INT', val: 9, allocated: 0, desc: 'Tăng Sát Thương Ma Pháp (+3 MATK) & Năng Lượng Tối Đa (+12 MP)' },
-    { key: 'per', name: 'Cảm Nhận', abbr: 'PER', val: 11, allocated: 0, desc: 'Tăng Tỷ Lệ Đòn Đánh Bạo Kích (+0.3% Crit Rate)' },
-    { key: 'wil', name: 'Ý Chí', abbr: 'WIL', val: 10, allocated: 0, desc: 'Tăng Kháng Hiệu Ứng Bất Lợi & Kháng Sát Thương Phép (+1.5%)' },
-    { key: 'cha', name: 'Mê Lực', abbr: 'CHA', val: 8, allocated: 0, desc: 'Giảm Tiêu Hao Mana Khi Thi Triển Chiêu Thức & Tăng Điểm Uy Tín' },
-    { key: 'luk', name: 'May Mắn', abbr: 'LUK', val: 9, allocated: 0, desc: 'Tăng Tỷ Lệ Rơi Vật Phẩm Hiếm (+0.5%) & Thành Công Rèn Đúc' },
+    { key: 'str', name: 'Sức mạnh', abbr: '🛡️', val: 24, allocated: 0, desc: 'Tăng Sát Thương Vật Lý (+2.5 ATK / điểm)' },
+    { key: 'con', name: 'Thể chất', abbr: '❤️', val: 110, allocated: 0, desc: 'Tăng Sinh Lực Tối Đa (+18 HP / điểm) & Giáp' },
+    { key: 'agi', name: 'Nhanh nhẹn', abbr: '🪶', val: 18, allocated: 0, desc: 'Tăng Tốc Độ Đánh & Khả Năng Né Tránh' },
+    { key: 'dex', name: 'Khéo léo', abbr: '🎯', val: 22, allocated: 0, desc: 'Tăng Độ Chính Xác & Xuyên Giáp' },
+    { key: 'int', name: 'Trí tuệ', abbr: '📖', val: 30, allocated: 0, desc: 'Tăng Sát Thương Phép & Năng Lượng' },
+    { key: 'per', name: 'Cảm nhận', abbr: '👁️', val: 16, allocated: 0, desc: 'Tăng Tỷ Lệ Đòn Đánh Bạo Kích' },
+    { key: 'wil', name: 'Ý chí', abbr: '🔮', val: 20, allocated: 0, desc: 'Tăng Kháng Phép & Kháng Hiệu Ứng' },
+    { key: 'cha', name: 'Sức hút', abbr: '⭐', val: 12, allocated: 0, desc: 'Tăng Điểm Uy Tín & Quan Hệ NPC' },
+    { key: 'luk', name: 'May mắn', abbr: '🍀', val: 14, allocated: 0, desc: 'Tăng Tỷ Lệ Rơi Vật Phẩm Hiếm' },
   ];
 
-  // 9 Equipment Slots
+  // 8 Equipment Slots
   private equipmentSlots: Record<string, EquipSlotItem> = {
     helmet: { slotKey: 'helmet', name: 'Mũ / Nón', silhouette: '👑', item: null },
-    necklace: { slotKey: 'necklace', name: 'Dây Chuyền', silhouette: '📿', item: null },
-    weapon: { slotKey: 'weapon', name: 'Vũ Khí Chính', silhouette: '⚔️', item: null },
-    ring: { slotKey: 'ring', name: 'Nhẫn Thánh', silhouette: '💍', item: null },
-    armor: { slotKey: 'armor', name: 'Áo Giáp', silhouette: '🛡️', item: null },
-    shield: { slotKey: 'shield', name: 'Khiên / Phụ Khí', silhouette: '🔰', item: null },
-    gloves: { slotKey: 'gloves', name: 'Găng Tay', silhouette: '🧤', item: null },
-    boots: { slotKey: 'boots', name: 'Bốt Chiến Binh', silhouette: '👢', item: null },
-    accessory: { slotKey: 'accessory', name: 'Phụ Kiện', silhouette: '💎', item: null },
+    weapon: { slotKey: 'weapon', name: 'Vũ Khí', silhouette: '⚔️', item: { primaryAssetUrl: '/assets/items/mien_mong/sword.png', name: 'Kiếm Thép Tân Thủ' } as any },
+    gloves: { slotKey: 'gloves', name: 'Găng Tay', silhouette: '🧤', item: { primaryAssetUrl: '/assets/items/mien_mong/equip_gloves.png', name: 'Găng Da Tân Thủ' } as any },
+    boots: { slotKey: 'boots', name: 'Bốt Chiến Binh', silhouette: '👢', item: { primaryAssetUrl: '/assets/items/mien_mong/boots.png', name: 'Bốt Da Phiêu Lưu' } as any },
+    cape: { slotKey: 'cape', name: 'Khăn / Choàng', silhouette: '🧣', item: null },
+    armor: { slotKey: 'armor', name: 'Áo Giáp', silhouette: '🛡️', item: { primaryAssetUrl: '/assets/items/mien_mong/equip_tunic.png', name: 'Áo Phiêu Lưu Xanh' } as any },
+    amulet: { slotKey: 'amulet', name: 'Bùa Hộ Mệnh', silhouette: '⏱️', item: { primaryAssetUrl: '/assets/items/mien_mong/equip_amulet.png', name: 'Đồng Hồ Quả Quýt' } as any },
+    accessory: { slotKey: 'accessory', name: 'Phụ Kiện', silhouette: '🪶', item: null },
   };
 
   // 24 Inventory Slots
@@ -63,8 +62,8 @@ export class CharacterInventoryModal {
   private selectedSlotIndex: number | null = null;
 
   // Currencies
-  private gold = 125400;
-  private rubies = 1250;
+  private gold = 12420;
+  private silver = 350;
 
   // Callbacks
   public onEquipWeapon?: (weapon: WeaponEntity) => void;
@@ -82,48 +81,45 @@ export class CharacterInventoryModal {
     backdrop.id = 'modal-character-inventory';
 
     backdrop.innerHTML = `
-      <div class="elysia-modal-window char-inv-3col-window">
-        <!-- HEADER -->
-        <div class="elysia-window-header">
-          <div class="elysia-window-title">
-            <span>⚜️</span>
-            <span>THÔNG TIN NHÂN VẬT & TÚI ĐỒ (CHARACTER & INVENTORY)</span>
+      <div class="elysia-modal-window char-inv-3col-window mien-mong-parchment-window">
+        <!-- HEADER (EXACT MIEN MONG DESIGN) -->
+        <div class="mien-mong-header">
+          <div class="header-char-brief">
+            <div class="header-avatar-ring">
+              <img src="/assets/characters/tada/tada_avatar.png" class="header-avatar-img" alt="Tada" />
+            </div>
+            <div class="header-char-text">
+              <span class="header-name">Tada</span>
+              <span class="header-level">Lv. 12</span>
+            </div>
           </div>
-          <button class="elysia-btn-close" id="btn-close-char-inv">✕</button>
+
+          <div class="header-points-pill" id="stat-points-counter-pill">
+            Điểm tiềm năng: <strong id="stat-points-counter">${this.availableStatPoints}</strong>
+          </div>
+
+          <button class="mien-mong-btn-close" id="btn-close-char-inv" title="Đóng [ESC / C / I]">✕</button>
         </div>
 
         <!-- 3-COLUMN BODY -->
-        <div class="char-inv-body">
-          <!-- COLUMN 1: CHARACTER STATS & 9 ATTRIBUTES -->
-          <div class="char-stats-col">
-            <div class="char-profile-header-card">
-              <img src="/assets/characters/female/novice/master/novice_female_master_256.png" class="char-thumb-avatar" alt="Avatar" />
-              <div class="char-profile-info">
-                <span style="font-family: var(--elysia-font-title); font-size: 15px; font-weight: 700; color: var(--elysia-gold);">Tada</span>
-                <span style="font-size: 11px; color: #94a3b8;">Lv.12 | Kiếm Sĩ Tân Thủ</span>
-                <span style="font-size: 11.5px; font-weight: 700; color: #fde047;">⚔️ Lực chiến: 2,480</span>
-              </div>
-            </div>
-
-            <!-- STAT POINTS BADGE -->
-            <div class="stat-points-badge">
-              <span>Điểm tiềm năng:</span>
-              <strong style="color: #4ade80; font-size: 13px;" id="stat-points-counter">${this.availableStatPoints} điểm</strong>
-            </div>
+        <div class="char-inv-body mien-mong-body">
+          <!-- COLUMN 1: CHỈ SỐ (STATS) -->
+          <div class="char-stats-col mien-mong-panel">
+            <div class="panel-section-title">CHỈ SỐ</div>
 
             <!-- 9 ATTRIBUTES LIST -->
-            <div class="attributes-list" id="attributes-list-container">
+            <div class="attributes-list mien-mong-attr-list" id="attributes-list-container">
               ${this.attributes
                 .map(
                   (a) => `
-                <div class="attribute-row" data-attr-key="${a.key}" title="${a.desc}">
+                <div class="attribute-row mien-mong-attr-row" data-attr-key="${a.key}" title="${a.desc}">
                   <span class="attr-name-tag">
-                    <strong>${a.abbr}</strong>
-                    <span>${a.name}</span>
+                    <span class="attr-emoji-icon">${a.abbr}</span>
+                    <span class="attr-label-name">${a.name}</span>
                   </span>
                   <div class="attr-val-box">
                     <span class="attr-val-num" id="attr-val-${a.key}">${a.val + a.allocated}</span>
-                    <button class="attr-btn-plus" data-plus-key="${a.key}" title="Cộng 1 điểm ${a.name}">+</button>
+                    <button class="attr-btn-plus mien-mong-plus" data-plus-key="${a.key}" title="Cộng 1 điểm ${a.name}">+</button>
                   </div>
                 </div>
               `
@@ -131,98 +127,86 @@ export class CharacterInventoryModal {
                 .join('')}
             </div>
 
-            <!-- ALLOCATION BUTTONS -->
-            <div style="display: flex; gap: 8px; margin-top: auto;">
-              <button class="inv-action-btn" id="btn-confirm-stats" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border-color: #34d399;">Xác Nhận</button>
-              <button class="inv-action-btn" id="btn-reset-stats">Thiết Lập Lại</button>
+            <!-- VOCATION BONUS FOOTNOTE -->
+            <div class="vocation-bonus-note">
+              Khéo léo từ nghề: +2
+            </div>
+
+            <!-- ALLOCATION BUTTON -->
+            <div style="margin-top: auto; padding-top: 8px;">
+              <button class="mien-mong-btn-confirm" id="btn-confirm-stats">XÁC NHẬN</button>
             </div>
           </div>
 
-          <!-- COLUMN 2: FULL-BODY PAPERDOLL & 9 EQUIPMENT SLOTS -->
-          <div class="char-paperdoll-col">
-            <div style="text-align: center;">
-              <span style="font-family: var(--elysia-font-title); font-size: 12px; font-weight: 700; color: var(--elysia-gold); letter-spacing: 0.8px;">
-                TRANG BỊ CHIẾN ĐẤU (EQUIPMENT)
-              </span>
-            </div>
+          <!-- COLUMN 2: TRANG BỊ (EQUIPMENT) -->
+          <div class="char-paperdoll-col mien-mong-panel">
+            <div class="panel-section-title">TRANG BỊ</div>
 
-            <div class="equipment-layout-grid">
-              <!-- LEFT SLOTS: HELMET, NECKLACE, WEAPON, RING -->
+            <div class="equipment-layout-grid mien-mong-equip-grid">
+              <!-- LEFT SLOTS: HELMET, WEAPON, GLOVES, BOOTS -->
               <div class="equip-slots-left">
                 <div class="equip-slot-box" data-equip-slot="helmet" title="Mũ / Nón">
                   <span class="equip-slot-silhouette">👑</span>
                 </div>
-                <div class="equip-slot-box" data-equip-slot="necklace" title="Dây Chuyền">
-                  <span class="equip-slot-silhouette">📿</span>
+                <div class="equip-slot-box equipped" data-equip-slot="weapon" title="Kiếm Thép Tân Thủ">
+                  <img src="/assets/items/mien_mong/sword.png" class="equip-item-icon" alt="Kiếm Thép" />
                 </div>
-                <div class="equip-slot-box" data-equip-slot="weapon" title="Vũ Khí Chính">
-                  <span class="equip-slot-silhouette">⚔️</span>
+                <div class="equip-slot-box equipped" data-equip-slot="gloves" title="Găng Tay Da">
+                  <img src="/assets/items/mien_mong/equip_gloves.png" class="equip-item-icon" alt="Găng Tay" />
                 </div>
-                <div class="equip-slot-box" data-equip-slot="ring" title="Nhẫn">
-                  <span class="equip-slot-silhouette">💍</span>
+                <div class="equip-slot-box equipped" data-equip-slot="boots" title="Bốt Da Phiêu Lưu">
+                  <img src="/assets/items/mien_mong/boots.png" class="equip-item-icon" alt="Bốt Da" />
                 </div>
               </div>
 
-              <!-- CENTER: FULL-BODY PAPERDOLL SHOWCASE -->
-              <div class="paperdoll-center-stage">
-                <img src="/assets/characters/female/novice/master/novice_female_master_256.png" class="paperdoll-full-chibi" id="paperdoll-chibi-render" alt="Master Character" />
+              <!-- CENTER: FULL-BODY CHIBI TADA -->
+              <div class="paperdoll-center-stage mien-mong-paperdoll-stage">
+                <img src="/assets/characters/tada/tada_paperdoll.png" class="paperdoll-full-chibi" id="paperdoll-chibi-render" alt="Tada Character" />
               </div>
 
-              <!-- RIGHT SLOTS: ARMOR, SHIELD, GLOVES, BOOTS, ACCESSORY -->
+              <!-- RIGHT SLOTS: CAPE, ARMOR, AMULET, ACCESSORY -->
               <div class="equip-slots-right">
-                <div class="equip-slot-box" data-equip-slot="armor" title="Áo Giáp">
-                  <span class="equip-slot-silhouette">🛡️</span>
+                <div class="equip-slot-box" data-equip-slot="cape" title="Khăn / Choàng">
+                  <span class="equip-slot-silhouette">🧣</span>
                 </div>
-                <div class="equip-slot-box" data-equip-slot="shield" title="Khiên / Tay Phụ">
-                  <span class="equip-slot-silhouette">🔰</span>
+                <div class="equip-slot-box equipped" data-equip-slot="armor" title="Áo Phiêu Lưu Xanh">
+                  <img src="/assets/items/mien_mong/equip_tunic.png" class="equip-item-icon" alt="Áo Phiêu Lưu" />
                 </div>
-                <div class="equip-slot-box" data-equip-slot="gloves" title="Găng Tay">
-                  <span class="equip-slot-silhouette">🧤</span>
+                <div class="equip-slot-box equipped" data-equip-slot="amulet" title="Đồng Hồ Bùa Hộ Mệnh">
+                  <img src="/assets/items/mien_mong/equip_amulet.png" class="equip-item-icon" alt="Đồng Hồ Bùa" />
                 </div>
-                <div class="equip-slot-box" data-equip-slot="boots" title="Bốt Chiến Binh">
-                  <span class="equip-slot-silhouette">👢</span>
+                <div class="equip-slot-box" data-equip-slot="accessory" title="Phụ Kiện / Lông Vũ">
+                  <span class="equip-slot-silhouette">🪶</span>
                 </div>
               </div>
-            </div>
-
-            <div style="font-size: 10px; color: #64748b; text-align: center; margin-top: 6px;">
-              Double-click vào vật phẩm trong túi đồ để trang bị / tháo gỡ
             </div>
           </div>
 
-          <!-- COLUMN 3: 24-SLOT INVENTORY (6x4) & CURRENCIES -->
-          <div class="char-inventory-col">
+          <!-- COLUMN 3: TÚI ĐỒ · 16/24 (INVENTORY) -->
+          <div class="char-inventory-col mien-mong-panel">
+            <div class="panel-section-title">TÚI ĐỒ · 16/24</div>
+
             <!-- TABS -->
-            <div class="inventory-tabs-row">
-              <button class="inv-tab-btn active" data-cat="all">Tất Cả</button>
-              <button class="inv-tab-btn" data-cat="weapon">Trang Bị</button>
-              <button class="inv-tab-btn" data-cat="potion">Tiêu Hao</button>
-              <button class="inv-tab-btn" data-cat="material">Nguyên Liệu</button>
-              <button class="inv-tab-btn" data-cat="quest">Nhiệm Vụ</button>
+            <div class="inventory-tabs-row mien-mong-tabs">
+              <button class="inv-tab-btn active" data-cat="all">Tất cả</button>
+              <button class="inv-tab-btn" data-cat="weapon">Trang bị</button>
+              <button class="inv-tab-btn" data-cat="potion">Tiêu hao</button>
             </div>
 
             <!-- 24 INVENTORY SLOTS GRID (6x4) -->
-            <div class="inventory-slots-grid" id="inventory-slots-grid-root">
+            <div class="inventory-slots-grid mien-mong-grid" id="inventory-slots-grid-root">
               <!-- Dynamically populated -->
             </div>
 
-            <!-- INVENTORY ACTIONS -->
-            <div class="inv-controls-row">
-              <button class="inv-action-btn" id="btn-inv-sort" title="Tự động sắp xếp">⚡ Sắp Xếp</button>
-              <button class="inv-action-btn" id="btn-inv-split" title="Tách số lượng vật phẩm">Tách Ô</button>
-              <button class="inv-action-btn" id="btn-inv-lock" title="Khóa vật phẩm giá trị">🔒 Khóa</button>
-              <button class="inv-action-btn" id="btn-inv-expand" style="color: #facc15;" title="Mở rộng thêm ô">+6 Ô</button>
-            </div>
-
             <!-- CURRENCY FOOTER -->
-            <div class="inv-currency-footer">
-              <div class="currency-badge currency-gold">
-                <span>🪙 Vàng:</span>
+            <div class="inv-currency-footer mien-mong-currency">
+              <div class="currency-badge currency-gold" title="Đồng xu cổ">
+                <span class="coin-disc coin-bronze">🪙</span>
                 <span id="inv-gold-display">${this.gold.toLocaleString()}</span>
               </div>
-              <div class="currency-badge currency-rubies">
-                <span>💎 Kim Cương:</span>
-                <span id="inv-rubies-display">${this.rubies.toLocaleString()}</span>
+              <div class="currency-badge currency-rubies" title="Bạc / Bội tinh">
+                <span class="coin-disc coin-silver">⚪</span>
+                <span id="inv-silver-display">${this.silver.toLocaleString()}</span>
               </div>
             </div>
           </div>
@@ -239,121 +223,52 @@ export class CharacterInventoryModal {
   private seedDefaultInventory() {
     this.inventorySlots = new Array(24).fill(null);
 
-    // Initial items in inventory
-    this.inventorySlots[0] = {
-      id: 'ITEM_SWORD_NOVICE',
-      itemId: 'ITEM_SWORD_NOVICE',
-      name: 'Kiếm Thép Tân Thủ',
-      description: 'Thanh kiếm thép tôi luyện sắc bén, trang bị khởi đầu tuyệt hảo cho kiếm sĩ.',
-      category: 'weapon',
-      rarity: 'common',
-      requiredLevel: 1,
-      requiredClasses: ['swordsman', 'knight'],
-      buyPrice: 50,
-      sellPrice: 15,
-      stackLimit: 1,
-      weight: 2,
-      isTradable: true,
-      isSellable: true,
-      isDroppable: true,
-      isAccountBound: false,
-      isCharacterBound: false,
-      status: 'PUBLISHED',
-      primaryAssetUrl: '/assets/weapons/novice_sword_icon.png',
-      inventoryAssetUrl: '/assets/weapons/novice_sword_icon.png',
-    } as any;
+    const mienMongItems = [
+      { id: 'ITEM_MM_SWORD', name: 'Kiếm Thép Tân Thủ', category: 'weapon', qty: 1, icon: '/assets/items/mien_mong/sword.png', desc: 'Thanh kiếm thép sắc bén khởi đầu hành trình phiêu lưu.' },
+      { id: 'ITEM_MM_HERBS', name: 'Thảo Dược Xanh', category: 'potion', qty: 12, icon: '/assets/items/mien_mong/herbs.png', desc: 'Lá cây thảo mộc hái từ bìa rừng, có tác dụng trị thương nhẹ.' },
+      { id: 'ITEM_MM_POTION_HP', name: 'Bình Máu Nhỏ', category: 'potion', qty: 15, icon: '/assets/items/mien_mong/potion_hp.png', desc: 'Dược liệu hồi phục tức thì 150 điểm sinh lực (HP).' },
+      { id: 'ITEM_MM_POTION_MP', name: 'Bình Mana Lam', category: 'potion', qty: 8, icon: '/assets/items/mien_mong/potion_mp.png', desc: 'Nước thần bí thuật hồi phục 100 điểm ma pháp (MP).' },
+      { id: 'ITEM_MM_BREAD', name: 'Bánh Mì Lúa Mạch', category: 'potion', qty: 5, icon: '/assets/items/mien_mong/bread.png', desc: 'Lương khô thôn quê nướng giòn giúp duy trì thể lực dẻo dai.' },
+      { id: 'ITEM_MM_IRON_ORE', name: 'Quặng Sắt Thô', category: 'material', qty: 6, icon: '/assets/items/mien_mong/iron_ore.png', desc: 'Quặng sắt khai thác từ hang đá, dùng để rèn đúc trang bị.' },
+      { id: 'ITEM_MM_PURPLE_FLOWER', name: 'Hoa Dạ Lan Tím', category: 'material', qty: 7, icon: '/assets/items/mien_mong/purple_flower.png', desc: 'Loài hoa rừng tỏa hương thanh khiết, thành phần luyện linh đan.' },
+      { id: 'ITEM_MM_WOOD', name: 'Gỗ Rừng Sâu', category: 'material', qty: 20, icon: '/assets/items/mien_mong/wood.png', desc: 'Gỗ sồi nguyên khối chắc chắn dùng trong xây dựng và thủ công.' },
+      { id: 'ITEM_MM_LEATHER', name: 'Da Thú Rừng', category: 'material', qty: 4, icon: '/assets/items/mien_mong/leather.png', desc: 'Tấm da thú dẻo dai dùng may áo giáp nhẹ và găng tay.' },
+      { id: 'ITEM_MM_BOOTS', name: 'Bốt Da Phiêu Lưu', category: 'weapon', qty: 1, icon: '/assets/items/mien_mong/boots.png', desc: 'Đôi bốt da bền bỉ hỗ trợ di chuyển linh hoạt trên mọi địa hình.' },
+      { id: 'ITEM_MM_SHIELD', name: 'Khiên Gỗ Tân Thủ', category: 'weapon', qty: 1, icon: '/assets/items/mien_mong/shield.png', desc: 'Khiên gỗ phong có quai cầm chắc chắn giúp cản đòn hiểm hóc.' },
+      { id: 'ITEM_MM_AMBER_GEM', name: 'Pha Lê Hổ Phách', category: 'material', qty: 2, icon: '/assets/items/mien_mong/amber_gem.png', desc: 'Đá hổ phách kết tinh ánh kim, dùng để khảm nạm trang bị.' },
+      { id: 'ITEM_MM_BLUE_GEM', name: 'Lam Ngọc Sapphire', category: 'material', qty: 3, icon: '/assets/items/mien_mong/blue_gem.png', desc: 'Viên ngọc lam chứa đựng nguyên tố nước và ma pháp băng thanh.' },
+      { id: 'ITEM_MM_MUSHROOM', name: 'Nấm Rừng Tự Nhiên', category: 'potion', qty: 18, icon: '/assets/items/mien_mong/mushroom.png', desc: 'Nấm rừng dinh dưỡng bổ sung sức bền cho nhà thám hiểm.' },
+      { id: 'ITEM_MM_TEA', name: 'Lá Trà Thơm Thôn Bản', category: 'material', qty: 6, icon: '/assets/items/mien_mong/tea_leaves.png', desc: 'Đặc sản trứ danh của Làng Bình Yên, dùng để pha trà tiếp khách.' },
+      { id: 'ITEM_MM_FISH', name: 'Cá Suối Tươi Ngon', category: 'potion', qty: 3, icon: '/assets/items/mien_mong/fish.png', desc: 'Cá suối đầu nguồn giàu đạm giúp hồi phục tinh thần.' },
+      { id: 'ITEM_MM_PURPLE_CRYSTAL', name: 'Thạch Anh Tím', category: 'material', qty: 1, icon: '/assets/items/mien_mong/purple_crystal.png', desc: 'Khoáng thạch quý hiếm phát ra dao động ma lực huyền bí.' },
+      { id: 'ITEM_MM_SCROLL', name: 'Cuộn Bí Kíp Tân Thủ', category: 'quest', qty: 4, icon: '/assets/items/mien_mong/scroll.png', desc: 'Tài liệu hướng dẫn bí thuật chiến đấu lưu truyền trong làng.' },
+    ];
 
-    this.inventorySlots[1] = {
-      id: 'ITEM_EXCALIBUR_HOLY',
-      itemId: 'ITEM_EXCALIBUR_HOLY',
-      name: 'Thánh Kiếm Excalibur',
-      description: 'Thần khí hoàng kim tỏa hào quang chói lọi, ban sức mạnh thánh quang vô địch thiên hạ.',
-      category: 'weapon',
-      rarity: 'mythic',
-      requiredLevel: 50,
-      requiredClasses: ['swordsman', 'knight'],
-      buyPrice: 50000,
-      sellPrice: 15000,
-      stackLimit: 1,
-      weight: 3.5,
-      isTradable: true,
-      isSellable: true,
-      isDroppable: false,
-      isAccountBound: false,
-      isCharacterBound: false,
-      status: 'PUBLISHED',
-      primaryAssetUrl: '/assets/weapons/excalibur_sword_icon.png',
-      inventoryAssetUrl: '/assets/weapons/excalibur_sword_icon.png',
-    } as any;
-
-    this.inventorySlots[2] = {
-      id: 'ITEM_BOW_NOVICE',
-      itemId: 'ITEM_BOW_NOVICE',
-      name: 'Cung Gỗ Tân Thủ',
-      description: 'Cung gỗ phong dẻo dai đàn hồi cao, vũ khí khởi đầu dành cho xạ thủ.',
-      category: 'weapon',
-      rarity: 'common',
-      requiredLevel: 1,
-      requiredClasses: ['archer'],
-      buyPrice: 45,
-      sellPrice: 12,
-      stackLimit: 1,
-      weight: 1.5,
-      isTradable: true,
-      isSellable: true,
-      isDroppable: true,
-      isAccountBound: false,
-      isCharacterBound: false,
-      status: 'PUBLISHED',
-      primaryAssetUrl: '/assets/weapons/novice_bow_icon.png',
-      inventoryAssetUrl: '/assets/weapons/novice_bow_icon.png',
-    } as any;
-
-    this.inventorySlots[3] = {
-      id: 'ITEM_POTION_HP_SMALL',
-      itemId: 'ITEM_POTION_HP_SMALL',
-      name: 'Bình Máu Nhỏ (HP)',
-      description: 'Dược thảo tinh luyện giúp phục hồi ngay 150 điểm sinh lực khi sử dụng.',
-      category: 'potion',
-      rarity: 'common',
-      requiredLevel: 1,
-      requiredClasses: [],
-      buyPrice: 20,
-      sellPrice: 5,
-      stackLimit: 99,
-      weight: 0.1,
-      isTradable: true,
-      isSellable: true,
-      isDroppable: true,
-      isAccountBound: false,
-      isCharacterBound: false,
-      status: 'PUBLISHED',
-      primaryAssetUrl: '/assets/weapons/potion_hp_small_icon.png',
-      inventoryAssetUrl: '/assets/weapons/potion_hp_small_icon.png',
-    } as any;
-
-    this.inventorySlots[4] = {
-      id: 'ITEM_ARROW_WOODEN',
-      itemId: 'ITEM_ARROW_WOODEN',
-      name: 'Bao Tên Gỗ (250x)',
-      description: 'Tên gỗ chuẩn xác có đầu bịt thép, sử dụng tiêu hao cho các kỹ năng cung thuật.',
-      category: 'material',
-      rarity: 'common',
-      requiredLevel: 1,
-      requiredClasses: ['archer'],
-      buyPrice: 10,
-      sellPrice: 2,
-      stackLimit: 999,
-      weight: 0.01,
-      isTradable: true,
-      isSellable: true,
-      isDroppable: true,
-      isAccountBound: false,
-      isCharacterBound: false,
-      status: 'PUBLISHED',
-      primaryAssetUrl: '/assets/items/wooden_arrows_icon.png',
-      inventoryAssetUrl: '/assets/items/wooden_arrows_icon.png',
-    } as any;
+    mienMongItems.forEach((item, index) => {
+      this.inventorySlots[index] = {
+        id: item.id,
+        itemId: item.id,
+        name: item.name,
+        description: item.desc,
+        category: item.category as any,
+        rarity: index === 0 || index === 9 || index === 10 ? 'uncommon' : (index >= 11 && index <= 12) ? 'rare' : 'common',
+        requiredLevel: 1,
+        requiredClasses: [],
+        buyPrice: 50,
+        sellPrice: 15,
+        stackLimit: 99,
+        weight: 1,
+        isTradable: true,
+        isSellable: true,
+        isDroppable: true,
+        isAccountBound: false,
+        isCharacterBound: false,
+        status: 'PUBLISHED',
+        primaryAssetUrl: item.icon,
+        inventoryAssetUrl: item.icon,
+        quantity: item.qty,
+      } as any;
+    });
 
     this.renderInventoryGrid();
   }
@@ -364,16 +279,29 @@ export class CharacterInventoryModal {
 
     grid.innerHTML = '';
     this.inventorySlots.forEach((item, index) => {
+      // Check category filter
+      let matchesCategory = true;
+      if (item && this.activeCategory !== 'all') {
+        if (this.activeCategory === 'weapon') {
+          matchesCategory = item.category === 'weapon' || item.category === 'armor';
+        } else if (this.activeCategory === 'potion') {
+          matchesCategory = item.category === 'potion' || item.category === 'consumable';
+        } else {
+          matchesCategory = item.category === this.activeCategory;
+        }
+      }
+
       const slot = document.createElement('div');
       slot.className = `inv-item-slot ${this.selectedSlotIndex === index ? 'selected' : ''}`;
       slot.setAttribute('data-slot-idx', `${index}`);
 
-      if (item) {
+      if (item && matchesCategory) {
         const iconSrc = item.primaryAssetUrl || item.inventoryAssetUrl || '/assets/weapons/novice_sword_icon.png';
-        const qtyText = item.stackLimit && item.stackLimit > 1 ? '15' : '';
+        const qtyVal = (item as any).quantity;
+        const qtyText = qtyVal && qtyVal > 1 ? `${qtyVal}` : '';
         slot.innerHTML = `
           <img src="${iconSrc}" class="inv-item-img" alt="${item.name}" onerror="this.src='/assets/weapons/novice_sword_icon.png'" />
-          <span class="inv-item-qty">${qtyText}</span>
+          ${qtyText ? `<span class="inv-item-qty">${qtyText}</span>` : ''}
         `;
         slot.addEventListener('mouseenter', (e) => this.showTooltip(item, e));
         slot.addEventListener('mouseleave', () => this.hideTooltip());

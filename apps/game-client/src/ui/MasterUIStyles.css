@@ -1571,3 +1571,481 @@
   font-size: 10.5px;
   color: #64748b;
 }
+
+/* ==========================================================================
+   14. MIỀN MỘNG — IVORY PARCHMENT ANIME MMORPG THEME (PANEL 01 & 02)
+   ========================================================================== */
+
+/* Top Center Save Notification Toast */
+.hud-top-save-toast {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fbf7ee;
+  border: 1.5px solid #d2c2a4;
+  border-radius: 20px;
+  padding: 6px 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #4b3d2a;
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 60;
+  animation: fadeInDown 0.4s ease-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.save-toast-icon {
+  font-size: 16px;
+}
+
+/* Avatar +9 points pill */
+.avatar-stat-points-pill {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 12px;
+  padding: 1px 6px;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  animation: pulsePill 2s infinite ease-in-out;
+}
+
+@keyframes pulsePill {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.player-level-badge-inline {
+  background: rgba(245, 208, 97, 0.25);
+  border: 1px solid var(--elysia-gold);
+  color: #fef08a;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+
+/* Quest Tracker Mien Mong Card */
+.quest-location-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #3b2f1f;
+  margin-bottom: 4px;
+}
+
+.quest-zone-title {
+  color: #2b2113;
+  font-weight: 800;
+}
+
+.quest-objective-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: #5a4933;
+}
+
+.quest-objective-counter {
+  color: #047857;
+  font-weight: 800;
+}
+
+/* Bottom Left Virtual Joystick */
+.virtual-joystick-dock {
+  position: absolute;
+  bottom: 30px;
+  left: 36px;
+  width: 120px;
+  height: 120px;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.joystick-base-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.35) 75%);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.joystick-thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f8fafc 0%, #cbd5e1 70%, #64748b 100%);
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  cursor: grab;
+  transition: transform 0.05s ease-out;
+}
+
+/* ==========================================================================
+   MIỀN MỘNG IVORY PARCHMENT MODAL (PANEL 02)
+   ========================================================================== */
+.mien-mong-parchment-window {
+  background: #fbf7ee !important;
+  border: 2px solid #c9b493 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.6) inset !important;
+  color: #3b2e1e !important;
+  overflow: hidden;
+}
+
+.mien-mong-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #f4ede0;
+  border-bottom: 1.5px solid #d8c7ac;
+}
+
+.header-char-brief {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-avatar-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #a8916d;
+  background: #e2d5c1;
+  overflow: hidden;
+}
+
+.header-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-char-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-name {
+  font-family: var(--elysia-font-title);
+  font-size: 16px;
+  font-weight: 800;
+  color: #2b1f11;
+}
+
+.header-level {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6d5b43;
+}
+
+.header-points-pill {
+  background: #ede3d1;
+  border: 1px solid #c4b091;
+  border-radius: 16px;
+  padding: 4px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #443422;
+}
+
+.header-points-pill strong {
+  color: #d97706;
+  font-size: 14px;
+}
+
+.mien-mong-btn-close {
+  background: #234937;
+  color: #ffffff;
+  border: 1.5px solid #193627;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.mien-mong-btn-close:hover {
+  background: #2f5f48;
+  transform: scale(1.1);
+}
+
+.mien-mong-body {
+  background: #fbf7ee !important;
+  display: grid;
+  grid-template-columns: 290px 360px 410px;
+  gap: 12px;
+  padding: 14px;
+}
+
+.mien-mong-panel {
+  background: #f7f1e4;
+  border: 1.5px solid #dcd0bc;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-section-title {
+  font-family: var(--elysia-font-title);
+  font-size: 13px;
+  font-weight: 800;
+  color: #2c2012;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+/* Col 1: Attributes */
+.mien-mong-attr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mien-mong-attr-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #efe7d7;
+  border: 1px solid #decfaa;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.attr-emoji-icon {
+  font-size: 13px;
+  margin-right: 6px;
+}
+
+.attr-label-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3b2c1c;
+}
+
+.attr-val-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.attr-val-num {
+  font-weight: 800;
+  font-size: 13px;
+  color: #20170d !important;
+  min-width: 24px;
+  text-align: right;
+}
+
+.mien-mong-plus {
+  background: #274e38 !important;
+  color: #ffffff !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s;
+}
+
+.mien-mong-plus:hover {
+  transform: scale(1.15);
+  background: #34684b !important;
+}
+
+.vocation-bonus-note {
+  font-size: 11px;
+  color: #78644b;
+  margin-top: 8px;
+  text-align: center;
+  font-style: italic;
+}
+
+.mien-mong-btn-confirm {
+  width: 100%;
+  padding: 9px;
+  background: #244b36;
+  color: #ffffff;
+  border: 1.5px solid #1a3727;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.mien-mong-btn-confirm:hover {
+  background: #2e5e44;
+  transform: translateY(-1px);
+}
+
+/* Col 2: Equipment Grid & Paperdoll */
+.mien-mong-equip-grid {
+  display: grid;
+  grid-template-columns: 52px 180px 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: auto 0;
+}
+
+.mien-mong-paperdoll-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+.mien-mong-paperdoll-stage img {
+  max-height: 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(60, 45, 25, 0.35));
+}
+
+.equip-slot-box {
+  width: 48px;
+  height: 48px;
+  background: #efe7d7 !important;
+  border: 1.5px solid #c9b79a !important;
+  border-radius: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.equip-slot-box.equipped {
+  border-color: #2e5e44 !important;
+  box-shadow: 0 0 6px rgba(46, 94, 68, 0.35) !important;
+}
+
+/* Col 3: Inventory Tabs & Grid */
+.mien-mong-tabs {
+  display: flex;
+  gap: 6px;
+  background: #efe7d7 !important;
+  border: 1px solid #dbcbb2 !important;
+  border-radius: 6px;
+  padding: 3px;
+  margin-bottom: 8px;
+}
+
+.mien-mong-tabs .inv-tab-btn {
+  background: transparent !important;
+  color: #5d4c38 !important;
+  border: none !important;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mien-mong-tabs .inv-tab-btn.active {
+  background: #244b36 !important;
+  color: #ffffff !important;
+}
+
+.mien-mong-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  background: #ede4d3 !important;
+  border: 1.5px solid #d4c4aa !important;
+  border-radius: 8px;
+  padding: 8px;
+  min-height: 230px;
+}
+
+.mien-mong-grid .inv-item-slot {
+  aspect-ratio: 1;
+  background: #f7f1e4;
+  border: 1px solid #d4c5ab;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.mien-mong-grid .inv-item-slot:hover {
+  border-color: #274e38;
+  transform: scale(1.05);
+}
+
+.mien-mong-grid .inv-item-slot.selected {
+  border-color: #244b36;
+  box-shadow: 0 0 0 2px rgba(36, 75, 54, 0.4);
+}
+
+.inv-item-img {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+}
+
+.inv-item-qty {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 1px 2px #000, 0 0 2px #000;
+}
+
+.mien-mong-currency {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #dcd0bc;
+  font-size: 13px;
+  font-weight: 800;
+  color: #3b2c1b;
+}
+
+.coin-disc {
+  font-size: 14px;
+  margin-right: 4px;
+}

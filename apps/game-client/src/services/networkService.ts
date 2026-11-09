@@ -34,11 +34,19 @@ export class NetworkService {
   public onPlayerLeft?: (data: { socketId: string; characterId: string }) => void;
   public onPlayerAction?: (data: { socketId: string; characterId: string; actionType: string; skillId?: string; targetId?: string }) => void;
   public onChatReceived?: (msg: ChatMessagePayload) => void;
+  public onPlayerSnap?: (data: { x: number; y: number; reason: string }) => void;
+  public onWorldMonsters?: (monsters: any[]) => void;
+  public onDamageApplied?: (data: any) => void;
+  public onReward?: (data: { goldEarned: number; expEarned: number; newExp: number; newLevel: number; leveledUp: boolean }) => void;
+  public onActionRejected?: (data: { reason: string }) => void;
 
   public connect(url: string = import.meta.env.VITE_WS_URL || 'http://localhost:4000') {
     if (this.socket) return;
 
+    const token = localStorage.getItem('elysia_token') || '';
+
     this.socket = io(url, {
+      auth: { token },
       transports: ['websocket', 'polling'],
       reconnectionAttempts: 10,
       reconnectionDelay: 1000,
@@ -47,6 +55,10 @@ export class NetworkService {
     this.socket.on('connect', () => {
       this.isConnected = true;
       console.log(`[NetworkService] Connected to game server with ID: ${this.socket?.id}`);
+    });
+
+    this.socket.on('connect_error', (err: any) => {
+      console.warn('[NetworkService] Connection error:', err.message);
     });
 
     this.socket.on('disconnect', () => {
@@ -72,6 +84,27 @@ export class NetworkService {
 
     this.socket.on('player:performed_action', (data: any) => {
       if (this.onPlayerAction) this.onPlayerAction(data);
+    });
+
+    this.socket.on('player:snap', (data: { x: number; y: number; reason: string }) => {
+      console.warn(`[NetworkService] Server snapback received:`, data);
+      if (this.onPlayerSnap) this.onPlayerSnap(data);
+    });
+
+    this.socket.on('world:monsters', (monsters: any[]) => {
+      if (this.onWorldMonsters) this.onWorldMonsters(monsters);
+    });
+
+    this.socket.on('combat:damage_applied', (data: any) => {
+      if (this.onDamageApplied) this.onDamageApplied(data);
+    });
+
+    this.socket.on('player:reward', (data: any) => {
+      if (this.onReward) this.onReward(data);
+    });
+
+    this.socket.on('player:action_rejected', (data: any) => {
+      if (this.onActionRejected) this.onActionRejected(data);
     });
 
     this.socket.on('chat:broadcast', (msg: ChatMessagePayload) => {

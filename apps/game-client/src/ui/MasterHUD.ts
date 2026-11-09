@@ -37,7 +37,7 @@ export class MasterHUD {
   private stats: PlayerStats = {
     name: 'Tada',
     level: 12,
-    classTitle: 'Swordsman (Kiếm Sĩ)',
+    classTitle: 'Kiếm Sĩ Tân Thủ',
     combatPower: 2480,
     currentHp: 320,
     maxHp: 320,
@@ -45,7 +45,7 @@ export class MasterHUD {
     maxMp: 180,
     currentExp: 650,
     maxExp: 1000,
-    avatarUrl: '/assets/characters/female/novice/master/novice_female_master_256.png',
+    avatarUrl: '/assets/characters/tada/tada_avatar.png',
   };
 
   // Cooldown Trackers (skillId -> endTimestamp)
@@ -109,82 +109,65 @@ export class MasterHUD {
     this.container = root;
 
     root.innerHTML = `
-      <!-- TOP LEFT: PLAYER PROFILE PANEL -->
-      <div class="player-profile-panel hud-interactive" id="hud-player-profile" title="Bấm vào để mở Nhân Vật & Túi Đồ [C / I]">
+      <!-- TOP CENTER: SYSTEM TOAST / SAVE BANNER -->
+      <div class="hud-top-save-toast hud-interactive" id="hud-top-toast" title="Thông báo hệ thống">
+        <span class="save-toast-icon">🕊️</span>
+        <span class="save-toast-text">Đã lưu tiến độ trò chơi!</span>
+      </div>
+
+      <!-- TOP LEFT: PLAYER PROFILE PANEL (EXACT CHIBI ANIME MMORPG HUD) -->
+      <div class="player-profile-panel hud-interactive" id="hud-player-profile" title="Chạm Avatar để mở Nhân Vật & Túi Đồ [C / I]">
         <div class="player-avatar-wrapper">
           <img src="${this.stats.avatarUrl}" alt="Avatar" class="player-avatar-img" id="hud-avatar-img" />
           <div class="player-avatar-ring"></div>
-          <div class="player-level-badge" id="hud-level-badge">Lv.${this.stats.level}</div>
+          <div class="avatar-stat-points-pill" id="hud-points-badge" title="Điểm tiềm năng chưa cộng">+9</div>
         </div>
 
         <div class="player-details-col">
           <div class="player-header-row">
             <span class="player-name-text" id="hud-player-name">${this.stats.name}</span>
-            <span class="player-class-text" id="hud-player-class">${this.stats.classTitle}</span>
+            <span class="player-level-badge-inline" id="hud-level-badge">Lv. ${this.stats.level}</span>
           </div>
 
-          <div class="player-cp-badge" id="hud-combat-power" title="Lực chiến tổng hợp">
-            <span>⚔️ Lực chiến:</span>
-            <strong id="hud-cp-val">${this.stats.combatPower.toLocaleString()}</strong>
-          </div>
-
-          <!-- HP BAR -->
-          <div class="bar-track" title="Điểm Sinh Lực (HP)">
+          <!-- HP BAR (RED WITH HEART ICON) -->
+          <div class="bar-track bar-track-hp" title="Điểm Sinh Lực (HP)">
+            <span class="bar-icon-indicator">❤️</span>
             <div class="bar-fill bar-fill-hp" id="hud-hp-bar" style="width: ${(this.stats.currentHp / this.stats.maxHp) * 100}%"></div>
-            <div class="bar-text" id="hud-hp-text">HP: ${this.stats.currentHp}/${this.stats.maxHp}</div>
+            <div class="bar-text" id="hud-hp-text">${this.stats.currentHp}/${this.stats.maxHp}</div>
           </div>
 
-          <!-- MP BAR -->
-          <div class="bar-track" title="Điểm Năng Lượng (MP)">
+          <!-- MP BAR (BLUE WITH WATER ICON) -->
+          <div class="bar-track bar-track-mp" title="Điểm Ma Pháp (MP)">
+            <span class="bar-icon-indicator">💧</span>
             <div class="bar-fill bar-fill-mp" id="hud-mp-bar" style="width: ${(this.stats.currentMp / this.stats.maxMp) * 100}%"></div>
-            <div class="bar-text" id="hud-mp-text">MP: ${this.stats.currentMp}/${this.stats.maxMp}</div>
+            <div class="bar-text" id="hud-mp-text">${this.stats.currentMp}/${this.stats.maxMp}</div>
           </div>
 
-          <!-- EXP BAR -->
-          <div class="bar-track" style="height: 6px;" title="Kinh Nghiệm Cấp Độ (EXP)">
-            <div class="bar-fill bar-fill-exp" id="hud-exp-bar" style="width: ${(this.stats.currentExp / this.stats.maxExp) * 100}%"></div>
-          </div>
-
-          <!-- ACTIVE BUFFS -->
-          <div class="player-buffs-row">
-            <div class="buff-chip" title="Chiến Ý: Tăng 10% Sát Thương Vật Lý (còn 14m)">⚔️ +10% Công</div>
-            <div class="buff-chip" title="Khiên Thần Hộ Thể: Tăng 15% Phòng Ngự (còn 28m)">🛡️ +15% Thủ</div>
-            <div class="buff-chip" title="Phong Tinh Lạc: Tăng 20% Tốc Độ Di Chuyển (còn 8m)">⚡ +20% Tốc</div>
+          <!-- SP / ENERGY BAR (YELLOW WITH LIGHTNING ICON) -->
+          <div class="bar-track bar-track-sp" title="Điểm Thể Lực (SP)">
+            <span class="bar-icon-indicator">⚡</span>
+            <div class="bar-fill bar-fill-sp" id="hud-sp-bar" style="width: 100%"></div>
+            <div class="bar-text" id="hud-sp-text">100/100</div>
           </div>
         </div>
       </div>
 
-      <!-- LEFT SIDE: COLLAPSIBLE QUEST TRACKER -->
+      <!-- LEFT SIDE: QUEST TRACKER (EXACT MIEN MONG CARD) -->
       <div class="quest-tracker-container hud-interactive" id="hud-quest-tracker">
-        <div class="quest-header-bar" id="quest-header-toggle">
-          <div class="quest-header-title">
-            <span>📜</span>
-            <span>NHIỆM VỤ</span>
-          </div>
-          <button class="quest-collapse-btn" id="btn-toggle-quest" title="Thu gọn / Mở rộng">◀</button>
+        <div class="quest-location-header">
+          <span class="quest-pin-icon">📍</span>
+          <span class="quest-zone-title">Làng Bình Yên</span>
         </div>
+        <div class="quest-objective-row">
+          <span class="quest-objective-text">Nói chuyện với cụ Tam ở đầu làng.</span>
+          <strong class="quest-objective-counter">0/1</strong>
+        </div>
+      </div>
 
-        <div class="quest-body-content">
-          <div class="quest-category-badge">✦ MAIN QUEST (CHÍNH TUYẾN)</div>
-          <div class="quest-item-title">Ngôi Làng Bình Yên (The Peaceful Village)</div>
-          <div class="quest-item-desc">Đến gặp Trưởng Làng Tam tại quảng trường trung tâm làng tân thủ để nhận vũ khí ban đầu.</div>
-
-          <div class="quest-progress-box">
-            <span>Trò chuyện với Trưởng Làng Tam:</span>
-            <strong style="color: #38bdf8;">0 / 1</strong>
-          </div>
-
-          <div class="quest-rewards-preview">
-            <span>Phần thưởng:</span>
-            <span class="quest-reward-chip">+500 EXP</span>
-            <span class="quest-reward-chip">+200 Vàng</span>
-            <span class="quest-reward-chip">Kiếm Thép</span>
-          </div>
-
-          <button class="quest-autopath-btn" id="btn-quest-autopath">
-            <span>🧭</span>
-            <span>Tự Tìm Đường (Auto-Path)</span>
-          </button>
+      <!-- BOTTOM LEFT: VIRTUAL JOYSTICK / D-PAD -->
+      <div class="virtual-joystick-dock hud-interactive" id="virtual-joystick-root" title="Kéo để di chuyển nhân vật">
+        <div class="joystick-base-ring">
+          <div class="joystick-thumb" id="joystick-thumb-knob"></div>
         </div>
       </div>
 

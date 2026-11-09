@@ -938,6 +938,59 @@ export class WorldScene extends Phaser.Scene {
         );
       }
     };
+
+    networkService.onPlayerSnap = (data) => {
+      if (this.player) {
+        this.player.x = data.x;
+        this.player.y = data.y;
+        if (this.shadow) {
+          this.shadow.x = data.x;
+          this.shadow.y = data.y;
+        }
+        if (this.nameplate) {
+          this.nameplate.x = data.x;
+          this.nameplate.y = data.y - 120;
+        }
+        if (this.titleplate) {
+          this.titleplate.x = data.x;
+          this.titleplate.y = data.y - 102;
+        }
+        this.showSkillBanner(`[Hệ Thống] Đã đồng bộ vị trí máy chủ (${data.reason})`);
+      }
+    };
+
+    networkService.onDamageApplied = (data: any) => {
+      const targetDummy = this.dummies.find((d: any) => d.id === data.targetId);
+      if (targetDummy) {
+        targetDummy.hp = Math.max(0, data.remainingHp);
+        this.updateDummyHpBar(targetDummy);
+        targetDummy.sprite.setTint(0xff3333);
+        this.time.delayedCall(120, () => targetDummy.sprite.clearTint());
+        this.showDamageNumber(
+          targetDummy.sprite.x + (Math.random() * 30 - 15),
+          targetDummy.sprite.y - 80,
+          data.damage,
+          data.isCritical
+        );
+      }
+    };
+
+    networkService.onReward = (data: any) => {
+      let msg = `[Thưởng] +${data.goldEarned} Vàng, +${data.expEarned} EXP!`;
+      if (data.leveledUp) {
+        msg = `🎉 [CHÚC MỪNG] THĂNG CẤP LÊN CẤP ${data.newLevel}!`;
+      }
+      this.showSkillBanner(msg);
+      window.dispatchEvent(
+        new CustomEvent('elysia:stats_reward', {
+          detail: data,
+        })
+      );
+    };
+
+    networkService.onActionRejected = (data) => {
+      console.warn(`[Action Rejected]`, data.reason);
+    };
   }
 
   private addRemotePlayer(player: RemotePlayer) {

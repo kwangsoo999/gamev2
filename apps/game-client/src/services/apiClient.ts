@@ -46,6 +46,14 @@ export async function checkServerHealth(): Promise<HealthResponse | null> {
   }
 }
 
+function getAuthHeaders(): Record<string, string> {
+  const token = localStorage.getItem('elysia_token');
+  return {
+    'Content-Type': 'application/json',
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+  };
+}
+
 export interface CreateCharacterPayload {
   name: string;
   gender: Gender;
@@ -58,15 +66,13 @@ export async function createCharacter(payload: CreateCharacterPayload): Promise<
   try {
     const res = await fetch(`${API_BASE}/characters`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: getAuthHeaders(),
       body: JSON.stringify(payload),
     });
 
     const json = await res.json();
     if (!res.ok) {
-      return { success: false, error: json.message || 'Lỗi tạo nhân vật từ máy chủ.' };
+      return { success: false, error: json.message || json.error || 'Lỗi tạo nhân vật từ máy chủ.' };
     }
     return { success: true, data: json.data };
   } catch (err: any) {
@@ -76,7 +82,9 @@ export async function createCharacter(payload: CreateCharacterPayload): Promise<
 
 export async function fetchCharacters(): Promise<CharacterEntity[]> {
   try {
-    const res = await fetch(`${API_BASE}/characters`);
+    const res = await fetch(`${API_BASE}/characters`, {
+      headers: getAuthHeaders(),
+    });
     if (!res.ok) return [];
     const json = await res.json();
     return json.data || [];

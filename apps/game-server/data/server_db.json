@@ -15,6 +15,30 @@
       "passwordHash": "$2a$10$YNCsh8UW/tSfpKKN2Uxk9eM9ZWR7VD.Yw19AjHk0aYGxa0rbAc.IC",
       "role": "player",
       "createdAt": "2026-11-09T04:49:22.516Z"
+    },
+    {
+      "id": "USR_1794241719917_115",
+      "username": "player_test_sec",
+      "email": "sec@elysia.com",
+      "passwordHash": "$2a$10$TfAKUNL2AtFFyuh7I5Thp.z368x1Fla/6xqyWPOnUXU9jWJ6TSvpa",
+      "role": "player",
+      "createdAt": "2026-11-09T16:28:39.917Z"
+    },
+    {
+      "id": "USR_1794241760123_888",
+      "username": "user_a",
+      "email": "a@elysia.com",
+      "passwordHash": "$2a$10$eTH1Nw8KS6EqzmAOtwo/zuFaNGKMBZdR.nROV2dpYGaGQBmXpx3je",
+      "role": "player",
+      "createdAt": "2026-11-09T16:29:20.123Z"
+    },
+    {
+      "id": "USR_1794241766934_271",
+      "username": "user_b",
+      "email": "b@elysia.com",
+      "passwordHash": "$2a$10$eS96Ma7hzimSDWnMGNrDyuiIg/54NQTX6TzsKRn73ZbqOnBV5qGlS",
+      "role": "player",
+      "createdAt": "2026-11-09T16:29:26.934Z"
     }
   ],
   "characters": [
@@ -108,6 +132,52 @@
       "y": 1000,
       "createdAt": "2026-11-09T04:58:10.174Z",
       "updatedAt": "2026-11-09T04:58:10.174Z"
+    },
+    {
+      "id": "CHAR_1794241764416_430",
+      "userId": "USR_1794241760123_888",
+      "name": "TadaAdventurer",
+      "gender": "male",
+      "classId": "swordsman",
+      "level": 1,
+      "exp": 0,
+      "gold": 500,
+      "baseStats": {
+        "str": 15,
+        "dex": 10,
+        "agi": 12,
+        "int": 8,
+        "con": 15
+      },
+      "attributes": {
+        "str": 15,
+        "dex": 10,
+        "agi": 12,
+        "int": 8,
+        "con": 15
+      },
+      "appearance": {
+        "gender": "male",
+        "hairstyleId": "m_short",
+        "hairColor": "brown",
+        "eyeColor": "amber",
+        "outfitId": "novice_tunic"
+      },
+      "equipment": {
+        "mainHand": "ITEM_SWORD_WOODEN_NOVICE"
+      },
+      "inventory": [
+        {
+          "slotId": 0,
+          "itemId": "ITEM_POTION_HP_SMALL",
+          "quantity": 5
+        }
+      ],
+      "regionId": "VIL_STARTER",
+      "x": 1000,
+      "y": 1000,
+      "createdAt": "2026-11-09T16:29:24.416Z",
+      "updatedAt": "2026-11-09T16:29:24.416Z"
     }
   ],
   "items": [
