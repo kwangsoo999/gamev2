@@ -608,6 +608,10 @@ export class WorldScene extends Phaser.Scene {
   }
 
   public updatePlayerCharacter(char: CharacterEntity) {
+    if (this.currentCharacter && this.currentCharacter.id !== char.id) {
+      networkService.disconnect();
+      this.networkStarted = false;
+    }
     this.currentCharacter = char;
     if (this.player && Number.isFinite(char.x) && Number.isFinite(char.y)) {
       this.player.setPosition(char.x, char.y);
@@ -833,7 +837,7 @@ export class WorldScene extends Phaser.Scene {
    * Connects to Authoritative Socket.IO Gateway
    */
   private initMultiplayerNetwork() {
-    if (!this.currentCharacter || this.networkStarted) return;
+    if (!this.currentCharacter || !localStorage.getItem('elysia_token') || this.networkStarted) return;
     this.networkStarted = true;
     networkService.connect();
 
