@@ -4,7 +4,7 @@ import { CharacterEntity, WeaponEntity, ItemEntity } from '@elysia/game-types';
 import { INITIAL_CLASSES } from '@elysia/game-data-schema';
 import { SKILL_VFX_REGISTRY, SkillVfxDefinition } from '../vfx/SkillVfxConfig';
 import { networkService, RemotePlayer } from '../services/networkService';
-import { fetchMonsters, fetchSpawns } from '../services/apiClient';
+import { fetchMonsters, fetchSpawns, fetchNpcs, fetchConnections } from '../services/apiClient';
 
 export class WorldScene extends Phaser.Scene {
   private player!: Phaser.GameObjects.Sprite;
@@ -23,6 +23,14 @@ export class WorldScene extends Phaser.Scene {
   private keyJ!: Phaser.Input.Keyboard.Key;
   private keyH!: Phaser.Input.Keyboard.Key;
   private keyK!: Phaser.Input.Keyboard.Key;
+  private keyE!: Phaser.Input.Keyboard.Key;
+  private networkStarted = false;
+  private portalTargets = [
+    { id: 'FIELD_EAST', x: 1950, y: 1000, label: 'CỔNG ĐÔNG · ĐỒNG CỎ · Lv.1+' },
+    { id: 'FIELD_WEST', x: 50, y: 1000, label: 'CỔNG TÂY · RỪNG RẬM · Lv.4+' },
+    { id: 'FIELD_SOUTH', x: 1000, y: 1950, label: 'CỔNG NAM · THUNG LŨNG · Lv.7+' },
+    { id: 'FIELD_NORTH', x: 1000, y: 50, label: 'CỔNG BẮC · NÚI BĂNG · Lv.10+' },
+  ];
   private keyShift!: Phaser.Input.Keyboard.Key;
 
   private isActionLocked = false;
@@ -59,51 +67,26 @@ export class WorldScene extends Phaser.Scene {
     this.physics.world.setBounds(0, 0, mapWidth, mapHeight);
     this.cameras.main.setBounds(0, 0, mapWidth, mapHeight);
 
-    // Draw fantasy test map terrain
-    const bg = this.add.graphics();
-    bg.fillStyle(0x0a0d14, 1);
-    bg.fillRect(0, 0, mapWidth, mapHeight);
-
-    // Grid tiles (48x48)
-    bg.lineStyle(1, 0x182030, 0.5);
-    const step = 48;
-    for (let x = 0; x <= mapWidth; x += step) {
-      bg.lineBetween(x, 0, x, mapHeight);
-    }
-    for (let y = 0; y <= mapHeight; y += step) {
-      bg.lineBetween(0, y, mapWidth, y);
-    }
-
-    // Central Town Square / Village Plaza marker
-    const plaza = this.add.graphics();
-    plaza.lineStyle(2, 0xd4af37, 0.4);
-    plaza.strokeCircle(mapWidth / 2, mapHeight / 2, 220);
-    plaza.lineStyle(1, 0x1c69d4, 0.3);
-    plaza.strokeCircle(mapWidth / 2, mapHeight / 2, 140);
-
-    // Ground Shadow for character
-    const spawnX = mapWidth / 2;
-    const spawnY = mapHeight / 2;
-    this.shadow = this.add.ellipse(spawnX, spawnY, 68, 20, 0x000000, 0.45);
-
-    // Initialize character 7-action animations
-    this.initCharacterAnimations();
-
-    // Check stored active character
-    let initialName = 'ELYSIA_NOVICE_FEMALE_001';
+    // Restore the cached character for immediate scene setup; the account token is verified by the API.
+    let initialName = 'Nhà Phiêu Lưu';
     let initialTitle = '<Tân Thủ Lv.1>';
     const stored = localStorage.getItem('elysia_active_character');
     if (stored) {
       try {
-        const parsed = JSON.parse(stored) as CharacterEntity;
-        this.currentCharacter = parsed;
-        initialName = parsed.name;
-        const cls = INITIAL_CLASSES.find((c) => c.id === parsed.classId);
-        initialTitle = `<${cls ? cls.name.split(' (')[0] : parsed.classId} Lv.${parsed.level}>`;
-      } catch {
-        // use default
-      }
+        this.currentCharacter = JSON.parse(stored) as CharacterEntity;
+        initialName = this.currentCharacter.name;
+        const cls = INITIAL_CLASSES.find((item) => item.id === this.currentCharacter!.classId);
+        initialTitle = `<${cls ? cls.name.split(' (')[0] : this.currentCharacter.classId} Lv.${this.currentCharacter.level}>`;
+      } catch { localStorage.removeItem('elysia_active_character'); }
     }
+
+    this.drawStarterVillage(mapWidth, mapHeight);
+    const spawnX = this.currentCharacter?.x ?? 1000;
+    const spawnY = this.currentCharacter?.y ?? 1350;
+    this.shadow = this.add.ellipse(spawnX, spawnY, 68, 20, 0x000000, 0.45);
+
+    // Initialize character 7-action animations
+    this.initCharacterAnimations();
 
     // Create Animated Character Sprite (Standardized 256x256 anchored at (128, 238))
     this.player = this.add.sprite(spawnX, spawnY, 'char_swordsman_anim_idle', 0);
