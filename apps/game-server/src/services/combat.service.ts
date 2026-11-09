@@ -224,7 +224,7 @@ export class CombatService {
       const chance = clamp(Number(entry.drop_rate || 0), 0, 100);
       if (Math.random() * 100 >= chance) continue;
       const itemId = String(entry.item_id || '');
-      if (!itemId || !this.store.items.some((item: any) => item.id === itemId || item.itemId === itemId)) continue;
+      if (!itemId || player.character.level < Number(entry.required_player_level || 1) || !this.store.items.some((item: any) => item.id === itemId || item.itemId === itemId)) continue;
       const min = Math.max(1, Number(entry.min_quantity || 1));
       const max = Math.max(min, Number(entry.max_quantity || min));
       const quantity = Math.floor(min + Math.random() * (max - min + 1));
