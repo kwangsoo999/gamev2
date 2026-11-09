@@ -12,8 +12,8 @@ export class AuthService {
     }
     const cleanUsername = username.trim().toLowerCase();
     const cleanEmail = email.trim().toLowerCase();
-    if (!/^[\\p{L}\\p{N}_-]{3,20}$/u.test(cleanUsername)) throw new Error('Tên tài khoản phải có 3–20 ký tự, chỉ gồm chữ, số, _ hoặc -.');
-    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(cleanEmail)) throw new Error('Địa chỉ email không hợp lệ.');
+    if (!/^[\p{L}\p{N}_-]{3,20}$/u.test(cleanUsername)) throw new Error('Tên tài khoản phải có 3–20 ký tự, chỉ gồm chữ, số, _ hoặc -.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) throw new Error('Địa chỉ email không hợp lệ.');
     if (password.length < 8 || Buffer.byteLength(password, 'utf8') > 72) throw new Error('Mật khẩu phải có ít nhất 8 ký tự và không vượt quá giới hạn an toàn.');
 
     if (this.store.users.find((u) => u.username.toLowerCase() === cleanUsername)) {
