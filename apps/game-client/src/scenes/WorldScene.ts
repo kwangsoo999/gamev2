@@ -92,7 +92,8 @@ export class WorldScene extends Phaser.Scene {
     this.player = this.add.sprite(spawnX, spawnY, 'char_swordsman_anim_idle', 0);
     this.player.setOrigin(0.5, 0.9297);
     this.player.setScale(1.0);
-    this.player.play('char_novice_idle');
+    if (this.currentCharacter?.gender === 'male') this.player.setTexture('char_base_male_master');
+    else this.player.play('char_novice_idle');
 
     // Character Nameplate & Title
     this.nameplate = this.add.text(spawnX, spawnY - 120, initialName, {
@@ -619,14 +620,20 @@ export class WorldScene extends Phaser.Scene {
 
     // Update Sprite texture
     if (this.player) {
-      if (char.classId === 'swordsman') {
+      if (char.gender === 'male') {
+        this.player.stop();
+        this.player.setTexture('char_base_male_master');
+        this.player.setOrigin(0.5, 0.92);
+        this.player.setScale(0.9);
+      } else if (char.classId === 'swordsman') {
         this.player.stop();
         this.player.setTexture('char_swordsman_female_master');
         this.player.setOrigin(0.5, 0.9297);
         this.player.setScale(0.85);
       } else {
-        this.player.setOrigin(0.5, 0.875);
-        this.player.setScale(1.4);
+        this.player.setTexture('char_swordsman_anim_idle');
+        this.player.setOrigin(0.5, 0.9297);
+        this.player.setScale(1.0);
         this.player.play('char_novice_idle', true);
       }
     }
