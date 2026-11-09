@@ -155,7 +155,7 @@ export class CombatService {
       if (player.character.level < skill.requiredLevel) throw new Error('Cấp độ chưa đủ để dùng kỹ năng.');
       range = Number(skill.range || 64);
       multiplier = Number(skill.damageMultiplier || 1);
-      manaCost = Number(skill.mpCost ?? skill.manaCost ?? skill.spCost ?? 0);
+      manaCost = Number(skill.mpCost ?? skill.manaCost ?? skill.spCost ?? Math.ceil(5 + Number(skill.damageMultiplier || 1) * 5));
       cooldownMs = Number(skill.cooldown || 0) * 1000;
     } else if (actionType !== 'basic_attack') {
       throw new Error('Loại hành động chiến đấu không hợp lệ.');
@@ -176,7 +176,6 @@ export class CombatService {
     const critical = Math.random() < Math.min(0.5, Number(player.character.attributes?.agi || 10) * 0.002 + Number(monsterStats.critical_rate || 0));
     const damage = Math.max(1, Math.floor((baseAttack * multiplier * variance - defense * 0.45) * (critical ? 1.5 : 1)));
     monster.hp = Math.max(0, monster.hp - damage);
-    monster.lastAttackedAt = now;
     let rewards: any = null;
     if (monster.hp <= 0) {
       monster.alive = false;
