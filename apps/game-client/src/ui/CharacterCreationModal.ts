@@ -213,7 +213,7 @@ export class CharacterCreationModal {
               <div class="preview-glow"></div>
               <img
                 id="preview-character-sprite"
-                src="${this.selectedClassId === 'novice' ? '/assets/characters/female/novice/master/novice_female_master_256.png' : '/assets/characters/female/swordsman/swordsman_female_idle_front.png'}"
+                src="${this.gender === 'male' ? '/assets/characters/base/male/base_male_master_256.png' : this.selectedClassId === 'novice' ? '/assets/characters/female/novice/master/novice_female_master_256.png' : '/assets/characters/female/swordsman/swordsman_female_idle_front.png'}"
                 alt="Character Preview"
                 style="filter: ${activeHair.filter};"
                 class="chibi-sprite-render"
