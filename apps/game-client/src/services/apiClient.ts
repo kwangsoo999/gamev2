@@ -1,6 +1,7 @@
 import { HealthResponse, CharacterEntity, Gender, ClassId, PrimaryAttributes, CharacterAppearance } from '@elysia/game-types';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000/api/v1';
+const authHeaders = () => ({ Authorization: `Bearer ${localStorage.getItem('elysia_token') || ''}` });
 
 export async function loginApi(username: string, password: string): Promise<{ success: boolean; data?: { token: string; account: any }; error?: string }> {
   try {
@@ -58,9 +59,7 @@ export async function createCharacter(payload: CreateCharacterPayload): Promise<
   try {
     const res = await fetch(`${API_BASE}/characters`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json', ...authHeaders() },
       body: JSON.stringify(payload),
     });
 
@@ -76,7 +75,7 @@ export async function createCharacter(payload: CreateCharacterPayload): Promise<
 
 export async function fetchCharacters(): Promise<CharacterEntity[]> {
   try {
-    const res = await fetch(`${API_BASE}/characters`);
+    const res = await fetch(`${API_BASE}/characters`, { headers: authHeaders() });
     if (!res.ok) return [];
     const json = await res.json();
     return json.data || [];
