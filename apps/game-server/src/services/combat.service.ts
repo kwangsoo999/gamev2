@@ -268,6 +268,27 @@ export class CombatService {
   }
 
 
+
+  heal(characterId: string, skillId: string) {
+    const player = this.requirePlayer(characterId);
+    if (player.dead) throw new Error('Nhân vật đã gục.');
+    const skill = INITIAL_SKILLS.find(s => s.id === skillId && s.targetType === 'self');
+    if (!skill || (skill.classId !== player.character.classId && player.character.classId !== 'novice')) {
+      throw new Error('Kỹ năng hồi phục không thuộc chức nghiệp của bạn.');
+    }
+    if (player.character.level < skill.requiredLevel) throw new Error('Cấp độ chưa đủ để dùng kỹ năng.');
+    const now = Date.now();
+    if (now < (player.cooldowns.get(skill.id) || 0)) throw new Error('Kỹ năng đang hồi chiêu.');
+    const manaCost = Number(skill.mpCost ?? skill.manaCost ?? skill.spCost ?? Math.ceil(5 + skill.damageMultiplier * 5));
+    if (player.mp < manaCost) throw new Error('Không đủ MP để sử dụng kỹ năng.');
+    player.mp -= manaCost;
+    player.cooldowns.set(skill.id, now + Number(skill.cooldown || 0) * 1000);
+    const healedHp = Math.min(player.maxHp - player.hp, Math.max(1, Math.floor(player.matk * skill.damageMultiplier)));
+    player.hp += healedHp;
+    this.persist(player);
+    return { actionType: 'skill', skillId, healedHp, player: this.snapshot(player) };
+  }
+
   useItem(characterId: string, itemId: string) {
     const player = this.requirePlayer(characterId);
     if (player.dead) throw new Error('Nhân vật đã gục, không thể sử dụng vật phẩm.');
