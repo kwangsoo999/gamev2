@@ -107,9 +107,20 @@ export function setupGameSockets(io: Server) {
 
     socket.on('player:respawn', (_data: unknown, ack?: (result: any) => void) => {
       try {
-        const snapshot = combat.respawn(requireJoined(socket));
-        socket.leave([...socket.rooms].find(r => r !== socket.id) || '');
-        socket.join(snapshot.regionId);
+        const characterId = requireJoined(socket);
+        const oldRegion = combat.getPlayer(characterId)?.regionId;
+        const snapshot = combat.respawn(characterId);
+        if (oldRegion && oldRegion !== snapshot.regionId) {
+          socket.leave(oldRegion);
+          socket.to(oldRegion).emit('player:left', { socketId: socket.id, characterId });
+          socket.join(snapshot.regionId);
+          socket.to(snapshot.regionId).emit('player:joined', {
+            socketId: socket.id, characterId, name: combat.getPlayer(characterId)!.character.name,
+            classId: combat.getPlayer(characterId)!.character.classId,
+            gender: combat.getPlayer(characterId)!.character.gender, level: snapshot.level,
+            regionId: snapshot.regionId, x: snapshot.x, y: snapshot.y, hp: snapshot.hp, maxHp: snapshot.maxHp,
+          });
+        }
         socket.emit('world:monsters', combat.getRegionMonsters(snapshot.regionId));
         socket.emit('player:state', snapshot);
         ack?.({ success: true, data: snapshot });
@@ -138,7 +149,9 @@ export function setupGameSockets(io: Server) {
     });
   });
 
-  setInterval(() => combat.tick(), 1000);
+  setInterval(() => {
+    for (const monster of combat.tick()) io.to(monster.regionId).emit('world:monster_respawned', monster);
+  }, 1000);
 }
 
 function requireJoined(socket: AuthenticatedSocket): string {
