@@ -14,7 +14,7 @@ export async function loginApi(username: string, password: string): Promise<{ su
     if (!res.ok || !json.success) {
       return { success: false, error: json.error || json.message || 'Tài khoản hoặc mật khẩu không chính xác.' };
     }
-    return { success: true, data: json.data };
+    return { success: true, data: { token: json.data.token, account: json.data.account || json.data.user } };
   } catch (err: any) {
     return { success: false, error: err.message || 'Không thể kết nối đến máy chủ xác thực.' };
   }
@@ -35,6 +35,13 @@ export async function registerApi(username: string, email: string, password: str
   } catch (err: any) {
     return { success: false, error: err.message || 'Không thể kết nối đến máy chủ xác thực.' };
   }
+}
+
+export async function validateSessionApi(): Promise<boolean> {
+  try {
+    const res = await fetch(`${API_BASE}/auth/me`, { headers: authHeaders() });
+    return res.ok;
+  } catch { return false; }
 }
 
 export async function checkServerHealth(): Promise<HealthResponse | null> {
@@ -93,6 +100,15 @@ export async function fetchMonsters(): Promise<any[]> {
   } catch {
     return [];
   }
+}
+
+export async function fetchConnections(): Promise<any[]> {
+  try {
+    const res = await fetch(`${API_BASE}/game/connections`);
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.data || [];
+  } catch { return []; }
 }
 
 export async function fetchRegions(): Promise<any[]> {
