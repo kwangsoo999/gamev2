@@ -726,12 +726,15 @@ export class WorldScene extends Phaser.Scene {
    * Uses a consumable / potion
    */
   public useConsumable(item: ItemEntity) {
-    if (item.properties?.hpRestore) {
-      this.showSkillBanner(`Hồi Phục: +${item.properties.hpRestore} HP!`);
-      this.castSkillVfx('vfx_divine_heal');
-    } else {
-      this.showSkillBanner(`Đã dùng: ${item.name}`);
-    }
+    networkService.useItem(item.id, (result) => {
+      if (!result?.success) {
+        this.showSkillBanner(result?.error || 'Không thể sử dụng vật phẩm.');
+        return;
+      }
+      const used = result.data;
+      this.showSkillBanner(`Hồi phục +${used.restoredHp} HP / +${used.restoredMp} MP`);
+      window.dispatchEvent(new CustomEvent('elysia-player-state', { detail: used.player }));
+    });
   }
 
   update(_time: number, delta: number) {
