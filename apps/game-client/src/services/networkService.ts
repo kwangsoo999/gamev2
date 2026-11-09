@@ -27,6 +27,7 @@ export class NetworkService {
   public onMonsterRespawned?: (monster: any) => void;
   public onChatReceived?: (msg: ChatMessagePayload) => void;
   public onConnectionError?: (message: string) => void;
+  public onItemUsed?: (result: any) => void;
 
   public connect(url: string = import.meta.env.VITE_WS_URL || 'http://localhost:4000') {
     if (this.socket) return;
@@ -48,6 +49,7 @@ export class NetworkService {
     this.socket.on('world:monster_respawned', (monster: any) => this.onMonsterRespawned?.(monster));
     this.socket.on('combat:result', (data) => this.onCombatResult?.(data));
     this.socket.on('combat:rewards', (data) => this.onCombatRewards?.(data));
+    this.socket.on('inventory:item_used', (data) => this.onItemUsed?.(data));
     this.socket.on('combat:error', (data) => this.onConnectionError?.(data.message));
     this.socket.on('chat:broadcast', (msg: ChatMessagePayload) => this.onChatReceived?.(msg));
   }
@@ -66,6 +68,9 @@ export class NetworkService {
   }
   public changeRegion(targetRegionId: string, _spawnX?: number, _spawnY?: number) {
     if (this.socket && this.isConnected) this.socket.emit('player:change_region', { targetRegionId });
+  }
+  public useItem(itemId: string, callback?: (result: any) => void) {
+    if (this.socket && this.isConnected) this.socket.emit('player:use_item', { itemId }, callback);
   }
   public respawn(callback?: (result: any) => void) {
     if (this.socket && this.isConnected) this.socket.emit('player:respawn', {}, callback);
