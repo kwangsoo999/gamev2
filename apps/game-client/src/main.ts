@@ -61,6 +61,7 @@ export const settingsModal = new SettingsModal();
 export const authModal = new AuthModal(async (_auth: AuthSuccessData) => {
   const characters = await fetchCharacters();
   if (!characters || characters.length === 0) {
+    localStorage.removeItem('elysia_active_character');
     characterCreationModal.open();
   } else {
     const primaryChar = characters[0];
