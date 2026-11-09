@@ -1761,16 +1761,7 @@ export class WorldScene extends Phaser.Scene {
       }
     };
 
-    networkService.onPlayerAction = (data) => {
-      const remote = this.remotePlayers.get(data.socketId);
-      if (remote && data.skillId && this.threeVfx) {
-        this.threeVfx.castSkill(
-          data.skillId,
-          { x: remote.sprite.x, y: remote.sprite.y },
-          { x: remote.sprite.x + (remote.sprite.flipX ? -150 : 150), y: remote.sprite.y }
-        );
-      }
-    };
+
   }
 
   private addRemotePlayer(player: RemotePlayer) {
