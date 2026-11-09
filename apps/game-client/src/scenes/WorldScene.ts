@@ -341,7 +341,7 @@ export class WorldScene extends Phaser.Scene {
       vfx_frost_nova: '',
       vfx_lightning_strike: '',
       vfx_holy_smite: '',
-      vfx_divine_heal: '',
+      vfx_divine_heal: 'skill_heal',
       vfx_sword_combo: 'skill_sword_combo',
       vfx_divine_shield: '',
       vfx_spin_slash: '',
@@ -354,8 +354,8 @@ export class WorldScene extends Phaser.Scene {
     const serverTarget = this.serverMonsters
       .filter((m) => m.alive && m.regionId === this.currentRegionId)
       .sort((a, b) => Phaser.Math.Distance.Between(spawnX, spawnY, a.x, a.y) - Phaser.Math.Distance.Between(spawnX, spawnY, b.x, b.y))[0];
-    if (sendCombat && mappedSkillId && serverTarget) {
-      networkService.sendCombatAction('skill', mappedSkillId, serverTarget.id);
+    if (sendCombat && mappedSkillId && (serverTarget || mappedSkillId === 'skill_heal')) {
+      networkService.sendCombatAction('skill', mappedSkillId, serverTarget?.id);
     }
     if (mappedSkillId && this.threeVfx) {
       const sourcePos = { x: spawnX, y: spawnY };
