@@ -732,7 +732,7 @@ export class WorldScene extends Phaser.Scene {
     const isMoving = vx !== 0 || vy !== 0;
 
     // Animation state update for novice character
-    const isNovice = !this.currentCharacter || this.currentCharacter.classId === 'novice';
+    const isNovice = (!this.currentCharacter || this.currentCharacter.classId === 'novice') && this.currentCharacter?.gender !== 'male';
     if (isNovice && !this.isActionLocked) {
       if (isMoving) {
         if (isRunning) {
@@ -753,6 +753,8 @@ export class WorldScene extends Phaser.Scene {
 
     this.player.x += vx * currentSpeed * dt;
     this.player.y += vy * currentSpeed * dt;
+    this.player.setDepth(this.player.y);
+    this.shadow.setDepth(this.player.y - 1);
 
     // Keep nameplate and shadow aligned with player position
     const nameplateOffsetY = isNovice ? 120 : 200;
