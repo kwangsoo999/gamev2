@@ -112,6 +112,10 @@ export interface CharacterEntity {
   level: number;
   exp: number;
   gold: number;
+  hp?: number;
+  maxHp?: number;
+  mp?: number;
+  maxMp?: number;
   baseStats: PrimaryAttributes;
   attributes: PrimaryAttributes;
   stats?: PrimaryAttributes;
