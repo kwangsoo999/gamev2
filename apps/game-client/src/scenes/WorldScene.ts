@@ -909,6 +909,14 @@ export class WorldScene extends Phaser.Scene {
         this.remotePlayers.delete(data.socketId);
       }
     };
+
+    // Register listeners first, then join so the initial authoritative state is received.
+    networkService.joinGame(charId, (result) => {
+      if (!result?.success) {
+        this.networkStarted = false;
+        this.showSkillBanner(result?.error || 'Không thể tham gia máy chủ.');
+      }
+    });
   }
 
   private addRemotePlayer(player: RemotePlayer) {
