@@ -280,12 +280,15 @@ export class CombatService {
 
   tick() {
     const now = Date.now();
+    const respawned: any[] = [];
     for (const monster of this.monsters.values()) {
       if (monster.alive || !monster.respawnAt || now < monster.respawnAt) continue;
       const def = this.monsterDefinitions.find(m => m.id === monster.definitionId);
       if (!def) continue;
       monster.hp = monster.maxHp; monster.alive = true; monster.respawnAt = undefined; monster.lastAttackedAt = 0;
+      respawned.push(this.publicMonster(monster));
     }
+    return respawned;
   }
 
   private ensureRegion(regionId: string) {
