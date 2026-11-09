@@ -272,7 +272,7 @@ export class CombatService {
   heal(characterId: string, skillId: string) {
     const player = this.requirePlayer(characterId);
     if (player.dead) throw new Error('Nhân vật đã gục.');
-    const skill = INITIAL_SKILLS.find(s => s.id === skillId && s.targetType === 'self');
+    const skill = INITIAL_SKILLS.find(s => s.id === skillId);
     if (!skill || (skill.classId !== player.character.classId && player.character.classId !== 'novice')) {
       throw new Error('Kỹ năng hồi phục không thuộc chức nghiệp của bạn.');
     }
