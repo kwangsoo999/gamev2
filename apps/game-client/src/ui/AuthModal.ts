@@ -107,8 +107,8 @@ export class AuthModal {
       return;
     }
 
-    if (password.length < 6) {
-      this.errorMessage = 'Mật khẩu phải có ít nhất 6 ký tự!';
+    if (password.length < 8) {
+      this.errorMessage = 'Mật khẩu phải có ít nhất 8 ký tự!';
       this.render();
       return;
     }
@@ -204,7 +204,7 @@ export class AuthModal {
             </div>
 
             <div class="auth-input-group">
-              <label>Mật Khẩu (Tối thiểu 6 ký tự)</label>
+              <label>Mật Khẩu (Tối thiểu 8 ký tự)</label>
               <input type="password" id="auth-reg-password" placeholder="Nhập mật khẩu an toàn..." />
             </div>
 
