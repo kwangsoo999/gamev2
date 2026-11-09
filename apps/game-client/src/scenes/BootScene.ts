@@ -7,6 +7,8 @@ export class BootScene extends Phaser.Scene {
   }
 
   preload() {
+    this.load.image('char_base_male_master', '/assets/characters/base/male/base_male_master_256.png');
+
     // Master Character 001 - Female Swordsman (256x256)
     this.load.image(
       'char_swordsman_female_master',
