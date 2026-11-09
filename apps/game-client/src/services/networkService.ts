@@ -66,8 +66,9 @@ export class NetworkService {
   public sendChatMessage(channel: 'global' | 'region' | 'party' | 'whisper', message: string) {
     if (this.socket && this.isConnected) this.socket.emit('chat:message', { channel, message });
   }
-  public changeRegion(targetRegionId: string, _spawnX?: number, _spawnY?: number) {
-    if (this.socket && this.isConnected) this.socket.emit('player:change_region', { targetRegionId });
+  public changeRegion(targetRegionId: string, callback?: (result: any) => void) {
+    if (this.socket && this.isConnected) this.socket.emit('player:change_region', { targetRegionId }, callback);
+    else callback?.({ success: false, error: 'Chưa kết nối máy chủ game.' });
   }
   public useItem(itemId: string, callback?: (result: any) => void) {
     if (this.socket && this.isConnected) this.socket.emit('player:use_item', { itemId }, callback);
