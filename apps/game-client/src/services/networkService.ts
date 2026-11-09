@@ -18,7 +18,7 @@ export class NetworkService {
   private isConnected = false;
   public onWorldPlayers?: (players: RemotePlayer[]) => void;
   public onPlayerJoined?: (player: RemotePlayer) => void;
-  public onPlayerMoved?: (data: { socketId: string; characterId: string; x: number; y: number }) => void;
+  public onPlayerMoved?: (data: { socketId: string; characterId: string; x: number; y: number; direction?: string }) => void;
   public onPlayerLeft?: (data: { socketId: string; characterId: string }) => void;
   public onCombatResult?: (data: any) => void;
   public onCombatRewards?: (data: any) => void;
