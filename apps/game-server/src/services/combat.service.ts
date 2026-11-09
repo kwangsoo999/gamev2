@@ -267,6 +267,30 @@ export class CombatService {
     }
   }
 
+
+  useItem(characterId: string, itemId: string) {
+    const player = this.requirePlayer(characterId);
+    if (player.dead) throw new Error('Nhân vật đã gục, không thể sử dụng vật phẩm.');
+    const item = this.store.items.find((i: any) => (i.id === itemId || i.itemId === itemId) && i.enabled !== false && i.usable !== false);
+    if (!item) throw new Error('Vật phẩm không tồn tại hoặc không thể sử dụng.');
+    const inventory = (player.character.inventory || []) as any[];
+    const slot = inventory.find(s => (s.itemId || s.item_id) === itemId && Number(s.quantity || 0) > 0);
+    if (!slot) throw new Error('Bạn không sở hữu vật phẩm này.');
+    const effects = item.effects || item.properties || {};
+    const healHp = Math.max(0, Number(effects.healHp ?? effects.hpRestore ?? effects.hp_restore ?? 0));
+    const healMp = Math.max(0, Number(effects.healMp ?? effects.mpRestore ?? effects.mp_restore ?? 0));
+    if (!healHp && !healMp) throw new Error('Vật phẩm này chưa có hiệu ứng sử dụng được.');
+    const restoredHp = Math.min(healHp, player.maxHp - player.hp);
+    const restoredMp = Math.min(healMp, player.maxMp - player.mp);
+    if (restoredHp <= 0 && restoredMp <= 0) throw new Error('HP và MP đã đầy.');
+    slot.quantity = Number(slot.quantity) - 1;
+    if (slot.quantity <= 0) inventory.splice(inventory.indexOf(slot), 1);
+    player.hp += restoredHp;
+    player.mp += restoredMp;
+    this.persist(player);
+    return { itemId, restoredHp, restoredMp, player: this.snapshot(player) };
+  }
+
   respawn(characterId: string) {
     const player = this.requirePlayer(characterId);
     if (!player.dead) throw new Error('Nhân vật chưa gục.');
