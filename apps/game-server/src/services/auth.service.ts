@@ -44,14 +44,17 @@ export class AuthService {
       { expiresIn: ENV.JWT_EXPIRES_IN as any }
     );
 
+    const userPayload = {
+      id: newUser.id,
+      username: newUser.username,
+      email: newUser.email,
+      role: newUser.role,
+    };
+
     return {
       token,
-      user: {
-        id: newUser.id,
-        username: newUser.username,
-        email: newUser.email,
-        role: newUser.role,
-      },
+      account: userPayload,
+      user: userPayload,
     };
   }
 
@@ -79,14 +82,17 @@ export class AuthService {
       { expiresIn: ENV.JWT_EXPIRES_IN as any }
     );
 
+    const userPayload = {
+      id: user.id,
+      username: user.username,
+      email: user.email,
+      role: user.role,
+    };
+
     return {
       token,
-      user: {
-        id: user.id,
-        username: user.username,
-        email: user.email,
-        role: user.role,
-      },
+      account: userPayload,
+      user: userPayload,
     };
   }
 }
