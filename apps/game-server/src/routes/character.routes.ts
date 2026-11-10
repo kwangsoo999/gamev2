@@ -76,11 +76,11 @@ characterRouter.patch('/:id', async (req: AuthRequest, res: Response) => {
       return res.status(403).json({ success: false, error: 'Quyền sửa đổi bị từ chối. Bạn không phải chủ sở hữu nhân vật này.' });
     }
 
-    // Sanitize updates: prevent players from directly overwriting sensitive progression metrics
-    const allowedFields = ['appearance', 'attributes', 'equipment', 'x', 'y', 'regionId'];
+    // Sanitize updates: allow progression attributes allocation, appearance, equipment, location
+    const allowedFields = ['name', 'appearance', 'attributes', 'equipment', 'x', 'y', 'regionId'];
     const sanitizedUpdates: Record<string, any> = {};
 
-    for (const key of Object.keys(req.body)) {
+    for (const key of Object.keys(req.body || {})) {
       if (allowedFields.includes(key) || req.user!.role === 'admin') {
         sanitizedUpdates[key] = req.body[key];
       }

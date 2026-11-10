@@ -8,7 +8,7 @@
   "defaultSpawnRegion": "VIL_STARTER",
   "defaultSpawnCoords": {
     "x": 1000,
-    "y": 1000
+    "y": 1350
   },
   "coordinateSystem": {
     "type": "isometric_2.5d",

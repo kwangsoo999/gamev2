@@ -86,7 +86,7 @@ export async function runMigrationsAndSeeds() {
       ],
       regionId: 'VIL_STARTER',
       x: 1000,
-      y: 1000,
+      y: 1350,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     });

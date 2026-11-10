@@ -2,7 +2,15 @@ import { HealthResponse, CharacterEntity, Gender, ClassId, PrimaryAttributes, Ch
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000/api/v1';
 
-export async function loginApi(username: string, password: string): Promise<{ success: boolean; data?: { token: string; account: any }; error?: string }> {
+function getAuthHeaders(): Record<string, string> {
+  const token = localStorage.getItem('elysia_token');
+  return {
+    'Content-Type': 'application/json',
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+  };
+}
+
+export async function loginApi(username: string, password: string): Promise<{ success: boolean; data?: { token: string; account: any; user: any }; error?: string }> {
   try {
     const res = await fetch(`${API_BASE}/auth/login`, {
       method: 'POST',
@@ -13,13 +21,14 @@ export async function loginApi(username: string, password: string): Promise<{ su
     if (!res.ok || !json.success) {
       return { success: false, error: json.error || json.message || 'Tài khoản hoặc mật khẩu không chính xác.' };
     }
-    return { success: true, data: json.data };
+    const account = json.data?.account ?? json.data?.user;
+    return { success: true, data: { ...json.data, account, user: account } };
   } catch (err: any) {
     return { success: false, error: err.message || 'Không thể kết nối đến máy chủ xác thực.' };
   }
 }
 
-export async function registerApi(username: string, email: string, password: string): Promise<{ success: boolean; data?: { token: string; account: any }; error?: string }> {
+export async function registerApi(username: string, email: string, password: string): Promise<{ success: boolean; data?: { token: string; account: any; user: any }; error?: string }> {
   try {
     const res = await fetch(`${API_BASE}/auth/register`, {
       method: 'POST',
@@ -30,9 +39,19 @@ export async function registerApi(username: string, email: string, password: str
     if (!res.ok || !json.success) {
       return { success: false, error: json.error || json.message || 'Đăng ký tài khoản thất bại.' };
     }
-    return { success: true, data: json.data };
+    const account = json.data?.account ?? json.data?.user;
+    return { success: true, data: { ...json.data, account, user: account } };
   } catch (err: any) {
     return { success: false, error: err.message || 'Không thể kết nối đến máy chủ xác thực.' };
+  }
+}
+
+export async function validateSessionApi(): Promise<boolean> {
+  try {
+    const res = await fetch(`${API_BASE}/auth/me`, { headers: getAuthHeaders() });
+    return res.ok;
+  } catch {
+    return false;
   }
 }
 
@@ -44,14 +63,6 @@ export async function checkServerHealth(): Promise<HealthResponse | null> {
   } catch {
     return null;
   }
-}
-
-function getAuthHeaders(): Record<string, string> {
-  const token = localStorage.getItem('elysia_token');
-  return {
-    'Content-Type': 'application/json',
-    ...(token ? { Authorization: `Bearer ${token}` } : {}),
-  };
 }
 
 export interface CreateCharacterPayload {
@@ -96,6 +107,17 @@ export async function fetchCharacters(): Promise<CharacterEntity[]> {
 export async function fetchMonsters(): Promise<any[]> {
   try {
     const res = await fetch(`${API_BASE}/game/monsters`);
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.data || [];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchConnections(): Promise<any[]> {
+  try {
+    const res = await fetch(`${API_BASE}/game/connections`);
     if (!res.ok) return [];
     const json = await res.json();
     return json.data || [];

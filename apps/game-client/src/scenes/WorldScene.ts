@@ -4,7 +4,7 @@ import { CharacterEntity, WeaponEntity, ItemEntity } from '@elysia/game-types';
 import { INITIAL_CLASSES } from '@elysia/game-data-schema';
 import { SKILL_VFX_REGISTRY, SkillVfxDefinition } from '../vfx/SkillVfxConfig';
 import { networkService, RemotePlayer } from '../services/networkService';
-import { fetchMonsters, fetchSpawns } from '../services/apiClient';
+import { fetchMonsters, fetchSpawns, fetchNpcs, fetchConnections } from '../services/apiClient';
 
 export class WorldScene extends Phaser.Scene {
   private player!: Phaser.GameObjects.Sprite;
@@ -23,6 +23,14 @@ export class WorldScene extends Phaser.Scene {
   private keyJ!: Phaser.Input.Keyboard.Key;
   private keyH!: Phaser.Input.Keyboard.Key;
   private keyK!: Phaser.Input.Keyboard.Key;
+  private keyE!: Phaser.Input.Keyboard.Key;
+  private networkStarted = false;
+  private portalTargets = [
+    { id: 'FIELD_EAST', x: 1950, y: 1000, label: 'CỔNG ĐÔNG · ĐỒNG CỎ · Lv.1+' },
+    { id: 'FIELD_WEST', x: 50, y: 1000, label: 'CỔNG TÂY · RỪNG RẬM · Lv.4+' },
+    { id: 'FIELD_SOUTH', x: 1000, y: 1950, label: 'CỔNG NAM · THUNG LŨNG · Lv.7+' },
+    { id: 'FIELD_NORTH', x: 1000, y: 50, label: 'CỔNG BẮC · NÚI BĂNG · Lv.10+' },
+  ];
   private keyShift!: Phaser.Input.Keyboard.Key;
 
   private isActionLocked = false;
@@ -45,6 +53,7 @@ export class WorldScene extends Phaser.Scene {
   }> = new Map();
   private lastNetworkSync = 0;
   private currentRegionId = 'VIL_STARTER';
+  private serverMonsters: any[] = [];
 
   constructor() {
     super({ key: 'WorldScene' });
@@ -58,57 +67,33 @@ export class WorldScene extends Phaser.Scene {
     this.physics.world.setBounds(0, 0, mapWidth, mapHeight);
     this.cameras.main.setBounds(0, 0, mapWidth, mapHeight);
 
-    // Draw fantasy test map terrain
-    const bg = this.add.graphics();
-    bg.fillStyle(0x0a0d14, 1);
-    bg.fillRect(0, 0, mapWidth, mapHeight);
-
-    // Grid tiles (48x48)
-    bg.lineStyle(1, 0x182030, 0.5);
-    const step = 48;
-    for (let x = 0; x <= mapWidth; x += step) {
-      bg.lineBetween(x, 0, x, mapHeight);
-    }
-    for (let y = 0; y <= mapHeight; y += step) {
-      bg.lineBetween(0, y, mapWidth, y);
+    // Restore the cached character for immediate scene setup; the account token is verified by the API.
+    let initialName = 'Nhà Phiêu Lưu';
+    let initialTitle = '<Tân Thủ Lv.1>';
+    const stored = localStorage.getItem('elysia_active_character');
+    if (stored) {
+      try {
+        this.currentCharacter = JSON.parse(stored) as CharacterEntity;
+        initialName = this.currentCharacter.name;
+        const cls = INITIAL_CLASSES.find((item) => item.id === this.currentCharacter!.classId);
+        initialTitle = `<${cls ? cls.name.split(' (')[0] : this.currentCharacter.classId} Lv.${this.currentCharacter.level}>`;
+      } catch { localStorage.removeItem('elysia_active_character'); }
     }
 
-    // Central Town Square / Village Plaza marker
-    const plaza = this.add.graphics();
-    plaza.lineStyle(2, 0xd4af37, 0.4);
-    plaza.strokeCircle(mapWidth / 2, mapHeight / 2, 220);
-    plaza.lineStyle(1, 0x1c69d4, 0.3);
-    plaza.strokeCircle(mapWidth / 2, mapHeight / 2, 140);
-
-    // Ground Shadow for character
-    const spawnX = mapWidth / 2;
-    const spawnY = mapHeight / 2;
+    this.drawStarterVillage(mapWidth, mapHeight);
+    const spawnX = this.currentCharacter?.x ?? 1000;
+    const spawnY = this.currentCharacter?.y ?? 1350;
     this.shadow = this.add.ellipse(spawnX, spawnY, 68, 20, 0x000000, 0.45);
 
     // Initialize character 7-action animations
     this.initCharacterAnimations();
 
-    // Check stored active character
-    let initialName = 'ELYSIA_NOVICE_FEMALE_001';
-    let initialTitle = '<Tân Thủ Lv.1>';
-    const stored = localStorage.getItem('elysia_active_character');
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored) as CharacterEntity;
-        this.currentCharacter = parsed;
-        initialName = parsed.name;
-        const cls = INITIAL_CLASSES.find((c) => c.id === parsed.classId);
-        initialTitle = `<${cls ? cls.name.split(' (')[0] : parsed.classId} Lv.${parsed.level}>`;
-      } catch {
-        // use default
-      }
-    }
-
     // Create Animated Character Sprite (Standardized 256x256 anchored at (128, 238))
     this.player = this.add.sprite(spawnX, spawnY, 'char_swordsman_anim_idle', 0);
     this.player.setOrigin(0.5, 0.9297);
     this.player.setScale(1.0);
-    this.player.play('char_novice_idle');
+    if (this.currentCharacter?.gender === 'male') this.player.setTexture('char_base_male_master');
+    else this.player.play('char_novice_idle');
 
     // Character Nameplate & Title
     this.nameplate = this.add.text(spawnX, spawnY - 120, initialName, {
@@ -166,6 +151,24 @@ export class WorldScene extends Phaser.Scene {
       this.toggleDeath();
     });
 
+    this.keyE = this.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.E);
+    this.keyE.on('down', () => {
+      const portal = this.portalTargets
+        .map((entry) => ({ ...entry, distance: Phaser.Math.Distance.Between(this.player.x, this.player.y, entry.x, entry.y) }))
+        .sort((a, b) => a.distance - b.distance)[0];
+      if (!portal || portal.distance > 125) {
+        this.showSkillBanner('Hãy đến gần một trong bốn cổng làng rồi nhấn E.');
+        return;
+      }
+      networkService.changeRegion(portal.id, (result: any) => {
+        if (!result?.success) {
+          this.showSkillBanner(result?.error || 'Không thể đi qua cổng.');
+          return;
+        }
+        this.showSkillBanner('Đang tiến vào: ' + portal.label);
+      });
+    });
+
     // FPS / Debug Text Overlay (fixed to camera)
     this.debugText = this.add.text(16, window.innerHeight - 36, '', {
       fontFamily: 'Consolas, monospace',
@@ -195,73 +198,9 @@ export class WorldScene extends Phaser.Scene {
       }
     });
 
-    // Spawn Sample Ground Loot Item in Plaza (Excalibur Holy Blade)
-    const lootX = spawnX + 90;
-    const lootY = spawnY + 50;
-    const lootShadow = this.add.ellipse(lootX, lootY + 14, 32, 10, 0x000000, 0.45);
-    const lootItem = this.add.sprite(lootX, lootY, 'char_novice_anim_idle', 0).setScale(0.6);
-    lootItem.setTint(0xfef08a);
-    lootItem.setInteractive({ useHandCursor: true });
+    // The starter village is a protected safe zone: no local combat dummies or fake loot.
+    this.initMultiplayerNetwork();
 
-    const lootBanner = this.add.text(lootX, lootY - 24, '✦ [Loot Rơi] Thánh Kiếm Excalibur (Bấm để nhặt) ✦', {
-      fontFamily: 'Segoe UI, Arial, sans-serif',
-      fontSize: '11px',
-      fontStyle: 'bold',
-      color: '#fef08a',
-      stroke: '#000000',
-      strokeThickness: 3,
-    }).setOrigin(0.5);
-
-    this.tweens.add({
-      targets: [lootItem, lootBanner],
-      y: '-=6',
-      duration: 1100,
-      yoyo: true,
-      repeat: -1,
-      ease: 'Sine.easeInOut',
-    });
-
-    lootItem.on('pointerdown', () => {
-      this.showSkillBanner('Đã nhặt: Thánh Kiếm Excalibur vào túi đồ!');
-      lootItem.destroy();
-      lootShadow.destroy();
-      lootBanner.destroy();
-    });
-
-    // Spawn Sample Training Dummies in Town Square for Skill Impact Testing
-    this.initTrainingDummies(spawnX, spawnY);
-
-    // Initialize Realtime Multiplayer Network
-    this.initMultiplayerNetwork(spawnX, spawnY);
-
-    // Populate World Monsters & Spawns dynamically
-    this.initWorldMonsters(spawnX, spawnY);
-  }
-
-  /**
-   * Initializes 7 Standardized Character Action Animations (256x256)
-   */
-  private initCharacterAnimations() {
-    const animConfigs = [
-      { key: 'char_novice_idle', sheet: 'char_swordsman_anim_idle', end: 5, fps: 8, repeat: -1 },
-      { key: 'char_novice_walk', sheet: 'char_swordsman_anim_walk', end: 5, fps: 10, repeat: -1 },
-      { key: 'char_novice_run', sheet: 'char_swordsman_anim_run', end: 5, fps: 12, repeat: -1 },
-      { key: 'char_novice_attack', sheet: 'char_swordsman_anim_attack', end: 4, fps: 12, repeat: 0 },
-      { key: 'char_novice_skill', sheet: 'char_swordsman_anim_skill', end: 4, fps: 12, repeat: 0 },
-      { key: 'char_novice_hurt', sheet: 'char_swordsman_anim_hurt', end: 4, fps: 10, repeat: 0 },
-      { key: 'char_novice_death', sheet: 'char_swordsman_anim_death', end: 5, fps: 8, repeat: 0 },
-    ];
-
-    for (const ac of animConfigs) {
-      if (!this.anims.exists(ac.key)) {
-        this.anims.create({
-          key: ac.key,
-          frames: this.anims.generateFrameNumbers(ac.sheet, { start: 0, end: ac.end }),
-          frameRate: ac.fps,
-          repeat: ac.repeat,
-        });
-      }
-    }
   }
 
   /**
@@ -316,7 +255,7 @@ export class WorldScene extends Phaser.Scene {
   /**
    * Casts a Full HD 256px Skill VFX with exact pivot alignment
    */
-  public castSkillVfx(vfxKey: string) {
+  public castSkillVfx(vfxKey: string, sendCombat: boolean = true) {
     const def: SkillVfxDefinition | undefined = SKILL_VFX_REGISTRY[vfxKey];
     if (!def) {
       console.warn(`[SkillVFX] Unknown skill VFX: ${vfxKey}`);
@@ -335,22 +274,27 @@ export class WorldScene extends Phaser.Scene {
 
     // Three.js Modular VFX Engine integration
     const skillIdMap: Record<string, string> = {
-      vfx_sword_slash: 'skill_sword_slash',
+      vfx_sword_slash: 'skill_slash',
       vfx_fireball: 'skill_fireball',
-      vfx_frost_nova: 'skill_frost_nova',
-      vfx_lightning_strike: 'skill_lightning_strike',
-      vfx_holy_smite: 'skill_holy_smite',
-      vfx_divine_heal: 'skill_divine_heal',
+      vfx_frost_nova: '',
+      vfx_lightning_strike: '',
+      vfx_holy_smite: '',
+      vfx_divine_heal: 'skill_heal',
       vfx_sword_combo: 'skill_sword_combo',
-      vfx_divine_shield: 'skill_divine_shield',
-      vfx_spin_slash: 'skill_spin_slash',
-      vfx_earth_stomp: 'skill_heavy_cleave',
-      vfx_shadow_step: 'skill_homing_missile',
-      vfx_dash_strike: 'skill_arrow_shot',
+      vfx_divine_shield: '',
+      vfx_spin_slash: '',
+      vfx_earth_stomp: '',
+      vfx_shadow_step: '',
+      vfx_dash_strike: '',
     };
 
     const mappedSkillId = skillIdMap[vfxKey];
-    networkService.sendCombatAction('skill', mappedSkillId || vfxKey, nearestDummy?.id, spawnX, spawnY);
+    const serverTarget = this.serverMonsters
+      .filter((m) => m.alive && m.regionId === this.currentRegionId)
+      .sort((a, b) => Phaser.Math.Distance.Between(spawnX, spawnY, a.x, a.y) - Phaser.Math.Distance.Between(spawnX, spawnY, b.x, b.y))[0];
+    if (sendCombat && mappedSkillId && (serverTarget || mappedSkillId === 'skill_heal')) {
+      networkService.sendCombatAction('skill', mappedSkillId, serverTarget?.id);
+    }
     if (mappedSkillId && this.threeVfx) {
       const sourcePos = { x: spawnX, y: spawnY };
       const targetPos = nearestDummy
@@ -358,16 +302,8 @@ export class WorldScene extends Phaser.Scene {
         : { x: spawnX + (facingLeft ? -220 : 220), y: spawnY };
 
       this.threeVfx.castSkill(mappedSkillId, sourcePos, targetPos, {
-        onImpact: () => {
-          if (nearestDummy && !nearestDummy.isDead) {
-            this.hitDummy(nearestDummy, def.name);
-          }
-        },
-        onDamageFrame: () => {
-          if (nearestDummy && !nearestDummy.isDead) {
-            this.hitDummy(nearestDummy, def.name);
-          }
-        },
+        onImpact: () => {},
+        onDamageFrame: () => {},
       });
     }
 
@@ -438,7 +374,11 @@ export class WorldScene extends Phaser.Scene {
     } else {
       this.isActionLocked = false;
     }
-    this.castSkillVfx('vfx_sword_slash');
+    const target = this.serverMonsters
+      .filter((m) => m.alive && m.regionId === this.currentRegionId)
+      .sort((a, b) => Phaser.Math.Distance.Between(this.player.x, this.player.y, a.x, a.y) - Phaser.Math.Distance.Between(this.player.x, this.player.y, b.x, b.y))[0];
+    if (target) networkService.sendCombatAction('basic_attack', undefined, target.id);
+    this.castSkillVfx('vfx_sword_slash', false);
   }
 
   /**
@@ -668,7 +608,15 @@ export class WorldScene extends Phaser.Scene {
   }
 
   public updatePlayerCharacter(char: CharacterEntity) {
+    if (this.currentCharacter && this.currentCharacter.id !== char.id) {
+      networkService.disconnect();
+      this.networkStarted = false;
+    }
     this.currentCharacter = char;
+    if (this.player && Number.isFinite(char.x) && Number.isFinite(char.y)) {
+      this.player.setPosition(char.x, char.y);
+      this.shadow?.setPosition(char.x, char.y);
+    }
     if (this.nameplate) {
       this.nameplate.setText(char.name);
     }
@@ -680,17 +628,26 @@ export class WorldScene extends Phaser.Scene {
 
     // Update Sprite texture
     if (this.player) {
-      if (char.classId === 'swordsman') {
+      if (char.gender === 'male') {
+        this.player.stop();
+        this.player.setTexture('char_base_male_master');
+        this.player.setOrigin(0.5, 0.92);
+        this.player.setScale(0.9);
+      } else if (char.classId === 'swordsman') {
         this.player.stop();
         this.player.setTexture('char_swordsman_female_master');
         this.player.setOrigin(0.5, 0.9297);
         this.player.setScale(0.85);
       } else {
-        this.player.setOrigin(0.5, 0.875);
-        this.player.setScale(1.4);
+        this.player.setTexture('char_swordsman_anim_idle');
+        this.player.setOrigin(0.5, 0.9297);
+        this.player.setScale(1.0);
         this.player.play('char_novice_idle', true);
       }
     }
+
+    // A character is only allowed into multiplayer after its account-owned record exists.
+    this.initMultiplayerNetwork();
 
     // Update HUD
     const hudDisplay = document.getElementById('active-character-display');
@@ -724,12 +681,15 @@ export class WorldScene extends Phaser.Scene {
    * Uses a consumable / potion
    */
   public useConsumable(item: ItemEntity) {
-    if (item.properties?.hpRestore) {
-      this.showSkillBanner(`Hồi Phục: +${item.properties.hpRestore} HP!`);
-      this.castSkillVfx('vfx_divine_heal');
-    } else {
-      this.showSkillBanner(`Đã dùng: ${item.name}`);
-    }
+    networkService.useItem(item.id, (result) => {
+      if (!result?.success) {
+        this.showSkillBanner(result?.error || 'Không thể sử dụng vật phẩm.');
+        return;
+      }
+      const used = result.data;
+      this.showSkillBanner(`Hồi phục +${used.restoredHp} HP / +${used.restoredMp} MP`);
+      window.dispatchEvent(new CustomEvent('elysia-player-state', { detail: used.player }));
+    });
   }
 
   update(_time: number, delta: number) {
@@ -772,7 +732,7 @@ export class WorldScene extends Phaser.Scene {
     const isMoving = vx !== 0 || vy !== 0;
 
     // Animation state update for novice character
-    const isNovice = !this.currentCharacter || this.currentCharacter.classId === 'novice';
+    const isNovice = (!this.currentCharacter || this.currentCharacter.classId === 'novice') && this.currentCharacter?.gender !== 'male';
     if (isNovice && !this.isActionLocked) {
       if (isMoving) {
         if (isRunning) {
@@ -793,6 +753,8 @@ export class WorldScene extends Phaser.Scene {
 
     this.player.x += vx * currentSpeed * dt;
     this.player.y += vy * currentSpeed * dt;
+    this.player.setDepth(this.player.y);
+    this.shadow.setDepth(this.player.y - 1);
 
     // Keep nameplate and shadow aligned with player position
     const nameplateOffsetY = isNovice ? 120 : 200;
@@ -876,25 +838,45 @@ export class WorldScene extends Phaser.Scene {
   /**
    * Connects to Authoritative Socket.IO Gateway
    */
-  private initMultiplayerNetwork(spawnX: number, spawnY: number) {
+  private initMultiplayerNetwork() {
+    if (!this.currentCharacter || !localStorage.getItem('elysia_token') || this.networkStarted) return;
+    this.networkStarted = true;
     networkService.connect();
 
-    const charId = this.currentCharacter?.id || 'char_local_001';
-    const charName = this.currentCharacter?.name || 'ELYSIA_NOVICE_FEMALE_001';
-    const classId = this.currentCharacter?.classId || 'novice';
-    const gender = this.currentCharacter?.gender || 'female';
-    const level = this.currentCharacter?.level || 1;
+    const charId = this.currentCharacter.id;
+    
 
-    networkService.joinGame({
-      characterId: charId,
-      name: charName,
-      classId,
-      gender,
-      level,
-      regionId: this.currentRegionId,
-      x: spawnX,
-      y: spawnY,
-    });
+    networkService.onWorldMonsters = (monsters) => { this.serverMonsters = monsters || []; };
+    networkService.onMonsterRespawned = (monster) => {
+      const index = this.serverMonsters.findIndex((m) => m.id === monster.id);
+      if (index >= 0) this.serverMonsters[index] = monster;
+      else this.serverMonsters.push(monster);
+    };
+    networkService.onPlayerState = (state) => {
+      if (this.currentCharacter && state.characterId === this.currentCharacter.id) {
+        Object.assign(this.currentCharacter, state);
+        this.isDead = state.dead;
+        this.currentRegionId = state.regionId;
+        if (this.player && Number.isFinite(state.x) && Number.isFinite(state.y)) this.player.setPosition(state.x, state.y);
+        window.dispatchEvent(new CustomEvent('elysia-player-state', { detail: state }));
+      }
+    };
+    networkService.onCombatResult = (result) => {
+      if (result?.monster) {
+        const index = this.serverMonsters.findIndex((m) => m.id === result.monster.id);
+        if (index >= 0) this.serverMonsters[index] = result.monster;
+        window.dispatchEvent(new CustomEvent('elysia-target-hit', { detail: {
+          name: result.monster.name, hp: result.monster.hp, maxHp: result.monster.maxHp, level: result.monster.level,
+        }}));
+        window.dispatchEvent(new CustomEvent('elysia-floating-dmg', { detail: {
+          x: window.innerWidth / 2, y: window.innerHeight / 2 - 50, damage: result.damage, isCrit: result.critical,
+        }}));
+      }
+    };
+    networkService.onCombatRewards = (rewards) => {
+      this.showSkillBanner(`+${rewards.exp} EXP  +${rewards.gold} Gold${rewards.drops?.length ? ` • ${rewards.drops.length} vật phẩm` : ''}`);
+      window.dispatchEvent(new CustomEvent('elysia-combat-rewards', { detail: rewards }));
+    };
 
     networkService.onWorldPlayers = (players: RemotePlayer[]) => {
       for (const p of players) {
@@ -928,17 +910,6 @@ export class WorldScene extends Phaser.Scene {
       }
     };
 
-    networkService.onPlayerAction = (data) => {
-      const remote = this.remotePlayers.get(data.socketId);
-      if (remote && data.skillId && this.threeVfx) {
-        this.threeVfx.castSkill(
-          data.skillId,
-          { x: remote.sprite.x, y: remote.sprite.y },
-          { x: remote.sprite.x + (remote.sprite.flipX ? -150 : 150), y: remote.sprite.y }
-        );
-      }
-    };
-
     networkService.onPlayerSnap = (data) => {
       if (this.player) {
         this.player.x = data.x;
@@ -955,7 +926,7 @@ export class WorldScene extends Phaser.Scene {
           this.titleplate.x = data.x;
           this.titleplate.y = data.y - 102;
         }
-        this.showSkillBanner(`[Hệ Thống] Đã đồng bộ vị trí máy chủ (${data.reason})`);
+        this.showSkillBanner(`[Hệ Thống] Đã đồng bộ vị trí máy chủ (${data.reason || 'Snap'})`);
       }
     };
 
@@ -991,6 +962,14 @@ export class WorldScene extends Phaser.Scene {
     networkService.onActionRejected = (data) => {
       console.warn(`[Action Rejected]`, data.reason);
     };
+
+    // Register listeners first, then join so the initial authoritative state is received.
+    networkService.joinGame(charId, (result) => {
+      if (!result?.success) {
+        this.networkStarted = false;
+        this.showSkillBanner(result?.error || 'Không thể tham gia máy chủ.');
+      }
+    });
   }
 
   private addRemotePlayer(player: RemotePlayer) {
@@ -1095,6 +1074,183 @@ export class WorldScene extends Phaser.Scene {
       }
     } catch {
       console.warn('[WorldScene] Could not fetch remote monsters, keeping training dummies.');
+    }
+  }
+
+  private initCharacterAnimations() {
+    const animConfigs = [
+      { key: 'char_novice_idle', sheet: 'char_swordsman_anim_idle', end: 5, fps: 8, repeat: -1 },
+      { key: 'char_novice_walk', sheet: 'char_swordsman_anim_walk', end: 5, fps: 10, repeat: -1 },
+      { key: 'char_novice_run', sheet: 'char_swordsman_anim_run', end: 5, fps: 12, repeat: -1 },
+      { key: 'char_novice_attack', sheet: 'char_swordsman_anim_attack', end: 4, fps: 12, repeat: 0 },
+      { key: 'char_novice_skill', sheet: 'char_swordsman_anim_skill', end: 4, fps: 12, repeat: 0 },
+      { key: 'char_novice_hurt', sheet: 'char_swordsman_anim_hurt', end: 4, fps: 10, repeat: 0 },
+      { key: 'char_novice_death', sheet: 'char_swordsman_anim_death', end: 5, fps: 8, repeat: 0 },
+    ];
+
+    for (const ac of animConfigs) {
+      if (!this.anims.exists(ac.key)) {
+        this.anims.create({
+          key: ac.key,
+          frames: this.anims.generateFrameNumbers(ac.sheet, { start: 0, end: ac.end }),
+          frameRate: ac.fps,
+          repeat: ac.repeat,
+        });
+      }
+    }
+  }
+
+  /**
+   * Starter-village environment aligned with regions.json and connections.json.
+   * Decorative geometry is client-side; portal validation and character state remain server-owned.
+   */
+  private drawStarterVillage(width: number, height: number) {
+    const ground = this.add.graphics().setDepth(-100);
+    ground.fillStyle(0x527c42, 1).fillRect(0, 0, width, height);
+    ground.fillStyle(0x668d4c, 0.55);
+    for (let y = 120; y < height - 100; y += 96) {
+      for (let x = 120; x < width - 100; x += 96) {
+        const n = ((x * 17 + y * 31) % 7);
+        ground.fillCircle(x + n * 2, y + n, 2 + n % 3);
+      }
+    }
+
+    const fence = this.add.graphics().setDepth(-20);
+    fence.lineStyle(12, 0x62452b, 1);
+    fence.lineBetween(90, 90, 870, 90); fence.lineBetween(1130, 90, 1910, 90);
+    fence.lineBetween(90, 1910, 870, 1910); fence.lineBetween(1130, 1910, 1910, 1910);
+    fence.lineBetween(90, 90, 90, 870); fence.lineBetween(90, 1130, 90, 1910);
+    fence.lineBetween(1910, 90, 1910, 870); fence.lineBetween(1910, 1130, 1910, 1910);
+    fence.lineStyle(3, 0xc59a59, 0.9);
+    for (let x = 110; x < 1890; x += 70) {
+      if (x > 820 && x < 1180) continue;
+      fence.lineBetween(x, 82, x, 98); fence.lineBetween(x, 1902, x, 1918);
+    }
+    for (let y = 110; y < 1890; y += 70) {
+      if (y > 820 && y < 1180) continue;
+      fence.lineBetween(82, y, 98, y); fence.lineBetween(1902, y, 1918, y);
+    }
+
+    const roads = this.add.graphics().setDepth(-15);
+    roads.fillStyle(0xb5a17a, 1).fillRect(910, 90, 180, 1820).fillRect(90, 910, 1820, 180);
+    roads.fillStyle(0xd2c39c, 0.65).fillRect(930, 90, 140, 1820).fillRect(90, 930, 1820, 140);
+    roads.lineStyle(3, 0x8d7959, 0.8).strokeRect(910, 90, 180, 1820).strokeRect(90, 910, 1820, 180);
+
+    const plaza = this.add.graphics().setDepth(-10);
+    plaza.fillStyle(0xc8b58d, 1).fillCircle(1000, 1000, 245);
+    plaza.lineStyle(9, 0x8d7959, 1).strokeCircle(1000, 1000, 245);
+    plaza.lineStyle(3, 0xe8d9b8, 1).strokeCircle(1000, 1000, 220);
+    plaza.fillStyle(0x7a9b9b, 1).fillCircle(1000, 1000, 66);
+    plaza.lineStyle(8, 0xe4d9bd, 1).strokeCircle(1000, 1000, 66);
+    plaza.fillStyle(0x69b9d0, 1).fillCircle(1000, 1000, 42);
+    plaza.fillStyle(0xe5f5fa, 0.9).fillCircle(1000, 970, 8);
+    this.add.text(1000, 820, 'QUẢNG TRƯỜNG KHỞI NGUYÊN', {
+      fontFamily: 'Georgia, serif', fontSize: '18px', color: '#fff1c2',
+      stroke: '#46351e', strokeThickness: 5, fontStyle: 'bold',
+    }).setOrigin(0.5).setDepth(5);
+
+    const drawTree = (x: number, y: number, scale = 1) => {
+      this.add.ellipse(x, y + 17 * scale, 48 * scale, 16 * scale, 0x263a24, 0.35).setDepth(y - 2);
+      this.add.rectangle(x, y + 8 * scale, 13 * scale, 32 * scale, 0x79502d).setDepth(y);
+      this.add.circle(x, y - 10 * scale, 28 * scale, 0x2d633c).setDepth(y + 1);
+      this.add.circle(x - 13 * scale, y - 18 * scale, 19 * scale, 0x3d7a43).setDepth(y + 2);
+      this.add.circle(x + 13 * scale, y - 20 * scale, 18 * scale, 0x4d8b4a).setDepth(y + 3);
+      this.add.circle(x - 8 * scale, y - 25 * scale, 6 * scale, 0x8dbb68, 0.8).setDepth(y + 4);
+    };
+    const trees = [
+      [220,220],[380,180],[560,260],[720,210],[1280,190],[1460,250],[1690,190],[1810,330],
+      [220,520],[360,650],[520,520],[680,690],[1320,560],[1510,650],[1730,540],[1810,760],
+      [230,1280],[390,1450],[580,1660],[730,1780],[1280,1450],[1460,1650],[1650,1450],[1810,1700],
+      [520,1320],[1450,1280],[650,350],[1380,350],[330,1780],[1740,1180],
+    ];
+    trees.forEach(([x,y], i) => drawTree(x, y, 0.8 + (i % 3) * 0.12));
+
+    const drawBuilding = (x: number, y: number, w: number, h: number, label: string, roof: number) => {
+      const g = this.add.graphics().setDepth(y);
+      g.fillStyle(0x263126, 0.35).fillEllipse(x + 8, y + h * 0.48, w + 35, 24);
+      g.fillStyle(0xd5c29a, 1).fillRect(x - w/2, y - h/2, w, h);
+      g.lineStyle(4, 0x68472d, 1).strokeRect(x - w/2, y - h/2, w, h);
+      g.fillStyle(roof, 1).fillTriangle(x - w/2 - 18, y - h/2 + 8, x + w/2 + 18, y - h/2 + 8, x, y - h/2 - h * 0.55);
+      g.lineStyle(4, 0x5b3a28, 1).lineBetween(x - w/2 - 18, y - h/2 + 8, x, y - h/2 - h * 0.55);
+      g.lineBetween(x + w/2 + 18, y - h/2 + 8, x, y - h/2 - h * 0.55);
+      g.fillStyle(0x68472d, 1).fillRect(x - 13, y + h/2 - 38, 26, 38);
+      g.fillStyle(0xa9d5d8, 1).fillRect(x - w/2 + 16, y - 8, 22, 24);
+      g.fillRect(x + w/2 - 38, y - 8, 22, 24);
+      this.add.text(x, y + h/2 + 13, label, {
+        fontFamily: 'Segoe UI, Arial, sans-serif', fontSize: '13px', color: '#fff4d6',
+        stroke: '#3b2a1b', strokeThickness: 4, fontStyle: 'bold',
+      }).setOrigin(0.5).setDepth(y + 20);
+    };
+    drawBuilding(1000, 300, 260, 170, 'ĐỀN THỜ CHUYỂN CHỨC', 0x6d7891);
+    drawBuilding(760, 730, 180, 130, 'NHÀ HUẤN LUYỆN', 0x9a603e);
+    drawBuilding(760, 1200, 180, 130, 'XƯỞNG RÈN VULCAN', 0x8c4c35);
+    drawBuilding(1240, 1200, 180, 130, 'TIỆM TẠP HÓA MAYA', 0x477c70);
+    drawBuilding(1280, 800, 170, 125, 'KHO BARNABY', 0x8a6a9b);
+    drawBuilding(1300, 1510, 190, 130, 'NHÀ THẢO DƯỢC', 0x63864b);
+
+    const drawGate = (x: number, y: number, label: string, vertical: boolean) => {
+      const g = this.add.graphics().setDepth(y + 4);
+      g.fillStyle(0x5b4631, 1);
+      if (vertical) {
+        g.fillRect(x - 58, y - 24, 116, 48);
+        g.fillStyle(0x342d25, 1).fillRect(x - 22, y - 30, 44, 60);
+        g.lineStyle(5, 0xd2b47c, 1).strokeRect(x - 58, y - 24, 116, 48);
+      } else {
+        g.fillRect(x - 24, y - 58, 48, 116);
+        g.fillStyle(0x342d25, 1).fillRect(x - 30, y - 22, 60, 44);
+        g.lineStyle(5, 0xd2b47c, 1).strokeRect(x - 24, y - 58, 48, 116);
+      }
+      this.add.text(x, y + (vertical ? 55 : 0), label, {
+        fontSize: '12px', color: '#fff1c2', fontStyle: 'bold',
+        stroke: '#38291c', strokeThickness: 4, align: 'center',
+      }).setOrigin(0.5).setDepth(y + 10);
+      this.add.circle(x, y, 12, 0xf6d36b, 0.18).setStrokeStyle(2, 0xf6d36b, 0.9).setDepth(y + 11);
+    };
+    drawGate(1000, 75, 'BẮC · NÚI BĂNG · Lv.10+', true);
+    drawGate(1000, 1925, 'NAM · THUNG LŨNG · Lv.7+', true);
+    drawGate(75, 1000, 'TÂY · RỪNG · Lv.4+', false);
+    drawGate(1925, 1000, 'ĐÔNG · ĐỒNG CỎ · Lv.1+', false);
+
+    this.add.text(1000, 42, 'LÀNG KHỞI NGUYÊN • ELYSIA FRONTIER', {
+      fontFamily: 'Georgia, serif', fontSize: '22px', color: '#f8e6b1',
+      stroke: '#23331f', strokeThickness: 6, fontStyle: 'bold',
+    }).setOrigin(0.5).setDepth(200);
+    void this.initVillageNpcs();
+  }
+
+  private async initVillageNpcs() {
+    const npcs = await fetchNpcs();
+    const villageNpcs = npcs.filter((npc: any) => npc.region_id === 'VIL_STARTER' && npc.enabled !== false);
+    const iconByType: Record<string, string> = {
+      quest_giver: '!',
+      blacksmith: '⚒',
+      armor_merchant: '✦',
+      general_merchant: '💰',
+      storage_keeper: '▣',
+      skill_trainer: '✧',
+      gathering_instructor: '♧',
+      teleport_npc: '◇',
+      job_advancement: '★',
+    };
+    for (const npc of villageNpcs) {
+      const x = Number(npc.x);
+      const y = Number(npc.y);
+      if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
+      const markerY = y + 28;
+      const marker = this.add.circle(x, markerY, 15, 0x17251d, 0.96).setStrokeStyle(2, 0xf4d27c, 1).setDepth(markerY + 30);
+      const icon = this.add.text(x, markerY - 1, iconByType[npc.npc_type] || '•', {
+        fontSize: '17px', color: '#ffe6a5', fontStyle: 'bold',
+      }).setOrigin(0.5).setDepth(markerY + 31);
+      const shortName = String(npc.name || 'NPC').split(' (')[0];
+      const name = this.add.text(x, markerY + 21, shortName, {
+        fontSize: '10px', color: '#fff7df', stroke: '#26301f', strokeThickness: 3,
+      }).setOrigin(0.5).setDepth(markerY + 32);
+      marker.setInteractive({ useHandCursor: true });
+      marker.on('pointerdown', () => this.showSkillBanner(shortName + ': ' + (npc.description || npc.title || 'NPC Làng Khởi Nguyên')));
+      icon.setInteractive({ useHandCursor: true });
+      icon.on('pointerdown', () => marker.emit('pointerdown'));
+      name.setInteractive({ useHandCursor: true });
+      name.on('pointerdown', () => marker.emit('pointerdown'));
     }
   }
 }

@@ -11,7 +11,7 @@ import { EventModal } from './ui/EventModal';
 import { SettingsModal } from './ui/SettingsModal';
 import { CharacterCreationModal } from './ui/CharacterCreationModal';
 import { AuthModal, AuthSuccessData } from './ui/AuthModal';
-import { fetchCharacters } from './services/apiClient';
+import { fetchCharacters, validateSessionApi } from './services/apiClient';
 import { CharacterEntity, WeaponEntity, ItemEntity } from '@elysia/game-types';
 import { INITIAL_CLASSES } from '@elysia/game-data-schema';
 
@@ -61,6 +61,7 @@ export const settingsModal = new SettingsModal();
 export const authModal = new AuthModal(async (_auth: AuthSuccessData) => {
   const characters = await fetchCharacters();
   if (!characters || characters.length === 0) {
+    localStorage.removeItem('elysia_active_character');
     characterCreationModal.open();
   } else {
     const primaryChar = characters[0];
@@ -180,11 +181,41 @@ if (savedChar) {
   }
 }
 
-// Check if user is already authenticated
-const token = localStorage.getItem('elysia_token');
-if (!token) {
-  authModal.open();
+// Restore only a server-validated session. A local token or cached character is never trusted alone.
+async function restorePlayerSession() {
+  const token = localStorage.getItem('elysia_token');
+  if (!token || !(await validateSessionApi())) {
+    localStorage.removeItem('elysia_token');
+    localStorage.removeItem('elysia_user');
+    localStorage.removeItem('elysia_active_character');
+    authModal.open();
+    return;
+  }
+
+  const characters = await fetchCharacters();
+  if (!characters.length) {
+    localStorage.removeItem('elysia_active_character');
+    characterCreationModal.open();
+    return;
+  }
+
+  const savedId = (() => {
+    try { return (JSON.parse(localStorage.getItem('elysia_active_character') || 'null') as CharacterEntity | null)?.id; }
+    catch { return undefined; }
+  })();
+  const active = characters.find((character) => character.id === savedId) || characters[0];
+  localStorage.setItem('elysia_active_character', JSON.stringify(active));
+  if (worldSceneInstance) worldSceneInstance.updatePlayerCharacter(active);
+
+  const cls = INITIAL_CLASSES.find((item) => item.id === active.classId);
+  masterHud.updatePlayerProfile({
+    name: active.name,
+    classTitle: `${cls ? cls.name.split(' (')[0] : active.classId} Lv.${active.level}`,
+    level: active.level,
+  });
 }
+
+void restorePlayerSession();
 
 // Telemetry Polling to Backend
 async function pollBackend() {

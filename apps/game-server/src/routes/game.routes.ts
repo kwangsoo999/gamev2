@@ -13,6 +13,10 @@ gameRouter.get('/skills', (_req, res) => {
   res.json({ success: true, data: INITIAL_SKILLS });
 });
 
+gameRouter.get('/connections', (_req, res) => {
+  res.json({ success: true, data: worldService.getConnections() });
+});
+
 gameRouter.get('/regions', (_req, res) => {
   res.json({ success: true, data: worldService.getRegions() });
 });

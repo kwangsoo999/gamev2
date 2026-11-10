@@ -107,8 +107,8 @@ export class AuthModal {
       return;
     }
 
-    if (password.length < 6) {
-      this.errorMessage = 'Mật khẩu phải có ít nhất 6 ký tự!';
+    if (password.length < 8) {
+      this.errorMessage = 'Mật khẩu phải có ít nhất 8 ký tự!';
       this.render();
       return;
     }
@@ -176,28 +176,18 @@ export class AuthModal {
           <div class="auth-form-body">
             <div class="auth-input-group">
               <label>Tên Đăng Nhập hoặc Email</label>
-              <input type="text" id="auth-login-username" placeholder="Nhập tên tài khoản..." value="player" />
+              <input type="text" id="auth-login-username" placeholder="Nhập tên tài khoản..." value="" />
             </div>
 
             <div class="auth-input-group">
               <label>Mật Khẩu</label>
-              <input type="password" id="auth-login-password" placeholder="Nhập mật khẩu..." value="player123" />
+              <input type="password" id="auth-login-password" placeholder="Nhập mật khẩu..." value="" />
             </div>
 
             <button id="btn-submit-login" class="auth-btn-primary" ${this.isLoading ? 'disabled' : ''}>
               ${this.isLoading ? 'Đang xác thực...' : '⚔️ Đăng Nhập Vào Game'}
             </button>
 
-            <div class="auth-divider"><span>Hoặc Chọn Đăng Nhập Nhanh</span></div>
-
-            <div class="auth-quick-actions">
-              <button id="btn-quick-player" class="auth-btn-quick" title="Đăng nhập tài khoản tân thủ test">
-                ⚡ Tân Thủ (player / player123)
-              </button>
-              <button id="btn-quick-admin" class="auth-btn-quick" title="Đăng nhập tài khoản quản trị">
-                👑 Quản Trị Viên (admin / admin123)
-              </button>
-            </div>
           </div>
         `
             : `
@@ -214,7 +204,7 @@ export class AuthModal {
             </div>
 
             <div class="auth-input-group">
-              <label>Mật Khẩu (Tối thiểu 6 ký tự)</label>
+              <label>Mật Khẩu (Tối thiểu 8 ký tự)</label>
               <input type="password" id="auth-reg-password" placeholder="Nhập mật khẩu an toàn..." />
             </div>
 
@@ -263,13 +253,5 @@ export class AuthModal {
       });
     }
 
-    // Quick Play buttons
-    document.getElementById('btn-quick-player')?.addEventListener('click', () => {
-      this.handleLogin('player', 'player123');
-    });
-
-    document.getElementById('btn-quick-admin')?.addEventListener('click', () => {
-      this.handleLogin('admin', 'admin123');
-    });
   }
 }
