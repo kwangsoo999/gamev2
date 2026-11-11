@@ -1,0 +1,1771 @@
+{
+  "jobs": [
+    {
+      "id": "swordsman",
+      "nameVi": "Kiếm Sĩ",
+      "nameEn": "Sword Warrior",
+      "iconKey": "sword",
+      "element": "Hỏa / Phong",
+      "role": "Chiến Binh Kiếm Thuật Cận Chiến",
+      "baseStats": {
+        "str": 15,
+        "dex": 12,
+        "agi": 10,
+        "int": 8,
+        "con": 12
+      },
+      "allowedWeapons": [
+        "sword",
+        "greatsword"
+      ],
+      "description": "Lấy Sức Mạnh (STR) làm chủ đạo và Khéo Léo (DEX) để tung những nhát chém chuẩn xác uy lực.",
+      "maleImg": "/assets/elysia/landing/classes/swordsman_male.png",
+      "femaleImg": "/assets/elysia/landing/classes/swordsman_female.png",
+      "secondJob": {
+        "id": "blazing_warrior",
+        "nameVi": "Chiến Binh Hỏa Long",
+        "name": "Blazing Warrior",
+        "desc": "Tiến hóa tối thượng từ Kiếm Sĩ, kết hợp liên hoàn trảm kích với hỏa diễm bạo liệt."
+      },
+      "advancedBranches": [
+        {
+          "id": "sword_saint",
+          "nameVi": "Kiếm Thánh (Sword Saint)",
+          "titleVi": "Thánh Kiếm Bất Diệt",
+          "role": "Precision Burst DPS",
+          "desc": "Đỉnh cao kiếm đạo, tung hàng loạt kiếm khí bạch kim với tỷ lệ chí mạng cực đại vào Boss.",
+          "element": "holy",
+          "accentColor": "#38bdf8"
+        },
+        {
+          "id": "berserker",
+          "nameVi": "Cuồng Chiến Sĩ (Berserker)",
+          "titleVi": "Huyết Nộ Cuồng Đao",
+          "role": "Juggernaut Cleave DPS",
+          "desc": "Thiêu đốt huyết khí để phóng ra nhát chém hủy diệt diện rộng kèm hút máu và gây chảy máu nặng.",
+          "element": "fire",
+          "accentColor": "#dc2626"
+        }
+      ],
+      "keySkills": [
+        {
+          "id": "skill_slash",
+          "nameVi": "Trảm Kích (Sword Slash)",
+          "type": "active",
+          "element": "neutral",
+          "desc": "Vung kiếm giáng một đòn chuẩn xác gây sát thương vật lý mạnh mẽ.",
+          "cd": 2,
+          "mp": 12,
+          "iconUrl": "/assets/elysia/vfx/vfx_sword_slash_thumb.png"
+        },
+        {
+          "id": "skill_double_strike",
+          "nameVi": "Song Kiếm Trảm (Double Strike)",
+          "type": "active",
+          "element": "neutral",
+          "desc": "Chém nhanh 2 nhát liên tiếp về phía mục tiêu, dễ kích hoạt chí mạng.",
+          "cd": 3.5,
+          "mp": 16,
+          "iconUrl": "/assets/elysia/vfx/vfx_double_slash_thumb.png"
+        },
+        {
+          "id": "skill_whirlwind_blade",
+          "nameVi": "Kiếm Vũ Bão Tố (Whirlwind Blade)",
+          "type": "active",
+          "element": "wind",
+          "desc": "Xoay tròn lưỡi kiếm quét sát thương tất cả kẻ thù xung quanh.",
+          "cd": 5,
+          "mp": 22,
+          "iconUrl": "/assets/elysia/vfx/vfx_spin_slash_thumb.png"
+        },
+        {
+          "id": "skill_power_break",
+          "nameVi": "Phá Giáp Trảm (Power Break)",
+          "type": "active",
+          "element": "earth",
+          "desc": "Chém mạnh vào điểm yếu đối phương, giảm 22% Phòng Thủ trong 8 giây.",
+          "cd": 7,
+          "mp": 20,
+          "iconUrl": "/assets/elysia/vfx/vfx_heavy_cleave_thumb.png"
+        }
+      ]
+    },
+    {
+      "id": "spearman",
+      "nameVi": "Thương Thủ",
+      "nameEn": "Spearman",
+      "iconKey": "spear",
+      "element": "Phong / Lôi",
+      "role": "Xung Phong Cơ Động & Khống Chế",
+      "baseStats": {
+        "str": 13,
+        "dex": 10,
+        "agi": 16,
+        "int": 8,
+        "con": 11
+      },
+      "allowedWeapons": [
+        "spear",
+        "halberd",
+        "lance"
+      ],
+      "description": "Kết hợp Nhanh Nhẹn (AGI) vượt trội cùng Sức Mạnh (STR) để xoay chuyển ngọn thương tầm dài.",
+      "maleImg": "/assets/elysia/landing/classes/spearman_male.png",
+      "femaleImg": "/assets/elysia/landing/classes/spearman_female.png",
+      "secondJob": {
+        "id": "wind_lancer",
+        "nameVi": "Thương Kỵ Phong",
+        "name": "Wind Lancer",
+        "desc": "Tiến hóa từ Thương Thủ, xoay chuyển phong thương xuyên thấu hàng ngũ kẻ địch."
+      },
+      "advancedBranches": [
+        {
+          "id": "dragoon",
+          "nameVi": "Long Kỵ Sĩ (Dragoon)",
+          "titleVi": "Lôi Long Phá Thiên",
+          "role": "Dive & Armor-Pierce DPS",
+          "desc": "Triệu hồi sức mạnh Long Lôi, phi thân giáng thương từ không trung xuyên thủng giáp Boss.",
+          "element": "lightning",
+          "accentColor": "#6366f1"
+        },
+        {
+          "id": "warlancer",
+          "nameVi": "Chiến Thương Sư (Warlancer)",
+          "titleVi": "Thiết Bích Chiến Thương",
+          "role": "Frontline Bruiser & Crowd Control",
+          "desc": "Làm chủ trận địa bằng các đòn quét kích diện rộng, đẩy lùi và khống chế đám đông.",
+          "element": "earth",
+          "accentColor": "#d97706"
+        }
+      ],
+      "keySkills": [
+        {
+          "id": "skill_spear_thrust",
+          "nameVi": "Xuyên Vân Thương (Spear Thrust)",
+          "type": "active",
+          "element": "wind",
+          "desc": "Phóng mũi thương tầm xa đâm xuyên đối phương theo đường thẳng.",
+          "cd": 2.2,
+          "mp": 13,
+          "iconUrl": "/assets/elysia/vfx/vfx_thrust_thumb.png"
+        },
+        {
+          "id": "skill_triple_pierce",
+          "nameVi": "Tam Liên Thương Kích (Triple Pierce)",
+          "type": "active",
+          "element": "wind",
+          "desc": "Đâm liên hoàn 3 nhát thương cực nhanh với tỷ lệ chí mạng cộng thêm.",
+          "cd": 4,
+          "mp": 18,
+          "iconUrl": "/assets/elysia/vfx/vfx_thrust_thumb.png"
+        },
+        {
+          "id": "skill_spear_sweep",
+          "nameVi": "Hoành Tảo Thiên Quân (Spear Sweep)",
+          "type": "active",
+          "element": "wind",
+          "desc": "Quét cán thương rộng vòng cung hất văng và gây sát thương diện rộng.",
+          "cd": 5.5,
+          "mp": 22,
+          "iconUrl": "/assets/elysia/vfx/vfx_spear_sweep_thumb.png"
+        },
+        {
+          "id": "skill_impale",
+          "nameVi": "Xuyên Giáp Thương (Impale)",
+          "type": "active",
+          "element": "earth",
+          "desc": "Đâm sâu khiến mục tiêu chảy máu trong 6 giây và bị choáng 1.5 giây.",
+          "cd": 8,
+          "mp": 24,
+          "iconUrl": "/assets/elysia/vfx/vfx_critical_hit_thumb.png"
+        }
+      ]
+    },
+    {
+      "id": "knight",
+      "nameVi": "Hiệp Sĩ",
+      "nameEn": "Knight",
+      "iconKey": "shield",
+      "element": "Thánh Quang",
+      "role": "Hộ Vệ & Lá Chắn Bất Bại",
+      "baseStats": {
+        "str": 13,
+        "dex": 8,
+        "agi": 8,
+        "int": 9,
+        "con": 18
+      },
+      "allowedWeapons": [
+        "sword",
+        "shield"
+      ],
+      "description": "Rèn luyện Thể Chất (CON) kiên cố kết hợp Sức Mạnh (STR) để bảo vệ đồng đội bằng kiếm và khiên.",
+      "maleImg": "/assets/elysia/landing/classes/knight_male.png",
+      "femaleImg": "/assets/elysia/landing/classes/knight_female.png",
+      "secondJob": {
+        "id": "divine_paladin",
+        "nameVi": "Thánh Kỵ Sĩ",
+        "name": "Divine Paladin",
+        "desc": "Tiến hóa từ Hiệp Sĩ, triệu hồi khiên thánh quang che chở toàn bộ đồng đội."
+      },
+      "advancedBranches": [
+        {
+          "id": "paladin",
+          "nameVi": "Thánh Kỵ Sĩ (Paladin)",
+          "titleVi": "Thánh Quang Hộ Thệ",
+          "role": "Holy Vanguard & Off-Healer",
+          "desc": "Kết hợp khiên thánh quang và pháp thuật hồi phục, vừa bảo hộ đồng đội vừa trừng phạt tà ác.",
+          "element": "holy",
+          "accentColor": "#facc15"
+        },
+        {
+          "id": "guardian",
+          "nameVi": "Hộ Vệ Hoàng Gia (Guardian)",
+          "titleVi": "Bất Động Pháo Đài",
+          "role": "Pure Main Tank",
+          "desc": "Phòng tuyến kiên cố tối thượng với kết giới lục bảo giảm sát thương và phản đòn mạnh mẽ.",
+          "element": "earth",
+          "accentColor": "#10b981"
+        }
+      ],
+      "keySkills": [
+        {
+          "id": "skill_shield_bash",
+          "nameVi": "Khiên Xung Kích (Shield Bash)",
+          "type": "active",
+          "element": "earth",
+          "desc": "Húc mạnh bằng khiên thép gây choáng 2 giây và tích lũy điểm Khiêu Khích.",
+          "cd": 3.5,
+          "mp": 14,
+          "iconUrl": "/assets/elysia/vfx/vfx_blunt_hit_thumb.png"
+        },
+        {
+          "id": "skill_taunt",
+          "nameVi": "Khiêu Khích Hộ Vệ (Taunt)",
+          "type": "active",
+          "element": "earth",
+          "desc": "Gầm vang thu hút sự chú ý của Boss/Quái và tăng 20% DEF + điểm Đóng Góp Chống Đỡ.",
+          "cd": 6,
+          "mp": 16,
+          "iconUrl": "/assets/elysia/vfx/vfx_holy_blessing_thumb.png"
+        },
+        {
+          "id": "skill_shield_wall",
+          "nameVi": "Tường Khiên Bất Tử (Shield Wall)",
+          "type": "active",
+          "element": "holy",
+          "desc": "Dựng khiên ánh sáng giúp bản thân giảm 30% sát thương gánh chịu trong 10 giây.",
+          "cd": 14,
+          "mp": 22,
+          "iconUrl": "/assets/elysia/vfx/vfx_divine_shield_thumb.png"
+        },
+        {
+          "id": "skill_holy_strike",
+          "nameVi": "Thánh Quang Kiếm Kích (Holy Strike)",
+          "type": "active",
+          "element": "holy",
+          "desc": "Chém kiếm thánh quang gây sát thương dựa trên DEF & STR, hồi nhẹ 8% MaxHP.",
+          "cd": 5.5,
+          "mp": 20,
+          "iconUrl": "/assets/elysia/vfx/vfx_holy_smite_thumb.png"
+        }
+      ]
+    },
+    {
+      "id": "monk",
+      "nameVi": "Tu Sĩ",
+      "nameEn": "Cleric / Monk",
+      "iconKey": "holy",
+      "element": "Thánh Linh",
+      "role": "Thánh Hộ, Trị Liệu & Kháng Phép",
+      "baseStats": {
+        "str": 8,
+        "dex": 9,
+        "agi": 9,
+        "int": 14,
+        "con": 17
+      },
+      "allowedWeapons": [
+        "staff",
+        "holy_staff"
+      ],
+      "description": "Thân thể bền bỉ (CON) hòa quyện cùng Trí Tuệ thánh linh (INT) để chữa lành và thanh tẩy.",
+      "maleImg": "/assets/elysia/landing/classes/monk_male.png",
+      "femaleImg": "/assets/elysia/landing/classes/monk_female.png",
+      "secondJob": {
+        "id": "holy_priest",
+        "nameVi": "Thánh Linh Mục",
+        "name": "Holy Priest",
+        "desc": "Tiến hóa từ Tu Sĩ, ban phước thánh linh thanh tẩy và hồi sinh sinh lực cho đồng minh."
+      },
+      "advancedBranches": [
+        {
+          "id": "saint",
+          "nameVi": "Thánh Sư (Saint)",
+          "titleVi": "Thánh Ân Cứu Thế",
+          "role": "Apex Party Healer & Buffer",
+          "desc": "Triệu hồi trận đồ Thiên Sứ ban phát trị liệu liên hoàn, giải trừ hiệu ứng xấu và hồi sinh đồng minh.",
+          "element": "holy",
+          "accentColor": "#fef08a"
+        },
+        {
+          "id": "exorcist",
+          "nameVi": "Trừ Tà Sư (Exorcist)",
+          "titleVi": "Thánh Ấn Phán Quyết",
+          "role": "Holy Magic Striker",
+          "desc": "Khắc ấn trừ tà xoay chuyển, giáng cột sét thánh quang trừng phạt Boss và ma vật.",
+          "element": "lightning",
+          "accentColor": "#818cf8"
+        }
+      ],
+      "keySkills": [
+        {
+          "id": "skill_holy_light",
+          "nameVi": "Ánh Sáng Thánh Ân (Holy Light)",
+          "type": "active",
+          "element": "holy",
+          "desc": "Hồi phục sinh lực ngay lập tức và phóng luồng thánh quang nhẹ.",
+          "cd": 3,
+          "mp": 16,
+          "iconUrl": "/assets/elysia/vfx/vfx_divine_heal_thumb.png"
+        },
+        {
+          "id": "skill_heal",
+          "nameVi": "Vòng Tròn Trị Liệu (Healing Circle)",
+          "type": "active",
+          "element": "holy",
+          "desc": "Mở Thánh Trận chữa lành lượng lớn HP cho bản thân và toàn bộ đồng đội.",
+          "cd": 4.5,
+          "mp": 24,
+          "iconUrl": "/assets/elysia/vfx/vfx_heal_aoe_thumb.png"
+        },
+        {
+          "id": "skill_purify",
+          "nameVi": "Thanh Tẩy Thánh Khiết (Purify)",
+          "type": "active",
+          "element": "holy",
+          "desc": "Xóa bỏ mọi hiệu ứng bất lợi (Độc, Cháy, Choáng) và hồi phục liên tục 6 giây.",
+          "cd": 7,
+          "mp": 18,
+          "iconUrl": "/assets/elysia/vfx/vfx_holy_blessing_thumb.png"
+        },
+        {
+          "id": "skill_holy_bolt",
+          "nameVi": "Thánh Quang Tiễn (Holy Bolt)",
+          "type": "active",
+          "element": "holy",
+          "desc": "Phóng mũi tên thánh lực gây sát thương phép hệ Ánh Sáng cực mạnh lên quái vật.",
+          "cd": 2.8,
+          "mp": 18,
+          "iconUrl": "/assets/elysia/vfx/vfx_holy_smite_thumb.png"
+        }
+      ]
+    },
+    {
+      "id": "mage",
+      "nameVi": "Pháp Sư",
+      "nameEn": "Mage",
+      "iconKey": "magic",
+      "element": "Hỏa / Băng / Lôi",
+      "role": "Chủ Tể Nguyên Tố Diện Rộng",
+      "baseStats": {
+        "str": 6,
+        "dex": 12,
+        "agi": 8,
+        "int": 18,
+        "con": 8
+      },
+      "allowedWeapons": [
+        "spellbook",
+        "book",
+        "staff"
+      ],
+      "description": "Trí Tuệ uyên bác (INT) và độ tinh tế Khéo Léo (DEX) giúp thi triển ma pháp hủy diệt diện rộng.",
+      "maleImg": "/assets/elysia/landing/classes/mage_male.png",
+      "femaleImg": "/assets/elysia/landing/classes/mage_female.png",
+      "secondJob": {
+        "id": "arcane_wizard",
+        "nameVi": "Đại Pháp Sư",
+        "name": "Arcane Wizard",
+        "desc": "Tiến hóa từ Pháp Sư, làm chủ nguyên tố cổ đại thi triển đại ma pháp diện rộng."
+      },
+      "advancedBranches": [
+        {
+          "id": "elementalist",
+          "nameVi": "Nguyên Tố Sư (Elementalist)",
+          "titleVi": "Chúa Tể Tam Nguyên Tố",
+          "role": "Elemental AoE Nuker",
+          "desc": "Dung hợp Hỏa - Băng - Lôi, kích hoạt chuỗi bão nguyên tố hủy diệt hàng loạt mục tiêu.",
+          "element": "fire",
+          "accentColor": "#f97316"
+        },
+        {
+          "id": "arcanist",
+          "nameVi": "Bí Ẩn Sư (Arcanist)",
+          "titleVi": "Tinh Tú Bí Thuật Sư",
+          "role": "Arcane Burst & Cooldown Caster",
+          "desc": "Điều khiển tinh bàn vũ trụ và hố đen bí thuật, giảm hồi chiêu và dồn sát thương đơn mục tiêu cực hạn.",
+          "element": "arcane",
+          "accentColor": "#c084fc"
+        }
+      ],
+      "keySkills": [
+        {
+          "id": "skill_fireball",
+          "nameVi": "Hỏa Cầu Thuật (Fireball)",
+          "type": "active",
+          "element": "fire",
+          "desc": "Tập trung hỏa năng phóng cầu lửa phát nổ gây sát thương phép và thiêu đốt.",
+          "cd": 2.5,
+          "mp": 16,
+          "iconUrl": "/assets/elysia/vfx/vfx_fireball_thumb.png"
+        },
+        {
+          "id": "skill_ice_lance",
+          "nameVi": "Băng Thương Xuyên Thấu (Ice Lance)",
+          "type": "active",
+          "element": "water",
+          "desc": "Phóng mũi giáo băng xuyên thấu gây sát thương Băng và làm chậm kẻ địch 30%.",
+          "cd": 3.2,
+          "mp": 18,
+          "iconUrl": "/assets/elysia/vfx/vfx_ice_lance_thumb.png"
+        },
+        {
+          "id": "skill_lightning_bolt",
+          "nameVi": "Thiên Lôi Kích (Lightning Bolt)",
+          "type": "active",
+          "element": "wind",
+          "desc": "Triệu hồi tia sét giáng xuống đầu mục tiêu ngay tức khắc với sát thương cao.",
+          "cd": 4,
+          "mp": 22,
+          "iconUrl": "/assets/elysia/vfx/vfx_lightning_strike_thumb.png"
+        },
+        {
+          "id": "skill_magic_explosion",
+          "nameVi": "Ma Pháp Bộc Phá (Magic Explosion)",
+          "type": "active",
+          "element": "neutral",
+          "desc": "Khai phóng xung kích ma lực nổ tung toàn bộ kẻ địch trong bán kính lớn.",
+          "cd": 6,
+          "mp": 28,
+          "iconUrl": "/assets/elysia/vfx/vfx_arcane_mana_burst_thumb.png"
+        }
+      ]
+    },
+    {
+      "id": "assassin",
+      "nameVi": "Thích Khách",
+      "nameEn": "Assassin",
+      "iconKey": "dagger",
+      "element": "Ám Ảnh",
+      "role": "Bạo Kích Chớp Nhoáng & Ám Sát",
+      "baseStats": {
+        "str": 10,
+        "dex": 15,
+        "agi": 17,
+        "int": 8,
+        "con": 8
+      },
+      "allowedWeapons": [
+        "dual_daggers",
+        "dagger"
+      ],
+      "description": "Nhanh Nhẹn (AGI) cực đỉnh kết hợp Khéo Léo (DEX) để ra đòn chí mạng bằng Song Chủy Thủ.",
+      "maleImg": "/assets/elysia/landing/classes/assassin_male.png",
+      "femaleImg": "/assets/elysia/landing/classes/assassin_female.png",
+      "secondJob": {
+        "id": "shadow_phantom",
+        "nameVi": "Ảnh Sát",
+        "name": "Shadow Phantom",
+        "desc": "Tiến hóa từ Thích Khách, ẩn mình trong bóng tối kết liễu mục tiêu bằng bạo kích tức thời."
+      },
+      "advancedBranches": [
+        {
+          "id": "shadowblade",
+          "nameVi": "Ảnh Nhận (Shadowblade)",
+          "titleVi": "Ám Ảnh Hành Quyết",
+          "role": "Crit & Execute Assassin",
+          "desc": "Ẩn thân trong bóng tối tung liên trảm chí mạng và kết liễu mục tiêu thấp máu tức thì.",
+          "element": "shadow",
+          "accentColor": "#7e22ce"
+        },
+        {
+          "id": "phantom",
+          "nameVi": "Ảo Ảnh Sát Thủ (Phantom)",
+          "titleVi": "Huyễn Ảnh Ma Đao",
+          "role": "Illusion & AoE Evasion DPS",
+          "desc": "Tạo phân thân huyễn ảnh đồng loạt tung phi đao diện rộng, né tránh đòn đánh cực cao.",
+          "element": "shadow",
+          "accentColor": "#2dd4bf"
+        }
+      ],
+      "keySkills": [
+        {
+          "id": "skill_shadow_strike",
+          "nameVi": "Ảnh Sát Kích (Shadow Strike)",
+          "type": "active",
+          "element": "shadow",
+          "desc": "Áp sát trong chớp mắt và tung nhát đâm bóng tối tỷ lệ bạo kích cao.",
+          "cd": 2.2,
+          "mp": 14,
+          "iconUrl": "/assets/elysia/vfx/vfx_dagger_flurry_thumb.png"
+        },
+        {
+          "id": "skill_double_dagger",
+          "nameVi": "Song Chủy Thủ Liên Hoàn (Double Dagger)",
+          "type": "active",
+          "element": "shadow",
+          "desc": "Chém chéo song đoản kiếm 2 lần liên tiếp gây sát thương bạo kích.",
+          "cd": 3,
+          "mp": 16,
+          "iconUrl": "/assets/elysia/vfx/vfx_double_slash_thumb.png"
+        },
+        {
+          "id": "skill_backstab",
+          "nameVi": "Đoạt Mệnh Sau Lưng (Backstab)",
+          "type": "active",
+          "element": "shadow",
+          "desc": "Đâm thẳng vào tử huyệt, cộng thêm +35% Tỷ Lệ Bạo Kích cho đòn đánh này.",
+          "cd": 5,
+          "mp": 20,
+          "iconUrl": "/assets/elysia/vfx/vfx_critical_hit_thumb.png"
+        },
+        {
+          "id": "skill_smoke_bomb",
+          "nameVi": "Bom Khói Ẩn Thân (Smoke Bomb)",
+          "type": "active",
+          "element": "shadow",
+          "desc": "Tung bom khói làm mù quái trong vùng và tăng 28% Né Tránh cho bản thân 8 giây.",
+          "cd": 11,
+          "mp": 22,
+          "iconUrl": "/assets/elysia/vfx/vfx_shadow_step_thumb.png"
+        }
+      ]
+    },
+    {
+      "id": "fighter",
+      "nameVi": "Đấu Sĩ",
+      "nameEn": "Fighter",
+      "iconKey": "fist",
+      "element": "Vật Lý Thuần",
+      "role": "Quyền Thuật Bá Đạo & Sinh Tồn",
+      "baseStats": {
+        "str": 16,
+        "dex": 10,
+        "agi": 10,
+        "int": 6,
+        "con": 15
+      },
+      "allowedWeapons": [
+        "gauntlets",
+        "fist"
+      ],
+      "description": "Sức Mạnh cơ bắp (STR) và Thể Chất sắt thép (CON) tạo nên đấu sĩ cận chiến bất khuất.",
+      "maleImg": "/assets/elysia/landing/classes/fighter_male.png",
+      "femaleImg": "/assets/elysia/landing/classes/fighter_female.png",
+      "secondJob": {
+        "id": "titan_champion",
+        "nameVi": "Chiến Binh Titan",
+        "name": "Titan Champion",
+        "desc": "Tiến hóa từ Đấu Sĩ, phóng thích quyền kình địa chấn trấn áp toàn bộ chiến trường."
+      },
+      "advancedBranches": [
+        {
+          "id": "martial_artist",
+          "nameVi": "Võ Thánh (Martial Artist)",
+          "titleVi": "Bá Quyền Khí Công",
+          "role": "Heavy Impact & Stun Brawler",
+          "desc": "Hội tụ chân khí Kim Liên vào từng quyền cước, phá giáp Boss và gây choáng diện rộng.",
+          "element": "fire",
+          "accentColor": "#f59e0b"
+        },
+        {
+          "id": "duelist",
+          "nameVi": "Quyết Đấu Sư (Duelist)",
+          "titleVi": "Liên Hoàn Kiếm Quyền",
+          "role": "Combo Chain & Counter Striker",
+          "desc": "Chuỗi liên kích siêu tốc kết hợp phản kích sắc bén, cộng dồn tốc đánh và bạo kích.",
+          "element": "wind",
+          "accentColor": "#fb7185"
+        }
+      ],
+      "keySkills": [
+        {
+          "id": "skill_iron_fist",
+          "nameVi": "Thiết Quyền Phá Sơn (Iron Fist)",
+          "type": "active",
+          "element": "fire",
+          "desc": "Tung cú đấm cương khí nặng ngàn cân đánh bật đối phương.",
+          "cd": 2,
+          "mp": 13,
+          "iconUrl": "/assets/elysia/vfx/vfx_power_punch_thumb.png"
+        },
+        {
+          "id": "skill_heavy_punch",
+          "nameVi": "Trọng Quyền Kích (Heavy Punch)",
+          "type": "active",
+          "element": "earth",
+          "desc": "Dồn sức vào nắm đấm tung cú đấm trực diện sát thương cực lớn.",
+          "cd": 3.2,
+          "mp": 16,
+          "iconUrl": "/assets/elysia/vfx/vfx_power_punch_thumb.png"
+        },
+        {
+          "id": "skill_rising_uppercut",
+          "nameVi": "Thăng Long Quyền (Rising Uppercut)",
+          "type": "active",
+          "element": "fire",
+          "desc": "Đấm móc từ dưới lên hất tung mục tiêu và làm choáng 1.5 giây.",
+          "cd": 5,
+          "mp": 19,
+          "iconUrl": "/assets/elysia/vfx/vfx_critical_hit_thumb.png"
+        },
+        {
+          "id": "skill_ground_smash",
+          "nameVi": "Phá Địa Chấn (Ground Smash)",
+          "type": "active",
+          "element": "earth",
+          "desc": "Đấm mạnh xuống mặt đất tạo sóng địa chấn diện rộng và giảm 20% DEF kẻ địch.",
+          "cd": 6.5,
+          "mp": 24,
+          "iconUrl": "/assets/elysia/vfx/vfx_ground_slam_thumb.png"
+        }
+      ]
+    },
+    {
+      "id": "archer",
+      "nameVi": "Cung Thủ",
+      "nameEn": "Archer",
+      "iconKey": "bow",
+      "element": "Phong / Tầm Xa",
+      "role": "Xạ Thủ Tầm Xa & Bắn Tỉa",
+      "baseStats": {
+        "str": 10,
+        "dex": 17,
+        "agi": 15,
+        "int": 8,
+        "con": 9
+      },
+      "allowedWeapons": [
+        "bow",
+        "crossbow"
+      ],
+      "description": "Khéo Léo chuẩn xác (DEX) hòa cùng Nhanh Nhẹn (AGI) để bách phát bách trúng bằng Cung và Nỏ.",
+      "maleImg": "/assets/elysia/landing/classes/archer_male.png",
+      "femaleImg": "/assets/elysia/landing/classes/archer_female.png",
+      "secondJob": {
+        "id": "celestial_ranger",
+        "nameVi": "Thiên Không Du Hiệp",
+        "name": "Celestial Ranger",
+        "desc": "Tiến hóa từ Cung Thủ, trút mưa tiễn tinh quang xuyên giáp từ khoảng cách cực xa."
+      },
+      "advancedBranches": [
+        {
+          "id": "sniper",
+          "nameVi": "Xạ Thủ Thần Tiễn (Sniper)",
+          "titleVi": "Thần Tiễn Bách Bộ Xuyên Dương",
+          "role": "Extreme-Range Single/Boss Marksman",
+          "desc": "Khóa mục tiêu từ tầm cực xa và khai hỏa mũi tên xuyên phá mọi lớp phòng ngự của Boss.",
+          "element": "lightning",
+          "accentColor": "#0ea5e9"
+        },
+        {
+          "id": "ranger",
+          "nameVi": "Du Hiệp Rừng Thẳm (Ranger)",
+          "titleVi": "Thủ Hộ Rừng Xanh",
+          "role": "Mobile AoE & Trap Specialist",
+          "desc": "Bắn mưa tên bão lá, gài bẫy dây leo trói chân quái và cơ động càn quét bản đồ cực nhanh.",
+          "element": "nature",
+          "accentColor": "#22c55e"
+        }
+      ],
+      "keySkills": [
+        {
+          "id": "skill_precise_shot",
+          "nameVi": "Bắn Tỉa Chuẩn Xác (Precise Shot)",
+          "type": "active",
+          "element": "wind",
+          "desc": "Ngắm bắn một mũi tên tốc độ cao tầm cực xa với độ chính xác tuyệt đối.",
+          "cd": 1.8,
+          "mp": 11,
+          "iconUrl": "/assets/elysia/vfx/vfx_moves_arrow_shot_thumb.png"
+        },
+        {
+          "id": "skill_double_arrow",
+          "nameVi": "Song Tiễn Liên Phát (Double Arrow)",
+          "type": "active",
+          "element": "wind",
+          "desc": "Bắn cùng lúc 2 mũi tên gió xoáy gây sát thương gấp đôi tốc độ.",
+          "cd": 3,
+          "mp": 16,
+          "iconUrl": "/assets/elysia/vfx/vfx_projectiles_arrow_thumb.png"
+        },
+        {
+          "id": "skill_multi_shot",
+          "nameVi": "Loạn Tiễn Xuyên Phong (Multi Shot)",
+          "type": "active",
+          "element": "wind",
+          "desc": "Phóng 5 mũi tên rải hình quạt trúng nhiều mục tiêu tầm xa.",
+          "cd": 4.8,
+          "mp": 22,
+          "iconUrl": "/assets/elysia/vfx/vfx_moves_arrow_shot_thumb.png"
+        },
+        {
+          "id": "skill_poison_arrow",
+          "nameVi": "Độc Tiễn Rừng Sâu (Poison Arrow)",
+          "type": "active",
+          "element": "earth",
+          "desc": "Bắn tên tẩm độc gây sát thương liên tục trong 8 giây và làm chậm 20%.",
+          "cd": 6.5,
+          "mp": 20,
+          "iconUrl": "/assets/elysia/vfx/vfx_nature_poison_cloud_thumb.png"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill_slash",
+      "nameVi": "Trảm Kích (Sword Slash)",
+      "classId": "swordsman",
+      "skillType": "active",
+      "element": "neutral",
+      "desc": "Vung kiếm giáng một đòn chuẩn xác gây sát thương vật lý mạnh mẽ.",
+      "cooldown": 2,
+      "mpCost": 12,
+      "reqLevel": 15,
+      "iconUrl": "/assets/elysia/vfx/vfx_sword_slash_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_sword_slash.png"
+    },
+    {
+      "id": "skill_double_strike",
+      "nameVi": "Song Kiếm Trảm (Double Strike)",
+      "classId": "swordsman",
+      "skillType": "active",
+      "element": "neutral",
+      "desc": "Chém nhanh 2 nhát liên tiếp về phía mục tiêu, dễ kích hoạt chí mạng.",
+      "cooldown": 3.5,
+      "mpCost": 16,
+      "reqLevel": 17,
+      "iconUrl": "/assets/elysia/vfx/vfx_double_slash_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_double_slash.png"
+    },
+    {
+      "id": "skill_spear_thrust",
+      "nameVi": "Xuyên Vân Thương (Spear Thrust)",
+      "classId": "spearman",
+      "skillType": "active",
+      "element": "wind",
+      "desc": "Phóng mũi thương tầm xa đâm xuyên đối phương theo đường thẳng.",
+      "cooldown": 2.2,
+      "mpCost": 13,
+      "reqLevel": 15,
+      "iconUrl": "/assets/elysia/vfx/vfx_thrust_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_thrust.png"
+    },
+    {
+      "id": "skill_shield_bash",
+      "nameVi": "Khiên Xung Kích (Shield Bash)",
+      "classId": "knight",
+      "skillType": "active",
+      "element": "earth",
+      "desc": "Húc mạnh bằng khiên thép gây choáng 2 giây và tích lũy điểm Khiêu Khích.",
+      "cooldown": 3.5,
+      "mpCost": 14,
+      "reqLevel": 15,
+      "iconUrl": "/assets/elysia/vfx/vfx_blunt_hit_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_blunt_hit.png"
+    },
+    {
+      "id": "skill_holy_light",
+      "nameVi": "Ánh Sáng Thánh Ân (Holy Light)",
+      "classId": "monk",
+      "skillType": "active",
+      "element": "holy",
+      "desc": "Hồi phục sinh lực ngay lập tức và phóng luồng thánh quang nhẹ.",
+      "cooldown": 3,
+      "mpCost": 16,
+      "reqLevel": 15,
+      "iconUrl": "/assets/elysia/vfx/vfx_divine_heal_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_divine_heal.png"
+    },
+    {
+      "id": "skill_heal",
+      "nameVi": "Vòng Tròn Trị Liệu (Healing Circle)",
+      "classId": "monk",
+      "skillType": "active",
+      "element": "holy",
+      "desc": "Mở Thánh Trận chữa lành lượng lớn HP cho bản thân và toàn bộ đồng đội.",
+      "cooldown": 4.5,
+      "mpCost": 24,
+      "reqLevel": 18,
+      "iconUrl": "/assets/elysia/vfx/vfx_heal_aoe_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_heal_aoe.png"
+    },
+    {
+      "id": "skill_fireball",
+      "nameVi": "Hỏa Cầu Thuật (Fireball)",
+      "classId": "mage",
+      "skillType": "active",
+      "element": "fire",
+      "desc": "Tập trung hỏa năng phóng cầu lửa phát nổ gây sát thương phép và thiêu đốt.",
+      "cooldown": 2.5,
+      "mpCost": 16,
+      "reqLevel": 15,
+      "iconUrl": "/assets/elysia/vfx/vfx_fireball_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_fireball.png"
+    },
+    {
+      "id": "skill_ice_lance",
+      "nameVi": "Băng Thương Xuyên Thấu (Ice Lance)",
+      "classId": "mage",
+      "skillType": "active",
+      "element": "water",
+      "desc": "Phóng mũi giáo băng xuyên thấu gây sát thương Băng và làm chậm kẻ địch 30%.",
+      "cooldown": 3.2,
+      "mpCost": 18,
+      "reqLevel": 18,
+      "iconUrl": "/assets/elysia/vfx/vfx_ice_lance_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_ice_lance.png"
+    },
+    {
+      "id": "skill_shadow_strike",
+      "nameVi": "Ảnh Sát Kích (Shadow Strike)",
+      "classId": "assassin",
+      "skillType": "active",
+      "element": "shadow",
+      "desc": "Áp sát trong chớp mắt và tung nhát đâm bóng tối tỷ lệ bạo kích cao.",
+      "cooldown": 2.2,
+      "mpCost": 14,
+      "reqLevel": 15,
+      "iconUrl": "/assets/elysia/vfx/vfx_dagger_flurry_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_dagger_flurry.png"
+    },
+    {
+      "id": "skill_iron_fist",
+      "nameVi": "Thiết Quyền Phá Sơn (Iron Fist)",
+      "classId": "fighter",
+      "skillType": "active",
+      "element": "fire",
+      "desc": "Tung cú đấm cương khí nặng ngàn cân đánh bật đối phương.",
+      "cooldown": 2,
+      "mpCost": 13,
+      "reqLevel": 15,
+      "iconUrl": "/assets/elysia/vfx/vfx_power_punch_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_power_punch.png"
+    },
+    {
+      "id": "skill_precise_shot",
+      "nameVi": "Bắn Tỉa Chuẩn Xác (Precise Shot)",
+      "classId": "archer",
+      "skillType": "active",
+      "element": "wind",
+      "desc": "Ngắm bắn một mũi tên tốc độ cao tầm cực xa với độ chính xác tuyệt đối.",
+      "cooldown": 1.8,
+      "mpCost": 11,
+      "reqLevel": 15,
+      "iconUrl": "/assets/elysia/vfx/vfx_moves_arrow_shot_thumb.png",
+      "vfxUrl": "/assets/elysia/vfx/vfx_moves_arrow_shot.png"
+    },
+    {
+      "id": "skill_ss_iaido_flash",
+      "nameVi": "Bạch Kim Cư Hợp Trảm",
+      "classId": "swordsman",
+      "skillType": "active",
+      "element": "holy",
+      "desc": "Rút kiếm siêu thanh chém 3 nhát liên hoàn xuyên giáp mục tiêu.",
+      "cooldown": 5.5,
+      "mpCost": 34,
+      "reqLevel": 80,
+      "iconUrl": "/assets/elysia/vfx/vfx_sword_saint_flash_thumb.png"
+    }
+  ],
+  "regions": [
+    {
+      "id": "THON_KHOI_NGUYEN",
+      "name": "Novice Village",
+      "nameVi": "Thôn Khởi Nguyên",
+      "theme": {
+        "biomeId": "village",
+        "particleType": "sakura"
+      },
+      "type": "SAFE_ZONE",
+      "levelMin": 1,
+      "levelMax": 15,
+      "desc": "Ngôi làng khởi đầu thanh bình dành cho tân thủ Lv.1–15 rèn luyện kỹ năng cơ bản trước khi bước vào Thánh Điện Thức Tỉnh.",
+      "minimap": "/assets/elysia/minimaps/THON_KHOI_NGUYEN.png",
+      "monsters": [
+        {
+          "id": "MONSTER_GREEN_SLIME",
+          "name": "Slime Thảo Nguyên",
+          "level": 1,
+          "element": "water",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/MONSTER_GREEN_SLIME.png"
+        },
+        {
+          "id": "MONSTER_GOBLIN_SCOUT",
+          "name": "Goblin Trinh Sát",
+          "level": 4,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/MONSTER_GOBLIN_SCOUT.png"
+        },
+        {
+          "id": "BOSS_DARK_DRAGON_STARTER",
+          "name": "Hắc Long Hộ Vệ",
+          "level": 8,
+          "element": "shadow",
+          "isBoss": true,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/BOSS_DARK_DRAGON_STARTER.png"
+        }
+      ]
+    },
+    {
+      "id": "city_elysia_capital",
+      "name": "Elysia Capital",
+      "nameVi": "Kinh Đô Elysia",
+      "theme": {
+        "biomeId": "city_elysia_capital",
+        "groundFilter": "brightness(1.04) saturate(1.06)",
+        "ambientTint": "#fef08a",
+        "ambientAlpha": 0.04,
+        "particleType": "sakura"
+      },
+      "type": "CITY_SAFE_ZONE",
+      "levelMin": 15,
+      "levelMax": 35,
+      "desc": "Thủ đô phồn hoa đầu tiên sau khi đạt cấp 15, nơi đặt Thánh Đường Chuyển Chức, Hội Quán, Ngân Khố và Cổng Dịch Chuyển.",
+      "minimap": "/assets/elysia/minimaps/city_elysia_capital.png",
+      "monsters": []
+    },
+    {
+      "id": "city_sylvaris",
+      "name": "Sylvaris",
+      "nameVi": "Thành Phố Rừng Sylvaris",
+      "theme": {
+        "biomeId": "city_sylvaris",
+        "groundFilter": "hue-rotate(18deg) saturate(1.1)",
+        "ambientTint": "#34d399",
+        "ambientAlpha": 0.08,
+        "particleType": "fireflies"
+      },
+      "type": "CITY_SAFE_ZONE",
+      "levelMin": 35,
+      "levelMax": 60,
+      "desc": "Thánh thành giữa Rừng Tinh Linh, nổi tiếng với lò chế tác ma pháp, Cường Hóa Thạch và hiệp hội mạo hiểm cấp trung.",
+      "minimap": "/assets/elysia/minimaps/city_sylvaris.png",
+      "monsters": []
+    },
+    {
+      "id": "city_drakhen",
+      "name": "Drakhen",
+      "nameVi": "Pháo Đài Thành Drakhen",
+      "theme": {
+        "biomeId": "city_drakhen",
+        "groundFilter": "sepia(0.26) hue-rotate(-20deg) saturate(1.2) brightness(0.92)",
+        "ambientTint": "#f97316",
+        "ambientAlpha": 0.08,
+        "particleType": "embers"
+      },
+      "type": "CITY_SAFE_ZONE",
+      "levelMin": 60,
+      "levelMax": 90,
+      "desc": "Pháo đài đá đỏ hùng vĩ án ngữ Thung Lũng Rồng, nơi quy tụ thợ rèn huyền thoại và các học giả nghiên cứu Long Tộc.",
+      "minimap": "/assets/elysia/minimaps/city_drakhen.png",
+      "monsters": []
+    },
+    {
+      "id": "map_whispering_meadow",
+      "name": "Whispering Meadow",
+      "nameVi": "Thảo Nguyên Thì Thầm",
+      "theme": {
+        "biomeId": "meadow",
+        "groundFilter": "brightness(1.03) saturate(1.06)",
+        "ambientTint": "#bbf7d0",
+        "ambientAlpha": 0.05,
+        "particleType": "sakura"
+      },
+      "type": "EXP_FIELD",
+      "levelMin": 15,
+      "levelMax": 20,
+      "desc": "Đồng cỏ xanh trải dài ngay ngoại ô Kinh Đô Elysia, bãi luyện cấp lý tưởng cho chiến binh vừa chuyển chức.",
+      "minimap": "/assets/elysia/minimaps/map_whispering_meadow.png",
+      "monsters": [
+        {
+          "id": "mon_meadow_slime",
+          "name": "Meadow Slime",
+          "level": 15,
+          "element": "water",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_meadow_slime.png"
+        },
+        {
+          "id": "mon_horn_rabbit",
+          "name": "Horn Rabbit",
+          "level": 16,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_horn_rabbit.png"
+        },
+        {
+          "id": "mon_grassland_wolf",
+          "name": "Grassland Wolf",
+          "level": 18,
+          "element": "wind",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_grassland_wolf.png"
+        },
+        {
+          "id": "elite_whispering_meadow",
+          "name": "Elite Whispering Meadow Sentinel",
+          "level": 18,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/elite_whispering_meadow.png"
+        },
+        {
+          "id": "miniboss_whispering_meadow",
+          "name": "Mini Boss · Whispering Meadow Warden",
+          "level": 19,
+          "element": "earth",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/miniboss_whispering_meadow.png"
+        }
+      ]
+    },
+    {
+      "id": "map_windmill_plains",
+      "name": "Windmill Plains",
+      "nameVi": "Đồng Bằng Cối Xay Gió",
+      "theme": {
+        "biomeId": "plains",
+        "groundFilter": "sepia(0.10) saturate(1.12)",
+        "ambientTint": "#fde68a",
+        "ambientAlpha": 0.06,
+        "particleType": "sakura"
+      },
+      "type": "EXP_FIELD",
+      "levelMin": 20,
+      "levelMax": 25,
+      "desc": "Cánh đồng gió lộng với những cối xay nước cổ kính, nơi bầy Sói Xám và Ong Khổng Lồ tụ tập.",
+      "minimap": "/assets/elysia/minimaps/map_windmill_plains.png",
+      "monsters": [
+        {
+          "id": "mon_gray_wolf",
+          "name": "Gray Wolf",
+          "level": 20,
+          "element": "wind",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_gray_wolf.png"
+        },
+        {
+          "id": "mon_giant_bee",
+          "name": "Giant Bee",
+          "level": 22,
+          "element": "wind",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_giant_bee.png"
+        },
+        {
+          "id": "mon_carnivorous_plant",
+          "name": "Carnivorous Plant",
+          "level": 24,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_carnivorous_plant.png"
+        },
+        {
+          "id": "elite_windmill_plains",
+          "name": "Elite Windmill Plains Sentinel",
+          "level": 23,
+          "element": "wind",
+          "isBoss": false,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/elite_windmill_plains.png"
+        },
+        {
+          "id": "miniboss_windmill_plains",
+          "name": "Mini Boss · Windmill Plains Warden",
+          "level": 24,
+          "element": "wind",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/miniboss_windmill_plains.png"
+        }
+      ]
+    },
+    {
+      "id": "map_spirit_forest",
+      "name": "Spirit Forest",
+      "nameVi": "Rừng Sâu Tinh Linh",
+      "theme": {
+        "biomeId": "spirit_forest",
+        "groundFilter": "hue-rotate(12deg) saturate(1.15) brightness(0.90)",
+        "ambientTint": "#34d399",
+        "ambientAlpha": 0.11,
+        "particleType": "fireflies"
+      },
+      "type": "EXP_FIELD",
+      "levelMin": 30,
+      "levelMax": 38,
+      "desc": "Khu rừng linh mộc rậm rạp bao quanh Thánh Thành Sylvaris, nơi Tinh Linh Rừng và Mộc Thần Cổ Thụ ngự trị.",
+      "minimap": "/assets/elysia/minimaps/map_spirit_forest.png",
+      "monsters": [
+        {
+          "id": "mon_forest_spirit",
+          "name": "Forest Spirit",
+          "level": 30,
+          "element": "wind",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_forest_spirit.png"
+        },
+        {
+          "id": "mon_soul_wolf",
+          "name": "Soul Wolf",
+          "level": 33,
+          "element": "shadow",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_soul_wolf.png"
+        },
+        {
+          "id": "mon_ancient_treant",
+          "name": "Ancient Treant",
+          "level": 36,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_ancient_treant.png"
+        },
+        {
+          "id": "boss_ancient_treant",
+          "name": "Ancient Treant (Field Boss Lv.38)",
+          "level": 38,
+          "element": "earth",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/boss_ancient_treant.png"
+        },
+        {
+          "id": "elite_spirit_forest",
+          "name": "Elite Spirit Forest Sentinel",
+          "level": 36,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/elite_spirit_forest.png"
+        }
+      ]
+    },
+    {
+      "id": "map_moonlit_lake",
+      "name": "Moonlit Lake",
+      "nameVi": "Hồ Ánh Trăng",
+      "theme": {
+        "biomeId": "moonlit",
+        "groundFilter": "hue-rotate(38deg) brightness(0.84) contrast(1.06)",
+        "ambientTint": "#60a5fa",
+        "ambientAlpha": 0.16,
+        "particleType": "fireflies"
+      },
+      "type": "EXP_FIELD",
+      "levelMin": 38,
+      "levelMax": 45,
+      "desc": "Mặt hồ huyền ảo phản chiếu ánh trăng bạc quanh năm, xuất hiện Slime Nước và Thủy Hồn.",
+      "minimap": "/assets/elysia/minimaps/map_moonlit_lake.png",
+      "monsters": [
+        {
+          "id": "mon_water_slime",
+          "name": "Water Slime",
+          "level": 38,
+          "element": "water",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_water_slime.png"
+        },
+        {
+          "id": "mon_giant_frog",
+          "name": "Giant Frog",
+          "level": 40,
+          "element": "water",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_giant_frog.png"
+        },
+        {
+          "id": "mon_water_phantom",
+          "name": "Water Phantom",
+          "level": 43,
+          "element": "water",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_water_phantom.png"
+        },
+        {
+          "id": "boss_moon_hydra",
+          "name": "Moon Hydra (Field Boss Lv.45)",
+          "level": 45,
+          "element": "water",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/boss_moon_hydra.png"
+        },
+        {
+          "id": "elite_moonlit_lake",
+          "name": "Elite Moonlit Lake Sentinel",
+          "level": 43,
+          "element": "water",
+          "isBoss": false,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/elite_moonlit_lake.png"
+        }
+      ]
+    },
+    {
+      "id": "map_ancient_ruins",
+      "name": "Ancient Ruins",
+      "nameVi": "Phế Tích Cổ Đại",
+      "theme": {
+        "biomeId": "ruins",
+        "groundFilter": "grayscale(0.28) brightness(0.86) contrast(1.08)",
+        "ambientTint": "#94a3b8",
+        "ambientAlpha": 0.14,
+        "particleType": "none"
+      },
+      "type": "EXP_FIELD",
+      "levelMin": 45,
+      "levelMax": 55,
+      "desc": "Tàn tích vương quốc cổ bị chôn vùi giữa rừng sâu, được canh giữ bởi Chiến Binh Xương và Thạch Nhân.",
+      "minimap": "/assets/elysia/minimaps/map_ancient_ruins.png",
+      "monsters": [
+        {
+          "id": "mon_skeleton_warrior",
+          "name": "Skeleton Warrior",
+          "level": 45,
+          "element": "shadow",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_skeleton_warrior.png"
+        },
+        {
+          "id": "mon_stone_golem",
+          "name": "Stone Golem",
+          "level": 48,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_stone_golem.png"
+        },
+        {
+          "id": "mon_ancient_mage",
+          "name": "Ancient Mage",
+          "level": 52,
+          "element": "shadow",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_ancient_mage.png"
+        },
+        {
+          "id": "boss_ancient_titan",
+          "name": "Ancient Titan (Field Boss Lv.55)",
+          "level": 55,
+          "element": "earth",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/boss_ancient_titan.png"
+        },
+        {
+          "id": "elite_ancient_ruins",
+          "name": "Elite Ancient Ruins Sentinel",
+          "level": 52,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/elite_ancient_ruins.png"
+        }
+      ]
+    },
+    {
+      "id": "map_dragon_valley",
+      "name": "Dragon Valley",
+      "nameVi": "Thung Lũng Rồng",
+      "theme": {
+        "biomeId": "dragon_valley",
+        "groundFilter": "sepia(0.28) hue-rotate(-32deg) saturate(1.25) brightness(0.84)",
+        "ambientTint": "#dc2626",
+        "ambientAlpha": 0.15,
+        "particleType": "embers"
+      },
+      "type": "EXP_FIELD",
+      "levelMin": 65,
+      "levelMax": 75,
+      "desc": "Thung lũng hiểm trở ngập tràn long khí, lãnh địa săn rèn danh tiếng của Ấu Long và Long Kỵ Sĩ.",
+      "minimap": "/assets/elysia/minimaps/map_dragon_valley.png",
+      "monsters": [
+        {
+          "id": "mon_young_dragon",
+          "name": "Young Dragon",
+          "level": 65,
+          "element": "fire",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_young_dragon.png"
+        },
+        {
+          "id": "mon_dragonkin",
+          "name": "Dragonkin",
+          "level": 68,
+          "element": "fire",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_dragonkin.png"
+        },
+        {
+          "id": "mon_dragon_knight",
+          "name": "Dragon Knight",
+          "level": 72,
+          "element": "fire",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_dragon_knight.png"
+        },
+        {
+          "id": "boss_crimson_overlord",
+          "name": "Crimson Wyrm Overlord",
+          "level": 75,
+          "element": "fire",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/boss_crimson_overlord.png"
+        },
+        {
+          "id": "boss_ignis_dragon",
+          "name": "Ignis Dragon (World Boss Lv.75)",
+          "level": 75,
+          "element": "fire",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/boss_ignis_dragon.png"
+        }
+      ]
+    },
+    {
+      "id": "map_crimson_desert",
+      "name": "Crimson Desert",
+      "nameVi": "Sa Mạc Huyết Sắc",
+      "theme": {
+        "biomeId": "crimson_desert",
+        "groundFilter": "sepia(0.55) hue-rotate(-28deg) saturate(1.45) brightness(0.93)",
+        "ambientTint": "#b91c1c",
+        "ambientAlpha": 0.14,
+        "particleType": "sand"
+      },
+      "type": "EXP_FIELD",
+      "levelMin": 75,
+      "levelMax": 90,
+      "desc": "Sa mạc cát đỏ chết chóc phía cực viễn biên cương, nơi Bọ Cạp Huyết và Hộ Vệ Sa Mạc tuần tra.",
+      "minimap": "/assets/elysia/minimaps/map_crimson_desert.png",
+      "monsters": [
+        {
+          "id": "mon_blood_scorpion",
+          "name": "Blood Scorpion",
+          "level": 75,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_blood_scorpion.png"
+        },
+        {
+          "id": "mon_sand_wraith",
+          "name": "Sand Wraith",
+          "level": 80,
+          "element": "shadow",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_sand_wraith.png"
+        },
+        {
+          "id": "mon_desert_guardian",
+          "name": "Desert Guardian",
+          "level": 85,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_desert_guardian.png"
+        },
+        {
+          "id": "elite_crimson_desert",
+          "name": "Elite Crimson Desert Sentinel",
+          "level": 87,
+          "element": "earth",
+          "isBoss": false,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/elite_crimson_desert.png"
+        },
+        {
+          "id": "miniboss_crimson_desert",
+          "name": "Mini Boss · Crimson Desert Warden",
+          "level": 88,
+          "element": "earth",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/miniboss_crimson_desert.png"
+        }
+      ]
+    },
+    {
+      "id": "map_shadow_realm_border",
+      "name": "Shadow Realm Border",
+      "nameVi": "Biên Giới Hắc Ám",
+      "theme": {
+        "biomeId": "shadow_realm",
+        "groundFilter": "hue-rotate(195deg) saturate(1.25) brightness(0.72) contrast(1.12)",
+        "ambientTint": "#4c1d95",
+        "ambientAlpha": 0.24,
+        "particleType": "void"
+      },
+      "type": "EXP_FIELD",
+      "levelMin": 90,
+      "levelMax": 110,
+      "desc": "Ranh giới nứt gãy giữa thực tại Elysia và Hư Vô Giới, vùng thử thách tối thượng Lv.90–110.",
+      "minimap": "/assets/elysia/minimaps/map_shadow_realm_border.png",
+      "monsters": [
+        {
+          "id": "mon_void_creature",
+          "name": "Void Creature",
+          "level": 90,
+          "element": "shadow",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_void_creature.png"
+        },
+        {
+          "id": "mon_shadow_spirit",
+          "name": "Shadow Spirit",
+          "level": 96,
+          "element": "shadow",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_shadow_spirit.png"
+        },
+        {
+          "id": "mon_dark_knight",
+          "name": "Dark Knight",
+          "level": 103,
+          "element": "shadow",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_dark_knight.png"
+        },
+        {
+          "id": "boss_abyssal_sovereign",
+          "name": "Abyssal Void Sovereign",
+          "level": 110,
+          "element": "shadow",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/boss_abyssal_sovereign.png"
+        },
+        {
+          "id": "boss_abyss_overlord",
+          "name": "Abyss Overlord (World Boss Lv.110)",
+          "level": 110,
+          "element": "shadow",
+          "isBoss": true,
+          "isElite": true,
+          "img": "/assets/elysia/monsters/boss_abyss_overlord.png"
+        }
+      ]
+    },
+    {
+      "id": "dungeon_sanctum_f1",
+      "name": "Ancient Trial Corridor",
+      "nameVi": "Tầng 1: Hành Lang Thử Thách Cổ Đại",
+      "theme": {
+        "biomeId": "sanctum",
+        "groundFilter": "hue-rotate(190deg) brightness(0.78) contrast(1.1)",
+        "ambientTint": "#818cf8",
+        "ambientAlpha": 0.16,
+        "particleType": "void"
+      },
+      "type": "DUNGEON_FLOOR",
+      "levelMin": 15,
+      "levelMax": 22,
+      "desc": "Phó bản chuyển chức lần 1 dành cho mạo hiểm giả cấp 15 trở lên.",
+      "minimap": "/assets/elysia/minimaps/dungeon_sanctum_f1.png",
+      "monsters": [
+        {
+          "id": "mon_sanctum_sentinel",
+          "name": "Sanctum Trial Sentinel",
+          "level": 15,
+          "element": "holy",
+          "isBoss": false,
+          "isElite": false,
+          "img": "/assets/elysia/monsters/mon_sanctum_sentinel.png"
+        }
+      ]
+    }
+  ],
+  "bosses": [
+    {
+      "id": "boss_ancient_treant",
+      "name": "Ancient Treant",
+      "nameVi": "Ancient Treant (Field Boss Lv.38)",
+      "category": "FIELD_BOSS",
+      "regionId": "map_spirit_forest",
+      "level": 38,
+      "element": "earth",
+      "portrait": "/assets/elysia/ui/portrait-ancient-treant.png",
+      "sprite": "/assets/elysia/monsters/boss_ancient_treant.png",
+      "desc": "Ancient Treant chuẩn bị gọi Rễ Cổ Thụ trói chân!"
+    },
+    {
+      "id": "boss_moon_hydra",
+      "name": "Moon Hydra",
+      "nameVi": "Moon Hydra (Field Boss Lv.45)",
+      "category": "FIELD_BOSS",
+      "regionId": "map_moonlit_lake",
+      "level": 45,
+      "element": "water",
+      "portrait": "/assets/elysia/ui/portrait-moon-hydra.png",
+      "sprite": "/assets/elysia/monsters/boss_moon_hydra.png",
+      "desc": "Moon Hydra tạo cột nước phun trào dưới chân bạn!"
+    },
+    {
+      "id": "boss_ancient_titan",
+      "name": "Ancient Titan",
+      "nameVi": "Ancient Titan (Field Boss Lv.55)",
+      "category": "FIELD_BOSS",
+      "regionId": "map_ancient_ruins",
+      "level": 55,
+      "element": "earth",
+      "portrait": "/assets/elysia/ui/portrait-ancient-titan.png",
+      "sprite": "/assets/elysia/monsters/boss_ancient_titan.png",
+      "desc": "Ancient Titan giơ nắm đấm đá khổng lồ chuẩn bị đập xuống!"
+    },
+    {
+      "id": "boss_ignis_dragon",
+      "name": "Ignis Dragon",
+      "nameVi": "Ignis Dragon (World Boss Lv.75)",
+      "category": "WORLD_BOSS",
+      "regionId": "map_dragon_valley",
+      "level": 75,
+      "element": "fire",
+      "portrait": "/assets/elysia/ui/portrait-ignis-dragon.png",
+      "sprite": "/assets/elysia/monsters/boss_ignis_dragon.png",
+      "desc": "Ignis Dragon hít sâu chuẩn bị phun Hơi Thở Dung Nham!"
+    },
+    {
+      "id": "boss_abyss_overlord",
+      "name": "Abyss Overlord",
+      "nameVi": "Abyss Overlord (World Boss Lv.110)",
+      "category": "WORLD_BOSS",
+      "regionId": "map_shadow_realm_border",
+      "level": 110,
+      "element": "shadow",
+      "portrait": "/assets/elysia/ui/portrait-abyss-overlord.png",
+      "sprite": "/assets/elysia/monsters/boss_abyss_overlord.png",
+      "desc": "Abyss Overlord xé toạc không gian bằng Kiếm Khí Hư Vô!"
+    },
+    {
+      "id": "mon_blood_wolf",
+      "name": "Huyết Lang (Blood Wolf)",
+      "nameVi": "Blood Wolf",
+      "category": "MINI_BOSS",
+      "regionId": "map_wild_wolf_valley",
+      "level": 9,
+      "element": "fire",
+      "portrait": "/assets/elysia/ui/portrait-blood-wolf.png",
+      "sprite": "/assets/elysia/monsters/mon_blood_wolf.png",
+      "desc": "Huyết Lang lao tới tung đòn Nanh Máu!"
+    },
+    {
+      "id": "boss_goblin_chieftain",
+      "name": "Goblin Thủ Lĩnh (Goblin Chieftain)",
+      "nameVi": "Goblin Chieftain",
+      "category": "FIELD_BOSS",
+      "regionId": "map_goblin_cave",
+      "level": 15,
+      "element": "fire",
+      "portrait": "/assets/elysia/ui/portrait-goblin-chieftain.png",
+      "sprite": "/assets/elysia/monsters/boss_goblin_chieftain.png",
+      "desc": "Goblin Thủ Lĩnh giơ cao Rìu Chiến chuẩn bị giáng xuống!"
+    }
+  ],
+  "items": [
+    {
+      "id": "ITEM_SWORD_WOODEN_NOVICE",
+      "name": "Kiếm Gỗ Nhà Thám Hiểm",
+      "rarity": "common",
+      "category": "weapon",
+      "equipSlot": "weapon",
+      "reqLevel": 1,
+      "desc": "Kiếm gỗ khởi đầu cho Adventurer Lv.1.",
+      "stats": {
+        "atk": 8
+      },
+      "icon": "sword_novice"
+    },
+    {
+      "id": "ITEM_AWAKENING_CERTIFICATE",
+      "name": "Chứng Chỉ Thức Tỉnh (Awakening Certificate)",
+      "rarity": "epic",
+      "category": "quest_item",
+      "reqLevel": 15,
+      "desc": "Chứng nhận vượt qua Thánh Điện Thức Tỉnh, dùng để chuyển chức lần 1 tại cấp 15.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "ITEM_EXCALIBUR_HOLY",
+      "name": "Thánh Kiếm Excalibur",
+      "rarity": "legendary",
+      "category": "weapon",
+      "equipSlot": "weapon",
+      "reqLevel": 60,
+      "desc": "Thần kiếm huyền thoại ánh sáng (+165 ATK).",
+      "stats": {
+        "atk": 165,
+        "critRatePct": 8
+      },
+      "icon": "excalibur_sword_icon"
+    },
+    {
+      "id": "MAT_DRAGON_SCALE",
+      "name": "Vảy Rồng Lửa",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 60,
+      "desc": "Nguyên liệu rèn thần binh tại Drakhen.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "MAT_VOID_CRYSTAL",
+      "name": "Tinh Thể Hư Vô",
+      "rarity": "mythic",
+      "category": "material",
+      "reqLevel": 90,
+      "desc": "Vật chất hiếm vùng Biên Giới Hắc Ám Lv.90+.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "ITEM_UPGRADE_STONE_MYSTIC",
+      "name": "Đá Cường Hóa Huyền Bí",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 35,
+      "desc": "Dùng nâng cấp trang bị +6 đến +10.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "MAT_TREANT_CORE",
+      "name": "Treant Core (Lõi Mộc Thần)",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 35,
+      "desc": "Lõi linh mộc rơi chắc chắn từ Boss Ancient Treant Lv.38.",
+      "icon": "herb_green"
+    },
+    {
+      "id": "MAT_HYDRA_SCALE",
+      "name": "Hydra Scale (Vảy Thủy Xà Chúa)",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 42,
+      "desc": "Vảy phản quang rơi từ Boss Moon Hydra Lv.45.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "MAT_TITAN_CORE",
+      "name": "Titan Core (Lõi Titan Cổ Đại)",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 50,
+      "desc": "Trái tim đá ma lực của Boss Ancient Titan Lv.55.",
+      "icon": "ore_iron"
+    },
+    {
+      "id": "MAT_DRAGON_HEART",
+      "name": "Dragon Heart (Tim Hỏa Long Ignis)",
+      "rarity": "legendary",
+      "category": "material",
+      "reqLevel": 70,
+      "desc": "Bảo vật rực cháy rơi từ World Boss Ignis Dragon Lv.75.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "MAT_ABYSSAL_CORE",
+      "name": "Abyssal Core (Lõi Hư Vô Chúa Tể)",
+      "rarity": "mythic",
+      "category": "material",
+      "reqLevel": 95,
+      "desc": "Nguyên liệu chế tác trang bị Mythic từ Abyss Overlord Lv.110.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "FRAG_TIER3_DRAGON_SET",
+      "name": "Mảnh Bộ Long Chiến Lv.60",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 60,
+      "desc": "Thu thập 12 mảnh để đổi trang bị Bộ Cấp 60 tương ứng nghề.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "FRAG_FOREST_SET",
+      "name": "Forest Set Fragment (Mảnh Rừng Thần)",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 38,
+      "desc": "10 Forest Set Fragments đổi 1 trang bị Forest Guardian từ Ancient Treant.",
+      "icon": "herb_green"
+    },
+    {
+      "id": "FRAG_MOONWATER_SET",
+      "name": "Moonwater Set Fragment (Mảnh Nguyệt Thủy)",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 45,
+      "desc": "10 mảnh đổi trang bị Moonwater từ Moon Hydra.",
+      "icon": "gem_amethyst"
+    },
+    {
+      "id": "FRAG_ANCIENT_SET",
+      "name": "Ancient Titan Fragment (Mảnh Cổ Đại Titan)",
+      "rarity": "epic",
+      "category": "material",
+      "reqLevel": 55,
+      "desc": "10 mảnh đổi giáp nặng Ancient Plate / Titan từ Ancient Titan.",
+      "icon": "ore_iron"
+    },
+    {
+      "id": "FRAG_IGNIS_SET",
+      "name": "Ignis Dragon Fragment (Mảnh Hỏa Long)",
+      "rarity": "legendary",
+      "category": "material",
+      "reqLevel": 75,
+      "desc": "10 mảnh đổi trang bị Ignis Huyền Thoại từ Ignis Dragon.",
+      "icon": "gem_amethyst"
+    }
+  ],
+  "stats": {
+    "totalClasses": 8,
+    "totalAdvancedJobs": 16,
+    "totalSkills": 170,
+    "totalMaps": 25,
+    "totalMonsters": 80,
+    "levelCap": 110
+  }
+}

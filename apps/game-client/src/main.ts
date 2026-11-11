@@ -19,6 +19,7 @@ import { MultiplayerClient } from './services/multiplayerClient';
 import { ArtworkLibrary } from './engine/ArtworkLibrary';
 import type { ArtworkManifest } from './engine/types';
 import { GAME_BRANDING } from '@elysia/game-data-schema';
+import { ElysiaLandingPage } from './landing/ElysiaLandingPage';
 import {
   clearAuthSession,
   fetchCharacterByIdApi,
@@ -95,8 +96,37 @@ async function hydrateInitialServerCharacter(
       }
     }
 
-    // Standard Game Flow: Present Title Screen (Login / Register / Guest Trial) for first-time or unauthenticated visitors
-    void authModal.open('welcome');
+    // Standard Game Flow: Present Landing Page for new visitors unless direct play/login was requested
+    const params = new URLSearchParams(window.location.search);
+    const wantsPlay = params.has('play') || params.has('game') || params.has('token');
+    const wantsLogin = params.get('action') === 'login';
+    const wantsRegister = params.get('action') === 'register';
+
+    if (wantsLogin) {
+      void authModal.open('login');
+      return;
+    }
+    if (wantsRegister) {
+      void authModal.open('register');
+      return;
+    }
+    if (wantsPlay) {
+      void authModal.open('welcome');
+      return;
+    }
+
+    // Default entry: Launch official Landing Page connected to the real game
+    const landing = new ElysiaLandingPage({
+      onLaunchGame: () => {
+        landing.destroy();
+        void authModal.open('welcome');
+      },
+      onOpenAuth: (tab) => {
+        landing.destroy();
+        void authModal.open(tab || 'login');
+      },
+    });
+    landing.render(document.body);
   } catch (err) {
     console.warn('[Session] Không thể đồng bộ nhân vật từ server khi khởi động:', err);
     hud.showToast('Không thể kết nối máy chủ — mở màn hình tài khoản để thử lại hoặc chơi ngoại tuyến.', 'error');
@@ -184,6 +214,18 @@ async function bootstrapGame() {
       openSocial: () => socialModal.open(),
       openProfessions: (profId?: any) => void professionModal.open(engine.serverCharacterId, profId),
       openGuildMerchant: (sec?: 'guild' | 'merchant' | 'territory') => void guildMerchantModal.open(sec),
+      openLanding: () => {
+        const landing = new ElysiaLandingPage({
+          onLaunchGame: () => {
+            landing.destroy();
+          },
+          onOpenAuth: (tab) => {
+            landing.destroy();
+            void authModal.open(tab || 'login');
+          },
+        });
+        landing.render(document.body);
+      },
     },
   });
 
