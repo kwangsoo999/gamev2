@@ -1,0 +1,441 @@
+{
+  "schemaVersion": "1.0.0",
+  "phase": "PHASE_1_MASTER_ART_STYLE",
+  "imageGeneratorApiStatus": "HTTP 429 RESOURCE_EXHAUSTED \u2014 used Section 10 fallback: lossless/master-sheet isometric projection & connected-component optical despill.",
+  "totalAssetsChecked": 43,
+  "passedCount": 43,
+  "failedCount": 0,
+  "liveClientAssetsModified": false,
+  "assets": [
+    {
+      "id": "iso_grass_01",
+      "path": "terrain/iso_grass_01.png",
+      "dimensions": "256x128",
+      "bytes": 32546,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_grass_02",
+      "path": "terrain/iso_grass_02.png",
+      "dimensions": "256x128",
+      "bytes": 32376,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_grass_03",
+      "path": "terrain/iso_grass_03.png",
+      "dimensions": "256x128",
+      "bytes": 31183,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_dark_grass_01",
+      "path": "terrain/iso_dark_grass_01.png",
+      "dimensions": "256x128",
+      "bytes": 31180,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_dirt_01",
+      "path": "terrain/iso_dirt_01.png",
+      "dimensions": "256x128",
+      "bytes": 28100,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_dirt_02",
+      "path": "terrain/iso_dirt_02.png",
+      "dimensions": "256x128",
+      "bytes": 30380,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_cobble_01",
+      "path": "terrain/iso_cobble_01.png",
+      "dimensions": "256x128",
+      "bytes": 42309,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_plaza_01",
+      "path": "terrain/iso_plaza_01.png",
+      "dimensions": "256x128",
+      "bytes": 35332,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_water_01",
+      "path": "terrain/iso_water_01.png",
+      "dimensions": "256x128",
+      "bytes": 31318,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_water_02",
+      "path": "terrain/iso_water_02.png",
+      "dimensions": "256x128",
+      "bytes": 33013,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_water_03",
+      "path": "terrain/iso_water_03.png",
+      "dimensions": "256x128",
+      "bytes": 31720,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_water_04",
+      "path": "terrain/iso_water_04.png",
+      "dimensions": "256x128",
+      "bytes": 33100,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_dirt_n",
+      "path": "terrain/iso_trans_dirt_n.png",
+      "dimensions": "256x128",
+      "bytes": 36997,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_plaza_n",
+      "path": "terrain/iso_trans_plaza_n.png",
+      "dimensions": "256x128",
+      "bytes": 37336,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_shore_n",
+      "path": "terrain/iso_trans_shore_n.png",
+      "dimensions": "256x128",
+      "bytes": 44540,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_dirt_s",
+      "path": "terrain/iso_trans_dirt_s.png",
+      "dimensions": "256x128",
+      "bytes": 36993,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_plaza_s",
+      "path": "terrain/iso_trans_plaza_s.png",
+      "dimensions": "256x128",
+      "bytes": 37324,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_shore_s",
+      "path": "terrain/iso_trans_shore_s.png",
+      "dimensions": "256x128",
+      "bytes": 44422,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_dirt_w",
+      "path": "terrain/iso_trans_dirt_w.png",
+      "dimensions": "256x128",
+      "bytes": 37142,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_plaza_w",
+      "path": "terrain/iso_trans_plaza_w.png",
+      "dimensions": "256x128",
+      "bytes": 37336,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_shore_w",
+      "path": "terrain/iso_trans_shore_w.png",
+      "dimensions": "256x128",
+      "bytes": 44862,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_dirt_e",
+      "path": "terrain/iso_trans_dirt_e.png",
+      "dimensions": "256x128",
+      "bytes": 37238,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_plaza_e",
+      "path": "terrain/iso_trans_plaza_e.png",
+      "dimensions": "256x128",
+      "bytes": 37801,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_shore_e",
+      "path": "terrain/iso_trans_shore_e.png",
+      "dimensions": "256x128",
+      "bytes": 44773,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_dirt_corner_in_nw",
+      "path": "terrain/iso_trans_dirt_corner_in_nw.png",
+      "dimensions": "256x128",
+      "bytes": 42336,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "iso_trans_dirt_corner_out_se",
+      "path": "terrain/iso_trans_dirt_corner_out_se.png",
+      "dimensions": "256x128",
+      "bytes": 37945,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "house_01",
+      "path": "structures/house_01.png",
+      "dimensions": "346x468",
+      "bytes": 205911,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "blacksmith_01",
+      "path": "structures/blacksmith_01.png",
+      "dimensions": "464x488",
+      "bytes": 269148,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "item_shop_01",
+      "path": "structures/item_shop_01.png",
+      "dimensions": "429x462",
+      "bytes": 278025,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0258,
+      "status": "PASS"
+    },
+    {
+      "id": "sacred_fountain_01",
+      "path": "structures/sacred_fountain_01.png",
+      "dimensions": "410x460",
+      "bytes": 287975,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "torii_01",
+      "path": "structures/torii_01.png",
+      "dimensions": "386x467",
+      "bytes": 140940,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "bridge_wood_01",
+      "path": "structures/bridge_wood_01.png",
+      "dimensions": "470x322",
+      "bytes": 198544,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "tree_sakura_01",
+      "path": "nature/tree_sakura_01.png",
+      "dimensions": "448x454",
+      "bytes": 231197,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "tree_maple_01",
+      "path": "nature/tree_maple_01.png",
+      "dimensions": "489x458",
+      "bytes": 247631,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "tree_pine_01",
+      "path": "nature/tree_pine_01.png",
+      "dimensions": "342x468",
+      "bytes": 165047,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "rock_mossy_01",
+      "path": "nature/rock_mossy_01.png",
+      "dimensions": "173x134",
+      "bytes": 30714,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "bush_01",
+      "path": "nature/bush_01.png",
+      "dimensions": "160x104",
+      "bytes": 29509,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "flowers_01",
+      "path": "nature/flowers_01.png",
+      "dimensions": "148x96",
+      "bytes": 25042,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "lantern_01",
+      "path": "decoration/lantern_01.png",
+      "dimensions": "105x224",
+      "bytes": 28924,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0189,
+      "status": "PASS"
+    },
+    {
+      "id": "fence_wood_01",
+      "path": "decoration/fence_wood_01.png",
+      "dimensions": "186x166",
+      "bytes": 30088,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0395,
+      "status": "PASS"
+    },
+    {
+      "id": "barrel_01",
+      "path": "decoration/barrel_01.png",
+      "dimensions": "87x110",
+      "bytes": 16968,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "crate_01",
+      "path": "decoration/crate_01.png",
+      "dimensions": "94x104",
+      "bytes": 15881,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "shadow_iso_01",
+      "path": "decoration/shadow_iso_01.png",
+      "dimensions": "256x128",
+      "bytes": 5117,
+      "mode": "RGBA",
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    }
+  ]
+}

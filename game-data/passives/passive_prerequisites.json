@@ -1,0 +1,1130 @@
+[
+  {
+    "passive_id": "pas_sw_sword_technique",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 15,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sw_combat_focus",
+    "parentPassiveIds": [
+      "pas_sw_sword_technique"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 22,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sw_blade_control",
+    "parentPassiveIds": [
+      "pas_sw_sword_technique"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 30,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sw_weapon_discipline",
+    "parentPassiveIds": [
+      "pas_sw_combat_focus",
+      "pas_sw_blade_control"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 45,
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_sp_spear_mastery",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 15,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sp_piercing_technique",
+    "parentPassiveIds": [
+      "pas_sp_spear_mastery"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 22,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sp_long_reach",
+    "parentPassiveIds": [
+      "pas_sp_spear_mastery"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 30,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sp_formation_training",
+    "parentPassiveIds": [
+      "pas_sp_piercing_technique",
+      "pas_sp_long_reach"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 45,
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_kn_iron_wall",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 15,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_kn_shield_mastery",
+    "parentPassiveIds": [
+      "pas_kn_iron_wall"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 22,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_kn_defensive_stance",
+    "parentPassiveIds": [
+      "pas_kn_iron_wall"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 30,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_kn_guardian_instinct",
+    "parentPassiveIds": [
+      "pas_kn_shield_mastery",
+      "pas_kn_defensive_stance"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 45,
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_pr_divine_blessing",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 15,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_pr_healing_knowledge",
+    "parentPassiveIds": [
+      "pas_pr_divine_blessing"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 22,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_pr_spiritual_focus",
+    "parentPassiveIds": [
+      "pas_pr_divine_blessing"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 30,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_pr_holy_resistance",
+    "parentPassiveIds": [
+      "pas_pr_healing_knowledge",
+      "pas_pr_spiritual_focus"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 45,
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_mg_arcane_knowledge",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 15,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_mg_elemental_affinity",
+    "parentPassiveIds": [
+      "pas_mg_arcane_knowledge"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 22,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_mg_mana_control",
+    "parentPassiveIds": [
+      "pas_mg_arcane_knowledge"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 30,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_mg_spell_focus",
+    "parentPassiveIds": [
+      "pas_mg_elemental_affinity",
+      "pas_mg_mana_control"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 45,
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_as_shadow_instinct",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 15,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_as_lethal_precision",
+    "parentPassiveIds": [
+      "pas_as_shadow_instinct"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 22,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_as_evasion_training",
+    "parentPassiveIds": [
+      "pas_as_shadow_instinct"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 30,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_as_critical_technique",
+    "parentPassiveIds": [
+      "pas_as_lethal_precision",
+      "pas_as_evasion_training"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 45,
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_fg_combat_rhythm",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 15,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_fg_inner_strength",
+    "parentPassiveIds": [
+      "pas_fg_combat_rhythm"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 22,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_fg_martial_discipline",
+    "parentPassiveIds": [
+      "pas_fg_combat_rhythm"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 30,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_fg_counterattack_training",
+    "parentPassiveIds": [
+      "pas_fg_inner_strength",
+      "pas_fg_martial_discipline"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 45,
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_ar_eagle_eye",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 15,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ar_precision_aim",
+    "parentPassiveIds": [
+      "pas_ar_eagle_eye"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 22,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ar_projectile_mastery",
+    "parentPassiveIds": [
+      "pas_ar_eagle_eye"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 30,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ar_hunting_instinct",
+    "parentPassiveIds": [
+      "pas_ar_precision_aim",
+      "pas_ar_projectile_mastery"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 45,
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_sword_saint_sword_resonance",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sword_saint_synergy",
+    "parentPassiveIds": [
+      "pas_sword_saint_sword_resonance"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sword_saint_utility",
+    "parentPassiveIds": [
+      "pas_sword_saint_sword_resonance"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sword_saint_choice_a",
+    "parentPassiveIds": [
+      "pas_sword_saint_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_sword_saint_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sword_saint_choice_b",
+    "parentPassiveIds": [
+      "pas_sword_saint_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_sword_saint_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sword_saint_mastery_apex",
+    "parentPassiveIds": [
+      "pas_sword_saint_synergy",
+      "pas_sword_saint_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_berserker_blood_fury",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_berserker_synergy",
+    "parentPassiveIds": [
+      "pas_berserker_blood_fury"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_berserker_utility",
+    "parentPassiveIds": [
+      "pas_berserker_blood_fury"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_berserker_choice_a",
+    "parentPassiveIds": [
+      "pas_berserker_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_berserker_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_berserker_choice_b",
+    "parentPassiveIds": [
+      "pas_berserker_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_berserker_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_berserker_mastery_apex",
+    "parentPassiveIds": [
+      "pas_berserker_synergy",
+      "pas_berserker_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_dragoon_dragon_pierce",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_dragoon_synergy",
+    "parentPassiveIds": [
+      "pas_dragoon_dragon_pierce"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_dragoon_utility",
+    "parentPassiveIds": [
+      "pas_dragoon_dragon_pierce"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_dragoon_choice_a",
+    "parentPassiveIds": [
+      "pas_dragoon_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_dragoon_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_dragoon_choice_b",
+    "parentPassiveIds": [
+      "pas_dragoon_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_dragoon_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_dragoon_mastery_apex",
+    "parentPassiveIds": [
+      "pas_dragoon_synergy",
+      "pas_dragoon_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_warlancer_spear_formation",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_warlancer_synergy",
+    "parentPassiveIds": [
+      "pas_warlancer_spear_formation"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_warlancer_utility",
+    "parentPassiveIds": [
+      "pas_warlancer_spear_formation"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_warlancer_choice_a",
+    "parentPassiveIds": [
+      "pas_warlancer_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_warlancer_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_warlancer_choice_b",
+    "parentPassiveIds": [
+      "pas_warlancer_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_warlancer_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_warlancer_mastery_apex",
+    "parentPassiveIds": [
+      "pas_warlancer_synergy",
+      "pas_warlancer_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_paladin_holy_protection",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_paladin_synergy",
+    "parentPassiveIds": [
+      "pas_paladin_holy_protection"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_paladin_utility",
+    "parentPassiveIds": [
+      "pas_paladin_holy_protection"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_paladin_choice_a",
+    "parentPassiveIds": [
+      "pas_paladin_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_paladin_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_paladin_choice_b",
+    "parentPassiveIds": [
+      "pas_paladin_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_paladin_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_paladin_mastery_apex",
+    "parentPassiveIds": [
+      "pas_paladin_synergy",
+      "pas_paladin_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_guardian_fortress_stance",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_guardian_synergy",
+    "parentPassiveIds": [
+      "pas_guardian_fortress_stance"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_guardian_utility",
+    "parentPassiveIds": [
+      "pas_guardian_fortress_stance"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_guardian_choice_a",
+    "parentPassiveIds": [
+      "pas_guardian_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_guardian_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_guardian_choice_b",
+    "parentPassiveIds": [
+      "pas_guardian_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_guardian_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_guardian_mastery_apex",
+    "parentPassiveIds": [
+      "pas_guardian_synergy",
+      "pas_guardian_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_saint_divine_grace",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_saint_synergy",
+    "parentPassiveIds": [
+      "pas_saint_divine_grace"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_saint_utility",
+    "parentPassiveIds": [
+      "pas_saint_divine_grace"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_saint_choice_a",
+    "parentPassiveIds": [
+      "pas_saint_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_saint_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_saint_choice_b",
+    "parentPassiveIds": [
+      "pas_saint_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_saint_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_saint_mastery_apex",
+    "parentPassiveIds": [
+      "pas_saint_synergy",
+      "pas_saint_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_exorcist_sacred_seal",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_exorcist_synergy",
+    "parentPassiveIds": [
+      "pas_exorcist_sacred_seal"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_exorcist_utility",
+    "parentPassiveIds": [
+      "pas_exorcist_sacred_seal"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_exorcist_choice_a",
+    "parentPassiveIds": [
+      "pas_exorcist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_exorcist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_exorcist_choice_b",
+    "parentPassiveIds": [
+      "pas_exorcist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_exorcist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_exorcist_mastery_apex",
+    "parentPassiveIds": [
+      "pas_exorcist_synergy",
+      "pas_exorcist_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_elementalist_elemental_resonance",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_elementalist_synergy",
+    "parentPassiveIds": [
+      "pas_elementalist_elemental_resonance"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_elementalist_utility",
+    "parentPassiveIds": [
+      "pas_elementalist_elemental_resonance"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_elementalist_choice_a",
+    "parentPassiveIds": [
+      "pas_elementalist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_elementalist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_elementalist_choice_b",
+    "parentPassiveIds": [
+      "pas_elementalist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_elementalist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_elementalist_mastery_apex",
+    "parentPassiveIds": [
+      "pas_elementalist_synergy",
+      "pas_elementalist_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_arcanist_arcane_compression",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_arcanist_synergy",
+    "parentPassiveIds": [
+      "pas_arcanist_arcane_compression"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_arcanist_utility",
+    "parentPassiveIds": [
+      "pas_arcanist_arcane_compression"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_arcanist_choice_a",
+    "parentPassiveIds": [
+      "pas_arcanist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_arcanist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_arcanist_choice_b",
+    "parentPassiveIds": [
+      "pas_arcanist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_arcanist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_arcanist_mastery_apex",
+    "parentPassiveIds": [
+      "pas_arcanist_synergy",
+      "pas_arcanist_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_shadowblade_lethal_precision",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_shadowblade_synergy",
+    "parentPassiveIds": [
+      "pas_shadowblade_lethal_precision"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_shadowblade_utility",
+    "parentPassiveIds": [
+      "pas_shadowblade_lethal_precision"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_shadowblade_choice_a",
+    "parentPassiveIds": [
+      "pas_shadowblade_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_shadowblade_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_shadowblade_choice_b",
+    "parentPassiveIds": [
+      "pas_shadowblade_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_shadowblade_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_shadowblade_mastery_apex",
+    "parentPassiveIds": [
+      "pas_shadowblade_synergy",
+      "pas_shadowblade_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_phantom_phantom_echo",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_phantom_synergy",
+    "parentPassiveIds": [
+      "pas_phantom_phantom_echo"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_phantom_utility",
+    "parentPassiveIds": [
+      "pas_phantom_phantom_echo"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_phantom_choice_a",
+    "parentPassiveIds": [
+      "pas_phantom_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_phantom_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_phantom_choice_b",
+    "parentPassiveIds": [
+      "pas_phantom_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_phantom_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_phantom_mastery_apex",
+    "parentPassiveIds": [
+      "pas_phantom_synergy",
+      "pas_phantom_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_martial_artist_inner_force",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_martial_artist_synergy",
+    "parentPassiveIds": [
+      "pas_martial_artist_inner_force"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_martial_artist_utility",
+    "parentPassiveIds": [
+      "pas_martial_artist_inner_force"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_martial_artist_choice_a",
+    "parentPassiveIds": [
+      "pas_martial_artist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_martial_artist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_martial_artist_choice_b",
+    "parentPassiveIds": [
+      "pas_martial_artist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_martial_artist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_martial_artist_mastery_apex",
+    "parentPassiveIds": [
+      "pas_martial_artist_synergy",
+      "pas_martial_artist_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_duelist_perfect_counter",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_duelist_synergy",
+    "parentPassiveIds": [
+      "pas_duelist_perfect_counter"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_duelist_utility",
+    "parentPassiveIds": [
+      "pas_duelist_perfect_counter"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_duelist_choice_a",
+    "parentPassiveIds": [
+      "pas_duelist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_duelist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_duelist_choice_b",
+    "parentPassiveIds": [
+      "pas_duelist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_duelist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_duelist_mastery_apex",
+    "parentPassiveIds": [
+      "pas_duelist_synergy",
+      "pas_duelist_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_sniper_deadeye",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sniper_synergy",
+    "parentPassiveIds": [
+      "pas_sniper_deadeye"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sniper_utility",
+    "parentPassiveIds": [
+      "pas_sniper_deadeye"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sniper_choice_a",
+    "parentPassiveIds": [
+      "pas_sniper_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_sniper_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sniper_choice_b",
+    "parentPassiveIds": [
+      "pas_sniper_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_sniper_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sniper_mastery_apex",
+    "parentPassiveIds": [
+      "pas_sniper_synergy",
+      "pas_sniper_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_ranger_predators_instinct",
+    "parentPassiveIds": [],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 80,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ranger_synergy",
+    "parentPassiveIds": [
+      "pas_ranger_predators_instinct"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 82,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ranger_utility",
+    "parentPassiveIds": [
+      "pas_ranger_predators_instinct"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 84,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ranger_choice_a",
+    "parentPassiveIds": [
+      "pas_ranger_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_ranger_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ranger_choice_b",
+    "parentPassiveIds": [
+      "pas_ranger_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_ranger_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ranger_mastery_apex",
+    "parentPassiveIds": [
+      "pas_ranger_synergy",
+      "pas_ranger_utility"
+    ],
+    "mutuallyExclusiveGroup": null,
+    "requiredCharacterLevel": 92,
+    "requiredMasteryPoints": 60
+  }
+]

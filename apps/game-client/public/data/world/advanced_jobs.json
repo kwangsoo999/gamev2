@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "sword_saint",
+    "incompatibleBranchId": "berserker",
+    "parentClassId": "swordsman",
+    "parentDisplayName": "Swordsman",
+    "parentDisplayNameVi": "Kiếm Sĩ",
+    "name": "Sword Saint",
+    "nameVi": "Kiếm Thánh (Sword Saint)",
+    "title": "Master of Celestial Iaido",
+    "titleVi": "Thánh Kiếm Bất Diệt",
+    "role": "Precision Burst DPS",
+    "archetype": "multi_hit_crit_blade",
+    "description": "Supreme blade master delivering blinding white-gold crescent combos and fatal critical strikes against bosses.",
+    "descriptionVi": "Đỉnh cao kiếm đạo, tung hàng loạt kiếm khí bạch kim với tỷ lệ chí mạng cực đại vào Boss.",
+    "weaponCompatibility": [
+      "sword",
+      "greatsword",
+      "katana"
+    ],
+    "armorProficiency": [
+      "light",
+      "medium",
+      "plate"
+    ],
+    "statBonuses": {
+      "str": 36,
+      "agi": 28,
+      "dex": 28,
+      "con": 14,
+      "int": 6
+    },
+    "growthPerLevel": {
+      "str": 2.3,
+      "agi": 1.7,
+      "dex": 1.7
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 12,
+      "pvpDamageModifierPct": 95,
+      "bossDamageBonusPct": 18,
+      "critRateBonusPct": 12,
+      "critDamageBonusPct": 28,
+      "cooldownReductionPct": 8
+    },
+    "exclusiveSkillIds": [
+      "skill_ss_celestial_stance",
+      "skill_ss_iaido_flash",
+      "skill_ss_astral_cross",
+      "skill_ss_thousand_sword_halo"
+    ],
+    "preferredElement": "holy",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "sword_saint",
+      "styleCategory": "blade_saint",
+      "primaryColor": "#38bdf8",
+      "secondaryColor": "#fef08a",
+      "accentColor": "#ffffff",
+      "glowColor": "#bae6fd",
+      "trailStyle": "crescent_arc",
+      "circleStyle": "runic_halo",
+      "weaponAuraStyle": "white_gold_edge",
+      "defaultHitStopMs": 48,
+      "defaultShakeIntensity": 5.5,
+      "particleDensityMultiplier": 1.45
+    },
+    "animationProfileId": "anim_sword_saint",
+    "iconUrl": "/assets/elysia/ui/jobs/sword_saint_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/sword_saint.png"
+  },
+  {
+    "id": "berserker",
+    "incompatibleBranchId": "sword_saint",
+    "parentClassId": "swordsman",
+    "parentDisplayName": "Swordsman",
+    "parentDisplayNameVi": "Kiếm Sĩ",
+    "name": "Berserker",
+    "nameVi": "Cuồng Chiến Sĩ (Berserker)",
+    "title": "Avatar of Crimson Fury",
+    "titleVi": "Huyết Nộ Cuồng Đao",
+    "role": "Juggernaut Cleave DPS",
+    "archetype": "blood_cleave_juggernaut",
+    "description": "Channels relentless blood flame into sweeping wide cleaves that shred packs and drain vitality on hit.",
+    "descriptionVi": "Thiêu đốt huyết khí để phóng ra nhát chém hủy diệt diện rộng kèm hút máu và gây chảy máu nặng.",
+    "weaponCompatibility": [
+      "greatsword",
+      "sword",
+      "axe"
+    ],
+    "armorProficiency": [
+      "medium",
+      "plate"
+    ],
+    "statBonuses": {
+      "str": 44,
+      "con": 30,
+      "agi": 14,
+      "dex": 16,
+      "int": 4
+    },
+    "growthPerLevel": {
+      "str": 2.9,
+      "con": 2,
+      "agi": 0.8
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 16,
+      "pvpDamageModifierPct": 92,
+      "bossDamageBonusPct": 12,
+      "critRateBonusPct": 6,
+      "critDamageBonusPct": 22,
+      "damageReductionPct": 5
+    },
+    "exclusiveSkillIds": [
+      "skill_bk_blood_frenzy",
+      "skill_bk_crimson_guillotine",
+      "skill_bk_earthshaker_cleave",
+      "skill_bk_ragnarok_bloodstorm"
+    ],
+    "preferredElement": "fire",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "berserker",
+      "styleCategory": "crimson_fury",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#450a0a",
+      "accentColor": "#f97316",
+      "glowColor": "#ef4444",
+      "trailStyle": "jagged_cleave",
+      "circleStyle": "crimson_vortex",
+      "weaponAuraStyle": "blood_flame",
+      "defaultHitStopMs": 65,
+      "defaultShakeIntensity": 8.5,
+      "particleDensityMultiplier": 1.6
+    },
+    "animationProfileId": "anim_berserker",
+    "iconUrl": "/assets/elysia/ui/jobs/berserker_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/berserker.png"
+  },
+  {
+    "id": "dragoon",
+    "incompatibleBranchId": "warlancer",
+    "parentClassId": "spearman",
+    "parentDisplayName": "Spearman",
+    "parentDisplayNameVi": "Thương Sĩ",
+    "name": "Dragoon",
+    "nameVi": "Long Kỵ Sĩ (Dragoon)",
+    "title": "Tempest Skybreaker",
+    "titleVi": "Lôi Long Phá Thiên",
+    "role": "Dive & Armor-Pierce DPS",
+    "archetype": "lightning_dive_piercer",
+    "description": "Channels draconic lightning into meteoric aerial dives and supersonic piercing thrusts.",
+    "descriptionVi": "Triệu hồi sức mạnh Long Lôi, phi thân giáng thương từ không trung xuyên thủng giáp Boss.",
+    "weaponCompatibility": [
+      "spear",
+      "lance",
+      "halberd"
+    ],
+    "armorProficiency": [
+      "medium",
+      "plate"
+    ],
+    "statBonuses": {
+      "str": 34,
+      "agi": 28,
+      "dex": 26,
+      "con": 16,
+      "int": 8
+    },
+    "growthPerLevel": {
+      "str": 2.2,
+      "agi": 1.7,
+      "dex": 1.6
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 14,
+      "pvpDamageModifierPct": 94,
+      "bossDamageBonusPct": 18,
+      "critRateBonusPct": 10,
+      "critDamageBonusPct": 24
+    },
+    "exclusiveSkillIds": [
+      "skill_dg_dragon_heart",
+      "skill_dg_skyfang_dive",
+      "skill_dg_lightning_skewer",
+      "skill_dg_tempest_descent"
+    ],
+    "preferredElement": "lightning",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "dragoon",
+      "styleCategory": "dragon_lance",
+      "primaryColor": "#6366f1",
+      "secondaryColor": "#22d3ee",
+      "accentColor": "#facc15",
+      "glowColor": "#818cf8",
+      "trailStyle": "piercing_lance",
+      "circleStyle": "draconic_crest",
+      "weaponAuraStyle": "dragon_lightning",
+      "defaultHitStopMs": 56,
+      "defaultShakeIntensity": 7.5,
+      "particleDensityMultiplier": 1.5
+    },
+    "animationProfileId": "anim_dragoon",
+    "iconUrl": "/assets/elysia/ui/jobs/dragoon_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/dragoon.png"
+  },
+  {
+    "id": "warlancer",
+    "incompatibleBranchId": "dragoon",
+    "parentClassId": "spearman",
+    "parentDisplayName": "Spearman",
+    "parentDisplayNameVi": "Thương Sĩ",
+    "name": "Warlancer",
+    "nameVi": "Chiến Thương Sư (Warlancer)",
+    "title": "Imperial Phalanx Commander",
+    "titleVi": "Thiết Bích Chiến Thương",
+    "role": "Frontline Bruiser & Crowd Control",
+    "archetype": "phalanx_halberd_bruiser",
+    "description": "Commands sweeping halberd formations and impaling shockwaves that control entire battlefields.",
+    "descriptionVi": "Làm chủ trận địa bằng các đòn quét kích diện rộng, đẩy lùi và khống chế đám đông.",
+    "weaponCompatibility": [
+      "halberd",
+      "spear",
+      "lance"
+    ],
+    "armorProficiency": [
+      "plate",
+      "medium"
+    ],
+    "statBonuses": {
+      "str": 32,
+      "con": 32,
+      "dex": 22,
+      "agi": 14,
+      "int": 6
+    },
+    "growthPerLevel": {
+      "str": 2,
+      "con": 2.1,
+      "dex": 1.4
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 14,
+      "pvpDamageModifierPct": 96,
+      "bossDamageBonusPct": 10,
+      "critRateBonusPct": 6,
+      "critDamageBonusPct": 15,
+      "damageReductionPct": 10
+    },
+    "exclusiveSkillIds": [
+      "skill_wl_iron_phalanx",
+      "skill_wl_crimson_sweep",
+      "skill_wl_earth_impale",
+      "skill_wl_grand_legion_halberd"
+    ],
+    "preferredElement": "earth",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "warlancer",
+      "styleCategory": "fortress_spear",
+      "primaryColor": "#d97706",
+      "secondaryColor": "#991b1b",
+      "accentColor": "#fef3c7",
+      "glowColor": "#f59e0b",
+      "trailStyle": "sweeping_halberd",
+      "circleStyle": "fortress_grid",
+      "weaponAuraStyle": "tempered_steel",
+      "defaultHitStopMs": 50,
+      "defaultShakeIntensity": 6.2,
+      "particleDensityMultiplier": 1.4
+    },
+    "animationProfileId": "anim_warlancer",
+    "iconUrl": "/assets/elysia/ui/jobs/warlancer_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/warlancer.png"
+  },
+  {
+    "id": "paladin",
+    "incompatibleBranchId": "guardian",
+    "parentClassId": "knight",
+    "parentDisplayName": "Knight",
+    "parentDisplayNameVi": "Kỵ Sĩ",
+    "name": "Paladin",
+    "nameVi": "Thánh Kỵ Sĩ (Paladin)",
+    "title": "Solar Vowbearer",
+    "titleVi": "Thánh Quang Hộ Thệ",
+    "role": "Holy Vanguard & Off-Healer",
+    "archetype": "holy_aegis_vanguard",
+    "description": "Wields radiant sunlight barriers and sacred judgement verdicts that protect and mend nearby allies.",
+    "descriptionVi": "Kết hợp khiên thánh quang và pháp thuật hồi phục, vừa bảo hộ đồng đội vừa trừng phạt tà ác.",
+    "weaponCompatibility": [
+      "sword",
+      "shield",
+      "mace"
+    ],
+    "armorProficiency": [
+      "plate"
+    ],
+    "statBonuses": {
+      "con": 34,
+      "str": 26,
+      "int": 26,
+      "dex": 14,
+      "agi": 10
+    },
+    "growthPerLevel": {
+      "con": 2.1,
+      "str": 1.6,
+      "int": 1.6
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 10,
+      "pvpDamageModifierPct": 95,
+      "bossDamageBonusPct": 14,
+      "critRateBonusPct": 5,
+      "critDamageBonusPct": 12,
+      "healingPowerBonusPct": 18,
+      "damageReductionPct": 14
+    },
+    "exclusiveSkillIds": [
+      "skill_pl_sacred_vow",
+      "skill_pl_solstice_smite",
+      "skill_pl_sanctuary_aegis",
+      "skill_pl_sovereign_dawn"
+    ],
+    "preferredElement": "holy",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "paladin",
+      "styleCategory": "holy_paladin",
+      "primaryColor": "#facc15",
+      "secondaryColor": "#fffbeb",
+      "accentColor": "#38bdf8",
+      "glowColor": "#fef08a",
+      "trailStyle": "radiant_wave",
+      "circleStyle": "paladin_cross",
+      "weaponAuraStyle": "sunlight_gleam",
+      "defaultHitStopMs": 52,
+      "defaultShakeIntensity": 6,
+      "particleDensityMultiplier": 1.45
+    },
+    "animationProfileId": "anim_paladin",
+    "iconUrl": "/assets/elysia/ui/jobs/paladin_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/paladin.png"
+  },
+  {
+    "id": "guardian",
+    "incompatibleBranchId": "paladin",
+    "parentClassId": "knight",
+    "parentDisplayName": "Knight",
+    "parentDisplayNameVi": "Kỵ Sĩ",
+    "name": "Guardian",
+    "nameVi": "Hộ Vệ Hoàng Gia (Guardian)",
+    "title": "Unbreakable Bastion",
+    "titleVi": "Bất Động Pháo Đài",
+    "role": "Pure Main Tank",
+    "archetype": "immutable_fortress_tank",
+    "description": "Summons emerald crystal bastions and octagonal deflection domes capable of absorbing catastrophic boss ultimates.",
+    "descriptionVi": "Phòng tuyến kiên cố tối thượng với kết giới lục bảo giảm sát thương và phản đòn mạnh mẽ.",
+    "weaponCompatibility": [
+      "shield",
+      "sword",
+      "mace"
+    ],
+    "armorProficiency": [
+      "plate"
+    ],
+    "statBonuses": {
+      "con": 48,
+      "str": 24,
+      "dex": 16,
+      "agi": 8,
+      "int": 10
+    },
+    "growthPerLevel": {
+      "con": 3.1,
+      "str": 1.4
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 6,
+      "pvpDamageModifierPct": 90,
+      "bossDamageBonusPct": 10,
+      "critRateBonusPct": 3,
+      "critDamageBonusPct": 8,
+      "damageReductionPct": 24
+    },
+    "exclusiveSkillIds": [
+      "skill_gd_adamant_core",
+      "skill_gd_bastion_bash",
+      "skill_gd_aegis_fortress",
+      "skill_gd_immutable_dome"
+    ],
+    "preferredElement": "earth",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "guardian",
+      "styleCategory": "iron_bastion",
+      "primaryColor": "#10b981",
+      "secondaryColor": "#0ea5e9",
+      "accentColor": "#ecfdf5",
+      "glowColor": "#34d399",
+      "trailStyle": "bastion_pulse",
+      "circleStyle": "aegis_octagon",
+      "weaponAuraStyle": "emerald_bulwark",
+      "defaultHitStopMs": 58,
+      "defaultShakeIntensity": 7,
+      "particleDensityMultiplier": 1.35
+    },
+    "animationProfileId": "anim_guardian",
+    "iconUrl": "/assets/elysia/ui/jobs/guardian_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/guardian.png"
+  },
+  {
+    "id": "saint",
+    "incompatibleBranchId": "exorcist",
+    "parentClassId": "monk",
+    "parentDisplayName": "Priest",
+    "parentDisplayNameVi": "Tu Sĩ / Giáo Sĩ",
+    "name": "Saint",
+    "nameVi": "Thánh Sư (Saint)",
+    "title": "Voice of Seraphic Grace",
+    "titleVi": "Thánh Ân Cứu Thế",
+    "role": "Apex Party Healer & Buffer",
+    "archetype": "seraphic_sanctuary_healer",
+    "description": "Conjures seraphic wing mandalas and golden sanctuary fields that cleanse ailments and rapidly restore allies.",
+    "descriptionVi": "Triệu hồi trận đồ Thiên Sứ ban phát trị liệu liên hoàn, giải trừ hiệu ứng xấu và hồi sinh đồng minh.",
+    "weaponCompatibility": [
+      "holy_staff",
+      "staff",
+      "book"
+    ],
+    "armorProficiency": [
+      "cloth",
+      "light"
+    ],
+    "statBonuses": {
+      "int": 44,
+      "con": 24,
+      "dex": 20,
+      "agi": 14,
+      "str": 4
+    },
+    "growthPerLevel": {
+      "int": 2.8,
+      "con": 1.5,
+      "dex": 1.2
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 8,
+      "pvpDamageModifierPct": 92,
+      "bossDamageBonusPct": 8,
+      "critRateBonusPct": 6,
+      "critDamageBonusPct": 12,
+      "healingPowerBonusPct": 32,
+      "cooldownReductionPct": 12
+    },
+    "exclusiveSkillIds": [
+      "skill_st_seraph_grace",
+      "skill_st_radiant_hymn",
+      "skill_st_sanctuary_field",
+      "skill_st_celestial_benediction"
+    ],
+    "preferredElement": "holy",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "saint",
+      "styleCategory": "seraphic_light",
+      "primaryColor": "#fef08a",
+      "secondaryColor": "#fbcfe8",
+      "accentColor": "#ffffff",
+      "glowColor": "#fde68a",
+      "trailStyle": "holy_ribbon",
+      "circleStyle": "seraph_mandala",
+      "weaponAuraStyle": "divine_feathers",
+      "defaultHitStopMs": 30,
+      "defaultShakeIntensity": 3,
+      "particleDensityMultiplier": 1.55
+    },
+    "animationProfileId": "anim_saint",
+    "iconUrl": "/assets/elysia/ui/jobs/saint_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/saint.png"
+  },
+  {
+    "id": "exorcist",
+    "incompatibleBranchId": "saint",
+    "parentClassId": "monk",
+    "parentDisplayName": "Priest",
+    "parentDisplayNameVi": "Tu Sĩ / Giáo Sĩ",
+    "name": "Exorcist",
+    "nameVi": "Trừ Tà Sư (Exorcist)",
+    "title": "Inquisitor of Sacred Seals",
+    "titleVi": "Thánh Ấn Phán Quyết",
+    "role": "Holy Magic Striker",
+    "archetype": "purifying_seal_striker",
+    "description": "Inscribes rotating purification talismans that call down holy lightning pillars upon bosses and dark foes.",
+    "descriptionVi": "Khắc ấn trừ tà xoay chuyển, giáng cột sét thánh quang trừng phạt Boss và ma vật.",
+    "weaponCompatibility": [
+      "holy_staff",
+      "staff",
+      "spellbook"
+    ],
+    "armorProficiency": [
+      "cloth",
+      "light"
+    ],
+    "statBonuses": {
+      "int": 40,
+      "dex": 26,
+      "con": 18,
+      "agi": 16,
+      "str": 6
+    },
+    "growthPerLevel": {
+      "int": 2.6,
+      "dex": 1.6,
+      "agi": 1
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 15,
+      "pvpDamageModifierPct": 95,
+      "bossDamageBonusPct": 20,
+      "critRateBonusPct": 11,
+      "critDamageBonusPct": 24,
+      "healingPowerBonusPct": 10
+    },
+    "exclusiveSkillIds": [
+      "skill_ex_sacred_seal",
+      "skill_ex_judgement_talisman",
+      "skill_ex_purifying_pillar",
+      "skill_ex_grand_purification"
+    ],
+    "preferredElement": "lightning",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "exorcist",
+      "styleCategory": "sacred_exorcism",
+      "primaryColor": "#818cf8",
+      "secondaryColor": "#fde047",
+      "accentColor": "#f8fafc",
+      "glowColor": "#a5b4fc",
+      "trailStyle": "exorcism_sigil",
+      "circleStyle": "purification_seal",
+      "weaponAuraStyle": "judgement_sparks",
+      "defaultHitStopMs": 46,
+      "defaultShakeIntensity": 5.5,
+      "particleDensityMultiplier": 1.5
+    },
+    "animationProfileId": "anim_exorcist",
+    "iconUrl": "/assets/elysia/ui/jobs/exorcist_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/exorcist.png"
+  },
+  {
+    "id": "elementalist",
+    "incompatibleBranchId": "arcanist",
+    "parentClassId": "mage",
+    "parentDisplayName": "Mage",
+    "parentDisplayNameVi": "Pháp Sư",
+    "name": "Elementalist",
+    "nameVi": "Nguyên Tố Sư (Elementalist)",
+    "title": "Sovereign of Fire, Frost & Storm",
+    "titleVi": "Chúa Tể Tam Nguyên Tố",
+    "role": "Elemental AoE Nuker",
+    "archetype": "tri_element_cataclysm",
+    "description": "Fuses fire, ice, and lightning into cascading elemental triads and catastrophic blizzard-meteor storms.",
+    "descriptionVi": "Dung hợp Hỏa - Băng - Lôi, kích hoạt chuỗi bão nguyên tố hủy diệt hàng loạt mục tiêu.",
+    "weaponCompatibility": [
+      "staff",
+      "spellbook"
+    ],
+    "armorProficiency": [
+      "cloth"
+    ],
+    "statBonuses": {
+      "int": 48,
+      "dex": 24,
+      "agi": 16,
+      "con": 12,
+      "str": 2
+    },
+    "growthPerLevel": {
+      "int": 3.1,
+      "dex": 1.4
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 20,
+      "pvpDamageModifierPct": 90,
+      "bossDamageBonusPct": 14,
+      "critRateBonusPct": 9,
+      "critDamageBonusPct": 22
+    },
+    "exclusiveSkillIds": [
+      "skill_el_elemental_harmony",
+      "skill_el_tri_convergence",
+      "skill_el_frostfire_vortex",
+      "skill_el_prismatic_cataclysm"
+    ],
+    "preferredElement": "fire",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "elementalist",
+      "styleCategory": "elemental_tempest",
+      "primaryColor": "#f97316",
+      "secondaryColor": "#06b6d4",
+      "accentColor": "#facc15",
+      "glowColor": "#fb7185",
+      "trailStyle": "elemental_orb",
+      "circleStyle": "elemental_triad",
+      "weaponAuraStyle": "tri_element_orbit",
+      "defaultHitStopMs": 44,
+      "defaultShakeIntensity": 6.8,
+      "particleDensityMultiplier": 1.65
+    },
+    "animationProfileId": "anim_elementalist",
+    "iconUrl": "/assets/elysia/ui/jobs/elementalist_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/elementalist.png"
+  },
+  {
+    "id": "arcanist",
+    "incompatibleBranchId": "elementalist",
+    "parentClassId": "mage",
+    "parentDisplayName": "Mage",
+    "parentDisplayNameVi": "Pháp Sư",
+    "name": "Arcanist",
+    "nameVi": "Bí Ẩn Sư (Arcanist)",
+    "title": "Weaver of Celestial Cosmos",
+    "titleVi": "Tinh Tú Bí Thuật Sư",
+    "role": "Arcane Burst & Cooldown Caster",
+    "archetype": "cosmic_astrolabe_mage",
+    "description": "Manipulates celestial astrolabe runes and gravitational singularities for rapid-fire boss devastation.",
+    "descriptionVi": "Điều khiển tinh bàn vũ trụ và hố đen bí thuật, giảm hồi chiêu và dồn sát thương đơn mục tiêu cực hạn.",
+    "weaponCompatibility": [
+      "spellbook",
+      "staff"
+    ],
+    "armorProficiency": [
+      "cloth"
+    ],
+    "statBonuses": {
+      "int": 44,
+      "dex": 28,
+      "agi": 20,
+      "con": 10,
+      "str": 2
+    },
+    "growthPerLevel": {
+      "int": 2.8,
+      "dex": 1.6,
+      "agi": 1.2
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 14,
+      "pvpDamageModifierPct": 95,
+      "bossDamageBonusPct": 20,
+      "critRateBonusPct": 11,
+      "critDamageBonusPct": 25,
+      "cooldownReductionPct": 14
+    },
+    "exclusiveSkillIds": [
+      "skill_ar_astral_flow",
+      "skill_ar_gravity_singularity",
+      "skill_ar_rune_overload",
+      "skill_ar_celestial_starfall"
+    ],
+    "preferredElement": "arcane",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "arcanist",
+      "styleCategory": "arcane_cosmos",
+      "primaryColor": "#c084fc",
+      "secondaryColor": "#312e81",
+      "accentColor": "#f0abfc",
+      "glowColor": "#d8b4fe",
+      "trailStyle": "cosmic_rune",
+      "circleStyle": "celestial_astrolabe",
+      "weaponAuraStyle": "starlight_orbit",
+      "defaultHitStopMs": 42,
+      "defaultShakeIntensity": 6.2,
+      "particleDensityMultiplier": 1.6
+    },
+    "animationProfileId": "anim_arcanist",
+    "iconUrl": "/assets/elysia/ui/jobs/arcanist_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/arcanist.png"
+  },
+  {
+    "id": "shadowblade",
+    "incompatibleBranchId": "phantom",
+    "parentClassId": "assassin",
+    "parentDisplayName": "Assassin",
+    "parentDisplayNameVi": "Sát Thủ",
+    "name": "Shadowblade",
+    "nameVi": "Ảnh Nhận (Shadowblade)",
+    "title": "Executioner of Nightfall",
+    "titleVi": "Ám Ảnh Hành Quyết",
+    "role": "Crit & Execute Assassin",
+    "archetype": "nightfall_execute_assassin",
+    "description": "Blinks through shadows with crimson moon streaks, guaranteeing devastating execute crits against weakened targets.",
+    "descriptionVi": "Ẩn thân trong bóng tối tung liên trảm chí mạng và kết liễu mục tiêu thấp máu tức thì.",
+    "weaponCompatibility": [
+      "dual_daggers",
+      "dagger"
+    ],
+    "armorProficiency": [
+      "light"
+    ],
+    "statBonuses": {
+      "agi": 40,
+      "dex": 34,
+      "str": 20,
+      "con": 10,
+      "int": 4
+    },
+    "growthPerLevel": {
+      "agi": 2.5,
+      "dex": 2,
+      "str": 1
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 12,
+      "pvpDamageModifierPct": 96,
+      "bossDamageBonusPct": 18,
+      "critRateBonusPct": 16,
+      "critDamageBonusPct": 35
+    },
+    "exclusiveSkillIds": [
+      "skill_sb_lethal_tempo",
+      "skill_sb_nightfall_eviscerate",
+      "skill_sb_crimson_ambush",
+      "skill_sb_eclipse_assassination"
+    ],
+    "preferredElement": "shadow",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "shadowblade",
+      "styleCategory": "shadow_assassin",
+      "primaryColor": "#7e22ce",
+      "secondaryColor": "#e11d48",
+      "accentColor": "#f5d0fe",
+      "glowColor": "#a855f7",
+      "trailStyle": "shadow_streak",
+      "circleStyle": "shadow_moon",
+      "weaponAuraStyle": "violet_mist",
+      "defaultHitStopMs": 40,
+      "defaultShakeIntensity": 4.8,
+      "particleDensityMultiplier": 1.45
+    },
+    "animationProfileId": "anim_shadowblade",
+    "iconUrl": "/assets/elysia/ui/jobs/shadowblade_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/shadowblade.png"
+  },
+  {
+    "id": "phantom",
+    "incompatibleBranchId": "shadowblade",
+    "parentClassId": "assassin",
+    "parentDisplayName": "Assassin",
+    "parentDisplayNameVi": "Sát Thủ",
+    "name": "Phantom",
+    "nameVi": "Ảo Ảnh Sát Thủ (Phantom)",
+    "title": "Dancer of Spectral Mirrors",
+    "titleVi": "Huyễn Ảnh Ma Đao",
+    "role": "Illusion & AoE Evasion DPS",
+    "archetype": "mirage_clone_dancer",
+    "description": "Summons spectral teal afterimage clones that echo every slash across multiple foes while evading counterattacks.",
+    "descriptionVi": "Tạo phân thân huyễn ảnh đồng loạt tung phi đao diện rộng, né tránh đòn đánh cực cao.",
+    "weaponCompatibility": [
+      "dual_daggers",
+      "dagger"
+    ],
+    "armorProficiency": [
+      "light"
+    ],
+    "statBonuses": {
+      "agi": 42,
+      "dex": 28,
+      "str": 18,
+      "int": 14,
+      "con": 12
+    },
+    "growthPerLevel": {
+      "agi": 2.6,
+      "dex": 1.7,
+      "int": 0.9
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 16,
+      "pvpDamageModifierPct": 94,
+      "bossDamageBonusPct": 12,
+      "critRateBonusPct": 11,
+      "critDamageBonusPct": 22,
+      "damageReductionPct": 10,
+      "cooldownReductionPct": 8
+    },
+    "exclusiveSkillIds": [
+      "skill_ph_mirage_veil",
+      "skill_ph_spectral_blades",
+      "skill_ph_mirror_step",
+      "skill_ph_spectral_waltz"
+    ],
+    "preferredElement": "shadow",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "phantom",
+      "styleCategory": "spectral_phantom",
+      "primaryColor": "#2dd4bf",
+      "secondaryColor": "#7c3aed",
+      "accentColor": "#ccfbf1",
+      "glowColor": "#5eead4",
+      "trailStyle": "phantom_afterimage",
+      "circleStyle": "phantom_eclipse",
+      "weaponAuraStyle": "mirage_veil",
+      "defaultHitStopMs": 36,
+      "defaultShakeIntensity": 4.2,
+      "particleDensityMultiplier": 1.5
+    },
+    "animationProfileId": "anim_phantom",
+    "iconUrl": "/assets/elysia/ui/jobs/phantom_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/phantom.png"
+  },
+  {
+    "id": "martial_artist",
+    "incompatibleBranchId": "duelist",
+    "parentClassId": "fighter",
+    "parentDisplayName": "Fighter",
+    "parentDisplayNameVi": "Võ Sĩ",
+    "name": "Martial Artist",
+    "nameVi": "Võ Thánh (Martial Artist)",
+    "title": "Grandmaster of Blazing Chi",
+    "titleVi": "Bá Quyền Khí Công",
+    "role": "Heavy Impact & Stun Brawler",
+    "archetype": "blazing_chi_breaker",
+    "description": "Focuses blazing golden lotus chi into earth-shattering palms that crush boss armor and trigger sonic shockwaves.",
+    "descriptionVi": "Hội tụ chân khí Kim Liên vào từng quyền cước, phá giáp Boss và gây choáng diện rộng.",
+    "weaponCompatibility": [
+      "gauntlets",
+      "fist"
+    ],
+    "armorProficiency": [
+      "light",
+      "medium"
+    ],
+    "statBonuses": {
+      "str": 40,
+      "con": 26,
+      "agi": 22,
+      "dex": 20,
+      "int": 8
+    },
+    "growthPerLevel": {
+      "str": 2.6,
+      "con": 1.6,
+      "agi": 1.2
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 15,
+      "pvpDamageModifierPct": 94,
+      "bossDamageBonusPct": 18,
+      "critRateBonusPct": 9,
+      "critDamageBonusPct": 24,
+      "damageReductionPct": 8
+    },
+    "exclusiveSkillIds": [
+      "skill_ma_lotus_chi",
+      "skill_ma_crimson_tiger_fang",
+      "skill_ma_sonic_palm",
+      "skill_ma_asura_hundred_palms"
+    ],
+    "preferredElement": "fire",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "martial_artist",
+      "styleCategory": "chi_grandmaster",
+      "primaryColor": "#f59e0b",
+      "secondaryColor": "#ef4444",
+      "accentColor": "#fef9c3",
+      "glowColor": "#fbbf24",
+      "trailStyle": "chi_shockwave",
+      "circleStyle": "lotus_chi",
+      "weaponAuraStyle": "golden_fist",
+      "defaultHitStopMs": 62,
+      "defaultShakeIntensity": 7.8,
+      "particleDensityMultiplier": 1.55
+    },
+    "animationProfileId": "anim_martial_artist",
+    "iconUrl": "/assets/elysia/ui/jobs/martial_artist_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/martial_artist.png"
+  },
+  {
+    "id": "duelist",
+    "incompatibleBranchId": "martial_artist",
+    "parentClassId": "fighter",
+    "parentDisplayName": "Fighter",
+    "parentDisplayNameVi": "Võ Sĩ",
+    "name": "Duelist",
+    "nameVi": "Quyết Đấu Sư (Duelist)",
+    "title": "Virtuoso of Wind Tempo",
+    "titleVi": "Liên Hoàn Kiếm Quyền",
+    "role": "Combo Chain & Counter Striker",
+    "archetype": "tempo_counter_striker",
+    "description": "Flows through blindingly rapid combo strikes and parry ripostes that escalate damage with every consecutive hit.",
+    "descriptionVi": "Chuỗi liên kích siêu tốc kết hợp phản kích sắc bén, cộng dồn tốc đánh và bạo kích.",
+    "weaponCompatibility": [
+      "gauntlets",
+      "fist",
+      "sword"
+    ],
+    "armorProficiency": [
+      "light",
+      "medium"
+    ],
+    "statBonuses": {
+      "agi": 36,
+      "str": 28,
+      "dex": 32,
+      "con": 14,
+      "int": 6
+    },
+    "growthPerLevel": {
+      "agi": 2.3,
+      "dex": 1.9,
+      "str": 1.5
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 14,
+      "pvpDamageModifierPct": 98,
+      "bossDamageBonusPct": 15,
+      "critRateBonusPct": 14,
+      "critDamageBonusPct": 26,
+      "cooldownReductionPct": 12
+    },
+    "exclusiveSkillIds": [
+      "skill_dl_tempo_flow",
+      "skill_dl_velocity_riposte",
+      "skill_dl_gale_combo",
+      "skill_dl_crimson_finale_dance"
+    ],
+    "preferredElement": "wind",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "duelist",
+      "styleCategory": "tempo_duelist",
+      "primaryColor": "#fb7185",
+      "secondaryColor": "#e2e8f0",
+      "accentColor": "#fde047",
+      "glowColor": "#fda4af",
+      "trailStyle": "rapid_combo_streak",
+      "circleStyle": "duelist_compass",
+      "weaponAuraStyle": "crimson_wind",
+      "defaultHitStopMs": 32,
+      "defaultShakeIntensity": 4,
+      "particleDensityMultiplier": 1.4
+    },
+    "animationProfileId": "anim_duelist",
+    "iconUrl": "/assets/elysia/ui/jobs/duelist_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/duelist.png"
+  },
+  {
+    "id": "sniper",
+    "incompatibleBranchId": "ranger",
+    "parentClassId": "archer",
+    "parentDisplayName": "Archer",
+    "parentDisplayNameVi": "Cung Thủ",
+    "name": "Sniper",
+    "nameVi": "Xạ Thủ Thần Tiễn (Sniper)",
+    "title": "Long-Range Starlight Marksman",
+    "titleVi": "Thần Tiễn Bách Bộ Xuyên Dương",
+    "role": "Extreme-Range Single/Boss Marksman",
+    "archetype": "precision_rail_marksman",
+    "description": "Locks azure targeting reticles onto distant prey before unleashing supersonic starlight railshots that pierce all defenses.",
+    "descriptionVi": "Khóa mục tiêu từ tầm cực xa và khai hỏa mũi tên xuyên phá mọi lớp phòng ngự của Boss.",
+    "weaponCompatibility": [
+      "bow",
+      "crossbow"
+    ],
+    "armorProficiency": [
+      "light"
+    ],
+    "statBonuses": {
+      "dex": 48,
+      "agi": 28,
+      "str": 16,
+      "con": 10,
+      "int": 8
+    },
+    "growthPerLevel": {
+      "dex": 3.1,
+      "agi": 1.7,
+      "str": 0.9
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 14,
+      "pvpDamageModifierPct": 94,
+      "bossDamageBonusPct": 22,
+      "critRateBonusPct": 16,
+      "critDamageBonusPct": 30
+    },
+    "exclusiveSkillIds": [
+      "skill_sn_eagle_lock",
+      "skill_sn_starlight_railshot",
+      "skill_sn_armor_shatter",
+      "skill_sn_orbital_barrage"
+    ],
+    "preferredElement": "lightning",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "sniper",
+      "styleCategory": "precision_sniper",
+      "primaryColor": "#0ea5e9",
+      "secondaryColor": "#f8fafc",
+      "accentColor": "#f43f5e",
+      "glowColor": "#38bdf8",
+      "trailStyle": "snipe_laser",
+      "circleStyle": "target_reticle",
+      "weaponAuraStyle": "azure_aim",
+      "defaultHitStopMs": 52,
+      "defaultShakeIntensity": 6.4,
+      "particleDensityMultiplier": 1.3
+    },
+    "animationProfileId": "anim_sniper",
+    "iconUrl": "/assets/elysia/ui/jobs/sniper_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/sniper.png"
+  },
+  {
+    "id": "ranger",
+    "incompatibleBranchId": "sniper",
+    "parentClassId": "archer",
+    "parentDisplayName": "Archer",
+    "parentDisplayNameVi": "Cung Thủ",
+    "name": "Ranger",
+    "nameVi": "Du Hiệp Rừng Thẳm (Ranger)",
+    "title": "Warden of Sylvan Tempest",
+    "titleVi": "Thủ Hộ Rừng Xanh",
+    "role": "Mobile AoE & Trap Specialist",
+    "archetype": "sylvan_wind_trapper",
+    "description": "Weaves emerald wind arrows, rooting vine traps, and sweeping arrow canopies for unrivaled map clearing.",
+    "descriptionVi": "Bắn mưa tên bão lá, gài bẫy dây leo trói chân quái và cơ động càn quét bản đồ cực nhanh.",
+    "weaponCompatibility": [
+      "bow",
+      "crossbow"
+    ],
+    "armorProficiency": [
+      "light",
+      "medium"
+    ],
+    "statBonuses": {
+      "agi": 38,
+      "dex": 38,
+      "con": 16,
+      "int": 10,
+      "str": 12
+    },
+    "growthPerLevel": {
+      "agi": 2.4,
+      "dex": 2.4,
+      "con": 0.9
+    },
+    "combatModifiers": {
+      "pveDamageBonusPct": 18,
+      "pvpDamageModifierPct": 94,
+      "bossDamageBonusPct": 12,
+      "critRateBonusPct": 10,
+      "critDamageBonusPct": 20,
+      "cooldownReductionPct": 8
+    },
+    "exclusiveSkillIds": [
+      "skill_rg_sylvan_stride",
+      "skill_rg_leaf_tempest",
+      "skill_rg_briar_snare",
+      "skill_rg_emerald_canopy_rain"
+    ],
+    "preferredElement": "nature",
+    "unlockLevel": 80,
+    "tier": 3,
+    "isPermanent": true,
+    "vfxProfile": {
+      "classOrBranchId": "ranger",
+      "styleCategory": "verdant_ranger",
+      "primaryColor": "#22c55e",
+      "secondaryColor": "#a3e635",
+      "accentColor": "#fef08a",
+      "glowColor": "#4ade80",
+      "trailStyle": "leaf_wind_arc",
+      "circleStyle": "sylvan_ring",
+      "weaponAuraStyle": "spirit_vines",
+      "defaultHitStopMs": 32,
+      "defaultShakeIntensity": 4,
+      "particleDensityMultiplier": 1.45
+    },
+    "animationProfileId": "anim_ranger",
+    "iconUrl": "/assets/elysia/ui/jobs/ranger_icon.png",
+    "portraitUrl": "/assets/elysia/portraits/jobs/ranger.png"
+  }
+]

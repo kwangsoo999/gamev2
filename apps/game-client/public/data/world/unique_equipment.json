@@ -1,0 +1,375 @@
+[
+  {
+    "id": "UEQ_GOBLIN_CROWN_OF_ORIGIN",
+    "itemId": "UEQ_GOBLIN_CROWN_OF_ORIGIN",
+    "name": "Vương Miện Goblin Cổ Nguyên (Crown of Goblin Origin)",
+    "description": "Thánh vật độc nhất của thủ lĩnh GoblinEvo cổ đại. Giảm sát thương nhận vào và tăng sinh lực tối đa.",
+    "category": "armor",
+    "itemType": "armor",
+    "itemSubtype": "head",
+    "equipSlot": "head",
+    "rarity": "epic",
+    "requiredLevel": 22,
+    "allowedClasses": [
+      "any"
+    ],
+    "isUnique": true,
+    "nonRepeatable": true,
+    "isCharacterBound": true,
+    "isAccountBound": false,
+    "isTradable": false,
+    "isSellable": false,
+    "isDroppable": false,
+    "upgradeable": true,
+    "maxUpgradeLevel": 10,
+    "upgradeScalingPerLevelPct": 8,
+    "equipmentStats": {
+      "def": 34,
+      "mdef": 28,
+      "maxHp": 220
+    },
+    "acquisitionConditions": {
+      "questId": "QUEST_GOBLIN_EVO_03_SHAMAN_RELIC",
+      "requiredLevel": 22,
+      "characterUnique": true,
+      "description": "Hoàn thành Giai Đoạn 3 chuỗi nhiệm vụ GoblinEvo: Ấn Ký Cổ Ngữ Thì Thầm"
+    },
+    "passiveEffects": [
+      {
+        "id": "pas_ueq_crown_def",
+        "kind": "flat_stat",
+        "stat": "def",
+        "valueFlat": 18,
+        "description": "+18 Phòng Thủ cố định (tăng theo cấp cường hóa)"
+      },
+      {
+        "id": "pas_ueq_crown_dr",
+        "kind": "pct_stat",
+        "stat": "damageReductionPct",
+        "valuePct": 5,
+        "description": "Giảm 5% tổng sát thương nhận vào"
+      }
+    ],
+    "icon": "helm_bronze",
+    "sellPrice": 0,
+    "buyPrice": 0,
+    "stackable": false,
+    "enabled": true,
+    "status": "published"
+  },
+  {
+    "id": "UEQ_GOBLIN_EVO_EMBLEM_BLADE",
+    "itemId": "UEQ_GOBLIN_EVO_EMBLEM_BLADE",
+    "name": "Thánh Kiếm Ấn Ký GoblinEvo (Emblem Edge)",
+    "description": "Vũ khí Huyền Thoại độc nhất rèn từ Giao Ước GoblinEvo và Trái Tim Rừng Thẳm.",
+    "category": "weapon",
+    "itemType": "weapon",
+    "itemSubtype": "sword",
+    "weaponType": "sword",
+    "equipSlot": "weapon",
+    "rarity": "legendary",
+    "requiredLevel": 32,
+    "allowedClasses": [
+      "any"
+    ],
+    "isUnique": true,
+    "nonRepeatable": true,
+    "isCharacterBound": false,
+    "isAccountBound": true,
+    "isTradable": false,
+    "isSellable": false,
+    "isDroppable": false,
+    "upgradeable": true,
+    "maxUpgradeLevel": 12,
+    "upgradeScalingPerLevelPct": 9,
+    "equipmentStats": {
+      "atk": 115,
+      "matk": 95,
+      "critRatePct": 7
+    },
+    "acquisitionConditions": {
+      "questId": "QUEST_GOBLIN_EVO_04_TREANT_PACT",
+      "bossId": "boss_ancient_treant",
+      "requiredLevel": 32,
+      "accountUnique": true,
+      "description": "Hoàn thành Thử Thách Cuối GoblinEvo (Hạ gục Ancient Treant)"
+    },
+    "passiveEffects": [
+      {
+        "id": "pas_ueq_emblem_atk",
+        "kind": "flat_stat",
+        "stat": "atk",
+        "valueFlat": 42,
+        "description": "+42 Vật Công nội tại"
+      },
+      {
+        "id": "pas_ueq_emblem_skill",
+        "kind": "pct_stat",
+        "stat": "skillDamagePct",
+        "valuePct": 10,
+        "description": "+10% Sát thương mọi Kỹ Năng"
+      }
+    ],
+    "icon": "excalibur_sword_icon",
+    "iconAssetUrl": "/assets/items/excalibur_sword_icon.png",
+    "sellPrice": 0,
+    "buyPrice": 0,
+    "stackable": false,
+    "enabled": true,
+    "status": "published"
+  },
+  {
+    "id": "UEQ_WELLSPRING_AMULET",
+    "itemId": "UEQ_WELLSPRING_AMULET",
+    "name": "Dây Chuyền Giếng Ngọc Khởi Nguyên (Wellspring Relic)",
+    "description": "Di vật ẩn giấu dưới đáy giếng Thôn Khởi Nguyên, khuếch đại sinh lực và hồi phục.",
+    "category": "accessory",
+    "itemType": "accessory",
+    "itemSubtype": "necklace",
+    "equipSlot": "necklace",
+    "rarity": "rare",
+    "requiredLevel": 5,
+    "allowedClasses": [
+      "any"
+    ],
+    "isUnique": true,
+    "nonRepeatable": true,
+    "isCharacterBound": true,
+    "isAccountBound": false,
+    "isTradable": false,
+    "isSellable": false,
+    "isDroppable": false,
+    "upgradeable": true,
+    "maxUpgradeLevel": 8,
+    "upgradeScalingPerLevelPct": 8,
+    "equipmentStats": {
+      "def": 14,
+      "maxHp": 160,
+      "maxMp": 90
+    },
+    "acquisitionConditions": {
+      "hiddenQuestId": "QUEST_HIDDEN_ANCIENT_WELL",
+      "requiredLevel": 5,
+      "characterUnique": true,
+      "description": "Khám phá Nhiệm Vụ Bí Ẩn: Bí Mật Giếng Nước Cổ Khởi Nguyên"
+    },
+    "passiveEffects": [
+      {
+        "id": "pas_ueq_well_hp",
+        "kind": "flat_stat",
+        "stat": "maxHp",
+        "valueFlat": 180,
+        "description": "+180 Sinh Lực tối đa"
+      },
+      {
+        "id": "pas_ueq_well_heal",
+        "kind": "pct_stat",
+        "stat": "healingPowerPct",
+        "valuePct": 8,
+        "description": "+8% Hiệu quả hồi phục"
+      }
+    ],
+    "icon": "amulet_jade",
+    "sellPrice": 0,
+    "buyPrice": 0,
+    "stackable": false,
+    "enabled": true,
+    "status": "published"
+  },
+  {
+    "id": "UEQ_SHADOW_GOBLIN_CLOAK",
+    "itemId": "UEQ_SHADOW_GOBLIN_CLOAK",
+    "name": "Áo Choàng Ảnh Goblin Hắc Hóa (Shadow Goblin Shroud)",
+    "description": "Áo choàng thầm lặng đoạt được từ Ký Ức Vua Goblin, tăng bạo kích và tốc độ di chuyển.",
+    "category": "accessory",
+    "itemType": "accessory",
+    "itemSubtype": "cloak",
+    "equipSlot": "cloak",
+    "rarity": "epic",
+    "requiredLevel": 25,
+    "allowedClasses": [
+      "any"
+    ],
+    "isUnique": true,
+    "nonRepeatable": true,
+    "isCharacterBound": false,
+    "isAccountBound": true,
+    "isTradable": false,
+    "isSellable": false,
+    "isDroppable": false,
+    "upgradeable": true,
+    "maxUpgradeLevel": 10,
+    "upgradeScalingPerLevelPct": 8,
+    "equipmentStats": {
+      "def": 26,
+      "mdef": 26
+    },
+    "acquisitionConditions": {
+      "hiddenQuestId": "QUEST_HIDDEN_GOBLIN_KING_MEMORY",
+      "requiredLevel": 25,
+      "accountUnique": true,
+      "description": "Hoàn thành Nhiệm Vụ Bí Ẩn: Ký Ức Vua Goblin Hắc Hóa"
+    },
+    "passiveEffects": [
+      {
+        "id": "pas_ueq_cloak_agi",
+        "kind": "flat_stat",
+        "stat": "agi",
+        "valueFlat": 12,
+        "description": "+12 Nhanh Nhẹn (AGI)"
+      },
+      {
+        "id": "pas_ueq_cloak_crit",
+        "kind": "pct_stat",
+        "stat": "critRatePct",
+        "valuePct": 6,
+        "description": "+6% Tỷ lệ Chí Mạng"
+      },
+      {
+        "id": "pas_ueq_cloak_spd",
+        "kind": "pct_stat",
+        "stat": "moveSpeedPct",
+        "valuePct": 8,
+        "description": "+8% Tốc độ di chuyển"
+      }
+    ],
+    "icon": "cloak_wind",
+    "sellPrice": 0,
+    "buyPrice": 0,
+    "stackable": false,
+    "enabled": true,
+    "status": "published"
+  },
+  {
+    "id": "UEQ_DRAGONHEART_RING",
+    "itemId": "UEQ_DRAGONHEART_RING",
+    "name": "Nhẫn Long Tâm Cổ Thư (Dragonheart Signet)",
+    "description": "Chiếc nhẫn Mythic độc nhất phong ấn tri thức Long Tộc tại Thung Lũng Rồng.",
+    "category": "accessory",
+    "itemType": "accessory",
+    "itemSubtype": "ring1",
+    "equipSlot": "ring1",
+    "rarity": "mythic",
+    "requiredLevel": 65,
+    "allowedClasses": [
+      "any"
+    ],
+    "isUnique": true,
+    "nonRepeatable": true,
+    "isCharacterBound": false,
+    "isAccountBound": true,
+    "isTradable": false,
+    "isSellable": false,
+    "isDroppable": false,
+    "upgradeable": true,
+    "maxUpgradeLevel": 15,
+    "upgradeScalingPerLevelPct": 9,
+    "equipmentStats": {
+      "atk": 75,
+      "matk": 75,
+      "critDamagePct": 15
+    },
+    "acquisitionConditions": {
+      "hiddenQuestId": "QUEST_HIDDEN_DRAGON_SCHOLAR_RIDDLE",
+      "requiredTitleId": "TITLE_WORLD_EXPLORER",
+      "requiredLevel": 65,
+      "accountUnique": true,
+      "description": "Hoàn thành Nhiệm Vụ Bí Ẩn: Cổ Thư Long Tộc Thất Truyền"
+    },
+    "passiveEffects": [
+      {
+        "id": "pas_ueq_dragon_atk",
+        "kind": "flat_stat",
+        "stat": "atk",
+        "valueFlat": 60,
+        "description": "+60 Vật Công"
+      },
+      {
+        "id": "pas_ueq_dragon_matk",
+        "kind": "flat_stat",
+        "stat": "matk",
+        "valueFlat": 60,
+        "description": "+60 Ma Công"
+      },
+      {
+        "id": "pas_ueq_dragon_critdmg",
+        "kind": "pct_stat",
+        "stat": "critDamagePct",
+        "valuePct": 12,
+        "description": "+12% Sát thương Chí Mạng"
+      }
+    ],
+    "icon": "ring_band",
+    "sellPrice": 0,
+    "buyPrice": 0,
+    "stackable": false,
+    "enabled": true,
+    "status": "published"
+  },
+  {
+    "id": "UEQ_GOBLIN_CHIEFTAIN_CREST",
+    "itemId": "UEQ_GOBLIN_CHIEFTAIN_CREST",
+    "name": "Huy Chương Thủ Lĩnh Goblin (Chieftain Crest)",
+    "description": "Trang bị Độc Nhất rơi từ Field Boss Goblin Thủ Lĩnh tại Hang Goblin. Khắc ấn uy quyền tăng toàn diện công thủ cho bước ngoặt Chuyển Chức Lv.15.",
+    "category": "armor",
+    "itemType": "armor",
+    "itemSubtype": "shoulder",
+    "equipSlot": "shoulder",
+    "rarity": "epic",
+    "requiredLevel": 12,
+    "allowedClasses": [
+      "any"
+    ],
+    "isUnique": true,
+    "nonRepeatable": true,
+    "isCharacterBound": true,
+    "isAccountBound": false,
+    "isTradable": false,
+    "isSellable": false,
+    "isDroppable": false,
+    "upgradeable": true,
+    "maxUpgradeLevel": 10,
+    "upgradeScalingPerLevelPct": 8,
+    "equipmentStats": {
+      "atk": 22,
+      "matk": 22,
+      "def": 18,
+      "maxHp": 240
+    },
+    "acquisitionConditions": {
+      "bossId": "boss_goblin_chieftain",
+      "requiredLevel": 12,
+      "characterUnique": true,
+      "description": "Rơi trực tiếp từ Field Boss Goblin Thủ Lĩnh tại Hang Goblin (Lv.13–15)"
+    },
+    "passiveEffects": [
+      {
+        "id": "pas_ueq_gcrest_atk",
+        "kind": "flat_stat",
+        "stat": "atk",
+        "valueFlat": 16,
+        "description": "+16 Vật Công nội tại (tăng theo cấp cường hóa)"
+      },
+      {
+        "id": "pas_ueq_gcrest_atkpct",
+        "kind": "pct_stat",
+        "stat": "atkPct",
+        "valuePct": 6,
+        "description": "+6% Tổng Vật Công"
+      },
+      {
+        "id": "pas_ueq_gcrest_crit",
+        "kind": "flat_stat",
+        "stat": "critRatePct",
+        "valueFlat": 4,
+        "description": "+4% Tỉ Lệ Bạo Kích"
+      }
+    ],
+    "icon": "shoulder_plate",
+    "sellPrice": 0,
+    "buyPrice": 0,
+    "stackable": false,
+    "enabled": true,
+    "status": "published"
+  }
+]

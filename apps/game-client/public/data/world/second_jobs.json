@@ -1,0 +1,127 @@
+[
+  {
+    "id": "blazing_warrior",
+    "baseClassId": "swordsman",
+    "name": "Blazing Warrior",
+    "nameVi": "Chiến Binh Hỏa Long",
+    "orientation": "Sát thương vật lý, combo hỏa kiếm",
+    "weaponProficiency": [
+      "sword",
+      "greatsword"
+    ],
+    "requiredLevel": 60,
+    "bonusStatsPct": 35,
+    "accentColor": "#f97316",
+    "description": "Tiến hóa tối thượng từ Kiếm Sĩ, kết hợp liên hoàn trảm kích với hỏa diễm bạo liệt."
+  },
+  {
+    "id": "wind_lancer",
+    "baseClassId": "spearman",
+    "name": "Wind Lancer",
+    "nameVi": "Thương Kỵ Phong",
+    "orientation": "Tấn công tầm xa bằng thương, xuyên mục tiêu",
+    "weaponProficiency": [
+      "spear",
+      "halberd",
+      "lance"
+    ],
+    "requiredLevel": 60,
+    "bonusStatsPct": 35,
+    "accentColor": "#22d3ee",
+    "description": "Tiến hóa từ Thương Thủ, xoay chuyển phong thương xuyên thấu hàng ngũ kẻ địch."
+  },
+  {
+    "id": "divine_paladin",
+    "baseClassId": "knight",
+    "name": "Divine Paladin",
+    "nameVi": "Thánh Kỵ Sĩ",
+    "orientation": "Phòng thủ, bảo hộ, thánh quang",
+    "weaponProficiency": [
+      "sword",
+      "shield",
+      "lance"
+    ],
+    "requiredLevel": 60,
+    "bonusStatsPct": 35,
+    "accentColor": "#facc15",
+    "description": "Tiến hóa từ Hiệp Sĩ, triệu hồi khiên thánh quang che chở toàn bộ đồng đội."
+  },
+  {
+    "id": "holy_priest",
+    "baseClassId": "monk",
+    "name": "Holy Priest",
+    "nameVi": "Thánh Linh Mục",
+    "orientation": "Hồi phục, buff, hỗ trợ tổ đội",
+    "weaponProficiency": [
+      "staff",
+      "holy_staff",
+      "spellbook"
+    ],
+    "requiredLevel": 60,
+    "bonusStatsPct": 35,
+    "accentColor": "#fef08a",
+    "description": "Tiến hóa từ Tu Sĩ, ban phước thánh linh thanh tẩy và hồi sinh sinh lực cho đồng minh."
+  },
+  {
+    "id": "arcane_wizard",
+    "baseClassId": "mage",
+    "name": "Arcane Wizard",
+    "nameVi": "Đại Pháp Sư",
+    "orientation": "Nguyên tố, sát thương phép hủy diệt",
+    "weaponProficiency": [
+      "staff",
+      "spellbook",
+      "book"
+    ],
+    "requiredLevel": 60,
+    "bonusStatsPct": 35,
+    "accentColor": "#818cf8",
+    "description": "Tiến hóa từ Pháp Sư, làm chủ nguyên tố cổ đại thi triển đại ma pháp diện rộng."
+  },
+  {
+    "id": "shadow_phantom",
+    "baseClassId": "assassin",
+    "name": "Shadow Phantom",
+    "nameVi": "Ảnh Sát",
+    "orientation": "Ẩn thân, ám sát, bạo kích chí mạng",
+    "weaponProficiency": [
+      "dual_daggers",
+      "dagger"
+    ],
+    "requiredLevel": 60,
+    "bonusStatsPct": 35,
+    "accentColor": "#a855f7",
+    "description": "Tiến hóa từ Thích Khách, ẩn mình trong bóng tối kết liễu mục tiêu bằng bạo kích tức thời."
+  },
+  {
+    "id": "titan_champion",
+    "baseClassId": "fighter",
+    "name": "Titan Champion",
+    "nameVi": "Chiến Binh Titan",
+    "orientation": "Sức mạnh, combo cận chiến, khống chế",
+    "weaponProficiency": [
+      "gauntlets",
+      "fist",
+      "sword"
+    ],
+    "requiredLevel": 60,
+    "bonusStatsPct": 35,
+    "accentColor": "#ef4444",
+    "description": "Tiến hóa từ Đấu Sĩ, phóng thích quyền kình địa chấn trấn áp toàn bộ chiến trường."
+  },
+  {
+    "id": "celestial_ranger",
+    "baseClassId": "archer",
+    "name": "Celestial Ranger",
+    "nameVi": "Thiên Không Du Hiệp",
+    "orientation": "Cung thuật, xuyên giáp, bắn nhiều mục tiêu",
+    "weaponProficiency": [
+      "bow",
+      "crossbow"
+    ],
+    "requiredLevel": 60,
+    "bonusStatsPct": 35,
+    "accentColor": "#34d399",
+    "description": "Tiến hóa từ Cung Thủ, trút mưa tiễn tinh quang xuyên giáp từ khoảng cách cực xa."
+  }
+]

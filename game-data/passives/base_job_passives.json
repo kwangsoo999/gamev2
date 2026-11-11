@@ -1,0 +1,1506 @@
+[
+  {
+    "passive_id": "pas_sw_sword_technique",
+    "id": "pas_sw_sword_technique",
+    "name": "Sword Technique",
+    "nameVi": "Kiếm Kỹ Cơ Bản",
+    "description": "Fundamental blade stance increasing ATK% and STR.",
+    "descriptionVi": "Tăng ATK% và STR cơ bản cho Kiếm Sĩ.",
+    "category": "core",
+    "classRequirement": "swordsman",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 15,
+    "requiredJobLevel": 15,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "str",
+        "effectType": "flat_attr",
+        "valuePerRank": 2,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sw_sword_technique.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_sw_combat_focus",
+    "id": "pas_sw_combat_focus",
+    "name": "Combat Focus",
+    "nameVi": "Tập Trung Chiến Đấu",
+    "description": "Sharpens precision in duels, raising Crit Rate and Accuracy.",
+    "descriptionVi": "Tăng Tỷ lệ Chí Mạng và Chính Xác khi giao chiến.",
+    "category": "combat",
+    "classRequirement": "swordsman",
+    "parentPassiveIds": [
+      "pas_sw_sword_technique"
+    ],
+    "requiredCharacterLevel": 22,
+    "requiredJobLevel": 22,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "crit_rate",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 1.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "accuracy",
+        "effectType": "accuracy",
+        "valuePerRank": 6,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sw_combat_focus.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_sw_blade_control",
+    "id": "pas_sw_blade_control",
+    "name": "Blade Control",
+    "nameVi": "Khống Chế Kiếm Thế",
+    "description": "Precision edge angles increase Skill Damage and Armor Penetration.",
+    "descriptionVi": "Tăng Sát thương Kỹ năng và Xuyên Giáp vật lý.",
+    "category": "combat",
+    "classRequirement": "swordsman",
+    "parentPassiveIds": [
+      "pas_sw_sword_technique"
+    ],
+    "requiredCharacterLevel": 30,
+    "requiredJobLevel": 30,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "armor_penetration",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sw_blade_control.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_sw_weapon_discipline",
+    "id": "pas_sw_weapon_discipline",
+    "name": "Weapon Discipline",
+    "nameVi": "Kỷ Luật Binh Khí",
+    "description": "Combat Mastery passive boosting Attack Speed and consecutive hit combo damage.",
+    "descriptionVi": "Nội tại Thông Thạo: tăng Tốc Độ Đánh và uy lực chuỗi liên kích.",
+    "category": "mastery",
+    "classRequirement": "swordsman",
+    "parentPassiveIds": [
+      "pas_sw_combat_focus",
+      "pas_sw_blade_control"
+    ],
+    "requiredCharacterLevel": 45,
+    "requiredJobLevel": 45,
+    "requiredMasteryPoints": 20,
+    "synergySkillId": "skill_cross_cut",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "effectType": "attack_speed",
+    "effects": [
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sw_weapon_discipline.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_sp_spear_mastery",
+    "id": "pas_sp_spear_mastery",
+    "name": "Spear Mastery",
+    "nameVi": "Thương Pháp Nhập Môn",
+    "description": "Disciplined polearm grip raising ATK% and STR.",
+    "descriptionVi": "Cường hóa Thương Thuật, tăng ATK% và STR.",
+    "category": "core",
+    "classRequirement": "spearman",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 15,
+    "requiredJobLevel": 15,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      },
+      {
+        "stat": "str",
+        "effectType": "flat_attr",
+        "valuePerRank": 2,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sp_spear_mastery.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_sp_piercing_technique",
+    "id": "pas_sp_piercing_technique",
+    "name": "Piercing Technique",
+    "nameVi": "Kỹ Thuật Xuyên Thấu",
+    "description": "High-momentum thrusts grant Armor Penetration and Crit Damage.",
+    "descriptionVi": "Tăng Xuyên Giáp và Sát thương Chí Mạng cho đòn đâm thương.",
+    "category": "combat",
+    "classRequirement": "spearman",
+    "parentPassiveIds": [
+      "pas_sp_spear_mastery"
+    ],
+    "requiredCharacterLevel": 22,
+    "requiredJobLevel": 22,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "armor_penetration",
+    "effects": [
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 2.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sp_piercing_technique.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_sp_long_reach",
+    "id": "pas_sp_long_reach",
+    "name": "Long Reach",
+    "nameVi": "Trường Thương Viễn Công",
+    "description": "Extends polearm control, improving Accuracy and Skill Damage.",
+    "descriptionVi": "Tăng Chính Xác và Sát thương Kỹ năng tầm trung.",
+    "category": "combat",
+    "classRequirement": "spearman",
+    "parentPassiveIds": [
+      "pas_sp_spear_mastery"
+    ],
+    "requiredCharacterLevel": 30,
+    "requiredJobLevel": 30,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "accuracy",
+    "effects": [
+      {
+        "stat": "accuracy",
+        "effectType": "accuracy",
+        "valuePerRank": 8,
+        "isPercentage": false
+      },
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sp_long_reach.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_sp_formation_training",
+    "id": "pas_sp_formation_training",
+    "name": "Formation Training",
+    "nameVi": "Huấn Luyện Đội Hình",
+    "description": "Phalanx positioning bolsters DEF and Damage Reduction.",
+    "descriptionVi": "Tăng DEF và Giảm Sát Thương khi giữ trận hình.",
+    "category": "mastery",
+    "classRequirement": "spearman",
+    "parentPassiveIds": [
+      "pas_sp_piercing_technique",
+      "pas_sp_long_reach"
+    ],
+    "requiredCharacterLevel": 45,
+    "requiredJobLevel": 45,
+    "requiredMasteryPoints": 20,
+    "synergySkillId": "skill_spear_thrust",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "effectType": "damage_reduction",
+    "effects": [
+      {
+        "stat": "defPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sp_formation_training.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_kn_iron_wall",
+    "id": "pas_kn_iron_wall",
+    "name": "Iron Wall",
+    "nameVi": "Bức Tường Sắt",
+    "description": "Fortifies knight armor, granting Max HP% and DEF%.",
+    "descriptionVi": "Gia cố giáp trụ Kỵ Sĩ, tăng HP Tối Đa% và DEF%.",
+    "category": "core",
+    "classRequirement": "knight",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 15,
+    "requiredJobLevel": 15,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "hp_bonus",
+    "effects": [
+      {
+        "stat": "hpPct",
+        "effectType": "hp_bonus",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "defPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_kn_iron_wall.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_kn_shield_mastery",
+    "id": "pas_kn_shield_mastery",
+    "name": "Shield Mastery",
+    "nameVi": "Tinh Thông Khiên Thuẫn",
+    "description": "Amplifies Shield Strength and Damage Reduction.",
+    "descriptionVi": "Tăng Giá Trị Lá Chắn và Giảm Sát Thương nhận vào.",
+    "category": "combat",
+    "classRequirement": "knight",
+    "parentPassiveIds": [
+      "pas_kn_iron_wall"
+    ],
+    "requiredCharacterLevel": 22,
+    "requiredJobLevel": 22,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "shield_bonus",
+    "effects": [
+      {
+        "stat": "shieldBonusPct",
+        "effectType": "shield_bonus",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_kn_shield_mastery.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_kn_defensive_stance",
+    "id": "pas_kn_defensive_stance",
+    "name": "Defensive Stance",
+    "nameVi": "Thế Phòng Thủ Vững Chãi",
+    "description": "Steadies body against magic bursts and status ailments.",
+    "descriptionVi": "Tăng MDEF% và Kháng Hiệu Ứng Bất Lợi.",
+    "category": "combat",
+    "classRequirement": "knight",
+    "parentPassiveIds": [
+      "pas_kn_iron_wall"
+    ],
+    "requiredCharacterLevel": 30,
+    "requiredJobLevel": 30,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "status_resistance",
+    "effects": [
+      {
+        "stat": "mdefPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_kn_defensive_stance.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_kn_guardian_instinct",
+    "id": "pas_kn_guardian_instinct",
+    "name": "Guardian Instinct",
+    "nameVi": "Bản Năng Hộ Vệ",
+    "description": "Battle-tested frontline instinct granting CON and Healing Received bonus.",
+    "descriptionVi": "Tăng CON và hiệu quả Hồi Phục khi bảo vệ tổ đội.",
+    "category": "mastery",
+    "classRequirement": "knight",
+    "parentPassiveIds": [
+      "pas_kn_shield_mastery",
+      "pas_kn_defensive_stance"
+    ],
+    "requiredCharacterLevel": 45,
+    "requiredJobLevel": 45,
+    "requiredMasteryPoints": 20,
+    "synergySkillId": "skill_shield_bash",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "effectType": "party_support",
+    "effects": [
+      {
+        "stat": "con",
+        "effectType": "flat_attr",
+        "valuePerRank": 4,
+        "isPercentage": false
+      },
+      {
+        "stat": "healingBonusPct",
+        "effectType": "healing_bonus",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_kn_guardian_instinct.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_pr_divine_blessing",
+    "id": "pas_pr_divine_blessing",
+    "name": "Divine Blessing",
+    "nameVi": "Thánh Ân Ban Phước",
+    "description": "Bestows sacred grace, raising INT and Max MP%.",
+    "descriptionVi": "Tăng INT và MP Tối Đa% cho Tu Sĩ / Giáo Sĩ.",
+    "category": "core",
+    "classRequirement": "monk",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 15,
+    "requiredJobLevel": 15,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "mp_bonus",
+    "effects": [
+      {
+        "stat": "int",
+        "effectType": "flat_attr",
+        "valuePerRank": 2,
+        "isPercentage": false
+      },
+      {
+        "stat": "mpPct",
+        "effectType": "mp_bonus",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_pr_divine_blessing.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_pr_healing_knowledge",
+    "id": "pas_pr_healing_knowledge",
+    "name": "Healing Knowledge",
+    "nameVi": "Y Thuật Thánh Quang",
+    "description": "Deepens sacred medicine arts, boosting Healing Power and MP Efficiency.",
+    "descriptionVi": "Tăng Hiệu Quả Trị Liệu và Giảm Tiêu Hao MP.",
+    "category": "combat",
+    "classRequirement": "monk",
+    "parentPassiveIds": [
+      "pas_pr_divine_blessing"
+    ],
+    "requiredCharacterLevel": 22,
+    "requiredJobLevel": 22,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "healing_bonus",
+    "effects": [
+      {
+        "stat": "healingBonusPct",
+        "effectType": "healing_bonus",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "resourceEfficiencyPct",
+        "effectType": "resource_efficiency",
+        "valuePerRank": 2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_pr_healing_knowledge.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_pr_spiritual_focus",
+    "id": "pas_pr_spiritual_focus",
+    "name": "Spiritual Focus",
+    "nameVi": "Tâm Linh Tập Trung",
+    "description": "Accelerates prayers, boosting MATK% and Cooldown Reduction.",
+    "descriptionVi": "Tăng MATK% và Giảm Hồi Chiêu phép thuật.",
+    "category": "combat",
+    "classRequirement": "monk",
+    "parentPassiveIds": [
+      "pas_pr_divine_blessing"
+    ],
+    "requiredCharacterLevel": 30,
+    "requiredJobLevel": 30,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 1.6,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_pr_spiritual_focus.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_pr_holy_resistance",
+    "id": "pas_pr_holy_resistance",
+    "name": "Holy Resistance",
+    "nameVi": "Kháng Ám Khí",
+    "description": "Wards off curses and elemental strikes, raising MDEF% and Status Resistance.",
+    "descriptionVi": "Tăng MDEF% và Kháng Hiệu Ứng cho bản thân.",
+    "category": "mastery",
+    "classRequirement": "monk",
+    "parentPassiveIds": [
+      "pas_pr_healing_knowledge",
+      "pas_pr_spiritual_focus"
+    ],
+    "requiredCharacterLevel": 45,
+    "requiredJobLevel": 45,
+    "requiredMasteryPoints": 20,
+    "synergySkillId": "skill_holy_light",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "effectType": "status_resistance",
+    "effects": [
+      {
+        "stat": "mdefPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_pr_holy_resistance.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_mg_arcane_knowledge",
+    "id": "pas_mg_arcane_knowledge",
+    "name": "Arcane Knowledge",
+    "nameVi": "Tri Thức Bí Ẩn",
+    "description": "Expands arcane reserves, raising MATK% and INT.",
+    "descriptionVi": "Nâng cao MATK% và INT cho Pháp Sư.",
+    "category": "core",
+    "classRequirement": "mage",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 15,
+    "requiredJobLevel": 15,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "int",
+        "effectType": "flat_attr",
+        "valuePerRank": 2,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_mg_arcane_knowledge.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_mg_elemental_affinity",
+    "id": "pas_mg_elemental_affinity",
+    "name": "Elemental Affinity",
+    "nameVi": "Cộng Hưởng Nguyên Tố",
+    "description": "Attunes spells to pierce magic barriers with higher Elemental Damage.",
+    "descriptionVi": "Tăng Sát Thương Nguyên Tố và Xuyên Kháng Phép.",
+    "category": "combat",
+    "classRequirement": "mage",
+    "parentPassiveIds": [
+      "pas_mg_arcane_knowledge"
+    ],
+    "requiredCharacterLevel": 22,
+    "requiredJobLevel": 22,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "magic_penetration",
+    "effects": [
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 2.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "magicPenetrationPct",
+        "effectType": "magic_penetration",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_mg_elemental_affinity.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_mg_mana_control",
+    "id": "pas_mg_mana_control",
+    "name": "Mana Control",
+    "nameVi": "Điều Khiển Ma Lực",
+    "description": "Refines spell casting circles, raising Max MP% and reducing MP consumption.",
+    "descriptionVi": "Tăng MP Tối Đa% và Giảm Tiêu Hao MP.",
+    "category": "combat",
+    "classRequirement": "mage",
+    "parentPassiveIds": [
+      "pas_mg_arcane_knowledge"
+    ],
+    "requiredCharacterLevel": 30,
+    "requiredJobLevel": 30,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "resource_efficiency",
+    "effects": [
+      {
+        "stat": "mpPct",
+        "effectType": "mp_bonus",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "resourceEfficiencyPct",
+        "effectType": "resource_efficiency",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_mg_mana_control.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_mg_spell_focus",
+    "id": "pas_mg_spell_focus",
+    "name": "Spell Focus",
+    "nameVi": "Ngưng Tụ Pháp Thuật",
+    "description": "High mastery channeling reduces Cooldown and raises spell Crit Rate.",
+    "descriptionVi": "Giảm Hồi Chiêu và tăng Chí Mạng phép thuật.",
+    "category": "mastery",
+    "classRequirement": "mage",
+    "parentPassiveIds": [
+      "pas_mg_elemental_affinity",
+      "pas_mg_mana_control"
+    ],
+    "requiredCharacterLevel": 45,
+    "requiredJobLevel": 45,
+    "requiredMasteryPoints": 20,
+    "synergySkillId": "skill_fireball",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_mg_spell_focus.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_as_shadow_instinct",
+    "id": "pas_as_shadow_instinct",
+    "name": "Shadow Instinct",
+    "nameVi": "Bản Năng Bóng Tối",
+    "description": "Enhances agility and fatal strike instincts.",
+    "descriptionVi": "Tăng AGI và Tỷ lệ Chí Mạng trong bóng tối.",
+    "category": "core",
+    "classRequirement": "assassin",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 15,
+    "requiredJobLevel": 15,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "crit_rate",
+    "effects": [
+      {
+        "stat": "agi",
+        "effectType": "flat_attr",
+        "valuePerRank": 2,
+        "isPercentage": false
+      },
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_as_shadow_instinct.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_as_lethal_precision",
+    "id": "pas_as_lethal_precision",
+    "name": "Lethal Precision",
+    "nameVi": "Chuẩn Xác Chí Tử",
+    "description": "Targets weak vitals for amplified Crit Damage and Armor Penetration.",
+    "descriptionVi": "Tăng Sát Thương Chí Mạng và Xuyên Giáp vật lý.",
+    "category": "combat",
+    "classRequirement": "assassin",
+    "parentPassiveIds": [
+      "pas_as_shadow_instinct"
+    ],
+    "requiredCharacterLevel": 22,
+    "requiredJobLevel": 22,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "crit_damage",
+    "effects": [
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_as_lethal_precision.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_as_evasion_training",
+    "id": "pas_as_evasion_training",
+    "name": "Evasion Training",
+    "nameVi": "Bộ Pháp Né Tránh",
+    "description": "Agile shadow footwork raises Evasion and Movement Speed.",
+    "descriptionVi": "Tăng Né Tránh và Tốc Độ Di Chuyển.",
+    "category": "combat",
+    "classRequirement": "assassin",
+    "parentPassiveIds": [
+      "pas_as_shadow_instinct"
+    ],
+    "requiredCharacterLevel": 30,
+    "requiredJobLevel": 30,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "evasion",
+    "effects": [
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      },
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_as_evasion_training.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_as_critical_technique",
+    "id": "pas_as_critical_technique",
+    "name": "Critical Technique",
+    "nameVi": "Kỹ Thuật Bạo Kích",
+    "description": "Relentless dagger tempo raises Attack Speed and Combo Damage.",
+    "descriptionVi": "Tăng Tốc Độ Đánh và uy lực liên trảm đoản kiếm.",
+    "category": "mastery",
+    "classRequirement": "assassin",
+    "parentPassiveIds": [
+      "pas_as_lethal_precision",
+      "pas_as_evasion_training"
+    ],
+    "requiredCharacterLevel": 45,
+    "requiredJobLevel": 45,
+    "requiredMasteryPoints": 20,
+    "synergySkillId": "skill_shadow_strike",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "effectType": "attack_speed",
+    "effects": [
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_as_critical_technique.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_fg_combat_rhythm",
+    "id": "pas_fg_combat_rhythm",
+    "name": "Combat Rhythm",
+    "nameVi": "Nhịp Điệu Chiến Đấu",
+    "description": "Disciplined martial cadence raising STR and Attack Speed.",
+    "descriptionVi": "Tăng STR và Tốc Độ Đánh cận chiến.",
+    "category": "core",
+    "classRequirement": "fighter",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 15,
+    "requiredJobLevel": 15,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "attack_speed",
+    "effects": [
+      {
+        "stat": "str",
+        "effectType": "flat_attr",
+        "valuePerRank": 2,
+        "isPercentage": false
+      },
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_fg_combat_rhythm.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_fg_inner_strength",
+    "id": "pas_fg_inner_strength",
+    "name": "Inner Strength",
+    "nameVi": "Nội Lực Thâm Hậu",
+    "description": "Dense internal chi raises ATK% and Max HP%.",
+    "descriptionVi": "Tăng ATK% và HP Tối Đa%.",
+    "category": "combat",
+    "classRequirement": "fighter",
+    "parentPassiveIds": [
+      "pas_fg_combat_rhythm"
+    ],
+    "requiredCharacterLevel": 22,
+    "requiredJobLevel": 22,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.3,
+        "isPercentage": true
+      },
+      {
+        "stat": "hpPct",
+        "effectType": "hp_bonus",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_fg_inner_strength.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_fg_martial_discipline",
+    "id": "pas_fg_martial_discipline",
+    "name": "Martial Discipline",
+    "nameVi": "Võ Đạo Chân Nguyên",
+    "description": "Increases Crit Rate and continuous martial combo scaling.",
+    "descriptionVi": "Tăng Chí Mạng và sát thương chuỗi đòn quyền.",
+    "category": "combat",
+    "classRequirement": "fighter",
+    "parentPassiveIds": [
+      "pas_fg_combat_rhythm"
+    ],
+    "requiredCharacterLevel": 30,
+    "requiredJobLevel": 30,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 1.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_fg_martial_discipline.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_fg_counterattack_training",
+    "id": "pas_fg_counterattack_training",
+    "name": "Counterattack Training",
+    "nameVi": "Phản Kích Cận Chiến",
+    "description": "Absorbs shocks and sustains vitality with Damage Reduction & Lifesteal.",
+    "descriptionVi": "Tăng Giảm Sát Thương và Hút Máu khi áp sát.",
+    "category": "mastery",
+    "classRequirement": "fighter",
+    "parentPassiveIds": [
+      "pas_fg_inner_strength",
+      "pas_fg_martial_discipline"
+    ],
+    "requiredCharacterLevel": 45,
+    "requiredJobLevel": 45,
+    "requiredMasteryPoints": 20,
+    "synergySkillId": "skill_power_punch",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "effectType": "lifesteal",
+    "effects": [
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "lifestealPct",
+        "effectType": "lifesteal",
+        "valuePerRank": 1.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_fg_counterattack_training.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_ar_eagle_eye",
+    "id": "pas_ar_eagle_eye",
+    "name": "Eagle Eye",
+    "nameVi": "Ưng Nhãn",
+    "description": "Sharpens long-distance vision, raising DEX and Accuracy.",
+    "descriptionVi": "Tăng DEX và Chính Xác tầm xa cho Cung Thủ.",
+    "category": "core",
+    "classRequirement": "archer",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 15,
+    "requiredJobLevel": 15,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "accuracy",
+    "effects": [
+      {
+        "stat": "dex",
+        "effectType": "flat_attr",
+        "valuePerRank": 2,
+        "isPercentage": false
+      },
+      {
+        "stat": "accuracy",
+        "effectType": "accuracy",
+        "valuePerRank": 9,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ar_eagle_eye.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_ar_precision_aim",
+    "id": "pas_ar_precision_aim",
+    "name": "Precision Aim",
+    "nameVi": "Ngắm Bắn Chuẩn Xác",
+    "description": "Vitals targeting boosts Crit Rate and Crit Damage.",
+    "descriptionVi": "Tăng Tỷ lệ Chí Mạng và Sát thương Chí Mạng.",
+    "category": "combat",
+    "classRequirement": "archer",
+    "parentPassiveIds": [
+      "pas_ar_eagle_eye"
+    ],
+    "requiredCharacterLevel": 22,
+    "requiredJobLevel": 22,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "crit_rate",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ar_precision_aim.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_ar_projectile_mastery",
+    "id": "pas_ar_projectile_mastery",
+    "name": "Projectile Mastery",
+    "nameVi": "Tinh Thông Cung Tiễn",
+    "description": "Rapid draw mechanics raise ATK% and Attack Speed.",
+    "descriptionVi": "Tăng ATK% và Tốc Độ Bắn cung.",
+    "category": "combat",
+    "classRequirement": "archer",
+    "parentPassiveIds": [
+      "pas_ar_eagle_eye"
+    ],
+    "requiredCharacterLevel": 30,
+    "requiredJobLevel": 30,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ar_projectile_mastery.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_ar_hunting_instinct",
+    "id": "pas_ar_hunting_instinct",
+    "name": "Hunting Instinct",
+    "nameVi": "Bản Năng Thợ Săn",
+    "description": "Agile tracker instinct improving Movement Speed and Boss damage.",
+    "descriptionVi": "Tăng Tốc Độ Di Chuyển và Sát thương lên Boss.",
+    "category": "mastery",
+    "classRequirement": "archer",
+    "parentPassiveIds": [
+      "pas_ar_precision_aim",
+      "pas_ar_projectile_mastery"
+    ],
+    "requiredCharacterLevel": 45,
+    "requiredJobLevel": 45,
+    "requiredMasteryPoints": 20,
+    "synergySkillId": "skill_piercing_arrow",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "effectType": "move_speed",
+    "effects": [
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.2,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ar_hunting_instinct.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  }
+]

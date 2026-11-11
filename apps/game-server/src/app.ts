@@ -5,6 +5,15 @@ import { authRouter } from './routes/auth.routes.js';
 import { characterRouter } from './routes/character.routes.js';
 import { gameRouter } from './routes/game.routes.js';
 import { adminRouter } from './routes/admin.routes.js';
+import { dungeonRouter, jobRouter } from './routes/dungeon.routes.js';
+import { worldAdminRouter } from './routes/world-admin.routes.js';
+import { professionRouter } from './routes/profession.routes.js';
+import {
+  guildRouter,
+  marketplaceRouter,
+  merchantRouter,
+  territoryRouter,
+} from './routes/organizations.routes.js';
 import { ENV } from './config/env.js';
 
 export function createApp() {
@@ -32,6 +41,14 @@ export function createApp() {
   apiV1.use('/auth', authRouter);
   apiV1.use('/characters', characterRouter);
   apiV1.use('/game', gameRouter);
+  apiV1.use('/dungeon', dungeonRouter);
+  apiV1.use('/job', jobRouter);
+  apiV1.use('/professions', professionRouter);
+  apiV1.use('/guilds', guildRouter);
+  apiV1.use('/merchants', merchantRouter);
+  apiV1.use('/marketplace', marketplaceRouter);
+  apiV1.use('/territories', territoryRouter);
+  apiV1.use('/admin/world', worldAdminRouter);
   apiV1.use('/admin', adminRouter);
 
   app.use('/api/v1', apiV1);

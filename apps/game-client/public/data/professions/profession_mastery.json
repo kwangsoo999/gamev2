@@ -1,0 +1,356 @@
+{
+  "ranks": [
+    {
+      "id": "apprentice",
+      "name": "Apprentice",
+      "nameVi": "Học Việc",
+      "minLevel": 1,
+      "maxLevel": 10,
+      "qualityBonusPct": 0,
+      "extraYieldBonusPct": 2,
+      "materialSaveChancePct": 0
+    },
+    {
+      "id": "novice",
+      "name": "Novice",
+      "nameVi": "Tập Sự",
+      "minLevel": 11,
+      "maxLevel": 20,
+      "qualityBonusPct": 4,
+      "extraYieldBonusPct": 5,
+      "materialSaveChancePct": 2
+    },
+    {
+      "id": "skilled",
+      "name": "Skilled",
+      "nameVi": "Thành Thạo",
+      "minLevel": 21,
+      "maxLevel": 30,
+      "qualityBonusPct": 8,
+      "extraYieldBonusPct": 9,
+      "materialSaveChancePct": 5
+    },
+    {
+      "id": "expert",
+      "name": "Expert",
+      "nameVi": "Chuyên Gia",
+      "minLevel": 31,
+      "maxLevel": 40,
+      "qualityBonusPct": 14,
+      "extraYieldBonusPct": 14,
+      "materialSaveChancePct": 8
+    },
+    {
+      "id": "master",
+      "name": "Master",
+      "nameVi": "Bậc Thầy",
+      "minLevel": 41,
+      "maxLevel": 50,
+      "qualityBonusPct": 20,
+      "extraYieldBonusPct": 20,
+      "materialSaveChancePct": 12
+    },
+    {
+      "id": "grandmaster",
+      "name": "Grandmaster",
+      "nameVi": "Đại Sư",
+      "minLevel": 51,
+      "maxLevel": 60,
+      "qualityBonusPct": 28,
+      "extraYieldBonusPct": 26,
+      "materialSaveChancePct": 16
+    },
+    {
+      "id": "legendary",
+      "name": "Legendary",
+      "nameVi": "Truyền Thuyết",
+      "minLevel": 61,
+      "maxLevel": 70,
+      "qualityBonusPct": 36,
+      "extraYieldBonusPct": 32,
+      "materialSaveChancePct": 20
+    }
+  ],
+  "levelCurve": [
+    {
+      "level": 1,
+      "requiredExp": 139
+    },
+    {
+      "level": 2,
+      "requiredExp": 198
+    },
+    {
+      "level": 3,
+      "requiredExp": 264
+    },
+    {
+      "level": 4,
+      "requiredExp": 334
+    },
+    {
+      "level": 5,
+      "requiredExp": 409
+    },
+    {
+      "level": 6,
+      "requiredExp": 488
+    },
+    {
+      "level": 7,
+      "requiredExp": 570
+    },
+    {
+      "level": 8,
+      "requiredExp": 656
+    },
+    {
+      "level": 9,
+      "requiredExp": 744
+    },
+    {
+      "level": 10,
+      "requiredExp": 835
+    },
+    {
+      "level": 11,
+      "requiredExp": 928
+    },
+    {
+      "level": 12,
+      "requiredExp": 1024
+    },
+    {
+      "level": 13,
+      "requiredExp": 1122
+    },
+    {
+      "level": 14,
+      "requiredExp": 1223
+    },
+    {
+      "level": 15,
+      "requiredExp": 1325
+    },
+    {
+      "level": 16,
+      "requiredExp": 1430
+    },
+    {
+      "level": 17,
+      "requiredExp": 1537
+    },
+    {
+      "level": 18,
+      "requiredExp": 1645
+    },
+    {
+      "level": 19,
+      "requiredExp": 1756
+    },
+    {
+      "level": 20,
+      "requiredExp": 1868
+    },
+    {
+      "level": 21,
+      "requiredExp": 1982
+    },
+    {
+      "level": 22,
+      "requiredExp": 2098
+    },
+    {
+      "level": 23,
+      "requiredExp": 2215
+    },
+    {
+      "level": 24,
+      "requiredExp": 2334
+    },
+    {
+      "level": 25,
+      "requiredExp": 2455
+    },
+    {
+      "level": 26,
+      "requiredExp": 2577
+    },
+    {
+      "level": 27,
+      "requiredExp": 2701
+    },
+    {
+      "level": 28,
+      "requiredExp": 2826
+    },
+    {
+      "level": 29,
+      "requiredExp": 2953
+    },
+    {
+      "level": 30,
+      "requiredExp": 3081
+    },
+    {
+      "level": 31,
+      "requiredExp": 3210
+    },
+    {
+      "level": 32,
+      "requiredExp": 3341
+    },
+    {
+      "level": 33,
+      "requiredExp": 3473
+    },
+    {
+      "level": 34,
+      "requiredExp": 3607
+    },
+    {
+      "level": 35,
+      "requiredExp": 3742
+    },
+    {
+      "level": 36,
+      "requiredExp": 3878
+    },
+    {
+      "level": 37,
+      "requiredExp": 4015
+    },
+    {
+      "level": 38,
+      "requiredExp": 4154
+    },
+    {
+      "level": 39,
+      "requiredExp": 4294
+    },
+    {
+      "level": 40,
+      "requiredExp": 4435
+    },
+    {
+      "level": 41,
+      "requiredExp": 4578
+    },
+    {
+      "level": 42,
+      "requiredExp": 4721
+    },
+    {
+      "level": 43,
+      "requiredExp": 4866
+    },
+    {
+      "level": 44,
+      "requiredExp": 5012
+    },
+    {
+      "level": 45,
+      "requiredExp": 5159
+    },
+    {
+      "level": 46,
+      "requiredExp": 5307
+    },
+    {
+      "level": 47,
+      "requiredExp": 5456
+    },
+    {
+      "level": 48,
+      "requiredExp": 5606
+    },
+    {
+      "level": 49,
+      "requiredExp": 5758
+    },
+    {
+      "level": 50,
+      "requiredExp": 5910
+    },
+    {
+      "level": 51,
+      "requiredExp": 6064
+    },
+    {
+      "level": 52,
+      "requiredExp": 6219
+    },
+    {
+      "level": 53,
+      "requiredExp": 6374
+    },
+    {
+      "level": 54,
+      "requiredExp": 6531
+    },
+    {
+      "level": 55,
+      "requiredExp": 6689
+    },
+    {
+      "level": 56,
+      "requiredExp": 6847
+    },
+    {
+      "level": 57,
+      "requiredExp": 7007
+    },
+    {
+      "level": 58,
+      "requiredExp": 7168
+    },
+    {
+      "level": 59,
+      "requiredExp": 7329
+    },
+    {
+      "level": 60,
+      "requiredExp": 7492
+    },
+    {
+      "level": 61,
+      "requiredExp": 7656
+    },
+    {
+      "level": 62,
+      "requiredExp": 7820
+    },
+    {
+      "level": 63,
+      "requiredExp": 7986
+    },
+    {
+      "level": 64,
+      "requiredExp": 8152
+    },
+    {
+      "level": 65,
+      "requiredExp": 8320
+    },
+    {
+      "level": 66,
+      "requiredExp": 8488
+    },
+    {
+      "level": 67,
+      "requiredExp": 8657
+    },
+    {
+      "level": 68,
+      "requiredExp": 8827
+    },
+    {
+      "level": 69,
+      "requiredExp": 8998
+    },
+    {
+      "level": 70,
+      "requiredExp": 9170
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "Clean-slate sprite sheet metadata schema. Populate spriteSheetUrl when production PNG sprite sheets are ready; null uses built-in clean vector rig fallback.",
+  "sheets": {
+    "player_adventurer": {
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchorX": 0.5,
+      "anchorY": 0.88,
+      "spriteSheetUrl": null,
+      "animations": {
+        "idle": { "row": 0, "frames": 4, "fps": 6, "loop": true },
+        "walk": { "row": 1, "frames": 6, "fps": 10, "loop": true },
+        "attack": { "row": 2, "frames": 4, "fps": 14, "loop": false }
+      }
+    },
+    "npc_villager_elder": {
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchorX": 0.5,
+      "anchorY": 0.88,
+      "spriteSheetUrl": null,
+      "animations": {
+        "idle": { "row": 0, "frames": 4, "fps": 4, "loop": true },
+        "walk": { "row": 1, "frames": 4, "fps": 6, "loop": true },
+        "attack": { "row": 0, "frames": 4, "fps": 4, "loop": true }
+      }
+    },
+    "npc_merchant": {
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchorX": 0.5,
+      "anchorY": 0.88,
+      "spriteSheetUrl": null,
+      "animations": {
+        "idle": { "row": 0, "frames": 4, "fps": 5, "loop": true },
+        "walk": { "row": 1, "frames": 4, "fps": 6, "loop": true },
+        "attack": { "row": 0, "frames": 4, "fps": 5, "loop": true }
+      }
+    },
+    "monster_slime": {
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "anchorX": 0.5,
+      "anchorY": 0.85,
+      "spriteSheetUrl": null,
+      "animations": {
+        "idle": { "row": 0, "frames": 4, "fps": 6, "loop": true },
+        "walk": { "row": 1, "frames": 4, "fps": 9, "loop": true },
+        "attack": { "row": 2, "frames": 4, "fps": 12, "loop": false }
+      }
+    },
+    "monster_goblin": {
+      "frameWidth": 56,
+      "frameHeight": 56,
+      "anchorX": 0.5,
+      "anchorY": 0.88,
+      "spriteSheetUrl": null,
+      "animations": {
+        "idle": { "row": 0, "frames": 4, "fps": 6, "loop": true },
+        "walk": { "row": 1, "frames": 6, "fps": 9, "loop": true },
+        "attack": { "row": 2, "frames": 4, "fps": 12, "loop": false }
+      }
+    }
+  }
+}

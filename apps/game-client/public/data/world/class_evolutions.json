@@ -1,0 +1,83 @@
+[
+  {
+    "tier": 0,
+    "stageName": "Nhà Thám Hiểm (Adventurer)",
+    "requiredLevel": 1,
+    "titlesByClass": {
+      "adventurer": "Adventurer",
+      "novice": "Adventurer"
+    },
+    "statBonusPct": 0,
+    "unlockedSkillTier": 0
+  },
+  {
+    "tier": 1,
+    "stageName": "Thức Tỉnh Chức Nghiệp Lần 1 (First Job Awakening)",
+    "requiredLevel": 15,
+    "requiresDungeon": "dungeon_sanctum_of_awakening",
+    "requiresQuest": "QUEST_JOB_05_DESTINY",
+    "titlesByClass": {
+      "swordsman": "Swordsman",
+      "spearman": "Spearman",
+      "knight": "Knight",
+      "monk": "Monk",
+      "mage": "Mage",
+      "assassin": "Assassin",
+      "fighter": "Fighter",
+      "archer": "Archer"
+    },
+    "statBonusPct": 15,
+    "unlockedSkillTier": 1
+  },
+  {
+    "tier": 2,
+    "stageName": "Chuyển Chức Lần 2 (Second Job Advancement)",
+    "requiredLevel": 60,
+    "titlesByClass": {
+      "swordsman": "Blazing Warrior",
+      "spearman": "Wind Lancer",
+      "knight": "Divine Paladin",
+      "monk": "Holy Priest",
+      "mage": "Arcane Wizard",
+      "assassin": "Shadow Phantom",
+      "fighter": "Titan Champion",
+      "archer": "Celestial Ranger"
+    },
+    "statBonusPct": 35,
+    "unlockedSkillTier": 2
+  },
+  {
+    "tier": 3,
+    "stageName": "Chuyển Chức Lần 3 (Grand Paragon)",
+    "requiredLevel": 120,
+    "titlesByClass": {
+      "swordsman": "Sword Saint",
+      "spearman": "Sky Halberdier",
+      "knight": "Aegis Sovereign",
+      "monk": "Saint Oracle",
+      "mage": "Astral Sage",
+      "assassin": "Nightmare Blade",
+      "fighter": "Asura Brawler",
+      "archer": "Celestial Ranger"
+    },
+    "statBonusPct": 60,
+    "unlockedSkillTier": 3
+  },
+  {
+    "tier": 4,
+    "stageName": "Thức Tỉnh Huyền Thoại (Transcendent)",
+    "requiredLevel": 200,
+    "titlesByClass": {
+      "swordsman": "Eternal Bladelord",
+      "spearman": "Mythic Valkyrie Lancer",
+      "knight": "Celestial Templar",
+      "monk": "Seraphic Hierophant",
+      "mage": "Void Archon",
+      "assassin": "Abyssal Phantom",
+      "fighter": "Immortal Martial God",
+      "archer": "Starfall Sovereign"
+    },
+    "statBonusPct": 100,
+    "unlockedSkillTier": 4
+  }
+]

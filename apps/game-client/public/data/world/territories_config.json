@@ -1,0 +1,67 @@
+[
+  {
+    "id": "TERR_GREENWOOD_HERB_VALE",
+    "name": "Greenwood Herb Vale",
+    "nameVi": "Thung Lũng Dược Thảo Lục Bảo",
+    "mapId": "map_whispering_meadow",
+    "territoryType": "herb_vale",
+    "maxTaxRatePct": 10,
+    "baseCaptureDefense": 1000,
+    "publicDailyGatherQuota": 40,
+    "bonusYieldForOwnerPct": 20,
+    "npcStewardName": "Quan Quản Lý Dược Viên Sera",
+    "description": "Vùng thảo mộc trù phú. Người chơi tự do vẫn hái được tới 40 lượt/ngày; Bang chủ sở hữu nhận thuế giao dịch và +20% sản lượng."
+  },
+  {
+    "id": "TERR_IRONPEAK_OUTPOST",
+    "name": "Ironpeak Mining Outpost",
+    "nameVi": "Tiền Đồn Khai Mỏ Thiết Phong",
+    "mapId": "map_ember_canyon",
+    "territoryType": "mining_outpost",
+    "maxTaxRatePct": 10,
+    "baseCaptureDefense": 1500,
+    "publicDailyGatherQuota": 40,
+    "bonusYieldForOwnerPct": 25,
+    "npcStewardName": "Đốc Công Mỏ Thép Borin",
+    "description": "Mỏ quặng sắt và Mithril chiến lược. Bảo đảm hạn mức khai thác công cộng chống độc quyền."
+  },
+  {
+    "id": "TERR_SYLVARIS_FOREST",
+    "name": "Sylvaris Timber Outpost",
+    "nameVi": "Trạm Lâm Nghiệp Cổ Thụ Sylvaris",
+    "mapId": "map_spirit_forest",
+    "territoryType": "forest_outpost",
+    "maxTaxRatePct": 10,
+    "baseCaptureDefense": 1400,
+    "publicDailyGatherQuota": 40,
+    "bonusYieldForOwnerPct": 20,
+    "npcStewardName": "Kiểm Lâm Trưởng Elowen",
+    "description": "Khu rừng cổ mộc phục vụ đốn gỗ xây dựng Sảnh Bang Hội."
+  },
+  {
+    "id": "TERR_MOONLIT_TRADE",
+    "name": "Moonlit Harbor Trade Station",
+    "nameVi": "Thương Trạm Cảng Ánh Trăng",
+    "mapId": "map_moonlit_lake",
+    "territoryType": "trade_station",
+    "maxTaxRatePct": 8,
+    "baseCaptureDefense": 1800,
+    "publicDailyGatherQuota": 50,
+    "bonusYieldForOwnerPct": 20,
+    "npcStewardName": "Thương Quan Cảng Lune",
+    "description": "Đầu mối trung chuyển thủy sản và tuyến đoàn xe thương buôn."
+  },
+  {
+    "id": "TERR_DRAKHEN_CITADEL",
+    "name": "Drakhen Obsidian Citadel",
+    "nameVi": "Thành Trì Hắc Diện Thạch Drakhen",
+    "mapId": "map_dragon_valley",
+    "territoryType": "citadel",
+    "maxTaxRatePct": 10,
+    "baseCaptureDefense": 2500,
+    "publicDailyGatherQuota": 35,
+    "bonusYieldForOwnerPct": 30,
+    "npcStewardName": "Tướng Quân Thủ Thành Vael",
+    "description": "Lãnh thổ tối thượng giàu Pha Lê Tinh Tú và tuyến thương buôn mạo hiểm."
+  }
+]

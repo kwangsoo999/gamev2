@@ -1,0 +1,786 @@
+[
+  {
+    "id": "QUEST_001_SLIME_CLEAR",
+    "name": "Dọn Sạch Ngoại Ô Làng",
+    "description": "Giúp Trưởng Thôn Kiên tiêu diệt 3 Slime Thảo Nguyên để bảo vệ ruộng đồng Thôn Khởi Nguyên.",
+    "questType": "MAIN_QUEST",
+    "requiredLevel": 1,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "npc_elder",
+    "endNpcId": "npc_elder",
+    "regionId": "THON_KHOI_NGUYEN",
+    "objectives": [
+      {
+        "id": "obj_1",
+        "type": "KILL_MONSTER",
+        "targetId": "MONSTER_GREEN_SLIME",
+        "requiredCount": 3,
+        "description": "Tiêu diệt 3 Slime Thảo Nguyên"
+      }
+    ],
+    "rewards": {
+      "exp": 120,
+      "gold": 250,
+      "items": [
+        {
+          "itemId": "ITEM_POTION_HP_SMALL",
+          "quantity": 5
+        }
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_002_GOBLIN_SCOUT",
+    "name": "Trinh Sát Rừng Goblin",
+    "description": "Đánh đuổi 3 Goblin Trinh Sát quấy phá tuyến đường phía Đông Thôn.",
+    "questType": "MAIN_QUEST",
+    "requiredLevel": 3,
+    "prerequisiteQuestIds": [
+      "QUEST_001_SLIME_CLEAR"
+    ],
+    "startNpcId": "npc_trainer",
+    "endNpcId": "npc_trainer",
+    "regionId": "THON_KHOI_NGUYEN",
+    "objectives": [
+      {
+        "id": "obj_1",
+        "type": "KILL_MONSTER",
+        "targetId": "MONSTER_GOBLIN_SCOUT",
+        "requiredCount": 3,
+        "description": "Tiêu diệt 3 Goblin Trinh Sát"
+      }
+    ],
+    "rewards": {
+      "exp": 260,
+      "gold": 400,
+      "items": [
+        {
+          "itemId": "ITEM_POTION_HP_MEDIUM",
+          "quantity": 3
+        }
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_JOB_01_CALL",
+    "chainId": "CHAIN_FIRST_JOB_ADVANCEMENT",
+    "stepNumber": 1,
+    "name": "1. Call of Awakening",
+    "description": "Đạt cấp 15 và hoàn thành nhiệm vụ tân thủ, sau đó yết kiến Grand Sage of Awakening tại Thánh Điện Thức Tỉnh.",
+    "questType": "JOB_ADVANCEMENT",
+    "requiredLevel": 15,
+    "prerequisiteQuestIds": [
+      "QUEST_001_SLIME_CLEAR"
+    ],
+    "startNpcId": "npc_elder",
+    "endNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "regionId": "dungeon_sanctum_f3",
+    "objectives": [
+      {
+        "id": "obj_job_1",
+        "type": "REACH_LEVEL",
+        "targetId": "15",
+        "requiredCount": 15,
+        "description": "Đạt Lv.15 & hoàn tất nhiệm vụ tân thủ"
+      }
+    ],
+    "rewards": {
+      "exp": 500,
+      "gold": 500,
+      "items": []
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_JOB_02_ENTER",
+    "chainId": "CHAIN_FIRST_JOB_ADVANCEMENT",
+    "stepNumber": 2,
+    "name": "2. Enter the Sanctum",
+    "description": "Bước vào Thánh Điện Thức Tỉnh Tầng 1 và thu thập 3 Mảnh Nguyên Tố trong Ancient Trial Corridor.",
+    "questType": "JOB_ADVANCEMENT",
+    "requiredLevel": 15,
+    "prerequisiteQuestIds": [
+      "QUEST_JOB_01_CALL"
+    ],
+    "startNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "endNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "regionId": "dungeon_sanctum_f1",
+    "objectives": [
+      {
+        "id": "obj_job_2",
+        "type": "COLLECT_FRAGMENT",
+        "targetId": "dungeon_sanctum_f1",
+        "requiredCount": 3,
+        "description": "Thu thập 3/3 Mảnh Nguyên Tố tại Tầng 1"
+      }
+    ],
+    "rewards": {
+      "exp": 1200,
+      "gold": 800,
+      "items": []
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_JOB_03_PILLARS",
+    "chainId": "CHAIN_FIRST_JOB_ADVANCEMENT",
+    "stepNumber": 3,
+    "name": "3. Four Elemental Trials",
+    "description": "Tiến vào Tầng 2 Elemental Hall và kích hoạt đủ 4 Trụ Nguyên Tố (Hỏa, Thủy, Địa, Phong).",
+    "questType": "JOB_ADVANCEMENT",
+    "requiredLevel": 15,
+    "prerequisiteQuestIds": [
+      "QUEST_JOB_02_ENTER"
+    ],
+    "startNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "endNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "regionId": "dungeon_sanctum_f2",
+    "objectives": [
+      {
+        "id": "obj_job_3",
+        "type": "ACTIVATE_PILLAR",
+        "targetId": "dungeon_sanctum_f2",
+        "requiredCount": 4,
+        "description": "Kích hoạt 4/4 Trụ Nguyên Tố tại Tầng 2"
+      }
+    ],
+    "rewards": {
+      "exp": 1800,
+      "gold": 1200,
+      "items": []
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_JOB_04_GUARDIAN",
+    "chainId": "CHAIN_FIRST_JOB_ADVANCEMENT",
+    "stepNumber": 4,
+    "name": "4. Guardian of Awakening",
+    "description": "Đánh bại Guardian of Awakening (Boss Lv.20) ở Tầng 3 Awakening Chamber để nhận Chứng Chỉ Thức Tỉnh.",
+    "questType": "JOB_ADVANCEMENT",
+    "requiredLevel": 15,
+    "prerequisiteQuestIds": [
+      "QUEST_JOB_03_PILLARS"
+    ],
+    "startNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "endNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "regionId": "dungeon_sanctum_f3",
+    "objectives": [
+      {
+        "id": "obj_job_4",
+        "type": "KILL_MONSTER",
+        "targetId": "boss_guardian_of_awakening",
+        "requiredCount": 1,
+        "description": "Hạ gục Guardian of Awakening & nhận Chứng Chỉ Thức Tỉnh"
+      }
+    ],
+    "rewards": {
+      "exp": 3500,
+      "gold": 2500,
+      "items": [
+        {
+          "itemId": "ITEM_AWAKENING_CERTIFICATE",
+          "quantity": 1
+        }
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_JOB_05_DESTINY",
+    "chainId": "CHAIN_FIRST_JOB_ADVANCEMENT",
+    "stepNumber": 5,
+    "name": "5. Automatic Job Awakening",
+    "description": "Grand Sage of Awakening kích hoạt Phép Đo Lường Thuộc Tính (STR/DEX/AGI/INT/CON) để hệ thống tự động ấn định 1 trong 8 nghề chính thức.",
+    "questType": "JOB_ADVANCEMENT",
+    "requiredLevel": 15,
+    "prerequisiteQuestIds": [
+      "QUEST_JOB_04_GUARDIAN"
+    ],
+    "startNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "endNpcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "regionId": "dungeon_sanctum_f3",
+    "objectives": [
+      {
+        "id": "obj_job_5",
+        "type": "AUTOMATIC_AWAKENING",
+        "targetId": "FIRST_JOB",
+        "requiredCount": 1,
+        "description": "Hoàn tất nghi lễ Thức Tỉnh Nghề Nghiệp Tự Động"
+      }
+    ],
+    "rewards": {
+      "exp": 5000,
+      "gold": 3000,
+      "items": [],
+      "unlockFeature": "FIRST_JOB_CLASS_SKILLS"
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_REG_ELYSIA_01",
+    "name": "Tuần Tra Thảo Nguyên Thì Thầm",
+    "description": "Sói Đồng Cỏ đang đe dọa đoàn thương buôn gần Kinh Đô Elysia. Hãy tiêu diệt 5 con.",
+    "questType": "SIDE_QUEST",
+    "requiredLevel": 16,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "NPC_QUEST_COMMANDER",
+    "endNpcId": "NPC_QUEST_COMMANDER",
+    "regionId": "map_whispering_meadow",
+    "objectives": [
+      {
+        "id": "obj_e1",
+        "type": "KILL_MONSTER",
+        "targetId": "mon_grassland_wolf",
+        "requiredCount": 5,
+        "description": "Tiêu diệt 5 Grassland Wolf tại Whispering Meadow"
+      }
+    ],
+    "rewards": {
+      "exp": 4200,
+      "gold": 1800,
+      "items": [
+        {
+          "itemId": "ITEM_POTION_HP_MEDIUM",
+          "quantity": 5
+        }
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_REG_SYLVARIS_01",
+    "name": "Thanh Tẩy Rừng Tinh Linh",
+    "description": "Chế ngự 4 Ancient Treant bị hắc hóa tại Rừng Sâu Tinh Linh.",
+    "questType": "SIDE_QUEST",
+    "requiredLevel": 35,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "NPC_SYLVARIS_ELDER",
+    "endNpcId": "NPC_SYLVARIS_ELDER",
+    "regionId": "map_spirit_forest",
+    "objectives": [
+      {
+        "id": "obj_s1",
+        "type": "KILL_MONSTER",
+        "targetId": "mon_ancient_treant",
+        "requiredCount": 4,
+        "description": "Tiêu diệt 4 Ancient Treant tại Spirit Forest"
+      }
+    ],
+    "rewards": {
+      "exp": 24000,
+      "gold": 6500,
+      "items": [
+        {
+          "itemId": "ITEM_POTION_HP_LARGE",
+          "quantity": 5
+        }
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_REG_DRAKHEN_01",
+    "name": "Thử Thách Long Kỵ Sĩ",
+    "description": "Chứng minh sức mạnh tại Thung Lũng Rồng bằng cách đánh bại 4 Dragon Knight.",
+    "questType": "SIDE_QUEST",
+    "requiredLevel": 65,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "NPC_DRAKHEN_COMMANDER",
+    "endNpcId": "NPC_DRAKHEN_COMMANDER",
+    "regionId": "map_dragon_valley",
+    "objectives": [
+      {
+        "id": "obj_d1",
+        "type": "KILL_MONSTER",
+        "targetId": "mon_dragon_knight",
+        "requiredCount": 4,
+        "description": "Tiêu diệt 4 Dragon Knight tại Dragon Valley"
+      }
+    ],
+    "rewards": {
+      "exp": 115000,
+      "gold": 18000,
+      "items": [
+        {
+          "itemId": "ITEM_POTION_HP_LARGE",
+          "quantity": 10
+        }
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_GOBLIN_EVO_01_SIGNALS",
+    "chainId": "CHAIN_GOBLIN_EVO_CHRONICLES",
+    "stepNumber": 1,
+    "chainNextQuestId": "QUEST_GOBLIN_EVO_02_OUTSKIRTS",
+    "name": "GoblinEvo 1: Điều Tra Dấu Vết Tiến Hóa",
+    "description": "Các Goblin Trinh Sát bất ngờ mang theo lõi năng lượng cổ đại. Hãy nói chuyện với Giáo Đầu Lực và đánh bại 3 Goblin Trinh Sát.",
+    "questType": "MAIN_QUEST",
+    "isHidden": false,
+    "requiredLevel": 3,
+    "prerequisiteQuestIds": [
+      "QUEST_001_SLIME_CLEAR"
+    ],
+    "startNpcId": "npc_elder",
+    "endNpcId": "npc_elder",
+    "regionId": "THON_KHOI_NGUYEN",
+    "objectives": [
+      {
+        "id": "obj_ge1_dlg",
+        "type": "NPC_DIALOGUE",
+        "targetId": "npc_trainer",
+        "dialogueKeyword": "goblin_signals",
+        "requiredCount": 1,
+        "description": "Trao đổi tình báo Goblin với Giáo Đầu Lực"
+      },
+      {
+        "id": "obj_ge1_kill",
+        "type": "KILL_MONSTER",
+        "targetId": "MONSTER_GOBLIN_SCOUT",
+        "requiredCount": 3,
+        "description": "Hạ gục 3 Goblin Trinh Sát gần Thôn"
+      }
+    ],
+    "rewards": {
+      "exp": 450,
+      "gold": 550,
+      "items": [
+        {
+          "itemId": "ITEM_POTION_HP_MEDIUM",
+          "quantity": 2
+        }
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_GOBLIN_EVO_02_OUTSKIRTS",
+    "chainId": "CHAIN_GOBLIN_EVO_CHRONICLES",
+    "stepNumber": 2,
+    "chainNextQuestId": "QUEST_GOBLIN_EVO_03_SHAMAN_RELIC",
+    "name": "GoblinEvo 2: Lần Dấu Bìa Rừng Tinh Linh",
+    "description": "Thám hiểm Bìa Rừng Tinh Linh, đánh bại 5 Goblin Rừng Sâu và thu thập 3 Lõi Tiến Hóa Goblin.",
+    "questType": "MAIN_QUEST",
+    "isHidden": false,
+    "requiredLevel": 25,
+    "prerequisiteQuestIds": [
+      "QUEST_GOBLIN_EVO_01_SIGNALS"
+    ],
+    "startNpcId": "NPC_QUEST_COMMANDER",
+    "endNpcId": "NPC_SYLVARIS_ELDER",
+    "regionId": "map_spirit_forest_outskirts",
+    "objectives": [
+      {
+        "id": "obj_ge2_exp",
+        "type": "EXPLORE_MAP",
+        "targetId": "map_spirit_forest_outskirts",
+        "requiredCount": 1,
+        "description": "Đặt chân khám phá Bìa Rừng Tinh Linh (Spirit Forest Outskirts)"
+      },
+      {
+        "id": "obj_ge2_kill",
+        "type": "KILL_MONSTER",
+        "targetId": "mon_forest_goblin",
+        "requiredCount": 5,
+        "description": "Tiêu diệt 5 Goblin Rừng Sâu"
+      },
+      {
+        "id": "obj_ge2_item",
+        "type": "COLLECT_ITEM",
+        "targetId": "MAT_GOBLIN_EVO_CORE",
+        "requiredCount": 3,
+        "description": "Thu thập 3 Lõi Tiến Hóa Goblin"
+      }
+    ],
+    "rewards": {
+      "exp": 8500,
+      "gold": 3200,
+      "items": [],
+      "unlockTitleIds": [
+        "TITLE_GOBLIN_TRACKER"
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_GOBLIN_EVO_03_SHAMAN_RELIC",
+    "chainId": "CHAIN_GOBLIN_EVO_CHRONICLES",
+    "stepNumber": 3,
+    "chainNextQuestId": "QUEST_GOBLIN_EVO_04_TREANT_PACT",
+    "name": "GoblinEvo 3: Ấn Ký Cổ Ngữ Thì Thầm",
+    "description": "Hạ gục Thủ Lĩnh Bìa Rừng Tinh Linh và gặp Trưởng Lão Sylvanas để phục hồi Vương Miện Goblin Cổ Nguyên.",
+    "questType": "MAIN_QUEST",
+    "isHidden": false,
+    "requiredLevel": 28,
+    "prerequisiteQuestIds": [
+      "QUEST_GOBLIN_EVO_02_OUTSKIRTS"
+    ],
+    "startNpcId": "NPC_SYLVARIS_ELDER",
+    "endNpcId": "NPC_SYLVARIS_ELDER",
+    "regionId": "city_sylvaris",
+    "objectives": [
+      {
+        "id": "obj_ge3_kill",
+        "type": "KILL_MONSTER",
+        "targetId": "miniboss_spirit_outskirts",
+        "requiredCount": 1,
+        "description": "Hạ gục Thủ Lĩnh Bìa Rừng Tinh Linh"
+      },
+      {
+        "id": "obj_ge3_dlg",
+        "type": "NPC_DIALOGUE",
+        "targetId": "NPC_SYLVARIS_ELDER",
+        "dialogueKeyword": "ancient_crown",
+        "requiredCount": 1,
+        "description": "Giám định cổ ngữ cùng Trưởng Lão Sylvanas"
+      }
+    ],
+    "rewards": {
+      "exp": 16000,
+      "gold": 5000,
+      "items": [],
+      "uniqueEquipmentIds": [
+        "UEQ_GOBLIN_CROWN_OF_ORIGIN"
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_GOBLIN_EVO_04_TREANT_PACT",
+    "chainId": "CHAIN_GOBLIN_EVO_CHRONICLES",
+    "stepNumber": 4,
+    "name": "GoblinEvo 4: Giao Ước Mộc Thần Cổ Thụ",
+    "description": "Chấm dứt nguồn hắc hóa GoblinEvo bằng cách hạ gục Field Boss Ancient Treant tại Spirit Forest.",
+    "questType": "MAIN_QUEST",
+    "isHidden": false,
+    "requiredLevel": 35,
+    "prerequisiteQuestIds": [
+      "QUEST_GOBLIN_EVO_03_SHAMAN_RELIC"
+    ],
+    "startNpcId": "NPC_SYLVARIS_ELDER",
+    "endNpcId": "NPC_SYLVARIS_ELDER",
+    "regionId": "map_spirit_forest",
+    "objectives": [
+      {
+        "id": "obj_ge4_boss",
+        "type": "KILL_MONSTER",
+        "targetId": "boss_ancient_treant",
+        "requiredCount": 1,
+        "description": "Đánh bại Field Boss Ancient Treant tại Rừng Sâu Tinh Linh"
+      }
+    ],
+    "rewards": {
+      "exp": 45000,
+      "gold": 12000,
+      "items": [
+        {
+          "itemId": "ITEM_UPGRADE_STONE_MYSTIC",
+          "quantity": 2
+        }
+      ],
+      "uniqueEquipmentIds": [
+        "UEQ_GOBLIN_EVO_EMBLEM_BLADE"
+      ],
+      "unlockTitleIds": [
+        "TITLE_GOBLIN_EVO_CONQUEROR"
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_SIDE_EXPLORE_ELYSIA",
+    "name": "Hành Trình Tam Đại Đô Thị",
+    "description": "Khám phá ba đại đô thị an toàn Kinh Đô Elysia, Rừng Sylvaris và Pháo Đài Drakhen.",
+    "questType": "SIDE_QUEST",
+    "isHidden": false,
+    "requiredLevel": 15,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "NPC_TELEPORT_MAGE",
+    "endNpcId": "NPC_TELEPORT_MAGE",
+    "regionId": "city_elysia_capital",
+    "objectives": [
+      {
+        "id": "obj_exp_elysia",
+        "type": "EXPLORE_MAP",
+        "targetId": "city_elysia_capital",
+        "requiredCount": 1,
+        "description": "Tham quan Kinh Đô Elysia"
+      },
+      {
+        "id": "obj_exp_sylvaris",
+        "type": "EXPLORE_MAP",
+        "targetId": "city_sylvaris",
+        "requiredCount": 1,
+        "description": "Đặt chân tới Thành Phố Sylvaris"
+      },
+      {
+        "id": "obj_exp_drakhen",
+        "type": "EXPLORE_MAP",
+        "targetId": "city_drakhen",
+        "requiredCount": 1,
+        "description": "Đặt chân tới Pháo Đài Drakhen"
+      }
+    ],
+    "rewards": {
+      "exp": 12000,
+      "gold": 4500,
+      "items": [],
+      "unlockTitleIds": [
+        "TITLE_WORLD_EXPLORER"
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_SIDE_FOREST_SUPPLIES",
+    "name": "Tinh Hoa Mộc Linh Bổ Trợ",
+    "description": "Thu thập Tinh Hoa Rừng Sâu cho Nghệ Nhân Orin chế tạo vật tư vùng Sylvaris.",
+    "questType": "SIDE_QUEST",
+    "isHidden": false,
+    "requiredLevel": 35,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "NPC_MASTER_CRAFTER",
+    "endNpcId": "NPC_MASTER_CRAFTER",
+    "regionId": "city_sylvaris",
+    "objectives": [
+      {
+        "id": "obj_sup_ess",
+        "type": "COLLECT_ITEM",
+        "targetId": "MAT_FOREST_ESSENCE",
+        "requiredCount": 2,
+        "description": "Thu thập 2 Forest Essence"
+      }
+    ],
+    "rewards": {
+      "exp": 18000,
+      "gold": 5000,
+      "items": [
+        {
+          "itemId": "ITEM_UPGRADE_STONE_BASIC",
+          "quantity": 3
+        }
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_HIDDEN_ANCIENT_WELL",
+    "name": "[Bí Ẩn] Bí Mật Giếng Nước Cổ Khởi Nguyên",
+    "description": "Trong lời thì thầm dưới Giếng Làng có nhắc tới Tinh Chất Slime tinh khiết. Hãy thu thập 3 Tinh Chất Slime để đánh thức cổ vật dưới đáy giếng.",
+    "questType": "HIDDEN_QUEST",
+    "isHidden": true,
+    "hiddenTrigger": {
+      "type": "NPC_DIALOGUE",
+      "targetId": "npc_elder",
+      "dialogueKeyword": "ancient_well",
+      "minLevel": 5,
+      "hint": "Đối thoại với Trưởng Thôn Kiên về bí mật Giếng Nước Cổ từ Lv.5"
+    },
+    "requiredLevel": 5,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "npc_elder",
+    "endNpcId": "npc_elder",
+    "regionId": "THON_KHOI_NGUYEN",
+    "objectives": [
+      {
+        "id": "obj_hid_well_item",
+        "type": "COLLECT_ITEM",
+        "targetId": "MAT_SLIME_JELLY",
+        "requiredCount": 3,
+        "description": "Thu thập 3 Tinh Chất Slime thanh tẩy giếng cổ"
+      }
+    ],
+    "rewards": {
+      "exp": 900,
+      "gold": 1200,
+      "items": [],
+      "uniqueEquipmentIds": [
+        "UEQ_WELLSPRING_AMULET"
+      ],
+      "unlockTitleIds": [
+        "TITLE_SEEKER_OF_SECRETS"
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_HIDDEN_GOBLIN_KING_MEMORY",
+    "name": "[Bí Ẩn] Ký Ức Vua Goblin Hắc Hóa",
+    "description": "Ảo ảnh chiến binh Goblin cổ đại xuất hiện khi bạn đặt chân vào Bìa Rừng Tinh Linh. Hãy thu thập 5 Lõi Tiến Hóa Goblin để giải thoát oán niệm.",
+    "questType": "HIDDEN_QUEST",
+    "isHidden": true,
+    "hiddenTrigger": {
+      "type": "ENTER_MAP",
+      "targetId": "map_spirit_forest_outskirts",
+      "minLevel": 25,
+      "requiredCompletedQuestIds": [
+        "QUEST_002_GOBLIN_SCOUT"
+      ],
+      "hint": "Tiến vào map_spirit_forest_outskirts sau khi xong QUEST_002_GOBLIN_SCOUT ở Lv.25+"
+    },
+    "requiredLevel": 25,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "NPC_SYLVARIS_ELDER",
+    "endNpcId": "NPC_SYLVARIS_ELDER",
+    "regionId": "map_spirit_forest_outskirts",
+    "objectives": [
+      {
+        "id": "obj_hid_gk_kill",
+        "type": "KILL_MONSTER",
+        "targetId": "mon_forest_goblin",
+        "requiredCount": 6,
+        "description": "Đánh bại 6 Goblin Rừng Sâu mang ấn hắc hóa"
+      },
+      {
+        "id": "obj_hid_gk_core",
+        "type": "COLLECT_ITEM",
+        "targetId": "MAT_GOBLIN_EVO_CORE",
+        "requiredCount": 5,
+        "description": "Thu thập 5 Lõi Tiến Hóa Goblin"
+      }
+    ],
+    "rewards": {
+      "exp": 22000,
+      "gold": 8000,
+      "items": [],
+      "uniqueEquipmentIds": [
+        "UEQ_SHADOW_GOBLIN_CLOAK"
+      ],
+      "unlockTitleIds": [
+        "TITLE_GOBLIN_BANE"
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_HIDDEN_DRAGON_SCHOLAR_RIDDLE",
+    "name": "[Bí Ẩn] Cổ Thư Long Tộc Thất Truyền",
+    "description": "Học Giả Kael hé lộ mật mã cổ dẫn tới Nhẫn Long Tâm. Hãy khám phá Thung Lũng Rồng và đánh bại 3 Dragon Knight.",
+    "questType": "HIDDEN_QUEST",
+    "isHidden": true,
+    "hiddenTrigger": {
+      "type": "NPC_DIALOGUE",
+      "targetId": "NPC_DRAGON_SCHOLAR_KAEL",
+      "dialogueKeyword": "dragon_riddle",
+      "minLevel": 65,
+      "hint": "Giải câu đố cổ thư cùng NPC_DRAGON_SCHOLAR_KAEL tại Drakhen từ Lv.65"
+    },
+    "requiredLevel": 65,
+    "prerequisiteQuestIds": [],
+    "startNpcId": "NPC_DRAGON_SCHOLAR_KAEL",
+    "endNpcId": "NPC_DRAGON_SCHOLAR_KAEL",
+    "regionId": "map_dragon_valley",
+    "objectives": [
+      {
+        "id": "obj_hid_drg_exp",
+        "type": "EXPLORE_MAP",
+        "targetId": "map_dragon_valley",
+        "requiredCount": 1,
+        "description": "Khám phá Thung Lũng Rồng"
+      },
+      {
+        "id": "obj_hid_drg_kill",
+        "type": "KILL_MONSTER",
+        "targetId": "mon_dragon_knight",
+        "requiredCount": 3,
+        "description": "Hạ gục 3 Dragon Knight hộ vệ cổ thư"
+      }
+    ],
+    "rewards": {
+      "exp": 140000,
+      "gold": 25000,
+      "items": [],
+      "uniqueEquipmentIds": [
+        "UEQ_DRAGONHEART_RING"
+      ],
+      "unlockTitleIds": [
+        "TITLE_DRAGON_CHRONICLER"
+      ]
+    },
+    "repeatable": false,
+    "status": "published"
+  },
+  {
+    "id": "QUEST_SANCTUARY_BLESSING",
+    "name": "Phước Lành Thánh Đường Elysia",
+    "description": "Diện kiến High Priest Seraphiel bên trong Nội Điện Thánh Đường và lắng nghe lời chỉ dạy về con đường Chuyển Chức.",
+    "category": "MAIN",
+    "requiredLevel": 1,
+    "startNpcId": "NPC_HIGH_PRIEST",
+    "endNpcId": "NPC_HIGH_PRIEST",
+    "regionId": "map_holy_sanctuary_interior",
+    "isHidden": false,
+    "objectives": [
+      {
+        "id": "obj_sanctuary_visit",
+        "type": "EXPLORE_MAP",
+        "targetId": "map_holy_sanctuary_interior",
+        "required": 1,
+        "description": "Bước vào Nội Điện Thánh Đường"
+      },
+      {
+        "id": "obj_sanctuary_talk",
+        "type": "NPC_DIALOGUE",
+        "targetId": "NPC_HIGH_PRIEST",
+        "required": 1,
+        "description": "Trò chuyện cùng Linh Mục Điện Thánh"
+      }
+    ],
+    "rewards": {
+      "exp": 180,
+      "gold": 450,
+      "itemIds": [
+        "ITEM_POTION_HP_SMALL"
+      ]
+    },
+    "status": "published"
+  },
+  {
+    "id": "QUEST_JOB_SECOND_AWAKENING",
+    "name": "Thử Thách Thăng Hoa Nhánh Chuyên Biệt (Lv.80)",
+    "description": "Đạt Lv.80 sau khi hoàn thành Chuyển Chức Lần 1 và diện kiến Linh Mục Điện Thánh Seraphiel để thực hiện Nghi Lễ Thăng Hoa Nhánh Vĩnh Viễn.",
+    "category": "JOB_ADVANCEMENT",
+    "chainId": "CHAIN_SECOND_JOB_ADVANCEMENT",
+    "requiredLevel": 80,
+    "startNpcId": "NPC_HIGH_PRIEST",
+    "endNpcId": "NPC_HIGH_PRIEST",
+    "regionId": "map_holy_sanctuary_interior",
+    "isHidden": false,
+    "objectives": [
+      {
+        "id": "obj_lv80_priest",
+        "type": "NPC_DIALOGUE",
+        "targetId": "NPC_HIGH_PRIEST",
+        "required": 1,
+        "description": "Thực hiện Nghi Lễ Chuyển Chức Cấp 80 tại Điện Thánh"
+      }
+    ],
+    "rewards": {
+      "exp": 25000,
+      "gold": 50000
+    },
+    "status": "published"
+  }
+]

@@ -1,0 +1,4134 @@
+[
+  {
+    "id": "RECIPE_EXCHANGE_FOREST_CLOAK",
+    "name": "Đổi Áo Choàng Forest Guardian (10 Mảnh)",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_FOREST_GUARDIAN_CLOAK",
+    "outputQuantity": 1,
+    "setId": "set_forest_guardian",
+    "allowedClasses": [
+      "adventurer",
+      "swordsman",
+      "spearman",
+      "knight",
+      "monk",
+      "mage",
+      "assassin",
+      "fighter",
+      "archer"
+    ],
+    "goldCost": 1500,
+    "materials": [
+      {
+        "itemId": "FRAG_FOREST_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 38,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_CRAFT_FOREST_RING",
+    "name": "Chế Tác Nhẫn Forest Guardian (Treant Core)",
+    "category": "boss_craft",
+    "outputItemId": "ITEM_FOREST_GUARDIAN_RING",
+    "outputQuantity": 1,
+    "setId": "set_forest_guardian",
+    "goldCost": 2200,
+    "materials": [
+      {
+        "itemId": "MAT_TREANT_CORE",
+        "quantity": 1
+      },
+      {
+        "itemId": "MAT_FOREST_ESSENCE",
+        "quantity": 5
+      }
+    ],
+    "requiredLevel": 38,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_EXCHANGE_MOONWATER_RING",
+    "name": "Đổi Nhẫn Nguyệt Thủy (10 Mảnh Moonwater)",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_MOONWATER_RING",
+    "outputQuantity": 1,
+    "setId": "set_moonwater_mystic",
+    "goldCost": 2200,
+    "materials": [
+      {
+        "itemId": "FRAG_MOONWATER_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 45,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_CRAFT_ANCIENT_PLATE",
+    "name": "Rèn Trọng Giáp Ancient Plate (Titan Core)",
+    "category": "boss_craft",
+    "outputItemId": "ITEM_ANCIENT_PLATE",
+    "outputQuantity": 1,
+    "setId": "set_ancient_titan",
+    "goldCost": 4200,
+    "materials": [
+      {
+        "itemId": "MAT_TITAN_CORE",
+        "quantity": 1
+      },
+      {
+        "itemId": "MAT_ANCIENT_RUNE",
+        "quantity": 8
+      }
+    ],
+    "requiredLevel": 55,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_CRAFT_IGNIS_ARMOR",
+    "name": "Rèn Giáp Huyền Thoại Hỏa Long (Dragon Heart)",
+    "category": "boss_craft",
+    "outputItemId": "ITEM_IGNIS_DRAGON_ARMOR",
+    "outputQuantity": 1,
+    "setId": "set_ignis_dragon",
+    "goldCost": 9500,
+    "materials": [
+      {
+        "itemId": "MAT_DRAGON_HEART",
+        "quantity": 1
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 75,
+    "npcIds": [
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_EXCHANGE_ABYSSAL_RING",
+    "name": "Đổi Nhẫn Hư Vô Mythic (12 Mảnh Hư Vô)",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_ABYSSAL_RING",
+    "outputQuantity": 1,
+    "setId": "set_abyss_overlord",
+    "goldCost": 18000,
+    "materials": [
+      {
+        "itemId": "FRAG_ABYSS_SET",
+        "quantity": 12
+      }
+    ],
+    "requiredLevel": 105,
+    "npcIds": [
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_APPRENTICE_BLADE_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Kiếm Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_APPRENTICE_BLADE_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_apprentice_blade",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_APPRENTICE_BLADE_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Kiếm Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_APPRENTICE_BLADE_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_apprentice_blade",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_APPRENTICE_BLADE_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Kiếm Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_APPRENTICE_BLADE_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_apprentice_blade",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_APPRENTICE_BLADE_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Kiếm Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_APPRENTICE_BLADE_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_apprentice_blade",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_APPRENTICE_BLADE_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Kiếm Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_APPRENTICE_BLADE_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_apprentice_blade",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_APPRENTICE_BLADE_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Kiếm Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_SWORD_AWAKENED_BLADE",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_apprentice_blade",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_BLAZING_WARRIOR_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Chiến Binh Rực Lửa Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_BLAZING_WARRIOR_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_blazing_warrior",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_BLAZING_WARRIOR_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Chiến Binh Rực Lửa Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_BLAZING_WARRIOR_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_blazing_warrior",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_BLAZING_WARRIOR_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Chiến Binh Rực Lửa Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_BLAZING_WARRIOR_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_blazing_warrior",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_BLAZING_WARRIOR_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Chiến Binh Rực Lửa Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_BLAZING_WARRIOR_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_blazing_warrior",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_BLAZING_WARRIOR_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Chiến Binh Rực Lửa Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_BLAZING_WARRIOR_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_blazing_warrior",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_BLAZING_WARRIOR_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Chiến Binh Rực Lửa Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_BLAZING_WARRIOR_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_blazing_warrior",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_DRAGON_SLAYER_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Đồ Long Kiếm Sĩ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_DRAGON_SLAYER_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_dragon_slayer",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_DRAGON_SLAYER_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Đồ Long Kiếm Sĩ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_DRAGON_SLAYER_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_dragon_slayer",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_DRAGON_SLAYER_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Đồ Long Kiếm Sĩ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_DRAGON_SLAYER_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_dragon_slayer",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_DRAGON_SLAYER_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Đồ Long Kiếm Sĩ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_DRAGON_SLAYER_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_dragon_slayer",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_DRAGON_SLAYER_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Đồ Long Kiếm Sĩ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_DRAGON_SLAYER_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_dragon_slayer",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SWORDSMAN_DRAGON_SLAYER_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Đồ Long Kiếm Sĩ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SWORDSMAN_DRAGON_SLAYER_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_swordsman_dragon_slayer",
+    "allowedClasses": [
+      "swordsman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_APPRENTICE_SPEAR_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Thương Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_APPRENTICE_SPEAR_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_spearman_apprentice_spear",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_APPRENTICE_SPEAR_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Thương Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_APPRENTICE_SPEAR_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_spearman_apprentice_spear",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_APPRENTICE_SPEAR_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Thương Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_APPRENTICE_SPEAR_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_spearman_apprentice_spear",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_APPRENTICE_SPEAR_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Thương Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_APPRENTICE_SPEAR_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_spearman_apprentice_spear",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_APPRENTICE_SPEAR_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Thương Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_APPRENTICE_SPEAR_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_spearman_apprentice_spear",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_APPRENTICE_SPEAR_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Thương Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_SPEAR_IRON",
+    "outputQuantity": 1,
+    "setId": "set_spearman_apprentice_spear",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_WIND_LANCER_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Phong Kỵ Thương Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_WIND_LANCER_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_spearman_wind_lancer",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_WIND_LANCER_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Phong Kỵ Thương Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_WIND_LANCER_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_spearman_wind_lancer",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_WIND_LANCER_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Phong Kỵ Thương Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_WIND_LANCER_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_spearman_wind_lancer",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_WIND_LANCER_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Phong Kỵ Thương Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_WIND_LANCER_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_spearman_wind_lancer",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_WIND_LANCER_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Phong Kỵ Thương Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_WIND_LANCER_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_spearman_wind_lancer",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_WIND_LANCER_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Phong Kỵ Thương Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_WIND_LANCER_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_spearman_wind_lancer",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_DRAGON_VANGUARD_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Long Kỵ Tiên Phong Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_DRAGON_VANGUARD_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_spearman_dragon_vanguard",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_DRAGON_VANGUARD_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Long Kỵ Tiên Phong Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_DRAGON_VANGUARD_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_spearman_dragon_vanguard",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_DRAGON_VANGUARD_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Long Kỵ Tiên Phong Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_DRAGON_VANGUARD_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_spearman_dragon_vanguard",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_DRAGON_VANGUARD_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Long Kỵ Tiên Phong Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_DRAGON_VANGUARD_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_spearman_dragon_vanguard",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_DRAGON_VANGUARD_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Long Kỵ Tiên Phong Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_DRAGON_VANGUARD_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_spearman_dragon_vanguard",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_SPEARMAN_DRAGON_VANGUARD_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Long Kỵ Tiên Phong Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_SPEARMAN_DRAGON_VANGUARD_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_spearman_dragon_vanguard",
+    "allowedClasses": [
+      "spearman"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_APPRENTICE_GUARD_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Hộ Vệ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_APPRENTICE_GUARD_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_knight_apprentice_guard",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_APPRENTICE_GUARD_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Hộ Vệ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_APPRENTICE_GUARD_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_knight_apprentice_guard",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_APPRENTICE_GUARD_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Hộ Vệ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_APPRENTICE_GUARD_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_knight_apprentice_guard",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_APPRENTICE_GUARD_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Hộ Vệ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_APPRENTICE_GUARD_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_knight_apprentice_guard",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_APPRENTICE_GUARD_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Hộ Vệ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_APPRENTICE_GUARD_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_knight_apprentice_guard",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_APPRENTICE_GUARD_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Hộ Vệ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_SHIELD_IRON",
+    "outputQuantity": 1,
+    "setId": "set_knight_apprentice_guard",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_FORTRESS_KNIGHT_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Pháo Đài Hiệp Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_FORTRESS_KNIGHT_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_knight_fortress_knight",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_FORTRESS_KNIGHT_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Pháo Đài Hiệp Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_FORTRESS_KNIGHT_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_knight_fortress_knight",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_FORTRESS_KNIGHT_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Pháo Đài Hiệp Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_FORTRESS_KNIGHT_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_knight_fortress_knight",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_FORTRESS_KNIGHT_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Pháo Đài Hiệp Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_FORTRESS_KNIGHT_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_knight_fortress_knight",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_FORTRESS_KNIGHT_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Pháo Đài Hiệp Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_FORTRESS_KNIGHT_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_knight_fortress_knight",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_FORTRESS_KNIGHT_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Pháo Đài Hiệp Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_FORTRESS_KNIGHT_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_knight_fortress_knight",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_DIVINE_PALADIN_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Thánh Kỵ Sĩ Thần Quang Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_DIVINE_PALADIN_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_knight_divine_paladin",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_DIVINE_PALADIN_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Thánh Kỵ Sĩ Thần Quang Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_DIVINE_PALADIN_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_knight_divine_paladin",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_DIVINE_PALADIN_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Thánh Kỵ Sĩ Thần Quang Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_DIVINE_PALADIN_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_knight_divine_paladin",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_DIVINE_PALADIN_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Thánh Kỵ Sĩ Thần Quang Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_DIVINE_PALADIN_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_knight_divine_paladin",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_DIVINE_PALADIN_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Thánh Kỵ Sĩ Thần Quang Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_DIVINE_PALADIN_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_knight_divine_paladin",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_KNIGHT_DIVINE_PALADIN_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Thánh Kỵ Sĩ Thần Quang Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_KNIGHT_DIVINE_PALADIN_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_knight_divine_paladin",
+    "allowedClasses": [
+      "knight"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_APPRENTICE_CLERIC_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Tu Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_APPRENTICE_CLERIC_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_monk_apprentice_cleric",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_APPRENTICE_CLERIC_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Tu Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_APPRENTICE_CLERIC_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_monk_apprentice_cleric",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_APPRENTICE_CLERIC_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Tu Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_APPRENTICE_CLERIC_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_monk_apprentice_cleric",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_APPRENTICE_CLERIC_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Tu Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_APPRENTICE_CLERIC_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_monk_apprentice_cleric",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_APPRENTICE_CLERIC_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Tu Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_APPRENTICE_CLERIC_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_monk_apprentice_cleric",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_APPRENTICE_CLERIC_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Tu Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_STAFF_SANCTUM_ORB",
+    "outputQuantity": 1,
+    "setId": "set_monk_apprentice_cleric",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_HOLY_PRIEST_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Thánh Tư Tế Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_HOLY_PRIEST_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_monk_holy_priest",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_HOLY_PRIEST_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Thánh Tư Tế Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_HOLY_PRIEST_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_monk_holy_priest",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_HOLY_PRIEST_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Thánh Tư Tế Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_HOLY_PRIEST_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_monk_holy_priest",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_HOLY_PRIEST_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Thánh Tư Tế Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_HOLY_PRIEST_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_monk_holy_priest",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_HOLY_PRIEST_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Thánh Tư Tế Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_HOLY_PRIEST_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_monk_holy_priest",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_HOLY_PRIEST_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Thánh Tư Tế Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_HOLY_PRIEST_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_monk_holy_priest",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_SAINT_GUARDIAN_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Thánh Hộ Giả Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_SAINT_GUARDIAN_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_monk_saint_guardian",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_SAINT_GUARDIAN_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Thánh Hộ Giả Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_SAINT_GUARDIAN_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_monk_saint_guardian",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_SAINT_GUARDIAN_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Thánh Hộ Giả Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_SAINT_GUARDIAN_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_monk_saint_guardian",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_SAINT_GUARDIAN_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Thánh Hộ Giả Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_SAINT_GUARDIAN_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_monk_saint_guardian",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_SAINT_GUARDIAN_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Thánh Hộ Giả Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_SAINT_GUARDIAN_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_monk_saint_guardian",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MONK_SAINT_GUARDIAN_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Thánh Hộ Giả Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MONK_SAINT_GUARDIAN_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_monk_saint_guardian",
+    "allowedClasses": [
+      "monk"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_APPRENTICE_MAGE_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Học Giả Ma Pháp Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_APPRENTICE_MAGE_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_mage_apprentice_mage",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_APPRENTICE_MAGE_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Học Giả Ma Pháp Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_APPRENTICE_MAGE_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_mage_apprentice_mage",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_APPRENTICE_MAGE_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Học Giả Ma Pháp Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_APPRENTICE_MAGE_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_mage_apprentice_mage",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_APPRENTICE_MAGE_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Học Giả Ma Pháp Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_APPRENTICE_MAGE_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_mage_apprentice_mage",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_APPRENTICE_MAGE_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Học Giả Ma Pháp Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_APPRENTICE_MAGE_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_mage_apprentice_mage",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_APPRENTICE_MAGE_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Học Giả Ma Pháp Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_SPELLBOOK_ARCANE",
+    "outputQuantity": 1,
+    "setId": "set_mage_apprentice_mage",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ARCANE_WIZARD_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Bí Thuật Sư Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ARCANE_WIZARD_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_mage_arcane_wizard",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ARCANE_WIZARD_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Bí Thuật Sư Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ARCANE_WIZARD_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_mage_arcane_wizard",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ARCANE_WIZARD_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Bí Thuật Sư Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ARCANE_WIZARD_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_mage_arcane_wizard",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ARCANE_WIZARD_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Bí Thuật Sư Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ARCANE_WIZARD_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_mage_arcane_wizard",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ARCANE_WIZARD_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Bí Thuật Sư Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ARCANE_WIZARD_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_mage_arcane_wizard",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ARCANE_WIZARD_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Bí Thuật Sư Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ARCANE_WIZARD_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_mage_arcane_wizard",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ELEMENTAL_SOVEREIGN_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Nguyên Tố Chúa Tể Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ELEMENTAL_SOVEREIGN_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_mage_elemental_sovereign",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ELEMENTAL_SOVEREIGN_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Nguyên Tố Chúa Tể Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ELEMENTAL_SOVEREIGN_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_mage_elemental_sovereign",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ELEMENTAL_SOVEREIGN_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Nguyên Tố Chúa Tể Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ELEMENTAL_SOVEREIGN_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_mage_elemental_sovereign",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ELEMENTAL_SOVEREIGN_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Nguyên Tố Chúa Tể Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ELEMENTAL_SOVEREIGN_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_mage_elemental_sovereign",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ELEMENTAL_SOVEREIGN_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Nguyên Tố Chúa Tể Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ELEMENTAL_SOVEREIGN_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_mage_elemental_sovereign",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_MAGE_ELEMENTAL_SOVEREIGN_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Nguyên Tố Chúa Tể Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_MAGE_ELEMENTAL_SOVEREIGN_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_mage_elemental_sovereign",
+    "allowedClasses": [
+      "mage"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_APPRENTICE_ROGUE_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Đạo Tặc Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_APPRENTICE_ROGUE_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_assassin_apprentice_rogue",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_APPRENTICE_ROGUE_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Đạo Tặc Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_APPRENTICE_ROGUE_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_assassin_apprentice_rogue",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_APPRENTICE_ROGUE_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Đạo Tặc Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_APPRENTICE_ROGUE_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_assassin_apprentice_rogue",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_APPRENTICE_ROGUE_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Đạo Tặc Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_APPRENTICE_ROGUE_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_assassin_apprentice_rogue",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_APPRENTICE_ROGUE_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Đạo Tặc Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_APPRENTICE_ROGUE_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_assassin_apprentice_rogue",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_APPRENTICE_ROGUE_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Đạo Tặc Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_DAGGER_HUNTER",
+    "outputQuantity": 1,
+    "setId": "set_assassin_apprentice_rogue",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_NIGHT_STALKER_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Dạ Hành Giả Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_NIGHT_STALKER_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_assassin_night_stalker",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_NIGHT_STALKER_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Dạ Hành Giả Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_NIGHT_STALKER_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_assassin_night_stalker",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_NIGHT_STALKER_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Dạ Hành Giả Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_NIGHT_STALKER_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_assassin_night_stalker",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_NIGHT_STALKER_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Dạ Hành Giả Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_NIGHT_STALKER_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_assassin_night_stalker",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_NIGHT_STALKER_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Dạ Hành Giả Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_NIGHT_STALKER_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_assassin_night_stalker",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_NIGHT_STALKER_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Dạ Hành Giả Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_NIGHT_STALKER_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_assassin_night_stalker",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_SHADOW_PHANTOM_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Ảnh Hồn Tử Thần Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_SHADOW_PHANTOM_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_assassin_shadow_phantom",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_SHADOW_PHANTOM_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Ảnh Hồn Tử Thần Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_SHADOW_PHANTOM_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_assassin_shadow_phantom",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_SHADOW_PHANTOM_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Ảnh Hồn Tử Thần Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_SHADOW_PHANTOM_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_assassin_shadow_phantom",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_SHADOW_PHANTOM_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Ảnh Hồn Tử Thần Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_SHADOW_PHANTOM_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_assassin_shadow_phantom",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_SHADOW_PHANTOM_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Ảnh Hồn Tử Thần Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_SHADOW_PHANTOM_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_assassin_shadow_phantom",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ASSASSIN_SHADOW_PHANTOM_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Ảnh Hồn Tử Thần Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ASSASSIN_SHADOW_PHANTOM_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_assassin_shadow_phantom",
+    "allowedClasses": [
+      "assassin"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_APPRENTICE_FIGHTER_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Võ Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_APPRENTICE_FIGHTER_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_fighter_apprentice_fighter",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_APPRENTICE_FIGHTER_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Võ Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_APPRENTICE_FIGHTER_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_fighter_apprentice_fighter",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_APPRENTICE_FIGHTER_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Võ Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_APPRENTICE_FIGHTER_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_fighter_apprentice_fighter",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_APPRENTICE_FIGHTER_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Võ Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_APPRENTICE_FIGHTER_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_fighter_apprentice_fighter",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_APPRENTICE_FIGHTER_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Võ Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_APPRENTICE_FIGHTER_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_fighter_apprentice_fighter",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_APPRENTICE_FIGHTER_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Võ Sĩ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_GAUNTLET_IRON_FIST",
+    "outputQuantity": 1,
+    "setId": "set_fighter_apprentice_fighter",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_BATTLE_BRAWLER_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Cuồng Đấu Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_BATTLE_BRAWLER_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_fighter_battle_brawler",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_BATTLE_BRAWLER_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Cuồng Đấu Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_BATTLE_BRAWLER_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_fighter_battle_brawler",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_BATTLE_BRAWLER_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Cuồng Đấu Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_BATTLE_BRAWLER_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_fighter_battle_brawler",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_BATTLE_BRAWLER_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Cuồng Đấu Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_BATTLE_BRAWLER_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_fighter_battle_brawler",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_BATTLE_BRAWLER_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Cuồng Đấu Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_BATTLE_BRAWLER_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_fighter_battle_brawler",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_BATTLE_BRAWLER_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Cuồng Đấu Sĩ Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_BATTLE_BRAWLER_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_fighter_battle_brawler",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_TITAN_CHAMPION_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Quán Quân Khổng Lồ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_TITAN_CHAMPION_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_fighter_titan_champion",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_TITAN_CHAMPION_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Quán Quân Khổng Lồ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_TITAN_CHAMPION_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_fighter_titan_champion",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_TITAN_CHAMPION_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Quán Quân Khổng Lồ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_TITAN_CHAMPION_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_fighter_titan_champion",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_TITAN_CHAMPION_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Quán Quân Khổng Lồ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_TITAN_CHAMPION_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_fighter_titan_champion",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_TITAN_CHAMPION_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Quán Quân Khổng Lồ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_TITAN_CHAMPION_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_fighter_titan_champion",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_FIGHTER_TITAN_CHAMPION_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Quán Quân Khổng Lồ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_FIGHTER_TITAN_CHAMPION_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_fighter_titan_champion",
+    "allowedClasses": [
+      "fighter"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_APPRENTICE_RANGER_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Xạ Thủ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_APPRENTICE_RANGER_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_archer_apprentice_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_APPRENTICE_RANGER_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Xạ Thủ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_APPRENTICE_RANGER_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_archer_apprentice_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_APPRENTICE_RANGER_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Xạ Thủ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_APPRENTICE_RANGER_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_archer_apprentice_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_APPRENTICE_RANGER_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Xạ Thủ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_APPRENTICE_RANGER_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_archer_apprentice_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_APPRENTICE_RANGER_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Xạ Thủ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_APPRENTICE_RANGER_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_archer_apprentice_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_APPRENTICE_RANGER_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Xạ Thủ Tập Sự Lv.15",
+    "category": "fragment_exchange",
+    "outputItemId": "ITEM_BOW_RANGER",
+    "outputQuantity": 1,
+    "setId": "set_archer_apprentice_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 500,
+    "materials": [
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "quantity": 10
+      }
+    ],
+    "requiredLevel": 15,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_WIND_HUNTER_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Thợ Săn Gió Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_WIND_HUNTER_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_archer_wind_hunter",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_WIND_HUNTER_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Thợ Săn Gió Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_WIND_HUNTER_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_archer_wind_hunter",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_WIND_HUNTER_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Thợ Săn Gió Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_WIND_HUNTER_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_archer_wind_hunter",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_WIND_HUNTER_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Thợ Săn Gió Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_WIND_HUNTER_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_archer_wind_hunter",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_WIND_HUNTER_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Thợ Săn Gió Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_WIND_HUNTER_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_archer_wind_hunter",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_WIND_HUNTER_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Thợ Săn Gió Lv.35",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_WIND_HUNTER_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_archer_wind_hunter",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 1800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "quantity": 10
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "quantity": 3
+      }
+    ],
+    "requiredLevel": 35,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_CELESTIAL_RANGER_HEAD",
+    "name": "Đổi Mũ Chiến · Bộ Tinh Tú Xạ Thủ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_CELESTIAL_RANGER_HEAD",
+    "outputQuantity": 1,
+    "setId": "set_archer_celestial_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_CELESTIAL_RANGER_GLOVES",
+    "name": "Đổi Hộ Thủ · Bộ Tinh Tú Xạ Thủ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_CELESTIAL_RANGER_GLOVES",
+    "outputQuantity": 1,
+    "setId": "set_archer_celestial_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_CELESTIAL_RANGER_BOOTS",
+    "name": "Đổi Chiến Ủng · Bộ Tinh Tú Xạ Thủ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_CELESTIAL_RANGER_BOOTS",
+    "outputQuantity": 1,
+    "setId": "set_archer_celestial_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_CELESTIAL_RANGER_SHOULDER",
+    "name": "Đổi Vai Giáp · Bộ Tinh Tú Xạ Thủ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_CELESTIAL_RANGER_SHOULDER",
+    "outputQuantity": 1,
+    "setId": "set_archer_celestial_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_CELESTIAL_RANGER_NECKLACE",
+    "name": "Đổi Dây Chuyền · Bộ Tinh Tú Xạ Thủ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_CELESTIAL_RANGER_NECKLACE",
+    "outputQuantity": 1,
+    "setId": "set_archer_celestial_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "RECIPE_SET_ARCHER_CELESTIAL_RANGER_WEAPON",
+    "name": "Đổi Vũ Khí · Bộ Tinh Tú Xạ Thủ Lv.60",
+    "category": "fragment_exchange",
+    "outputItemId": "SET_ARCHER_CELESTIAL_RANGER_WEAPON",
+    "outputQuantity": 1,
+    "setId": "set_archer_celestial_ranger",
+    "allowedClasses": [
+      "archer"
+    ],
+    "goldCost": 4800,
+    "materials": [
+      {
+        "itemId": "FRAG_TIER3_DRAGON_SET",
+        "quantity": 12
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "quantity": 4
+      }
+    ],
+    "requiredLevel": 60,
+    "npcIds": [
+      "NPC_MASTER_CRAFTER",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_DRAKHEN_BLACKSMITH"
+    ],
+    "status": "published"
+  }
+]

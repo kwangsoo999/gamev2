@@ -1,34 +1,103 @@
 {
-  "worldId": "WORLD_ELYSIA_FRONTIER",
-  "name": "Elysia Frontier (Biên Giới Elysia)",
-  "nameJp": "エリシアフロンティア",
-  "version": "1.0.0",
-  "description": "Vùng đất khởi nguyên thanh bình bao quanh bởi bốn miền biên cương hoang dã chứa đựng vô số thử thách cho các nhà thám hiểm trẻ tuổi.",
-  "levelCap": 15,
-  "defaultSpawnRegion": "VIL_STARTER",
+  "worldId": "WORLD_ELYSIA_CHRONICLES",
+  "name": "Elysia no Densetsu World",
+  "version": "3.0.0",
+  "levelCap": 110,
+  "defaultSpawnRegion": "THON_KHOI_NGUYEN",
   "defaultSpawnCoords": {
-    "x": 1000,
-    "y": 1000
-  },
-  "coordinateSystem": {
-    "type": "isometric_2.5d",
-    "unit": "pixels",
-    "tileWidth": 48,
-    "tileHeight": 48
+    "x": 552,
+    "y": 984
   },
   "safeZones": [
-    "VIL_STARTER"
+    "THON_KHOI_NGUYEN",
+    "city_elysia_capital",
+    "city_sylvaris",
+    "city_drakhen"
   ],
-  "combatZones": [
-    "FIELD_EAST",
-    "FIELD_WEST",
-    "FIELD_SOUTH",
-    "FIELD_NORTH"
+  "cities": [
+    "city_elysia_capital",
+    "city_sylvaris",
+    "city_drakhen"
+  ],
+  "expMaps": [
+    "map_whispering_meadow",
+    "map_windmill_plains",
+    "map_spirit_forest_outskirts",
+    "map_spirit_forest",
+    "map_moonlit_lake",
+    "map_ancient_ruins",
+    "map_ember_canyon",
+    "map_dragon_valley",
+    "map_crimson_desert",
+    "map_shadow_realm_border"
+  ],
+  "dungeons": [
+    "dungeon_sanctum_of_awakening"
   ],
   "jobAdvancementRequirement": {
     "minLevel": 15,
-    "npcId": "NPC_JOB_ADVANCEMENT_ASICA",
-    "questPrerequisiteId": "QUEST_014_FROSTFANG_CHALLENGE",
-    "advancementQuestId": "QUEST_015_JOB_ADVANCEMENT_TRIAL"
-  }
+    "requiredBeginnerQuestId": "QUEST_001_SLIME_CLEAR",
+    "dungeonId": "dungeon_sanctum_of_awakening",
+    "certificateItemId": "ITEM_AWAKENING_CERTIFICATE",
+    "npcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "automaticClassification": true
+  },
+  "titleBonusLimits": {
+    "maxFlatAtk": 350,
+    "maxFlatMatk": 350,
+    "maxFlatDef": 250,
+    "maxFlatMdef": 250,
+    "maxFlatMaxHp": 4500,
+    "maxFlatMaxMp": 2200,
+    "maxFlatPrimaryAttr": 60,
+    "maxFlatCritRatePct": 20,
+    "maxPctAtk": 40,
+    "maxPctMatk": 40,
+    "maxPctDef": 40,
+    "maxPctHp": 45,
+    "maxPctMp": 45,
+    "maxPctSkillDamage": 40,
+    "maxPctCritDamage": 60,
+    "maxPctDamageReduction": 25,
+    "maxPctHealingPower": 40,
+    "maxPctMoveSpeed": 30,
+    "maxPctExpBonus": 35,
+    "maxPctGoldBonus": 35
+  },
+  "beginnerMaps": [
+    "map_beginner_meadow",
+    "map_green_rabbit_forest",
+    "map_ancient_bee_forest",
+    "map_wild_wolf_valley",
+    "map_wild_boar_forest",
+    "map_goblin_outpost",
+    "map_goblin_cave"
+  ],
+  "expBalanceConfig": {
+    "enabled": true,
+    "expMultiplier": 1,
+    "globalMonsterExpMultiplier": 0.85,
+    "beginnerAreaMultiplier": 1,
+    "eastGateMultiplier": 1,
+    "westGateMultiplier": 1,
+    "southGateMultiplier": 1,
+    "northGateMultiplier": 1,
+    "bossMultiplier": 1,
+    "eliteMonsterMultiplier": 1,
+    "partyExpMultiplier": 1.15,
+    "eventExpMultiplier": 1,
+    "levelDifferenceMultiplier": 1,
+    "goldMultiplier": 1,
+    "dropRateMultiplier": 1,
+    "levelPenalty": {
+      "graceLevelDiff": 3,
+      "penaltyPerLevelPct": 12,
+      "minExpFloorPct": 25,
+      "higherLevelBonusPerLvPct": 5,
+      "maxHigherLevelBonusPct": 20
+    },
+    "updatedAt": "2026-11-11T12:41:57.869Z"
+  },
+  "maxCharactersPerAccount": 4,
+  "updatedAt": "2026-11-11T12:42:04.402Z"
 }

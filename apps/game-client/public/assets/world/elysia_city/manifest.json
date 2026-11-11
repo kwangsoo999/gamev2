@@ -1,0 +1,446 @@
+{
+  "schemaVersion": "1.0.0",
+  "phase": "PHASE_2_ELYSIA_CITY",
+  "mapId": "elysia_city",
+  "projection": "isometric_2_to_1",
+  "tileWidth": 256,
+  "tileHeight": 128,
+  "baseUrl": "/assets/world/elysia_city/",
+  "sharedManifestRef": "/assets/world/shared/manifest.json",
+  "assets": [
+    {
+      "id": "city_ashlar_01",
+      "path": "terrain/city_ashlar_01.png",
+      "type": "terrain",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 2,
+      "depth": 0,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "city_cobble_01",
+      "path": "terrain/city_cobble_01.png",
+      "type": "terrain",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 2,
+      "depth": 0,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "city_courtyard_stone_01",
+      "path": "terrain/city_courtyard_stone_01.png",
+      "type": "terrain",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 2,
+      "depth": 0,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "city_royal_plaza_01",
+      "path": "terrain/city_royal_plaza_01.png",
+      "type": "terrain",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 2,
+      "depth": 0,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "city_garden_grass_01",
+      "path": "terrain/city_garden_grass_01.png",
+      "type": "terrain",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 2,
+      "depth": 0,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "city_curb_marble_n",
+      "path": "terrain/city_curb_marble_n.png",
+      "type": "terrain_transition",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 3,
+      "depth": 1,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "city_curb_marble_s",
+      "path": "terrain/city_curb_marble_s.png",
+      "type": "terrain_transition",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 3,
+      "depth": 1,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "city_curb_marble_w",
+      "path": "terrain/city_curb_marble_w.png",
+      "type": "terrain_transition",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 3,
+      "depth": 1,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "city_curb_marble_e",
+      "path": "terrain/city_curb_marble_e.png",
+      "type": "terrain_transition",
+      "width": 256,
+      "height": 128,
+      "origin": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "depthLayer": 3,
+      "depth": 1,
+      "collisionType": "none",
+      "collisionFootprint": null,
+      "animation": null
+    },
+    {
+      "id": "adventurer_guild_01",
+      "path": "buildings/adventurer_guild_01.png",
+      "type": "building",
+      "width": 496,
+      "height": 488,
+      "origin": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 195,
+        "ry": 98,
+        "offsetY": -16
+      },
+      "animation": null
+    },
+    {
+      "id": "weapon_shop_01",
+      "path": "buildings/weapon_shop_01.png",
+      "type": "building",
+      "width": 451,
+      "height": 480,
+      "origin": {
+        "x": 0.5,
+        "y": 0.81
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 182,
+        "ry": 91,
+        "offsetY": -14
+      },
+      "animation": null
+    },
+    {
+      "id": "bank_vault_01",
+      "path": "buildings/bank_vault_01.png",
+      "type": "building",
+      "width": 488,
+      "height": 482,
+      "origin": {
+        "x": 0.5,
+        "y": 0.81
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 192,
+        "ry": 96,
+        "offsetY": -14
+      },
+      "animation": null
+    },
+    {
+      "id": "city_workshop_mill_01",
+      "path": "buildings/city_workshop_mill_01.png",
+      "type": "building",
+      "width": 441,
+      "height": 477,
+      "origin": {
+        "x": 0.5,
+        "y": 0.82
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 184,
+        "ry": 92,
+        "offsetY": -16
+      },
+      "animation": null
+    },
+    {
+      "id": "city_blacksmith_01",
+      "path": "buildings/city_blacksmith_01.png",
+      "type": "building",
+      "width": 464,
+      "height": 488,
+      "origin": {
+        "x": 0.5,
+        "y": 0.81
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 195,
+        "ry": 98,
+        "offsetY": -16
+      },
+      "animation": null
+    },
+    {
+      "id": "city_item_shop_01",
+      "path": "buildings/city_item_shop_01.png",
+      "type": "building",
+      "width": 429,
+      "height": 462,
+      "origin": {
+        "x": 0.5,
+        "y": 0.81
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 180,
+        "ry": 90,
+        "offsetY": -14
+      },
+      "animation": null
+    },
+    {
+      "id": "residential_house_01",
+      "path": "buildings/residential_house_01.png",
+      "type": "building",
+      "width": 346,
+      "height": 468,
+      "origin": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 175,
+        "ry": 88,
+        "offsetY": -18
+      },
+      "animation": null
+    },
+    {
+      "id": "city_plaza_fountain_01",
+      "path": "buildings/city_plaza_fountain_01.png",
+      "type": "building",
+      "width": 410,
+      "height": 460,
+      "origin": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 168,
+        "ry": 84,
+        "offsetY": -18
+      },
+      "animation": null
+    },
+    {
+      "id": "sanctum_shrine_gate_01",
+      "path": "buildings/sanctum_shrine_gate_01.png",
+      "type": "building",
+      "width": 386,
+      "height": 467,
+      "origin": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "dual_pillar",
+      "collisionFootprint": [
+        {
+          "x": -115,
+          "y": -55,
+          "r": 26
+        },
+        {
+          "x": 20,
+          "y": 14,
+          "r": 26
+        }
+      ],
+      "animation": null
+    },
+    {
+      "id": "canal_bridge_01",
+      "path": "buildings/canal_bridge_01.png",
+      "type": "building",
+      "width": 470,
+      "height": 322,
+      "origin": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "depthLayer": 7,
+      "depth": "dynamic_y",
+      "collisionType": "walkable_override",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 165,
+        "ry": 82,
+        "offsetY": -8
+      },
+      "animation": null
+    },
+    {
+      "id": "market_stall_cream_01",
+      "path": "decoration/market_stall_cream_01.png",
+      "type": "decoration",
+      "width": 252,
+      "height": 284,
+      "origin": {
+        "x": 0.5,
+        "y": 0.83
+      },
+      "depthLayer": 6,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 102,
+        "ry": 52,
+        "offsetY": -8
+      },
+      "animation": null
+    },
+    {
+      "id": "market_stall_blue_01",
+      "path": "decoration/market_stall_blue_01.png",
+      "type": "decoration",
+      "width": 258,
+      "height": 284,
+      "origin": {
+        "x": 0.5,
+        "y": 0.83
+      },
+      "depthLayer": 6,
+      "depth": "dynamic_y",
+      "collisionType": "polygon",
+      "collisionFootprint": {
+        "type": "polygon",
+        "rx": 102,
+        "ry": 52,
+        "offsetY": -8
+      },
+      "animation": null
+    }
+  ],
+  "pendingGeneration": [
+    {
+      "id": "royal_castle_01",
+      "category": "buildings",
+      "reason": "Blocked by image-generator HTTP 429 RESOURCE_EXHAUSTED until 2026-11-11T06:55:02Z. No placeholder substituted.",
+      "intendedFootprint": "4x3 iso lot"
+    },
+    {
+      "id": "church_of_light_01",
+      "category": "buildings",
+      "reason": "Blocked by image-generator HTTP 429 RESOURCE_EXHAUSTED until 2026-11-11T06:55:02Z. No placeholder substituted.",
+      "intendedFootprint": "3x3 iso lot"
+    },
+    {
+      "id": "auction_house_01",
+      "category": "buildings",
+      "reason": "Blocked by image-generator HTTP 429 RESOURCE_EXHAUSTED until 2026-11-11T06:55:02Z. No placeholder substituted.",
+      "intendedFootprint": "2x2 iso lot"
+    },
+    {
+      "id": "teleport_gate_01",
+      "category": "buildings",
+      "reason": "Blocked by image-generator HTTP 429 RESOURCE_EXHAUSTED until 2026-11-11T06:55:02Z. No placeholder substituted.",
+      "intendedFootprint": "2x2 iso runic platform"
+    },
+    {
+      "id": "city_gate_wall_01",
+      "category": "buildings",
+      "reason": "Blocked by image-generator HTTP 429 RESOURCE_EXHAUSTED until 2026-11-11T06:55:02Z. No placeholder substituted.",
+      "intendedFootprint": "Wall archway spanning boulevard"
+    }
+  ]
+}

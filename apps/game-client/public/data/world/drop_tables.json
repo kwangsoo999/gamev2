@@ -1,0 +1,2492 @@
+[
+  {
+    "tableId": "DROP_MON_MEADOW_SLIME",
+    "monsterId": "mon_meadow_slime",
+    "drops": [
+      {
+        "itemId": "MAT_SLIME_JELLY",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_HORN_RABBIT",
+    "monsterId": "mon_horn_rabbit",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_GRASSLAND_WOLF",
+    "monsterId": "mon_grassland_wolf",
+    "drops": [
+      {
+        "itemId": "MAT_WOLF_PELT",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_GRAY_WOLF",
+    "monsterId": "mon_gray_wolf",
+    "drops": [
+      {
+        "itemId": "MAT_WOLF_PELT",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_GIANT_BEE",
+    "monsterId": "mon_giant_bee",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_CARNIVOROUS_PLANT",
+    "monsterId": "mon_carnivorous_plant",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_FOREST_GOBLIN",
+    "monsterId": "mon_forest_goblin",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "MAT_GOBLIN_EVO_CORE",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_POISON_SPIDER",
+    "monsterId": "mon_poison_spider",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_MUSHROOM_BEAST",
+    "monsterId": "mon_mushroom_beast",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_FOREST_SPIRIT",
+    "monsterId": "mon_forest_spirit",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_SOUL_WOLF",
+    "monsterId": "mon_soul_wolf",
+    "drops": [
+      {
+        "itemId": "MAT_WOLF_PELT",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_ANCIENT_TREANT",
+    "monsterId": "mon_ancient_treant",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_WATER_SLIME",
+    "monsterId": "mon_water_slime",
+    "drops": [
+      {
+        "itemId": "MAT_SLIME_JELLY",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_GIANT_FROG",
+    "monsterId": "mon_giant_frog",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_WATER_PHANTOM",
+    "monsterId": "mon_water_phantom",
+    "drops": [
+      {
+        "itemId": "MAT_ANCIENT_RUNE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_SKELETON_WARRIOR",
+    "monsterId": "mon_skeleton_warrior",
+    "drops": [
+      {
+        "itemId": "MAT_ANCIENT_RUNE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_STONE_GOLEM",
+    "monsterId": "mon_stone_golem",
+    "drops": [
+      {
+        "itemId": "MAT_ANCIENT_RUNE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_ANCIENT_MAGE",
+    "monsterId": "mon_ancient_mage",
+    "drops": [
+      {
+        "itemId": "MAT_ANCIENT_RUNE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_FIRE_LIZARD",
+    "monsterId": "mon_fire_lizard",
+    "drops": [
+      {
+        "itemId": "MAT_ANCIENT_RUNE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_LAVA_BAT",
+    "monsterId": "mon_lava_bat",
+    "drops": [
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_FLAME_SPIRIT",
+    "monsterId": "mon_flame_spirit",
+    "drops": [
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_YOUNG_DRAGON",
+    "monsterId": "mon_young_dragon",
+    "drops": [
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_DRAGONKIN",
+    "monsterId": "mon_dragonkin",
+    "drops": [
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_DRAGON_KNIGHT",
+    "monsterId": "mon_dragon_knight",
+    "drops": [
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_BLOOD_SCORPION",
+    "monsterId": "mon_blood_scorpion",
+    "drops": [
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_SAND_WRAITH",
+    "monsterId": "mon_sand_wraith",
+    "drops": [
+      {
+        "itemId": "MAT_VOID_CRYSTAL",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_DESERT_GUARDIAN",
+    "monsterId": "mon_desert_guardian",
+    "drops": [
+      {
+        "itemId": "MAT_VOID_CRYSTAL",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_VOID_CREATURE",
+    "monsterId": "mon_void_creature",
+    "drops": [
+      {
+        "itemId": "MAT_VOID_CRYSTAL",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_SHADOW_SPIRIT",
+    "monsterId": "mon_shadow_spirit",
+    "drops": [
+      {
+        "itemId": "MAT_VOID_CRYSTAL",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_DARK_KNIGHT",
+    "monsterId": "mon_dark_knight",
+    "drops": [
+      {
+        "itemId": "MAT_VOID_CRYSTAL",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MONSTER_GREEN_SLIME",
+    "monsterId": "MONSTER_GREEN_SLIME",
+    "drops": [
+      {
+        "itemId": "MAT_SLIME_JELLY",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MONSTER_GOBLIN_SCOUT",
+    "monsterId": "MONSTER_GOBLIN_SCOUT",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "MAT_GOBLIN_EVO_CORE",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_BOSS_DARK_DRAGON_STARTER",
+    "monsterId": "BOSS_DARK_DRAGON_STARTER",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 85,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 65,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_EXCALIBUR_HOLY",
+        "dropRate": 18,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 3
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_SANCTUM_SENTINEL",
+    "monsterId": "mon_sanctum_sentinel",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_MON_SANCTUM_ACOLYTE",
+    "monsterId": "mon_sanctum_acolyte",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_BOSS_GUARDIAN_OF_AWAKENING",
+    "monsterId": "boss_guardian_of_awakening",
+    "drops": [
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 85,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 65,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_AWAKENING_CERTIFICATE",
+        "itemName": "Awakening Certificate",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 15,
+        "firstClearOnly": true
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_BOSS_CRIMSON_OVERLORD",
+    "monsterId": "boss_crimson_overlord",
+    "drops": [
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 85,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 65,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_EXCALIBUR_HOLY",
+        "dropRate": 18,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 70
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_BOSS_ABYSSAL_SOVEREIGN",
+    "monsterId": "boss_abyssal_sovereign",
+    "drops": [
+      {
+        "itemId": "MAT_VOID_CRYSTAL",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_HP_LARGE",
+        "dropRate": 85,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_POTION_MP_MEDIUM",
+        "dropRate": 65,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 1
+      },
+      {
+        "itemId": "ITEM_EXCALIBUR_HOLY",
+        "dropRate": 18,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "requiredPlayerLevel": 105
+      }
+    ]
+  },
+  {
+    "tableId": "DROP_BOSS_ANCIENT_TREANT",
+    "monsterId": "boss_ancient_treant",
+    "lootMode": "CONTRIBUTION_WEIGHTED",
+    "pityThresholdKills": 5,
+    "pityFragmentItemId": "FRAG_FOREST_SET",
+    "pityFragmentQuantity": 2,
+    "drops": [
+      {
+        "itemId": "MAT_TREANT_CORE",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isGuaranteed": true,
+        "isBossExclusive": true,
+        "lootType": "material",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "MAT_FOREST_ESSENCE",
+        "dropRate": 60,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "FRAG_FOREST_SET",
+        "dropRate": 20,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "isBossExclusive": true,
+        "lootType": "fragment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "ITEM_FOREST_GUARDIAN_CROWN",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "rare",
+        "classCompatibleOnly": false
+      },
+      {
+        "itemId": "ITEM_FOREST_GUARDIAN_CLOAK",
+        "dropRate": 4,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isBossExclusive": true,
+        "lootType": "equipment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "ITEM_EXCALIBUR_HOLY",
+        "dropRate": 0.5,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "legendary",
+        "classCompatibleOnly": true
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_BOSS_MOON_HYDRA",
+    "monsterId": "boss_moon_hydra",
+    "lootMode": "CONTRIBUTION_WEIGHTED",
+    "pityThresholdKills": 5,
+    "pityFragmentItemId": "FRAG_MOONWATER_SET",
+    "pityFragmentQuantity": 2,
+    "drops": [
+      {
+        "itemId": "MAT_HYDRA_SCALE",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "isGuaranteed": true,
+        "isBossExclusive": true,
+        "lootType": "material",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "MAT_SPIRIT_ESSENCE",
+        "dropRate": 70,
+        "minQuantity": 2,
+        "maxQuantity": 4,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_MOONWATER_SET",
+        "dropRate": 25,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "isBossExclusive": true,
+        "lootType": "fragment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "ITEM_MOONWATER_ROBE",
+        "dropRate": 15,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_MOONWATER_RING",
+        "dropRate": 5,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isBossExclusive": true,
+        "lootType": "equipment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "ITEM_IGNIS_DRAGON_RING",
+        "dropRate": 0.5,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "legendary"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_BOSS_ANCIENT_TITAN",
+    "monsterId": "boss_ancient_titan",
+    "lootMode": "CONTRIBUTION_WEIGHTED",
+    "pityThresholdKills": 5,
+    "pityFragmentItemId": "FRAG_ANCIENT_SET",
+    "pityFragmentQuantity": 2,
+    "drops": [
+      {
+        "itemId": "MAT_TITAN_CORE",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isGuaranteed": true,
+        "isBossExclusive": true,
+        "lootType": "material",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "MAT_ANCIENT_RUNE",
+        "dropRate": 75,
+        "minQuantity": 2,
+        "maxQuantity": 5,
+        "lootType": "material",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "FRAG_ANCIENT_SET",
+        "dropRate": 25,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "isBossExclusive": true,
+        "lootType": "fragment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "ITEM_ANCIENT_PLATE",
+        "dropRate": 14,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isBossExclusive": true,
+        "lootType": "equipment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "ITEM_ANCIENT_TITAN_SHOULDER",
+        "dropRate": 6,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "ITEM_EXCALIBUR_HOLY",
+        "dropRate": 0.8,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "legendary"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_BOSS_IGNIS_DRAGON",
+    "monsterId": "boss_ignis_dragon",
+    "lootMode": "PARTY_ROLL",
+    "pityThresholdKills": 4,
+    "pityFragmentItemId": "FRAG_IGNIS_SET",
+    "pityFragmentQuantity": 2,
+    "drops": [
+      {
+        "itemId": "MAT_DRAGON_HEART",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isGuaranteed": true,
+        "isBossExclusive": true,
+        "lootType": "material",
+        "rarity": "legendary"
+      },
+      {
+        "itemId": "MAT_DRAGON_SCALE",
+        "dropRate": 85,
+        "minQuantity": 2,
+        "maxQuantity": 5,
+        "lootType": "material",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "FRAG_IGNIS_SET",
+        "dropRate": 30,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "isBossExclusive": true,
+        "lootType": "fragment",
+        "rarity": "legendary"
+      },
+      {
+        "itemId": "ITEM_IGNIS_DRAGON_ARMOR",
+        "dropRate": 6,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isBossExclusive": true,
+        "lootType": "equipment",
+        "rarity": "legendary"
+      },
+      {
+        "itemId": "ITEM_IGNIS_BLADE",
+        "dropRate": 2.5,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isBossExclusive": true,
+        "lootType": "equipment",
+        "rarity": "legendary",
+        "classCompatibleOnly": true
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_BOSS_ABYSS_OVERLORD",
+    "monsterId": "boss_abyss_overlord",
+    "lootMode": "PARTY_ROLL",
+    "pityThresholdKills": 4,
+    "pityFragmentItemId": "FRAG_ABYSS_SET",
+    "pityFragmentQuantity": 2,
+    "drops": [
+      {
+        "itemId": "MAT_ABYSSAL_CORE",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isGuaranteed": true,
+        "isBossExclusive": true,
+        "lootType": "material",
+        "rarity": "mythic"
+      },
+      {
+        "itemId": "MAT_VOID_CRYSTAL",
+        "dropRate": 90,
+        "minQuantity": 3,
+        "maxQuantity": 6,
+        "lootType": "material",
+        "rarity": "mythic"
+      },
+      {
+        "itemId": "FRAG_ABYSS_SET",
+        "dropRate": 35,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "isBossExclusive": true,
+        "lootType": "fragment",
+        "rarity": "mythic"
+      },
+      {
+        "itemId": "ITEM_ABYSSAL_RING",
+        "dropRate": 5,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isBossExclusive": true,
+        "lootType": "equipment",
+        "rarity": "mythic"
+      },
+      {
+        "itemId": "ITEM_ABYSSAL_GREATSWORD",
+        "dropRate": 1.5,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "isBossExclusive": true,
+        "lootType": "equipment",
+        "rarity": "mythic",
+        "classCompatibleOnly": true
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_WHISPERING_MEADOW",
+    "monsterId": "elite_whispering_meadow",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_WHISPERING_MEADOW",
+    "monsterId": "miniboss_whispering_meadow",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_WINDMILL_PLAINS",
+    "monsterId": "elite_windmill_plains",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_WINDMILL_PLAINS",
+    "monsterId": "miniboss_windmill_plains",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_APPRENTICE_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_SPIRIT_OUTSKIRTS",
+    "monsterId": "elite_spirit_outskirts",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_SPIRIT_OUTSKIRTS",
+    "monsterId": "miniboss_spirit_outskirts",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_TIER2_ELITE_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_SPIRIT_FOREST",
+    "monsterId": "elite_spirit_forest",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_FOREST_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_SPIRIT_FOREST",
+    "monsterId": "miniboss_spirit_forest",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_FOREST_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_MOONLIT_LAKE",
+    "monsterId": "elite_moonlit_lake",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_MOONWATER_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_MOONLIT_LAKE",
+    "monsterId": "miniboss_moonlit_lake",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_MOONWATER_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_ANCIENT_RUINS",
+    "monsterId": "elite_ancient_ruins",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_ANCIENT_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_ANCIENT_RUINS",
+    "monsterId": "miniboss_ancient_ruins",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_ANCIENT_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_EMBER_CANYON",
+    "monsterId": "elite_ember_canyon",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_ANCIENT_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_EMBER_CANYON",
+    "monsterId": "miniboss_ember_canyon",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_ANCIENT_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_DRAGON_VALLEY",
+    "monsterId": "elite_dragon_valley",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_IGNIS_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_DRAGON_VALLEY",
+    "monsterId": "miniboss_dragon_valley",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_IGNIS_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_CRIMSON_DESERT",
+    "monsterId": "elite_crimson_desert",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_IGNIS_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_CRIMSON_DESERT",
+    "monsterId": "miniboss_crimson_desert",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_IGNIS_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_ELITE_SHADOW_BORDER",
+    "monsterId": "elite_shadow_border",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_ABYSS_SET",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MINIBOSS_SHADOW_BORDER",
+    "monsterId": "miniboss_shadow_border",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "FRAG_ABYSS_SET",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "fragment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_GREEN_SLIME",
+    "monsterId": "mon_green_slime",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_SLIME_JELLY",
+        "dropRate": 70,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "common"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 28,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "common"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_RED_SLIME",
+    "monsterId": "mon_red_slime",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_RED_SLIME_CORE",
+        "dropRate": 62,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "common"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 32,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "common"
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 22,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "consumable",
+        "rarity": "common"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_FOREST_RABBIT",
+    "monsterId": "mon_forest_rabbit",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_RABBIT_FUR",
+        "dropRate": 66,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "common"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_SMALL",
+        "dropRate": 28,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "common"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_ONE_HORNED_RABBIT",
+    "monsterId": "mon_one_horned_rabbit",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_RABBIT_FUR",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "common"
+      },
+      {
+        "itemId": "ITEM_RABBIT_LEATHER_BOOTS",
+        "dropRate": 14,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_ELITE_RABBIT",
+    "monsterId": "mon_elite_rabbit",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_RABBIT_LEATHER_BOOTS",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 40,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_HARDWING_BEE",
+    "monsterId": "mon_hardwing_bee",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_BEE_STINGER",
+        "dropRate": 68,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "ITEM_POTION_MP_SMALL",
+        "dropRate": 26,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "common"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_GUARDIAN_BEE",
+    "monsterId": "mon_guardian_bee",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_BEE_STINGER",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "ITEM_BEE_AMBER_RING",
+        "dropRate": 12,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "rare"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_ELITE_BEE",
+    "monsterId": "mon_elite_bee",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_BEE_AMBER_RING",
+        "dropRate": 42,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_WILD_WOLF",
+    "monsterId": "mon_wild_wolf",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_WOLF_PELT",
+        "dropRate": 72,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "common"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 24,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_ELITE_WOLF",
+    "monsterId": "mon_elite_wolf",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_WOLF_FANG_DAGGER",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 55,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_BLOOD_WOLF",
+    "monsterId": "mon_blood_wolf",
+    "lootMode": "CONTRIBUTION_WEIGHTED",
+    "pityThresholdKills": 3,
+    "pityFragmentItemId": "ITEM_UPGRADE_STONE_BASIC",
+    "pityFragmentQuantity": 2,
+    "drops": [
+      {
+        "itemId": "MAT_BLOOD_WOLF_FANG",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "rare",
+        "isGuaranteed": true
+      },
+      {
+        "itemId": "ITEM_BLOOD_WOLF_TALISMAN",
+        "dropRate": 48,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "epic",
+        "isBossExclusive": true
+      },
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 75,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_WILD_BOAR",
+    "monsterId": "mon_wild_boar",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_BOAR_TUSK",
+        "dropRate": 72,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      },
+      {
+        "itemId": "ITEM_BOAR_IRON_ARMOR",
+        "dropRate": 12,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "rare"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_ELITE_BOAR",
+    "monsterId": "mon_elite_boar",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_BOAR_IRON_ARMOR",
+        "dropRate": 45,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 60,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_OUTPOST_GOBLIN",
+    "monsterId": "mon_outpost_goblin",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_GOBLIN_EVO_CORE",
+        "dropRate": 40,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "material",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_POTION_HP_MEDIUM",
+        "dropRate": 32,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "consumable",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_GOBLIN_WARRIOR",
+    "monsterId": "mon_goblin_warrior",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "MAT_GOBLIN_EVO_CORE",
+        "dropRate": 50,
+        "minQuantity": 1,
+        "maxQuantity": 2,
+        "lootType": "material",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_BOAR_IRON_ARMOR",
+        "dropRate": 14,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "rare"
+      },
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 28,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "material",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_MON_ELITE_GOBLIN",
+    "monsterId": "mon_elite_goblin",
+    "lootMode": "PERSONAL",
+    "drops": [
+      {
+        "itemId": "ITEM_GOBLIN_CHIEFTAIN_AXE",
+        "dropRate": 28,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 70,
+        "minQuantity": 1,
+        "maxQuantity": 3,
+        "lootType": "material",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "tableId": "DROP_BOSS_GOBLIN_CHIEFTAIN",
+    "monsterId": "boss_goblin_chieftain",
+    "lootMode": "CONTRIBUTION_WEIGHTED",
+    "pityThresholdKills": 3,
+    "pityFragmentItemId": "ITEM_UPGRADE_STONE_BASIC",
+    "pityFragmentQuantity": 3,
+    "drops": [
+      {
+        "itemId": "ITEM_GOBLIN_WAR_ORDERS",
+        "dropRate": 100,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "material",
+        "rarity": "epic",
+        "isGuaranteed": true
+      },
+      {
+        "itemId": "ITEM_GOBLIN_CHIEFTAIN_AXE",
+        "dropRate": 60,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "epic",
+        "isBossExclusive": true
+      },
+      {
+        "itemId": "ITEM_BLOOD_WOLF_TALISMAN",
+        "dropRate": 40,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "epic"
+      },
+      {
+        "itemId": "UEQ_GOBLIN_CHIEFTAIN_CREST",
+        "dropRate": 35,
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "lootType": "equipment",
+        "rarity": "epic",
+        "isBossExclusive": true
+      },
+      {
+        "itemId": "ITEM_UPGRADE_STONE_BASIC",
+        "dropRate": 90,
+        "minQuantity": 2,
+        "maxQuantity": 4,
+        "lootType": "material",
+        "rarity": "uncommon"
+      }
+    ],
+    "status": "published"
+  }
+]

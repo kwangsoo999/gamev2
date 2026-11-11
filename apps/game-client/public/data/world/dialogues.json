@@ -1,0 +1,94 @@
+[
+  {
+    "npcId": "npc_elder",
+    "text": "Chào mừng lữ khách! Khi đạt Lv.15, hãy tiến vào Hang Thánh Điện phía Đông Bắc để hoàn thành Chuyển Chức Lần 1!"
+  },
+  {
+    "npcId": "npc_trainer",
+    "text": "Luyện tập thật tốt trước khi bước vào Kinh Đô Elysia nhé chiến binh!"
+  },
+  {
+    "npcId": "npc_merchant",
+    "text": "Trang bị và dược phẩm đầy đủ sẽ giúp bạn sinh tồn trên mọi bản đồ."
+  },
+  {
+    "npcId": "NPC_GRAND_SAGE_OF_AWAKENING",
+    "text": "Ta là Grand Sage of Awakening. Bản chất 5 chỉ số của ngươi sẽ dẫn lối tới chức nghiệp chân chính sau khi vượt ải!"
+  },
+  {
+    "npcId": "NPC_JOB_MASTER_ASICA",
+    "text": "Mọi Nhà Thám Hiểm cấp 15 đều phải vượt Thánh Điện Thức Tỉnh để linh hồn tự định hình nghề nghiệp tương thích."
+  },
+  {
+    "npcId": "NPC_ELYSIA_EQUIP_MERCHANT",
+    "text": "Trang bị cấp 15–35 rèn từ thép Elysia sẵn sàng phục vụ mạo hiểm giả!"
+  },
+  {
+    "npcId": "NPC_ELYSIA_ITEM_MERCHANT",
+    "text": "Đừng quên mang theo Bình Máu và Cuộn Hồi Thành trước khi ra Thảo Nguyên Thì Thầm!"
+  },
+  {
+    "npcId": "NPC_GUILD_REGISTRAR",
+    "text": "Tổng Hội chào đón các chiến binh mới chuyển chức. Tổ đội cùng bằng hữu để chinh phục Phó Bản!"
+  },
+  {
+    "npcId": "NPC_BANKER_STORAGE",
+    "text": "Ngân Khố Hoàng Gia bảo vệ tài sản của bạn an toàn tuyệt đối."
+  },
+  {
+    "npcId": "NPC_TELEPORT_MAGE",
+    "text": "Ma pháp dịch chuyển tuân theo quy luật cấp độ: chỉ dẫn tới các vùng bạn đủ thực lực đặt chân!"
+  },
+  {
+    "npcId": "NPC_QUEST_COMMANDER",
+    "text": "Nhận nhiệm vụ săn quái vùng Elysia để thăng cấp nhanh hơn."
+  },
+  {
+    "npcId": "NPC_SYLVARIS_ARMORER",
+    "text": "Áo giáp nhẹ dệt từ tơ mộc cổ đại bảo vệ bạn trước Hồ Ánh Trăng."
+  },
+  {
+    "npcId": "NPC_MASTER_CRAFTER",
+    "text": "Mang Mảnh Tinh Linh và Cổ Ngữ đến đây để tinh luyện trang bị bậc cao."
+  },
+  {
+    "npcId": "NPC_ENCHANTER_LYRA",
+    "text": "Ma lực Tinh Linh có thể cường hóa binh khí vượt giới hạn thường."
+  },
+  {
+    "npcId": "NPC_SYLVARIS_ELDER",
+    "text": "Phế Tích Cổ Đại phía Đông ẩn chứa bí mật cổ xưa. Hãy cẩn trọng khi đạt Lv.45!"
+  },
+  {
+    "npcId": "NPC_SYLVARIS_GUILD",
+    "text": "Chi nhánh bang hội vùng rừng sẵn sàng hỗ trợ nhiệm vụ tổ đội."
+  },
+  {
+    "npcId": "NPC_SYLVARIS_PORTAL",
+    "text": "Kho lưu trữ & dịch chuyển vùng trung tâm Sylvaris luôn mở cửa."
+  },
+  {
+    "npcId": "NPC_DRAKHEN_BLACKSMITH",
+    "text": "Lửa Thung Lũng Rồng tôi luyện nên những thanh binh khí Lv.60–90 mạnh nhất!"
+  },
+  {
+    "npcId": "NPC_DRAKHEN_MERCHANT",
+    "text": "Chuẩn bị Bình Máu Lớn trước khi đặt chân vào Sa Mạc Huyết Sắc."
+  },
+  {
+    "npcId": "NPC_DRAGON_SCHOLAR_KAEL",
+    "text": "Biên Giới Hắc Ám Lv.90–110 là nơi Dark Knight và Void Sovereign trú ngụ. Chỉ anh hùng mạnh nhất mới trở về."
+  },
+  {
+    "npcId": "NPC_DRAKHEN_COMMANDER",
+    "text": "Thu thập Vảy Rồng từ Thung Lũng Rồng để củng cố tuyến phòng thủ Drakhen!"
+  },
+  {
+    "npcId": "NPC_DRAKHEN_TELEPORT",
+    "text": "Kết nối trực tiếp giữa Kinh Đô Elysia, Sylvaris và Pháo Đài Drakhen khi đủ cấp."
+  },
+  {
+    "npcId": "NPC_HIGH_PRIEST",
+    "text": "Ánh sáng Elysia soi rọi tâm hồn ngươi. Hãy đứng vào Vòng Tròn Nghi Lễ để Thánh Đường chứng giám chuyển chức!"
+  }
+]

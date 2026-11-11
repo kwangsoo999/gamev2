@@ -1,0 +1,251 @@
+{
+  "config": {
+    "requiredLevel": 25,
+    "creationGoldCost": 300000,
+    "requiredSealItemId": "ITEM_MERCHANT_SEAL",
+    "minFoundingMembers": 5,
+    "maxLevel": 10,
+    "baseWarehouseCapacity": 50
+  },
+  "levelExpTable": [
+    {
+      "level": 1,
+      "requiredExp": 900
+    },
+    {
+      "level": 2,
+      "requiredExp": 2546
+    },
+    {
+      "level": 3,
+      "requiredExp": 4677
+    },
+    {
+      "level": 4,
+      "requiredExp": 7200
+    },
+    {
+      "level": 5,
+      "requiredExp": 10062
+    },
+    {
+      "level": 6,
+      "requiredExp": 13227
+    },
+    {
+      "level": 7,
+      "requiredExp": 16668
+    },
+    {
+      "level": 8,
+      "requiredExp": 20365
+    },
+    {
+      "level": 9,
+      "requiredExp": 24300
+    },
+    {
+      "level": 10,
+      "requiredExp": 0
+    }
+  ],
+  "defaultRanks": [
+    {
+      "id": "assoc_master",
+      "nameVi": "Hội Trưởng Thương Hội",
+      "order": 1,
+      "permissions": [
+        "INVITE_MEMBER",
+        "KICK_MEMBER",
+        "MANAGE_RANKS",
+        "MANAGE_WAREHOUSE",
+        "APPROVE_CONTRACT",
+        "LAUNCH_CARAVAN",
+        "WITHDRAW_TREASURY"
+      ]
+    },
+    {
+      "id": "senior_broker",
+      "nameVi": "Đại Thương Nhân",
+      "order": 2,
+      "permissions": [
+        "INVITE_MEMBER",
+        "MANAGE_WAREHOUSE",
+        "APPROVE_CONTRACT",
+        "LAUNCH_CARAVAN"
+      ]
+    },
+    {
+      "id": "caravan_captain",
+      "nameVi": "Đội Trưởng Thương Đoàn",
+      "order": 3,
+      "permissions": [
+        "MANAGE_WAREHOUSE",
+        "LAUNCH_CARAVAN",
+        "APPROVE_CONTRACT"
+      ]
+    },
+    {
+      "id": "trader",
+      "nameVi": "Hội Viên Buôn Bán",
+      "order": 4,
+      "permissions": [
+        "MANAGE_WAREHOUSE"
+      ]
+    }
+  ],
+  "caravanRoutes": [
+    {
+      "id": "ROUTE_NOVICE_ELYSIA",
+      "name": "Novice Village -> Elysia Capital",
+      "nameVi": "Thôn Khởi Nguyên -> Vương Đô Elysia",
+      "fromMapId": "THON_KHOI_NGUYEN",
+      "toMapId": "city_elysia_capital",
+      "requiredMerchantLevel": 1,
+      "durationMs": 3000,
+      "capitalCostGold": 2000,
+      "payoutGold": 3200,
+      "payoutReputation": 45,
+      "payoutMerchantExp": 180,
+      "riskLevel": "low",
+      "taxTerritoryId": "TERR_GREENWOOD_HERB_VALE"
+    },
+    {
+      "id": "ROUTE_ELYSIA_SYLVARIS",
+      "name": "Elysia Capital -> Sylvaris Canopy",
+      "nameVi": "Vương Đô -> Thành Rừng Sylvaris",
+      "fromMapId": "city_elysia_capital",
+      "toMapId": "city_sylvaris",
+      "requiredMerchantLevel": 2,
+      "durationMs": 4500,
+      "capitalCostGold": 6000,
+      "payoutGold": 9800,
+      "payoutReputation": 95,
+      "payoutMerchantExp": 340,
+      "riskLevel": "medium",
+      "taxTerritoryId": "TERR_SYLVARIS_FOREST"
+    },
+    {
+      "id": "ROUTE_MOONLIT_PORT",
+      "name": "Sylvaris -> Moonlit Trade Station",
+      "nameVi": "Sylvaris -> Thương Cảng Ánh Trăng",
+      "fromMapId": "city_sylvaris",
+      "toMapId": "map_moonlit_lake",
+      "requiredMerchantLevel": 3,
+      "durationMs": 6000,
+      "capitalCostGold": 12000,
+      "payoutGold": 19800,
+      "payoutReputation": 160,
+      "payoutMerchantExp": 520,
+      "riskLevel": "medium",
+      "taxTerritoryId": "TERR_MOONLIT_TRADE"
+    },
+    {
+      "id": "ROUTE_DRAKHEN_IRON",
+      "name": "Ironpeak -> Drakhen Bastion",
+      "nameVi": "Tiền Đồn Sắt -> Pháo Đài Drakhen",
+      "fromMapId": "map_ember_canyon",
+      "toMapId": "city_drakhen",
+      "requiredMerchantLevel": 5,
+      "durationMs": 8000,
+      "capitalCostGold": 25000,
+      "payoutGold": 42500,
+      "payoutReputation": 310,
+      "payoutMerchantExp": 900,
+      "riskLevel": "high",
+      "taxTerritoryId": "TERR_DRAKHEN_CITADEL"
+    }
+  ],
+  "supplyContracts": [
+    {
+      "title": "Đơn Thu Mua Lá Dược Thảo (Herbalist)",
+      "contractKind": "material_supply",
+      "issuerType": "npc",
+      "issuerId": "NPC_HERBALIST_MASTER",
+      "issuerName": "Dược Sư Lyra",
+      "professionId": "herbalist",
+      "requiredItemId": "MAT_PROF_HERB_GREEN",
+      "requiredItemName": "Lá Dược Thảo Đồng Xanh",
+      "minQuality": "common",
+      "requiredQty": 6,
+      "rewardGold": 420,
+      "rewardReputation": 35,
+      "rewardMerchantExp": 120
+    },
+    {
+      "title": "Hợp Đồng Cung Ứng Dược Phẩm Vương Đô",
+      "contractKind": "potion_supply",
+      "issuerType": "npc",
+      "issuerId": "NPC_ALCHEMIST_MASTER",
+      "issuerName": "Tổng Quản Quân Y",
+      "professionId": "herbalist",
+      "requiredItemId": "ITEM_POTION_HP_SMALL",
+      "requiredItemName": "Bình Sinh Lực Nhỏ",
+      "minQuality": "common",
+      "requiredQty": 4,
+      "rewardGold": 680,
+      "rewardReputation": 50,
+      "rewardMerchantExp": 160
+    },
+    {
+      "title": "Đơn Hàng Đúc Kiếm Thép Elysia (Blacksmith)",
+      "contractKind": "equipment_order",
+      "issuerType": "guild",
+      "issuerId": "SYS_GARRISON",
+      "issuerName": "Vệ Binh Vương Đô",
+      "professionId": "blacksmith",
+      "requiredItemId": "PROF_ITEM_STEEL_SWORD",
+      "requiredItemName": "Trường Kiếm Thép Elysia",
+      "minQuality": "uncommon",
+      "requiredQty": 1,
+      "rewardGold": 1850,
+      "rewardReputation": 110,
+      "rewardMerchantExp": 320
+    },
+    {
+      "title": "Hợp Đồng Thực Phẩm Quân Nhu (Chef)",
+      "contractKind": "food_supply",
+      "issuerType": "npc",
+      "issuerId": "NPC_CHEF_MASTER",
+      "issuerName": "Quản Lý Tửu Quán",
+      "professionId": "chef",
+      "requiredItemId": "PROF_ITEM_HONEY_BREAD",
+      "requiredItemName": "Bánh Mì Nướng Ấm (+8% EXP)",
+      "minQuality": "common",
+      "requiredQty": 5,
+      "rewardGold": 590,
+      "rewardReputation": 45,
+      "rewardMerchantExp": 150
+    },
+    {
+      "title": "Đơn Đặt Hàng Số Lượng Lớn Gỗ Xây Thành (Guild Bulk)",
+      "contractKind": "guild_bulk_procurement",
+      "issuerType": "guild",
+      "issuerId": "SYS_BUILD_CORPS",
+      "issuerName": "Hội Kiến Thiết Bang Hội",
+      "professionId": "woodcutter",
+      "requiredItemId": "PROF_ITEM_OAK_PLANK",
+      "requiredItemName": "Ván Gỗ Sồi Gia Cố",
+      "minQuality": "common",
+      "requiredQty": 8,
+      "rewardGold": 950,
+      "rewardReputation": 75,
+      "rewardMerchantExp": 240
+    },
+    {
+      "title": "Đơn Cung Cấp Đá Cường Hóa Giả Kim (Alchemist)",
+      "contractKind": "material_supply",
+      "issuerType": "merchant_association",
+      "issuerId": "SYS_MERCHANT_HALL",
+      "issuerName": "Phòng Giao Dịch Đá Quý",
+      "professionId": "alchemist_jeweler",
+      "requiredItemId": "ITEM_UPGRADE_STONE_BASIC",
+      "requiredItemName": "Đá Cường Hóa Sơ Cấp",
+      "minQuality": "common",
+      "requiredQty": 3,
+      "rewardGold": 1400,
+      "rewardReputation": 90,
+      "rewardMerchantExp": 280
+    }
+  ]
+}

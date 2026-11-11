@@ -1,0 +1,10 @@
+{
+  "unlockLevel": 15,
+  "levelsPerPoint": 3,
+  "firstJobAwakeningBonusPoints": 3,
+  "lv80BranchBonusPoints": 6,
+  "cumulativeMasteryPerBonusPoint": 100,
+  "maxMasteryBonusPoints": 12,
+  "respecGoldPerSpentPoint": 250,
+  "respecScrollItemId": "ITEM_PASSIVE_RESET_SCROLL"
+}

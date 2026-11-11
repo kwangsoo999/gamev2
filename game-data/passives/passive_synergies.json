@@ -1,0 +1,242 @@
+[
+  {
+    "passive_id": "pas_sw_weapon_discipline",
+    "name": "Weapon Discipline",
+    "synergySkillId": "skill_cross_cut",
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_sp_formation_training",
+    "name": "Formation Training",
+    "synergySkillId": "skill_spear_thrust",
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_kn_guardian_instinct",
+    "name": "Guardian Instinct",
+    "synergySkillId": "skill_shield_bash",
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_pr_holy_resistance",
+    "name": "Holy Resistance",
+    "synergySkillId": "skill_holy_light",
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_mg_spell_focus",
+    "name": "Spell Focus",
+    "synergySkillId": "skill_fireball",
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_as_critical_technique",
+    "name": "Critical Technique",
+    "synergySkillId": "skill_shadow_strike",
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_fg_counterattack_training",
+    "name": "Counterattack Training",
+    "synergySkillId": "skill_power_punch",
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_ar_hunting_instinct",
+    "name": "Hunting Instinct",
+    "synergySkillId": "skill_piercing_arrow",
+    "requiredMasteryPoints": 20
+  },
+  {
+    "passive_id": "pas_sword_saint_synergy",
+    "name": "Iaido Tempo",
+    "synergySkillId": "skill_ss_iaido_flash",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sword_saint_mastery_apex",
+    "name": "Celestial Blade Apex",
+    "synergySkillId": "skill_ss_iaido_flash",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_berserker_synergy",
+    "name": "Guillotine Momentum",
+    "synergySkillId": "skill_bk_crimson_guillotine",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_berserker_mastery_apex",
+    "name": "Ragnarok Avatar",
+    "synergySkillId": "skill_bk_crimson_guillotine",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_dragoon_synergy",
+    "name": "Skybreaker Leap",
+    "synergySkillId": "skill_dg_skyfang_dive",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_dragoon_mastery_apex",
+    "name": "Tempest Wyrm Crest",
+    "synergySkillId": "skill_dg_skyfang_dive",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_warlancer_synergy",
+    "name": "Halberd Horizon",
+    "synergySkillId": "skill_wl_crimson_sweep",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_warlancer_mastery_apex",
+    "name": "Marshal of Steel",
+    "synergySkillId": "skill_wl_crimson_sweep",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_paladin_synergy",
+    "name": "Solar Justice",
+    "synergySkillId": "skill_pl_solstice_smite",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_paladin_mastery_apex",
+    "name": "Dawn Sovereign Crest",
+    "synergySkillId": "skill_pl_solstice_smite",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_guardian_synergy",
+    "name": "Aegis Shockwave",
+    "synergySkillId": "skill_gd_bastion_bash",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_guardian_mastery_apex",
+    "name": "Eternal Bastion Core",
+    "synergySkillId": "skill_gd_bastion_bash",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_saint_synergy",
+    "name": "Seraphic Chorus",
+    "synergySkillId": "skill_st_radiant_hymn",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_saint_mastery_apex",
+    "name": "Seraphic Covenant",
+    "synergySkillId": "skill_st_radiant_hymn",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_exorcist_synergy",
+    "name": "Judgement Inscription",
+    "synergySkillId": "skill_ex_judgement_talisman",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_exorcist_mastery_apex",
+    "name": "Arch-Exorcist Rite",
+    "synergySkillId": "skill_ex_judgement_talisman",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_elementalist_synergy",
+    "name": "Prismatic Overload",
+    "synergySkillId": "skill_el_tri_convergence",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_elementalist_mastery_apex",
+    "name": "Sovereign of Elements",
+    "synergySkillId": "skill_el_tri_convergence",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_arcanist_synergy",
+    "name": "Cosmic Alignment",
+    "synergySkillId": "skill_ar_gravity_singularity",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_arcanist_mastery_apex",
+    "name": "Cosmos Architect",
+    "synergySkillId": "skill_ar_gravity_singularity",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_shadowblade_synergy",
+    "name": "Nightfall Arterial Strike",
+    "synergySkillId": "skill_sb_nightfall_eviscerate",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_shadowblade_mastery_apex",
+    "name": "Eclipse Assassin Apex",
+    "synergySkillId": "skill_sb_nightfall_eviscerate",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_phantom_synergy",
+    "name": "Mirage Blade Waltz",
+    "synergySkillId": "skill_ph_spectral_blades",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_phantom_mastery_apex",
+    "name": "Lord of Illusions",
+    "synergySkillId": "skill_ph_spectral_blades",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_martial_artist_synergy",
+    "name": "Tiger Chi Impact",
+    "synergySkillId": "skill_ma_crimson_tiger_fang",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_martial_artist_mastery_apex",
+    "name": "Grandmaster of Palms",
+    "synergySkillId": "skill_ma_crimson_tiger_fang",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_duelist_synergy",
+    "name": "Riposte Cadence",
+    "synergySkillId": "skill_dl_velocity_riposte",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_duelist_mastery_apex",
+    "name": "Virtuoso Finale",
+    "synergySkillId": "skill_dl_velocity_riposte",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_sniper_synergy",
+    "name": "Railshot Calibration",
+    "synergySkillId": "skill_sn_starlight_railshot",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_sniper_mastery_apex",
+    "name": "Starlight Marksman Apex",
+    "synergySkillId": "skill_sn_starlight_railshot",
+    "requiredMasteryPoints": 60
+  },
+  {
+    "passive_id": "pas_ranger_synergy",
+    "name": "Gale Canopy Volley",
+    "synergySkillId": "skill_rg_leaf_tempest",
+    "requiredMasteryPoints": 0
+  },
+  {
+    "passive_id": "pas_ranger_mastery_apex",
+    "name": "Warden of the Wilds",
+    "synergySkillId": "skill_rg_leaf_tempest",
+    "requiredMasteryPoints": 60
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "id": "CHAIN_FIRST_JOB_ADVANCEMENT",
+    "name": "Thiên Mệnh Thức Tỉnh (First Job Advancement)",
+    "description": "Chuỗi 5 nhiệm vụ cấp 15 đưa Tân Thủ vượt Thánh Điện Thức Tỉnh và nhận chức nghiệp chính thức.",
+    "requiredLevel": 15,
+    "quests": [
+      "QUEST_JOB_01_CALL",
+      "QUEST_JOB_02_ENTER",
+      "QUEST_JOB_03_PILLARS",
+      "QUEST_JOB_04_GUARDIAN",
+      "QUEST_JOB_05_DESTINY"
+    ],
+    "completionRewards": {
+      "exp": 1500,
+      "gold": 1000,
+      "unlockTitleIds": ["TITLE_FIRST_AWAKENED"]
+    },
+    "status": "published"
+  },
+  {
+    "id": "CHAIN_GOBLIN_EVO_CHRONICLES",
+    "name": "GoblinEvo: Biên Niên Sử Tiến Hóa Cổ Đại",
+    "description": "Chuỗi 4 giai đoạn cốt truyện GoblinEvo theo dấu sự thức tỉnh của Bộ Tộc Goblin cổ, mở khóa Trang Bị Độc Nhất và Danh Hiệu Vĩnh Viễn.",
+    "requiredLevel": 3,
+    "quests": [
+      "QUEST_GOBLIN_EVO_01_SIGNALS",
+      "QUEST_GOBLIN_EVO_02_OUTSKIRTS",
+      "QUEST_GOBLIN_EVO_03_SHAMAN_RELIC",
+      "QUEST_GOBLIN_EVO_04_TREANT_PACT"
+    ],
+    "completionRewards": {
+      "exp": 8500,
+      "gold": 6000,
+      "uniqueEquipmentIds": ["UEQ_GOBLIN_EVO_EMBLEM_BLADE"],
+      "unlockTitleIds": ["TITLE_GOBLIN_EVO_CONQUEROR"]
+    },
+    "status": "published"
+  },
+  {
+    "id": "CHAIN_SECOND_JOB_ADVANCEMENT",
+    "name": "Nhị Chuyển Đăng Phong (Second Job Advancement)",
+    "description": "Nghi lễ Nhị Chuyển cấp 80 tại Đại Giáo Đường Elysia dưới sự chủ trì của Đại Giáo Chủ Aethelgard.",
+    "requiredLevel": 80,
+    "quests": [
+      "QUEST_JOB_SECOND_AWAKENING"
+    ],
+    "completionRewards": {
+      "exp": 85000,
+      "gold": 50000,
+      "unlockTitleIds": ["TITLE_FIRST_AWAKENED"]
+    },
+    "status": "published"
+  }
+]

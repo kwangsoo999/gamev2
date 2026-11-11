@@ -1,0 +1,475 @@
+[
+  {
+    "jobId": "adventurer",
+    "displayName": "Adventurer",
+    "displayNameVi": "Tân Thủ",
+    "roleIdentity": "Balanced Starter",
+    "primaryAttr": "str",
+    "secondaryAttr": "con",
+    "primaryEfficiencyBonusPct": 4,
+    "secondaryEfficiencyBonusPct": 2,
+    "hpBaseGrowthPerLevel": 18,
+    "mpBaseGrowthPerLevel": 8,
+    "atkBaseGrowthPerLevel": 2,
+    "matkBaseGrowthPerLevel": 1.8,
+    "defBaseGrowthPerLevel": 1,
+    "mdefBaseGrowthPerLevel": 1,
+    "signatureMechanics": [
+      "Starter balance Lv.1-14"
+    ]
+  },
+  {
+    "jobId": "swordsman",
+    "displayName": "Swordsman",
+    "displayNameVi": "Kiếm Sĩ",
+    "roleIdentity": "Versatile Blade Fighter",
+    "primaryAttr": "str",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 10,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 26,
+    "mpBaseGrowthPerLevel": 9,
+    "atkBaseGrowthPerLevel": 3.6,
+    "matkBaseGrowthPerLevel": 1.2,
+    "defBaseGrowthPerLevel": 1.9,
+    "mdefBaseGrowthPerLevel": 1.4,
+    "signatureMechanics": [
+      "Balanced slash combo & blade control"
+    ]
+  },
+  {
+    "jobId": "spearman",
+    "displayName": "Spearman",
+    "displayNameVi": "Thương Sĩ",
+    "roleIdentity": "Armored Reach Lancer",
+    "primaryAttr": "str",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 10,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 27,
+    "mpBaseGrowthPerLevel": 9,
+    "atkBaseGrowthPerLevel": 3.5,
+    "matkBaseGrowthPerLevel": 1.2,
+    "defBaseGrowthPerLevel": 2.1,
+    "mdefBaseGrowthPerLevel": 1.4,
+    "signatureMechanics": [
+      "Reach piercing & phalanx defense"
+    ]
+  },
+  {
+    "jobId": "knight",
+    "displayName": "Knight",
+    "displayNameVi": "Kỵ Sĩ",
+    "roleIdentity": "Armored Tank Vanguard",
+    "primaryAttr": "con",
+    "secondaryAttr": "str",
+    "primaryEfficiencyBonusPct": 10,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 36,
+    "mpBaseGrowthPerLevel": 10,
+    "atkBaseGrowthPerLevel": 2.4,
+    "matkBaseGrowthPerLevel": 1.5,
+    "defBaseGrowthPerLevel": 3.3,
+    "mdefBaseGrowthPerLevel": 2.4,
+    "signatureMechanics": [
+      "Shield barriers, taunt & party protection"
+    ]
+  },
+  {
+    "jobId": "monk",
+    "displayName": "Priest / Monk",
+    "displayNameVi": "Tu Sĩ / Giáo Sĩ",
+    "roleIdentity": "Holy Support & Judgement Caster",
+    "primaryAttr": "int",
+    "secondaryAttr": "con",
+    "primaryEfficiencyBonusPct": 10,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 24,
+    "mpBaseGrowthPerLevel": 16,
+    "atkBaseGrowthPerLevel": 1.4,
+    "matkBaseGrowthPerLevel": 3.4,
+    "defBaseGrowthPerLevel": 1.7,
+    "mdefBaseGrowthPerLevel": 2.8,
+    "signatureMechanics": [
+      "Sacred healing, cleanses & holy spells"
+    ]
+  },
+  {
+    "jobId": "mage",
+    "displayName": "Mage",
+    "displayNameVi": "Pháp Sư",
+    "roleIdentity": "Arcane & Elemental Nuker",
+    "primaryAttr": "int",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 10,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 19,
+    "mpBaseGrowthPerLevel": 18,
+    "atkBaseGrowthPerLevel": 1,
+    "matkBaseGrowthPerLevel": 4.1,
+    "defBaseGrowthPerLevel": 1.2,
+    "mdefBaseGrowthPerLevel": 2.6,
+    "signatureMechanics": [
+      "High spell multipliers & AoE elements"
+    ]
+  },
+  {
+    "jobId": "assassin",
+    "displayName": "Assassin",
+    "displayNameVi": "Sát Thủ",
+    "roleIdentity": "Agile Crit Striker",
+    "primaryAttr": "agi",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 10,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 21,
+    "mpBaseGrowthPerLevel": 10,
+    "atkBaseGrowthPerLevel": 3.5,
+    "matkBaseGrowthPerLevel": 1.2,
+    "defBaseGrowthPerLevel": 1.5,
+    "mdefBaseGrowthPerLevel": 1.5,
+    "signatureMechanics": [
+      "Evasion, high crit & stealth bursts"
+    ]
+  },
+  {
+    "jobId": "fighter",
+    "displayName": "Fighter",
+    "displayNameVi": "Võ Sĩ",
+    "roleIdentity": "Melee Brawler & Counter",
+    "primaryAttr": "str",
+    "secondaryAttr": "agi",
+    "primaryEfficiencyBonusPct": 10,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 28,
+    "mpBaseGrowthPerLevel": 9,
+    "atkBaseGrowthPerLevel": 3.6,
+    "matkBaseGrowthPerLevel": 1.2,
+    "defBaseGrowthPerLevel": 2.1,
+    "mdefBaseGrowthPerLevel": 1.6,
+    "signatureMechanics": [
+      "High ASPD fists & counter stances"
+    ]
+  },
+  {
+    "jobId": "archer",
+    "displayName": "Archer",
+    "displayNameVi": "Cung Thủ",
+    "roleIdentity": "Ranged Marksman",
+    "primaryAttr": "dex",
+    "secondaryAttr": "agi",
+    "primaryEfficiencyBonusPct": 10,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 20,
+    "mpBaseGrowthPerLevel": 11,
+    "atkBaseGrowthPerLevel": 3.6,
+    "matkBaseGrowthPerLevel": 1.3,
+    "defBaseGrowthPerLevel": 1.4,
+    "mdefBaseGrowthPerLevel": 1.5,
+    "signatureMechanics": [
+      "Long-range accuracy & critical shots"
+    ]
+  },
+  {
+    "jobId": "sword_saint",
+    "displayName": "Sword Saint",
+    "displayNameVi": "Kiếm Thánh",
+    "roleIdentity": "Precision Iaido Boss DPS",
+    "primaryAttr": "str",
+    "secondaryAttr": "agi",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 7,
+    "hpBaseGrowthPerLevel": 28,
+    "mpBaseGrowthPerLevel": 10,
+    "atkBaseGrowthPerLevel": 5.2,
+    "matkBaseGrowthPerLevel": 1.4,
+    "defBaseGrowthPerLevel": 2.1,
+    "mdefBaseGrowthPerLevel": 1.7,
+    "signatureMechanics": [
+      "Multi-slash crit crits & agile precision"
+    ]
+  },
+  {
+    "jobId": "berserker",
+    "displayName": "Berserker",
+    "displayNameVi": "Cuồng Chiến Sĩ",
+    "roleIdentity": "Heavy Cleave Blood Juggernaut",
+    "primaryAttr": "str",
+    "secondaryAttr": "con",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 35,
+    "mpBaseGrowthPerLevel": 9,
+    "atkBaseGrowthPerLevel": 5.7,
+    "matkBaseGrowthPerLevel": 1,
+    "defBaseGrowthPerLevel": 2.2,
+    "mdefBaseGrowthPerLevel": 1.5,
+    "signatureMechanics": [
+      "Brute physical cleaves & lifesteal sustain"
+    ]
+  },
+  {
+    "jobId": "dragoon",
+    "displayName": "Dragoon",
+    "displayNameVi": "Long Kỵ Sĩ",
+    "roleIdentity": "Armor-Piercing Dive DPS",
+    "primaryAttr": "str",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 29,
+    "mpBaseGrowthPerLevel": 10,
+    "atkBaseGrowthPerLevel": 5.3,
+    "matkBaseGrowthPerLevel": 1.6,
+    "defBaseGrowthPerLevel": 2.3,
+    "mdefBaseGrowthPerLevel": 1.7,
+    "signatureMechanics": [
+      "Armor pierce dives & lightning burst"
+    ]
+  },
+  {
+    "jobId": "warlancer",
+    "displayName": "Warlancer",
+    "displayNameVi": "Chiến Thương Sư",
+    "roleIdentity": "Frontline Phalanx Bruiser",
+    "primaryAttr": "str",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 11,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 34,
+    "mpBaseGrowthPerLevel": 10,
+    "atkBaseGrowthPerLevel": 4.5,
+    "matkBaseGrowthPerLevel": 1.3,
+    "defBaseGrowthPerLevel": 3,
+    "mdefBaseGrowthPerLevel": 2.1,
+    "signatureMechanics": [
+      "AoE sweep control & sturdy frontliner"
+    ]
+  },
+  {
+    "jobId": "paladin",
+    "displayName": "Paladin",
+    "displayNameVi": "Thánh Kỵ Sĩ",
+    "roleIdentity": "Holy Vanguard Tank/Support",
+    "primaryAttr": "con",
+    "secondaryAttr": "str",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 39,
+    "mpBaseGrowthPerLevel": 14,
+    "atkBaseGrowthPerLevel": 3.6,
+    "matkBaseGrowthPerLevel": 3.1,
+    "defBaseGrowthPerLevel": 3.7,
+    "mdefBaseGrowthPerLevel": 3.2,
+    "signatureMechanics": [
+      "Aegis barriers, holy cleave & party heal"
+    ]
+  },
+  {
+    "jobId": "guardian",
+    "displayName": "Guardian",
+    "displayNameVi": "Hộ Vệ Hoàng Gia",
+    "roleIdentity": "Apex Main Tank",
+    "primaryAttr": "con",
+    "secondaryAttr": "str",
+    "primaryEfficiencyBonusPct": 13,
+    "secondaryEfficiencyBonusPct": 5,
+    "hpBaseGrowthPerLevel": 46,
+    "mpBaseGrowthPerLevel": 11,
+    "atkBaseGrowthPerLevel": 2.8,
+    "matkBaseGrowthPerLevel": 1.4,
+    "defBaseGrowthPerLevel": 4.5,
+    "mdefBaseGrowthPerLevel": 3.6,
+    "signatureMechanics": [
+      "Highest EHP, shields & crowd immunity (cannot match Berserker DPS)"
+    ]
+  },
+  {
+    "jobId": "saint",
+    "displayName": "Saint",
+    "displayNameVi": "Thánh Sư",
+    "roleIdentity": "Apex Party Healer & Buffer",
+    "primaryAttr": "int",
+    "secondaryAttr": "con",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 28,
+    "mpBaseGrowthPerLevel": 22,
+    "atkBaseGrowthPerLevel": 1.4,
+    "matkBaseGrowthPerLevel": 4.6,
+    "defBaseGrowthPerLevel": 2.2,
+    "mdefBaseGrowthPerLevel": 3.8,
+    "signatureMechanics": [
+      "Highest HPS, cleanses & sanctuary healing circles"
+    ]
+  },
+  {
+    "jobId": "exorcist",
+    "displayName": "Exorcist",
+    "displayNameVi": "Trừ Tà Sư",
+    "roleIdentity": "Sacred Lightning Magic Striker",
+    "primaryAttr": "int",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 25,
+    "mpBaseGrowthPerLevel": 19,
+    "atkBaseGrowthPerLevel": 1.5,
+    "matkBaseGrowthPerLevel": 5.3,
+    "defBaseGrowthPerLevel": 1.9,
+    "mdefBaseGrowthPerLevel": 3.2,
+    "signatureMechanics": [
+      "Boss holy-lightning magic penetration"
+    ]
+  },
+  {
+    "jobId": "elementalist",
+    "displayName": "Elementalist",
+    "displayNameVi": "Nguyên Tố Sư",
+    "roleIdentity": "Elemental AoE Cataclysm",
+    "primaryAttr": "int",
+    "primaryEfficiencyBonusPct": 14,
+    "secondaryEfficiencyBonusPct": 0,
+    "hpBaseGrowthPerLevel": 21,
+    "mpBaseGrowthPerLevel": 24,
+    "atkBaseGrowthPerLevel": 1,
+    "matkBaseGrowthPerLevel": 5.9,
+    "defBaseGrowthPerLevel": 1.5,
+    "mdefBaseGrowthPerLevel": 3,
+    "signatureMechanics": [
+      "Pure INT focus, devastating multi-element AoE"
+    ]
+  },
+  {
+    "jobId": "arcanist",
+    "displayName": "Arcanist",
+    "displayNameVi": "Bí Ẩn Sư",
+    "roleIdentity": "Cosmic CDR & Boss Nuker",
+    "primaryAttr": "int",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 22,
+    "mpBaseGrowthPerLevel": 22,
+    "atkBaseGrowthPerLevel": 1.1,
+    "matkBaseGrowthPerLevel": 5.5,
+    "defBaseGrowthPerLevel": 1.6,
+    "mdefBaseGrowthPerLevel": 3.1,
+    "signatureMechanics": [
+      "Cooldown compression & boss magic penetration"
+    ]
+  },
+  {
+    "jobId": "shadowblade",
+    "displayName": "Shadowblade",
+    "displayNameVi": "Ảnh Nhận",
+    "roleIdentity": "Single-Target Execute Assassin",
+    "primaryAttr": "agi",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 7,
+    "hpBaseGrowthPerLevel": 22,
+    "mpBaseGrowthPerLevel": 11,
+    "atkBaseGrowthPerLevel": 5.4,
+    "matkBaseGrowthPerLevel": 1.2,
+    "defBaseGrowthPerLevel": 1.7,
+    "mdefBaseGrowthPerLevel": 1.7,
+    "signatureMechanics": [
+      "Highest single-target burst crits & executes"
+    ]
+  },
+  {
+    "jobId": "phantom",
+    "displayName": "Phantom",
+    "displayNameVi": "Ảo Ảnh Sát Thủ",
+    "roleIdentity": "Evasive Clone AoE Skirmisher",
+    "primaryAttr": "agi",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 24,
+    "mpBaseGrowthPerLevel": 12,
+    "atkBaseGrowthPerLevel": 4.8,
+    "matkBaseGrowthPerLevel": 1.8,
+    "defBaseGrowthPerLevel": 2,
+    "mdefBaseGrowthPerLevel": 2,
+    "signatureMechanics": [
+      "Illusion combos & high evasion survivability"
+    ]
+  },
+  {
+    "jobId": "martial_artist",
+    "displayName": "Martial Artist",
+    "displayNameVi": "Võ Thánh",
+    "roleIdentity": "Blazing Chi Armor-Breaker",
+    "primaryAttr": "str",
+    "secondaryAttr": "agi",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 32,
+    "mpBaseGrowthPerLevel": 11,
+    "atkBaseGrowthPerLevel": 5.3,
+    "matkBaseGrowthPerLevel": 1.5,
+    "defBaseGrowthPerLevel": 2.6,
+    "mdefBaseGrowthPerLevel": 2,
+    "signatureMechanics": [
+      "Heavy chi armor break & stun shockwaves"
+    ]
+  },
+  {
+    "jobId": "duelist",
+    "displayName": "Duelist",
+    "displayNameVi": "Quyết Đấu Sư",
+    "roleIdentity": "Counter-Strike Tempo Fighter",
+    "primaryAttr": "dex",
+    "secondaryAttr": "agi",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 28,
+    "mpBaseGrowthPerLevel": 11,
+    "atkBaseGrowthPerLevel": 4.9,
+    "matkBaseGrowthPerLevel": 1.3,
+    "defBaseGrowthPerLevel": 2.3,
+    "mdefBaseGrowthPerLevel": 2,
+    "signatureMechanics": [
+      "High ASPD chains, counter ripostes & PvP mobility"
+    ]
+  },
+  {
+    "jobId": "sniper",
+    "displayName": "Sniper",
+    "displayNameVi": "Xạ Thủ Thần Tiễn",
+    "roleIdentity": "Extreme-Range Boss Marksman",
+    "primaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 14,
+    "secondaryEfficiencyBonusPct": 0,
+    "hpBaseGrowthPerLevel": 21,
+    "mpBaseGrowthPerLevel": 12,
+    "atkBaseGrowthPerLevel": 5.6,
+    "matkBaseGrowthPerLevel": 1.3,
+    "defBaseGrowthPerLevel": 1.6,
+    "mdefBaseGrowthPerLevel": 1.7,
+    "signatureMechanics": [
+      "Pure DEX accuracy & armor-piercing boss railshots"
+    ]
+  },
+  {
+    "jobId": "ranger",
+    "displayName": "Ranger",
+    "displayNameVi": "Du Hiệp Rừng Thẳm",
+    "roleIdentity": "Mobile AoE Trap Marksman",
+    "primaryAttr": "agi",
+    "secondaryAttr": "dex",
+    "primaryEfficiencyBonusPct": 12,
+    "secondaryEfficiencyBonusPct": 6,
+    "hpBaseGrowthPerLevel": 24,
+    "mpBaseGrowthPerLevel": 13,
+    "atkBaseGrowthPerLevel": 4.8,
+    "matkBaseGrowthPerLevel": 1.8,
+    "defBaseGrowthPerLevel": 1.9,
+    "mdefBaseGrowthPerLevel": 1.9,
+    "signatureMechanics": [
+      "Kiting movement speed & elemental nature traps"
+    ]
+  }
+]

@@ -1,0 +1,2761 @@
+{
+  "manifestEntries": 172,
+  "existing": 172,
+  "decoded": 172,
+  "missing": [],
+  "incorrectDimensions": [],
+  "assets": [
+    {
+      "id": "environment/buildings/house",
+      "path": "/assets/elysia/environment/buildings/house.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        343,
+        462
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/training",
+      "path": "/assets/elysia/environment/buildings/training.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        475,
+        467
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/item-shop",
+      "path": "/assets/elysia/environment/buildings/item-shop.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        446,
+        481
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/blacksmith",
+      "path": "/assets/elysia/environment/buildings/blacksmith.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        475,
+        498
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/equipment-shop",
+      "path": "/assets/elysia/environment/buildings/equipment-shop.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        446,
+        475
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/storage",
+      "path": "/assets/elysia/environment/buildings/storage.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        471,
+        467
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/market-cream",
+      "path": "/assets/elysia/environment/buildings/market-cream.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        398,
+        449
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/market-blue",
+      "path": "/assets/elysia/environment/buildings/market-blue.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        404,
+        448
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/sakura",
+      "path": "/assets/elysia/environment/buildings/sakura.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        433,
+        441
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/maple",
+      "path": "/assets/elysia/environment/buildings/maple.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        443,
+        414
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/pine",
+      "path": "/assets/elysia/environment/buildings/pine.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        350,
+        482
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/sacred-fountain",
+      "path": "/assets/elysia/environment/buildings/sacred-fountain.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        419,
+        469
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/torii",
+      "path": "/assets/elysia/environment/buildings/torii.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        388,
+        470
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/bridge",
+      "path": "/assets/elysia/environment/buildings/bridge.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        475,
+        325
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/cave",
+      "path": "/assets/elysia/environment/buildings/cave.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        470,
+        455
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/buildings/watermill",
+      "path": "/assets/elysia/environment/buildings/watermill.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        423,
+        458
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/grass-a",
+      "path": "/assets/elysia/environment/terrain/grass-a.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/grass-b",
+      "path": "/assets/elysia/environment/terrain/grass-b.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/grass-c",
+      "path": "/assets/elysia/environment/terrain/grass-c.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/grass-shade",
+      "path": "/assets/elysia/environment/terrain/grass-shade.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/stone-a",
+      "path": "/assets/elysia/environment/terrain/stone-a.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/stone-b",
+      "path": "/assets/elysia/environment/terrain/stone-b.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/stone-c",
+      "path": "/assets/elysia/environment/terrain/stone-c.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/plaza",
+      "path": "/assets/elysia/environment/terrain/plaza.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/dirt-a",
+      "path": "/assets/elysia/environment/terrain/dirt-a.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/dirt-b",
+      "path": "/assets/elysia/environment/terrain/dirt-b.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/dirt-c",
+      "path": "/assets/elysia/environment/terrain/dirt-c.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/soil",
+      "path": "/assets/elysia/environment/terrain/soil.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/water-0",
+      "path": "/assets/elysia/environment/terrain/water-0.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/water-1",
+      "path": "/assets/elysia/environment/terrain/water-1.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/water-2",
+      "path": "/assets/elysia/environment/terrain/water-2.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/terrain/water-3",
+      "path": "/assets/elysia/environment/terrain/water-3.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": false,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/training-dummy",
+      "path": "/assets/elysia/environment/props/training-dummy.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        191
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/chest",
+      "path": "/assets/elysia/environment/props/chest.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        160,
+        144
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/flowers",
+      "path": "/assets/elysia/environment/props/flowers.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        171,
+        109
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/bush",
+      "path": "/assets/elysia/environment/props/bush.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        169,
+        108
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/rock",
+      "path": "/assets/elysia/environment/props/rock.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        404,
+        309
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/fence",
+      "path": "/assets/elysia/environment/props/fence.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        415,
+        370
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/lantern",
+      "path": "/assets/elysia/environment/props/lantern.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        238,
+        532
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/barrel",
+      "path": "/assets/elysia/environment/props/barrel.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        319,
+        412
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/crate",
+      "path": "/assets/elysia/environment/props/crate.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        148,
+        166
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/bench",
+      "path": "/assets/elysia/environment/props/bench.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        180,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/splash",
+      "path": "/assets/elysia/environment/props/splash.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        268,
+        66
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/lilies",
+      "path": "/assets/elysia/environment/props/lilies.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        156,
+        66
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/shadow",
+      "path": "/assets/elysia/environment/props/shadow.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        192,
+        80
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/petal",
+      "path": "/assets/elysia/environment/props/petal.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        64,
+        64
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/destination",
+      "path": "/assets/elysia/environment/props/destination.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        192,
+        96
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/props/grass-tuft",
+      "path": "/assets/elysia/environment/props/grass-tuft.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        136,
+        124
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/road-north",
+      "path": "/assets/elysia/environment/transitions/road-north.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/road-east",
+      "path": "/assets/elysia/environment/transitions/road-east.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/road-south",
+      "path": "/assets/elysia/environment/transitions/road-south.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/road-west",
+      "path": "/assets/elysia/environment/transitions/road-west.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/shore-north",
+      "path": "/assets/elysia/environment/transitions/shore-north.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/shore-east",
+      "path": "/assets/elysia/environment/transitions/shore-east.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/shore-south",
+      "path": "/assets/elysia/environment/transitions/shore-south.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/shore-west",
+      "path": "/assets/elysia/environment/transitions/shore-west.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/dirt-north",
+      "path": "/assets/elysia/environment/transitions/dirt-north.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/dirt-east",
+      "path": "/assets/elysia/environment/transitions/dirt-east.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/dirt-south",
+      "path": "/assets/elysia/environment/transitions/dirt-south.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/dirt-west",
+      "path": "/assets/elysia/environment/transitions/dirt-west.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/plaza-north",
+      "path": "/assets/elysia/environment/transitions/plaza-north.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/plaza-east",
+      "path": "/assets/elysia/environment/transitions/plaza-east.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/plaza-south",
+      "path": "/assets/elysia/environment/transitions/plaza-south.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "environment/transitions/plaza-west",
+      "path": "/assets/elysia/environment/transitions/plaza-west.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "characters/animations/player",
+      "path": "/assets/elysia/characters/animations/player.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "characters/animations/elder",
+      "path": "/assets/elysia/characters/animations/elder.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "characters/animations/trainer",
+      "path": "/assets/elysia/characters/animations/trainer.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "characters/animations/merchant",
+      "path": "/assets/elysia/characters/animations/merchant.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "characters/animations/slime",
+      "path": "/assets/elysia/characters/animations/slime.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "characters/animations/goblin",
+      "path": "/assets/elysia/characters/animations/goblin.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "characters/animations/dark_dragon",
+      "path": "/assets/elysia/characters/animations/dark_dragon.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-player",
+      "path": "/assets/elysia/ui/portrait-player.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-elder",
+      "path": "/assets/elysia/ui/portrait-elder.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-merchant",
+      "path": "/assets/elysia/ui/portrait-merchant.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-trainer",
+      "path": "/assets/elysia/ui/portrait-trainer.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-slime",
+      "path": "/assets/elysia/ui/portrait-slime.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-dragon",
+      "path": "/assets/elysia/ui/portrait-dragon.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/paperdoll-player",
+      "path": "/assets/elysia/ui/paperdoll-player.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        211,
+        588
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-ancient-treant",
+      "path": "/assets/elysia/ui/portrait-ancient-treant.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-moon-hydra",
+      "path": "/assets/elysia/ui/portrait-moon-hydra.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-ancient-titan",
+      "path": "/assets/elysia/ui/portrait-ancient-titan.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-ignis-dragon",
+      "path": "/assets/elysia/ui/portrait-ignis-dragon.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/portrait-abyss-overlord",
+      "path": "/assets/elysia/ui/portrait-abyss-overlord.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "ui/icon-crafting-anvil",
+      "path": "/assets/elysia/ui/icon-crafting-anvil.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        128,
+        128
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_sword_slash_thumb",
+      "path": "/assets/elysia/vfx/vfx_sword_slash_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_sword_slash",
+      "path": "/assets/elysia/vfx/vfx_sword_slash.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_double_slash_thumb",
+      "path": "/assets/elysia/vfx/vfx_double_slash_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_double_slash",
+      "path": "/assets/elysia/vfx/vfx_double_slash.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_spin_slash_thumb",
+      "path": "/assets/elysia/vfx/vfx_spin_slash_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_spin_slash",
+      "path": "/assets/elysia/vfx/vfx_spin_slash.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_heavy_cleave_thumb",
+      "path": "/assets/elysia/vfx/vfx_heavy_cleave_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_heavy_cleave",
+      "path": "/assets/elysia/vfx/vfx_heavy_cleave.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_sword_combo_thumb",
+      "path": "/assets/elysia/vfx/vfx_sword_combo_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_sword_combo",
+      "path": "/assets/elysia/vfx/vfx_sword_combo.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_thrust_thumb",
+      "path": "/assets/elysia/vfx/vfx_thrust_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_thrust",
+      "path": "/assets/elysia/vfx/vfx_thrust.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_spear_sweep_thumb",
+      "path": "/assets/elysia/vfx/vfx_spear_sweep_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_spear_sweep",
+      "path": "/assets/elysia/vfx/vfx_spear_sweep.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1792,
+        1792
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_dash_strike_thumb",
+      "path": "/assets/elysia/vfx/vfx_dash_strike_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_dash_strike",
+      "path": "/assets/elysia/vfx/vfx_dash_strike.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_divine_shield_thumb",
+      "path": "/assets/elysia/vfx/vfx_divine_shield_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_divine_shield",
+      "path": "/assets/elysia/vfx/vfx_divine_shield.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_smite_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_smite_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_smite",
+      "path": "/assets/elysia/vfx/vfx_holy_smite.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_blessing_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_blessing_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_blessing",
+      "path": "/assets/elysia/vfx/vfx_holy_blessing.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_holy_pillar_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_holy_pillar_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_holy_pillar",
+      "path": "/assets/elysia/vfx/vfx_holy_holy_pillar.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2816,
+        2560
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_divine_heal_thumb",
+      "path": "/assets/elysia/vfx/vfx_divine_heal_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_divine_heal",
+      "path": "/assets/elysia/vfx/vfx_divine_heal.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_heal_aoe_thumb",
+      "path": "/assets/elysia/vfx/vfx_heal_aoe_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_heal_aoe",
+      "path": "/assets/elysia/vfx/vfx_heal_aoe.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_resurrection_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_resurrection_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_resurrection",
+      "path": "/assets/elysia/vfx/vfx_holy_resurrection.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        3328,
+        3072
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_sunburst_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_sunburst_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_holy_sunburst",
+      "path": "/assets/elysia/vfx/vfx_holy_sunburst.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2816,
+        2816
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_fireball_thumb",
+      "path": "/assets/elysia/vfx/vfx_fireball_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_fireball",
+      "path": "/assets/elysia/vfx/vfx_fireball.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_fire_meteor_thumb",
+      "path": "/assets/elysia/vfx/vfx_fire_meteor_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_fire_meteor",
+      "path": "/assets/elysia/vfx/vfx_fire_meteor.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        3328,
+        3072
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_fire_flame_pillar_thumb",
+      "path": "/assets/elysia/vfx/vfx_fire_flame_pillar_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_fire_flame_pillar",
+      "path": "/assets/elysia/vfx/vfx_fire_flame_pillar.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        3328,
+        3072
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_ice_lance_thumb",
+      "path": "/assets/elysia/vfx/vfx_ice_lance_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_ice_lance",
+      "path": "/assets/elysia/vfx/vfx_ice_lance.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_ice_blizzard_vortex_thumb",
+      "path": "/assets/elysia/vfx/vfx_ice_blizzard_vortex_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_ice_blizzard_vortex",
+      "path": "/assets/elysia/vfx/vfx_ice_blizzard_vortex.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_frost_nova_thumb",
+      "path": "/assets/elysia/vfx/vfx_frost_nova_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_frost_nova",
+      "path": "/assets/elysia/vfx/vfx_frost_nova.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2816,
+        2560
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_lightning_strike_thumb",
+      "path": "/assets/elysia/vfx/vfx_lightning_strike_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_lightning_strike",
+      "path": "/assets/elysia/vfx/vfx_lightning_strike.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2560,
+        2560
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_lightning_chain_lightning_thumb",
+      "path": "/assets/elysia/vfx/vfx_lightning_chain_lightning_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_lightning_chain_lightning",
+      "path": "/assets/elysia/vfx/vfx_lightning_chain_lightning.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2048,
+        1792
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_arcane_mana_burst_thumb",
+      "path": "/assets/elysia/vfx/vfx_arcane_mana_burst_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_arcane_mana_burst",
+      "path": "/assets/elysia/vfx/vfx_arcane_mana_burst.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2048,
+        1792
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_arcane_star_fall_thumb",
+      "path": "/assets/elysia/vfx/vfx_arcane_star_fall_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_arcane_star_fall",
+      "path": "/assets/elysia/vfx/vfx_arcane_star_fall.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2304,
+        2304
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_dagger_flurry_thumb",
+      "path": "/assets/elysia/vfx/vfx_dagger_flurry_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_dagger_flurry",
+      "path": "/assets/elysia/vfx/vfx_dagger_flurry.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_shadow_step_thumb",
+      "path": "/assets/elysia/vfx/vfx_shadow_step_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_shadow_step",
+      "path": "/assets/elysia/vfx/vfx_shadow_step.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1792,
+        1792
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_shadow_dark_explosion_thumb",
+      "path": "/assets/elysia/vfx/vfx_shadow_dark_explosion_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_shadow_dark_explosion",
+      "path": "/assets/elysia/vfx/vfx_shadow_dark_explosion.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2816,
+        2816
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_shadow_life_steal_thumb",
+      "path": "/assets/elysia/vfx/vfx_shadow_life_steal_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_shadow_life_steal",
+      "path": "/assets/elysia/vfx/vfx_shadow_life_steal.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_power_punch_thumb",
+      "path": "/assets/elysia/vfx/vfx_power_punch_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_power_punch",
+      "path": "/assets/elysia/vfx/vfx_power_punch.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_earth_stomp_thumb",
+      "path": "/assets/elysia/vfx/vfx_earth_stomp_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_earth_stomp",
+      "path": "/assets/elysia/vfx/vfx_earth_stomp.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2816,
+        2560
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_ground_slam_thumb",
+      "path": "/assets/elysia/vfx/vfx_ground_slam_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_ground_slam",
+      "path": "/assets/elysia/vfx/vfx_ground_slam.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2560,
+        2560
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_fire_ring_thumb",
+      "path": "/assets/elysia/vfx/vfx_fire_ring_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_fire_ring",
+      "path": "/assets/elysia/vfx/vfx_fire_ring.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2816,
+        2816
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_moves_arrow_shot_thumb",
+      "path": "/assets/elysia/vfx/vfx_moves_arrow_shot_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_moves_arrow_shot",
+      "path": "/assets/elysia/vfx/vfx_moves_arrow_shot.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_projectiles_arrow_thumb",
+      "path": "/assets/elysia/vfx/vfx_projectiles_arrow_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_projectiles_arrow",
+      "path": "/assets/elysia/vfx/vfx_projectiles_arrow.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1280,
+        1024
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_nature_poison_cloud_thumb",
+      "path": "/assets/elysia/vfx/vfx_nature_poison_cloud_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_nature_poison_cloud",
+      "path": "/assets/elysia/vfx/vfx_nature_poison_cloud.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2816,
+        2816
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_nature_leaf_storm_thumb",
+      "path": "/assets/elysia/vfx/vfx_nature_leaf_storm_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_nature_leaf_storm",
+      "path": "/assets/elysia/vfx/vfx_nature_leaf_storm.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_pickups_loot_beam_thumb",
+      "path": "/assets/elysia/vfx/vfx_pickups_loot_beam_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_pickups_loot_beam",
+      "path": "/assets/elysia/vfx/vfx_pickups_loot_beam.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_pickups_chest_open_thumb",
+      "path": "/assets/elysia/vfx/vfx_pickups_chest_open_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_pickups_chest_open",
+      "path": "/assets/elysia/vfx/vfx_pickups_chest_open.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        3072,
+        3072
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_critical_hit_thumb",
+      "path": "/assets/elysia/vfx/vfx_critical_hit_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_critical_hit",
+      "path": "/assets/elysia/vfx/vfx_critical_hit.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_blunt_hit_thumb",
+      "path": "/assets/elysia/vfx/vfx_blunt_hit_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_blunt_hit",
+      "path": "/assets/elysia/vfx/vfx_blunt_hit.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1280
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_nature_root_snare_thumb",
+      "path": "/assets/elysia/vfx/vfx_nature_root_snare_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_nature_root_snare",
+      "path": "/assets/elysia/vfx/vfx_nature_root_snare.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_water_geyser_thumb",
+      "path": "/assets/elysia/vfx/vfx_water_geyser_thumb.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        256,
+        256
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    },
+    {
+      "id": "vfx/vfx_water_geyser",
+      "path": "/assets/elysia/vfx/vfx_water_geyser.png",
+      "exists": true,
+      "status": "present",
+      "decoded": true,
+      "format": "PNG",
+      "dimensions": [
+        3328,
+        3072
+      ],
+      "dimensionsMatch": true,
+      "transparency": true,
+      "httpStatus": 200,
+      "mime": "image/png"
+    }
+  ]
+}

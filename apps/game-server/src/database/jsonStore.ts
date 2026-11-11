@@ -10,6 +10,20 @@ export interface DatabaseStore {
   monsters: any[];
   quests: any[];
   logs: any[];
+  guilds: any[];
+  guildApplications: any[];
+  guildWars: any[];
+  merchantAssociations: any[];
+  marketListings: any[];
+  marketBuyOrders: any[];
+  auctions: any[];
+  supplyContracts: any[];
+  caravanMissions: any[];
+  territories: any[];
+  farmPlots: any[];
+  gatheringNodesRuntime: any[];
+  auditLogs: any[];
+  processedTxIds: string[];
 }
 
 const DEFAULT_STORE: DatabaseStore = {
@@ -20,6 +34,20 @@ const DEFAULT_STORE: DatabaseStore = {
   monsters: [],
   quests: [],
   logs: [],
+  guilds: [],
+  guildApplications: [],
+  guildWars: [],
+  merchantAssociations: [],
+  marketListings: [],
+  marketBuyOrders: [],
+  auctions: [],
+  supplyContracts: [],
+  caravanMissions: [],
+  territories: [],
+  farmPlots: [],
+  gatheringNodesRuntime: [],
+  auditLogs: [],
+  processedTxIds: [],
 };
 
 export class JsonStore {
@@ -59,22 +87,31 @@ export class JsonStore {
   }
 
   private saveImmediate(data: DatabaseStore) {
+    const tempPath = `${this.dbFilePath}.${process.pid}.${Date.now()}_${Math.random().toString(36).slice(2, 6)}.tmp`;
+    const serialized = JSON.stringify(data, null, 2);
     try {
-      const tempPath = `${this.dbFilePath}.tmp`;
-      fs.writeFileSync(tempPath, JSON.stringify(data, null, 2), 'utf-8');
-      fs.renameSync(tempPath, this.dbFilePath);
+      fs.writeFileSync(tempPath, serialized, 'utf-8');
+      try {
+        fs.renameSync(tempPath, this.dbFilePath);
+      } catch {
+        // Windows EPERM/EBUSY fallback when target file is briefly locked
+        fs.writeFileSync(this.dbFilePath, serialized, 'utf-8');
+      }
     } catch (err) {
       console.error('[JsonStore] Save error:', err);
+    } finally {
+      try {
+        if (fs.existsSync(tempPath)) {
+          fs.unlinkSync(tempPath);
+        }
+      } catch {
+        // ignore cleanup race
+      }
     }
   }
 
   public save() {
-    if (this.isWriting) return;
-    this.isWriting = true;
-    setImmediate(() => {
-      this.saveImmediate(this.data);
-      this.isWriting = false;
-    });
+    this.saveImmediate(this.data);
   }
 
   // --- Entity Accessors ---
@@ -104,5 +141,65 @@ export class JsonStore {
 
   public get logs(): any[] {
     return this.data.logs;
+  }
+
+  public get guilds(): any[] {
+    return (this.data.guilds ||= []);
+  }
+
+  public get guildApplications(): any[] {
+    return (this.data.guildApplications ||= []);
+  }
+
+  public get guildWars(): any[] {
+    return (this.data.guildWars ||= []);
+  }
+
+  public get merchantAssociations(): any[] {
+    return (this.data.merchantAssociations ||= []);
+  }
+
+  public get marketListings(): any[] {
+    return (this.data.marketListings ||= []);
+  }
+
+  public get marketBuyOrders(): any[] {
+    return (this.data.marketBuyOrders ||= []);
+  }
+
+  public get auctions(): any[] {
+    return (this.data.auctions ||= []);
+  }
+
+  public get supplyContracts(): any[] {
+    return (this.data.supplyContracts ||= []);
+  }
+
+  public get caravanMissions(): any[] {
+    return (this.data.caravanMissions ||= []);
+  }
+
+  public get territories(): any[] {
+    return (this.data.territories ||= []);
+  }
+
+  public get farmPlots(): any[] {
+    return (this.data.farmPlots ||= []);
+  }
+
+  public get gatheringNodesRuntime(): any[] {
+    return (this.data.gatheringNodesRuntime ||= []);
+  }
+
+  public set gatheringNodesRuntime(v: any[]) {
+    this.data.gatheringNodesRuntime = v;
+  }
+
+  public get auditLogs(): any[] {
+    return (this.data.auditLogs ||= []);
+  }
+
+  public get processedTxIds(): string[] {
+    return (this.data.processedTxIds ||= []);
   }
 }

@@ -1,0 +1,251 @@
+[
+  {
+    "id": "TITLE_FIRST_AWAKENED",
+    "name": "First Awakened",
+    "nameVi": "Thức Tỉnh Giả Tiên Phong",
+    "displayPrefix": "[Thức Tỉnh]",
+    "colorHex": "#fbbf24",
+    "description": "Danh hiệu vĩnh viễn dành cho người vượt Thánh Điện Thức Tỉnh và hoàn tất Chuyển Chức Lần 1.",
+    "category": "quest",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "questIds": [
+        "QUEST_JOB_05_DESTINY"
+      ],
+      "minLevel": 15
+    },
+    "statBonuses": {
+      "atk": 18,
+      "matk": 18,
+      "maxHp": 150,
+      "atkPct": 3,
+      "matkPct": 3
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_GOBLIN_TRACKER",
+    "name": "Goblin Evo Tracker",
+    "nameVi": "Thợ Săn Dấu Vết GoblinEvo",
+    "displayPrefix": "[Truy Vết Goblin]",
+    "colorHex": "#34d399",
+    "description": "Danh hiệu mở khóa khi giải mã dấu vết GoblinEvo tại Bìa Rừng Tinh Linh.",
+    "category": "quest",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "questIds": [
+        "QUEST_GOBLIN_EVO_02_OUTSKIRTS"
+      ],
+      "killedMonsterIds": {
+        "mon_forest_goblin": 5
+      }
+    },
+    "statBonuses": {
+      "agi": 8,
+      "maxHp": 120,
+      "critRatePct": 3
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_GOBLIN_EVO_CONQUEROR",
+    "name": "GoblinEvo Conqueror",
+    "nameVi": "Chinh Phục Kỷ Nguyên GoblinEvo",
+    "displayPrefix": "[GoblinEvo]",
+    "colorHex": "#f97316",
+    "description": "Hoàn tất toàn bộ chuỗi 4 giai đoạn GoblinEvo và khuất phục Ancient Treant.",
+    "category": "boss",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "completedChainIds": [
+        "CHAIN_GOBLIN_EVO_CHRONICLES"
+      ],
+      "killedMonsterIds": {
+        "boss_ancient_treant": 1
+      }
+    },
+    "statBonuses": {
+      "atk": 35,
+      "matk": 35,
+      "atkPct": 5,
+      "matkPct": 5,
+      "skillDamagePct": 4
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_SEEKER_OF_SECRETS",
+    "name": "Seeker of Secrets",
+    "nameVi": "Người Giải Mã Bí Ẩn",
+    "displayPrefix": "[Giải Mã]",
+    "colorHex": "#38bdf8",
+    "description": "Khám phá và hoàn thành nhiệm vụ bí ẩn đầu tiên tại Giếng Nước Cổ Thôn Khởi Nguyên.",
+    "category": "hidden_quest",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "questIds": [
+        "QUEST_HIDDEN_ANCIENT_WELL"
+      ],
+      "ownedUniqueItemIds": [
+        "UEQ_WELLSPRING_AMULET"
+      ]
+    },
+    "statBonuses": {
+      "def": 20,
+      "mdef": 20,
+      "maxHp": 220,
+      "damageReductionPct": 4
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_GOBLIN_BANE",
+    "name": "Goblin Bane",
+    "nameVi": "Khắc Tinh Vương Quốc Goblin",
+    "displayPrefix": "[Diệt Goblin]",
+    "colorHex": "#c084fc",
+    "description": "Hoàn thành nhiệm vụ ẩn Ký Ức Vua Goblin Hắc Hóa.",
+    "category": "hidden_quest",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "questIds": [
+        "QUEST_HIDDEN_GOBLIN_KING_MEMORY"
+      ]
+    },
+    "statBonuses": {
+      "atk": 25,
+      "critRatePct": 4,
+      "skillDamagePct": 6
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_WORLD_EXPLORER",
+    "name": "World Explorer",
+    "nameVi": "Nhà Thám Hiểm Tam Đại Đô Thị",
+    "displayPrefix": "[Thám Hiểm]",
+    "colorHex": "#60a5fa",
+    "description": "Đặt chân tới cả 3 đại thành phố Elysia Capital, Sylvaris và Drakhen.",
+    "category": "exploration",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "visitedMapIds": [
+        "city_elysia_capital",
+        "city_sylvaris",
+        "city_drakhen"
+      ]
+    },
+    "statBonuses": {
+      "str": 5,
+      "dex": 5,
+      "agi": 5,
+      "int": 5,
+      "con": 5,
+      "moveSpeedPct": 10,
+      "expBonusPct": 6
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_DRAGON_CHRONICLER",
+    "name": "Dragon Chronicler",
+    "nameVi": "Hiền Giả Biên Niên Long Tộc",
+    "displayPrefix": "[Long Sử]",
+    "colorHex": "#ef4444",
+    "description": "Hoàn tất bí mật Cổ Thư Long Tộc Thất Truyền cùng Học Giả Kael tại Drakhen.",
+    "category": "hidden_quest",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "questIds": [
+        "QUEST_HIDDEN_DRAGON_SCHOLAR_RIDDLE"
+      ]
+    },
+    "statBonuses": {
+      "atk": 45,
+      "matk": 45,
+      "atkPct": 8,
+      "matkPct": 8,
+      "critDamagePct": 12
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_SLIME_HUNTER",
+    "name": "Slime Hunter",
+    "nameVi": "Thợ Săn Slime Tân Thủ",
+    "displayPrefix": "[Diệt Slime]",
+    "colorHex": "#4ade80",
+    "description": "Đánh bại Slime Xanh & Slime Đỏ tại Đồng Cỏ Tân Thủ.",
+    "category": "monster_hunt",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "killedMonsterIds": {
+        "mon_green_slime": 3,
+        "mon_red_slime": 2
+      }
+    },
+    "statBonuses": {
+      "atk": 8,
+      "matk": 8,
+      "maxHp": 80,
+      "expBonusPct": 3
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_BEAST_TAMER",
+    "name": "Beginner Frontier Scout",
+    "nameVi": "Chinh Phục Rừng Thú Tân Thủ",
+    "displayPrefix": "[Lục Lâm]",
+    "colorHex": "#fb923c",
+    "description": "Khuất phục Mini Boss Huyết Lang tại Thung Lũng Sói Hoang.",
+    "category": "boss",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "killedMonsterIds": {
+        "mon_blood_wolf": 1
+      }
+    },
+    "statBonuses": {
+      "atk": 15,
+      "def": 12,
+      "maxHp": 150,
+      "moveSpeedPct": 5
+    },
+    "status": "published"
+  },
+  {
+    "id": "TITLE_GOBLIN_CHIEFTAIN_SLAYER",
+    "name": "Goblin Chieftain Slayer",
+    "nameVi": "Kẻ Hủy Diệt Thủ Lĩnh Goblin",
+    "displayPrefix": "[Thủ Lĩnh Sát]",
+    "colorHex": "#f43f5e",
+    "description": "Đánh bại Field Boss Goblin Thủ Lĩnh tại tầng sâu Hang Goblin (Lv.15).",
+    "category": "boss",
+    "isCosmeticOnlyOnEquip": true,
+    "nonRepeatable": true,
+    "unlockConditions": {
+      "killedMonsterIds": {
+        "boss_goblin_chieftain": 1
+      }
+    },
+    "statBonuses": {
+      "atk": 24,
+      "matk": 24,
+      "def": 15,
+      "maxHp": 220,
+      "critRatePct": 3,
+      "expBonusPct": 5
+    },
+    "status": "published"
+  }
+]

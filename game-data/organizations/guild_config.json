@@ -1,0 +1,281 @@
+{
+  "config": {
+    "requiredLevel": 30,
+    "creationGoldCost": 500000,
+    "requiredSealItemId": "ITEM_GUILD_CREATION_SEAL",
+    "minFoundingMembers": 5,
+    "maxLevel": 10,
+    "baseMemberCapacity": 25,
+    "capacityPerLevel": 5,
+    "baseStorageCapacity": 40,
+    "storageCapacityPerVaultLevel": 20,
+    "warDurationSec": 1800
+  },
+  "levelExpTable": [
+    {
+      "level": 1,
+      "requiredExp": 1200
+    },
+    {
+      "level": 2,
+      "requiredExp": 3514
+    },
+    {
+      "level": 3,
+      "requiredExp": 6587
+    },
+    {
+      "level": 4,
+      "requiredExp": 10289
+    },
+    {
+      "level": 5,
+      "requiredExp": 14541
+    },
+    {
+      "level": 6,
+      "requiredExp": 19289
+    },
+    {
+      "level": 7,
+      "requiredExp": 24495
+    },
+    {
+      "level": 8,
+      "requiredExp": 30128
+    },
+    {
+      "level": 9,
+      "requiredExp": 36162
+    },
+    {
+      "level": 10,
+      "requiredExp": 0
+    }
+  ],
+  "defaultRanks": [
+    {
+      "id": "guild_master",
+      "name": "Guild Master",
+      "nameVi": "Bang Chủ",
+      "order": 1,
+      "permissions": [
+        "INVITE_MEMBER",
+        "KICK_MEMBER",
+        "MANAGE_RANKS",
+        "EDIT_ANNOUNCEMENT",
+        "DEPOSIT_STORAGE",
+        "WITHDRAW_STORAGE",
+        "START_RESEARCH",
+        "UPGRADE_BUILDING",
+        "SUMMON_BOSS",
+        "DECLARE_WAR",
+        "MANAGE_TERRITORY",
+        "WITHDRAW_TREASURY"
+      ]
+    },
+    {
+      "id": "vice_master",
+      "name": "Vice Master",
+      "nameVi": "Phó Bang Chủ",
+      "order": 2,
+      "permissions": [
+        "INVITE_MEMBER",
+        "KICK_MEMBER",
+        "EDIT_ANNOUNCEMENT",
+        "DEPOSIT_STORAGE",
+        "WITHDRAW_STORAGE",
+        "START_RESEARCH",
+        "UPGRADE_BUILDING",
+        "SUMMON_BOSS",
+        "DECLARE_WAR",
+        "MANAGE_TERRITORY"
+      ]
+    },
+    {
+      "id": "elder",
+      "name": "Elder",
+      "nameVi": "Trưởng Lão",
+      "order": 3,
+      "permissions": [
+        "INVITE_MEMBER",
+        "EDIT_ANNOUNCEMENT",
+        "DEPOSIT_STORAGE",
+        "WITHDRAW_STORAGE",
+        "START_RESEARCH",
+        "SUMMON_BOSS"
+      ]
+    },
+    {
+      "id": "officer",
+      "name": "Officer",
+      "nameVi": "Chấp Sự",
+      "order": 4,
+      "permissions": [
+        "INVITE_MEMBER",
+        "DEPOSIT_STORAGE",
+        "WITHDRAW_STORAGE"
+      ]
+    },
+    {
+      "id": "member",
+      "name": "Member",
+      "nameVi": "Thành Viên",
+      "order": 5,
+      "permissions": [
+        "DEPOSIT_STORAGE"
+      ]
+    }
+  ],
+  "defaultBuildings": [
+    {
+      "id": "guild_hall",
+      "name": "Elysia Guild Hall",
+      "nameVi": "Đại Sảnh Bang Hội",
+      "level": 1,
+      "maxLevel": 5,
+      "effectDescription": "Mở khóa giới hạn cấp kỹ năng Bang và tăng 5 sức chứa thành viên mỗi cấp."
+    },
+    {
+      "id": "training_ground",
+      "name": "Martial Training Ground",
+      "nameVi": "Diễn Võ Đường",
+      "level": 1,
+      "maxLevel": 5,
+      "effectDescription": "Tăng ATK/DEF chiến đấu và sát thương đánh Boss Bang Hội."
+    },
+    {
+      "id": "vault_annex",
+      "name": "Guild Treasury & Vault",
+      "nameVi": "Bảo Khố Bang Hội",
+      "level": 1,
+      "maxLevel": 5,
+      "effectDescription": "Mở rộng +20 ô Kho Bang Hội mỗi cấp và bảo vệ ngân khố."
+    },
+    {
+      "id": "alchemy_workshop",
+      "name": "Artisan Synthesis Wing",
+      "nameVi": "Công Xưởng Thủ Công",
+      "level": 1,
+      "maxLevel": 5,
+      "effectDescription": "Tăng phẩm chất chế tạo và giảm chi phí nghiên cứu."
+    },
+    {
+      "id": "war_citadel",
+      "name": "Sanctum Bastion",
+      "nameVi": "Pháo Đài Bang Chiến",
+      "level": 1,
+      "maxLevel": 5,
+      "effectDescription": "Tăng điểm phòng thủ Lãnh Thổ và phần thưởng Bang Chiến."
+    }
+  ],
+  "defaultSkills": [
+    {
+      "id": "GSK_BLESSING_EXP",
+      "name": "Scholarly Banner",
+      "nameVi": "Hiệu Triệu Trí Tuệ (+EXP)",
+      "level": 0,
+      "maxLevel": 10,
+      "bonusPerLevelPct": 2,
+      "statKey": "expBonusPct"
+    },
+    {
+      "id": "GSK_VALOR_ATK",
+      "name": "Oath of Valor",
+      "nameVi": "Huyết Thệ Dũng Sĩ (+ATK/MATK)",
+      "level": 0,
+      "maxLevel": 10,
+      "bonusPerLevelPct": 2,
+      "statKey": "atkPct"
+    },
+    {
+      "id": "GSK_IRON_BASTION",
+      "name": "Iron Bastion",
+      "nameVi": "Thành Lũy Thép (+DEF/MDEF)",
+      "level": 0,
+      "maxLevel": 10,
+      "bonusPerLevelPct": 2,
+      "statKey": "defPct"
+    },
+    {
+      "id": "GSK_ARTISAN_GRACE",
+      "name": "Artisan Aura",
+      "nameVi": "Chúc Phúc Công Tượng (+Craft Quality)",
+      "level": 0,
+      "maxLevel": 10,
+      "bonusPerLevelPct": 2,
+      "statKey": "craftQualityPct"
+    },
+    {
+      "id": "GSK_HARVEST_BOUNTY",
+      "name": "Harvest Blessing",
+      "nameVi": "Mùa Màng Bội Thu (+Gather Yield)",
+      "level": 0,
+      "maxLevel": 10,
+      "bonusPerLevelPct": 3,
+      "statKey": "gatherYieldPct"
+    }
+  ],
+  "quests": [
+    {
+      "id": "GQ_DAILY_SUPPLY",
+      "name": "Cung Ứng Lương Thảo Bang (Ngày)",
+      "kind": "daily",
+      "requiredContribTarget": 1,
+      "rewardGuildExp": 250,
+      "rewardContrib": 80,
+      "rewardGold": 400,
+      "description": "Quyên góp Vàng hoặc vật phẩm nghề vào Kho Bang Hội."
+    },
+    {
+      "id": "GQ_DAILY_HUNT",
+      "name": "Tuần Tra Biên Giới (Ngày)",
+      "kind": "daily",
+      "requiredContribTarget": 1,
+      "rewardGuildExp": 320,
+      "rewardContrib": 100,
+      "rewardGold": 600,
+      "description": "Tham gia đẩy lùi quái vật khu vực lân cận hoặc tập trận Bang."
+    },
+    {
+      "id": "GQ_WEEKLY_BOSS",
+      "name": "Chinh Phạt Boss Bang Hội (Tuần)",
+      "kind": "weekly",
+      "requiredContribTarget": 1,
+      "rewardGuildExp": 1400,
+      "rewardContrib": 450,
+      "rewardGold": 4500,
+      "description": "Triệu hồi và gây sát thương lên Boss Thủ Hộ Bang Hội trong tuần."
+    },
+    {
+      "id": "GQ_WEEKLY_WAR",
+      "name": "Chinh Chiến Bảo Vệ Danh Dự (Tuần)",
+      "kind": "weekly",
+      "requiredContribTarget": 1,
+      "rewardGuildExp": 1800,
+      "rewardContrib": 600,
+      "rewardGold": 6000,
+      "description": "Tham dự tối thiểu 1 trận Bang Chiến hoặc Chiến Tranh Lãnh Thổ."
+    }
+  ],
+  "bosses": [
+    {
+      "id": "GBOSS_CRIMSON_COLOSSUS",
+      "name": "Hộ Vệ Dung Nham Bang Hội",
+      "level": 35,
+      "maxHp": 25000,
+      "summonCostGold": 5000,
+      "rewardGuildExp": 900,
+      "rewardTreasuryGold": 15000
+    },
+    {
+      "id": "GBOSS_ETERNAL_DRAGON",
+      "name": "Cổ Long Vĩnh Hằng Bang Hội",
+      "level": 55,
+      "maxHp": 75000,
+      "summonCostGold": 15000,
+      "rewardGuildExp": 2400,
+      "rewardTreasuryGold": 45000
+    }
+  ]
+}

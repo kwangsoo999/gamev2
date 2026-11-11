@@ -1,0 +1,1372 @@
+[
+  {
+    "id": "set_swordsman_apprentice_blade",
+    "name": "Apprentice Blade Set Lv.15",
+    "nameVi": "Bộ Kiếm Tập Sự Lv.15",
+    "description": "Bộ trang bị Apprentice Blade Set Lv.15 cho SWORDSMAN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "swordsman",
+    "tierLevel": 15,
+    "rarity": "uncommon",
+    "category": "class_set",
+    "pieceItemIds": [
+      "ITEM_SWORD_AWAKENED_BLADE",
+      "SET_SWORDSMAN_APPRENTICE_BLADE_HEAD",
+      "ITEM_ARMOR_SWORDSMAN_PLATE",
+      "SET_SWORDSMAN_APPRENTICE_BLADE_GLOVES",
+      "SET_SWORDSMAN_APPRENTICE_BLADE_BOOTS",
+      "SET_SWORDSMAN_APPRENTICE_BLADE_SHOULDER",
+      "SET_SWORDSMAN_APPRENTICE_BLADE_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_APPRENTICE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+18 ATK, +3 STR",
+        "bonuses": {
+          "atk": 18,
+          "str": 3
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+14 DEF, +220 MaxHP, +6% Crit Rate",
+        "bonuses": {
+          "maxHp": 220,
+          "critRatePct": 6,
+          "def": 14
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+42 ATK, +10% ASPD, +16% Skill DMG",
+        "bonuses": {
+          "atk": 42,
+          "skillDamagePct": 16,
+          "aspdPct": 10
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_swordsman_blazing_warrior",
+    "name": "Blazing Warrior Set Lv.35",
+    "nameVi": "Bộ Chiến Binh Rực Lửa Lv.35",
+    "description": "Bộ trang bị Blazing Warrior Set Lv.35 cho SWORDSMAN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "swordsman",
+    "tierLevel": 35,
+    "rarity": "rare",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_SWORDSMAN_BLAZING_WARRIOR_WEAPON",
+      "SET_SWORDSMAN_BLAZING_WARRIOR_HEAD",
+      "SET_SWORDSMAN_BLAZING_WARRIOR_ARMOR",
+      "SET_SWORDSMAN_BLAZING_WARRIOR_GLOVES",
+      "SET_SWORDSMAN_BLAZING_WARRIOR_BOOTS",
+      "SET_SWORDSMAN_BLAZING_WARRIOR_SHOULDER",
+      "SET_SWORDSMAN_BLAZING_WARRIOR_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER2_ELITE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+38 ATK, +6 STR",
+        "bonuses": {
+          "atk": 38,
+          "str": 6
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+32 DEF, +520 MaxHP, +10% Crit Rate",
+        "bonuses": {
+          "maxHp": 520,
+          "critRatePct": 10,
+          "def": 32
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+88 ATK, +25% Crit DMG, +24% Skill DMG",
+        "bonuses": {
+          "atk": 88,
+          "skillDamagePct": 24,
+          "critDamagePct": 25
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_swordsman_dragon_slayer",
+    "name": "Dragon Slayer Set Lv.60",
+    "nameVi": "Bộ Đồ Long Kiếm Sĩ Lv.60",
+    "description": "Bộ trang bị Dragon Slayer Set Lv.60 cho SWORDSMAN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "swordsman",
+    "tierLevel": 60,
+    "rarity": "epic",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_SWORDSMAN_DRAGON_SLAYER_WEAPON",
+      "SET_SWORDSMAN_DRAGON_SLAYER_HEAD",
+      "SET_SWORDSMAN_DRAGON_SLAYER_ARMOR",
+      "SET_SWORDSMAN_DRAGON_SLAYER_GLOVES",
+      "SET_SWORDSMAN_DRAGON_SLAYER_BOOTS",
+      "SET_SWORDSMAN_DRAGON_SLAYER_SHOULDER",
+      "SET_SWORDSMAN_DRAGON_SLAYER_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER3_DRAGON_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+75 ATK, +12 STR",
+        "bonuses": {
+          "atk": 75,
+          "str": 12
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+65 DEF, +1100 MaxHP, +14% Crit Rate",
+        "bonuses": {
+          "maxHp": 1100,
+          "critRatePct": 14,
+          "def": 65
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+165 ATK, +40% Crit DMG, +35% Skill DMG, +6% Lifesteal",
+        "bonuses": {
+          "atk": 165,
+          "skillDamagePct": 35,
+          "critDamagePct": 40,
+          "lifestealPct": 6
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_spearman_apprentice_spear",
+    "name": "Apprentice Spear Set Lv.15",
+    "nameVi": "Bộ Thương Tập Sự Lv.15",
+    "description": "Bộ trang bị Apprentice Spear Set Lv.15 cho SPEARMAN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "spearman",
+    "tierLevel": 15,
+    "rarity": "uncommon",
+    "category": "class_set",
+    "pieceItemIds": [
+      "ITEM_SPEAR_IRON",
+      "SET_SPEARMAN_APPRENTICE_SPEAR_HEAD",
+      "ITEM_ARMOR_SPEARMAN_MAIL",
+      "SET_SPEARMAN_APPRENTICE_SPEAR_GLOVES",
+      "SET_SPEARMAN_APPRENTICE_SPEAR_BOOTS",
+      "SET_SPEARMAN_APPRENTICE_SPEAR_SHOULDER",
+      "SET_SPEARMAN_APPRENTICE_SPEAR_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_APPRENTICE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+17 ATK, +3 AGI",
+        "bonuses": {
+          "atk": 17,
+          "agi": 3
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+180 MaxHP, +10% ASPD, +8% MoveSpeed",
+        "bonuses": {
+          "aspdPct": 10,
+          "moveSpeedPct": 8,
+          "maxHp": 180
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+40 ATK, +9% Crit Rate, +16% Skill DMG",
+        "bonuses": {
+          "atk": 40,
+          "critRatePct": 9,
+          "skillDamagePct": 16
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_spearman_wind_lancer",
+    "name": "Wind Lancer Set Lv.35",
+    "nameVi": "Bộ Phong Kỵ Thương Lv.35",
+    "description": "Bộ trang bị Wind Lancer Set Lv.35 cho SPEARMAN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "spearman",
+    "tierLevel": 35,
+    "rarity": "rare",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_SPEARMAN_WIND_LANCER_WEAPON",
+      "SET_SPEARMAN_WIND_LANCER_HEAD",
+      "SET_SPEARMAN_WIND_LANCER_ARMOR",
+      "SET_SPEARMAN_WIND_LANCER_GLOVES",
+      "SET_SPEARMAN_WIND_LANCER_BOOTS",
+      "SET_SPEARMAN_WIND_LANCER_SHOULDER",
+      "SET_SPEARMAN_WIND_LANCER_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER2_ELITE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+36 ATK, +6 AGI",
+        "bonuses": {
+          "atk": 36,
+          "agi": 6
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+460 MaxHP, +15% ASPD, +12% MoveSpeed",
+        "bonuses": {
+          "aspdPct": 15,
+          "moveSpeedPct": 12,
+          "maxHp": 460
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+84 ATK, +14% Crit Rate, +24% Skill DMG",
+        "bonuses": {
+          "atk": 84,
+          "critRatePct": 14,
+          "skillDamagePct": 24
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_spearman_dragon_vanguard",
+    "name": "Dragon Vanguard Set Lv.60",
+    "nameVi": "Bộ Long Kỵ Tiên Phong Lv.60",
+    "description": "Bộ trang bị Dragon Vanguard Set Lv.60 cho SPEARMAN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "spearman",
+    "tierLevel": 60,
+    "rarity": "epic",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_SPEARMAN_DRAGON_VANGUARD_WEAPON",
+      "SET_SPEARMAN_DRAGON_VANGUARD_HEAD",
+      "SET_SPEARMAN_DRAGON_VANGUARD_ARMOR",
+      "SET_SPEARMAN_DRAGON_VANGUARD_GLOVES",
+      "SET_SPEARMAN_DRAGON_VANGUARD_BOOTS",
+      "SET_SPEARMAN_DRAGON_VANGUARD_SHOULDER",
+      "SET_SPEARMAN_DRAGON_VANGUARD_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER3_DRAGON_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+72 ATK, +12 AGI",
+        "bonuses": {
+          "atk": 72,
+          "agi": 12
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+980 MaxHP, +22% ASPD, +16% MoveSpeed",
+        "bonuses": {
+          "aspdPct": 22,
+          "moveSpeedPct": 16,
+          "maxHp": 980
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+160 ATK, +18% Crit Rate, +35% Crit DMG, +34% Skill DMG",
+        "bonuses": {
+          "atk": 160,
+          "critRatePct": 18,
+          "critDamagePct": 35,
+          "skillDamagePct": 34
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_knight_apprentice_guard",
+    "name": "Apprentice Guard Set Lv.15",
+    "nameVi": "Bộ Hộ Vệ Tập Sự Lv.15",
+    "description": "Bộ trang bị Apprentice Guard Set Lv.15 cho KNIGHT gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "knight",
+    "tierLevel": 15,
+    "rarity": "uncommon",
+    "category": "class_set",
+    "pieceItemIds": [
+      "ITEM_SHIELD_IRON",
+      "SET_KNIGHT_APPRENTICE_GUARD_HEAD",
+      "ITEM_ARMOR_KNIGHT_AEGIS",
+      "SET_KNIGHT_APPRENTICE_GUARD_GLOVES",
+      "SET_KNIGHT_APPRENTICE_GUARD_BOOTS",
+      "SET_KNIGHT_APPRENTICE_GUARD_SHOULDER",
+      "SET_KNIGHT_APPRENTICE_GUARD_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_APPRENTICE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+22 DEF, +4 CON",
+        "bonuses": {
+          "def": 22,
+          "con": 4
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+18 MDEF, +350 MaxHP, +5% DMG Reduction",
+        "bonuses": {
+          "maxHp": 350,
+          "mdef": 18,
+          "damageReductionPct": 5
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+28 ATK, +48 DEF, +500 MaxHP, +8% DMG Reduction",
+        "bonuses": {
+          "def": 48,
+          "atk": 28,
+          "maxHp": 500,
+          "damageReductionPct": 8
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_knight_fortress_knight",
+    "name": "Fortress Knight Set Lv.35",
+    "nameVi": "Bộ Pháo Đài Hiệp Sĩ Lv.35",
+    "description": "Bộ trang bị Fortress Knight Set Lv.35 cho KNIGHT gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "knight",
+    "tierLevel": 35,
+    "rarity": "rare",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_KNIGHT_FORTRESS_KNIGHT_WEAPON",
+      "SET_KNIGHT_FORTRESS_KNIGHT_HEAD",
+      "SET_KNIGHT_FORTRESS_KNIGHT_ARMOR",
+      "SET_KNIGHT_FORTRESS_KNIGHT_GLOVES",
+      "SET_KNIGHT_FORTRESS_KNIGHT_BOOTS",
+      "SET_KNIGHT_FORTRESS_KNIGHT_SHOULDER",
+      "SET_KNIGHT_FORTRESS_KNIGHT_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER2_ELITE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+48 DEF, +8 CON",
+        "bonuses": {
+          "def": 48,
+          "con": 8
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+42 MDEF, +850 MaxHP, +8% DMG Reduction",
+        "bonuses": {
+          "maxHp": 850,
+          "mdef": 42,
+          "damageReductionPct": 8
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+62 ATK, +105 DEF, +1100 MaxHP, +12% DMG Reduction",
+        "bonuses": {
+          "def": 105,
+          "atk": 62,
+          "maxHp": 1100,
+          "damageReductionPct": 12
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_knight_divine_paladin",
+    "name": "Divine Paladin Set Lv.60",
+    "nameVi": "Bộ Thánh Kỵ Sĩ Thần Quang Lv.60",
+    "description": "Bộ trang bị Divine Paladin Set Lv.60 cho KNIGHT gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "knight",
+    "tierLevel": 60,
+    "rarity": "epic",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_KNIGHT_DIVINE_PALADIN_WEAPON",
+      "SET_KNIGHT_DIVINE_PALADIN_HEAD",
+      "SET_KNIGHT_DIVINE_PALADIN_ARMOR",
+      "SET_KNIGHT_DIVINE_PALADIN_GLOVES",
+      "SET_KNIGHT_DIVINE_PALADIN_BOOTS",
+      "SET_KNIGHT_DIVINE_PALADIN_SHOULDER",
+      "SET_KNIGHT_DIVINE_PALADIN_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER3_DRAGON_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+95 DEF, +14 CON",
+        "bonuses": {
+          "def": 95,
+          "con": 14
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+85 MDEF, +1850 MaxHP, +12% DMG Reduction",
+        "bonuses": {
+          "maxHp": 1850,
+          "mdef": 85,
+          "damageReductionPct": 12
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+120 ATK, +195 DEF, +2200 MaxHP, +24% Skill DMG, +16% DMG Reduction",
+        "bonuses": {
+          "def": 195,
+          "atk": 120,
+          "maxHp": 2200,
+          "damageReductionPct": 16,
+          "skillDamagePct": 24
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_monk_apprentice_cleric",
+    "name": "Apprentice Cleric Set Lv.15",
+    "nameVi": "Bộ Tu Sĩ Tập Sự Lv.15",
+    "description": "Bộ trang bị Apprentice Cleric Set Lv.15 cho MONK gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "monk",
+    "tierLevel": 15,
+    "rarity": "uncommon",
+    "category": "class_set",
+    "pieceItemIds": [
+      "ITEM_STAFF_SANCTUM_ORB",
+      "SET_MONK_APPRENTICE_CLERIC_HEAD",
+      "ITEM_ARMOR_MONK_VESTMENT",
+      "SET_MONK_APPRENTICE_CLERIC_GLOVES",
+      "SET_MONK_APPRENTICE_CLERIC_BOOTS",
+      "SET_MONK_APPRENTICE_CLERIC_SHOULDER",
+      "SET_MONK_APPRENTICE_CLERIC_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_APPRENTICE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+18 MATK, +3 CON",
+        "bonuses": {
+          "matk": 18,
+          "con": 3
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+240 MaxHP, +160 MaxMP, +14% Healing",
+        "bonuses": {
+          "maxHp": 240,
+          "maxMp": 160,
+          "healingPowerPct": 14
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+36 MATK, +28 DEF, +12% Skill DMG, +24% Healing",
+        "bonuses": {
+          "matk": 36,
+          "def": 28,
+          "healingPowerPct": 24,
+          "skillDamagePct": 12
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_monk_holy_priest",
+    "name": "Holy Priest Set Lv.35",
+    "nameVi": "Bộ Thánh Tư Tế Lv.35",
+    "description": "Bộ trang bị Holy Priest Set Lv.35 cho MONK gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "monk",
+    "tierLevel": 35,
+    "rarity": "rare",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_MONK_HOLY_PRIEST_WEAPON",
+      "SET_MONK_HOLY_PRIEST_HEAD",
+      "SET_MONK_HOLY_PRIEST_ARMOR",
+      "SET_MONK_HOLY_PRIEST_GLOVES",
+      "SET_MONK_HOLY_PRIEST_BOOTS",
+      "SET_MONK_HOLY_PRIEST_SHOULDER",
+      "SET_MONK_HOLY_PRIEST_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER2_ELITE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+38 MATK, +6 CON",
+        "bonuses": {
+          "matk": 38,
+          "con": 6
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+600 MaxHP, +380 MaxMP, +22% Healing",
+        "bonuses": {
+          "maxHp": 600,
+          "maxMp": 380,
+          "healingPowerPct": 22
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+78 MATK, +62 DEF, +35% Healing, +8% DMG Reduction",
+        "bonuses": {
+          "matk": 78,
+          "def": 62,
+          "healingPowerPct": 35,
+          "damageReductionPct": 8
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_monk_saint_guardian",
+    "name": "Saint Guardian Set Lv.60",
+    "nameVi": "Bộ Thánh Hộ Giả Lv.60",
+    "description": "Bộ trang bị Saint Guardian Set Lv.60 cho MONK gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "monk",
+    "tierLevel": 60,
+    "rarity": "epic",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_MONK_SAINT_GUARDIAN_WEAPON",
+      "SET_MONK_SAINT_GUARDIAN_HEAD",
+      "SET_MONK_SAINT_GUARDIAN_ARMOR",
+      "SET_MONK_SAINT_GUARDIAN_GLOVES",
+      "SET_MONK_SAINT_GUARDIAN_BOOTS",
+      "SET_MONK_SAINT_GUARDIAN_SHOULDER",
+      "SET_MONK_SAINT_GUARDIAN_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER3_DRAGON_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+78 MATK, +12 CON",
+        "bonuses": {
+          "matk": 78,
+          "con": 12
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+1350 MaxHP, +750 MaxMP, +32% Healing",
+        "bonuses": {
+          "maxHp": 1350,
+          "maxMp": 750,
+          "healingPowerPct": 32
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+155 MATK, +125 DEF, +25% Skill DMG, +50% Healing, +12% DMG Reduction",
+        "bonuses": {
+          "matk": 155,
+          "def": 125,
+          "healingPowerPct": 50,
+          "damageReductionPct": 12,
+          "skillDamagePct": 25
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_mage_apprentice_mage",
+    "name": "Apprentice Mage Set Lv.15",
+    "nameVi": "Bộ Học Giả Ma Pháp Lv.15",
+    "description": "Bộ trang bị Apprentice Mage Set Lv.15 cho MAGE gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "mage",
+    "tierLevel": 15,
+    "rarity": "uncommon",
+    "category": "class_set",
+    "pieceItemIds": [
+      "ITEM_SPELLBOOK_ARCANE",
+      "SET_MAGE_APPRENTICE_MAGE_HEAD",
+      "ITEM_ARMOR_MAGE_ROBE",
+      "SET_MAGE_APPRENTICE_MAGE_GLOVES",
+      "SET_MAGE_APPRENTICE_MAGE_BOOTS",
+      "SET_MAGE_APPRENTICE_MAGE_SHOULDER",
+      "SET_MAGE_APPRENTICE_MAGE_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_APPRENTICE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+20 MATK, +4 INT",
+        "bonuses": {
+          "matk": 20,
+          "int": 4
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+15 MDEF, +220 MaxMP, +6% Crit Rate",
+        "bonuses": {
+          "maxMp": 220,
+          "critRatePct": 6,
+          "mdef": 15
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+48 MATK, +20% Crit DMG, +18% Skill DMG",
+        "bonuses": {
+          "matk": 48,
+          "skillDamagePct": 18,
+          "critDamagePct": 20
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_mage_arcane_wizard",
+    "name": "Arcane Wizard Set Lv.35",
+    "nameVi": "Bộ Bí Thuật Sư Lv.35",
+    "description": "Bộ trang bị Arcane Wizard Set Lv.35 cho MAGE gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "mage",
+    "tierLevel": 35,
+    "rarity": "rare",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_MAGE_ARCANE_WIZARD_WEAPON",
+      "SET_MAGE_ARCANE_WIZARD_HEAD",
+      "SET_MAGE_ARCANE_WIZARD_ARMOR",
+      "SET_MAGE_ARCANE_WIZARD_GLOVES",
+      "SET_MAGE_ARCANE_WIZARD_BOOTS",
+      "SET_MAGE_ARCANE_WIZARD_SHOULDER",
+      "SET_MAGE_ARCANE_WIZARD_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER2_ELITE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+44 MATK, +8 INT",
+        "bonuses": {
+          "matk": 44,
+          "int": 8
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+36 MDEF, +520 MaxMP, +10% Crit Rate",
+        "bonuses": {
+          "maxMp": 520,
+          "critRatePct": 10,
+          "mdef": 36
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+98 MATK, +30% Crit DMG, +28% Skill DMG",
+        "bonuses": {
+          "matk": 98,
+          "skillDamagePct": 28,
+          "critDamagePct": 30
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_mage_elemental_sovereign",
+    "name": "Elemental Sovereign Set Lv.60",
+    "nameVi": "Bộ Nguyên Tố Chúa Tể Lv.60",
+    "description": "Bộ trang bị Elemental Sovereign Set Lv.60 cho MAGE gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "mage",
+    "tierLevel": 60,
+    "rarity": "epic",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_MAGE_ELEMENTAL_SOVEREIGN_WEAPON",
+      "SET_MAGE_ELEMENTAL_SOVEREIGN_HEAD",
+      "SET_MAGE_ELEMENTAL_SOVEREIGN_ARMOR",
+      "SET_MAGE_ELEMENTAL_SOVEREIGN_GLOVES",
+      "SET_MAGE_ELEMENTAL_SOVEREIGN_BOOTS",
+      "SET_MAGE_ELEMENTAL_SOVEREIGN_SHOULDER",
+      "SET_MAGE_ELEMENTAL_SOVEREIGN_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER3_DRAGON_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+88 MATK, +14 INT",
+        "bonuses": {
+          "matk": 88,
+          "int": 14
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+72 MDEF, +1100 MaxMP, +15% Crit Rate",
+        "bonuses": {
+          "maxMp": 1100,
+          "critRatePct": 15,
+          "mdef": 72
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+185 MATK, +45% Crit DMG, +40% Skill DMG",
+        "bonuses": {
+          "matk": 185,
+          "skillDamagePct": 40,
+          "critDamagePct": 45
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_assassin_apprentice_rogue",
+    "name": "Apprentice Rogue Set Lv.15",
+    "nameVi": "Bộ Đạo Tặc Tập Sự Lv.15",
+    "description": "Bộ trang bị Apprentice Rogue Set Lv.15 cho ASSASSIN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "assassin",
+    "tierLevel": 15,
+    "rarity": "uncommon",
+    "category": "class_set",
+    "pieceItemIds": [
+      "ITEM_DAGGER_HUNTER",
+      "SET_ASSASSIN_APPRENTICE_ROGUE_HEAD",
+      "ITEM_ARMOR_ASSASSIN_GARB",
+      "SET_ASSASSIN_APPRENTICE_ROGUE_GLOVES",
+      "SET_ASSASSIN_APPRENTICE_ROGUE_BOOTS",
+      "SET_ASSASSIN_APPRENTICE_ROGUE_SHOULDER",
+      "SET_ASSASSIN_APPRENTICE_ROGUE_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_APPRENTICE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+18 ATK, +4 AGI",
+        "bonuses": {
+          "atk": 18,
+          "agi": 4
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+9% Crit Rate, +12% ASPD, +8% MoveSpeed",
+        "bonuses": {
+          "critRatePct": 9,
+          "aspdPct": 12,
+          "moveSpeedPct": 8
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+42 ATK, +28% Crit DMG, +5% Lifesteal",
+        "bonuses": {
+          "atk": 42,
+          "critDamagePct": 28,
+          "lifestealPct": 5
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_assassin_night_stalker",
+    "name": "Night Stalker Set Lv.35",
+    "nameVi": "Bộ Dạ Hành Giả Lv.35",
+    "description": "Bộ trang bị Night Stalker Set Lv.35 cho ASSASSIN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "assassin",
+    "tierLevel": 35,
+    "rarity": "rare",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_ASSASSIN_NIGHT_STALKER_WEAPON",
+      "SET_ASSASSIN_NIGHT_STALKER_HEAD",
+      "SET_ASSASSIN_NIGHT_STALKER_ARMOR",
+      "SET_ASSASSIN_NIGHT_STALKER_GLOVES",
+      "SET_ASSASSIN_NIGHT_STALKER_BOOTS",
+      "SET_ASSASSIN_NIGHT_STALKER_SHOULDER",
+      "SET_ASSASSIN_NIGHT_STALKER_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER2_ELITE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+38 ATK, +8 AGI",
+        "bonuses": {
+          "atk": 38,
+          "agi": 8
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+14% Crit Rate, +16% ASPD, +12% MoveSpeed",
+        "bonuses": {
+          "critRatePct": 14,
+          "aspdPct": 16,
+          "moveSpeedPct": 12
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+86 ATK, +42% Crit DMG, +20% Skill DMG, +8% Lifesteal",
+        "bonuses": {
+          "atk": 86,
+          "critDamagePct": 42,
+          "lifestealPct": 8,
+          "skillDamagePct": 20
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_assassin_shadow_phantom",
+    "name": "Shadow Phantom Set Lv.60",
+    "nameVi": "Bộ Ảnh Hồn Tử Thần Lv.60",
+    "description": "Bộ trang bị Shadow Phantom Set Lv.60 cho ASSASSIN gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "assassin",
+    "tierLevel": 60,
+    "rarity": "epic",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_ASSASSIN_SHADOW_PHANTOM_WEAPON",
+      "SET_ASSASSIN_SHADOW_PHANTOM_HEAD",
+      "SET_ASSASSIN_SHADOW_PHANTOM_ARMOR",
+      "SET_ASSASSIN_SHADOW_PHANTOM_GLOVES",
+      "SET_ASSASSIN_SHADOW_PHANTOM_BOOTS",
+      "SET_ASSASSIN_SHADOW_PHANTOM_SHOULDER",
+      "SET_ASSASSIN_SHADOW_PHANTOM_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER3_DRAGON_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+76 ATK, +14 AGI",
+        "bonuses": {
+          "atk": 76,
+          "agi": 14
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+20% Crit Rate, +22% ASPD, +16% MoveSpeed",
+        "bonuses": {
+          "critRatePct": 20,
+          "aspdPct": 22,
+          "moveSpeedPct": 16
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+168 ATK, +60% Crit DMG, +32% Skill DMG, +10% Lifesteal",
+        "bonuses": {
+          "atk": 168,
+          "critDamagePct": 60,
+          "lifestealPct": 10,
+          "skillDamagePct": 32
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_fighter_apprentice_fighter",
+    "name": "Apprentice Fighter Set Lv.15",
+    "nameVi": "Bộ Võ Sĩ Tập Sự Lv.15",
+    "description": "Bộ trang bị Apprentice Fighter Set Lv.15 cho FIGHTER gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "fighter",
+    "tierLevel": 15,
+    "rarity": "uncommon",
+    "category": "class_set",
+    "pieceItemIds": [
+      "ITEM_GAUNTLET_IRON_FIST",
+      "SET_FIGHTER_APPRENTICE_FIGHTER_HEAD",
+      "ITEM_ARMOR_FIGHTER_GI",
+      "SET_FIGHTER_APPRENTICE_FIGHTER_GLOVES",
+      "SET_FIGHTER_APPRENTICE_FIGHTER_BOOTS",
+      "SET_FIGHTER_APPRENTICE_FIGHTER_SHOULDER",
+      "SET_FIGHTER_APPRENTICE_FIGHTER_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_APPRENTICE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+17 ATK, +3 CON",
+        "bonuses": {
+          "atk": 17,
+          "con": 3
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+15 DEF, +280 MaxHP, +10% ASPD",
+        "bonuses": {
+          "maxHp": 280,
+          "aspdPct": 10,
+          "def": 15
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+40 ATK, +18% Skill DMG, +5% Lifesteal",
+        "bonuses": {
+          "atk": 40,
+          "skillDamagePct": 18,
+          "lifestealPct": 5
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_fighter_battle_brawler",
+    "name": "Battle Brawler Set Lv.35",
+    "nameVi": "Bộ Cuồng Đấu Sĩ Lv.35",
+    "description": "Bộ trang bị Battle Brawler Set Lv.35 cho FIGHTER gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "fighter",
+    "tierLevel": 35,
+    "rarity": "rare",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_FIGHTER_BATTLE_BRAWLER_WEAPON",
+      "SET_FIGHTER_BATTLE_BRAWLER_HEAD",
+      "SET_FIGHTER_BATTLE_BRAWLER_ARMOR",
+      "SET_FIGHTER_BATTLE_BRAWLER_GLOVES",
+      "SET_FIGHTER_BATTLE_BRAWLER_BOOTS",
+      "SET_FIGHTER_BATTLE_BRAWLER_SHOULDER",
+      "SET_FIGHTER_BATTLE_BRAWLER_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER2_ELITE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+37 ATK, +6 STR",
+        "bonuses": {
+          "atk": 37,
+          "str": 6
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+35 DEF, +650 MaxHP, +15% ASPD",
+        "bonuses": {
+          "maxHp": 650,
+          "aspdPct": 15,
+          "def": 35
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+84 ATK, +25% Crit DMG, +26% Skill DMG, +8% Lifesteal",
+        "bonuses": {
+          "atk": 84,
+          "skillDamagePct": 26,
+          "critDamagePct": 25,
+          "lifestealPct": 8
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_fighter_titan_champion",
+    "name": "Titan Champion Set Lv.60",
+    "nameVi": "Bộ Quán Quân Khổng Lồ Lv.60",
+    "description": "Bộ trang bị Titan Champion Set Lv.60 cho FIGHTER gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "fighter",
+    "tierLevel": 60,
+    "rarity": "epic",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_FIGHTER_TITAN_CHAMPION_WEAPON",
+      "SET_FIGHTER_TITAN_CHAMPION_HEAD",
+      "SET_FIGHTER_TITAN_CHAMPION_ARMOR",
+      "SET_FIGHTER_TITAN_CHAMPION_GLOVES",
+      "SET_FIGHTER_TITAN_CHAMPION_BOOTS",
+      "SET_FIGHTER_TITAN_CHAMPION_SHOULDER",
+      "SET_FIGHTER_TITAN_CHAMPION_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER3_DRAGON_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+74 ATK, +12 STR",
+        "bonuses": {
+          "atk": 74,
+          "str": 12
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+75 DEF, +1450 MaxHP, +20% ASPD",
+        "bonuses": {
+          "maxHp": 1450,
+          "aspdPct": 20,
+          "def": 75
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+162 ATK, +38% Crit DMG, +36% Skill DMG, +10% DMG Reduction, +10% Lifesteal",
+        "bonuses": {
+          "atk": 162,
+          "skillDamagePct": 36,
+          "critDamagePct": 38,
+          "lifestealPct": 10,
+          "damageReductionPct": 10
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_archer_apprentice_ranger",
+    "name": "Apprentice Ranger Set Lv.15",
+    "nameVi": "Bộ Xạ Thủ Tập Sự Lv.15",
+    "description": "Bộ trang bị Apprentice Ranger Set Lv.15 cho ARCHER gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "archer",
+    "tierLevel": 15,
+    "rarity": "uncommon",
+    "category": "class_set",
+    "pieceItemIds": [
+      "ITEM_BOW_RANGER",
+      "SET_ARCHER_APPRENTICE_RANGER_HEAD",
+      "ITEM_ARMOR_ARCHER_TUNIC",
+      "SET_ARCHER_APPRENTICE_RANGER_GLOVES",
+      "SET_ARCHER_APPRENTICE_RANGER_BOOTS",
+      "SET_ARCHER_APPRENTICE_RANGER_SHOULDER",
+      "SET_ARCHER_APPRENTICE_RANGER_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_APPRENTICE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+18 ATK, +4 DEX",
+        "bonuses": {
+          "atk": 18,
+          "dex": 4
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+8% Crit Rate, +10% ASPD, +8% MoveSpeed",
+        "bonuses": {
+          "critRatePct": 8,
+          "aspdPct": 10,
+          "moveSpeedPct": 8
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+42 ATK, +26% Crit DMG, +16% Skill DMG",
+        "bonuses": {
+          "atk": 42,
+          "critDamagePct": 26,
+          "skillDamagePct": 16
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_archer_wind_hunter",
+    "name": "Wind Hunter Set Lv.35",
+    "nameVi": "Bộ Thợ Săn Gió Lv.35",
+    "description": "Bộ trang bị Wind Hunter Set Lv.35 cho ARCHER gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "archer",
+    "tierLevel": 35,
+    "rarity": "rare",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_ARCHER_WIND_HUNTER_WEAPON",
+      "SET_ARCHER_WIND_HUNTER_HEAD",
+      "SET_ARCHER_WIND_HUNTER_ARMOR",
+      "SET_ARCHER_WIND_HUNTER_GLOVES",
+      "SET_ARCHER_WIND_HUNTER_BOOTS",
+      "SET_ARCHER_WIND_HUNTER_SHOULDER",
+      "SET_ARCHER_WIND_HUNTER_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER2_ELITE_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+38 ATK, +7 DEX",
+        "bonuses": {
+          "atk": 38,
+          "dex": 7
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+13% Crit Rate, +15% ASPD, +12% MoveSpeed",
+        "bonuses": {
+          "critRatePct": 13,
+          "aspdPct": 15,
+          "moveSpeedPct": 12
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+88 ATK, +40% Crit DMG, +25% Skill DMG",
+        "bonuses": {
+          "atk": 88,
+          "critDamagePct": 40,
+          "skillDamagePct": 25
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_archer_celestial_ranger",
+    "name": "Celestial Ranger Set Lv.60",
+    "nameVi": "Bộ Tinh Tú Xạ Thủ Lv.60",
+    "description": "Bộ trang bị Celestial Ranger Set Lv.60 cho ARCHER gồm 7 món (Vũ khí, Mũ, Áo, Găng, Ủng, Vai, Dây chuyền). Kích hoạt mạnh tại mốc 2/4/6 món!",
+    "classId": "archer",
+    "tierLevel": 60,
+    "rarity": "epic",
+    "category": "class_set",
+    "pieceItemIds": [
+      "SET_ARCHER_CELESTIAL_RANGER_WEAPON",
+      "SET_ARCHER_CELESTIAL_RANGER_HEAD",
+      "SET_ARCHER_CELESTIAL_RANGER_ARMOR",
+      "SET_ARCHER_CELESTIAL_RANGER_GLOVES",
+      "SET_ARCHER_CELESTIAL_RANGER_BOOTS",
+      "SET_ARCHER_CELESTIAL_RANGER_SHOULDER",
+      "SET_ARCHER_CELESTIAL_RANGER_NECKLACE"
+    ],
+    "fragmentItemId": "FRAG_TIER3_DRAGON_SET",
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+76 ATK, +14 DEX",
+        "bonuses": {
+          "atk": 76,
+          "dex": 14
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+18% Crit Rate, +22% ASPD, +16% MoveSpeed",
+        "bonuses": {
+          "critRatePct": 18,
+          "aspdPct": 22,
+          "moveSpeedPct": 16
+        }
+      },
+      {
+        "requiredPieces": 6,
+        "summary": "+170 ATK, +55% Crit DMG, +35% Skill DMG",
+        "bonuses": {
+          "atk": 170,
+          "critDamagePct": 55,
+          "skillDamagePct": 35
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_forest_guardian",
+    "name": "Forest Guardian Set Lv.38",
+    "nameVi": "Bộ Thần Rừng Hộ Vệ (Ancient Treant)",
+    "description": "Trang bị tinh hoa rơi từ Boss Ancient Treant tại Spirit Forest.",
+    "classId": "any",
+    "tierLevel": 38,
+    "rarity": "epic",
+    "category": "boss_set",
+    "pieceItemIds": [
+      "ITEM_FOREST_GUARDIAN_CROWN",
+      "ITEM_FOREST_GUARDIAN_CLOAK",
+      "ITEM_FOREST_GUARDIAN_RING"
+    ],
+    "fragmentItemId": "FRAG_FOREST_SET",
+    "sourceBossIds": [
+      "boss_ancient_treant"
+    ],
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+45 DEF, +650 MaxHP, +10% Healing",
+        "bonuses": {
+          "def": 45,
+          "maxHp": 650,
+          "healingPowerPct": 10
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_moonwater_mystic",
+    "name": "Moonwater Mystic Set Lv.45",
+    "nameVi": "Bộ Nguyệt Thủy (Moon Hydra)",
+    "description": "Trang bị thủy hệ quý hiếm rơi từ Boss Moon Hydra tại Moonlit Lake.",
+    "classId": "any",
+    "tierLevel": 45,
+    "rarity": "epic",
+    "category": "boss_set",
+    "pieceItemIds": [
+      "ITEM_MOONWATER_ROBE",
+      "ITEM_MOONWATER_RING",
+      "ITEM_MOONWATER_CLOAK"
+    ],
+    "fragmentItemId": "FRAG_MOONWATER_SET",
+    "sourceBossIds": [
+      "boss_moon_hydra"
+    ],
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+78 MATK, +550 MaxMP, +15% Skill DMG",
+        "bonuses": {
+          "matk": 78,
+          "maxMp": 550,
+          "skillDamagePct": 15
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_ancient_titan",
+    "name": "Ancient Titan Plate Set Lv.55",
+    "nameVi": "Bộ Cổ Đại Titan (Ancient Titan)",
+    "description": "Giáp nặng Titan cổ đại rơi từ Boss Ancient Titan tại Ancient Ruins.",
+    "classId": "any",
+    "tierLevel": 55,
+    "rarity": "epic",
+    "category": "boss_set",
+    "pieceItemIds": [
+      "ITEM_ANCIENT_PLATE",
+      "ITEM_ANCIENT_TITAN_SHOULDER",
+      "ITEM_ANCIENT_TITAN_RING"
+    ],
+    "fragmentItemId": "FRAG_ANCIENT_SET",
+    "sourceBossIds": [
+      "boss_ancient_titan"
+    ],
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+95 DEF, +1200 MaxHP, +10% DMG Reduction",
+        "bonuses": {
+          "def": 95,
+          "maxHp": 1200,
+          "damageReductionPct": 10
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_ignis_dragon",
+    "name": "Ignis Legendary Set Lv.75",
+    "nameVi": "Bộ Hỏa Long Huyền Thoại (Ignis Dragon)",
+    "description": "Trang bị Huyền Thoại rèn từ Trái Tim Hỏa Long Ignis tại Dragon Valley.",
+    "classId": "any",
+    "tierLevel": 75,
+    "rarity": "legendary",
+    "category": "boss_set",
+    "pieceItemIds": [
+      "ITEM_IGNIS_BLADE",
+      "ITEM_IGNIS_DRAGON_ARMOR",
+      "ITEM_IGNIS_DRAGON_CLOAK",
+      "ITEM_IGNIS_DRAGON_RING"
+    ],
+    "fragmentItemId": "FRAG_IGNIS_SET",
+    "sourceBossIds": [
+      "boss_ignis_dragon"
+    ],
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+135 ATK, +135 MATK, +12% Crit Rate",
+        "bonuses": {
+          "atk": 135,
+          "matk": 135,
+          "critRatePct": 12
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+240 ATK/MATK, +45% Crit DMG, +25% Skill DMG",
+        "bonuses": {
+          "atk": 240,
+          "matk": 240,
+          "critDamagePct": 45,
+          "skillDamagePct": 25
+        }
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "set_abyss_overlord",
+    "name": "Abyss Overlord Mythic Set Lv.105",
+    "nameVi": "Bộ Hư Vô Chúa Tể (Abyss Overlord)",
+    "description": "Trang bị Thần Thoại tối thượng từ World Boss Abyss Overlord tại Shadow Realm Border.",
+    "classId": "any",
+    "tierLevel": 105,
+    "rarity": "mythic",
+    "category": "boss_set",
+    "pieceItemIds": [
+      "ITEM_ABYSSAL_GREATSWORD",
+      "ITEM_ABYSSAL_MYTHIC_ARMOR",
+      "ITEM_ABYSSAL_RING",
+      "ITEM_ABYSSAL_CLOAK"
+    ],
+    "fragmentItemId": "FRAG_ABYSS_SET",
+    "sourceBossIds": [
+      "boss_abyss_overlord"
+    ],
+    "bonusTiers": [
+      {
+        "requiredPieces": 2,
+        "summary": "+240 ATK/MATK, +15% Lifesteal & Crit",
+        "bonuses": {
+          "atk": 240,
+          "matk": 240,
+          "critRatePct": 15,
+          "lifestealPct": 8
+        }
+      },
+      {
+        "requiredPieces": 4,
+        "summary": "+450 ATK/MATK, +3500 HP, +38% Skill DMG, +16% DMG Reduction",
+        "bonuses": {
+          "atk": 450,
+          "matk": 450,
+          "maxHp": 3500,
+          "skillDamagePct": 38,
+          "damageReductionPct": 16
+        }
+      }
+    ],
+    "status": "published"
+  }
+]

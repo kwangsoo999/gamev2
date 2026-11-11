@@ -1,0 +1,210 @@
+[
+  {
+    "id": "city_elysia_capital",
+    "name": "Elysia Capital",
+    "nameVi": "Kinh Đô Elysia",
+    "regionHub": "hub_elysia_capital",
+    "description": "Thủ đô phồn hoa đầu tiên sau khi đạt cấp 15, nơi đặt Thánh Đường Chuyển Chức, Hội Quán, Ngân Khố và Cổng Dịch Chuyển.",
+    "recommendedLevelMin": 15,
+    "recommendedLevelMax": 35,
+    "requiredLevel": 15,
+    "isSafeZone": true,
+    "combatEnabled": false,
+    "monsterSpawningEnabled": false,
+    "spawnCoords": {
+      "x": 1176,
+      "y": 1176
+    },
+    "connectedMapIds": [
+      "THON_KHOI_NGUYEN",
+      "dungeon_sanctum_of_awakening",
+      "map_whispering_meadow"
+    ],
+    "services": [
+      {
+        "id": "srv_elysia_job",
+        "type": "job_advancement",
+        "label": "Trung Tâm Chuyển Chức (Đại Tư Tế Asica)",
+        "npcId": "NPC_JOB_MASTER_ASICA"
+      },
+      {
+        "id": "srv_elysia_equip",
+        "type": "equipment_shop",
+        "label": "Tiệm Trang Bị Hoàng Gia",
+        "npcId": "NPC_ELYSIA_EQUIP_MERCHANT"
+      },
+      {
+        "id": "srv_elysia_item",
+        "type": "item_shop",
+        "label": "Tiệm Tạp Hóa & Dược Phẩm",
+        "npcId": "NPC_ELYSIA_ITEM_MERCHANT"
+      },
+      {
+        "id": "srv_elysia_guild",
+        "type": "guild_hq",
+        "label": "Tổng Hội Mạo Hiểm Giả",
+        "npcId": "NPC_GUILD_REGISTRAR"
+      },
+      {
+        "id": "srv_elysia_storage",
+        "type": "storage",
+        "label": "Ngân Khố Hoàng Gia",
+        "npcId": "NPC_BANKER_STORAGE"
+      },
+      {
+        "id": "srv_elysia_teleport",
+        "type": "teleport",
+        "label": "Tháp Dịch Chuyển Elysia",
+        "npcId": "NPC_TELEPORT_MAGE"
+      },
+      {
+        "id": "srv_elysia_quest",
+        "type": "quest_hq",
+        "label": "Tổng Bộ Nhiệm Vụ Vương Đô",
+        "npcId": "NPC_QUEST_COMMANDER"
+      }
+    ],
+    "npcs": [
+      "NPC_JOB_MASTER_ASICA",
+      "NPC_ELYSIA_EQUIP_MERCHANT",
+      "NPC_ELYSIA_ITEM_MERCHANT",
+      "NPC_GUILD_REGISTRAR",
+      "NPC_BANKER_STORAGE",
+      "NPC_TELEPORT_MAGE",
+      "NPC_QUEST_COMMANDER"
+    ],
+    "clientMapFile": "/data/maps/city_elysia_capital.json",
+    "status": "published"
+  },
+  {
+    "id": "city_sylvaris",
+    "name": "Sylvaris",
+    "nameVi": "Thành Phố Rừng Sylvaris",
+    "regionHub": "hub_sylvaris",
+    "description": "Thánh thành giữa Rừng Tinh Linh, nổi tiếng với lò chế tác ma pháp, Cường Hóa Thạch và hiệp hội mạo hiểm cấp trung.",
+    "recommendedLevelMin": 35,
+    "recommendedLevelMax": 60,
+    "requiredLevel": 35,
+    "isSafeZone": true,
+    "combatEnabled": false,
+    "monsterSpawningEnabled": false,
+    "spawnCoords": {
+      "x": 1176,
+      "y": 1176
+    },
+    "connectedMapIds": [
+      "map_spirit_forest",
+      "map_moonlit_lake"
+    ],
+    "services": [
+      {
+        "id": "srv_syl_equip",
+        "type": "equipment_shop",
+        "label": "Cửa Hàng Trang Bị Tinh Linh",
+        "npcId": "NPC_SYLVARIS_ARMORER"
+      },
+      {
+        "id": "srv_syl_craft",
+        "type": "crafting",
+        "label": "Xưởng Chế Tác Cổ Ngữ",
+        "npcId": "NPC_MASTER_CRAFTER"
+      },
+      {
+        "id": "srv_syl_enchant",
+        "type": "enchantment",
+        "label": "Đài Cường Hóa Lyra",
+        "npcId": "NPC_ENCHANTER_LYRA"
+      },
+      {
+        "id": "srv_syl_quest",
+        "type": "quest_hq",
+        "label": "Hội Trưởng Rừng Sâu",
+        "npcId": "NPC_SYLVARIS_ELDER"
+      },
+      {
+        "id": "srv_syl_guild",
+        "type": "guild_hq",
+        "label": "Chi Nhánh Bang Hội Sylvaris",
+        "npcId": "NPC_SYLVARIS_GUILD"
+      },
+      {
+        "id": "srv_syl_storage",
+        "type": "storage",
+        "label": "Kho Rừng Tinh Linh",
+        "npcId": "NPC_SYLVARIS_PORTAL"
+      }
+    ],
+    "npcs": [
+      "NPC_SYLVARIS_ARMORER",
+      "NPC_MASTER_CRAFTER",
+      "NPC_ENCHANTER_LYRA",
+      "NPC_SYLVARIS_ELDER",
+      "NPC_SYLVARIS_GUILD",
+      "NPC_SYLVARIS_PORTAL"
+    ],
+    "clientMapFile": "/data/maps/city_sylvaris.json",
+    "status": "published"
+  },
+  {
+    "id": "city_drakhen",
+    "name": "Drakhen",
+    "nameVi": "Pháo Đài Thành Drakhen",
+    "regionHub": "hub_drakhen",
+    "description": "Pháo đài đá đỏ hùng vĩ án ngữ Thung Lũng Rồng, nơi quy tụ thợ rèn huyền thoại và các học giả nghiên cứu Long Tộc.",
+    "recommendedLevelMin": 60,
+    "recommendedLevelMax": 90,
+    "requiredLevel": 60,
+    "isSafeZone": true,
+    "combatEnabled": false,
+    "monsterSpawningEnabled": false,
+    "spawnCoords": {
+      "x": 1176,
+      "y": 1176
+    },
+    "connectedMapIds": [
+      "map_ember_canyon",
+      "map_dragon_valley"
+    ],
+    "services": [
+      {
+        "id": "srv_drak_smith",
+        "type": "blacksmith",
+        "label": "Lò Rèn Hỏa Long Cao Cấp",
+        "npcId": "NPC_DRAKHEN_BLACKSMITH"
+      },
+      {
+        "id": "srv_drak_equip",
+        "type": "equipment_shop",
+        "label": "Thương Hội Giáp Rồng",
+        "npcId": "NPC_DRAKHEN_MERCHANT"
+      },
+      {
+        "id": "srv_drak_lore",
+        "type": "dragon_research",
+        "label": "Viện Nghiên Cứu Long Huyết",
+        "npcId": "NPC_DRAGON_SCHOLAR_KAEL"
+      },
+      {
+        "id": "srv_drak_quest",
+        "type": "quest_hq",
+        "label": "Chỉ Huy Tiền Đồn Drakhen",
+        "npcId": "NPC_DRAKHEN_COMMANDER"
+      },
+      {
+        "id": "srv_drak_teleport",
+        "type": "teleport",
+        "label": "Cổng Dịch Chuyển Vùng Rồng",
+        "npcId": "NPC_DRAKHEN_TELEPORT"
+      }
+    ],
+    "npcs": [
+      "NPC_DRAKHEN_BLACKSMITH",
+      "NPC_DRAKHEN_MERCHANT",
+      "NPC_DRAGON_SCHOLAR_KAEL",
+      "NPC_DRAKHEN_COMMANDER",
+      "NPC_DRAKHEN_TELEPORT"
+    ],
+    "clientMapFile": "/data/maps/city_drakhen.json",
+    "status": "published"
+  }
+]

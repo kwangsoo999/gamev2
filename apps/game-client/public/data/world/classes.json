@@ -1,0 +1,413 @@
+[
+  {
+    "id": "adventurer",
+    "name": "Nhà Thám Hiểm (Adventurer)",
+    "nameVi": "Nhà Thám Hiểm",
+    "tier": 0,
+    "isPreJob": true,
+    "role": "Nghề Tạm Thời (Lv.1–15)",
+    "description": "Xuất phát điểm của mọi mạo hiểm giả tại Elysia. Phân bổ 5 chỉ số cơ bản để Thánh Điện tự động thức tỉnh nghề nghiệp ở cấp 15.",
+    "baseStats": {
+      "str": 10,
+      "dex": 10,
+      "agi": 10,
+      "int": 10,
+      "con": 10
+    },
+    "allowedWeapons": [
+      "sword",
+      "dagger",
+      "bow",
+      "staff"
+    ],
+    "startingSkills": [
+      "SKILL_NOVICE_SLASH",
+      "SKILL_NOVICE_FIREBALL"
+    ],
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "weaponProficiency": [
+      "sword",
+      "dagger",
+      "bow",
+      "staff"
+    ],
+    "armorProficiency": [
+      "cloth",
+      "leather"
+    ]
+  },
+  {
+    "id": "swordsman",
+    "name": "Kiếm Sĩ (Swordsman)",
+    "nameVi": "Kiếm Sĩ",
+    "tier": 1,
+    "priorityRank": 1,
+    "primaryAttribute": "str",
+    "secondaryAttribute": "dex",
+    "classificationMultiplier": {
+      "primary": 2,
+      "secondary": 1
+    },
+    "role": "Chiến Binh Kiếm Thuật Cận Chiến",
+    "baseStats": {
+      "str": 15,
+      "dex": 12,
+      "agi": 10,
+      "int": 8,
+      "con": 12
+    },
+    "allowedWeapons": [
+      "sword",
+      "greatsword"
+    ],
+    "startingSkills": [
+      "skill_slash",
+      "skill_double_strike",
+      "skill_sword_mastery"
+    ],
+    "starterEquipment": {
+      "weaponItemId": "ITEM_SWORD_AWAKENED_BLADE",
+      "armorItemId": "ITEM_ARMOR_SWORDSMAN_PLATE"
+    },
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "description": "Lấy Sức Mạnh (STR) làm chủ đạo và Khéo Léo (DEX) để tung những nhát chém chuẩn xác uy lực.",
+    "weaponProficiency": [
+      "sword",
+      "greatsword"
+    ],
+    "armorProficiency": [
+      "leather",
+      "mail",
+      "plate"
+    ]
+  },
+  {
+    "id": "spearman",
+    "name": "Thương Thủ (Spearman)",
+    "nameVi": "Thương Thủ",
+    "tier": 1,
+    "priorityRank": 2,
+    "primaryAttribute": "agi",
+    "secondaryAttribute": "str",
+    "classificationMultiplier": {
+      "primary": 2,
+      "secondary": 1
+    },
+    "role": "Xung Phong Cơ Động & Khống Chế",
+    "baseStats": {
+      "str": 13,
+      "dex": 10,
+      "agi": 16,
+      "int": 8,
+      "con": 11
+    },
+    "allowedWeapons": [
+      "spear",
+      "halberd",
+      "lance"
+    ],
+    "startingSkills": [
+      "skill_spear_thrust",
+      "skill_triple_pierce",
+      "skill_spear_mastery"
+    ],
+    "starterEquipment": {
+      "weaponItemId": "ITEM_SPEAR_IRON",
+      "armorItemId": "ITEM_ARMOR_SPEARMAN_MAIL"
+    },
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "description": "Kết hợp Nhanh Nhẹn (AGI) vượt trội cùng Sức Mạnh (STR) để xoay chuyển ngọn thương tầm dài.",
+    "weaponProficiency": [
+      "spear",
+      "halberd",
+      "lance"
+    ],
+    "armorProficiency": [
+      "leather",
+      "mail"
+    ]
+  },
+  {
+    "id": "knight",
+    "name": "Hiệp Sĩ (Knight)",
+    "nameVi": "Hiệp Sĩ",
+    "tier": 1,
+    "priorityRank": 3,
+    "primaryAttribute": "con",
+    "secondaryAttribute": "str",
+    "classificationMultiplier": {
+      "primary": 2,
+      "secondary": 1
+    },
+    "role": "Hộ Vệ & Lá Chắn Bất Bại",
+    "baseStats": {
+      "str": 13,
+      "dex": 8,
+      "agi": 8,
+      "int": 9,
+      "con": 18
+    },
+    "allowedWeapons": [
+      "sword",
+      "shield"
+    ],
+    "startingSkills": [
+      "skill_shield_bash",
+      "skill_taunt",
+      "skill_shield_mastery"
+    ],
+    "starterEquipment": {
+      "weaponItemId": "ITEM_SHIELD_IRON",
+      "armorItemId": "ITEM_ARMOR_KNIGHT_AEGIS"
+    },
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "description": "Rèn luyện Thể Chất (CON) kiên cố kết hợp Sức Mạnh (STR) để bảo vệ đồng đội bằng kiếm và khiên.",
+    "weaponProficiency": [
+      "sword",
+      "shield"
+    ],
+    "armorProficiency": [
+      "mail",
+      "plate"
+    ]
+  },
+  {
+    "id": "monk",
+    "name": "Tu Sĩ (Monk)",
+    "nameVi": "Tu Sĩ",
+    "tier": 1,
+    "priorityRank": 4,
+    "primaryAttribute": "con",
+    "secondaryAttribute": "int",
+    "classificationMultiplier": {
+      "primary": 2,
+      "secondary": 1
+    },
+    "role": "Thánh Hộ, Trị Liệu & Kháng Phép",
+    "baseStats": {
+      "str": 8,
+      "dex": 9,
+      "agi": 9,
+      "int": 14,
+      "con": 17
+    },
+    "allowedWeapons": [
+      "staff",
+      "holy_staff"
+    ],
+    "startingSkills": [
+      "skill_holy_light",
+      "skill_heal",
+      "skill_faith"
+    ],
+    "starterEquipment": {
+      "weaponItemId": "ITEM_STAFF_SANCTUM_ORB",
+      "armorItemId": "ITEM_ARMOR_MONK_VESTMENT"
+    },
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "description": "Thân thể bền bỉ (CON) hòa quyện cùng Trí Tuệ thánh linh (INT) để chữa lành và thanh tẩy.",
+    "weaponProficiency": [
+      "staff",
+      "holy_staff"
+    ],
+    "armorProficiency": [
+      "cloth",
+      "leather"
+    ]
+  },
+  {
+    "id": "mage",
+    "name": "Pháp Sư (Mage)",
+    "nameVi": "Pháp Sư",
+    "tier": 1,
+    "priorityRank": 5,
+    "primaryAttribute": "int",
+    "secondaryAttribute": "dex",
+    "classificationMultiplier": {
+      "primary": 2,
+      "secondary": 1
+    },
+    "role": "Chủ Tể Nguyên Tố Diện Rộng",
+    "baseStats": {
+      "str": 6,
+      "dex": 12,
+      "agi": 8,
+      "int": 18,
+      "con": 8
+    },
+    "allowedWeapons": [
+      "spellbook",
+      "book",
+      "staff"
+    ],
+    "startingSkills": [
+      "skill_fireball",
+      "skill_ice_lance",
+      "skill_magic_mastery"
+    ],
+    "starterEquipment": {
+      "weaponItemId": "ITEM_SPELLBOOK_ARCANE",
+      "armorItemId": "ITEM_ARMOR_MAGE_ROBE"
+    },
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "description": "Trí Tuệ uyên bác (INT) và độ tinh tế Khéo Léo (DEX) giúp thi triển ma pháp hủy diệt diện rộng.",
+    "weaponProficiency": [
+      "spellbook",
+      "book",
+      "staff"
+    ],
+    "armorProficiency": [
+      "cloth"
+    ]
+  },
+  {
+    "id": "assassin",
+    "name": "Thích Khách (Assassin)",
+    "nameVi": "Thích Khách",
+    "tier": 1,
+    "priorityRank": 6,
+    "primaryAttribute": "agi",
+    "secondaryAttribute": "dex",
+    "classificationMultiplier": {
+      "primary": 2,
+      "secondary": 1
+    },
+    "role": "Bạo Kích Chớp Nhoáng & Ám Sát",
+    "baseStats": {
+      "str": 10,
+      "dex": 15,
+      "agi": 17,
+      "int": 8,
+      "con": 8
+    },
+    "allowedWeapons": [
+      "dual_daggers",
+      "dagger"
+    ],
+    "startingSkills": [
+      "skill_shadow_strike",
+      "skill_double_dagger",
+      "skill_critical_mastery"
+    ],
+    "starterEquipment": {
+      "weaponItemId": "ITEM_DAGGER_HUNTER",
+      "armorItemId": "ITEM_ARMOR_ASSASSIN_GARB"
+    },
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "description": "Nhanh Nhẹn (AGI) cực đỉnh kết hợp Khéo Léo (DEX) để ra đòn chí mạng bằng Song Chủy Thủ.",
+    "weaponProficiency": [
+      "dual_daggers",
+      "dagger"
+    ],
+    "armorProficiency": [
+      "cloth",
+      "leather"
+    ]
+  },
+  {
+    "id": "fighter",
+    "name": "Đấu Sĩ (Fighter)",
+    "nameVi": "Đấu Sĩ",
+    "tier": 1,
+    "priorityRank": 7,
+    "primaryAttribute": "str",
+    "secondaryAttribute": "con",
+    "classificationMultiplier": {
+      "primary": 2,
+      "secondary": 1
+    },
+    "role": "Quyền Thuật Bá Đạo & Sinh Tồn",
+    "baseStats": {
+      "str": 16,
+      "dex": 10,
+      "agi": 10,
+      "int": 6,
+      "con": 15
+    },
+    "allowedWeapons": [
+      "gauntlets",
+      "fist"
+    ],
+    "startingSkills": [
+      "skill_iron_fist",
+      "skill_heavy_punch",
+      "skill_body_conditioning"
+    ],
+    "starterEquipment": {
+      "weaponItemId": "ITEM_GAUNTLET_IRON_FIST",
+      "armorItemId": "ITEM_ARMOR_FIGHTER_GI"
+    },
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "description": "Sức Mạnh cơ bắp (STR) và Thể Chất sắt thép (CON) tạo nên đấu sĩ cận chiến bất khuất.",
+    "weaponProficiency": [
+      "gauntlets",
+      "fist"
+    ],
+    "armorProficiency": [
+      "leather",
+      "mail"
+    ]
+  },
+  {
+    "id": "archer",
+    "name": "Cung Thủ (Archer)",
+    "nameVi": "Cung Thủ",
+    "tier": 1,
+    "priorityRank": 8,
+    "primaryAttribute": "dex",
+    "secondaryAttribute": "agi",
+    "classificationMultiplier": {
+      "primary": 2,
+      "secondary": 1
+    },
+    "role": "Xạ Thủ Tầm Xa & Bắn Tỉa",
+    "baseStats": {
+      "str": 10,
+      "dex": 17,
+      "agi": 15,
+      "int": 8,
+      "con": 9
+    },
+    "allowedWeapons": [
+      "bow",
+      "crossbow"
+    ],
+    "startingSkills": [
+      "skill_precise_shot",
+      "skill_double_arrow",
+      "skill_eagle_eye"
+    ],
+    "starterEquipment": {
+      "weaponItemId": "ITEM_BOW_RANGER",
+      "armorItemId": "ITEM_ARMOR_ARCHER_TUNIC"
+    },
+    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
+    "status": "published",
+    "description": "Khéo Léo chuẩn xác (DEX) hòa cùng Nhanh Nhẹn (AGI) để bách phát bách trúng bằng Cung và Nỏ.",
+    "weaponProficiency": [
+      "bow",
+      "crossbow"
+    ],
+    "armorProficiency": [
+      "cloth",
+      "leather"
+    ]
+  }
+]

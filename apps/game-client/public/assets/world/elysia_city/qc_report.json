@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1.0.0",
+  "phase": "PHASE_2_ELYSIA_CITY",
+  "imageGeneratorApiStatus": "HTTP 429 RESOURCE_EXHAUSTED on gemini-3.1-flash-image until 2026-11-11T06:55:02Z. Extracted all existing authentic architecture & market stalls cleanly; queued 5 bespoke landmarks under pendingGeneration.",
+  "totalAssetsBuiltAndChecked": 21,
+  "passedCount": 21,
+  "failedCount": 0,
+  "pendingGenerationCount": 5,
+  "pendingGenerationIds": [
+    "royal_castle_01",
+    "church_of_light_01",
+    "auction_house_01",
+    "teleport_gate_01",
+    "city_gate_wall_01"
+  ],
+  "assets": [
+    {
+      "id": "city_ashlar_01",
+      "path": "terrain/city_ashlar_01.png",
+      "dimensions": "256x128",
+      "bytes": 40432,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_cobble_01",
+      "path": "terrain/city_cobble_01.png",
+      "dimensions": "256x128",
+      "bytes": 42309,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_courtyard_stone_01",
+      "path": "terrain/city_courtyard_stone_01.png",
+      "dimensions": "256x128",
+      "bytes": 39533,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_royal_plaza_01",
+      "path": "terrain/city_royal_plaza_01.png",
+      "dimensions": "256x128",
+      "bytes": 35332,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_garden_grass_01",
+      "path": "terrain/city_garden_grass_01.png",
+      "dimensions": "256x128",
+      "bytes": 32546,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_curb_marble_n",
+      "path": "terrain/city_curb_marble_n.png",
+      "dimensions": "256x128",
+      "bytes": 31138,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_curb_marble_s",
+      "path": "terrain/city_curb_marble_s.png",
+      "dimensions": "256x128",
+      "bytes": 30990,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_curb_marble_w",
+      "path": "terrain/city_curb_marble_w.png",
+      "dimensions": "256x128",
+      "bytes": 30433,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_curb_marble_e",
+      "path": "terrain/city_curb_marble_e.png",
+      "dimensions": "256x128",
+      "bytes": 30627,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "adventurer_guild_01",
+      "path": "buildings/adventurer_guild_01.png",
+      "dimensions": "496x488",
+      "bytes": 340959,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "weapon_shop_01",
+      "path": "buildings/weapon_shop_01.png",
+      "dimensions": "451x480",
+      "bytes": 304943,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "bank_vault_01",
+      "path": "buildings/bank_vault_01.png",
+      "dimensions": "488x482",
+      "bytes": 361321,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_workshop_mill_01",
+      "path": "buildings/city_workshop_mill_01.png",
+      "dimensions": "441x477",
+      "bytes": 311625,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0007,
+      "status": "PASS"
+    },
+    {
+      "id": "city_blacksmith_01",
+      "path": "buildings/city_blacksmith_01.png",
+      "dimensions": "464x488",
+      "bytes": 269148,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_item_shop_01",
+      "path": "buildings/city_item_shop_01.png",
+      "dimensions": "429x462",
+      "bytes": 278025,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0258,
+      "status": "PASS"
+    },
+    {
+      "id": "residential_house_01",
+      "path": "buildings/residential_house_01.png",
+      "dimensions": "346x468",
+      "bytes": 205911,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "city_plaza_fountain_01",
+      "path": "buildings/city_plaza_fountain_01.png",
+      "dimensions": "410x460",
+      "bytes": 287975,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "sanctum_shrine_gate_01",
+      "path": "buildings/sanctum_shrine_gate_01.png",
+      "dimensions": "386x467",
+      "bytes": 140940,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "canal_bridge_01",
+      "path": "buildings/canal_bridge_01.png",
+      "dimensions": "470x322",
+      "bytes": 198544,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "market_stall_cream_01",
+      "path": "decoration/market_stall_cream_01.png",
+      "dimensions": "252x284",
+      "bytes": 116143,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "market_stall_blue_01",
+      "path": "decoration/market_stall_blue_01.png",
+      "dimensions": "258x284",
+      "bytes": 115186,
+      "cornerMaxAlpha": 0,
+      "magentaSpillPct": 0.0022,
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,772 @@
+[
+  {
+    "level": 1,
+    "expRequired": 120,
+    "cumulativeExp": 0,
+    "recommendedRegion": "map_beginner_meadow",
+    "milestoneReward": null
+  },
+  {
+    "level": 2,
+    "expRequired": 259,
+    "cumulativeExp": 120,
+    "recommendedRegion": "map_beginner_meadow",
+    "milestoneReward": null
+  },
+  {
+    "level": 3,
+    "expRequired": 433,
+    "cumulativeExp": 379,
+    "recommendedRegion": "map_green_rabbit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 4,
+    "expRequired": 637,
+    "cumulativeExp": 812,
+    "recommendedRegion": "map_green_rabbit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 5,
+    "expRequired": 865,
+    "cumulativeExp": 1449,
+    "recommendedRegion": "map_ancient_bee_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 6,
+    "expRequired": 1115,
+    "cumulativeExp": 2314,
+    "recommendedRegion": "map_ancient_bee_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 7,
+    "expRequired": 1384,
+    "cumulativeExp": 3429,
+    "recommendedRegion": "map_wild_wolf_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 8,
+    "expRequired": 1671,
+    "cumulativeExp": 4813,
+    "recommendedRegion": "map_wild_wolf_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 9,
+    "expRequired": 1975,
+    "cumulativeExp": 6484,
+    "recommendedRegion": "map_wild_boar_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 10,
+    "expRequired": 2295,
+    "cumulativeExp": 8459,
+    "recommendedRegion": "map_wild_boar_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 11,
+    "expRequired": 2629,
+    "cumulativeExp": 10754,
+    "recommendedRegion": "map_goblin_outpost",
+    "milestoneReward": null
+  },
+  {
+    "level": 12,
+    "expRequired": 2977,
+    "cumulativeExp": 13383,
+    "recommendedRegion": "map_goblin_outpost",
+    "milestoneReward": null
+  },
+  {
+    "level": 13,
+    "expRequired": 3338,
+    "cumulativeExp": 16360,
+    "recommendedRegion": "map_goblin_cave",
+    "milestoneReward": null
+  },
+  {
+    "level": 14,
+    "expRequired": 3713,
+    "cumulativeExp": 19698,
+    "recommendedRegion": "map_goblin_cave",
+    "milestoneReward": null
+  },
+  {
+    "level": 15,
+    "expRequired": 10351,
+    "cumulativeExp": 23411,
+    "recommendedRegion": "map_whispering_meadow",
+    "milestoneReward": "First Job Advancement (Sanctum of Awakening)"
+  },
+  {
+    "level": 16,
+    "expRequired": 11435,
+    "cumulativeExp": 33762,
+    "recommendedRegion": "map_whispering_meadow",
+    "milestoneReward": null
+  },
+  {
+    "level": 17,
+    "expRequired": 12559,
+    "cumulativeExp": 45197,
+    "recommendedRegion": "map_whispering_meadow",
+    "milestoneReward": null
+  },
+  {
+    "level": 18,
+    "expRequired": 13723,
+    "cumulativeExp": 57756,
+    "recommendedRegion": "map_whispering_meadow",
+    "milestoneReward": null
+  },
+  {
+    "level": 19,
+    "expRequired": 14924,
+    "cumulativeExp": 71479,
+    "recommendedRegion": "map_whispering_meadow",
+    "milestoneReward": null
+  },
+  {
+    "level": 20,
+    "expRequired": 16163,
+    "cumulativeExp": 86403,
+    "recommendedRegion": "map_windmill_plains",
+    "milestoneReward": null
+  },
+  {
+    "level": 21,
+    "expRequired": 17438,
+    "cumulativeExp": 102566,
+    "recommendedRegion": "map_windmill_plains",
+    "milestoneReward": null
+  },
+  {
+    "level": 22,
+    "expRequired": 18749,
+    "cumulativeExp": 120004,
+    "recommendedRegion": "map_windmill_plains",
+    "milestoneReward": null
+  },
+  {
+    "level": 23,
+    "expRequired": 20095,
+    "cumulativeExp": 138753,
+    "recommendedRegion": "map_windmill_plains",
+    "milestoneReward": null
+  },
+  {
+    "level": 24,
+    "expRequired": 21476,
+    "cumulativeExp": 158848,
+    "recommendedRegion": "map_windmill_plains",
+    "milestoneReward": null
+  },
+  {
+    "level": 25,
+    "expRequired": 22890,
+    "cumulativeExp": 180324,
+    "recommendedRegion": "map_spirit_forest_outskirts",
+    "milestoneReward": null
+  },
+  {
+    "level": 26,
+    "expRequired": 24337,
+    "cumulativeExp": 203214,
+    "recommendedRegion": "map_spirit_forest_outskirts",
+    "milestoneReward": null
+  },
+  {
+    "level": 27,
+    "expRequired": 25817,
+    "cumulativeExp": 227551,
+    "recommendedRegion": "map_spirit_forest_outskirts",
+    "milestoneReward": null
+  },
+  {
+    "level": 28,
+    "expRequired": 27329,
+    "cumulativeExp": 253368,
+    "recommendedRegion": "map_spirit_forest_outskirts",
+    "milestoneReward": null
+  },
+  {
+    "level": 29,
+    "expRequired": 28873,
+    "cumulativeExp": 280697,
+    "recommendedRegion": "map_spirit_forest_outskirts",
+    "milestoneReward": null
+  },
+  {
+    "level": 30,
+    "expRequired": 30448,
+    "cumulativeExp": 309570,
+    "recommendedRegion": "map_spirit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 31,
+    "expRequired": 32054,
+    "cumulativeExp": 340018,
+    "recommendedRegion": "map_spirit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 32,
+    "expRequired": 33690,
+    "cumulativeExp": 372072,
+    "recommendedRegion": "map_spirit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 33,
+    "expRequired": 35356,
+    "cumulativeExp": 405762,
+    "recommendedRegion": "map_spirit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 34,
+    "expRequired": 37051,
+    "cumulativeExp": 441118,
+    "recommendedRegion": "map_spirit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 35,
+    "expRequired": 93655,
+    "cumulativeExp": 478169,
+    "recommendedRegion": "map_spirit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 36,
+    "expRequired": 98205,
+    "cumulativeExp": 571824,
+    "recommendedRegion": "map_spirit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 37,
+    "expRequired": 102845,
+    "cumulativeExp": 670029,
+    "recommendedRegion": "map_spirit_forest",
+    "milestoneReward": null
+  },
+  {
+    "level": 38,
+    "expRequired": 107573,
+    "cumulativeExp": 772874,
+    "recommendedRegion": "map_moonlit_lake",
+    "milestoneReward": null
+  },
+  {
+    "level": 39,
+    "expRequired": 112389,
+    "cumulativeExp": 880447,
+    "recommendedRegion": "map_moonlit_lake",
+    "milestoneReward": null
+  },
+  {
+    "level": 40,
+    "expRequired": 117292,
+    "cumulativeExp": 992836,
+    "recommendedRegion": "map_moonlit_lake",
+    "milestoneReward": null
+  },
+  {
+    "level": 41,
+    "expRequired": 122282,
+    "cumulativeExp": 1110128,
+    "recommendedRegion": "map_moonlit_lake",
+    "milestoneReward": null
+  },
+  {
+    "level": 42,
+    "expRequired": 127358,
+    "cumulativeExp": 1232410,
+    "recommendedRegion": "map_moonlit_lake",
+    "milestoneReward": null
+  },
+  {
+    "level": 43,
+    "expRequired": 132519,
+    "cumulativeExp": 1359768,
+    "recommendedRegion": "map_moonlit_lake",
+    "milestoneReward": null
+  },
+  {
+    "level": 44,
+    "expRequired": 137765,
+    "cumulativeExp": 1492287,
+    "recommendedRegion": "map_moonlit_lake",
+    "milestoneReward": null
+  },
+  {
+    "level": 45,
+    "expRequired": 143095,
+    "cumulativeExp": 1630052,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 46,
+    "expRequired": 148508,
+    "cumulativeExp": 1773147,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 47,
+    "expRequired": 154005,
+    "cumulativeExp": 1921655,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 48,
+    "expRequired": 159584,
+    "cumulativeExp": 2075660,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 49,
+    "expRequired": 165245,
+    "cumulativeExp": 2235244,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 50,
+    "expRequired": 170987,
+    "cumulativeExp": 2400489,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 51,
+    "expRequired": 176811,
+    "cumulativeExp": 2571476,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 52,
+    "expRequired": 182714,
+    "cumulativeExp": 2748287,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 53,
+    "expRequired": 188698,
+    "cumulativeExp": 2931001,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 54,
+    "expRequired": 194762,
+    "cumulativeExp": 3119699,
+    "recommendedRegion": "map_ancient_ruins",
+    "milestoneReward": null
+  },
+  {
+    "level": 55,
+    "expRequired": 200904,
+    "cumulativeExp": 3314461,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 56,
+    "expRequired": 207125,
+    "cumulativeExp": 3515365,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 57,
+    "expRequired": 213425,
+    "cumulativeExp": 3722490,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 58,
+    "expRequired": 219802,
+    "cumulativeExp": 3935915,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 59,
+    "expRequired": 226257,
+    "cumulativeExp": 4155717,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 60,
+    "expRequired": 554097,
+    "cumulativeExp": 4381974,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": "Second Job Evolution Milestone"
+  },
+  {
+    "level": 61,
+    "expRequired": 570933,
+    "cumulativeExp": 4936071,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 62,
+    "expRequired": 587998,
+    "cumulativeExp": 5507004,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 63,
+    "expRequired": 605290,
+    "cumulativeExp": 6095002,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 64,
+    "expRequired": 622808,
+    "cumulativeExp": 6700292,
+    "recommendedRegion": "map_ember_canyon",
+    "milestoneReward": null
+  },
+  {
+    "level": 65,
+    "expRequired": 640553,
+    "cumulativeExp": 7323100,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 66,
+    "expRequired": 658522,
+    "cumulativeExp": 7963653,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 67,
+    "expRequired": 676717,
+    "cumulativeExp": 8622175,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 68,
+    "expRequired": 695135,
+    "cumulativeExp": 9298892,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 69,
+    "expRequired": 713777,
+    "cumulativeExp": 9994027,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 70,
+    "expRequired": 732641,
+    "cumulativeExp": 10707804,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 71,
+    "expRequired": 751728,
+    "cumulativeExp": 11440445,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 72,
+    "expRequired": 771037,
+    "cumulativeExp": 12192173,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 73,
+    "expRequired": 790567,
+    "cumulativeExp": 12963210,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 74,
+    "expRequired": 810317,
+    "cumulativeExp": 13753777,
+    "recommendedRegion": "map_dragon_valley",
+    "milestoneReward": null
+  },
+  {
+    "level": 75,
+    "expRequired": 830288,
+    "cumulativeExp": 14564094,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 76,
+    "expRequired": 850478,
+    "cumulativeExp": 15394382,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 77,
+    "expRequired": 870887,
+    "cumulativeExp": 16244860,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 78,
+    "expRequired": 891514,
+    "cumulativeExp": 17115747,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 79,
+    "expRequired": 912360,
+    "cumulativeExp": 18007261,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 80,
+    "expRequired": 933423,
+    "cumulativeExp": 18919621,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 81,
+    "expRequired": 954703,
+    "cumulativeExp": 19853044,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 82,
+    "expRequired": 976200,
+    "cumulativeExp": 20807747,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 83,
+    "expRequired": 997912,
+    "cumulativeExp": 21783947,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 84,
+    "expRequired": 1019841,
+    "cumulativeExp": 22781859,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 85,
+    "expRequired": 1041984,
+    "cumulativeExp": 23801700,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 86,
+    "expRequired": 1064342,
+    "cumulativeExp": 24843684,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 87,
+    "expRequired": 1086914,
+    "cumulativeExp": 25908026,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 88,
+    "expRequired": 1109700,
+    "cumulativeExp": 26994940,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 89,
+    "expRequired": 1132699,
+    "cumulativeExp": 28104640,
+    "recommendedRegion": "map_crimson_desert",
+    "milestoneReward": null
+  },
+  {
+    "level": 90,
+    "expRequired": 2551069,
+    "cumulativeExp": 29237339,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 91,
+    "expRequired": 2605598,
+    "cumulativeExp": 31788408,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 92,
+    "expRequired": 2660682,
+    "cumulativeExp": 34394006,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 93,
+    "expRequired": 2716319,
+    "cumulativeExp": 37054688,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 94,
+    "expRequired": 2772509,
+    "cumulativeExp": 39771007,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 95,
+    "expRequired": 2829252,
+    "cumulativeExp": 42543516,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 96,
+    "expRequired": 2886547,
+    "cumulativeExp": 45372768,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 97,
+    "expRequired": 2944393,
+    "cumulativeExp": 48259315,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 98,
+    "expRequired": 3002791,
+    "cumulativeExp": 51203708,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 99,
+    "expRequired": 3061740,
+    "cumulativeExp": 54206499,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 100,
+    "expRequired": 3121239,
+    "cumulativeExp": 57268239,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 101,
+    "expRequired": 3181288,
+    "cumulativeExp": 60389478,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 102,
+    "expRequired": 3241887,
+    "cumulativeExp": 63570766,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 103,
+    "expRequired": 3303035,
+    "cumulativeExp": 66812653,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 104,
+    "expRequired": 3364731,
+    "cumulativeExp": 70115688,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 105,
+    "expRequired": 3426975,
+    "cumulativeExp": 73480419,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 106,
+    "expRequired": 3489768,
+    "cumulativeExp": 76907394,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 107,
+    "expRequired": 3553107,
+    "cumulativeExp": 80397162,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 108,
+    "expRequired": 3616994,
+    "cumulativeExp": 83950269,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 109,
+    "expRequired": 3681427,
+    "cumulativeExp": 87567263,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": null
+  },
+  {
+    "level": 110,
+    "expRequired": 3746406,
+    "cumulativeExp": 91248690,
+    "recommendedRegion": "map_shadow_realm_border",
+    "milestoneReward": "Endgame Frontier Max Level"
+  }
+]

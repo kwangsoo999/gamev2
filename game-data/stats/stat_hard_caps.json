@@ -1,0 +1,62 @@
+{
+  "critRatePct": {
+    "pveHardCeiling": 75,
+    "pvpHardCeiling": 70,
+    "bossHardCeiling": 75
+  },
+  "critDamageBonusPct": {
+    "pveHardCeiling": 250,
+    "pvpHardCeiling": 210,
+    "bossHardCeiling": 250
+  },
+  "aspdBonusPct": {
+    "pveHardCeiling": 60,
+    "pvpHardCeiling": 50,
+    "bossHardCeiling": 60
+  },
+  "cooldownReductionPct": {
+    "pveHardCeiling": 40,
+    "pvpHardCeiling": 35,
+    "bossHardCeiling": 40
+  },
+  "moveSpeedBonusPct": {
+    "pveHardCeiling": 40,
+    "pvpHardCeiling": 35,
+    "bossHardCeiling": 40
+  },
+  "evasionPct": {
+    "pveHardCeiling": 40,
+    "pvpHardCeiling": 35,
+    "bossHardCeiling": 40
+  },
+  "armorPenetrationPct": {
+    "pveHardCeiling": 50,
+    "pvpHardCeiling": 45,
+    "bossHardCeiling": 50
+  },
+  "magicPenetrationPct": {
+    "pveHardCeiling": 50,
+    "pvpHardCeiling": 45,
+    "bossHardCeiling": 50
+  },
+  "damageReductionPct": {
+    "pveHardCeiling": 50,
+    "pvpHardCeiling": 45,
+    "bossHardCeiling": 50
+  },
+  "healingBonusPct": {
+    "pveHardCeiling": 60,
+    "pvpHardCeiling": 45,
+    "bossHardCeiling": 60
+  },
+  "lifestealPct": {
+    "pveHardCeiling": 20,
+    "pvpHardCeiling": 15,
+    "bossHardCeiling": 20
+  },
+  "statusResistancePct": {
+    "pveHardCeiling": 60,
+    "pvpHardCeiling": 55,
+    "bossHardCeiling": 60
+  }
+}

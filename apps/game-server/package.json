@@ -9,7 +9,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
-    "test": "node --test dist/**/*.test.js"
+    "test": "node --test --test-concurrency=1 dist/__tests__/*.test.js"
   },
   "dependencies": {
     "@elysia/api-contracts": "workspace:*",

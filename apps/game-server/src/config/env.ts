@@ -14,6 +14,7 @@ export const ENV = {
   CORS_ORIGIN: process.env.CORS_ORIGIN || '*',
   NODE_ENV: process.env.NODE_ENV || 'development',
   DATA_DIR: path.resolve(ROOT_DIR, 'apps/game-server/data'),
+  GAME_DATA_DIR: path.resolve(ROOT_DIR, 'game-data'),
   WORLD_DATA_PATH: path.resolve(ROOT_DIR, 'apps/game-client/public/data/world'),
   UPLOADS_DIR: path.resolve(ROOT_DIR, 'apps/game-admin/public/assets'),
 };

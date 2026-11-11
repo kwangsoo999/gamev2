@@ -1,0 +1,10 @@
+{
+  "defaultMarketTaxPct": 5,
+  "territoryOwnerMarketRebatePct": 1,
+  "auctionListingFeePct": 3,
+  "auctionOutbidMinIncrementPct": 5,
+  "dailyNpcSupplyContractLimit": 8,
+  "maxActiveMarketListingsPerPlayer": 20,
+  "priceFloorMultiplier": 0.4,
+  "priceCeilingMultiplier": 25
+}

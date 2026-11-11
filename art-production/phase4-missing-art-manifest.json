@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-11-11",
+  "imageGeneratorStatus": "QUOTA_EXHAUSTED_429 after generating boss_portraits_sheet_magenta_1794368223357.jpg (6/6 Boss & Crafting Portraits extracted cleanly)",
+  "completedVisualAssets": {
+    "bossPortraits": [
+      "/assets/elysia/ui/portrait-ancient-treant.png",
+      "/assets/elysia/ui/portrait-moon-hydra.png",
+      "/assets/elysia/ui/portrait-ancient-titan.png",
+      "/assets/elysia/ui/portrait-ignis-dragon.png",
+      "/assets/elysia/ui/portrait-abyss-overlord.png",
+      "/assets/elysia/ui/icon-crafting-anvil.png"
+    ],
+    "vfxSpriteSheetsCount": 44,
+    "vfxThumbnailsCount": 44,
+    "existingCodexBaseAssets": 78
+  },
+  "queuedBespokeRasterSheetsDueTo429": [
+    "Dedicated 7-row animated monster sprite sheets for boss_ancient_treant, boss_moon_hydra, boss_ancient_titan, boss_ignis_dragon (runtime currently uses dark_dragon/slime/goblin master animated rigs with biome color grading + bespoke generated Boss HUD portrait)",
+    "Individual painted 64x64 raster icon packs for all 24 equipment set tiers (168 set pieces) and 104 bespoke painted skill portraits (runtime uses 44 curated transparent pixelfx VFX PNG icons/animations + custom fantasy SVG equipment art + Excalibur PNG, zero colored boxes)"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "critRatePct": {
+    "softCap1": 50,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 80,
+    "stage3Efficiency": 0.1
+  },
+  "critDamageBonusPct": {
+    "softCap1": 150,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 260,
+    "stage3Efficiency": 0.1
+  },
+  "aspdBonusPct": {
+    "softCap1": 30,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 70,
+    "stage3Efficiency": 0.1
+  },
+  "cooldownReductionPct": {
+    "softCap1": 20,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 50,
+    "stage3Efficiency": 0.1
+  },
+  "moveSpeedBonusPct": {
+    "softCap1": 20,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 50,
+    "stage3Efficiency": 0.1
+  },
+  "evasionPct": {
+    "softCap1": 25,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 45,
+    "stage3Efficiency": 0.1
+  },
+  "armorPenetrationPct": {
+    "softCap1": 30,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 60,
+    "stage3Efficiency": 0.1
+  },
+  "magicPenetrationPct": {
+    "softCap1": 30,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 60,
+    "stage3Efficiency": 0.1
+  },
+  "damageReductionPct": {
+    "softCap1": 30,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 60,
+    "stage3Efficiency": 0.1
+  },
+  "healingBonusPct": {
+    "softCap1": 30,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 70,
+    "stage3Efficiency": 0.1
+  },
+  "lifestealPct": {
+    "softCap1": 10,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 24,
+    "stage3Efficiency": 0.1
+  },
+  "statusResistancePct": {
+    "softCap1": 30,
+    "stage2Efficiency": 0.5,
+    "hardCap2": 70,
+    "stage3Efficiency": 0.1
+  }
+}

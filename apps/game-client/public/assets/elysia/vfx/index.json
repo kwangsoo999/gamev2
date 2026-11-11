@@ -1,0 +1,1077 @@
+[
+  {
+    "key": "vfx_sword_slash",
+    "id": "melee/sword-slash",
+    "category": "melee",
+    "name": "sword-slash",
+    "desc": "",
+    "frames": 24,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (1280x1280px)",
+    "scale": "1.5",
+    "image": "/assets/elysia/vfx/vfx_sword_slash.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_sword_slash_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_sword_slash.json"
+  },
+  {
+    "key": "vfx_double_slash",
+    "id": "melee/double-slash",
+    "category": "melee",
+    "name": "double-slash",
+    "desc": "",
+    "frames": 25,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (1280x1280px)",
+    "scale": "1.5",
+    "image": "/assets/elysia/vfx/vfx_double_slash.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_double_slash_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_double_slash.json"
+  },
+  {
+    "key": "vfx_spin_slash",
+    "id": "melee/spin-slash",
+    "category": "melee",
+    "name": "spin-slash",
+    "desc": "",
+    "frames": 25,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      216
+    ],
+    "pivotNorm": [
+      0.5,
+      0.84375
+    ],
+    "grid": "1 cols (1280x1280px)",
+    "scale": "1.2",
+    "image": "/assets/elysia/vfx/vfx_spin_slash.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_spin_slash_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_spin_slash.json"
+  },
+  {
+    "key": "vfx_heavy_cleave",
+    "id": "melee/heavy-cleave",
+    "category": "melee",
+    "name": "heavy-cleave",
+    "desc": "",
+    "frames": 58,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2048x2048px)",
+    "scale": "1.4",
+    "image": "/assets/elysia/vfx/vfx_heavy_cleave.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_heavy_cleave_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_heavy_cleave.json"
+  },
+  {
+    "key": "vfx_sword_combo",
+    "id": "moves/sword-combo",
+    "category": "moves",
+    "name": "sword-combo",
+    "desc": "",
+    "frames": 90,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2560x2304px)",
+    "scale": "1",
+    "image": "/assets/elysia/vfx/vfx_sword_combo.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_sword_combo_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_sword_combo.json"
+  },
+  {
+    "key": "vfx_thrust",
+    "id": "melee/thrust",
+    "category": "melee",
+    "name": "thrust",
+    "desc": "",
+    "frames": 24,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (1280x1280px)",
+    "scale": "1.4",
+    "image": "/assets/elysia/vfx/vfx_thrust.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_thrust_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_thrust.json"
+  },
+  {
+    "key": "vfx_spear_sweep",
+    "id": "melee/spear-sweep",
+    "category": "melee",
+    "name": "spear-sweep",
+    "desc": "",
+    "frames": 46,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      216
+    ],
+    "pivotNorm": [
+      0.5,
+      0.84375
+    ],
+    "grid": "1 cols (1792x1792px)",
+    "scale": "1.2",
+    "image": "/assets/elysia/vfx/vfx_spear_sweep.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_spear_sweep_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_spear_sweep.json"
+  },
+  {
+    "key": "vfx_dash_strike",
+    "id": "moves/dash-strike",
+    "category": "moves",
+    "name": "dash-strike",
+    "desc": "",
+    "frames": 70,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2304x2048px)",
+    "scale": "0.9",
+    "image": "/assets/elysia/vfx/vfx_dash_strike.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_dash_strike_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_dash_strike.json"
+  },
+  {
+    "key": "vfx_divine_shield",
+    "id": "holy/divine-shield",
+    "category": "holy",
+    "name": "divine-shield",
+    "desc": "",
+    "frames": 72,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      200
+    ],
+    "pivotNorm": [
+      0.5,
+      0.78125
+    ],
+    "grid": "1 cols (2304x2048px)",
+    "scale": "1.8",
+    "image": "/assets/elysia/vfx/vfx_divine_shield.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_divine_shield_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_divine_shield.json"
+  },
+  {
+    "key": "vfx_holy_smite",
+    "id": "moves/holy-smite",
+    "category": "moves",
+    "name": "holy-smite",
+    "desc": "",
+    "frames": 85,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2560x2304px)",
+    "scale": "1",
+    "image": "/assets/elysia/vfx/vfx_holy_smite.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_holy_smite_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_holy_smite.json"
+  },
+  {
+    "key": "vfx_holy_blessing",
+    "id": "holy/blessing",
+    "category": "holy",
+    "name": "blessing",
+    "desc": "",
+    "frames": 90,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2560x2304px)",
+    "scale": "1.6",
+    "image": "/assets/elysia/vfx/vfx_holy_blessing.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_holy_blessing_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_holy_blessing.json"
+  },
+  {
+    "key": "vfx_holy_holy_pillar",
+    "id": "holy/holy-pillar",
+    "category": "holy",
+    "name": "Holy pillar",
+    "desc": "Light breaks through from above: a sun opens at the top and a fan of shafts converges on the mark, pulsing, while a sigil burns on the floor; then the fan folds shut.",
+    "frames": 106,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "11x10 (2816x2560px)",
+    "scale": 1,
+    "heroFrame": 20,
+    "image": "/assets/elysia/vfx/vfx_holy_holy_pillar.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_holy_holy_pillar_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_holy_holy_pillar.json"
+  },
+  {
+    "key": "vfx_divine_heal",
+    "id": "holy/heal",
+    "category": "holy",
+    "name": "heal",
+    "desc": "",
+    "frames": 58,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2048x2048px)",
+    "scale": "2",
+    "image": "/assets/elysia/vfx/vfx_divine_heal.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_divine_heal_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_divine_heal.json"
+  },
+  {
+    "key": "vfx_heal_aoe",
+    "id": "holy/heal-aoe",
+    "category": "holy",
+    "name": "heal-aoe",
+    "desc": "",
+    "frames": 88,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2560x2304px)",
+    "scale": "1.2",
+    "image": "/assets/elysia/vfx/vfx_heal_aoe.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_heal_aoe_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_heal_aoe.json"
+  },
+  {
+    "key": "vfx_holy_resurrection",
+    "id": "holy/resurrection",
+    "category": "holy",
+    "name": "Resurrection",
+    "desc": "Light pours down on the fallen and life climbs back up the body; wings of light unfold, a halo forms, one great wingbeat, then the wings scatter into feathers.",
+    "frames": 145,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "13x12 (3328x3072px)",
+    "scale": 1,
+    "heroFrame": 71,
+    "image": "/assets/elysia/vfx/vfx_holy_resurrection.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_holy_resurrection_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_holy_resurrection.json"
+  },
+  {
+    "key": "vfx_holy_sunburst",
+    "id": "holy/sunburst",
+    "category": "holy",
+    "name": "Sunburst",
+    "desc": "A white-hot core in a gold corona; long and short rays turn slowly round it, breathing, with glints running out along them that wink at the tips.",
+    "frames": 120,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "11x11 (2816x2816px)",
+    "scale": 1.4,
+    "heroFrame": 16,
+    "image": "/assets/elysia/vfx/vfx_holy_sunburst.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_holy_sunburst_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_holy_sunburst.json"
+  },
+  {
+    "key": "vfx_fireball",
+    "id": "fire/fireball",
+    "category": "fire",
+    "name": "fireball",
+    "desc": "",
+    "frames": 36,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      160
+    ],
+    "pivotNorm": [
+      0.5,
+      0.625
+    ],
+    "grid": "1 cols (1536x1536px)",
+    "scale": "1.6",
+    "image": "/assets/elysia/vfx/vfx_fireball.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_fireball_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_fireball.json"
+  },
+  {
+    "key": "vfx_fire_meteor",
+    "id": "fire/meteor",
+    "category": "fire",
+    "name": "Meteor",
+    "desc": "A burning rock streaks in from the upper left in a comet of fire and smashes into the floor: a white flash, a fireball, rocks and brands thrown, a glowing crater that cools.",
+    "frames": 151,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "13x12 (3328x3072px)",
+    "scale": 0.9411764705882353,
+    "heroFrame": 19,
+    "image": "/assets/elysia/vfx/vfx_fire_meteor.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_fire_meteor_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_fire_meteor.json"
+  },
+  {
+    "key": "vfx_fire_flame_pillar",
+    "id": "fire/flame-pillar",
+    "category": "fire",
+    "name": "Flame pillar",
+    "desc": "The floor cracks and glows, a column of fire erupts white-hot and roars, spewing embers and shedding flame, then collapses into rolling smoke.",
+    "frames": 151,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "13x12 (3328x3072px)",
+    "scale": 1,
+    "heroFrame": 19,
+    "image": "/assets/elysia/vfx/vfx_fire_flame_pillar.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_fire_flame_pillar_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_fire_flame_pillar.json"
+  },
+  {
+    "key": "vfx_ice_lance",
+    "id": "ice/ice-lance",
+    "category": "ice",
+    "name": "ice-lance",
+    "desc": "",
+    "frames": 24,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      200
+    ],
+    "pivotNorm": [
+      0.5,
+      0.78125
+    ],
+    "grid": "1 cols (1280x1280px)",
+    "scale": "1.3",
+    "image": "/assets/elysia/vfx/vfx_ice_lance.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_ice_lance_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_ice_lance.json"
+  },
+  {
+    "key": "vfx_ice_blizzard_vortex",
+    "id": "ice/blizzard-vortex",
+    "category": "ice",
+    "name": "Blizzard vortex",
+    "desc": "A swirling snow tornado: wind bands spin up a leaning funnel, flakes and ice crystals orbit in front and behind, snow boils at its foot and cold light fills its throat.",
+    "frames": 60,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "8x8 (2048x2048px)",
+    "scale": 1.4,
+    "heroFrame": 55,
+    "image": "/assets/elysia/vfx/vfx_ice_blizzard_vortex.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_ice_blizzard_vortex_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_ice_blizzard_vortex.json"
+  },
+  {
+    "key": "vfx_frost_nova",
+    "id": "ice/frost-nova",
+    "category": "ice",
+    "name": "frost-nova",
+    "desc": "",
+    "frames": 103,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2816x2560px)",
+    "scale": "0.9",
+    "image": "/assets/elysia/vfx/vfx_frost_nova.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_frost_nova_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_frost_nova.json"
+  },
+  {
+    "key": "vfx_lightning_strike",
+    "id": "lightning/lightning-strike",
+    "category": "lightning",
+    "name": "lightning-strike",
+    "desc": "",
+    "frames": 91,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      228
+    ],
+    "pivotNorm": [
+      0.5,
+      0.89063
+    ],
+    "grid": "1 cols (2560x2560px)",
+    "scale": "0.95",
+    "image": "/assets/elysia/vfx/vfx_lightning_strike.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_lightning_strike_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_lightning_strike.json"
+  },
+  {
+    "key": "vfx_lightning_chain_lightning",
+    "id": "lightning/chain-lightning",
+    "category": "lightning",
+    "name": "Chain lightning",
+    "desc": "A bolt leaps from the caster's hand through three targets in turn; each flashes, sparks and grounds itself to the floor while the arcs between them flicker, then the chain snaps.",
+    "frames": 55,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "8x7 (2048x1792px)",
+    "scale": 1,
+    "heroFrame": 8,
+    "image": "/assets/elysia/vfx/vfx_lightning_chain_lightning.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_lightning_chain_lightning_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_lightning_chain_lightning.json"
+  },
+  {
+    "key": "vfx_arcane_mana_burst",
+    "id": "arcane/mana-burst",
+    "category": "arcane",
+    "name": "Mana burst",
+    "desc": "Energy rushes into a point and blows out in a white flash and rings, flinging glowing runes that flare and pop into sparks one after another.",
+    "frames": 55,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "8x7 (2048x1792px)",
+    "scale": 1,
+    "heroFrame": 7,
+    "image": "/assets/elysia/vfx/vfx_arcane_mana_burst.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_arcane_mana_burst_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_arcane_mana_burst.json"
+  },
+  {
+    "key": "vfx_arcane_star_fall",
+    "id": "arcane/star-fall",
+    "category": "arcane",
+    "name": "Star fall",
+    "desc": "Stars streak down on long trails across an area, each landing with a white flash, a ring across the floor and a kick of sparks.",
+    "frames": 76,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "9x9 (2304x2304px)",
+    "scale": 1,
+    "heroFrame": 31,
+    "image": "/assets/elysia/vfx/vfx_arcane_star_fall.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_arcane_star_fall_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_arcane_star_fall.json"
+  },
+  {
+    "key": "vfx_dagger_flurry",
+    "id": "melee/dagger-flurry",
+    "category": "melee",
+    "name": "dagger-flurry",
+    "desc": "",
+    "frames": 30,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (1536x1280px)",
+    "scale": "1.5",
+    "image": "/assets/elysia/vfx/vfx_dagger_flurry.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_dagger_flurry_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_dagger_flurry.json"
+  },
+  {
+    "key": "vfx_shadow_step",
+    "id": "arcane/blink-out",
+    "category": "arcane",
+    "name": "blink-out",
+    "desc": "",
+    "frames": 49,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (1792x1792px)",
+    "scale": "1.8",
+    "image": "/assets/elysia/vfx/vfx_shadow_step.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_shadow_step_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_shadow_step.json"
+  },
+  {
+    "key": "vfx_shadow_dark_explosion",
+    "id": "shadow/dark-explosion",
+    "category": "shadow",
+    "name": "Dark explosion",
+    "desc": "Motes swirl into a pulsing core, a black star cuts across a violet-white flash, and a black sphere burns at the rim, throws lit shards and smoke, then collapses.",
+    "frames": 115,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "11x11 (2816x2816px)",
+    "scale": 0.9142857142857143,
+    "heroFrame": 56,
+    "image": "/assets/elysia/vfx/vfx_shadow_dark_explosion.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_shadow_dark_explosion_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_shadow_dark_explosion.json"
+  },
+  {
+    "key": "vfx_shadow_life_steal",
+    "id": "shadow/life-steal",
+    "category": "shadow",
+    "name": "Life steal",
+    "desc": "A target on the right is struck and bleeds red orbs; they hang a moment, then whip home as comet streaks and flood the caster crimson.",
+    "frames": 67,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "9x8 (2304x2048px)",
+    "scale": 1,
+    "heroFrame": 1,
+    "image": "/assets/elysia/vfx/vfx_shadow_life_steal.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_shadow_life_steal_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_shadow_life_steal.json"
+  },
+  {
+    "key": "vfx_power_punch",
+    "id": "melee/uppercut",
+    "category": "melee",
+    "name": "uppercut",
+    "desc": "",
+    "frames": 27,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (1536x1280px)",
+    "scale": "1.5",
+    "image": "/assets/elysia/vfx/vfx_power_punch.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_power_punch_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_power_punch.json"
+  },
+  {
+    "key": "vfx_earth_stomp",
+    "id": "moves/earth-stomp",
+    "category": "moves",
+    "name": "earth-stomp",
+    "desc": "",
+    "frames": 105,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2816x2560px)",
+    "scale": "1.2",
+    "image": "/assets/elysia/vfx/vfx_earth_stomp.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_earth_stomp_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_earth_stomp.json"
+  },
+  {
+    "key": "vfx_ground_slam",
+    "id": "impacts/ground-slam",
+    "category": "impacts",
+    "name": "ground-slam",
+    "desc": "",
+    "frames": 97,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2560x2560px)",
+    "scale": "1.2",
+    "image": "/assets/elysia/vfx/vfx_ground_slam.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_ground_slam_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_ground_slam.json"
+  },
+  {
+    "key": "vfx_fire_ring",
+    "id": "fire/fire-ring",
+    "category": "fire",
+    "name": "fire-ring",
+    "desc": "",
+    "frames": 118,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "1 cols (2816x2816px)",
+    "scale": "1.2",
+    "image": "/assets/elysia/vfx/vfx_fire_ring.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_fire_ring_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_fire_ring.json"
+  },
+  {
+    "key": "vfx_moves_arrow_shot",
+    "id": "moves/arrow-shot",
+    "category": "moves",
+    "name": "Arrow shot",
+    "desc": "He raises the bow, draws to his cheek, holds his breath and looses: the string snaps forward, the arrow crosses the floor and thuds home.",
+    "frames": 58,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "8x8 (2048x2048px)",
+    "scale": 0.8533333333333334,
+    "heroFrame": 22,
+    "image": "/assets/elysia/vfx/vfx_moves_arrow_shot.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_moves_arrow_shot_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_moves_arrow_shot.json"
+  },
+  {
+    "key": "vfx_projectiles_arrow",
+    "id": "projectiles/arrow",
+    "category": "projectiles",
+    "name": "Arrow",
+    "desc": "An arrow in flight: a steel broadhead catching the light, a wooden shaft, fletching fluttering in the wind, streaks of air peeling off its head and swirling off its feathers.",
+    "frames": 18,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      160
+    ],
+    "pivotNorm": [
+      0.5,
+      0.625
+    ],
+    "grid": "5x4 (1280x1024px)",
+    "scale": 2,
+    "heroFrame": 10,
+    "image": "/assets/elysia/vfx/vfx_projectiles_arrow.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_projectiles_arrow_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_projectiles_arrow.json"
+  },
+  {
+    "key": "vfx_nature_poison_cloud",
+    "id": "nature/poison-cloud",
+    "category": "nature",
+    "name": "Poison cloud",
+    "desc": "A miasma hugging the floor: ragged sheets of gas lit yellow-green from within, fading to violet, creep out in tongues that curl over at their tips; plumes twist up as ribbons.",
+    "frames": 120,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "11x11 (2816x2816px)",
+    "scale": 1,
+    "heroFrame": 17,
+    "image": "/assets/elysia/vfx/vfx_nature_poison_cloud.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_nature_poison_cloud_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_nature_poison_cloud.json"
+  },
+  {
+    "key": "vfx_nature_leaf_storm",
+    "id": "nature/leaf-storm",
+    "category": "nature",
+    "name": "Leaf storm",
+    "desc": "Leaves tumble up a rising spiral round the character, passing behind and in front, turning and flipping, wrapped in bright bands of wind; litter swirls at their feet.",
+    "frames": 72,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "9x8 (2304x2048px)",
+    "scale": 2,
+    "heroFrame": 8,
+    "image": "/assets/elysia/vfx/vfx_nature_leaf_storm.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_nature_leaf_storm_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_nature_leaf_storm.json"
+  },
+  {
+    "key": "vfx_pickups_loot_beam",
+    "id": "pickups/loot-beam",
+    "category": "pickups",
+    "name": "Loot beam",
+    "desc": "A dropped sword in a tall pillar of rarity light: a white core thinning to the sky, rings pulsing across the floor, motes streaming up, a glint racing up the shaft.",
+    "frames": 72,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "9x8 (2304x2048px)",
+    "scale": 1,
+    "heroFrame": 46,
+    "image": "/assets/elysia/vfx/vfx_pickups_loot_beam.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_pickups_loot_beam_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_pickups_loot_beam.json"
+  },
+  {
+    "key": "vfx_pickups_chest_open",
+    "id": "pickups/chest-open",
+    "category": "pickups",
+    "name": "Chest open",
+    "desc": "A banded chest rattles with gold light leaking from its seam, the lid kicks open, rays fan up, and coins and gems arc out, bounce, glint and get collected.",
+    "frames": 139,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "12x12 (3072x3072px)",
+    "scale": 1,
+    "heroFrame": 25,
+    "image": "/assets/elysia/vfx/vfx_pickups_chest_open.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_pickups_chest_open_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_pickups_chest_open.json"
+  },
+  {
+    "key": "vfx_critical_hit",
+    "id": "impacts/crit-hit",
+    "category": "impacts",
+    "name": "crit-hit",
+    "desc": "",
+    "frames": 28,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      180
+    ],
+    "pivotNorm": [
+      0.5,
+      0.70313
+    ],
+    "grid": "1 cols (1536x1280px)",
+    "scale": "1.6",
+    "image": "/assets/elysia/vfx/vfx_critical_hit.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_critical_hit_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_critical_hit.json"
+  },
+  {
+    "key": "vfx_blunt_hit",
+    "id": "impacts/blunt-hit",
+    "category": "impacts",
+    "name": "blunt-hit",
+    "desc": "",
+    "frames": 28,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      180
+    ],
+    "pivotNorm": [
+      0.5,
+      0.70313
+    ],
+    "grid": "1 cols (1536x1280px)",
+    "scale": "1.8",
+    "image": "/assets/elysia/vfx/vfx_blunt_hit.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_blunt_hit_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_blunt_hit.json"
+  },
+  {
+    "key": "vfx_nature_root_snare",
+    "id": "nature/root-snare",
+    "category": "nature",
+    "name": "Root snare",
+    "desc": "The floor cracks and roots burst up round the character, spiralling round its legs; they cinch tight with a snap, hold, then crack and crumble into bark and dust.",
+    "frames": 82,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "10x9 (2560x2304px)",
+    "scale": 1.4,
+    "heroFrame": 19,
+    "image": "/assets/elysia/vfx/vfx_nature_root_snare.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_nature_root_snare_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_nature_root_snare.json"
+  },
+  {
+    "key": "vfx_water_geyser",
+    "id": "water/geyser",
+    "category": "water",
+    "name": "Geyser",
+    "desc": "A pool heaves and burbles faster and faster, then blasts a white column of water skyward with a churning foam head; it rains back down in drops and steam, slumps and sputters out.",
+    "frames": 151,
+    "fps": 30,
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "pivot": [
+      128,
+      224
+    ],
+    "pivotNorm": [
+      0.5,
+      0.875
+    ],
+    "grid": "13x12 (3328x3072px)",
+    "scale": 1,
+    "heroFrame": 35,
+    "image": "/assets/elysia/vfx/vfx_water_geyser.png",
+    "thumbnail": "/assets/elysia/vfx/vfx_water_geyser_thumb.png",
+    "json": "/assets/elysia/vfx/vfx_water_geyser.json"
+  }
+]

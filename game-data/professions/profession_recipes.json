@@ -1,0 +1,660 @@
+[
+  {
+    "id": "REC_HERB_POTION_T1",
+    "name": "Minor Vitality Decoction",
+    "nameVi": "Bình Sinh Lực Thảo Dược",
+    "professionId": "herbalist",
+    "tier": 1,
+    "requiredMastery": 1,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_HERB_GREEN",
+        "quantity": 2
+      }
+    ],
+    "outputItemId": "ITEM_POTION_HP_SMALL",
+    "outputName": "Bình Sinh Lực Nhỏ",
+    "outputQuantity": 2,
+    "craftCostGold": 25,
+    "baseSuccessRatePct": 96,
+    "baseExtraYieldChancePct": 18,
+    "maxExtraYieldQty": 2,
+    "expReward": 28,
+    "craftTimeMs": 900,
+    "description": "Bào chế nhanh 2 Bình Sinh Lực từ Lá Dược Thảo Đồng Xanh."
+  },
+  {
+    "id": "REC_HERB_ELIXIR_T2",
+    "name": "Moonflower Rejuvenation Potion",
+    "nameVi": "Nguyệt Hoa Linh Dược",
+    "professionId": "herbalist",
+    "tier": 2,
+    "requiredMastery": 18,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_MOONFLOWER",
+        "quantity": 2
+      },
+      {
+        "itemId": "MAT_PROF_HERB_GREEN",
+        "quantity": 2
+      }
+    ],
+    "outputItemId": "ITEM_POTION_HP_MEDIUM",
+    "outputName": "Bình Sinh Lực Trung Cấp",
+    "outputQuantity": 2,
+    "craftCostGold": 120,
+    "baseSuccessRatePct": 92,
+    "baseExtraYieldChancePct": 22,
+    "maxExtraYieldQty": 2,
+    "expReward": 68,
+    "craftTimeMs": 1200,
+    "description": "Dược phẩm hồi lượng lớn sinh lực."
+  },
+  {
+    "id": "REC_HERB_LEGEND_PANACEA",
+    "name": "Treant Heart Eternal Elixir",
+    "nameVi": "Thần Dược Bất Tử (Hidden Legendary)",
+    "professionId": "herbalist",
+    "tier": 5,
+    "requiredMastery": 55,
+    "isHidden": true,
+    "isLegendary": true,
+    "requiresQuestId": "PQ_HERB_HIDDEN_LEGEND",
+    "requiresBossReagent": true,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_PHOENIX_LEAF",
+        "quantity": 4
+      },
+      {
+        "itemId": "MAT_TREANT_CORE",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_LEGEND_PANACEA",
+    "outputName": "Linh Dược Thụ Thần (Legendary)",
+    "outputQuantity": 1,
+    "craftCostGold": 3500,
+    "baseSuccessRatePct": 82,
+    "baseExtraYieldChancePct": 25,
+    "maxExtraYieldQty": 1,
+    "expReward": 420,
+    "craftTimeMs": 2200,
+    "buffEffect": {
+      "stat": "maxHpPct",
+      "pctBonus": 18,
+      "durationSec": 1800
+    },
+    "description": "Công thức bí truyền kết hợp Hỏa Phượng Thảo & Lõi Cổ Thụ Boss."
+  },
+  {
+    "id": "REC_SMITH_STEEL_INGOT",
+    "name": "Smelt Refined Steel Ingot",
+    "nameVi": "Luyện Thỏi Thép Tinh",
+    "professionId": "blacksmith",
+    "tier": 1,
+    "requiredMastery": 1,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_IRON_ORE",
+        "quantity": 3
+      },
+      {
+        "itemId": "MAT_PROF_OAK_TIMBER",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "MAT_PROF_IRON_INGOT",
+    "outputName": "Thỏi Thép Tinh Luyện",
+    "outputQuantity": 2,
+    "craftCostGold": 35,
+    "baseSuccessRatePct": 96,
+    "baseExtraYieldChancePct": 20,
+    "maxExtraYieldQty": 2,
+    "expReward": 32,
+    "craftTimeMs": 1000,
+    "description": "Nung chảy quặng sắt cùng gỗ sồi thành thép rèn vũ khí."
+  },
+  {
+    "id": "REC_SMITH_STEEL_SWORD",
+    "name": "Forged Knight Longsword",
+    "nameVi": "Trường Kiếm Thép Elysia",
+    "professionId": "blacksmith",
+    "tier": 2,
+    "requiredMastery": 15,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_IRON_INGOT",
+        "quantity": 3
+      },
+      {
+        "itemId": "MAT_PROF_OAK_TIMBER",
+        "quantity": 2
+      }
+    ],
+    "outputItemId": "PROF_ITEM_STEEL_SWORD",
+    "outputName": "Trường Kiếm Thép Elysia",
+    "outputQuantity": 1,
+    "craftCostGold": 450,
+    "baseSuccessRatePct": 90,
+    "baseExtraYieldChancePct": 12,
+    "maxExtraYieldQty": 1,
+    "expReward": 95,
+    "craftTimeMs": 1600,
+    "description": "Vũ khí chất lượng cao cho Kiếm Sĩ và Tân Thủ cấp trung."
+  },
+  {
+    "id": "REC_SMITH_DRAGON_BLADE",
+    "name": "Ignis Dragonforge Blade",
+    "nameVi": "Long Diệm Thần Kiếm (Hidden Legendary)",
+    "professionId": "blacksmith",
+    "tier": 5,
+    "requiredMastery": 58,
+    "isHidden": true,
+    "isLegendary": true,
+    "requiresQuestId": "PQ_SMITH_HIDDEN_LEGEND",
+    "requiresBossReagent": true,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_MITHRIL_ORE",
+        "quantity": 6
+      },
+      {
+        "itemId": "MAT_DRAGON_HEART",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_DRAGON_BLADE",
+    "outputName": "Long Diệm Thần Kiếm (Legendary)",
+    "outputQuantity": 1,
+    "craftCostGold": 9500,
+    "baseSuccessRatePct": 78,
+    "baseExtraYieldChancePct": 10,
+    "maxExtraYieldQty": 1,
+    "expReward": 520,
+    "craftTimeMs": 2500,
+    "description": "Thần binh rèn từ Tim Rồng Ignis và quặng Mithril tinh khiết."
+  },
+  {
+    "id": "REC_ALCH_UPGRADE_STONE",
+    "name": "Transmute Upgrade Stone",
+    "nameVi": "Luyện Đá Cường Hóa Sơ Cấp",
+    "professionId": "alchemist_jeweler",
+    "tier": 1,
+    "requiredMastery": 1,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_IRON_ORE",
+        "quantity": 2
+      },
+      {
+        "itemId": "MAT_PROF_HERB_GREEN",
+        "quantity": 2
+      }
+    ],
+    "outputItemId": "ITEM_UPGRADE_STONE_BASIC",
+    "outputName": "Đá Cường Hóa Sơ Cấp",
+    "outputQuantity": 1,
+    "craftCostGold": 150,
+    "baseSuccessRatePct": 92,
+    "baseExtraYieldChancePct": 22,
+    "maxExtraYieldQty": 2,
+    "expReward": 42,
+    "craftTimeMs": 1100,
+    "description": "Tinh luyện đá cường hóa cho Lò Rèn & Chợ."
+  },
+  {
+    "id": "REC_ALCH_AMETHYST_RING",
+    "name": "Moonwater Star Ring",
+    "nameVi": "Nhẫn Ánh Trăng Tinh Tú",
+    "professionId": "alchemist_jeweler",
+    "tier": 3,
+    "requiredMastery": 25,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_MITHRIL_ORE",
+        "quantity": 2
+      },
+      {
+        "itemId": "MAT_PROF_ABYSSAL_PEARL",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_STAR_RING",
+    "outputName": "Nhẫn Ánh Trăng Tinh Tú",
+    "outputQuantity": 1,
+    "craftCostGold": 1200,
+    "baseSuccessRatePct": 88,
+    "baseExtraYieldChancePct": 14,
+    "maxExtraYieldQty": 1,
+    "expReward": 150,
+    "craftTimeMs": 1600,
+    "description": "Trang sức tăng MATK, Crit và Tốc độ thi triển."
+  },
+  {
+    "id": "REC_ALCH_ABYSSAL_NECKLACE",
+    "name": "Abyssal Core Crown Amulet",
+    "nameVi": "Hộ Phù Hư Không (Hidden Legendary)",
+    "professionId": "alchemist_jeweler",
+    "tier": 5,
+    "requiredMastery": 55,
+    "isHidden": true,
+    "isLegendary": true,
+    "requiresQuestId": "PQ_ALCH_HIDDEN_LEGEND",
+    "requiresBossReagent": true,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_STAR_CRYSTAL",
+        "quantity": 4
+      },
+      {
+        "itemId": "MAT_ABYSSAL_CORE",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_ABYSSAL_AMULET",
+    "outputName": "Hộ Phù Hư Không (Legendary)",
+    "outputQuantity": 1,
+    "craftCostGold": 8800,
+    "baseSuccessRatePct": 80,
+    "baseExtraYieldChancePct": 12,
+    "maxExtraYieldQty": 1,
+    "expReward": 490,
+    "craftTimeMs": 2400,
+    "description": "Bảo vật kim hoàn tối thượng từ Lõi Hư Không."
+  },
+  {
+    "id": "REC_CHEF_WARM_BREAD",
+    "name": "Hearth Honey Bread",
+    "nameVi": "Bánh Mì Nướng Mật Ong",
+    "professionId": "chef",
+    "tier": 1,
+    "requiredMastery": 1,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_WHEAT",
+        "quantity": 2
+      }
+    ],
+    "outputItemId": "PROF_ITEM_HONEY_BREAD",
+    "outputName": "Bánh Mì Nướng Ấm (+8% EXP)",
+    "outputQuantity": 2,
+    "craftCostGold": 20,
+    "baseSuccessRatePct": 98,
+    "baseExtraYieldChancePct": 24,
+    "maxExtraYieldQty": 2,
+    "expReward": 26,
+    "craftTimeMs": 800,
+    "buffEffect": {
+      "stat": "expBonusPct",
+      "pctBonus": 8,
+      "durationSec": 1200
+    },
+    "description": "Hồi phục HP và tăng 8% EXP thu nhận trong 20 phút."
+  },
+  {
+    "id": "REC_CHEF_CARP_SOUP",
+    "name": "Silver Brook Carp Stew",
+    "nameVi": "Canh Cá Chép Suối Bạc",
+    "professionId": "chef",
+    "tier": 2,
+    "requiredMastery": 14,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_CARP",
+        "quantity": 2
+      },
+      {
+        "itemId": "MAT_PROF_HERB_GREEN",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_CARP_STEW",
+    "outputName": "Canh Cá Chép (+6% ATK/MATK)",
+    "outputQuantity": 2,
+    "craftCostGold": 95,
+    "baseSuccessRatePct": 94,
+    "baseExtraYieldChancePct": 24,
+    "maxExtraYieldQty": 2,
+    "expReward": 62,
+    "craftTimeMs": 1100,
+    "buffEffect": {
+      "stat": "atkPct",
+      "pctBonus": 6,
+      "durationSec": 1800
+    },
+    "description": "Món canh bổ dưỡng tăng 6% Sát thương."
+  },
+  {
+    "id": "REC_CHEF_ROYAL_BANQUET",
+    "name": "Royal Dragonfruit Feast",
+    "nameVi": "Đại Tiệc Hoàng Gia Elysia (Hidden Legendary)",
+    "professionId": "chef",
+    "tier": 5,
+    "requiredMastery": 52,
+    "isHidden": true,
+    "isLegendary": true,
+    "requiresQuestId": "PQ_CHEF_HIDDEN_LEGEND",
+    "requiresBossReagent": true,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_GOLDEN_APPLE",
+        "quantity": 3
+      },
+      {
+        "itemId": "MAT_PROF_MOON_SALMON",
+        "quantity": 2
+      },
+      {
+        "itemId": "MAT_HYDRA_SCALE",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_ROYAL_FEAST",
+    "outputName": "Đại Tiệc Hoàng Gia (+20% EXP & +10% ATK)",
+    "outputQuantity": 1,
+    "craftCostGold": 4200,
+    "baseSuccessRatePct": 84,
+    "baseExtraYieldChancePct": 20,
+    "maxExtraYieldQty": 1,
+    "expReward": 410,
+    "craftTimeMs": 2200,
+    "buffEffect": {
+      "stat": "allCombatAndExp",
+      "pctBonus": 15,
+      "durationSec": 3600
+    },
+    "description": "Mỹ vị đỉnh cao phục vụ Bang Hội trước giờ đánh Boss."
+  },
+  {
+    "id": "REC_WOOD_TIMBER_BUNDLE",
+    "name": "Seasoned Construction Plank",
+    "nameVi": "Ván Gỗ Sồi Gia Cố",
+    "professionId": "woodcutter",
+    "tier": 1,
+    "requiredMastery": 1,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_OAK_TIMBER",
+        "quantity": 3
+      }
+    ],
+    "outputItemId": "PROF_ITEM_OAK_PLANK",
+    "outputName": "Ván Gỗ Sồi Gia Cố",
+    "outputQuantity": 2,
+    "craftCostGold": 20,
+    "baseSuccessRatePct": 98,
+    "baseExtraYieldChancePct": 20,
+    "maxExtraYieldQty": 2,
+    "expReward": 25,
+    "craftTimeMs": 850,
+    "description": "Gỗ chế biến dùng đóng công cụ và xây Sảnh Bang Hội."
+  },
+  {
+    "id": "REC_MINER_CORE_REFINEMENT",
+    "name": "Smelt Mithril Bar",
+    "nameVi": "Thanh Mithril Rèn Đúc",
+    "professionId": "miner",
+    "tier": 2,
+    "requiredMastery": 20,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_MITHRIL_ORE",
+        "quantity": 3
+      }
+    ],
+    "outputItemId": "PROF_ITEM_MITHRIL_BAR",
+    "outputName": "Thanh Mithril Tinh Khiết",
+    "outputQuantity": 1,
+    "craftCostGold": 180,
+    "baseSuccessRatePct": 92,
+    "baseExtraYieldChancePct": 18,
+    "maxExtraYieldQty": 1,
+    "expReward": 75,
+    "craftTimeMs": 1200,
+    "description": "Nguyên liệu trung gian cung cấp cho Thợ Rèn & Kim Hoàn."
+  },
+  {
+    "id": "REC_FARMER_SEED_PACK",
+    "name": "Fertilized Wheat Meal",
+    "nameVi": "Bột Lúa Mì Dinh Dưỡng",
+    "professionId": "farmer",
+    "tier": 1,
+    "requiredMastery": 1,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_WHEAT",
+        "quantity": 3
+      }
+    ],
+    "outputItemId": "PROF_ITEM_FLOUR_SACK",
+    "outputName": "Bao Bột Mì Tinh Sạch",
+    "outputQuantity": 2,
+    "craftCostGold": 15,
+    "baseSuccessRatePct": 98,
+    "baseExtraYieldChancePct": 24,
+    "maxExtraYieldQty": 2,
+    "expReward": 24,
+    "craftTimeMs": 800,
+    "description": "Bột mì chất lượng cao cho Bếp Trưởng."
+  },
+  {
+    "id": "REC_FISH_AQUA_OIL",
+    "name": "Refined Fish Oil Essence",
+    "nameVi": "Tinh Dầu Cá Thuần Khiết",
+    "professionId": "fisherman",
+    "tier": 1,
+    "requiredMastery": 1,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_CARP",
+        "quantity": 2
+      }
+    ],
+    "outputItemId": "PROF_ITEM_FISH_OIL",
+    "outputName": "Tinh Dầu Cá Thủy Tinh",
+    "outputQuantity": 2,
+    "craftCostGold": 25,
+    "baseSuccessRatePct": 96,
+    "baseExtraYieldChancePct": 22,
+    "maxExtraYieldQty": 2,
+    "expReward": 26,
+    "craftTimeMs": 850,
+    "description": "Nguyên liệu phụ trợ cho Giả Kim & Thảo Dược."
+  },
+  {
+    "id": "REC_SMITH_GUILD_SEAL",
+    "name": "Forge Guild Creation Seal",
+    "nameVi": "Đúc Ấn Lập Bang Hội",
+    "professionId": "blacksmith",
+    "tier": 3,
+    "requiredMastery": 20,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_IRON_INGOT",
+        "quantity": 5
+      },
+      {
+        "itemId": "MAT_PROF_MITHRIL_ORE",
+        "quantity": 2
+      }
+    ],
+    "outputItemId": "ITEM_GUILD_CREATION_SEAL",
+    "outputName": "Ấn Ký Lập Bang Hội",
+    "outputQuantity": 1,
+    "craftCostGold": 5000,
+    "baseSuccessRatePct": 95,
+    "baseExtraYieldChancePct": 5,
+    "maxExtraYieldQty": 1,
+    "expReward": 180,
+    "craftTimeMs": 2000,
+    "description": "Tín vật bắt buộc để thành lập Bang Hội tại Vương Đô."
+  },
+  {
+    "id": "REC_ALCH_MERCHANT_SEAL",
+    "name": "Inscribe Merchant Seal",
+    "nameVi": "Khắc Ấn Hiệp Hội Thương Nhân",
+    "professionId": "alchemist_jeweler",
+    "tier": 3,
+    "requiredMastery": 18,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_MITHRIL_ORE",
+        "quantity": 2
+      },
+      {
+        "itemId": "MAT_PROF_MOON_SALMON",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "ITEM_MERCHANT_SEAL",
+    "outputName": "Ấn Ký Hiệp Hội Thương Nhân",
+    "outputQuantity": 1,
+    "craftCostGold": 3000,
+    "baseSuccessRatePct": 95,
+    "baseExtraYieldChancePct": 5,
+    "maxExtraYieldQty": 1,
+    "expReward": 160,
+    "craftTimeMs": 1800,
+    "description": "Tín vật thành lập Thương Hội chính thức."
+  },
+  {
+    "id": "REC_MINER_STARFORGE_CORE",
+    "name": "Smelt Starforge Alloy",
+    "nameVi": "Luyện Hợp Kim Tinh Tú (Hidden Legendary)",
+    "professionId": "miner",
+    "tier": 5,
+    "requiredMastery": 50,
+    "isHidden": true,
+    "isLegendary": true,
+    "requiresQuestId": "PQ_MINER_HIDDEN_LEGEND",
+    "requiresBossReagent": true,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_STAR_CRYSTAL",
+        "quantity": 3
+      },
+      {
+        "itemId": "MAT_DRAGON_HEART",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_STARFORGE_CORE",
+    "outputName": "Hợp Kim Tinh Tú Lò Rèn (Legendary)",
+    "outputQuantity": 1,
+    "craftCostGold": 4800,
+    "baseSuccessRatePct": 82,
+    "baseExtraYieldChancePct": 16,
+    "maxExtraYieldQty": 1,
+    "expReward": 430,
+    "craftTimeMs": 2200,
+    "description": "Kết tinh Pha Lê Tinh Tú và Tim Rồng Ignis thành hợp kim thần binh."
+  },
+  {
+    "id": "REC_FARMER_CELESTIAL_SEED",
+    "name": "Cultivate World-Fruit Sapling",
+    "nameVi": "Ươm Quả Thần Bất Diệt (Hidden Legendary)",
+    "professionId": "farmer",
+    "tier": 5,
+    "requiredMastery": 50,
+    "isHidden": true,
+    "isLegendary": true,
+    "requiresQuestId": "PQ_FARMER_HIDDEN_LEGEND",
+    "requiresBossReagent": true,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_GOLDEN_APPLE",
+        "quantity": 4
+      },
+      {
+        "itemId": "MAT_TREANT_CORE",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_CELESTIAL_SEED",
+    "outputName": "Quả Thần Bất Diệt Elysia (Legendary)",
+    "outputQuantity": 1,
+    "craftCostGold": 3600,
+    "baseSuccessRatePct": 84,
+    "baseExtraYieldChancePct": 18,
+    "maxExtraYieldQty": 1,
+    "expReward": 400,
+    "craftTimeMs": 2000,
+    "buffEffect": {
+      "stat": "expBonusPct",
+      "pctBonus": 12,
+      "durationSec": 2400
+    },
+    "description": "Dung hợp Táo Vàng Elysia và Lõi Cổ Thụ Boss thành thần quả."
+  },
+  {
+    "id": "REC_FISH_ABYSSAL_ELIXIR",
+    "name": "Distill Leviathan Pearl Nectar",
+    "nameVi": "Chưng Cất Tinh Chất Long Ngư (Hidden Legendary)",
+    "professionId": "fisherman",
+    "tier": 5,
+    "requiredMastery": 50,
+    "isHidden": true,
+    "isLegendary": true,
+    "requiresQuestId": "PQ_FISH_HIDDEN_LEGEND",
+    "requiresBossReagent": true,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_ABYSSAL_PEARL",
+        "quantity": 3
+      },
+      {
+        "itemId": "MAT_HYDRA_SCALE",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_ABYSSAL_ELIXIR",
+    "outputName": "Tinh Chất Long Ngư Vực Thẳm (Legendary)",
+    "outputQuantity": 1,
+    "craftCostGold": 3900,
+    "baseSuccessRatePct": 83,
+    "baseExtraYieldChancePct": 18,
+    "maxExtraYieldQty": 1,
+    "expReward": 410,
+    "craftTimeMs": 2100,
+    "buffEffect": {
+      "stat": "matkPct",
+      "pctBonus": 10,
+      "durationSec": 2400
+    },
+    "description": "Tinh lọc Ngọc Trai Biển Sâu với Vảy Thủy Quái Mặt Trăng."
+  },
+  {
+    "id": "REC_WOOD_YGGDRASIL_BEAM",
+    "name": "Carve Yggdrasil Sacred Timber",
+    "nameVi": "Đẽo Xà Gỗ Cây Thế Giới (Hidden Legendary)",
+    "professionId": "woodcutter",
+    "tier": 5,
+    "requiredMastery": 50,
+    "isHidden": true,
+    "isLegendary": true,
+    "requiresQuestId": "PQ_WOOD_HIDDEN_LEGEND",
+    "requiresBossReagent": true,
+    "materials": [
+      {
+        "itemId": "MAT_PROF_WORLD_BRANCH",
+        "quantity": 3
+      },
+      {
+        "itemId": "MAT_TREANT_CORE",
+        "quantity": 1
+      }
+    ],
+    "outputItemId": "PROF_ITEM_YGGDRASIL_BEAM",
+    "outputName": "Xà Gỗ Cây Thế Giới (Legendary)",
+    "outputQuantity": 1,
+    "craftCostGold": 4500,
+    "baseSuccessRatePct": 82,
+    "baseExtraYieldChancePct": 15,
+    "maxExtraYieldQty": 1,
+    "expReward": 425,
+    "craftTimeMs": 2200,
+    "description": "Gỗ thiêng bất hoại phục vụ công trình Bang Hội tối thượng."
+  }
+]

@@ -1,8 +1,34 @@
 import { JsonStore } from '../database/jsonStore.js';
 import { ItemEntity, WeaponEntity } from '@elysia/game-types';
+import { WorldService } from './world.service.js';
 
 export class ItemService {
   private store = JsonStore.getInstance();
+  private world = WorldService.getInstance();
+
+  private syncRecordToWorldItems(record: any) {
+    if (!record?.id) return;
+    const list = this.world.readJson('world_items.json', []);
+    const arr = Array.isArray(list) ? [...list] : [];
+    const idx = arr.findIndex((x) => x.id === record.id || x.itemId === record.id);
+    if (idx >= 0) {
+      arr[idx] = { ...arr[idx], ...record };
+    } else {
+      arr.push(record);
+    }
+    this.world.writeJson('world_items.json', arr);
+    this.world.invalidateCache();
+  }
+
+  private removeRecordFromWorldItems(id: string) {
+    const list = this.world.readJson('world_items.json', []);
+    if (!Array.isArray(list)) return;
+    const filtered = list.filter((x) => x.id !== id && x.itemId !== id);
+    if (filtered.length !== list.length) {
+      this.world.writeJson('world_items.json', filtered);
+      this.world.invalidateCache();
+    }
+  }
 
   // --- ITEM METHODS ---
   async getItems(params: Record<string, any> = {}) {
@@ -14,17 +40,24 @@ export class ItemService {
         (i) =>
           i.name?.toLowerCase().includes(q) ||
           i.id?.toLowerCase().includes(q) ||
-          i.itemId?.toLowerCase().includes(q)
+          i.itemId?.toLowerCase().includes(q) ||
+          i.setId?.toLowerCase().includes(q)
       );
     }
     if (params.category && params.category !== 'all') {
       items = items.filter((i) => i.category === params.category || i.itemType === params.category);
     }
+    if (params.equipSlot && params.equipSlot !== 'all') {
+      items = items.filter((i) => i.equipSlot === params.equipSlot);
+    }
+    if (params.setId && params.setId !== 'all') {
+      items = items.filter((i) => i.setId === params.setId);
+    }
     if (params.rarity && params.rarity !== 'all') {
       items = items.filter((i) => i.rarity === params.rarity);
     }
     if (params.status && params.status !== 'all') {
-      items = items.filter((i) => i.status === params.status);
+      items = items.filter((i) => String(i.status || 'published').toLowerCase() === String(params.status).toLowerCase());
     }
 
     const page = parseInt(params.page || '1', 10);
@@ -69,6 +102,7 @@ export class ItemService {
 
     this.store.items.push(newItem);
     this.store.save();
+    this.syncRecordToWorldItems(newItem);
     return newItem;
   }
 
@@ -82,6 +116,7 @@ export class ItemService {
       updatedAt: new Date().toISOString(),
     };
     this.store.save();
+    this.syncRecordToWorldItems(this.store.items[idx]);
     return this.store.items[idx];
   }
 
@@ -90,6 +125,7 @@ export class ItemService {
     if (idx === -1) throw new Error(`Không tìm thấy vật phẩm ${id}`);
     this.store.items.splice(idx, 1);
     this.store.save();
+    this.removeRecordFromWorldItems(id);
     return true;
   }
 
@@ -109,6 +145,10 @@ export class ItemService {
 
   async archiveItem(id: string): Promise<ItemEntity> {
     return this.updateItem(id, { status: 'archived' });
+  }
+
+  async testingItem(id: string): Promise<ItemEntity> {
+    return this.updateItem(id, { status: 'testing' });
   }
 
   async publishItem(id: string): Promise<ItemEntity> {
@@ -133,6 +173,9 @@ export class ItemService {
     }
     if (params.rarity && params.rarity !== 'all') {
       weapons = weapons.filter((w) => w.rarity === params.rarity);
+    }
+    if (params.status && params.status !== 'all') {
+      weapons = weapons.filter((w) => String(w.status || 'published').toLowerCase() === String(params.status).toLowerCase());
     }
 
     const page = parseInt(params.page || '1', 10);
@@ -185,6 +228,7 @@ export class ItemService {
 
     this.store.weapons.push(newWeapon);
     this.store.save();
+    this.syncRecordToWorldItems(newWeapon);
     return newWeapon;
   }
 
@@ -198,6 +242,7 @@ export class ItemService {
       updatedAt: new Date().toISOString(),
     };
     this.store.save();
+    this.syncRecordToWorldItems(this.store.weapons[idx]);
     return this.store.weapons[idx];
   }
 
@@ -206,6 +251,7 @@ export class ItemService {
     if (idx === -1) throw new Error(`Không tìm thấy vũ khí ${id}`);
     this.store.weapons.splice(idx, 1);
     this.store.save();
+    this.removeRecordFromWorldItems(id);
     return true;
   }
 
@@ -225,6 +271,10 @@ export class ItemService {
 
   async archiveWeapon(id: string): Promise<WeaponEntity> {
     return this.updateWeapon(id, { status: 'archived' });
+  }
+
+  async testingWeapon(id: string): Promise<WeaponEntity> {
+    return this.updateWeapon(id, { status: 'testing' });
   }
 
   async publishWeapon(id: string): Promise<WeaponEntity> {

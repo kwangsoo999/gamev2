@@ -1,0 +1,102 @@
+{
+  "rules": {
+    "maxInitialProfessions": 3,
+    "absoluteMaxProfessions": 8,
+    "maxMasteryLevel": 70,
+    "dailyGatherSoftCap": 120,
+    "dailyCraftSoftCap": 150,
+    "diminishingStartGapLevels": 5,
+    "farmPlotSlotsPerPlayer": 4,
+    "farmWaterYieldBonusPct": 25
+  },
+  "professions": [
+    {
+      "id": "herbalist",
+      "name": "Herbalist",
+      "nameVi": "Thảo Dược Sư",
+      "category": "hybrid",
+      "iconKey": "herb_green",
+      "npcId": "NPC_HERBALIST_MASTER",
+      "primaryStatAffinity": "int",
+      "unlockCostGold": 500,
+      "description": "Hái thảo dược quý và điều chế linh dược hồi phục, thuốc giải độc và tinh chất sinh mệnh."
+    },
+    {
+      "id": "blacksmith",
+      "name": "Blacksmith",
+      "nameVi": "Thợ Rèn",
+      "category": "crafting",
+      "iconKey": "ore_iron",
+      "npcId": "NPC_BLACKSMITH_MASTER",
+      "primaryStatAffinity": "str",
+      "unlockCostGold": 800,
+      "description": "Rèn đúc vũ khí, giáp trụ, công cụ nghề nghiệp và trang bị Truyền Thuyết từ lõi Boss."
+    },
+    {
+      "id": "alchemist_jeweler",
+      "name": "Alchemist / Jeweler",
+      "nameVi": "Giả Kim & Kim Hoàn",
+      "category": "crafting",
+      "iconKey": "gem_amethyst",
+      "npcId": "NPC_ALCHEMIST_MASTER",
+      "primaryStatAffinity": "int",
+      "unlockCostGold": 900,
+      "description": "Chế tác trang sức ma pháp, nhẫn, dây chuyền, đá cường hóa và tinh thể giả kim."
+    },
+    {
+      "id": "miner",
+      "name": "Miner",
+      "nameVi": "Thợ Mỏ",
+      "category": "gathering",
+      "iconKey": "ore_iron",
+      "npcId": "NPC_MINING_SUPERVISOR",
+      "primaryStatAffinity": "con",
+      "unlockCostGold": 450,
+      "description": "Khai thác quặng sắt, mithril, tinh thạch hỏa ngục và pha lê sao."
+    },
+    {
+      "id": "farmer",
+      "name": "Farmer",
+      "nameVi": "Nông Phu",
+      "category": "gathering",
+      "iconKey": "herb_green",
+      "npcId": "NPC_FARMER_MASTER",
+      "primaryStatAffinity": "con",
+      "unlockCostGold": 350,
+      "description": "Gieo hạt, tưới nước và thu hoạch nông sản linh điền theo thời gian thực."
+    },
+    {
+      "id": "fisherman",
+      "name": "Fisherman",
+      "nameVi": "Ngư Phủ",
+      "category": "gathering",
+      "iconKey": "fragment_crystal",
+      "npcId": "NPC_FISHERMAN_MASTER",
+      "primaryStatAffinity": "dex",
+      "unlockCostGold": 400,
+      "description": "Câu cá linh hồ, săn thủy sản quý và ngọc trai vực thẳm cung cấp cho Đầu Bếp & Giả Kim."
+    },
+    {
+      "id": "woodcutter",
+      "name": "Woodcutter",
+      "nameVi": "Tiều Phu",
+      "category": "gathering",
+      "iconKey": "wood_oak",
+      "npcId": "NPC_LUMBERJACK_MASTER",
+      "primaryStatAffinity": "str",
+      "unlockCostGold": 400,
+      "description": "Đốn hạ gỗ sồi, cổ mộc tinh linh và nhánh cây thế giới phục vụ rèn và xây dựng Bang Hội."
+    },
+    {
+      "id": "chef",
+      "name": "Chef",
+      "nameVi": "Bếp Trưởng",
+      "category": "crafting",
+      "iconKey": "bread_loaf",
+      "npcId": "NPC_CHEF_MASTER",
+      "primaryStatAffinity": "dex",
+      "unlockCostGold": 600,
+      "description": "Chế biến mỹ vị hoàng cung mang lại hiệu ứng tăng EXP, công lực và phẩm chất chế tạo."
+    }
+  ]
+}

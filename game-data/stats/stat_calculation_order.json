@@ -1,0 +1,10 @@
+[
+  "1. Base Stats (baseStats Lv.1 + allocated points + Lv.1-200 Job Growth)",
+  "2. Flat Additions (equipment, sets, unique passives, titles, passives, guild buildings, food/consumables, event temp)",
+  "3. Attribute Scaling (STR/DEX/AGI/INT/CON -> raw ATK/MATK/DEF/MDEF/HP/MP/Accuracy)",
+  "4. Job Affinity (controlled primary +12% / secondary +6% attribute efficiency on invested attributes)",
+  "5. Percentage Additions (ATK%, MATK%, DEF%, MDEF%, HP%, MP%, Guild Skills, Passive%, Buff%, Set%)",
+  "6. Diminishing Returns (piecewise monotonic Soft Cap C1 -> 50% efficiency -> C2 -> 10% efficiency)",
+  "7. Final Hard Caps (strictly clamped per PvE/PvP/Boss cap rules; prevents 100% DR / 0s CD / infinite Crit)",
+  "8. Combat Modifiers & Synergies (PvE / PvP / Boss multipliers & Skill Mastery passive synergies)"
+]

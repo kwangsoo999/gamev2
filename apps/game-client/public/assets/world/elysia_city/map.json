@@ -1,0 +1,737 @@
+{
+  "schemaVersion": "1.0.0",
+  "mapId": "city_elysia_capital",
+  "name": "Elysia City (Kinh Đô Elysia)",
+  "isSafeZone": true,
+  "combatEnabled": false,
+  "recommendedLevel": [
+    15,
+    35
+  ],
+  "projection": "isometric",
+  "tileWidth": 256,
+  "tileHeight": 128,
+  "gridWidth": 16,
+  "gridHeight": 16,
+  "worldOriginPx": {
+    "x": 1680.0,
+    "y": 120.0
+  },
+  "layers": {
+    "ground": [
+      [
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "iso_water_01",
+        "iso_water_01",
+        "iso_grass_02"
+      ],
+      [
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_garden_grass_01"
+      ],
+      [
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_garden_grass_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_garden_grass_01"
+      ],
+      [
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "iso_grass_02",
+        "iso_water_01",
+        "iso_water_01",
+        "iso_grass_02"
+      ],
+      [
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_garden_grass_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_garden_grass_01"
+      ],
+      [
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_garden_grass_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_garden_grass_01"
+      ],
+      [
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_ashlar_01"
+      ],
+      [
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_ashlar_01"
+      ],
+      [
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_ashlar_01"
+      ],
+      [
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_royal_plaza_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "iso_grass_02",
+        "iso_water_01",
+        "iso_water_01",
+        "iso_grass_02"
+      ],
+      [
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_garden_grass_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_garden_grass_01"
+      ],
+      [
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_garden_grass_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_garden_grass_01"
+      ],
+      [
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_cobble_01",
+        "city_courtyard_stone_01",
+        "city_cobble_01",
+        "iso_grass_02",
+        "iso_water_01",
+        "iso_water_01",
+        "iso_grass_02"
+      ],
+      [
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_garden_grass_01"
+      ],
+      [
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_water_01",
+        "iso_water_01",
+        "city_garden_grass_01"
+      ],
+      [
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "city_ashlar_01",
+        "iso_grass_02",
+        "city_garden_grass_01",
+        "city_garden_grass_01",
+        "iso_grass_02",
+        "iso_water_01",
+        "iso_water_01",
+        "iso_grass_02"
+      ]
+    ],
+    "transitions": [
+      {
+        "col": 5,
+        "row": 5,
+        "tileId": "city_curb_marble_n"
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "tileId": "city_curb_marble_s"
+      },
+      {
+        "col": 5,
+        "row": 5,
+        "tileId": "city_curb_marble_w"
+      },
+      {
+        "col": 9,
+        "row": 5,
+        "tileId": "city_curb_marble_e"
+      },
+      {
+        "col": 6,
+        "row": 5,
+        "tileId": "city_curb_marble_n"
+      },
+      {
+        "col": 6,
+        "row": 9,
+        "tileId": "city_curb_marble_s"
+      },
+      {
+        "col": 5,
+        "row": 6,
+        "tileId": "city_curb_marble_w"
+      },
+      {
+        "col": 9,
+        "row": 6,
+        "tileId": "city_curb_marble_e"
+      },
+      {
+        "col": 7,
+        "row": 5,
+        "tileId": "city_curb_marble_n"
+      },
+      {
+        "col": 7,
+        "row": 9,
+        "tileId": "city_curb_marble_s"
+      },
+      {
+        "col": 5,
+        "row": 7,
+        "tileId": "city_curb_marble_w"
+      },
+      {
+        "col": 9,
+        "row": 7,
+        "tileId": "city_curb_marble_e"
+      },
+      {
+        "col": 8,
+        "row": 5,
+        "tileId": "city_curb_marble_n"
+      },
+      {
+        "col": 8,
+        "row": 9,
+        "tileId": "city_curb_marble_s"
+      },
+      {
+        "col": 5,
+        "row": 8,
+        "tileId": "city_curb_marble_w"
+      },
+      {
+        "col": 9,
+        "row": 8,
+        "tileId": "city_curb_marble_e"
+      },
+      {
+        "col": 9,
+        "row": 5,
+        "tileId": "city_curb_marble_n"
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "tileId": "city_curb_marble_s"
+      },
+      {
+        "col": 5,
+        "row": 9,
+        "tileId": "city_curb_marble_w"
+      },
+      {
+        "col": 9,
+        "row": 9,
+        "tileId": "city_curb_marble_e"
+      },
+      {
+        "col": 13,
+        "row": 0,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 1,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 2,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 3,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 4,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 5,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 9,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 10,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 11,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 12,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 13,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 14,
+        "tileId": "iso_trans_shore_w"
+      },
+      {
+        "col": 13,
+        "row": 15,
+        "tileId": "iso_trans_shore_w"
+      }
+    ],
+    "objects": [
+      {
+        "id": "city_plaza_fountain",
+        "assetId": "city_plaza_fountain_01",
+        "col": 7.0,
+        "row": 7.0,
+        "scale": 0.94,
+        "worldX": 1680.0,
+        "worldY": 1016.0,
+        "depth": 1016.0
+      },
+      {
+        "id": "city_north_sanctum_gate",
+        "assetId": "sanctum_shrine_gate_01",
+        "col": 7.1,
+        "row": 2.2,
+        "scale": 0.95,
+        "worldX": 2307.2,
+        "worldY": 715.2,
+        "depth": 715.2
+      },
+      {
+        "id": "city_weapon_shop",
+        "assetId": "weapon_shop_01",
+        "col": 2.9,
+        "row": 2.9,
+        "scale": 0.96,
+        "worldX": 1680.0,
+        "worldY": 491.2,
+        "depth": 491.2
+      },
+      {
+        "id": "city_item_shop",
+        "assetId": "city_item_shop_01",
+        "col": 10.3,
+        "row": 2.8,
+        "scale": 0.96,
+        "worldX": 2640.0,
+        "worldY": 958.4,
+        "depth": 958.4
+      },
+      {
+        "id": "city_blacksmith",
+        "assetId": "city_blacksmith_01",
+        "col": 3.4,
+        "row": 10.6,
+        "scale": 0.96,
+        "worldX": 758.4,
+        "worldY": 1016.0,
+        "depth": 1016.0
+      },
+      {
+        "id": "city_adventurer_guild",
+        "assetId": "adventurer_guild_01",
+        "col": 10.8,
+        "row": 10.6,
+        "scale": 0.96,
+        "worldX": 1705.6,
+        "worldY": 1489.6,
+        "depth": 1489.6
+      },
+      {
+        "id": "city_bank_vault",
+        "assetId": "bank_vault_01",
+        "col": 3.2,
+        "row": 13.6,
+        "scale": 0.92,
+        "worldX": 348.8,
+        "worldY": 1195.2,
+        "depth": 1195.2
+      },
+      {
+        "id": "city_residential_1",
+        "assetId": "residential_house_01",
+        "col": 10.6,
+        "row": 13.6,
+        "scale": 0.94,
+        "worldX": 1296.0,
+        "worldY": 1668.8,
+        "depth": 1668.8
+      },
+      {
+        "id": "city_canal_watermill",
+        "assetId": "city_workshop_mill_01",
+        "col": 12.1,
+        "row": 5.3,
+        "scale": 0.94,
+        "worldX": 2550.4,
+        "worldY": 1233.6,
+        "depth": 1233.6
+      },
+      {
+        "id": "city_east_canal_bridge",
+        "assetId": "canal_bridge_01",
+        "col": 13.5,
+        "row": 7.0,
+        "scale": 1.0,
+        "worldX": 2512.0,
+        "worldY": 1432.0,
+        "depth": 1432.0
+      },
+      {
+        "id": "city_stall_potions",
+        "assetId": "market_stall_cream_01",
+        "col": 5.2,
+        "row": 5.0,
+        "scale": 0.95,
+        "worldX": 1705.6,
+        "worldY": 772.8,
+        "depth": 772.8
+      },
+      {
+        "id": "city_stall_artisan",
+        "assetId": "market_stall_blue_01",
+        "col": 9.1,
+        "row": 4.9,
+        "scale": 0.95,
+        "worldX": 2217.6,
+        "worldY": 1016.0,
+        "depth": 1016.0
+      },
+      {
+        "id": "city_lantern_n",
+        "assetId": "lantern_01",
+        "col": 5.8,
+        "row": 5.8,
+        "scale": 1.0,
+        "worldX": 1680.0,
+        "worldY": 862.4,
+        "depth": 862.4
+      },
+      {
+        "id": "city_lantern_w",
+        "assetId": "lantern_01",
+        "col": 5.5,
+        "row": 8.2,
+        "scale": 1.0,
+        "worldX": 1334.4,
+        "worldY": 996.8,
+        "depth": 996.8
+      },
+      {
+        "id": "city_lantern_e",
+        "assetId": "lantern_01",
+        "col": 8.6,
+        "row": 5.6,
+        "scale": 1.0,
+        "worldX": 2064.0,
+        "worldY": 1028.8,
+        "depth": 1028.8
+      },
+      {
+        "id": "city_lantern_s",
+        "assetId": "lantern_01",
+        "col": 8.9,
+        "row": 8.5,
+        "scale": 1.0,
+        "worldX": 1731.2,
+        "worldY": 1233.6,
+        "depth": 1233.6
+      },
+      {
+        "id": "city_sakura_nw",
+        "assetId": "tree_sakura_01",
+        "col": 1.5,
+        "row": 1.8,
+        "scale": 0.95,
+        "worldX": 1641.6,
+        "worldY": 331.2,
+        "depth": 331.2
+      },
+      {
+        "id": "city_sakura_ne",
+        "assetId": "tree_sakura_01",
+        "col": 11.4,
+        "row": 1.6,
+        "scale": 0.95,
+        "worldX": 2934.4,
+        "worldY": 952.0,
+        "depth": 952.0
+      },
+      {
+        "id": "city_maple_e",
+        "assetId": "tree_maple_01",
+        "col": 12.1,
+        "row": 9.8,
+        "scale": 0.92,
+        "worldX": 1974.4,
+        "worldY": 1521.6,
+        "depth": 1521.6
+      },
+      {
+        "id": "city_pine_sw",
+        "assetId": "tree_pine_01",
+        "col": 1.4,
+        "row": 12.0,
+        "scale": 0.95,
+        "worldX": 323.2,
+        "worldY": 977.6,
+        "depth": 977.6
+      },
+      {
+        "id": "city_barrel_1",
+        "assetId": "barrel_01",
+        "col": 4.7,
+        "row": 11.6,
+        "scale": 1.0,
+        "worldX": 796.8,
+        "worldY": 1163.2,
+        "depth": 1163.2
+      },
+      {
+        "id": "city_crate_1",
+        "assetId": "crate_01",
+        "col": 4.9,
+        "row": 11.9,
+        "scale": 1.0,
+        "worldX": 784.0,
+        "worldY": 1195.2,
+        "depth": 1195.2
+      },
+      {
+        "id": "city_bush_1",
+        "assetId": "bush_01",
+        "col": 5.5,
+        "row": 3.0,
+        "scale": 1.0,
+        "worldX": 2000.0,
+        "worldY": 664.0,
+        "depth": 664.0
+      },
+      {
+        "id": "city_flowers_1",
+        "assetId": "flowers_01",
+        "col": 8.6,
+        "row": 9.2,
+        "scale": 1.0,
+        "worldX": 1603.2,
+        "worldY": 1259.2,
+        "depth": 1259.2
+      },
+      {
+        "id": "city_fence_west",
+        "assetId": "fence_wood_01",
+        "col": 1.4,
+        "row": 6.4,
+        "scale": 1.0,
+        "worldX": 1040.0,
+        "worldY": 619.2,
+        "depth": 619.2
+      }
+    ]
+  },
+  "spawnPoint": {
+    "col": 7.0,
+    "row": 8.2,
+    "worldX": 1526.4,
+    "worldY": 1092.8
+  }
+}

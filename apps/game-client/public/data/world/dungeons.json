@@ -1,0 +1,171 @@
+[
+  {
+    "id": "dungeon_sanctum_of_awakening",
+    "name": "Sanctum of Awakening",
+    "nameVi": "Thánh Điện Thức Tỉnh",
+    "subtitle": "Phó Bản Chuyển Chức Lần 1 (Lv.15+)",
+    "description": "Thánh đường cổ đại gồm 3 tầng thử thách, nơi các Tân Thủ cấp 15 chứng minh bản lĩnh để nhận Chứng Chỉ Thức Tỉnh.",
+    "purpose": "first_job_advancement",
+    "requiredLevel": 15,
+    "entryModes": [
+      "solo",
+      "party"
+    ],
+    "entryRegionIds": [
+      "THON_KHOI_NGUYEN",
+      "city_elysia_capital"
+    ],
+    "exitRegionId": "city_elysia_capital",
+    "exitCoords": {
+      "x": 1176,
+      "y": 552
+    },
+    "rewardItemId": "ITEM_AWAKENING_CERTIFICATE",
+    "rewardQuestId": "QUEST_JOB_04_GUARDIAN",
+    "allowRewardRepeat": false,
+    "floors": [
+      {
+        "floorNumber": 1,
+        "id": "dungeon_sanctum_f1",
+        "name": "Ancient Trial Corridor",
+        "nameVi": "Tầng 01: Hành Lang Thử Thách Cổ Đại",
+        "description": "Thu thập đủ 3 Mảnh Nguyên Tố (Elemental Fragments) nằm dọc hành lang cổ để mở phong ấn lên Tầng 02.",
+        "objectiveType": "COLLECT_FRAGMENTS",
+        "requiredCount": 3,
+        "objectiveDescription": "Thu thập 3/3 Mảnh Nguyên Tố (Elemental Fragments)",
+        "clientMapFile": "/data/maps/dungeon_sanctum_f1.json",
+        "spawnCoords": {
+          "x": 312,
+          "y": 792
+        },
+        "interactables": [
+          {
+            "id": "frag_ember",
+            "type": "fragment",
+            "name": "Mảnh Nguyên Tố Lửa (Ember Fragment)",
+            "element": "fire",
+            "tx": 15,
+            "ty": 11,
+            "x": 744,
+            "y": 552
+          },
+          {
+            "id": "frag_tide",
+            "type": "fragment",
+            "name": "Mảnh Nguyên Tố Thủy (Tide Fragment)",
+            "element": "water",
+            "tx": 26,
+            "ty": 21,
+            "x": 1272,
+            "y": 1032
+          },
+          {
+            "id": "frag_gale",
+            "type": "fragment",
+            "name": "Mảnh Nguyên Tố Phong (Gale Fragment)",
+            "element": "wind",
+            "tx": 37,
+            "ty": 12,
+            "x": 1800,
+            "y": 600
+          }
+        ],
+        "monsterIds": [
+          "mon_sanctum_sentinel"
+        ]
+      },
+      {
+        "floorNumber": 2,
+        "id": "dungeon_sanctum_f2",
+        "name": "Elemental Hall",
+        "nameVi": "Tầng 02: Đại Sảnh Nguyên Tố",
+        "description": "Kích hoạt đủ 4 Trụ Nguyên Tố (Lửa, Nước, Đất, Gió) để mở cánh cổng vào Điện Thức Tỉnh.",
+        "objectiveType": "ACTIVATE_PILLARS",
+        "requiredCount": 4,
+        "objectiveDescription": "Kích hoạt 4/4 Trụ Nguyên Tố",
+        "clientMapFile": "/data/maps/dungeon_sanctum_f2.json",
+        "spawnCoords": {
+          "x": 312,
+          "y": 792
+        },
+        "interactables": [
+          {
+            "id": "pillar_fire",
+            "type": "pillar",
+            "name": "Trụ Nguyên Tố Hỏa (Fire Pillar)",
+            "element": "fire",
+            "tx": 15,
+            "ty": 8,
+            "x": 744,
+            "y": 408
+          },
+          {
+            "id": "pillar_water",
+            "type": "pillar",
+            "name": "Trụ Nguyên Tố Thủy (Water Pillar)",
+            "element": "water",
+            "tx": 33,
+            "ty": 8,
+            "x": 1608,
+            "y": 408
+          },
+          {
+            "id": "pillar_earth",
+            "type": "pillar",
+            "name": "Trụ Nguyên Tố Địa (Earth Pillar)",
+            "element": "earth",
+            "tx": 15,
+            "ty": 24,
+            "x": 744,
+            "y": 1176
+          },
+          {
+            "id": "pillar_wind",
+            "type": "pillar",
+            "name": "Trụ Nguyên Tố Phong (Wind Pillar)",
+            "element": "wind",
+            "tx": 33,
+            "ty": 24,
+            "x": 1608,
+            "y": 1176
+          }
+        ],
+        "monsterIds": [
+          "mon_sanctum_acolyte"
+        ]
+      },
+      {
+        "floorNumber": 3,
+        "id": "dungeon_sanctum_f3",
+        "name": "Awakening Chamber",
+        "nameVi": "Tầng 03: Thánh Điện Thức Tỉnh",
+        "description": "Đối mặt và đánh bại Guardian of Awakening (Lv.20) để nhận Chứng Chỉ Thức Tỉnh.",
+        "objectiveType": "DEFEAT_BOSS",
+        "requiredCount": 1,
+        "objectiveDescription": "Đánh bại Guardian of Awakening (Lv.20 Boss)",
+        "clientMapFile": "/data/maps/dungeon_sanctum_f3.json",
+        "spawnCoords": {
+          "x": 408,
+          "y": 792
+        },
+        "interactables": [
+          {
+            "id": "boss_altar",
+            "type": "boss_altar",
+            "name": "Đài Thử Thách Guardian of Awakening",
+            "element": "holy",
+            "tx": 26,
+            "ty": 16,
+            "x": 1272,
+            "y": 792
+          }
+        ],
+        "monsterIds": [
+          "boss_guardian_of_awakening"
+        ],
+        "bossId": "boss_guardian_of_awakening"
+      }
+    ],
+    "status": "published"
+  }
+]

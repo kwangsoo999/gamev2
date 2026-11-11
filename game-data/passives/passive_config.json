@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "totalPassives": 128,
+  "categories": [
+    "core",
+    "combat",
+    "branch",
+    "mastery"
+  ],
+  "basePassivesCount": 32,
+  "advancedPassivesCount": 96
+}

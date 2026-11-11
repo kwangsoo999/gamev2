@@ -1,0 +1,1330 @@
+[
+  {
+    "id": "THON_KHOI_NGUYEN",
+    "name": "Novice Village",
+    "nameVi": "Thôn Khởi Nguyên",
+    "subtitle": "Làng Tân Thủ · Lv.1–15",
+    "description": "Ngôi làng khởi đầu thanh bình dành cho tân thủ Lv.1–15 rèn luyện kỹ năng cơ bản trước khi bước vào Thánh Điện Thức Tỉnh.",
+    "type": "SAFE_ZONE",
+    "hubId": "hub_novice",
+    "distanceTier": 0,
+    "recommendedLevelMin": 1,
+    "recommendedLevelMax": 15,
+    "requiredLevel": 1,
+    "isSafeZone": true,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/thon_khoi_nguyen.json",
+    "biomeTheme": {
+      "biomeId": "village",
+      "particleType": "sakura"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/THON_KHOI_NGUYEN.png",
+    "bgmTrack": "bgm_thon_khoi_nguyen",
+    "monsterSpawnZoneIds": [
+      "SPAWN_030_0",
+      "SPAWN_030_1",
+      "SPAWN_031_0",
+      "SPAWN_031_1",
+      "SPAWN_032_0"
+    ],
+    "connectedMaps": [
+      "city_elysia_capital",
+      "map_whispering_meadow",
+      "dungeon_sanctum_f1",
+      "map_beginner_meadow"
+    ],
+    "spawnCoordinates": {
+      "x": 552,
+      "y": 984,
+      "tx": 11,
+      "ty": 20
+    }
+  },
+  {
+    "id": "city_elysia_capital",
+    "name": "Elysia Capital",
+    "nameVi": "Kinh Đô Elysia",
+    "subtitle": "Thành Phố An Toàn · Lv.15–35",
+    "description": "Thủ đô phồn hoa đầu tiên sau khi đạt cấp 15, nơi đặt Thánh Đường Chuyển Chức, Hội Quán, Ngân Khố và Cổng Dịch Chuyển.",
+    "type": "CITY_SAFE_ZONE",
+    "hubId": "hub_elysia_capital",
+    "distanceTier": 0,
+    "recommendedLevelMin": 15,
+    "recommendedLevelMax": 35,
+    "requiredLevel": 15,
+    "isSafeZone": true,
+    "combatEnabled": false,
+    "monsterSpawningEnabled": false,
+    "clientMapFile": "/data/maps/city_elysia_capital.json",
+    "biomeTheme": {
+      "biomeId": "city_elysia_capital",
+      "groundFilter": "brightness(1.04) saturate(1.06)",
+      "ambientTint": "#fef08a",
+      "ambientAlpha": 0.04,
+      "particleType": "sakura"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/city_elysia_capital.png",
+    "bgmTrack": "bgm_city_elysia_capital",
+    "monsterSpawnZoneIds": [],
+    "connectedMaps": [
+      "THON_KHOI_NGUYEN",
+      "map_whispering_meadow",
+      "dungeon_sanctum_f1"
+    ]
+  },
+  {
+    "id": "city_sylvaris",
+    "name": "Sylvaris",
+    "nameVi": "Thành Phố Rừng Sylvaris",
+    "subtitle": "Thành Phố An Toàn · Lv.35–60",
+    "description": "Thánh thành giữa Rừng Tinh Linh, nổi tiếng với lò chế tác ma pháp, Cường Hóa Thạch và hiệp hội mạo hiểm cấp trung.",
+    "type": "CITY_SAFE_ZONE",
+    "hubId": "hub_sylvaris",
+    "distanceTier": 0,
+    "recommendedLevelMin": 35,
+    "recommendedLevelMax": 60,
+    "requiredLevel": 35,
+    "isSafeZone": true,
+    "combatEnabled": false,
+    "monsterSpawningEnabled": false,
+    "clientMapFile": "/data/maps/city_sylvaris.json",
+    "biomeTheme": {
+      "biomeId": "city_sylvaris",
+      "groundFilter": "hue-rotate(18deg) saturate(1.1)",
+      "ambientTint": "#34d399",
+      "ambientAlpha": 0.08,
+      "particleType": "fireflies"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/city_sylvaris.png",
+    "bgmTrack": "bgm_city_sylvaris",
+    "monsterSpawnZoneIds": [],
+    "connectedMaps": [
+      "map_spirit_forest",
+      "map_moonlit_lake"
+    ]
+  },
+  {
+    "id": "city_drakhen",
+    "name": "Drakhen",
+    "nameVi": "Pháo Đài Thành Drakhen",
+    "subtitle": "Thành Phố An Toàn · Lv.60–90",
+    "description": "Pháo đài đá đỏ hùng vĩ án ngữ Thung Lũng Rồng, nơi quy tụ thợ rèn huyền thoại và các học giả nghiên cứu Long Tộc.",
+    "type": "CITY_SAFE_ZONE",
+    "hubId": "hub_drakhen",
+    "distanceTier": 0,
+    "recommendedLevelMin": 60,
+    "recommendedLevelMax": 90,
+    "requiredLevel": 60,
+    "isSafeZone": true,
+    "combatEnabled": false,
+    "monsterSpawningEnabled": false,
+    "clientMapFile": "/data/maps/city_drakhen.json",
+    "biomeTheme": {
+      "biomeId": "city_drakhen",
+      "groundFilter": "sepia(0.26) hue-rotate(-20deg) saturate(1.2) brightness(0.92)",
+      "ambientTint": "#f97316",
+      "ambientAlpha": 0.08,
+      "particleType": "embers"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/city_drakhen.png",
+    "bgmTrack": "bgm_city_drakhen",
+    "monsterSpawnZoneIds": [],
+    "connectedMaps": [
+      "map_ember_canyon",
+      "map_dragon_valley"
+    ]
+  },
+  {
+    "id": "map_whispering_meadow",
+    "name": "Whispering Meadow",
+    "nameVi": "Thảo Nguyên Thì Thầm",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.15–20",
+    "description": "Đồng cỏ xanh trải dài ngay ngoại ô Kinh Đô Elysia, bãi luyện cấp lý tưởng cho chiến binh vừa chuyển chức.",
+    "type": "EXP_FIELD",
+    "hubId": "hub_elysia_capital",
+    "distanceTier": 1,
+    "recommendedLevelMin": 15,
+    "recommendedLevelMax": 20,
+    "requiredLevel": 15,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_whispering_meadow.json",
+    "biomeTheme": {
+      "biomeId": "meadow",
+      "groundFilter": "brightness(1.03) saturate(1.06)",
+      "ambientTint": "#bbf7d0",
+      "ambientAlpha": 0.05,
+      "particleType": "sakura"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_whispering_meadow.png",
+    "bgmTrack": "bgm_map_whispering_meadow",
+    "monsterSpawnZoneIds": [
+      "SPAWN_000_0",
+      "SPAWN_000_1",
+      "SPAWN_001_0",
+      "SPAWN_001_1",
+      "SPAWN_002_0",
+      "SPAWN_002_1",
+      "SP_ELITE_WHISPERING_MEADOW_0",
+      "SP_MINIBOSS_WHISPERING_MEADOW_0"
+    ],
+    "connectedMaps": [
+      "THON_KHOI_NGUYEN",
+      "city_elysia_capital",
+      "map_windmill_plains"
+    ]
+  },
+  {
+    "id": "map_windmill_plains",
+    "name": "Windmill Plains",
+    "nameVi": "Đồng Bằng Cối Xay Gió",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.20–25",
+    "description": "Cánh đồng gió lộng với những cối xay nước cổ kính, nơi bầy Sói Xám và Ong Khổng Lồ tụ tập.",
+    "type": "EXP_FIELD",
+    "hubId": "hub_elysia_capital",
+    "distanceTier": 2,
+    "recommendedLevelMin": 20,
+    "recommendedLevelMax": 25,
+    "requiredLevel": 20,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_windmill_plains.json",
+    "biomeTheme": {
+      "biomeId": "plains",
+      "groundFilter": "sepia(0.10) saturate(1.12)",
+      "ambientTint": "#fde68a",
+      "ambientAlpha": 0.06,
+      "particleType": "sakura"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_windmill_plains.png",
+    "bgmTrack": "bgm_map_windmill_plains",
+    "monsterSpawnZoneIds": [
+      "SPAWN_003_0",
+      "SPAWN_003_1",
+      "SPAWN_004_0",
+      "SPAWN_004_1",
+      "SPAWN_005_0",
+      "SPAWN_005_1",
+      "SP_ELITE_WINDMILL_PLAINS_0",
+      "SP_MINIBOSS_WINDMILL_PLAINS_0"
+    ],
+    "connectedMaps": [
+      "map_whispering_meadow",
+      "map_spirit_forest_outskirts"
+    ]
+  },
+  {
+    "id": "map_spirit_forest_outskirts",
+    "name": "Spirit Forest Outskirts",
+    "nameVi": "Bìa Rừng Tinh Linh",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.25–30",
+    "description": "Ranh giới chuyển giao từ đồng cỏ sang khu rừng linh khí, đầy rẫy Goblin Rừng và Nhện Độc.",
+    "type": "EXP_FIELD",
+    "hubId": "hub_elysia_capital",
+    "distanceTier": 3,
+    "recommendedLevelMin": 25,
+    "recommendedLevelMax": 30,
+    "requiredLevel": 25,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_spirit_forest_outskirts.json",
+    "biomeTheme": {
+      "biomeId": "outskirts",
+      "groundFilter": "hue-rotate(-8deg) saturate(1.08) brightness(0.95)",
+      "ambientTint": "#4ade80",
+      "ambientAlpha": 0.07,
+      "particleType": "fireflies"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_spirit_forest_outskirts.png",
+    "bgmTrack": "bgm_map_spirit_forest_outskirts",
+    "monsterSpawnZoneIds": [
+      "SPAWN_006_0",
+      "SPAWN_006_1",
+      "SPAWN_007_0",
+      "SPAWN_007_1",
+      "SPAWN_008_0",
+      "SPAWN_008_1",
+      "SP_ELITE_SPIRIT_OUTSKIRTS_0",
+      "SP_MINIBOSS_SPIRIT_OUTSKIRTS_0"
+    ],
+    "connectedMaps": [
+      "map_windmill_plains",
+      "map_spirit_forest"
+    ]
+  },
+  {
+    "id": "map_spirit_forest",
+    "name": "Spirit Forest",
+    "nameVi": "Rừng Sâu Tinh Linh",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.30–38",
+    "description": "Khu rừng linh mộc rậm rạp bao quanh Thánh Thành Sylvaris, nơi Tinh Linh Rừng và Mộc Thần Cổ Thụ ngự trị.",
+    "type": "EXP_FIELD",
+    "hubId": "hub_sylvaris",
+    "distanceTier": 1,
+    "recommendedLevelMin": 30,
+    "recommendedLevelMax": 38,
+    "requiredLevel": 30,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_spirit_forest.json",
+    "biomeTheme": {
+      "biomeId": "spirit_forest",
+      "groundFilter": "hue-rotate(12deg) saturate(1.15) brightness(0.90)",
+      "ambientTint": "#34d399",
+      "ambientAlpha": 0.11,
+      "particleType": "fireflies"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_spirit_forest.png",
+    "bgmTrack": "bgm_map_spirit_forest",
+    "monsterSpawnZoneIds": [
+      "SPAWN_009_0",
+      "SPAWN_009_1",
+      "SPAWN_010_0",
+      "SPAWN_010_1",
+      "SPAWN_011_0",
+      "SPAWN_011_1",
+      "SP_BOSS_ANCIENT_TREANT_0",
+      "SP_ELITE_SPIRIT_FOREST_0",
+      "SP_MINIBOSS_SPIRIT_FOREST_0"
+    ],
+    "connectedMaps": [
+      "map_spirit_forest_outskirts",
+      "city_sylvaris",
+      "map_moonlit_lake"
+    ]
+  },
+  {
+    "id": "map_moonlit_lake",
+    "name": "Moonlit Lake",
+    "nameVi": "Hồ Ánh Trăng",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.38–45",
+    "description": "Mặt hồ huyền ảo phản chiếu ánh trăng bạc quanh năm, xuất hiện Slime Nước và Thủy Hồn.",
+    "type": "EXP_FIELD",
+    "hubId": "hub_sylvaris",
+    "distanceTier": 2,
+    "recommendedLevelMin": 38,
+    "recommendedLevelMax": 45,
+    "requiredLevel": 38,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_moonlit_lake.json",
+    "biomeTheme": {
+      "biomeId": "moonlit",
+      "groundFilter": "hue-rotate(38deg) brightness(0.84) contrast(1.06)",
+      "ambientTint": "#60a5fa",
+      "ambientAlpha": 0.16,
+      "particleType": "fireflies"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_moonlit_lake.png",
+    "bgmTrack": "bgm_map_moonlit_lake",
+    "monsterSpawnZoneIds": [
+      "SPAWN_012_0",
+      "SPAWN_012_1",
+      "SPAWN_013_0",
+      "SPAWN_013_1",
+      "SPAWN_014_0",
+      "SPAWN_014_1",
+      "SP_BOSS_MOON_HYDRA_0",
+      "SP_ELITE_MOONLIT_LAKE_0",
+      "SP_MINIBOSS_MOONLIT_LAKE_0"
+    ],
+    "connectedMaps": [
+      "city_sylvaris",
+      "map_spirit_forest",
+      "map_ancient_ruins"
+    ]
+  },
+  {
+    "id": "map_ancient_ruins",
+    "name": "Ancient Ruins",
+    "nameVi": "Phế Tích Cổ Đại",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.45–55",
+    "description": "Tàn tích vương quốc cổ bị chôn vùi giữa rừng sâu, được canh giữ bởi Chiến Binh Xương và Thạch Nhân.",
+    "type": "EXP_FIELD",
+    "hubId": "hub_sylvaris",
+    "distanceTier": 3,
+    "recommendedLevelMin": 45,
+    "recommendedLevelMax": 55,
+    "requiredLevel": 45,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_ancient_ruins.json",
+    "biomeTheme": {
+      "biomeId": "ruins",
+      "groundFilter": "grayscale(0.28) brightness(0.86) contrast(1.08)",
+      "ambientTint": "#94a3b8",
+      "ambientAlpha": 0.14,
+      "particleType": "none"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_ancient_ruins.png",
+    "bgmTrack": "bgm_map_ancient_ruins",
+    "monsterSpawnZoneIds": [
+      "SPAWN_015_0",
+      "SPAWN_015_1",
+      "SPAWN_016_0",
+      "SPAWN_016_1",
+      "SPAWN_017_0",
+      "SPAWN_017_1",
+      "SP_BOSS_ANCIENT_TITAN_0",
+      "SP_ELITE_ANCIENT_RUINS_0",
+      "SP_MINIBOSS_ANCIENT_RUINS_0"
+    ],
+    "connectedMaps": [
+      "map_moonlit_lake",
+      "map_ember_canyon"
+    ]
+  },
+  {
+    "id": "map_ember_canyon",
+    "name": "Ember Canyon",
+    "nameVi": "Hẻm Núi Tro Tàn",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.55–65",
+    "description": "Hẻm núi dung nham dẫn tới Pháo Đài Drakhen, nơi hơi nóng bùng cháy cùng Thằn Lằn Lửa và Dơi Dung Nham.",
+    "type": "EXP_FIELD",
+    "hubId": "hub_drakhen",
+    "distanceTier": 1,
+    "recommendedLevelMin": 55,
+    "recommendedLevelMax": 65,
+    "requiredLevel": 55,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_ember_canyon.json",
+    "biomeTheme": {
+      "biomeId": "ember",
+      "groundFilter": "sepia(0.35) hue-rotate(-25deg) saturate(1.35) brightness(0.90)",
+      "ambientTint": "#f97316",
+      "ambientAlpha": 0.14,
+      "particleType": "embers"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_ember_canyon.png",
+    "bgmTrack": "bgm_map_ember_canyon",
+    "monsterSpawnZoneIds": [
+      "SPAWN_018_0",
+      "SPAWN_018_1",
+      "SPAWN_019_0",
+      "SPAWN_019_1",
+      "SPAWN_020_0",
+      "SPAWN_020_1",
+      "SP_ELITE_EMBER_CANYON_0",
+      "SP_MINIBOSS_EMBER_CANYON_0"
+    ],
+    "connectedMaps": [
+      "map_ancient_ruins",
+      "city_drakhen",
+      "map_dragon_valley"
+    ]
+  },
+  {
+    "id": "map_dragon_valley",
+    "name": "Dragon Valley",
+    "nameVi": "Thung Lũng Rồng",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.65–75",
+    "description": "Thung lũng hiểm trở ngập tràn long khí, lãnh địa săn rèn danh tiếng của Ấu Long và Long Kỵ Sĩ.",
+    "type": "EXP_FIELD",
+    "hubId": "hub_drakhen",
+    "distanceTier": 2,
+    "recommendedLevelMin": 65,
+    "recommendedLevelMax": 75,
+    "requiredLevel": 65,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_dragon_valley.json",
+    "biomeTheme": {
+      "biomeId": "dragon_valley",
+      "groundFilter": "sepia(0.28) hue-rotate(-32deg) saturate(1.25) brightness(0.84)",
+      "ambientTint": "#dc2626",
+      "ambientAlpha": 0.15,
+      "particleType": "embers"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_dragon_valley.png",
+    "bgmTrack": "bgm_map_dragon_valley",
+    "monsterSpawnZoneIds": [
+      "SPAWN_021_0",
+      "SPAWN_021_1",
+      "SPAWN_022_0",
+      "SPAWN_022_1",
+      "SPAWN_023_0",
+      "SPAWN_023_1",
+      "SPAWN_036_0",
+      "SP_BOSS_IGNIS_DRAGON_0",
+      "SP_ELITE_DRAGON_VALLEY_0",
+      "SP_MINIBOSS_DRAGON_VALLEY_0"
+    ],
+    "connectedMaps": [
+      "city_drakhen",
+      "map_ember_canyon",
+      "map_crimson_desert"
+    ]
+  },
+  {
+    "id": "map_crimson_desert",
+    "name": "Crimson Desert",
+    "nameVi": "Sa Mạc Huyết Sắc",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.75–90",
+    "description": "Sa mạc cát đỏ chết chóc phía cực viễn biên cương, nơi Bọ Cạp Huyết và Hộ Vệ Sa Mạc tuần tra.",
+    "type": "EXP_FIELD",
+    "hubId": "frontier",
+    "distanceTier": 3,
+    "recommendedLevelMin": 75,
+    "recommendedLevelMax": 90,
+    "requiredLevel": 75,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_crimson_desert.json",
+    "biomeTheme": {
+      "biomeId": "crimson_desert",
+      "groundFilter": "sepia(0.55) hue-rotate(-28deg) saturate(1.45) brightness(0.93)",
+      "ambientTint": "#b91c1c",
+      "ambientAlpha": 0.14,
+      "particleType": "sand"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_crimson_desert.png",
+    "bgmTrack": "bgm_map_crimson_desert",
+    "monsterSpawnZoneIds": [
+      "SPAWN_024_0",
+      "SPAWN_024_1",
+      "SPAWN_025_0",
+      "SPAWN_025_1",
+      "SPAWN_026_0",
+      "SPAWN_026_1",
+      "SP_ELITE_CRIMSON_DESERT_0",
+      "SP_MINIBOSS_CRIMSON_DESERT_0"
+    ],
+    "connectedMaps": [
+      "map_dragon_valley",
+      "map_shadow_realm_border"
+    ]
+  },
+  {
+    "id": "map_shadow_realm_border",
+    "name": "Shadow Realm Border",
+    "nameVi": "Biên Giới Hắc Ám",
+    "subtitle": "Bản Đồ Luyện Cấp · Lv.90–110",
+    "description": "Ranh giới nứt gãy giữa thực tại Elysia và Hư Vô Giới, vùng thử thách tối thượng Lv.90–110.",
+    "type": "EXP_FIELD",
+    "hubId": "frontier",
+    "distanceTier": 4,
+    "recommendedLevelMin": 90,
+    "recommendedLevelMax": 110,
+    "requiredLevel": 90,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_shadow_realm_border.json",
+    "biomeTheme": {
+      "biomeId": "shadow_realm",
+      "groundFilter": "hue-rotate(195deg) saturate(1.25) brightness(0.72) contrast(1.12)",
+      "ambientTint": "#4c1d95",
+      "ambientAlpha": 0.24,
+      "particleType": "void"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/map_shadow_realm_border.png",
+    "bgmTrack": "bgm_map_shadow_realm_border",
+    "monsterSpawnZoneIds": [
+      "SPAWN_027_0",
+      "SPAWN_027_1",
+      "SPAWN_028_0",
+      "SPAWN_028_1",
+      "SPAWN_029_0",
+      "SPAWN_029_1",
+      "SPAWN_037_0",
+      "SP_BOSS_ABYSS_OVERLORD_0",
+      "SP_ELITE_SHADOW_BORDER_0",
+      "SP_MINIBOSS_SHADOW_BORDER_0"
+    ],
+    "connectedMaps": [
+      "map_crimson_desert"
+    ]
+  },
+  {
+    "id": "dungeon_sanctum_f1",
+    "name": "Ancient Trial Corridor",
+    "nameVi": "Tầng 1: Hành Lang Thử Thách Cổ Đại",
+    "subtitle": "Phó Bản Thức Tỉnh Lv.15+ · Tầng 01",
+    "description": "Phó bản chuyển chức lần 1 dành cho mạo hiểm giả cấp 15 trở lên.",
+    "type": "DUNGEON_FLOOR",
+    "hubId": "dungeon_sanctum_of_awakening",
+    "distanceTier": 1,
+    "recommendedLevelMin": 15,
+    "recommendedLevelMax": 22,
+    "requiredLevel": 15,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/dungeon_sanctum_f1.json",
+    "biomeTheme": {
+      "biomeId": "sanctum",
+      "groundFilter": "hue-rotate(190deg) brightness(0.78) contrast(1.1)",
+      "ambientTint": "#818cf8",
+      "ambientAlpha": 0.16,
+      "particleType": "void"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/dungeon_sanctum_f1.png",
+    "bgmTrack": "bgm_dungeon_sanctum_f1",
+    "monsterSpawnZoneIds": [
+      "SPAWN_033_0",
+      "SPAWN_033_1"
+    ],
+    "connectedMaps": [
+      "city_elysia_capital",
+      "dungeon_sanctum_f2"
+    ]
+  },
+  {
+    "id": "dungeon_sanctum_f2",
+    "name": "Elemental Hall",
+    "nameVi": "Tầng 2: Đại Sảnh Tứ Nguyên Tố",
+    "subtitle": "Phó Bản Thức Tỉnh Lv.15+ · Tầng 02",
+    "description": "Phó bản chuyển chức lần 1 dành cho mạo hiểm giả cấp 15 trở lên.",
+    "type": "DUNGEON_FLOOR",
+    "hubId": "dungeon_sanctum_of_awakening",
+    "distanceTier": 2,
+    "recommendedLevelMin": 15,
+    "recommendedLevelMax": 22,
+    "requiredLevel": 15,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/dungeon_sanctum_f2.json",
+    "biomeTheme": {
+      "biomeId": "sanctum",
+      "groundFilter": "hue-rotate(190deg) brightness(0.78) contrast(1.1)",
+      "ambientTint": "#818cf8",
+      "ambientAlpha": 0.16,
+      "particleType": "fireflies"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/dungeon_sanctum_f2.png",
+    "bgmTrack": "bgm_dungeon_sanctum_f2",
+    "monsterSpawnZoneIds": [
+      "SPAWN_034_0",
+      "SPAWN_034_1"
+    ],
+    "connectedMaps": [
+      "dungeon_sanctum_f3"
+    ]
+  },
+  {
+    "id": "dungeon_sanctum_f3",
+    "name": "Awakening Chamber",
+    "nameVi": "Tầng 3: Thánh Điện Thức Tỉnh",
+    "subtitle": "Phó Bản Thức Tỉnh Lv.15+ · Tầng 03",
+    "description": "Phó bản chuyển chức lần 1 dành cho mạo hiểm giả cấp 15 trở lên.",
+    "type": "DUNGEON_FLOOR",
+    "hubId": "dungeon_sanctum_of_awakening",
+    "distanceTier": 3,
+    "recommendedLevelMin": 15,
+    "recommendedLevelMax": 22,
+    "requiredLevel": 15,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/dungeon_sanctum_f3.json",
+    "biomeTheme": {
+      "biomeId": "sanctum",
+      "groundFilter": "hue-rotate(190deg) brightness(0.78) contrast(1.1)",
+      "ambientTint": "#f59e0b",
+      "ambientAlpha": 0.16,
+      "particleType": "embers"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "status": "published",
+    "minimapImage": "/assets/elysia/minimaps/dungeon_sanctum_f3.png",
+    "bgmTrack": "bgm_dungeon_sanctum_f3",
+    "monsterSpawnZoneIds": [
+      "SPAWN_035_0"
+    ],
+    "connectedMaps": [
+      "city_elysia_capital"
+    ]
+  },
+  {
+    "id": "map_beginner_meadow",
+    "name": "Beginner Meadow",
+    "nameVi": "Đồng Cỏ Tân Thủ",
+    "subtitle": "Đồng Cỏ Tân Thủ · Lv.1–3",
+    "description": "Cánh đồng cỏ xanh bát ngát ngay phía Bắc Thôn Khởi Nguyên, nơi Slime Xanh và Slime Đỏ sinh sống dày đặc cho lữ khách mới.",
+    "type": "BEGINNER_FIELD",
+    "hubId": "hub_novice",
+    "distanceTier": 1,
+    "recommendedLevelMin": 1,
+    "recommendedLevelMax": 3,
+    "requiredLevel": 1,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_beginner_meadow.json",
+    "biomeTheme": {
+      "biomeId": "beginner_meadow",
+      "groundFilter": "brightness(1.04) saturate(1.06)",
+      "ambientTint": "#bbf7d0",
+      "ambientAlpha": 0.04,
+      "particleType": "sakura"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "minimapImage": "/assets/elysia/minimaps/map_beginner_meadow.png",
+    "bgmTrack": "bgm_beginner_meadow",
+    "background": "beginner_meadow",
+    "tileset": "elysia_terrain_v2",
+    "spawnCoordinates": {
+      "x": 240,
+      "y": 744,
+      "tx": 5,
+      "ty": 15
+    },
+    "connectedMaps": [
+      "THON_KHOI_NGUYEN",
+      "map_green_rabbit_forest"
+    ],
+    "teleportGates": [
+      {
+        "id": "CONN_MAP_BEGINNER_MEADOW_WEST",
+        "name": "Về Thôn Khởi Nguyên",
+        "tx": 3,
+        "ty": 15,
+        "x": 168,
+        "y": 744,
+        "targetRegionId": "THON_KHOI_NGUYEN",
+        "requiredLevel": 1
+      },
+      {
+        "id": "CONN_MAP_BEGINNER_MEADOW_EAST",
+        "name": "Rừng Thỏ Xanh (Lv.3–5)",
+        "tx": 44,
+        "ty": 15,
+        "x": 2136,
+        "y": 744,
+        "targetRegionId": "map_green_rabbit_forest",
+        "requiredLevel": 2
+      }
+    ],
+    "monsterSpawnZoneIds": [
+      "ZONE_BM_GREEN_SLIME_W",
+      "ZONE_BM_GREEN_SLIME_S",
+      "ZONE_BM_RED_SLIME_N",
+      "ZONE_BM_RED_SLIME_E"
+    ],
+    "version": 1,
+    "status": "published"
+  },
+  {
+    "id": "map_green_rabbit_forest",
+    "name": "Green Rabbit Forest",
+    "nameVi": "Rừng Thỏ Xanh",
+    "subtitle": "Rừng Thỏ Xanh · Lv.3–5",
+    "description": "Khu rừng hoa lá xanh tươi với những đàn Thỏ Rừng nhanh nhẹn, Thỏ Một Sừng và Thỏ Tinh Anh ở trảng sâu.",
+    "type": "BEGINNER_FIELD",
+    "hubId": "hub_novice",
+    "distanceTier": 2,
+    "recommendedLevelMin": 3,
+    "recommendedLevelMax": 5,
+    "requiredLevel": 2,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_green_rabbit_forest.json",
+    "biomeTheme": {
+      "biomeId": "rabbit_forest",
+      "groundFilter": "hue-rotate(10deg) saturate(1.12)",
+      "ambientTint": "#86efac",
+      "ambientAlpha": 0.06,
+      "particleType": "sakura"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "minimapImage": "/assets/elysia/minimaps/map_green_rabbit_forest.png",
+    "bgmTrack": "bgm_green_forest",
+    "background": "rabbit_forest",
+    "tileset": "elysia_terrain_v2",
+    "spawnCoordinates": {
+      "x": 240,
+      "y": 744,
+      "tx": 5,
+      "ty": 15
+    },
+    "connectedMaps": [
+      "map_beginner_meadow",
+      "map_ancient_bee_forest"
+    ],
+    "teleportGates": [
+      {
+        "id": "CONN_MAP_GREEN_RABBIT_FOREST_WEST",
+        "name": "Về Đồng Cỏ Tân Thủ",
+        "tx": 3,
+        "ty": 15,
+        "x": 168,
+        "y": 744,
+        "targetRegionId": "map_beginner_meadow",
+        "requiredLevel": 1
+      },
+      {
+        "id": "CONN_MAP_GREEN_RABBIT_FOREST_EAST",
+        "name": "Rừng Ong Cổ Thụ (Lv.5–7)",
+        "tx": 44,
+        "ty": 15,
+        "x": 2136,
+        "y": 744,
+        "targetRegionId": "map_ancient_bee_forest",
+        "requiredLevel": 4
+      }
+    ],
+    "monsterSpawnZoneIds": [
+      "ZONE_GRF_RABBIT_W",
+      "ZONE_GRF_RABBIT_S",
+      "ZONE_GRF_HORNED_M",
+      "ZONE_GRF_HORNED_S",
+      "ZONE_GRF_ELITE_RABBIT"
+    ],
+    "version": 1,
+    "status": "published"
+  },
+  {
+    "id": "map_ancient_bee_forest",
+    "name": "Ancient Bee Forest",
+    "nameVi": "Rừng Ong Cổ Thụ",
+    "subtitle": "Rừng Ong Cổ Thụ · Lv.5–7",
+    "description": "Rừng cổ thụ mật vàng rợp bóng cây lớn, nơi Ong Cánh Cứng và Ong Hộ Vệ bảo vệ tổ mật cổ xưa.",
+    "type": "BEGINNER_FIELD",
+    "hubId": "hub_novice",
+    "distanceTier": 3,
+    "recommendedLevelMin": 5,
+    "recommendedLevelMax": 7,
+    "requiredLevel": 4,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_ancient_bee_forest.json",
+    "biomeTheme": {
+      "biomeId": "bee_forest",
+      "groundFilter": "hue-rotate(-8deg) saturate(1.18) brightness(0.98)",
+      "ambientTint": "#fde68a",
+      "ambientAlpha": 0.07,
+      "particleType": "fireflies"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "minimapImage": "/assets/elysia/minimaps/map_ancient_bee_forest.png",
+    "bgmTrack": "bgm_ancient_canopy",
+    "background": "bee_forest",
+    "tileset": "elysia_terrain_v2",
+    "spawnCoordinates": {
+      "x": 240,
+      "y": 744,
+      "tx": 5,
+      "ty": 15
+    },
+    "connectedMaps": [
+      "map_green_rabbit_forest",
+      "map_wild_wolf_valley"
+    ],
+    "teleportGates": [
+      {
+        "id": "CONN_MAP_ANCIENT_BEE_FOREST_WEST",
+        "name": "Về Rừng Thỏ Xanh",
+        "tx": 3,
+        "ty": 15,
+        "x": 168,
+        "y": 744,
+        "targetRegionId": "map_green_rabbit_forest",
+        "requiredLevel": 2
+      },
+      {
+        "id": "CONN_MAP_ANCIENT_BEE_FOREST_EAST",
+        "name": "Thung Lũng Sói Hoang (Lv.7–9)",
+        "tx": 44,
+        "ty": 15,
+        "x": 2136,
+        "y": 744,
+        "targetRegionId": "map_wild_wolf_valley",
+        "requiredLevel": 6
+      }
+    ],
+    "monsterSpawnZoneIds": [
+      "ZONE_ABF_HARDWING_W",
+      "ZONE_ABF_HARDWING_S",
+      "ZONE_ABF_GUARDIAN_N",
+      "ZONE_ABF_GUARDIAN_E",
+      "ZONE_ABF_ELITE_BEE"
+    ],
+    "version": 1,
+    "status": "published"
+  },
+  {
+    "id": "map_wild_wolf_valley",
+    "name": "Wild Wolf Valley",
+    "nameVi": "Thung Lũng Sói Hoang",
+    "subtitle": "Thung Lũng Sói Hoang · Lv.7–9",
+    "description": "Hẻm núi sương mù uốn lượn bên dòng suối bạc, địa bàn của Sói Hoang, Sói Tinh Anh và Mini Boss Huyết Lang.",
+    "type": "BEGINNER_FIELD",
+    "hubId": "hub_novice",
+    "distanceTier": 4,
+    "recommendedLevelMin": 7,
+    "recommendedLevelMax": 9,
+    "requiredLevel": 6,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_wild_wolf_valley.json",
+    "biomeTheme": {
+      "biomeId": "wolf_valley",
+      "groundFilter": "saturate(0.85) brightness(0.92)",
+      "ambientTint": "#cbd5e1",
+      "ambientAlpha": 0.1,
+      "particleType": "fireflies"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "minimapImage": "/assets/elysia/minimaps/map_wild_wolf_valley.png",
+    "bgmTrack": "bgm_wolf_valley",
+    "background": "wolf_valley",
+    "tileset": "elysia_terrain_v2",
+    "spawnCoordinates": {
+      "x": 240,
+      "y": 744,
+      "tx": 5,
+      "ty": 15
+    },
+    "connectedMaps": [
+      "map_ancient_bee_forest",
+      "map_wild_boar_forest"
+    ],
+    "teleportGates": [
+      {
+        "id": "CONN_MAP_WILD_WOLF_VALLEY_WEST",
+        "name": "Về Rừng Ong Cổ Thụ",
+        "tx": 3,
+        "ty": 15,
+        "x": 168,
+        "y": 744,
+        "targetRegionId": "map_ancient_bee_forest",
+        "requiredLevel": 4
+      },
+      {
+        "id": "CONN_MAP_WILD_WOLF_VALLEY_EAST",
+        "name": "Rừng Lợn Rừng (Lv.9–11)",
+        "tx": 44,
+        "ty": 15,
+        "x": 2136,
+        "y": 744,
+        "targetRegionId": "map_wild_boar_forest",
+        "requiredLevel": 8
+      }
+    ],
+    "monsterSpawnZoneIds": [
+      "ZONE_WWV_WOLF_W",
+      "ZONE_WWV_WOLF_S",
+      "ZONE_WWV_ELITE_WOLF",
+      "ZONE_WWV_BLOOD_WOLF"
+    ],
+    "version": 1,
+    "status": "published"
+  },
+  {
+    "id": "map_wild_boar_forest",
+    "name": "Wild Boar Forest",
+    "nameVi": "Rừng Lợn Rừng",
+    "subtitle": "Rừng Lợn Rừng · Lv.9–11",
+    "description": "Khu rừng đất đỏ rậm rạp với những con Lợn Rừng hung hãn và Lợn Tinh Anh chắn lối tới Tiền Đồn Goblin.",
+    "type": "BEGINNER_FIELD",
+    "hubId": "hub_novice",
+    "distanceTier": 5,
+    "recommendedLevelMin": 9,
+    "recommendedLevelMax": 11,
+    "requiredLevel": 8,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_wild_boar_forest.json",
+    "biomeTheme": {
+      "biomeId": "boar_forest",
+      "groundFilter": "sepia(0.18) saturate(1.16)",
+      "ambientTint": "#fdba74",
+      "ambientAlpha": 0.07,
+      "particleType": "spores"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "minimapImage": "/assets/elysia/minimaps/map_wild_boar_forest.png",
+    "bgmTrack": "bgm_boar_woods",
+    "background": "boar_forest",
+    "tileset": "elysia_terrain_v2",
+    "spawnCoordinates": {
+      "x": 240,
+      "y": 744,
+      "tx": 5,
+      "ty": 15
+    },
+    "connectedMaps": [
+      "map_wild_wolf_valley",
+      "map_goblin_outpost"
+    ],
+    "teleportGates": [
+      {
+        "id": "CONN_MAP_WILD_BOAR_FOREST_WEST",
+        "name": "Về Thung Lũng Sói Hoang",
+        "tx": 3,
+        "ty": 15,
+        "x": 168,
+        "y": 744,
+        "targetRegionId": "map_wild_wolf_valley",
+        "requiredLevel": 6
+      },
+      {
+        "id": "CONN_MAP_WILD_BOAR_FOREST_EAST",
+        "name": "Tiền Đồn Goblin (Lv.11–13)",
+        "tx": 44,
+        "ty": 15,
+        "x": 2136,
+        "y": 744,
+        "targetRegionId": "map_goblin_outpost",
+        "requiredLevel": 10
+      }
+    ],
+    "monsterSpawnZoneIds": [
+      "ZONE_WBF_BOAR_W",
+      "ZONE_WBF_BOAR_M",
+      "ZONE_WBF_ELITE_BOAR"
+    ],
+    "version": 1,
+    "status": "published"
+  },
+  {
+    "id": "map_goblin_outpost",
+    "name": "Goblin Outpost",
+    "nameVi": "Tiền Đồn Goblin",
+    "subtitle": "Tiền Đồn Goblin · Lv.11–13",
+    "description": "Doanh trại dã chiến dựng bằng hàng rào gỗ và thùng tiếp tế của quân Goblin, canh giữ cửa ngõ Hang Goblin.",
+    "type": "BEGINNER_FIELD",
+    "hubId": "hub_novice",
+    "distanceTier": 6,
+    "recommendedLevelMin": 11,
+    "recommendedLevelMax": 13,
+    "requiredLevel": 10,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_goblin_outpost.json",
+    "biomeTheme": {
+      "biomeId": "goblin_outpost",
+      "groundFilter": "sepia(0.24) brightness(0.93)",
+      "ambientTint": "#f97316",
+      "ambientAlpha": 0.08,
+      "particleType": "embers"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "minimapImage": "/assets/elysia/minimaps/map_goblin_outpost.png",
+    "bgmTrack": "bgm_outpost_march",
+    "background": "goblin_outpost",
+    "tileset": "elysia_terrain_v2",
+    "spawnCoordinates": {
+      "x": 240,
+      "y": 744,
+      "tx": 5,
+      "ty": 15
+    },
+    "connectedMaps": [
+      "map_wild_boar_forest",
+      "map_goblin_cave"
+    ],
+    "teleportGates": [
+      {
+        "id": "CONN_MAP_GOBLIN_OUTPOST_WEST",
+        "name": "Về Rừng Lợn Rừng",
+        "tx": 3,
+        "ty": 15,
+        "x": 168,
+        "y": 744,
+        "targetRegionId": "map_wild_boar_forest",
+        "requiredLevel": 8
+      },
+      {
+        "id": "CONN_MAP_GOBLIN_OUTPOST_EAST",
+        "name": "Hang Goblin (Lv.13–15)",
+        "tx": 44,
+        "ty": 15,
+        "x": 2136,
+        "y": 744,
+        "targetRegionId": "map_goblin_cave",
+        "requiredLevel": 12
+      }
+    ],
+    "monsterSpawnZoneIds": [
+      "ZONE_GO_GOBLIN_W",
+      "ZONE_GO_GOBLIN_S",
+      "ZONE_GO_WARRIOR_N",
+      "ZONE_GO_WARRIOR_E"
+    ],
+    "version": 1,
+    "status": "published"
+  },
+  {
+    "id": "map_goblin_cave",
+    "name": "Goblin Cave",
+    "nameVi": "Hang Goblin",
+    "subtitle": "Hang Goblin · Lv.13–15 (Boss)",
+    "description": "Động đá tối âm u nơi Goblin Chiến Binh, Goblin Tinh Anh và Field Boss Goblin Thủ Lĩnh cố thủ.",
+    "type": "BEGINNER_FIELD",
+    "hubId": "hub_novice",
+    "distanceTier": 7,
+    "recommendedLevelMin": 13,
+    "recommendedLevelMax": 15,
+    "requiredLevel": 12,
+    "isSafeZone": false,
+    "combatEnabled": true,
+    "monsterSpawningEnabled": true,
+    "clientMapFile": "/data/maps/map_goblin_cave.json",
+    "biomeTheme": {
+      "biomeId": "goblin_cave",
+      "groundFilter": "hue-rotate(190deg) brightness(0.75) contrast(1.12)",
+      "ambientTint": "#4c1d95",
+      "ambientAlpha": 0.18,
+      "particleType": "embers"
+    },
+    "dimensions": {
+      "width": 2304,
+      "height": 1536,
+      "tileSize": 48,
+      "cols": 48,
+      "rows": 32
+    },
+    "minimapImage": "/assets/elysia/minimaps/map_goblin_cave.png",
+    "bgmTrack": "bgm_goblin_boss_cave",
+    "background": "goblin_cave",
+    "tileset": "elysia_terrain_v2",
+    "spawnCoordinates": {
+      "x": 240,
+      "y": 744,
+      "tx": 5,
+      "ty": 15
+    },
+    "connectedMaps": [
+      "map_goblin_outpost",
+      "THON_KHOI_NGUYEN"
+    ],
+    "teleportGates": [
+      {
+        "id": "CONN_MAP_GOBLIN_CAVE_WEST",
+        "name": "Về Tiền Đồn Goblin",
+        "tx": 3,
+        "ty": 15,
+        "x": 168,
+        "y": 744,
+        "targetRegionId": "map_goblin_outpost",
+        "requiredLevel": 10
+      },
+      {
+        "id": "CONN_MAP_GOBLIN_CAVE_EAST",
+        "name": "Cổng Dịch Chuyển · Về Thôn Khởi Nguyên",
+        "tx": 44,
+        "ty": 15,
+        "x": 2136,
+        "y": 744,
+        "targetRegionId": "THON_KHOI_NGUYEN",
+        "requiredLevel": 1
+      }
+    ],
+    "monsterSpawnZoneIds": [
+      "ZONE_GC_WARRIOR_W",
+      "ZONE_GC_ELITE_GOBLIN",
+      "ZONE_GC_BOSS_CHIEFTAIN"
+    ],
+    "version": 1,
+    "status": "published"
+  },
+  {
+    "id": "map_holy_sanctuary_interior",
+    "name": "Holy Sanctuary Cathedral",
+    "nameVi": "Nội Điện Thánh Đường Elysia",
+    "type": "CITY_SAFE_ZONE",
+    "hubId": "hub_elysia_capital",
+    "recommendedLevelMin": 1,
+    "recommendedLevelMax": 110,
+    "requiredLevel": 1,
+    "isSafeZone": true,
+    "combatEnabled": false,
+    "monsterSpawningEnabled": false,
+    "minimapImage": "/assets/elysia/minimaps/city_elysia_capital.png",
+    "bgmTrack": "bgm_sanctuary_choir",
+    "description": "Thánh Đường Tối Cao của Elysia Frontier — nơi Linh Mục Điện Thánh chủ trì nghi lễ Chuyển Chức và ban phước.",
+    "connectedMaps": [
+      "city_elysia_capital",
+      "THON_KHOI_NGUYEN"
+    ],
+    "status": "published"
+  }
+]

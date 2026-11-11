@@ -1,0 +1,4776 @@
+[
+  {
+    "passive_id": "pas_sword_saint_sword_resonance",
+    "id": "pas_sword_saint_sword_resonance",
+    "name": "Sword Resonance",
+    "nameVi": "Kiếm Ý Cộng Hưởng",
+    "description": "Signature Sword Saint aura amplifying Crit Rate, Skill Damage, and AGI precision.",
+    "descriptionVi": "Signature Sword Saint aura amplifying Crit Rate, Skill Damage, and AGI precision.",
+    "category": "branch",
+    "classRequirement": "sword_saint",
+    "branchRequirement": "sword_saint",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "crit_rate",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      },
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "agi",
+        "effectType": "flat_attr",
+        "valuePerRank": 3,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sword_saint_sword_resonance.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_sword_saint_synergy",
+    "id": "pas_sword_saint_synergy",
+    "name": "Iaido Tempo",
+    "nameVi": "Cư Hợp Liên Trảm",
+    "description": "Empowers Celestial Iaido Flash crit chance & slash cadence.",
+    "descriptionVi": "Empowers Celestial Iaido Flash crit chance & slash cadence.",
+    "category": "branch",
+    "classRequirement": "sword_saint",
+    "branchRequirement": "sword_saint",
+    "parentPassiveIds": [
+      "pas_sword_saint_sword_resonance"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_ss_iaido_flash",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 6,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_ss_iaido_flash",
+      "description": "Synergizes directly with active skill skill_ss_iaido_flash.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_ss_iaido_flash."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sword_saint_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_sword_saint_utility",
+    "id": "pas_sword_saint_utility",
+    "name": "Clear Mind Reflex",
+    "nameVi": "Minh Tâm Phản Xạ",
+    "description": "Graceful parries boost Evasion and Status Resistance.",
+    "descriptionVi": "Graceful parries boost Evasion and Status Resistance.",
+    "category": "combat",
+    "classRequirement": "sword_saint",
+    "branchRequirement": "sword_saint",
+    "parentPassiveIds": [
+      "pas_sword_saint_sword_resonance"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "evasion",
+    "effects": [
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sword_saint_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_sword_saint_choice_a",
+    "id": "pas_sword_saint_choice_a",
+    "name": "Boss-Slayer Edge",
+    "nameVi": "Trảm Vương Kiếm Khí (Nhánh A)",
+    "description": "Build Choice: Maximizes Armor Penetration and Crit Damage vs Bosses.",
+    "descriptionVi": "Build Choice: Maximizes Armor Penetration and Crit Damage vs Bosses.",
+    "category": "branch",
+    "classRequirement": "sword_saint",
+    "branchRequirement": "sword_saint",
+    "parentPassiveIds": [
+      "pas_sword_saint_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_sword_saint_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "armor_penetration",
+    "effects": [
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 9,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sword_saint_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_sword_saint_choice_b",
+    "id": "pas_sword_saint_choice_b",
+    "name": "Gale Rhythm Flow",
+    "nameVi": "Lưu Thủy Cư Hợp (Nhánh B)",
+    "description": "Build Choice: Prioritizes Cooldown Reduction and MP Efficiency for nonstop skills.",
+    "descriptionVi": "Build Choice: Prioritizes Cooldown Reduction and MP Efficiency for nonstop skills.",
+    "category": "branch",
+    "classRequirement": "sword_saint",
+    "branchRequirement": "sword_saint",
+    "parentPassiveIds": [
+      "pas_sword_saint_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_sword_saint_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "resourceEfficiencyPct",
+        "effectType": "resource_efficiency",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sword_saint_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_sword_saint_mastery_apex",
+    "id": "pas_sword_saint_mastery_apex",
+    "name": "Celestial Blade Apex",
+    "nameVi": "Thiên Kiếm Tuyệt Cảnh",
+    "description": "Requires 60+ Skill Mastery: Elevates Combo Damage & ATK% scaling.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Elevates Combo Damage & ATK% scaling.",
+    "category": "mastery",
+    "classRequirement": "sword_saint",
+    "branchRequirement": "sword_saint",
+    "parentPassiveIds": [
+      "pas_sword_saint_synergy",
+      "pas_sword_saint_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_ss_iaido_flash",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 5,
+        "isPercentage": true
+      },
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sword_saint_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_berserker_blood_fury",
+    "id": "pas_berserker_blood_fury",
+    "name": "Blood Fury",
+    "nameVi": "Huyết Nộ Cuồng Huyết",
+    "description": "Signature Berserker fury trading finesse for brute ATK%, STR & Lifesteal.",
+    "descriptionVi": "Signature Berserker fury trading finesse for brute ATK%, STR & Lifesteal.",
+    "category": "branch",
+    "classRequirement": "berserker",
+    "branchRequirement": "berserker",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "lifesteal",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.4,
+        "isPercentage": true
+      },
+      {
+        "stat": "lifestealPct",
+        "effectType": "lifesteal",
+        "valuePerRank": 1.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "str",
+        "effectType": "flat_attr",
+        "valuePerRank": 4,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1.12,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_berserker_blood_fury.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_berserker_synergy",
+    "id": "pas_berserker_synergy",
+    "name": "Guillotine Momentum",
+    "nameVi": "Đoạn Đầu Xung Lực",
+    "description": "Empowers Crimson Guillotine cleave & Crit Damage.",
+    "descriptionVi": "Empowers Crimson Guillotine cleave & Crit Damage.",
+    "category": "branch",
+    "classRequirement": "berserker",
+    "branchRequirement": "berserker",
+    "parentPassiveIds": [
+      "pas_berserker_blood_fury"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_bk_crimson_guillotine",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_bk_crimson_guillotine",
+      "description": "Synergizes directly with active skill skill_bk_crimson_guillotine.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_bk_crimson_guillotine."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_berserker_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_berserker_utility",
+    "id": "pas_berserker_utility",
+    "name": "Undying Grit",
+    "nameVi": "Chiến Ý Bất Khuất",
+    "description": "Boosts Max HP% and Crowd-Control Status Resistance while brawling.",
+    "descriptionVi": "Boosts Max HP% and Crowd-Control Status Resistance while brawling.",
+    "category": "combat",
+    "classRequirement": "berserker",
+    "branchRequirement": "berserker",
+    "parentPassiveIds": [
+      "pas_berserker_blood_fury"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "status_resistance",
+    "effects": [
+      {
+        "stat": "hpPct",
+        "effectType": "hp_bonus",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_berserker_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_berserker_choice_a",
+    "id": "pas_berserker_choice_a",
+    "name": "Crimson Overdrive",
+    "nameVi": "Huyết Sát Cuồng Bạo (Nhánh A)",
+    "description": "Build Choice: Pure heavy execution power & Armor Penetration.",
+    "descriptionVi": "Build Choice: Pure heavy execution power & Armor Penetration.",
+    "category": "branch",
+    "classRequirement": "berserker",
+    "branchRequirement": "berserker",
+    "parentPassiveIds": [
+      "pas_berserker_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_berserker_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "armor_penetration",
+    "effects": [
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_berserker_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_berserker_choice_b",
+    "id": "pas_berserker_choice_b",
+    "name": "Bloodthirst Vitality",
+    "nameVi": "Hấp Huyết Bất Diệt (Nhánh B)",
+    "description": "Build Choice: Sustained frontline drain with extra Lifesteal & Damage Reduction.",
+    "descriptionVi": "Build Choice: Sustained frontline drain with extra Lifesteal & Damage Reduction.",
+    "category": "branch",
+    "classRequirement": "berserker",
+    "branchRequirement": "berserker",
+    "parentPassiveIds": [
+      "pas_berserker_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_berserker_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "lifesteal",
+    "effects": [
+      {
+        "stat": "lifestealPct",
+        "effectType": "lifesteal",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_berserker_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_berserker_mastery_apex",
+    "id": "pas_berserker_mastery_apex",
+    "name": "Ragnarok Avatar",
+    "nameVi": "Hóa Thân Cuồng Chiến",
+    "description": "Requires 60+ Skill Mastery: Boosts Fire/Blood skill power and CON toughness.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts Fire/Blood skill power and CON toughness.",
+    "category": "mastery",
+    "classRequirement": "berserker",
+    "branchRequirement": "berserker",
+    "parentPassiveIds": [
+      "pas_berserker_synergy",
+      "pas_berserker_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_bk_crimson_guillotine",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "con",
+        "effectType": "flat_attr",
+        "valuePerRank": 6,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1.12,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_berserker_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_dragoon_dragon_pierce",
+    "id": "pas_dragoon_dragon_pierce",
+    "name": "Dragon Pierce",
+    "nameVi": "Long Thương Xuyên Giáp",
+    "description": "Signature Dragoon technique granting massive Armor Penetration and Lightning Damage.",
+    "descriptionVi": "Signature Dragoon technique granting massive Armor Penetration and Lightning Damage.",
+    "category": "branch",
+    "classRequirement": "dragoon",
+    "branchRequirement": "dragoon",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "armor_penetration",
+    "effects": [
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "str",
+        "effectType": "flat_attr",
+        "valuePerRank": 3,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15,
+    "iconUrl": "/assets/elysia/ui/passives/pas_dragoon_dragon_pierce.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_dragoon_synergy",
+    "id": "pas_dragoon_synergy",
+    "name": "Skybreaker Leap",
+    "nameVi": "Lôi Nha Giáng Thế",
+    "description": "Enhances Skyfang Dragon Dive impact & Crit Damage.",
+    "descriptionVi": "Enhances Skyfang Dragon Dive impact & Crit Damage.",
+    "category": "branch",
+    "classRequirement": "dragoon",
+    "branchRequirement": "dragoon",
+    "parentPassiveIds": [
+      "pas_dragoon_dragon_pierce"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_dg_skyfang_dive",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 6,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_dg_skyfang_dive",
+      "description": "Synergizes directly with active skill skill_dg_skyfang_dive.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_dg_skyfang_dive."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_dragoon_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_dragoon_utility",
+    "id": "pas_dragoon_utility",
+    "name": "Stormwind Mobility",
+    "nameVi": "Phong Lôi Bộ Pháp",
+    "description": "Grants Movement Speed and Attack Speed between dives.",
+    "descriptionVi": "Grants Movement Speed and Attack Speed between dives.",
+    "category": "combat",
+    "classRequirement": "dragoon",
+    "branchRequirement": "dragoon",
+    "parentPassiveIds": [
+      "pas_dragoon_dragon_pierce"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "move_speed",
+    "effects": [
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_dragoon_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_dragoon_choice_a",
+    "id": "pas_dragoon_choice_a",
+    "name": "Heavenly Lance",
+    "nameVi": "Thiên Long Độc Trảm (Nhánh A)",
+    "description": "Build Choice: Maximizes Crit Rate and piercing Boss burst.",
+    "descriptionVi": "Build Choice: Maximizes Crit Rate and piercing Boss burst.",
+    "category": "branch",
+    "classRequirement": "dragoon",
+    "branchRequirement": "dragoon",
+    "parentPassiveIds": [
+      "pas_dragoon_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_dragoon_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "crit_rate",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 8.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_dragoon_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_dragoon_choice_b",
+    "id": "pas_dragoon_choice_b",
+    "name": "Dragonscale Ward",
+    "nameVi": "Long Lân Hộ Giáp (Nhánh B)",
+    "description": "Build Choice: Hardens dragon scales for Damage Reduction and Cooldown Reduction.",
+    "descriptionVi": "Build Choice: Hardens dragon scales for Damage Reduction and Cooldown Reduction.",
+    "category": "branch",
+    "classRequirement": "dragoon",
+    "branchRequirement": "dragoon",
+    "parentPassiveIds": [
+      "pas_dragoon_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_dragoon_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "damage_reduction",
+    "effects": [
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_dragoon_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_dragoon_mastery_apex",
+    "id": "pas_dragoon_mastery_apex",
+    "name": "Tempest Wyrm Crest",
+    "nameVi": "Ấn Ký Lôi Long",
+    "description": "Requires 60+ Skill Mastery: Boosts ATK% & Accuracy.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts ATK% & Accuracy.",
+    "category": "mastery",
+    "classRequirement": "dragoon",
+    "branchRequirement": "dragoon",
+    "parentPassiveIds": [
+      "pas_dragoon_synergy",
+      "pas_dragoon_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_dg_skyfang_dive",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "accuracy",
+        "effectType": "accuracy",
+        "valuePerRank": 15,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15,
+    "iconUrl": "/assets/elysia/ui/passives/pas_dragoon_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_warlancer_spear_formation",
+    "id": "pas_warlancer_spear_formation",
+    "name": "Spear Formation",
+    "nameVi": "Chiến Thương Đại Trận",
+    "description": "Signature Warlancer phalanx strengthening ATK%, DEF%, and AoE control.",
+    "descriptionVi": "Signature Warlancer phalanx strengthening ATK%, DEF%, and AoE control.",
+    "category": "branch",
+    "classRequirement": "warlancer",
+    "branchRequirement": "warlancer",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "damage_reduction",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "defPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "con",
+        "effectType": "flat_attr",
+        "valuePerRank": 3,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_warlancer_spear_formation.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_warlancer_synergy",
+    "id": "pas_warlancer_synergy",
+    "name": "Halberd Horizon",
+    "nameVi": "Hoành Tảo Thiên Quân",
+    "description": "Amplifies Crimson Halberd Sweep damage & Armor Penetration.",
+    "descriptionVi": "Amplifies Crimson Halberd Sweep damage & Armor Penetration.",
+    "category": "branch",
+    "classRequirement": "warlancer",
+    "branchRequirement": "warlancer",
+    "parentPassiveIds": [
+      "pas_warlancer_spear_formation"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_wl_crimson_sweep",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_wl_crimson_sweep",
+      "description": "Synergizes directly with active skill skill_wl_crimson_sweep.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_wl_crimson_sweep."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_warlancer_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_warlancer_utility",
+    "id": "pas_warlancer_utility",
+    "name": "Bastion Footing",
+    "nameVi": "Thiết Bích Bất Chuyển",
+    "description": "Grants heavy Status Resistance & Max HP% against crowds.",
+    "descriptionVi": "Grants heavy Status Resistance & Max HP% against crowds.",
+    "category": "combat",
+    "classRequirement": "warlancer",
+    "branchRequirement": "warlancer",
+    "parentPassiveIds": [
+      "pas_warlancer_spear_formation"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "status_resistance",
+    "effects": [
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "hpPct",
+        "effectType": "hp_bonus",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_warlancer_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_warlancer_choice_a",
+    "id": "pas_warlancer_choice_a",
+    "name": "Imperial Vanguard",
+    "nameVi": "Tiên Phong Xung Kích (Nhánh A)",
+    "description": "Build Choice: Boosts Attack Speed & Combo Damage for relentless sweeps.",
+    "descriptionVi": "Build Choice: Boosts Attack Speed & Combo Damage for relentless sweeps.",
+    "category": "branch",
+    "classRequirement": "warlancer",
+    "branchRequirement": "warlancer",
+    "parentPassiveIds": [
+      "pas_warlancer_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_warlancer_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "attack_speed",
+    "effects": [
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_warlancer_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_warlancer_choice_b",
+    "id": "pas_warlancer_choice_b",
+    "name": "Legion Bulwark",
+    "nameVi": "Đại Trận Hộ Thành (Nhánh B)",
+    "description": "Build Choice: Elevates Damage Reduction & Shield power.",
+    "descriptionVi": "Build Choice: Elevates Damage Reduction & Shield power.",
+    "category": "branch",
+    "classRequirement": "warlancer",
+    "branchRequirement": "warlancer",
+    "parentPassiveIds": [
+      "pas_warlancer_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_warlancer_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "shield_bonus",
+    "effects": [
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "shieldBonusPct",
+        "effectType": "shield_bonus",
+        "valuePerRank": 6.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_warlancer_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_warlancer_mastery_apex",
+    "id": "pas_warlancer_mastery_apex",
+    "name": "Marshal of Steel",
+    "nameVi": "Nguyên Soái Thiết Thương",
+    "description": "Requires 60+ Skill Mastery: Boosts DEF% and Accuracy.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts DEF% and Accuracy.",
+    "category": "mastery",
+    "classRequirement": "warlancer",
+    "branchRequirement": "warlancer",
+    "parentPassiveIds": [
+      "pas_warlancer_synergy",
+      "pas_warlancer_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_wl_crimson_sweep",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "defPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 5,
+        "isPercentage": true
+      },
+      {
+        "stat": "accuracy",
+        "effectType": "accuracy",
+        "valuePerRank": 16,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_warlancer_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_paladin_holy_protection",
+    "id": "pas_paladin_holy_protection",
+    "name": "Holy Protection",
+    "nameVi": "Thánh Quang Hộ Thân",
+    "description": "Signature Paladin vow strengthening Damage Reduction, Shield Bonus & Healing Bonus.",
+    "descriptionVi": "Signature Paladin vow strengthening Damage Reduction, Shield Bonus & Healing Bonus.",
+    "category": "branch",
+    "classRequirement": "paladin",
+    "branchRequirement": "paladin",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "shield_bonus",
+    "effects": [
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 2.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "shieldBonusPct",
+        "effectType": "shield_bonus",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "healingBonusPct",
+        "effectType": "healing_bonus",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_paladin_holy_protection.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_paladin_synergy",
+    "id": "pas_paladin_synergy",
+    "name": "Solar Justice",
+    "nameVi": "Nhật Quang Chính Nghĩa",
+    "description": "Empowers Solstice Radiance Smite Holy Damage & Magic Penetration.",
+    "descriptionVi": "Empowers Solstice Radiance Smite Holy Damage & Magic Penetration.",
+    "category": "branch",
+    "classRequirement": "paladin",
+    "branchRequirement": "paladin",
+    "parentPassiveIds": [
+      "pas_paladin_holy_protection"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_pl_solstice_smite",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 3.4,
+        "isPercentage": true
+      },
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_pl_solstice_smite",
+      "description": "Synergizes directly with active skill skill_pl_solstice_smite.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_pl_solstice_smite."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_paladin_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_paladin_utility",
+    "id": "pas_paladin_utility",
+    "name": "Crusader Conviction",
+    "nameVi": "Thánh Kỵ Bất Diệt",
+    "description": "Grants Status Resistance and MDEF% against dark curses.",
+    "descriptionVi": "Grants Status Resistance and MDEF% against dark curses.",
+    "category": "combat",
+    "classRequirement": "paladin",
+    "branchRequirement": "paladin",
+    "parentPassiveIds": [
+      "pas_paladin_holy_protection"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "status_resistance",
+    "effects": [
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 5,
+        "isPercentage": true
+      },
+      {
+        "stat": "mdefPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_paladin_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_paladin_choice_a",
+    "id": "pas_paladin_choice_a",
+    "name": "Templar Judgment",
+    "nameVi": "Thánh Kiếm Thẩm Phán (Nhánh A)",
+    "description": "Build Choice: Hybrid Paladin damage adding ATK%, MATK% & Crit Rate.",
+    "descriptionVi": "Build Choice: Hybrid Paladin damage adding ATK%, MATK% & Crit Rate.",
+    "category": "branch",
+    "classRequirement": "paladin",
+    "branchRequirement": "paladin",
+    "parentPassiveIds": [
+      "pas_paladin_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_paladin_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_paladin_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_paladin_choice_b",
+    "id": "pas_paladin_choice_b",
+    "name": "Sanctuary Protector",
+    "nameVi": "Thủ Hộ Thánh Điện (Nhánh B)",
+    "description": "Build Choice: Party tank support adding Max HP%, DEF%, & Cooldown Reduction.",
+    "descriptionVi": "Build Choice: Party tank support adding Max HP%, DEF%, & Cooldown Reduction.",
+    "category": "branch",
+    "classRequirement": "paladin",
+    "branchRequirement": "paladin",
+    "parentPassiveIds": [
+      "pas_paladin_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_paladin_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "party_support",
+    "effects": [
+      {
+        "stat": "hpPct",
+        "effectType": "hp_bonus",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_paladin_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_paladin_mastery_apex",
+    "id": "pas_paladin_mastery_apex",
+    "name": "Dawn Sovereign Crest",
+    "nameVi": "Vương Miện Bình Minh",
+    "description": "Requires 60+ Skill Mastery: Boosts Healing Power and Shield efficiency.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts Healing Power and Shield efficiency.",
+    "category": "mastery",
+    "classRequirement": "paladin",
+    "branchRequirement": "paladin",
+    "parentPassiveIds": [
+      "pas_paladin_synergy",
+      "pas_paladin_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_pl_solstice_smite",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "healingBonusPct",
+        "effectType": "healing_bonus",
+        "valuePerRank": 5,
+        "isPercentage": true
+      },
+      {
+        "stat": "shieldBonusPct",
+        "effectType": "shield_bonus",
+        "valuePerRank": 6,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_paladin_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_guardian_fortress_stance",
+    "id": "pas_guardian_fortress_stance",
+    "name": "Fortress Stance",
+    "nameVi": "Pháo Đài Bất Động",
+    "description": "Signature Guardian stance forging impenetrable DEF%, Max HP%, and Damage Reduction.",
+    "descriptionVi": "Signature Guardian stance forging impenetrable DEF%, Max HP%, and Damage Reduction.",
+    "category": "branch",
+    "classRequirement": "guardian",
+    "branchRequirement": "guardian",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "damage_reduction",
+    "effects": [
+      {
+        "stat": "defPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "hpPct",
+        "effectType": "hp_bonus",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_guardian_fortress_stance.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_guardian_synergy",
+    "id": "pas_guardian_synergy",
+    "name": "Aegis Shockwave",
+    "nameVi": "Xung Chấn Lục Bảo",
+    "description": "Converts Bastion defense into heavier Shield Bonus and Counter damage.",
+    "descriptionVi": "Converts Bastion defense into heavier Shield Bonus and Counter damage.",
+    "category": "branch",
+    "classRequirement": "guardian",
+    "branchRequirement": "guardian",
+    "parentPassiveIds": [
+      "pas_guardian_fortress_stance"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_gd_bastion_bash",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "shieldBonusPct",
+        "effectType": "shield_bonus",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_gd_bastion_bash",
+      "description": "Synergizes directly with active skill skill_gd_bastion_bash.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_gd_bastion_bash."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_guardian_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_guardian_utility",
+    "id": "pas_guardian_utility",
+    "name": "Immovable Anchor",
+    "nameVi": "Mỏ Neo Bất Di",
+    "description": "Extreme crowd-control Status Resistance and MDEF%.",
+    "descriptionVi": "Extreme crowd-control Status Resistance and MDEF%.",
+    "category": "combat",
+    "classRequirement": "guardian",
+    "branchRequirement": "guardian",
+    "parentPassiveIds": [
+      "pas_guardian_fortress_stance"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "status_resistance",
+    "effects": [
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "mdefPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_guardian_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_guardian_choice_a",
+    "id": "pas_guardian_choice_a",
+    "name": "Reflective Bastion",
+    "nameVi": "Khiên Phản Chấn (Nhánh A)",
+    "description": "Build Choice: Boosts Thorns/Counter ATK% and Armor Penetration while tanking.",
+    "descriptionVi": "Build Choice: Boosts Thorns/Counter ATK% and Armor Penetration while tanking.",
+    "category": "branch",
+    "classRequirement": "guardian",
+    "branchRequirement": "guardian",
+    "parentPassiveIds": [
+      "pas_guardian_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_guardian_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 5,
+        "isPercentage": true
+      },
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_guardian_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_guardian_choice_b",
+    "id": "pas_guardian_choice_b",
+    "name": "Crystal Titan Wall",
+    "nameVi": "Thành Lũy Bất Tử (Nhánh B)",
+    "description": "Build Choice: Maximum survivability with CON, Max HP%, and Healing Received.",
+    "descriptionVi": "Build Choice: Maximum survivability with CON, Max HP%, and Healing Received.",
+    "category": "branch",
+    "classRequirement": "guardian",
+    "branchRequirement": "guardian",
+    "parentPassiveIds": [
+      "pas_guardian_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_guardian_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "hp_bonus",
+    "effects": [
+      {
+        "stat": "con",
+        "effectType": "flat_attr",
+        "valuePerRank": 8,
+        "isPercentage": false
+      },
+      {
+        "stat": "hpPct",
+        "effectType": "hp_bonus",
+        "valuePerRank": 5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_guardian_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_guardian_mastery_apex",
+    "id": "pas_guardian_mastery_apex",
+    "name": "Eternal Bastion Core",
+    "nameVi": "Lõi Hộ Vệ Vĩnh Hằng",
+    "description": "Requires 60+ Skill Mastery: Reinforces Damage Reduction and Cooldown Reduction.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Reinforces Damage Reduction and Cooldown Reduction.",
+    "category": "mastery",
+    "classRequirement": "guardian",
+    "branchRequirement": "guardian",
+    "parentPassiveIds": [
+      "pas_guardian_synergy",
+      "pas_guardian_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_gd_bastion_bash",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_guardian_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_saint_divine_grace",
+    "id": "pas_saint_divine_grace",
+    "name": "Divine Grace",
+    "nameVi": "Thánh Ân Cứu Thế",
+    "description": "Signature Saint aura expanding Healing Bonus, Max MP%, and Party protection.",
+    "descriptionVi": "Signature Saint aura expanding Healing Bonus, Max MP%, and Party protection.",
+    "category": "branch",
+    "classRequirement": "saint",
+    "branchRequirement": "saint",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "healing_bonus",
+    "effects": [
+      {
+        "stat": "healingBonusPct",
+        "effectType": "healing_bonus",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "mpPct",
+        "effectType": "mp_bonus",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "int",
+        "effectType": "flat_attr",
+        "valuePerRank": 3,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_saint_divine_grace.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_saint_synergy",
+    "id": "pas_saint_synergy",
+    "name": "Seraphic Chorus",
+    "nameVi": "Thánh Ca Cộng Hưởng",
+    "description": "Enhances Seraphic Radiant Hymn output & Cooldown Reduction.",
+    "descriptionVi": "Enhances Seraphic Radiant Hymn output & Cooldown Reduction.",
+    "category": "branch",
+    "classRequirement": "saint",
+    "branchRequirement": "saint",
+    "parentPassiveIds": [
+      "pas_saint_divine_grace"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_st_radiant_hymn",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "healingBonusPct",
+        "effectType": "healing_bonus",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_st_radiant_hymn",
+      "description": "Synergizes directly with active skill skill_st_radiant_hymn.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_st_radiant_hymn."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_saint_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_saint_utility",
+    "id": "pas_saint_utility",
+    "name": "Tranquil Mana Well",
+    "nameVi": "Suối Nguồn Ma Lực",
+    "description": "Saves MP costs in long raids and raises Status Resistance.",
+    "descriptionVi": "Saves MP costs in long raids and raises Status Resistance.",
+    "category": "combat",
+    "classRequirement": "saint",
+    "branchRequirement": "saint",
+    "parentPassiveIds": [
+      "pas_saint_divine_grace"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "resource_efficiency",
+    "effects": [
+      {
+        "stat": "resourceEfficiencyPct",
+        "effectType": "resource_efficiency",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_saint_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_saint_choice_a",
+    "id": "pas_saint_choice_a",
+    "name": "Golden Ward Sanctum",
+    "nameVi": "Thánh Vực Hộ Mệnh (Nhánh A)",
+    "description": "Build Choice: Boosts Shield Bonus and Damage Reduction for survival.",
+    "descriptionVi": "Build Choice: Boosts Shield Bonus and Damage Reduction for survival.",
+    "category": "branch",
+    "classRequirement": "saint",
+    "branchRequirement": "saint",
+    "parentPassiveIds": [
+      "pas_saint_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_saint_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "shield_bonus",
+    "effects": [
+      {
+        "stat": "shieldBonusPct",
+        "effectType": "shield_bonus",
+        "valuePerRank": 7,
+        "isPercentage": true
+      },
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_saint_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_saint_choice_b",
+    "id": "pas_saint_choice_b",
+    "name": "Hymn of Haste",
+    "nameVi": "Nhịp Điệu Thánh Ân (Nhánh B)",
+    "description": "Build Choice: Boosts Cooldown Reduction and Movement Speed to rescue allies rapidly.",
+    "descriptionVi": "Build Choice: Boosts Cooldown Reduction and Movement Speed to rescue allies rapidly.",
+    "category": "branch",
+    "classRequirement": "saint",
+    "branchRequirement": "saint",
+    "parentPassiveIds": [
+      "pas_saint_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_saint_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_saint_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_saint_mastery_apex",
+    "id": "pas_saint_mastery_apex",
+    "name": "Seraphic Covenant",
+    "nameVi": "Giao Ước Thiên Sứ",
+    "description": "Requires 60+ Skill Mastery: Boosts Healing Bonus & MATK% support power.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts Healing Bonus & MATK% support power.",
+    "category": "mastery",
+    "classRequirement": "saint",
+    "branchRequirement": "saint",
+    "parentPassiveIds": [
+      "pas_saint_synergy",
+      "pas_saint_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_st_radiant_hymn",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "healingBonusPct",
+        "effectType": "healing_bonus",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_saint_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_exorcist_sacred_seal",
+    "id": "pas_exorcist_sacred_seal",
+    "name": "Sacred Seal",
+    "nameVi": "Thánh Ấn Trừ Tà",
+    "description": "Signature Exorcist seal surging MATK%, Magic Penetration & Holy Lightning damage.",
+    "descriptionVi": "Signature Exorcist seal surging MATK%, Magic Penetration & Holy Lightning damage.",
+    "category": "branch",
+    "classRequirement": "exorcist",
+    "branchRequirement": "exorcist",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "magic_penetration",
+    "effects": [
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "magicPenetrationPct",
+        "effectType": "magic_penetration",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "int",
+        "effectType": "flat_attr",
+        "valuePerRank": 3,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.18,
+    "iconUrl": "/assets/elysia/ui/passives/pas_exorcist_sacred_seal.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_exorcist_synergy",
+    "id": "pas_exorcist_synergy",
+    "name": "Judgement Inscription",
+    "nameVi": "Phù Chú Phán Quyết",
+    "description": "Empowers Judgement Talisman crit rate and spell burst.",
+    "descriptionVi": "Empowers Judgement Talisman crit rate and spell burst.",
+    "category": "branch",
+    "classRequirement": "exorcist",
+    "branchRequirement": "exorcist",
+    "parentPassiveIds": [
+      "pas_exorcist_sacred_seal"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_ex_judgement_talisman",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_ex_judgement_talisman",
+      "description": "Synergizes directly with active skill skill_ex_judgement_talisman.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_ex_judgement_talisman."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_exorcist_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_exorcist_utility",
+    "id": "pas_exorcist_utility",
+    "name": "Bane of Evil",
+    "nameVi": "Thanh Tẩy Tà Khí",
+    "description": "Grants Status Resistance and emergency off-Healing Bonus.",
+    "descriptionVi": "Grants Status Resistance and emergency off-Healing Bonus.",
+    "category": "combat",
+    "classRequirement": "exorcist",
+    "branchRequirement": "exorcist",
+    "parentPassiveIds": [
+      "pas_exorcist_sacred_seal"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "status_resistance",
+    "effects": [
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "healingBonusPct",
+        "effectType": "healing_bonus",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_exorcist_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_exorcist_choice_a",
+    "id": "pas_exorcist_choice_a",
+    "name": "Inquisitor Verdict",
+    "nameVi": "Thánh Lôi Phán Xét (Nhánh A)",
+    "description": "Build Choice: Maximizes Crit Damage and Elemental Holy/Lightning potency.",
+    "descriptionVi": "Build Choice: Maximizes Crit Damage and Elemental Holy/Lightning potency.",
+    "category": "branch",
+    "classRequirement": "exorcist",
+    "branchRequirement": "exorcist",
+    "parentPassiveIds": [
+      "pas_exorcist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_exorcist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "crit_damage",
+    "effects": [
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 9,
+        "isPercentage": true
+      },
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_exorcist_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_exorcist_choice_b",
+    "id": "pas_exorcist_choice_b",
+    "name": "Endless Talismans",
+    "nameVi": "Liên Hoàn Phù Ấn (Nhánh B)",
+    "description": "Build Choice: Cooldown Reduction and Resource Efficiency for rapid talismans.",
+    "descriptionVi": "Build Choice: Cooldown Reduction and Resource Efficiency for rapid talismans.",
+    "category": "branch",
+    "classRequirement": "exorcist",
+    "branchRequirement": "exorcist",
+    "parentPassiveIds": [
+      "pas_exorcist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_exorcist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "resourceEfficiencyPct",
+        "effectType": "resource_efficiency",
+        "valuePerRank": 4.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_exorcist_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_exorcist_mastery_apex",
+    "id": "pas_exorcist_mastery_apex",
+    "name": "Arch-Exorcist Rite",
+    "nameVi": "Đại Nghi Thức Trừ Tà",
+    "description": "Requires 60+ Skill Mastery: Boosts Magic Penetration and Boss spell damage.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts Magic Penetration and Boss spell damage.",
+    "category": "mastery",
+    "classRequirement": "exorcist",
+    "branchRequirement": "exorcist",
+    "parentPassiveIds": [
+      "pas_exorcist_synergy",
+      "pas_exorcist_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_ex_judgement_talisman",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "magicPenetrationPct",
+        "effectType": "magic_penetration",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.18,
+    "iconUrl": "/assets/elysia/ui/passives/pas_exorcist_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_elementalist_elemental_resonance",
+    "id": "pas_elementalist_elemental_resonance",
+    "name": "Elemental Resonance",
+    "nameVi": "Tam Nguyên Cộng Hưởng",
+    "description": "Signature Elementalist harmony raising Elemental Damage%, MATK%, and INT.",
+    "descriptionVi": "Signature Elementalist harmony raising Elemental Damage%, MATK%, and INT.",
+    "category": "branch",
+    "classRequirement": "elementalist",
+    "branchRequirement": "elementalist",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "elemental_damage",
+    "effects": [
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 3.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "int",
+        "effectType": "flat_attr",
+        "valuePerRank": 4,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1.15,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_elementalist_elemental_resonance.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_elementalist_synergy",
+    "id": "pas_elementalist_synergy",
+    "name": "Prismatic Overload",
+    "nameVi": "Bùng Nổ Tam Nguyên",
+    "description": "Empowers Tri-Elemental Convergence Skill Damage and Magic Penetration.",
+    "descriptionVi": "Empowers Tri-Elemental Convergence Skill Damage and Magic Penetration.",
+    "category": "branch",
+    "classRequirement": "elementalist",
+    "branchRequirement": "elementalist",
+    "parentPassiveIds": [
+      "pas_elementalist_elemental_resonance"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_el_tri_convergence",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "magicPenetrationPct",
+        "effectType": "magic_penetration",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_el_tri_convergence",
+      "description": "Synergizes directly with active skill skill_el_tri_convergence.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_el_tri_convergence."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_elementalist_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_elementalist_utility",
+    "id": "pas_elementalist_utility",
+    "name": "Aether Barrier",
+    "nameVi": "Kết Giới Nguyên Tố",
+    "description": "Grants Max MP% and Elemental Shield absorption.",
+    "descriptionVi": "Grants Max MP% and Elemental Shield absorption.",
+    "category": "combat",
+    "classRequirement": "elementalist",
+    "branchRequirement": "elementalist",
+    "parentPassiveIds": [
+      "pas_elementalist_elemental_resonance"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "shield_bonus",
+    "effects": [
+      {
+        "stat": "mpPct",
+        "effectType": "mp_bonus",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "shieldBonusPct",
+        "effectType": "shield_bonus",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_elementalist_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_elementalist_choice_a",
+    "id": "pas_elementalist_choice_a",
+    "name": "Cataclysmic Surge",
+    "nameVi": "Đại Bạo Phát (Nhánh A)",
+    "description": "Build Choice: Maximum Crit Rate & Crit Damage on Elemental AoE nukes.",
+    "descriptionVi": "Build Choice: Maximum Crit Rate & Crit Damage on Elemental AoE nukes.",
+    "category": "branch",
+    "classRequirement": "elementalist",
+    "branchRequirement": "elementalist",
+    "parentPassiveIds": [
+      "pas_elementalist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_elementalist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "crit_damage",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 9,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_elementalist_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_elementalist_choice_b",
+    "id": "pas_elementalist_choice_b",
+    "name": "Perpetual Storm",
+    "nameVi": "Vòng Xoáy Vĩnh Cửu (Nhánh B)",
+    "description": "Build Choice: Cooldown Reduction and MP Efficiency for nonstop AoE farming.",
+    "descriptionVi": "Build Choice: Cooldown Reduction and MP Efficiency for nonstop AoE farming.",
+    "category": "branch",
+    "classRequirement": "elementalist",
+    "branchRequirement": "elementalist",
+    "parentPassiveIds": [
+      "pas_elementalist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_elementalist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "resourceEfficiencyPct",
+        "effectType": "resource_efficiency",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_elementalist_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_elementalist_mastery_apex",
+    "id": "pas_elementalist_mastery_apex",
+    "name": "Sovereign of Elements",
+    "nameVi": "Chúa Tể Nguyên Tố",
+    "description": "Requires 60+ Skill Mastery: Massive Elemental & MATK% synergy.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Massive Elemental & MATK% synergy.",
+    "category": "mastery",
+    "classRequirement": "elementalist",
+    "branchRequirement": "elementalist",
+    "parentPassiveIds": [
+      "pas_elementalist_synergy",
+      "pas_elementalist_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_el_tri_convergence",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1.15,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_elementalist_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_arcanist_arcane_compression",
+    "id": "pas_arcanist_arcane_compression",
+    "name": "Arcane Compression",
+    "nameVi": "Nén Năng Lượng Bí Ẩn",
+    "description": "Signature Arcanist compression focusing Cooldown Reduction, Magic Penetration, and Resource Efficiency.",
+    "descriptionVi": "Signature Arcanist compression focusing Cooldown Reduction, Magic Penetration, and Resource Efficiency.",
+    "category": "branch",
+    "classRequirement": "arcanist",
+    "branchRequirement": "arcanist",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      },
+      {
+        "stat": "magicPenetrationPct",
+        "effectType": "magic_penetration",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.18,
+    "iconUrl": "/assets/elysia/ui/passives/pas_arcanist_arcane_compression.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_arcanist_synergy",
+    "id": "pas_arcanist_synergy",
+    "name": "Cosmic Alignment",
+    "nameVi": "Tinh Bàn Giao Thoa",
+    "description": "Empowers Astral Singularity damage & cast Crit Rate.",
+    "descriptionVi": "Empowers Astral Singularity damage & cast Crit Rate.",
+    "category": "branch",
+    "classRequirement": "arcanist",
+    "branchRequirement": "arcanist",
+    "parentPassiveIds": [
+      "pas_arcanist_arcane_compression"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_ar_gravity_singularity",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_ar_gravity_singularity",
+      "description": "Synergizes directly with active skill skill_ar_gravity_singularity.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_ar_gravity_singularity."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_arcanist_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_arcanist_utility",
+    "id": "pas_arcanist_utility",
+    "name": "Dimensional Shift",
+    "nameVi": "Không Gian Dịch Chuyển",
+    "description": "Grants Evasion and Movement Speed when weaving astral runes.",
+    "descriptionVi": "Grants Evasion and Movement Speed when weaving astral runes.",
+    "category": "combat",
+    "classRequirement": "arcanist",
+    "branchRequirement": "arcanist",
+    "parentPassiveIds": [
+      "pas_arcanist_arcane_compression"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "evasion",
+    "effects": [
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_arcanist_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_arcanist_choice_a",
+    "id": "pas_arcanist_choice_a",
+    "name": "Singularity Core",
+    "nameVi": "Hạch Điểm Kỳ Dị (Nhánh A)",
+    "description": "Build Choice: Extreme single-target Magic Penetration and Crit Damage vs Bosses.",
+    "descriptionVi": "Build Choice: Extreme single-target Magic Penetration and Crit Damage vs Bosses.",
+    "category": "branch",
+    "classRequirement": "arcanist",
+    "branchRequirement": "arcanist",
+    "parentPassiveIds": [
+      "pas_arcanist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_arcanist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "magic_penetration",
+    "effects": [
+      {
+        "stat": "magicPenetrationPct",
+        "effectType": "magic_penetration",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 8.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_arcanist_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_arcanist_choice_b",
+    "id": "pas_arcanist_choice_b",
+    "name": "Astral Infinity",
+    "nameVi": "Tinh Tú Vô Tận (Nhánh B)",
+    "description": "Build Choice: Maximum MP% & Resource Efficiency for endless rapid casting.",
+    "descriptionVi": "Build Choice: Maximum MP% & Resource Efficiency for endless rapid casting.",
+    "category": "branch",
+    "classRequirement": "arcanist",
+    "branchRequirement": "arcanist",
+    "parentPassiveIds": [
+      "pas_arcanist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_arcanist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "resource_efficiency",
+    "effects": [
+      {
+        "stat": "mpPct",
+        "effectType": "mp_bonus",
+        "valuePerRank": 6,
+        "isPercentage": true
+      },
+      {
+        "stat": "resourceEfficiencyPct",
+        "effectType": "resource_efficiency",
+        "valuePerRank": 5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_arcanist_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_arcanist_mastery_apex",
+    "id": "pas_arcanist_mastery_apex",
+    "name": "Cosmos Architect",
+    "nameVi": "Kiến Trúc Sư Vũ Trụ",
+    "description": "Requires 60+ Skill Mastery: Boosts Cooldown Reduction and MATK%.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts Cooldown Reduction and MATK%.",
+    "category": "mastery",
+    "classRequirement": "arcanist",
+    "branchRequirement": "arcanist",
+    "parentPassiveIds": [
+      "pas_arcanist_synergy",
+      "pas_arcanist_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_ar_gravity_singularity",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "matkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.18,
+    "iconUrl": "/assets/elysia/ui/passives/pas_arcanist_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_shadowblade_lethal_precision",
+    "id": "pas_shadowblade_lethal_precision",
+    "name": "Lethal Precision",
+    "nameVi": "Ám Sát Cực Hạn (Ảnh Nhận)",
+    "description": "Signature Shadowblade execution mastery boosting Crit Rate, Crit Damage & Armor Penetration.",
+    "descriptionVi": "Signature Shadowblade execution mastery boosting Crit Rate, Crit Damage & Armor Penetration.",
+    "category": "branch",
+    "classRequirement": "shadowblade",
+    "branchRequirement": "shadowblade",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "crit_damage",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 6.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 2.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 1.05,
+    "bossModifier": 1.15,
+    "iconUrl": "/assets/elysia/ui/passives/pas_shadowblade_lethal_precision.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_shadowblade_synergy",
+    "id": "pas_shadowblade_synergy",
+    "name": "Nightfall Arterial Strike",
+    "nameVi": "Đoạt Mệnh Liên Kích",
+    "description": "Empowers Nightfall Eviscerate skill damage & ASPD.",
+    "descriptionVi": "Empowers Nightfall Eviscerate skill damage & ASPD.",
+    "category": "branch",
+    "classRequirement": "shadowblade",
+    "branchRequirement": "shadowblade",
+    "parentPassiveIds": [
+      "pas_shadowblade_lethal_precision"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_sb_nightfall_eviscerate",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_sb_nightfall_eviscerate",
+      "description": "Synergizes directly with active skill skill_sb_nightfall_eviscerate.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_sb_nightfall_eviscerate."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_shadowblade_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_shadowblade_utility",
+    "id": "pas_shadowblade_utility",
+    "name": "Shadow Cloak",
+    "nameVi": "Áo Choàng Bóng Đêm",
+    "description": "Grants Evasion and Lifesteal after executing ambushes.",
+    "descriptionVi": "Grants Evasion and Lifesteal after executing ambushes.",
+    "category": "combat",
+    "classRequirement": "shadowblade",
+    "branchRequirement": "shadowblade",
+    "parentPassiveIds": [
+      "pas_shadowblade_lethal_precision"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "evasion",
+    "effects": [
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "lifestealPct",
+        "effectType": "lifesteal",
+        "valuePerRank": 1.4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_shadowblade_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_shadowblade_choice_a",
+    "id": "pas_shadowblade_choice_a",
+    "name": "Executioner Verdict",
+    "nameVi": "Án Tử Ảnh Nhận (Nhánh A)",
+    "description": "Build Choice: Overwhelming Crit Damage & Armor Penetration on isolated Bosses.",
+    "descriptionVi": "Build Choice: Overwhelming Crit Damage & Armor Penetration on isolated Bosses.",
+    "category": "branch",
+    "classRequirement": "shadowblade",
+    "branchRequirement": "shadowblade",
+    "parentPassiveIds": [
+      "pas_shadowblade_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_shadowblade_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "crit_damage",
+    "effects": [
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 10,
+        "isPercentage": true
+      },
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_shadowblade_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_shadowblade_choice_b",
+    "id": "pas_shadowblade_choice_b",
+    "name": "Dusk Stalker",
+    "nameVi": "Ảnh Bộ Tốc Hành (Nhánh B)",
+    "description": "Build Choice: Cooldown Reduction and Movement Speed for skirmishing & PvP.",
+    "descriptionVi": "Build Choice: Cooldown Reduction and Movement Speed for skirmishing & PvP.",
+    "category": "branch",
+    "classRequirement": "shadowblade",
+    "branchRequirement": "shadowblade",
+    "parentPassiveIds": [
+      "pas_shadowblade_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_shadowblade_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_shadowblade_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_shadowblade_mastery_apex",
+    "id": "pas_shadowblade_mastery_apex",
+    "name": "Eclipse Assassin Apex",
+    "nameVi": "Ảnh Nhận Độc Tôn",
+    "description": "Requires 60+ Skill Mastery: Elevates Combo Bonus and AGI.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Elevates Combo Bonus and AGI.",
+    "category": "mastery",
+    "classRequirement": "shadowblade",
+    "branchRequirement": "shadowblade",
+    "parentPassiveIds": [
+      "pas_shadowblade_synergy",
+      "pas_shadowblade_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_sb_nightfall_eviscerate",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "agi",
+        "effectType": "flat_attr",
+        "valuePerRank": 6,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 1.05,
+    "bossModifier": 1.15,
+    "iconUrl": "/assets/elysia/ui/passives/pas_shadowblade_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_phantom_phantom_echo",
+    "id": "pas_phantom_phantom_echo",
+    "name": "Phantom Echo",
+    "nameVi": "Huyễn Ảnh Cộng Hưởng",
+    "description": "Signature Phantom illusion passive elevating Evasion, Attack Speed & Combo Echoes.",
+    "descriptionVi": "Signature Phantom illusion passive elevating Evasion, Attack Speed & Combo Echoes.",
+    "category": "branch",
+    "classRequirement": "phantom",
+    "branchRequirement": "phantom",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "evasion",
+    "effects": [
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 3,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_phantom_phantom_echo.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_phantom_synergy",
+    "id": "pas_phantom_synergy",
+    "name": "Mirage Blade Waltz",
+    "nameVi": "Vũ Điệu Phi Đao",
+    "description": "Empowers Spectral Mirage Fan AoE damage & Crit Rate.",
+    "descriptionVi": "Empowers Spectral Mirage Fan AoE damage & Crit Rate.",
+    "category": "branch",
+    "classRequirement": "phantom",
+    "branchRequirement": "phantom",
+    "parentPassiveIds": [
+      "pas_phantom_phantom_echo"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_ph_spectral_blades",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2.4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_ph_spectral_blades",
+      "description": "Synergizes directly with active skill skill_ph_spectral_blades.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_ph_spectral_blades."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_phantom_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_phantom_utility",
+    "id": "pas_phantom_utility",
+    "name": "Spectral Veil",
+    "nameVi": "Màn Sương Ảo Giác",
+    "description": "Grants Movement Speed and Status Resistance through illusion shifts.",
+    "descriptionVi": "Grants Movement Speed and Status Resistance through illusion shifts.",
+    "category": "combat",
+    "classRequirement": "phantom",
+    "branchRequirement": "phantom",
+    "parentPassiveIds": [
+      "pas_phantom_phantom_echo"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "move_speed",
+    "effects": [
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_phantom_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_phantom_choice_a",
+    "id": "pas_phantom_choice_a",
+    "name": "Twin Phantasm",
+    "nameVi": "Song Ảnh Phân Thân (Nhánh A)",
+    "description": "Build Choice: Amplifies Combo Damage & Attack Speed for multi-target shredding.",
+    "descriptionVi": "Build Choice: Amplifies Combo Damage & Attack Speed for multi-target shredding.",
+    "category": "branch",
+    "classRequirement": "phantom",
+    "branchRequirement": "phantom",
+    "parentPassiveIds": [
+      "pas_phantom_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_phantom_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 6,
+        "isPercentage": true
+      },
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_phantom_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_phantom_choice_b",
+    "id": "pas_phantom_choice_b",
+    "name": "Untouchable Mirage",
+    "nameVi": "Bất Khả Xâm Phạm (Nhánh B)",
+    "description": "Build Choice: Maximizes Evasion & Cooldown Reduction.",
+    "descriptionVi": "Build Choice: Maximizes Evasion & Cooldown Reduction.",
+    "category": "branch",
+    "classRequirement": "phantom",
+    "branchRequirement": "phantom",
+    "parentPassiveIds": [
+      "pas_phantom_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_phantom_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "evasion",
+    "effects": [
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_phantom_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_phantom_mastery_apex",
+    "id": "pas_phantom_mastery_apex",
+    "name": "Lord of Illusions",
+    "nameVi": "Ảo Ảnh Ma Đế",
+    "description": "Requires 60+ Skill Mastery: Boosts Crit Damage and AGI agility.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts Crit Damage and AGI agility.",
+    "category": "mastery",
+    "classRequirement": "phantom",
+    "branchRequirement": "phantom",
+    "parentPassiveIds": [
+      "pas_phantom_synergy",
+      "pas_phantom_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_ph_spectral_blades",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 7.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "agi",
+        "effectType": "flat_attr",
+        "valuePerRank": 6,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_phantom_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_martial_artist_inner_force",
+    "id": "pas_martial_artist_inner_force",
+    "name": "Inner Force",
+    "nameVi": "Kim Liên Nội Kình",
+    "description": "Signature Martial Artist internal chi amplifying ATK%, Armor Penetration & STR.",
+    "descriptionVi": "Signature Martial Artist internal chi amplifying ATK%, Armor Penetration & STR.",
+    "category": "branch",
+    "classRequirement": "martial_artist",
+    "branchRequirement": "martial_artist",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "armor_penetration",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "str",
+        "effectType": "flat_attr",
+        "valuePerRank": 3,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15,
+    "iconUrl": "/assets/elysia/ui/passives/pas_martial_artist_inner_force.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_martial_artist_synergy",
+    "id": "pas_martial_artist_synergy",
+    "name": "Tiger Chi Impact",
+    "nameVi": "Hổ Quyền Chấn Kình",
+    "description": "Empowers Crimson Tiger Fang skill power & Crit Damage.",
+    "descriptionVi": "Empowers Crimson Tiger Fang skill power & Crit Damage.",
+    "category": "branch",
+    "classRequirement": "martial_artist",
+    "branchRequirement": "martial_artist",
+    "parentPassiveIds": [
+      "pas_martial_artist_inner_force"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_ma_crimson_tiger_fang",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 6,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_ma_crimson_tiger_fang",
+      "description": "Synergizes directly with active skill skill_ma_crimson_tiger_fang.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_ma_crimson_tiger_fang."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_martial_artist_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_martial_artist_utility",
+    "id": "pas_martial_artist_utility",
+    "name": "Iron Body Qigong",
+    "nameVi": "Thiết Bố Sam Khí Công",
+    "description": "Channels chi into Damage Reduction & Max HP%.",
+    "descriptionVi": "Channels chi into Damage Reduction & Max HP%.",
+    "category": "combat",
+    "classRequirement": "martial_artist",
+    "branchRequirement": "martial_artist",
+    "parentPassiveIds": [
+      "pas_martial_artist_inner_force"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_reduction",
+    "effects": [
+      {
+        "stat": "damageReductionPct",
+        "effectType": "damage_reduction",
+        "valuePerRank": 2.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "hpPct",
+        "effectType": "hp_bonus",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_martial_artist_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_martial_artist_choice_a",
+    "id": "pas_martial_artist_choice_a",
+    "name": "Asura Breaker",
+    "nameVi": "Tu La Phá Giáp (Nhánh A)",
+    "description": "Build Choice: Pure boss-shattering Armor Penetration & Elemental Fire Chi.",
+    "descriptionVi": "Build Choice: Pure boss-shattering Armor Penetration & Elemental Fire Chi.",
+    "category": "branch",
+    "classRequirement": "martial_artist",
+    "branchRequirement": "martial_artist",
+    "parentPassiveIds": [
+      "pas_martial_artist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_martial_artist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "elemental_damage",
+    "effects": [
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_martial_artist_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_martial_artist_choice_b",
+    "id": "pas_martial_artist_choice_b",
+    "name": "Lotus Regeneration",
+    "nameVi": "Liên Hoa Hồi Khí (Nhánh B)",
+    "description": "Build Choice: Sustained brawler Lifesteal and Status Resistance.",
+    "descriptionVi": "Build Choice: Sustained brawler Lifesteal and Status Resistance.",
+    "category": "branch",
+    "classRequirement": "martial_artist",
+    "branchRequirement": "martial_artist",
+    "parentPassiveIds": [
+      "pas_martial_artist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_martial_artist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "lifesteal",
+    "effects": [
+      {
+        "stat": "lifestealPct",
+        "effectType": "lifesteal",
+        "valuePerRank": 2,
+        "isPercentage": true
+      },
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_martial_artist_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_martial_artist_mastery_apex",
+    "id": "pas_martial_artist_mastery_apex",
+    "name": "Grandmaster of Palms",
+    "nameVi": "Võ Thánh Bách Quyền",
+    "description": "Requires 60+ Skill Mastery: Boosts ATK% & Combo scaling.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts ATK% & Combo scaling.",
+    "category": "mastery",
+    "classRequirement": "martial_artist",
+    "branchRequirement": "martial_artist",
+    "parentPassiveIds": [
+      "pas_martial_artist_synergy",
+      "pas_martial_artist_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_ma_crimson_tiger_fang",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15,
+    "iconUrl": "/assets/elysia/ui/passives/pas_martial_artist_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_duelist_perfect_counter",
+    "id": "pas_duelist_perfect_counter",
+    "name": "Perfect Counter",
+    "nameVi": "Phản Kích Tuyệt Đối",
+    "description": "Signature Duelist tempo sharpening Crit Rate, ASPD%, and Evasion.",
+    "descriptionVi": "Signature Duelist tempo sharpening Crit Rate, ASPD%, and Evasion.",
+    "category": "branch",
+    "classRequirement": "duelist",
+    "branchRequirement": "duelist",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "crit_rate",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 2.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 1.08,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_duelist_perfect_counter.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_duelist_synergy",
+    "id": "pas_duelist_synergy",
+    "name": "Riposte Cadence",
+    "nameVi": "Liên Vũ Phản Đòn",
+    "description": "Empowers Velocity Riposte multi-hit Combo Damage & Crit Damage.",
+    "descriptionVi": "Empowers Velocity Riposte multi-hit Combo Damage & Crit Damage.",
+    "category": "branch",
+    "classRequirement": "duelist",
+    "branchRequirement": "duelist",
+    "parentPassiveIds": [
+      "pas_duelist_perfect_counter"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_dl_velocity_riposte",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "comboBonusPct",
+        "effectType": "combo_bonus",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_dl_velocity_riposte",
+      "description": "Synergizes directly with active skill skill_dl_velocity_riposte.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_dl_velocity_riposte."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_duelist_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_duelist_utility",
+    "id": "pas_duelist_utility",
+    "name": "Wind Footwork",
+    "nameVi": "Phong Hành Bộ",
+    "description": "Grants Movement Speed and Accuracy to stick to agile targets.",
+    "descriptionVi": "Grants Movement Speed and Accuracy to stick to agile targets.",
+    "category": "combat",
+    "classRequirement": "duelist",
+    "branchRequirement": "duelist",
+    "parentPassiveIds": [
+      "pas_duelist_perfect_counter"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "move_speed",
+    "effects": [
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "accuracy",
+        "effectType": "accuracy",
+        "valuePerRank": 12,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_duelist_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_duelist_choice_a",
+    "id": "pas_duelist_choice_a",
+    "name": "Endless Tempo",
+    "nameVi": "Liên Hoàn Vô Tận (Nhánh A)",
+    "description": "Build Choice: Maximizes ASPD% and Cooldown Reduction.",
+    "descriptionVi": "Build Choice: Maximizes ASPD% and Cooldown Reduction.",
+    "category": "branch",
+    "classRequirement": "duelist",
+    "branchRequirement": "duelist",
+    "parentPassiveIds": [
+      "pas_duelist_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_duelist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_duelist_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_duelist_choice_b",
+    "id": "pas_duelist_choice_b",
+    "name": "Duelsmith Guard",
+    "nameVi": "Thân Pháp Quyết Đấu (Nhánh B)",
+    "description": "Build Choice: Boosts Evasion and Lifesteal in 1v1 PvP.",
+    "descriptionVi": "Build Choice: Boosts Evasion and Lifesteal in 1v1 PvP.",
+    "category": "branch",
+    "classRequirement": "duelist",
+    "branchRequirement": "duelist",
+    "parentPassiveIds": [
+      "pas_duelist_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_duelist_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "evasion",
+    "effects": [
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      },
+      {
+        "stat": "lifestealPct",
+        "effectType": "lifesteal",
+        "valuePerRank": 1.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_duelist_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_duelist_mastery_apex",
+    "id": "pas_duelist_mastery_apex",
+    "name": "Virtuoso Finale",
+    "nameVi": "Đỉnh Cao Quyết Đấu",
+    "description": "Requires 60+ Skill Mastery: Boosts Crit Damage and DEX precision.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts Crit Damage and DEX precision.",
+    "category": "mastery",
+    "classRequirement": "duelist",
+    "branchRequirement": "duelist",
+    "parentPassiveIds": [
+      "pas_duelist_synergy",
+      "pas_duelist_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_dl_velocity_riposte",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 8,
+        "isPercentage": true
+      },
+      {
+        "stat": "dex",
+        "effectType": "flat_attr",
+        "valuePerRank": 6,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 1.08,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_duelist_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_sniper_deadeye",
+    "id": "pas_sniper_deadeye",
+    "name": "Deadeye",
+    "nameVi": "Bách Phát Bách Trúng",
+    "description": "Signature Sniper focus unlocking supreme Crit Rate, Accuracy, and Crit Damage.",
+    "descriptionVi": "Signature Sniper focus unlocking supreme Crit Rate, Accuracy, and Crit Damage.",
+    "category": "branch",
+    "classRequirement": "sniper",
+    "branchRequirement": "sniper",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "crit_rate",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "accuracy",
+        "effectType": "accuracy",
+        "valuePerRank": 14,
+        "isPercentage": false
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.2,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sniper_deadeye.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_sniper_synergy",
+    "id": "pas_sniper_synergy",
+    "name": "Railshot Calibration",
+    "nameVi": "Hiệu Chỉnh Quang Tuyến",
+    "description": "Empowers Starlight Railshot Armor Penetration and Skill Damage.",
+    "descriptionVi": "Empowers Starlight Railshot Armor Penetration and Skill Damage.",
+    "category": "branch",
+    "classRequirement": "sniper",
+    "branchRequirement": "sniper",
+    "parentPassiveIds": [
+      "pas_sniper_deadeye"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_sn_starlight_railshot",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.6,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_sn_starlight_railshot",
+      "description": "Synergizes directly with active skill skill_sn_starlight_railshot.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_sn_starlight_railshot."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sniper_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_sniper_utility",
+    "id": "pas_sniper_utility",
+    "name": "Vantage Kiting",
+    "nameVi": "Giữ Cự Ly Chiến Thuật",
+    "description": "Grants Movement Speed & Status Resistance to maintain range.",
+    "descriptionVi": "Grants Movement Speed & Status Resistance to maintain range.",
+    "category": "combat",
+    "classRequirement": "sniper",
+    "branchRequirement": "sniper",
+    "parentPassiveIds": [
+      "pas_sniper_deadeye"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "move_speed",
+    "effects": [
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "statusResistancePct",
+        "effectType": "status_resistance",
+        "valuePerRank": 3.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sniper_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_sniper_choice_a",
+    "id": "pas_sniper_choice_a",
+    "name": "Orbital Penetration",
+    "nameVi": "Xuyên Giáp Quỹ Đạo (Nhánh A)",
+    "description": "Build Choice: Extreme Armor Penetration & Boss Critical Multiplier.",
+    "descriptionVi": "Build Choice: Extreme Armor Penetration & Boss Critical Multiplier.",
+    "category": "branch",
+    "classRequirement": "sniper",
+    "branchRequirement": "sniper",
+    "parentPassiveIds": [
+      "pas_sniper_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_sniper_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "armor_penetration",
+    "effects": [
+      {
+        "stat": "armorPenetrationPct",
+        "effectType": "armor_penetration",
+        "valuePerRank": 5,
+        "isPercentage": true
+      },
+      {
+        "stat": "critDamageBonusPct",
+        "effectType": "crit_damage",
+        "valuePerRank": 9.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sniper_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_sniper_choice_b",
+    "id": "pas_sniper_choice_b",
+    "name": "Rapid Reload Focus",
+    "nameVi": "Nạp Tiễn Siêu Tốc (Nhánh B)",
+    "description": "Build Choice: Cooldown Reduction and Attack Speed for sustained DPS.",
+    "descriptionVi": "Build Choice: Cooldown Reduction and Attack Speed for sustained DPS.",
+    "category": "branch",
+    "classRequirement": "sniper",
+    "branchRequirement": "sniper",
+    "parentPassiveIds": [
+      "pas_sniper_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_sniper_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "attack_speed",
+    "effects": [
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 3.8,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sniper_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_sniper_mastery_apex",
+    "id": "pas_sniper_mastery_apex",
+    "name": "Starlight Marksman Apex",
+    "nameVi": "Thần Tiễn Tối Thượng",
+    "description": "Requires 60+ Skill Mastery: Boosts ATK% & DEX.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts ATK% & DEX.",
+    "category": "mastery",
+    "classRequirement": "sniper",
+    "branchRequirement": "sniper",
+    "parentPassiveIds": [
+      "pas_sniper_synergy",
+      "pas_sniper_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_sn_starlight_railshot",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      },
+      {
+        "stat": "dex",
+        "effectType": "flat_attr",
+        "valuePerRank": 6,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.2,
+    "iconUrl": "/assets/elysia/ui/passives/pas_sniper_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  },
+  {
+    "passive_id": "pas_ranger_predators_instinct",
+    "id": "pas_ranger_predators_instinct",
+    "name": "Predator's Instinct",
+    "nameVi": "Bản Năng Săn Mồi",
+    "description": "Signature Ranger survivalism elevating ASPD%, Move Speed, and AGI dexterity.",
+    "descriptionVi": "Signature Ranger survivalism elevating ASPD%, Move Speed, and AGI dexterity.",
+    "category": "branch",
+    "classRequirement": "ranger",
+    "branchRequirement": "ranger",
+    "parentPassiveIds": [],
+    "requiredCharacterLevel": 80,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "effectType": "move_speed",
+    "effects": [
+      {
+        "stat": "aspdBonusPct",
+        "effectType": "attack_speed",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "moveSpeedBonusPct",
+        "effectType": "move_speed",
+        "valuePerRank": 3,
+        "isPercentage": true
+      },
+      {
+        "stat": "agi",
+        "effectType": "flat_attr",
+        "valuePerRank": 3,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1.15,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ranger_predators_instinct.png",
+    "isSignature": true,
+    "tierColumn": 1,
+    "tierRow": 1
+  },
+  {
+    "passive_id": "pas_ranger_synergy",
+    "id": "pas_ranger_synergy",
+    "name": "Gale Canopy Volley",
+    "nameVi": "Liên Xạ Bão Lá",
+    "description": "Empowers Sylvan Leaf Tempest Nature/Elemental damage & Cooldown Reduction.",
+    "descriptionVi": "Empowers Sylvan Leaf Tempest Nature/Elemental damage & Cooldown Reduction.",
+    "category": "branch",
+    "classRequirement": "ranger",
+    "branchRequirement": "ranger",
+    "parentPassiveIds": [
+      "pas_ranger_predators_instinct"
+    ],
+    "requiredCharacterLevel": 82,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "synergySkillId": "skill_rg_leaf_tempest",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "damage_mult",
+    "effects": [
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 3.6,
+        "isPercentage": true
+      },
+      {
+        "stat": "skillDamagePct",
+        "effectType": "damage_mult",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "skill_cast",
+      "targetSkillId": "skill_rg_leaf_tempest",
+      "description": "Synergizes directly with active skill skill_rg_leaf_tempest.",
+      "descriptionVi": "Cộng hưởng trực tiếp cùng kỹ năng skill_rg_leaf_tempest."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ranger_synergy.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_ranger_utility",
+    "id": "pas_ranger_utility",
+    "name": "Forest Camouflage",
+    "nameVi": "Ngụy Trang Rừng Sâu",
+    "description": "Boosts Evasion and Lifesteal survival in multi-mob encounters.",
+    "descriptionVi": "Boosts Evasion and Lifesteal survival in multi-mob encounters.",
+    "category": "combat",
+    "classRequirement": "ranger",
+    "branchRequirement": "ranger",
+    "parentPassiveIds": [
+      "pas_ranger_predators_instinct"
+    ],
+    "requiredCharacterLevel": 84,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "effectType": "evasion",
+    "effects": [
+      {
+        "stat": "evasionPct",
+        "effectType": "evasion",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "lifestealPct",
+        "effectType": "lifesteal",
+        "valuePerRank": 1.4,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ranger_utility.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 2
+  },
+  {
+    "passive_id": "pas_ranger_choice_a",
+    "id": "pas_ranger_choice_a",
+    "name": "Venomous Hail",
+    "nameVi": "Mưa Tên Độc Thảo (Nhánh A)",
+    "description": "Build Choice: Amplifies AoE Crit Rate and Elemental Nature Damage.",
+    "descriptionVi": "Build Choice: Amplifies AoE Crit Rate and Elemental Nature Damage.",
+    "category": "branch",
+    "classRequirement": "ranger",
+    "branchRequirement": "ranger",
+    "parentPassiveIds": [
+      "pas_ranger_synergy"
+    ],
+    "mutuallyExclusiveGroup": "excl_ranger_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "elemental_damage",
+    "effects": [
+      {
+        "stat": "critRatePct",
+        "effectType": "crit_rate",
+        "valuePerRank": 3.2,
+        "isPercentage": true
+      },
+      {
+        "stat": "elementalDamagePct",
+        "effectType": "elemental_damage",
+        "valuePerRank": 5.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ranger_choice_a.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_ranger_choice_b",
+    "id": "pas_ranger_choice_b",
+    "name": "Phantom Strider",
+    "nameVi": "Du Hiệp Lướt Gió (Nhánh B)",
+    "description": "Build Choice: Cooldown Reduction and Resource Efficiency for continuous traps/volleys.",
+    "descriptionVi": "Build Choice: Cooldown Reduction and Resource Efficiency for continuous traps/volleys.",
+    "category": "branch",
+    "classRequirement": "ranger",
+    "branchRequirement": "ranger",
+    "parentPassiveIds": [
+      "pas_ranger_utility"
+    ],
+    "mutuallyExclusiveGroup": "excl_ranger_capstone",
+    "requiredCharacterLevel": 88,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 0,
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "cooldown_reduction",
+    "effects": [
+      {
+        "stat": "cooldownReductionPct",
+        "effectType": "cooldown_reduction",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "resourceEfficiencyPct",
+        "effectType": "resource_efficiency",
+        "valuePerRank": 4.5,
+        "isPercentage": true
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ranger_choice_b.png",
+    "isSignature": false,
+    "tierColumn": 2,
+    "tierRow": 3
+  },
+  {
+    "passive_id": "pas_ranger_mastery_apex",
+    "id": "pas_ranger_mastery_apex",
+    "name": "Warden of the Wilds",
+    "nameVi": "Thủ Hộ Đại Ngàn",
+    "description": "Requires 60+ Skill Mastery: Boosts ATK% & Accuracy.",
+    "descriptionVi": "Requires 60+ Skill Mastery: Boosts ATK% & Accuracy.",
+    "category": "mastery",
+    "classRequirement": "ranger",
+    "branchRequirement": "ranger",
+    "parentPassiveIds": [
+      "pas_ranger_synergy",
+      "pas_ranger_utility"
+    ],
+    "requiredCharacterLevel": 92,
+    "requiredJobLevel": 80,
+    "requiredMasteryPoints": 60,
+    "synergySkillId": "skill_rg_leaf_tempest",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "effectType": "combo_bonus",
+    "effects": [
+      {
+        "stat": "atkPct",
+        "effectType": "damage_mult",
+        "valuePerRank": 4,
+        "isPercentage": true
+      },
+      {
+        "stat": "accuracy",
+        "effectType": "accuracy",
+        "valuePerRank": 16,
+        "isPercentage": false
+      }
+    ],
+    "activationCondition": {
+      "type": "always",
+      "description": "Always active while requirements are met.",
+      "descriptionVi": "Luôn kích hoạt khi đủ điều kiện nghề nghiệp."
+    },
+    "internalCooldownMs": 0,
+    "stackingRule": "additive",
+    "pveModifier": 1.15,
+    "pvpModifier": 0.9,
+    "bossModifier": 1,
+    "iconUrl": "/assets/elysia/ui/passives/pas_ranger_mastery_apex.png",
+    "isSignature": false,
+    "tierColumn": 1,
+    "tierRow": 4
+  }
+]

@@ -1,11 +1,13 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import { ENV } from '../config/env.js';
+import { AuthService } from '../services/auth.service.js';
 
 export interface AuthenticatedUser {
   id: string;
   username: string;
   role: string;
+  jti?: string;
 }
 
 export interface AuthRequest extends Request {
@@ -21,6 +23,9 @@ export function authenticate(req: AuthRequest, res: Response, next: NextFunction
   const token = authHeader.split(' ')[1];
   try {
     const payload = jwt.verify(token, ENV.JWT_SECRET) as AuthenticatedUser;
+    if (payload.jti && AuthService.getInstance().isTokenRevoked(payload.jti)) {
+      return res.status(401).json({ success: false, error: 'Phiên đăng nhập đã kết thúc. Vui lòng đăng nhập lại.' });
+    }
     req.user = payload;
     next();
   } catch {

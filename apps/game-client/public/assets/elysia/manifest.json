@@ -1,0 +1,3397 @@
+{
+  "schemaVersion": "2.0.0",
+  "artDirection": "Japanese hand-painted chibi anime fantasy; top-down three-quarter perspective",
+  "assets": [
+    {
+      "id": "environment/buildings/house",
+      "path": "/assets/elysia/environment/buildings/house.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        343,
+        462
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/training",
+      "path": "/assets/elysia/environment/buildings/training.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        475,
+        467
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/item-shop",
+      "path": "/assets/elysia/environment/buildings/item-shop.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        446,
+        481
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/blacksmith",
+      "path": "/assets/elysia/environment/buildings/blacksmith.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        475,
+        498
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/equipment-shop",
+      "path": "/assets/elysia/environment/buildings/equipment-shop.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        446,
+        475
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/storage",
+      "path": "/assets/elysia/environment/buildings/storage.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        471,
+        467
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/market-cream",
+      "path": "/assets/elysia/environment/buildings/market-cream.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        398,
+        449
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/market-blue",
+      "path": "/assets/elysia/environment/buildings/market-blue.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        404,
+        448
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/sakura",
+      "path": "/assets/elysia/environment/buildings/sakura.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        433,
+        441
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/maple",
+      "path": "/assets/elysia/environment/buildings/maple.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        443,
+        414
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/pine",
+      "path": "/assets/elysia/environment/buildings/pine.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        350,
+        482
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/sacred-fountain",
+      "path": "/assets/elysia/environment/buildings/sacred-fountain.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        419,
+        469
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/torii",
+      "path": "/assets/elysia/environment/buildings/torii.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        388,
+        470
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/bridge",
+      "path": "/assets/elysia/environment/buildings/bridge.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        475,
+        325
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/cave",
+      "path": "/assets/elysia/environment/buildings/cave.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        470,
+        455
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/buildings/watermill",
+      "path": "/assets/elysia/environment/buildings/watermill.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        423,
+        458
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/grass-a",
+      "path": "/assets/elysia/environment/terrain/grass-a.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/grass-b",
+      "path": "/assets/elysia/environment/terrain/grass-b.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/grass-c",
+      "path": "/assets/elysia/environment/terrain/grass-c.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/grass-shade",
+      "path": "/assets/elysia/environment/terrain/grass-shade.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/stone-a",
+      "path": "/assets/elysia/environment/terrain/stone-a.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/stone-b",
+      "path": "/assets/elysia/environment/terrain/stone-b.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/stone-c",
+      "path": "/assets/elysia/environment/terrain/stone-c.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/plaza",
+      "path": "/assets/elysia/environment/terrain/plaza.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/dirt-a",
+      "path": "/assets/elysia/environment/terrain/dirt-a.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/dirt-b",
+      "path": "/assets/elysia/environment/terrain/dirt-b.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/dirt-c",
+      "path": "/assets/elysia/environment/terrain/dirt-c.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/soil",
+      "path": "/assets/elysia/environment/terrain/soil.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/water-0",
+      "path": "/assets/elysia/environment/terrain/water-0.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/water-1",
+      "path": "/assets/elysia/environment/terrain/water-1.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/water-2",
+      "path": "/assets/elysia/environment/terrain/water-2.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/terrain/water-3",
+      "path": "/assets/elysia/environment/terrain/water-3.png",
+      "category": "environment.terrain",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": false,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/training-dummy",
+      "path": "/assets/elysia/environment/props/training-dummy.png",
+      "category": "environment.props",
+      "dimensions": [
+        128,
+        191
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/chest",
+      "path": "/assets/elysia/environment/props/chest.png",
+      "category": "environment.props",
+      "dimensions": [
+        160,
+        144
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/flowers",
+      "path": "/assets/elysia/environment/props/flowers.png",
+      "category": "environment.props",
+      "dimensions": [
+        171,
+        109
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/bush",
+      "path": "/assets/elysia/environment/props/bush.png",
+      "category": "environment.props",
+      "dimensions": [
+        169,
+        108
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/rock",
+      "path": "/assets/elysia/environment/props/rock.png",
+      "category": "environment.props",
+      "dimensions": [
+        404,
+        309
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/fence",
+      "path": "/assets/elysia/environment/props/fence.png",
+      "category": "environment.props",
+      "dimensions": [
+        415,
+        370
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/lantern",
+      "path": "/assets/elysia/environment/props/lantern.png",
+      "category": "environment.props",
+      "dimensions": [
+        238,
+        532
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/barrel",
+      "path": "/assets/elysia/environment/props/barrel.png",
+      "category": "environment.props",
+      "dimensions": [
+        319,
+        412
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/crate",
+      "path": "/assets/elysia/environment/props/crate.png",
+      "category": "environment.props",
+      "dimensions": [
+        148,
+        166
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/bench",
+      "path": "/assets/elysia/environment/props/bench.png",
+      "category": "environment.props",
+      "dimensions": [
+        180,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/splash",
+      "path": "/assets/elysia/environment/props/splash.png",
+      "category": "environment.props",
+      "dimensions": [
+        268,
+        66
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/lilies",
+      "path": "/assets/elysia/environment/props/lilies.png",
+      "category": "environment.props",
+      "dimensions": [
+        156,
+        66
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/shadow",
+      "path": "/assets/elysia/environment/props/shadow.png",
+      "category": "environment.props",
+      "dimensions": [
+        192,
+        80
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/petal",
+      "path": "/assets/elysia/environment/props/petal.png",
+      "category": "environment.props",
+      "dimensions": [
+        64,
+        64
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/destination",
+      "path": "/assets/elysia/environment/props/destination.png",
+      "category": "environment.props",
+      "dimensions": [
+        192,
+        96
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/grass-tuft",
+      "path": "/assets/elysia/environment/props/grass-tuft.png",
+      "category": "environment.props",
+      "dimensions": [
+        136,
+        124
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/road-north",
+      "path": "/assets/elysia/environment/transitions/road-north.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/road-east",
+      "path": "/assets/elysia/environment/transitions/road-east.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/road-south",
+      "path": "/assets/elysia/environment/transitions/road-south.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/road-west",
+      "path": "/assets/elysia/environment/transitions/road-west.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/shore-north",
+      "path": "/assets/elysia/environment/transitions/shore-north.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/shore-east",
+      "path": "/assets/elysia/environment/transitions/shore-east.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/shore-south",
+      "path": "/assets/elysia/environment/transitions/shore-south.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/shore-west",
+      "path": "/assets/elysia/environment/transitions/shore-west.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/dirt-north",
+      "path": "/assets/elysia/environment/transitions/dirt-north.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/dirt-east",
+      "path": "/assets/elysia/environment/transitions/dirt-east.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/dirt-south",
+      "path": "/assets/elysia/environment/transitions/dirt-south.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/dirt-west",
+      "path": "/assets/elysia/environment/transitions/dirt-west.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/plaza-north",
+      "path": "/assets/elysia/environment/transitions/plaza-north.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/plaza-east",
+      "path": "/assets/elysia/environment/transitions/plaza-east.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/plaza-south",
+      "path": "/assets/elysia/environment/transitions/plaza-south.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/transitions/plaza-west",
+      "path": "/assets/elysia/environment/transitions/plaza-west.png",
+      "category": "environment.transitions",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "characters/animations/player",
+      "path": "/assets/elysia/characters/animations/player.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/elder",
+      "path": "/assets/elysia/characters/animations/elder.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/trainer",
+      "path": "/assets/elysia/characters/animations/trainer.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/merchant",
+      "path": "/assets/elysia/characters/animations/merchant.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/slime",
+      "path": "/assets/elysia/characters/animations/slime.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/goblin",
+      "path": "/assets/elysia/characters/animations/goblin.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/dark_dragon",
+      "path": "/assets/elysia/characters/animations/dark_dragon.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "ui/portrait-player",
+      "path": "/assets/elysia/ui/portrait-player.png",
+      "category": "ui.portraits",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-elder",
+      "path": "/assets/elysia/ui/portrait-elder.png",
+      "category": "ui.portraits",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-merchant",
+      "path": "/assets/elysia/ui/portrait-merchant.png",
+      "category": "ui.portraits",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-trainer",
+      "path": "/assets/elysia/ui/portrait-trainer.png",
+      "category": "ui.portraits",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-slime",
+      "path": "/assets/elysia/ui/portrait-slime.png",
+      "category": "ui.portraits",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-dragon",
+      "path": "/assets/elysia/ui/portrait-dragon.png",
+      "category": "ui.portraits",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/paperdoll-player",
+      "path": "/assets/elysia/ui/paperdoll-player.png",
+      "category": "ui.paperdoll",
+      "dimensions": [
+        211,
+        588
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-ancient-treant",
+      "path": "/assets/elysia/ui/portrait-ancient-treant.png",
+      "category": "ui.bosses",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-moon-hydra",
+      "path": "/assets/elysia/ui/portrait-moon-hydra.png",
+      "category": "ui.bosses",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-ancient-titan",
+      "path": "/assets/elysia/ui/portrait-ancient-titan.png",
+      "category": "ui.bosses",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-ignis-dragon",
+      "path": "/assets/elysia/ui/portrait-ignis-dragon.png",
+      "category": "ui.bosses",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-abyss-overlord",
+      "path": "/assets/elysia/ui/portrait-abyss-overlord.png",
+      "category": "ui.bosses",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/icon-crafting-anvil",
+      "path": "/assets/elysia/ui/icon-crafting-anvil.png",
+      "category": "ui.bosses",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_sword_slash_thumb",
+      "path": "/assets/elysia/vfx/vfx_sword_slash_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_sword_slash",
+      "path": "/assets/elysia/vfx/vfx_sword_slash.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 24,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_double_slash_thumb",
+      "path": "/assets/elysia/vfx/vfx_double_slash_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_double_slash",
+      "path": "/assets/elysia/vfx/vfx_double_slash.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 25,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_spin_slash_thumb",
+      "path": "/assets/elysia/vfx/vfx_spin_slash_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_spin_slash",
+      "path": "/assets/elysia/vfx/vfx_spin_slash.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 25,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_heavy_cleave_thumb",
+      "path": "/assets/elysia/vfx/vfx_heavy_cleave_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_heavy_cleave",
+      "path": "/assets/elysia/vfx/vfx_heavy_cleave.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 58,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_sword_combo_thumb",
+      "path": "/assets/elysia/vfx/vfx_sword_combo_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_sword_combo",
+      "path": "/assets/elysia/vfx/vfx_sword_combo.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 90,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_thrust_thumb",
+      "path": "/assets/elysia/vfx/vfx_thrust_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_thrust",
+      "path": "/assets/elysia/vfx/vfx_thrust.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 24,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_spear_sweep_thumb",
+      "path": "/assets/elysia/vfx/vfx_spear_sweep_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_spear_sweep",
+      "path": "/assets/elysia/vfx/vfx_spear_sweep.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1792,
+        1792
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 46,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_dash_strike_thumb",
+      "path": "/assets/elysia/vfx/vfx_dash_strike_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_dash_strike",
+      "path": "/assets/elysia/vfx/vfx_dash_strike.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 70,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_divine_shield_thumb",
+      "path": "/assets/elysia/vfx/vfx_divine_shield_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_divine_shield",
+      "path": "/assets/elysia/vfx/vfx_divine_shield.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 72,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_holy_smite_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_smite_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_holy_smite",
+      "path": "/assets/elysia/vfx/vfx_holy_smite.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 85,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_holy_blessing_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_blessing_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_holy_blessing",
+      "path": "/assets/elysia/vfx/vfx_holy_blessing.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 90,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_holy_holy_pillar_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_holy_pillar_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_holy_holy_pillar",
+      "path": "/assets/elysia/vfx/vfx_holy_holy_pillar.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2816,
+        2560
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 106,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_divine_heal_thumb",
+      "path": "/assets/elysia/vfx/vfx_divine_heal_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_divine_heal",
+      "path": "/assets/elysia/vfx/vfx_divine_heal.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 58,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_heal_aoe_thumb",
+      "path": "/assets/elysia/vfx/vfx_heal_aoe_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_heal_aoe",
+      "path": "/assets/elysia/vfx/vfx_heal_aoe.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 88,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_holy_resurrection_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_resurrection_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_holy_resurrection",
+      "path": "/assets/elysia/vfx/vfx_holy_resurrection.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        3328,
+        3072
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 145,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_holy_sunburst_thumb",
+      "path": "/assets/elysia/vfx/vfx_holy_sunburst_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_holy_sunburst",
+      "path": "/assets/elysia/vfx/vfx_holy_sunburst.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2816,
+        2816
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 120,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_fireball_thumb",
+      "path": "/assets/elysia/vfx/vfx_fireball_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_fireball",
+      "path": "/assets/elysia/vfx/vfx_fireball.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 36,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_fire_meteor_thumb",
+      "path": "/assets/elysia/vfx/vfx_fire_meteor_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_fire_meteor",
+      "path": "/assets/elysia/vfx/vfx_fire_meteor.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        3328,
+        3072
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 151,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_fire_flame_pillar_thumb",
+      "path": "/assets/elysia/vfx/vfx_fire_flame_pillar_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_fire_flame_pillar",
+      "path": "/assets/elysia/vfx/vfx_fire_flame_pillar.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        3328,
+        3072
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 151,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_ice_lance_thumb",
+      "path": "/assets/elysia/vfx/vfx_ice_lance_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_ice_lance",
+      "path": "/assets/elysia/vfx/vfx_ice_lance.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1280,
+        1280
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 24,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_ice_blizzard_vortex_thumb",
+      "path": "/assets/elysia/vfx/vfx_ice_blizzard_vortex_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_ice_blizzard_vortex",
+      "path": "/assets/elysia/vfx/vfx_ice_blizzard_vortex.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 60,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_frost_nova_thumb",
+      "path": "/assets/elysia/vfx/vfx_frost_nova_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_frost_nova",
+      "path": "/assets/elysia/vfx/vfx_frost_nova.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2816,
+        2560
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 103,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_lightning_strike_thumb",
+      "path": "/assets/elysia/vfx/vfx_lightning_strike_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_lightning_strike",
+      "path": "/assets/elysia/vfx/vfx_lightning_strike.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2560,
+        2560
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 91,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_lightning_chain_lightning_thumb",
+      "path": "/assets/elysia/vfx/vfx_lightning_chain_lightning_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_lightning_chain_lightning",
+      "path": "/assets/elysia/vfx/vfx_lightning_chain_lightning.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2048,
+        1792
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 55,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_arcane_mana_burst_thumb",
+      "path": "/assets/elysia/vfx/vfx_arcane_mana_burst_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_arcane_mana_burst",
+      "path": "/assets/elysia/vfx/vfx_arcane_mana_burst.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2048,
+        1792
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 55,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_arcane_star_fall_thumb",
+      "path": "/assets/elysia/vfx/vfx_arcane_star_fall_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_arcane_star_fall",
+      "path": "/assets/elysia/vfx/vfx_arcane_star_fall.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2304,
+        2304
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 76,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_dagger_flurry_thumb",
+      "path": "/assets/elysia/vfx/vfx_dagger_flurry_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_dagger_flurry",
+      "path": "/assets/elysia/vfx/vfx_dagger_flurry.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1536,
+        1280
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 30,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_shadow_step_thumb",
+      "path": "/assets/elysia/vfx/vfx_shadow_step_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_shadow_step",
+      "path": "/assets/elysia/vfx/vfx_shadow_step.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1792,
+        1792
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 49,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_shadow_dark_explosion_thumb",
+      "path": "/assets/elysia/vfx/vfx_shadow_dark_explosion_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_shadow_dark_explosion",
+      "path": "/assets/elysia/vfx/vfx_shadow_dark_explosion.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2816,
+        2816
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 115,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_shadow_life_steal_thumb",
+      "path": "/assets/elysia/vfx/vfx_shadow_life_steal_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_shadow_life_steal",
+      "path": "/assets/elysia/vfx/vfx_shadow_life_steal.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 67,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_power_punch_thumb",
+      "path": "/assets/elysia/vfx/vfx_power_punch_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_power_punch",
+      "path": "/assets/elysia/vfx/vfx_power_punch.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1536,
+        1280
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 27,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_earth_stomp_thumb",
+      "path": "/assets/elysia/vfx/vfx_earth_stomp_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_earth_stomp",
+      "path": "/assets/elysia/vfx/vfx_earth_stomp.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2816,
+        2560
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 105,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_ground_slam_thumb",
+      "path": "/assets/elysia/vfx/vfx_ground_slam_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_ground_slam",
+      "path": "/assets/elysia/vfx/vfx_ground_slam.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2560,
+        2560
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 97,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_fire_ring_thumb",
+      "path": "/assets/elysia/vfx/vfx_fire_ring_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_fire_ring",
+      "path": "/assets/elysia/vfx/vfx_fire_ring.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2816,
+        2816
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 118,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_moves_arrow_shot_thumb",
+      "path": "/assets/elysia/vfx/vfx_moves_arrow_shot_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_moves_arrow_shot",
+      "path": "/assets/elysia/vfx/vfx_moves_arrow_shot.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 58,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_projectiles_arrow_thumb",
+      "path": "/assets/elysia/vfx/vfx_projectiles_arrow_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_projectiles_arrow",
+      "path": "/assets/elysia/vfx/vfx_projectiles_arrow.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1280,
+        1024
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 18,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_nature_poison_cloud_thumb",
+      "path": "/assets/elysia/vfx/vfx_nature_poison_cloud_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_nature_poison_cloud",
+      "path": "/assets/elysia/vfx/vfx_nature_poison_cloud.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2816,
+        2816
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 120,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_nature_leaf_storm_thumb",
+      "path": "/assets/elysia/vfx/vfx_nature_leaf_storm_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_nature_leaf_storm",
+      "path": "/assets/elysia/vfx/vfx_nature_leaf_storm.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 72,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_pickups_loot_beam_thumb",
+      "path": "/assets/elysia/vfx/vfx_pickups_loot_beam_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_pickups_loot_beam",
+      "path": "/assets/elysia/vfx/vfx_pickups_loot_beam.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2304,
+        2048
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 72,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_pickups_chest_open_thumb",
+      "path": "/assets/elysia/vfx/vfx_pickups_chest_open_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_pickups_chest_open",
+      "path": "/assets/elysia/vfx/vfx_pickups_chest_open.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        3072,
+        3072
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 139,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_critical_hit_thumb",
+      "path": "/assets/elysia/vfx/vfx_critical_hit_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_critical_hit",
+      "path": "/assets/elysia/vfx/vfx_critical_hit.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1536,
+        1280
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 28,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_blunt_hit_thumb",
+      "path": "/assets/elysia/vfx/vfx_blunt_hit_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_blunt_hit",
+      "path": "/assets/elysia/vfx/vfx_blunt_hit.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        1536,
+        1280
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 28,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_nature_root_snare_thumb",
+      "path": "/assets/elysia/vfx/vfx_nature_root_snare_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_nature_root_snare",
+      "path": "/assets/elysia/vfx/vfx_nature_root_snare.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        2560,
+        2304
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 82,
+        "fps": 30
+      }
+    },
+    {
+      "id": "vfx/vfx_water_geyser_thumb",
+      "path": "/assets/elysia/vfx/vfx_water_geyser_thumb.png",
+      "category": "vfx.icons",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "vfx/vfx_water_geyser",
+      "path": "/assets/elysia/vfx/vfx_water_geyser.png",
+      "category": "vfx.sheets",
+      "dimensions": [
+        3328,
+        3072
+      ],
+      "transparency": true,
+      "loading": "deferred",
+      "animation": {
+        "frames": 151,
+        "fps": 30
+      }
+    },
+    {
+      "id": "monsters/mon_meadow_slime",
+      "path": "/assets/elysia/monsters/mon_meadow_slime.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_horn_rabbit",
+      "path": "/assets/elysia/monsters/mon_horn_rabbit.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_grassland_wolf",
+      "path": "/assets/elysia/monsters/mon_grassland_wolf.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_gray_wolf",
+      "path": "/assets/elysia/monsters/mon_gray_wolf.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_giant_bee",
+      "path": "/assets/elysia/monsters/mon_giant_bee.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_carnivorous_plant",
+      "path": "/assets/elysia/monsters/mon_carnivorous_plant.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_forest_goblin",
+      "path": "/assets/elysia/monsters/mon_forest_goblin.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_poison_spider",
+      "path": "/assets/elysia/monsters/mon_poison_spider.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_mushroom_beast",
+      "path": "/assets/elysia/monsters/mon_mushroom_beast.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_forest_spirit",
+      "path": "/assets/elysia/monsters/mon_forest_spirit.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_soul_wolf",
+      "path": "/assets/elysia/monsters/mon_soul_wolf.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_ancient_treant",
+      "path": "/assets/elysia/monsters/mon_ancient_treant.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_water_slime",
+      "path": "/assets/elysia/monsters/mon_water_slime.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_giant_frog",
+      "path": "/assets/elysia/monsters/mon_giant_frog.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_water_phantom",
+      "path": "/assets/elysia/monsters/mon_water_phantom.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_skeleton_warrior",
+      "path": "/assets/elysia/monsters/mon_skeleton_warrior.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_stone_golem",
+      "path": "/assets/elysia/monsters/mon_stone_golem.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_ancient_mage",
+      "path": "/assets/elysia/monsters/mon_ancient_mage.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_fire_lizard",
+      "path": "/assets/elysia/monsters/mon_fire_lizard.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_lava_bat",
+      "path": "/assets/elysia/monsters/mon_lava_bat.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_flame_spirit",
+      "path": "/assets/elysia/monsters/mon_flame_spirit.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_young_dragon",
+      "path": "/assets/elysia/monsters/mon_young_dragon.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_dragonkin",
+      "path": "/assets/elysia/monsters/mon_dragonkin.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_dragon_knight",
+      "path": "/assets/elysia/monsters/mon_dragon_knight.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_blood_scorpion",
+      "path": "/assets/elysia/monsters/mon_blood_scorpion.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_sand_wraith",
+      "path": "/assets/elysia/monsters/mon_sand_wraith.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_desert_guardian",
+      "path": "/assets/elysia/monsters/mon_desert_guardian.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_void_creature",
+      "path": "/assets/elysia/monsters/mon_void_creature.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_shadow_spirit",
+      "path": "/assets/elysia/monsters/mon_shadow_spirit.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_dark_knight",
+      "path": "/assets/elysia/monsters/mon_dark_knight.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/MONSTER_GREEN_SLIME",
+      "path": "/assets/elysia/monsters/MONSTER_GREEN_SLIME.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/MONSTER_GOBLIN_SCOUT",
+      "path": "/assets/elysia/monsters/MONSTER_GOBLIN_SCOUT.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/BOSS_DARK_DRAGON_STARTER",
+      "path": "/assets/elysia/monsters/BOSS_DARK_DRAGON_STARTER.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_sanctum_sentinel",
+      "path": "/assets/elysia/monsters/mon_sanctum_sentinel.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_sanctum_acolyte",
+      "path": "/assets/elysia/monsters/mon_sanctum_acolyte.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_guardian_of_awakening",
+      "path": "/assets/elysia/monsters/boss_guardian_of_awakening.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_crimson_overlord",
+      "path": "/assets/elysia/monsters/boss_crimson_overlord.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_abyssal_sovereign",
+      "path": "/assets/elysia/monsters/boss_abyssal_sovereign.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_ancient_treant",
+      "path": "/assets/elysia/monsters/boss_ancient_treant.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_moon_hydra",
+      "path": "/assets/elysia/monsters/boss_moon_hydra.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_ancient_titan",
+      "path": "/assets/elysia/monsters/boss_ancient_titan.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_ignis_dragon",
+      "path": "/assets/elysia/monsters/boss_ignis_dragon.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_abyss_overlord",
+      "path": "/assets/elysia/monsters/boss_abyss_overlord.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_whispering_meadow",
+      "path": "/assets/elysia/monsters/elite_whispering_meadow.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_whispering_meadow",
+      "path": "/assets/elysia/monsters/miniboss_whispering_meadow.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_windmill_plains",
+      "path": "/assets/elysia/monsters/elite_windmill_plains.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_windmill_plains",
+      "path": "/assets/elysia/monsters/miniboss_windmill_plains.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_spirit_outskirts",
+      "path": "/assets/elysia/monsters/elite_spirit_outskirts.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_spirit_outskirts",
+      "path": "/assets/elysia/monsters/miniboss_spirit_outskirts.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_spirit_forest",
+      "path": "/assets/elysia/monsters/elite_spirit_forest.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_spirit_forest",
+      "path": "/assets/elysia/monsters/miniboss_spirit_forest.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_moonlit_lake",
+      "path": "/assets/elysia/monsters/elite_moonlit_lake.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_moonlit_lake",
+      "path": "/assets/elysia/monsters/miniboss_moonlit_lake.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_ancient_ruins",
+      "path": "/assets/elysia/monsters/elite_ancient_ruins.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_ancient_ruins",
+      "path": "/assets/elysia/monsters/miniboss_ancient_ruins.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_ember_canyon",
+      "path": "/assets/elysia/monsters/elite_ember_canyon.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_ember_canyon",
+      "path": "/assets/elysia/monsters/miniboss_ember_canyon.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_dragon_valley",
+      "path": "/assets/elysia/monsters/elite_dragon_valley.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_dragon_valley",
+      "path": "/assets/elysia/monsters/miniboss_dragon_valley.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_crimson_desert",
+      "path": "/assets/elysia/monsters/elite_crimson_desert.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_crimson_desert",
+      "path": "/assets/elysia/monsters/miniboss_crimson_desert.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/elite_shadow_border",
+      "path": "/assets/elysia/monsters/elite_shadow_border.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/miniboss_shadow_border",
+      "path": "/assets/elysia/monsters/miniboss_shadow_border.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_green_slime",
+      "path": "/assets/elysia/monsters/mon_green_slime.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_red_slime",
+      "path": "/assets/elysia/monsters/mon_red_slime.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_forest_rabbit",
+      "path": "/assets/elysia/monsters/mon_forest_rabbit.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_one_horned_rabbit",
+      "path": "/assets/elysia/monsters/mon_one_horned_rabbit.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_elite_rabbit",
+      "path": "/assets/elysia/monsters/mon_elite_rabbit.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_hardwing_bee",
+      "path": "/assets/elysia/monsters/mon_hardwing_bee.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_guardian_bee",
+      "path": "/assets/elysia/monsters/mon_guardian_bee.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_elite_bee",
+      "path": "/assets/elysia/monsters/mon_elite_bee.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_wild_wolf",
+      "path": "/assets/elysia/monsters/mon_wild_wolf.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_elite_wolf",
+      "path": "/assets/elysia/monsters/mon_elite_wolf.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_blood_wolf",
+      "path": "/assets/elysia/monsters/mon_blood_wolf.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_wild_boar",
+      "path": "/assets/elysia/monsters/mon_wild_boar.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_elite_boar",
+      "path": "/assets/elysia/monsters/mon_elite_boar.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_outpost_goblin",
+      "path": "/assets/elysia/monsters/mon_outpost_goblin.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_goblin_warrior",
+      "path": "/assets/elysia/monsters/mon_goblin_warrior.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/mon_elite_goblin",
+      "path": "/assets/elysia/monsters/mon_elite_goblin.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "monsters/boss_goblin_chieftain",
+      "path": "/assets/elysia/monsters/boss_goblin_chieftain.png",
+      "category": "monsters.sprites",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "deferred"
+    },
+    {
+      "id": "environment/buildings/cathedral",
+      "path": "/assets/elysia/environment/buildings/cathedral.png",
+      "category": "environment.buildings",
+      "dimensions": [
+        520,
+        520
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/cathedral-altar",
+      "path": "/assets/elysia/environment/props/cathedral-altar.png",
+      "category": "environment.props",
+      "dimensions": [
+        324,
+        367
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/cathedral-statue",
+      "path": "/assets/elysia/environment/props/cathedral-statue.png",
+      "category": "environment.props",
+      "dimensions": [
+        230,
+        385
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/cathedral-pillar",
+      "path": "/assets/elysia/environment/props/cathedral-pillar.png",
+      "category": "environment.props",
+      "dimensions": [
+        129,
+        382
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/cathedral-pew",
+      "path": "/assets/elysia/environment/props/cathedral-pew.png",
+      "category": "environment.props",
+      "dimensions": [
+        340,
+        339
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/cathedral-candelabra",
+      "path": "/assets/elysia/environment/props/cathedral-candelabra.png",
+      "category": "environment.props",
+      "dimensions": [
+        105,
+        348
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/cathedral-banner",
+      "path": "/assets/elysia/environment/props/cathedral-banner.png",
+      "category": "environment.props",
+      "dimensions": [
+        124,
+        373
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "environment/props/cathedral-stained-glass",
+      "path": "/assets/elysia/environment/props/cathedral-stained-glass.png",
+      "category": "environment.props",
+      "dimensions": [
+        178,
+        376
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "characters/animations/high_priest",
+      "path": "/assets/elysia/characters/animations/high_priest.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-high-priest",
+      "path": "/assets/elysia/ui/portrait-high-priest.png",
+      "category": "ui.portraits",
+      "dimensions": [
+        256,
+        256
+      ],
+      "transparency": true,
+      "loading": "eager"
+    }
+  ],
+  "terrain": {
+    "0": [
+      "environment/terrain/grass-a",
+      "environment/terrain/grass-b",
+      "environment/terrain/grass-c"
+    ],
+    "1": [
+      "environment/terrain/grass-shade"
+    ],
+    "2": [
+      "environment/terrain/stone-a",
+      "environment/terrain/stone-b",
+      "environment/terrain/stone-c"
+    ],
+    "3": [
+      "environment/terrain/water-0"
+    ],
+    "4": [
+      "environment/terrain/plaza"
+    ],
+    "5": [
+      "environment/terrain/dirt-a",
+      "environment/terrain/dirt-b",
+      "environment/terrain/dirt-c"
+    ],
+    "6": [
+      "environment/terrain/soil"
+    ]
+  },
+  "waterFrames": [
+    "environment/terrain/water-0",
+    "environment/terrain/water-1",
+    "environment/terrain/water-2",
+    "environment/terrain/water-3"
+  ],
+  "transitions": {
+    "road": {
+      "south": "environment/transitions/road-south",
+      "west": "environment/transitions/road-west",
+      "east": "environment/transitions/road-east",
+      "north": "environment/transitions/road-north"
+    },
+    "water": {
+      "south": "environment/transitions/shore-south",
+      "west": "environment/transitions/shore-west",
+      "east": "environment/transitions/shore-east",
+      "north": "environment/transitions/shore-north"
+    },
+    "dirt": {
+      "south": "environment/transitions/dirt-south",
+      "west": "environment/transitions/dirt-west",
+      "east": "environment/transitions/dirt-east",
+      "north": "environment/transitions/dirt-north"
+    },
+    "plaza": {
+      "south": "environment/transitions/plaza-south",
+      "west": "environment/transitions/plaza-west",
+      "east": "environment/transitions/plaza-east",
+      "north": "environment/transitions/plaza-north"
+    }
+  },
+  "objectTypes": {
+    "torii_gate": {
+      "assetId": "environment/buildings/torii"
+    },
+    "torii_shrine": {
+      "assetId": "environment/buildings/torii"
+    },
+    "plaza_tree_fountain": {
+      "assetId": "environment/buildings/sacred-fountain"
+    },
+    "cave_entrance": {
+      "assetId": "environment/buildings/cave"
+    },
+    "village_house_a": {
+      "assetId": "environment/buildings/house"
+    },
+    "village_house_b": {
+      "assetId": "environment/buildings/house"
+    },
+    "village_shop": {
+      "assetId": "environment/buildings/item-shop"
+    },
+    "market_stall_striped": {
+      "assetId": "environment/buildings/market-cream"
+    },
+    "market_stall_blue": {
+      "assetId": "environment/buildings/market-blue"
+    },
+    "training_dummy": {
+      "assetId": "environment/props/training-dummy",
+      "widthScale": 0.72
+    },
+    "wooden_bridge": {
+      "assetId": "environment/buildings/bridge",
+      "ground": true,
+      "widthScale": 1.12
+    },
+    "waterwheel_mill": {
+      "assetId": "environment/buildings/watermill"
+    },
+    "treasure_chest": {
+      "assetId": "environment/props/chest"
+    },
+    "sakura_tree": {
+      "assetId": "environment/buildings/sakura"
+    },
+    "maple_tree": {
+      "assetId": "environment/buildings/maple"
+    },
+    "pine_tree": {
+      "assetId": "environment/buildings/pine"
+    },
+    "street_lantern": {
+      "assetId": "environment/props/lantern",
+      "widthScale": 0.68
+    },
+    "village_bench": {
+      "assetId": "environment/props/bench",
+      "widthScale": 0.85
+    },
+    "wooden_barrel": {
+      "assetId": "environment/props/barrel",
+      "widthScale": 0.65
+    },
+    "wooden_crate": {
+      "assetId": "environment/props/crate",
+      "widthScale": 0.72
+    },
+    "village_fence": {
+      "assetId": "environment/props/fence",
+      "widthScale": 1.05
+    },
+    "water_lilies": {
+      "assetId": "environment/props/lilies",
+      "ground": true,
+      "widthScale": 1
+    },
+    "bush_cluster": {
+      "assetId": "environment/props/bush",
+      "widthScale": 0.92
+    },
+    "boulder_rock": {
+      "assetId": "environment/props/rock",
+      "widthScale": 0.95
+    },
+    "grand_cathedral": {
+      "assetId": "environment/buildings/cathedral",
+      "widthScale": 1.24
+    },
+    "cathedral_altar": {
+      "assetId": "environment/props/cathedral-altar",
+      "widthScale": 1.1
+    },
+    "cathedral_statue": {
+      "assetId": "environment/props/cathedral-statue",
+      "widthScale": 0.92
+    },
+    "cathedral_pillar": {
+      "assetId": "environment/props/cathedral-pillar",
+      "widthScale": 0.72
+    },
+    "cathedral_pew": {
+      "assetId": "environment/props/cathedral-pew",
+      "widthScale": 1.02
+    },
+    "cathedral_candelabra": {
+      "assetId": "environment/props/cathedral-candelabra",
+      "widthScale": 0.56
+    },
+    "cathedral_banner": {
+      "assetId": "environment/props/cathedral-banner",
+      "widthScale": 0.72
+    },
+    "cathedral_stained_glass": {
+      "assetId": "environment/props/cathedral-stained-glass",
+      "widthScale": 0.95
+    },
+    "building_blacksmith": {
+      "assetId": "environment/buildings/blacksmith"
+    },
+    "building_equipment_shop": {
+      "assetId": "environment/buildings/equipment-shop"
+    },
+    "building_storage": {
+      "assetId": "environment/buildings/storage"
+    },
+    "building_training": {
+      "assetId": "environment/buildings/training"
+    }
+  },
+  "objectOverrides": {
+    "obj_house_smith": {
+      "assetId": "environment/buildings/blacksmith"
+    },
+    "obj_house_south1": {
+      "assetId": "environment/buildings/equipment-shop",
+      "widthScale": 1.15
+    },
+    "obj_tree_0": {
+      "assetId": "environment/buildings/training",
+      "widthScale": 1.45
+    },
+    "obj_tree_9": {
+      "assetId": "environment/buildings/storage",
+      "widthScale": 1.42
+    },
+    "city_elysia_capital_equip": {
+      "assetId": "environment/buildings/equipment-shop"
+    },
+    "city_elysia_capital_smith": {
+      "assetId": "environment/buildings/blacksmith"
+    },
+    "city_elysia_capital_storage": {
+      "assetId": "environment/buildings/storage"
+    },
+    "city_sylvaris_equip": {
+      "assetId": "environment/buildings/equipment-shop"
+    },
+    "city_sylvaris_smith": {
+      "assetId": "environment/buildings/blacksmith"
+    },
+    "city_sylvaris_storage": {
+      "assetId": "environment/buildings/storage"
+    },
+    "city_drakhen_equip": {
+      "assetId": "environment/buildings/equipment-shop"
+    },
+    "city_drakhen_smith": {
+      "assetId": "environment/buildings/blacksmith"
+    },
+    "city_drakhen_storage": {
+      "assetId": "environment/buildings/storage"
+    }
+  },
+  "decorations": [
+    "environment/props/flowers",
+    "environment/props/bush",
+    "environment/props/rock",
+    "environment/props/grass-tuft"
+  ],
+  "effects": {
+    "shadow": "environment/props/shadow",
+    "petal": "environment/props/petal",
+    "destination": "environment/props/destination",
+    "splash": "environment/props/splash",
+    "lilies": "environment/props/lilies"
+  },
+  "vfxEffects": {
+    "vfx_sword_slash": "vfx/vfx_sword_slash",
+    "vfx_double_slash": "vfx/vfx_double_slash",
+    "vfx_spin_slash": "vfx/vfx_spin_slash",
+    "vfx_heavy_cleave": "vfx/vfx_heavy_cleave",
+    "vfx_sword_combo": "vfx/vfx_sword_combo",
+    "vfx_thrust": "vfx/vfx_thrust",
+    "vfx_spear_sweep": "vfx/vfx_spear_sweep",
+    "vfx_dash_strike": "vfx/vfx_dash_strike",
+    "vfx_divine_shield": "vfx/vfx_divine_shield",
+    "vfx_holy_smite": "vfx/vfx_holy_smite",
+    "vfx_holy_blessing": "vfx/vfx_holy_blessing",
+    "vfx_holy_holy_pillar": "vfx/vfx_holy_holy_pillar",
+    "vfx_divine_heal": "vfx/vfx_divine_heal",
+    "vfx_heal_aoe": "vfx/vfx_heal_aoe",
+    "vfx_holy_resurrection": "vfx/vfx_holy_resurrection",
+    "vfx_holy_sunburst": "vfx/vfx_holy_sunburst",
+    "vfx_fireball": "vfx/vfx_fireball",
+    "vfx_fire_meteor": "vfx/vfx_fire_meteor",
+    "vfx_fire_flame_pillar": "vfx/vfx_fire_flame_pillar",
+    "vfx_ice_lance": "vfx/vfx_ice_lance",
+    "vfx_ice_blizzard_vortex": "vfx/vfx_ice_blizzard_vortex",
+    "vfx_frost_nova": "vfx/vfx_frost_nova",
+    "vfx_lightning_strike": "vfx/vfx_lightning_strike",
+    "vfx_lightning_chain_lightning": "vfx/vfx_lightning_chain_lightning",
+    "vfx_arcane_mana_burst": "vfx/vfx_arcane_mana_burst",
+    "vfx_arcane_star_fall": "vfx/vfx_arcane_star_fall",
+    "vfx_dagger_flurry": "vfx/vfx_dagger_flurry",
+    "vfx_shadow_step": "vfx/vfx_shadow_step",
+    "vfx_shadow_dark_explosion": "vfx/vfx_shadow_dark_explosion",
+    "vfx_shadow_life_steal": "vfx/vfx_shadow_life_steal",
+    "vfx_power_punch": "vfx/vfx_power_punch",
+    "vfx_earth_stomp": "vfx/vfx_earth_stomp",
+    "vfx_ground_slam": "vfx/vfx_ground_slam",
+    "vfx_fire_ring": "vfx/vfx_fire_ring",
+    "vfx_moves_arrow_shot": "vfx/vfx_moves_arrow_shot",
+    "vfx_projectiles_arrow": "vfx/vfx_projectiles_arrow",
+    "vfx_nature_poison_cloud": "vfx/vfx_nature_poison_cloud",
+    "vfx_nature_leaf_storm": "vfx/vfx_nature_leaf_storm",
+    "vfx_pickups_loot_beam": "vfx/vfx_pickups_loot_beam",
+    "vfx_pickups_chest_open": "vfx/vfx_pickups_chest_open",
+    "vfx_critical_hit": "vfx/vfx_critical_hit",
+    "vfx_blunt_hit": "vfx/vfx_blunt_hit",
+    "vfx_nature_root_snare": "vfx/vfx_nature_root_snare",
+    "vfx_water_geyser": "vfx/vfx_water_geyser"
+  },
+  "bossPortraits": {
+    "boss_ancient_treant": "ui/portrait-ancient-treant",
+    "boss_moon_hydra": "ui/portrait-moon-hydra",
+    "boss_ancient_titan": "ui/portrait-ancient-titan",
+    "boss_ignis_dragon": "ui/portrait-ignis-dragon",
+    "boss_abyss_overlord": "ui/portrait-abyss-overlord",
+    "boss_crimson_overlord": "ui/portrait-ignis-dragon",
+    "boss_abyssal_sovereign": "ui/portrait-abyss-overlord",
+    "boss_guardian_of_awakening": "ui/portrait-ancient-titan",
+    "BOSS_DARK_DRAGON_STARTER": "ui/portrait-dragon"
+  }
+}

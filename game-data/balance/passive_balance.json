@@ -1,0 +1,1026 @@
+[
+  {
+    "passive_id": "pas_sw_sword_technique",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sw_combat_focus",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sw_blade_control",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sw_weapon_discipline",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sp_spear_mastery",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sp_piercing_technique",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sp_long_reach",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sp_formation_training",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_kn_iron_wall",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_kn_shield_mastery",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_kn_defensive_stance",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_kn_guardian_instinct",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_pr_divine_blessing",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_pr_healing_knowledge",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_pr_spiritual_focus",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_pr_holy_resistance",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_mg_arcane_knowledge",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_mg_elemental_affinity",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_mg_mana_control",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_mg_spell_focus",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_as_shadow_instinct",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_as_lethal_precision",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_as_evasion_training",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_as_critical_technique",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_fg_combat_rhythm",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_fg_inner_strength",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_fg_martial_discipline",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_fg_counterattack_training",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ar_eagle_eye",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ar_precision_aim",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ar_projectile_mastery",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ar_hunting_instinct",
+    "maxRank": 3,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.2
+  },
+  {
+    "passive_id": "pas_sword_saint_sword_resonance",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15
+  },
+  {
+    "passive_id": "pas_sword_saint_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sword_saint_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sword_saint_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sword_saint_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sword_saint_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15
+  },
+  {
+    "passive_id": "pas_berserker_blood_fury",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1.12,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_berserker_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_berserker_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_berserker_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_berserker_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_berserker_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1.12,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_dragoon_dragon_pierce",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15
+  },
+  {
+    "passive_id": "pas_dragoon_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_dragoon_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_dragoon_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_dragoon_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_dragoon_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15
+  },
+  {
+    "passive_id": "pas_warlancer_spear_formation",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_warlancer_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_warlancer_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_warlancer_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_warlancer_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_warlancer_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_paladin_holy_protection",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_paladin_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_paladin_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_paladin_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_paladin_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_paladin_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_guardian_fortress_stance",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_guardian_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_guardian_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_guardian_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_guardian_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_guardian_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_saint_divine_grace",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_saint_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_saint_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_saint_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_saint_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_saint_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_exorcist_sacred_seal",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.18
+  },
+  {
+    "passive_id": "pas_exorcist_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_exorcist_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_exorcist_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_exorcist_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_exorcist_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.18
+  },
+  {
+    "passive_id": "pas_elementalist_elemental_resonance",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1.15,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_elementalist_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_elementalist_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_elementalist_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_elementalist_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_elementalist_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1.15,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_arcanist_arcane_compression",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.18
+  },
+  {
+    "passive_id": "pas_arcanist_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_arcanist_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_arcanist_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_arcanist_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_arcanist_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.18
+  },
+  {
+    "passive_id": "pas_shadowblade_lethal_precision",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 1.05,
+    "bossModifier": 1.15
+  },
+  {
+    "passive_id": "pas_shadowblade_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_shadowblade_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_shadowblade_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_shadowblade_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_shadowblade_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 1.05,
+    "bossModifier": 1.15
+  },
+  {
+    "passive_id": "pas_phantom_phantom_echo",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_phantom_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_phantom_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_phantom_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_phantom_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_phantom_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_martial_artist_inner_force",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15
+  },
+  {
+    "passive_id": "pas_martial_artist_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_martial_artist_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_martial_artist_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_martial_artist_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_martial_artist_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.15
+  },
+  {
+    "passive_id": "pas_duelist_perfect_counter",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 1.08,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_duelist_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_duelist_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_duelist_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_duelist_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_duelist_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 1.08,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sniper_deadeye",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.2
+  },
+  {
+    "passive_id": "pas_sniper_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sniper_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sniper_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sniper_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_sniper_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1.2
+  },
+  {
+    "passive_id": "pas_ranger_predators_instinct",
+    "maxRank": 5,
+    "pointCostPerRank": 1,
+    "pveModifier": 1.15,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ranger_synergy",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ranger_utility",
+    "maxRank": 4,
+    "pointCostPerRank": 1,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ranger_choice_a",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ranger_choice_b",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  },
+  {
+    "passive_id": "pas_ranger_mastery_apex",
+    "maxRank": 3,
+    "pointCostPerRank": 2,
+    "pveModifier": 1.15,
+    "pvpModifier": 0.9,
+    "bossModifier": 1
+  }
+]

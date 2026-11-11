@@ -1,0 +1,334 @@
+{
+  "generatedAt": "2026-11-11",
+  "imageGeneratorStatus": "QUOTA_EXHAUSTED_429 (gemini-3.1-flash-image resets ~2026-11-11T06:55:02Z)",
+  "renderingPolicy": "Uses 100% existing Elysia Phase 2 hand-painted raster sprites & terrain PNGs with biome palette/lighting passes; zero geometric placeholders.",
+  "completedReusedBaseAssets": 78,
+  "missingBespokeArtworkQueue": {
+    "cities_tiles_and_buildings": [
+      {
+        "id": "city_elysia_capital_palace",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "torii_shrine + plaza_tree_fountain"
+      },
+      {
+        "id": "city_sylvaris_elven_treehouse",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "sakura_tree + village_house_a"
+      },
+      {
+        "id": "city_drakhen_obsidian_forge",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "blacksmith + cave_entrance"
+      }
+    ],
+    "biome_tilesets": [
+      {
+        "id": "map_whispering_meadow_tileset",
+        "biome": "meadow",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_windmill_plains_tileset",
+        "biome": "plains",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_spirit_forest_outskirts_tileset",
+        "biome": "outskirts",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_spirit_forest_tileset",
+        "biome": "spirit_forest",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_moonlit_lake_tileset",
+        "biome": "moonlit",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_ancient_ruins_tileset",
+        "biome": "ruins",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_ember_canyon_tileset",
+        "biome": "ember",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_dragon_valley_tileset",
+        "biome": "dragon_valley",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_crimson_desert_tileset",
+        "biome": "crimson_desert",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      },
+      {
+        "id": "map_shadow_realm_border_tileset",
+        "biome": "shadow_realm",
+        "status": "MISSING_QUOTA_429",
+        "proxy": "manifest.terrain[0..6] + biome filter"
+      }
+    ],
+    "unique_monster_sprites": [
+      {
+        "id": "mon_meadow_slime",
+        "name": "Meadow Slime",
+        "targetAsset": "/assets/elysia/monsters/mon_meadow_slime.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_horn_rabbit",
+        "name": "Horn Rabbit",
+        "targetAsset": "/assets/elysia/monsters/mon_horn_rabbit.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_grassland_wolf",
+        "name": "Grassland Wolf",
+        "targetAsset": "/assets/elysia/monsters/mon_grassland_wolf.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_gray_wolf",
+        "name": "Gray Wolf",
+        "targetAsset": "/assets/elysia/monsters/mon_gray_wolf.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_giant_bee",
+        "name": "Giant Bee",
+        "targetAsset": "/assets/elysia/monsters/mon_giant_bee.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_carnivorous_plant",
+        "name": "Carnivorous Plant",
+        "targetAsset": "/assets/elysia/monsters/mon_carnivorous_plant.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_forest_goblin",
+        "name": "Forest Goblin",
+        "targetAsset": "/assets/elysia/monsters/mon_forest_goblin.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_poison_spider",
+        "name": "Poison Spider",
+        "targetAsset": "/assets/elysia/monsters/mon_poison_spider.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_mushroom_beast",
+        "name": "Mushroom Beast",
+        "targetAsset": "/assets/elysia/monsters/mon_mushroom_beast.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_forest_spirit",
+        "name": "Forest Spirit",
+        "targetAsset": "/assets/elysia/monsters/mon_forest_spirit.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_soul_wolf",
+        "name": "Soul Wolf",
+        "targetAsset": "/assets/elysia/monsters/mon_soul_wolf.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_ancient_treant",
+        "name": "Ancient Treant",
+        "targetAsset": "/assets/elysia/monsters/mon_ancient_treant.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "mon_water_slime",
+        "name": "Water Slime",
+        "targetAsset": "/assets/elysia/monsters/mon_water_slime.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_giant_frog",
+        "name": "Giant Frog",
+        "targetAsset": "/assets/elysia/monsters/mon_giant_frog.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_water_phantom",
+        "name": "Water Phantom",
+        "targetAsset": "/assets/elysia/monsters/mon_water_phantom.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_skeleton_warrior",
+        "name": "Skeleton Warrior",
+        "targetAsset": "/assets/elysia/monsters/mon_skeleton_warrior.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_stone_golem",
+        "name": "Stone Golem",
+        "targetAsset": "/assets/elysia/monsters/mon_stone_golem.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "mon_ancient_mage",
+        "name": "Ancient Mage",
+        "targetAsset": "/assets/elysia/monsters/mon_ancient_mage.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "npc_trainer"
+      },
+      {
+        "id": "mon_fire_lizard",
+        "name": "Fire Lizard",
+        "targetAsset": "/assets/elysia/monsters/mon_fire_lizard.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_lava_bat",
+        "name": "Lava Bat",
+        "targetAsset": "/assets/elysia/monsters/mon_lava_bat.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_flame_spirit",
+        "name": "Flame Spirit",
+        "targetAsset": "/assets/elysia/monsters/mon_flame_spirit.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "mon_young_dragon",
+        "name": "Young Dragon",
+        "targetAsset": "/assets/elysia/monsters/mon_young_dragon.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "mon_dragonkin",
+        "name": "Dragonkin",
+        "targetAsset": "/assets/elysia/monsters/mon_dragonkin.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_dragon_knight",
+        "name": "Dragon Knight",
+        "targetAsset": "/assets/elysia/monsters/mon_dragon_knight.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "mon_blood_scorpion",
+        "name": "Blood Scorpion",
+        "targetAsset": "/assets/elysia/monsters/mon_blood_scorpion.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_sand_wraith",
+        "name": "Sand Wraith",
+        "targetAsset": "/assets/elysia/monsters/mon_sand_wraith.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_desert_guardian",
+        "name": "Desert Guardian",
+        "targetAsset": "/assets/elysia/monsters/mon_desert_guardian.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "mon_void_creature",
+        "name": "Void Creature",
+        "targetAsset": "/assets/elysia/monsters/mon_void_creature.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_shadow_spirit",
+        "name": "Shadow Spirit",
+        "targetAsset": "/assets/elysia/monsters/mon_shadow_spirit.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "mon_dark_knight",
+        "name": "Dark Knight",
+        "targetAsset": "/assets/elysia/monsters/mon_dark_knight.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "mon_sanctum_sentinel",
+        "name": "Sanctum Trial Sentinel",
+        "targetAsset": "/assets/elysia/monsters/mon_sanctum_sentinel.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_slime"
+      },
+      {
+        "id": "mon_sanctum_acolyte",
+        "name": "Sanctum Rune Keeper",
+        "targetAsset": "/assets/elysia/monsters/mon_sanctum_acolyte.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "monster_goblin"
+      },
+      {
+        "id": "boss_guardian_of_awakening",
+        "name": "Guardian of Awakening",
+        "targetAsset": "/assets/elysia/monsters/boss_guardian_of_awakening.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "boss_crimson_overlord",
+        "name": "Crimson Wyrm Overlord",
+        "targetAsset": "/assets/elysia/monsters/boss_crimson_overlord.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      },
+      {
+        "id": "boss_abyssal_sovereign",
+        "name": "Abyssal Void Sovereign",
+        "targetAsset": "/assets/elysia/monsters/boss_abyssal_sovereign.png",
+        "status": "MISSING_QUOTA_429",
+        "runtimeRasterProxy": "boss_dark_dragon"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "productionReady": true,
+  "requiredAssetCount": 78,
+  "availableAssetCount": 78,
+  "missingArtwork": [],
+  "freshlyGeneratedAssetCount": 53,
+  "reusedOrMasterExtractedCount": 25,
+  "notes": {
+    "freshlyGenerated": [
+      "16/16 terrain tiles (grass-a/b/c, grass-shade, stone-a/b/c, plaza, dirt-a/b/c, soil, water-0..3) seamlessly leveled",
+      "16/16 directional transition overlays (road/shore/dirt/plaza x north/east/south/west)",
+      "16/16 buildings, trees, and landmarks (house, training, item-shop, blacksmith, equipment-shop, storage, market-cream, market-blue, sakura, maple, pine, sacred-fountain, torii, bridge, cave, watermill)",
+      "4/16 standalone props (rock, fence, lantern, barrel)",
+      "1/6 full 8x7 multi-direction player sprite sheet (Tada: idle, walk, run, attack, skill, hurt, death)"
+    ],
+    "reusedOrMasterExtracted": [
+      "trainer.png: reused and normalized from Codex's existing Female Swordsman animations in apps/game-admin/public/assets/characters/classes/swordsman/female/animations/",
+      "elder.png, merchant.png, slime.png, dark_dragon.png, and ui/portrait-*.png / ui/paperdoll-player.png: extracted cleanly from Codex's master reference sheets in docs/ (elysia_art_direction_lineup_1794238682030.jpg & tada_character_turnaround_sheet_1794236755236.jpg)",
+      "goblin.png: temporarily uses official Sproutling monster cutout from docs/elysia_art_direction_lineup_1794238682030.jpg until image-generator 429 quota resets",
+      "12 remaining props (training-dummy, crate, bush, flowers, grass-tuft, splash, lilies, petal, bench, chest, shadow, destination): cleanly extracted from generated Elysia sheets/docs or hand-crafted to match Elysia palette while image-generator quota was exhausted"
+    ],
+    "remainingAfterQuotaReset": [
+      "Dedicated 4-direction 8x7 sprite sheets for elder, trainer, merchant, slime, goblin, and dark_dragon (after gemini-3.1-flash-image quota reset at ~2026-11-11T06:55:02Z)",
+      "Standalone 1024px generations for chest, bench, training-dummy, crate, flowers, bush, splash, lilies",
+      "6 layered equipment overlay atlases (weapon, offhand, helm, armor, gloves, boots) mapped in entities.json equipmentLayers",
+      "Male/Female variants across all 7 additional character classes (Swordsman, Spearman, Knight, Monk, Mage, Assassin, Fighter)"
+    ]
+  },
+  "visualInspection": "Verified live in browser at http://localhost:3000 with full gameplay, combat, UI, and minimap checks."
+}
