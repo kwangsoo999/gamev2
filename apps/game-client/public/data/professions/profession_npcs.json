@@ -27,7 +27,7 @@
     "mapId": "THON_KHOI_NGUYEN",
     "tx": 8,
     "ty": 17,
-    "spriteId": "npc_trainer",
+    "spriteId": "npc_blacksmith",
     "dialogueIntro": "Lò rèn luôn đỏ lửa! Mang quặng và gỗ tốt tới đây, ta sẽ dạy ngươi rèn thần binh!",
     "questIds": [
       "PQ_SMITH_INTRO",

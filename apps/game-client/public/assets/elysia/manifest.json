@@ -2107,7 +2107,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_horn_rabbit",
@@ -2118,7 +2118,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_grassland_wolf",
@@ -2129,7 +2129,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_gray_wolf",
@@ -2140,7 +2140,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_giant_bee",
@@ -2151,7 +2151,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_carnivorous_plant",
@@ -2162,7 +2162,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_forest_goblin",
@@ -2173,7 +2173,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_poison_spider",
@@ -2184,7 +2184,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_mushroom_beast",
@@ -2195,7 +2195,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_forest_spirit",
@@ -2206,7 +2206,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_soul_wolf",
@@ -2217,7 +2217,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_ancient_treant",
@@ -2228,7 +2228,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_water_slime",
@@ -2239,7 +2239,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_giant_frog",
@@ -2250,7 +2250,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_water_phantom",
@@ -2261,7 +2261,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_skeleton_warrior",
@@ -2272,7 +2272,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_stone_golem",
@@ -2283,7 +2283,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_ancient_mage",
@@ -2294,7 +2294,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_fire_lizard",
@@ -2305,7 +2305,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_lava_bat",
@@ -2316,7 +2316,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_flame_spirit",
@@ -2327,7 +2327,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_young_dragon",
@@ -2338,7 +2338,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_dragonkin",
@@ -2349,7 +2349,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_dragon_knight",
@@ -2360,7 +2360,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_blood_scorpion",
@@ -2371,7 +2371,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_sand_wraith",
@@ -2382,7 +2382,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_desert_guardian",
@@ -2393,7 +2393,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_void_creature",
@@ -2404,7 +2404,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_shadow_spirit",
@@ -2415,7 +2415,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_dark_knight",
@@ -2426,7 +2426,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/MONSTER_GREEN_SLIME",
@@ -2437,7 +2437,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/MONSTER_GOBLIN_SCOUT",
@@ -2448,7 +2448,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/BOSS_DARK_DRAGON_STARTER",
@@ -2459,7 +2459,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_sanctum_sentinel",
@@ -2470,7 +2470,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_sanctum_acolyte",
@@ -2481,7 +2481,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_guardian_of_awakening",
@@ -2492,7 +2492,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_crimson_overlord",
@@ -2503,7 +2503,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_abyssal_sovereign",
@@ -2514,7 +2514,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_ancient_treant",
@@ -2525,7 +2525,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_moon_hydra",
@@ -2536,7 +2536,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_ancient_titan",
@@ -2547,7 +2547,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_ignis_dragon",
@@ -2558,7 +2558,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_abyss_overlord",
@@ -2569,7 +2569,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_whispering_meadow",
@@ -2580,7 +2580,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_whispering_meadow",
@@ -2591,7 +2591,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_windmill_plains",
@@ -2602,7 +2602,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_windmill_plains",
@@ -2613,7 +2613,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_spirit_outskirts",
@@ -2624,7 +2624,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_spirit_outskirts",
@@ -2635,7 +2635,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_spirit_forest",
@@ -2646,7 +2646,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_spirit_forest",
@@ -2657,7 +2657,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_moonlit_lake",
@@ -2668,7 +2668,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_moonlit_lake",
@@ -2679,7 +2679,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_ancient_ruins",
@@ -2690,7 +2690,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_ancient_ruins",
@@ -2701,7 +2701,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_ember_canyon",
@@ -2712,7 +2712,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_ember_canyon",
@@ -2723,7 +2723,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_dragon_valley",
@@ -2734,7 +2734,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_dragon_valley",
@@ -2745,7 +2745,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_crimson_desert",
@@ -2756,7 +2756,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_crimson_desert",
@@ -2767,7 +2767,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/elite_shadow_border",
@@ -2778,7 +2778,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/miniboss_shadow_border",
@@ -2789,7 +2789,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_green_slime",
@@ -2800,7 +2800,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_red_slime",
@@ -2811,7 +2811,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_forest_rabbit",
@@ -2822,7 +2822,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_one_horned_rabbit",
@@ -2833,7 +2833,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_elite_rabbit",
@@ -2844,7 +2844,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_hardwing_bee",
@@ -2855,7 +2855,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_guardian_bee",
@@ -2866,7 +2866,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_elite_bee",
@@ -2877,7 +2877,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_wild_wolf",
@@ -2888,7 +2888,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_elite_wolf",
@@ -2899,7 +2899,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_blood_wolf",
@@ -2910,7 +2910,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_wild_boar",
@@ -2921,7 +2921,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_elite_boar",
@@ -2932,7 +2932,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_outpost_goblin",
@@ -2943,7 +2943,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_goblin_warrior",
@@ -2954,7 +2954,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/mon_elite_goblin",
@@ -2965,7 +2965,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "monsters/boss_goblin_chieftain",
@@ -2976,7 +2976,7 @@
         128
       ],
       "transparency": true,
-      "loading": "deferred"
+      "loading": "eager"
     },
     {
       "id": "environment/buildings/cathedral",
@@ -2994,7 +2994,7 @@
       "path": "/assets/elysia/environment/props/cathedral-altar.png",
       "category": "environment.props",
       "dimensions": [
-        324,
+        322,
         367
       ],
       "transparency": true,
@@ -3027,8 +3027,8 @@
       "path": "/assets/elysia/environment/props/cathedral-pew.png",
       "category": "environment.props",
       "dimensions": [
-        340,
-        339
+        339,
+        338
       ],
       "transparency": true,
       "loading": "eager"
@@ -3060,7 +3060,7 @@
       "path": "/assets/elysia/environment/props/cathedral-stained-glass.png",
       "category": "environment.props",
       "dimensions": [
-        178,
+        177,
         376
       ],
       "transparency": true,
@@ -3075,15 +3075,288 @@
         1120
       ],
       "transparency": true,
-      "loading": "eager"
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
     },
     {
       "id": "ui/portrait-high-priest",
       "path": "/assets/elysia/ui/portrait-high-priest.png",
-      "category": "ui.portraits",
+      "category": "ui",
       "dimensions": [
-        256,
-        256
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "characters/animations/rabbit",
+      "path": "/assets/elysia/characters/animations/rabbit.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/wolf",
+      "path": "/assets/elysia/characters/animations/wolf.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/boar",
+      "path": "/assets/elysia/characters/animations/boar.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/bee",
+      "path": "/assets/elysia/characters/animations/bee.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/blacksmith",
+      "path": "/assets/elysia/characters/animations/blacksmith.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/hunter",
+      "path": "/assets/elysia/characters/animations/hunter.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/priestess",
+      "path": "/assets/elysia/characters/animations/priestess.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/job_warrior",
+      "path": "/assets/elysia/characters/animations/job_warrior.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/job_swordsman",
+      "path": "/assets/elysia/characters/animations/job_swordsman.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/job_mage",
+      "path": "/assets/elysia/characters/animations/job_mage.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/job_assassin",
+      "path": "/assets/elysia/characters/animations/job_assassin.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/job_archer",
+      "path": "/assets/elysia/characters/animations/job_archer.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/job_priest",
+      "path": "/assets/elysia/characters/animations/job_priest.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/job_paladin",
+      "path": "/assets/elysia/characters/animations/job_paladin.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "characters/animations/job_lancer",
+      "path": "/assets/elysia/characters/animations/job_lancer.png",
+      "category": "characters.animations",
+      "dimensions": [
+        1536,
+        1120
+      ],
+      "transparency": true,
+      "loading": "eager",
+      "animation": {
+        "frames": 112,
+        "fps": 8
+      }
+    },
+    {
+      "id": "ui/portrait-blacksmith",
+      "path": "/assets/elysia/ui/portrait-blacksmith.png",
+      "category": "ui",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-hunter",
+      "path": "/assets/elysia/ui/portrait-hunter.png",
+      "category": "ui",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-priestess",
+      "path": "/assets/elysia/ui/portrait-priestess.png",
+      "category": "ui",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "loading": "eager"
+    },
+    {
+      "id": "ui/portrait-goblin-chieftain",
+      "path": "/assets/elysia/ui/portrait-goblin-chieftain.png",
+      "category": "ui",
+      "dimensions": [
+        128,
+        128
       ],
       "transparency": true,
       "loading": "eager"

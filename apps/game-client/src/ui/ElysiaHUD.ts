@@ -9,8 +9,31 @@ const NPC_PORTRAITS: Record<string, string> = {
   npc_trainer: '/assets/elysia/ui/portrait-trainer.png',
   npc_merchant: '/assets/elysia/ui/portrait-merchant.png',
   NPC_HIGH_PRIEST: '/assets/elysia/ui/portrait-high-priest.png',
-  NPC_JOB_MASTER_ASICA: '/assets/elysia/ui/portrait-elder.png',
+  NPC_SANCTUARY_PRIESTESS: '/assets/elysia/ui/portrait-priestess.png',
+  NPC_JOB_MASTER_ASICA: '/assets/elysia/ui/portrait-priestess.png',
   NPC_GRAND_SAGE_OF_AWAKENING: '/assets/elysia/ui/portrait-elder.png',
+  NPC_BLACKSMITH_MASTER: '/assets/elysia/ui/portrait-blacksmith.png',
+  NPC_ELYSIA_EQUIP_MERCHANT: '/assets/elysia/ui/portrait-blacksmith.png',
+  NPC_DRAKHEN_BLACKSMITH: '/assets/elysia/ui/portrait-blacksmith.png',
+  NPC_HUNTER_KAEL: '/assets/elysia/ui/portrait-hunter.png',
+  NPC_SYLVARIS_RANGER_CAPTAIN: '/assets/elysia/ui/portrait-hunter.png',
+  NPC_HERBALIST_MASTER: '/assets/elysia/ui/portrait-merchant.png',
+  NPC_FARMER_MASTER: '/assets/elysia/ui/portrait-merchant.png',
+  NPC_CHEF_MASTER: '/assets/elysia/ui/portrait-merchant.png',
+  NPC_FISHERMAN_MASTER: '/assets/elysia/ui/portrait-elder.png',
+  NPC_ALCHEMIST_MASTER: '/assets/elysia/ui/portrait-elder.png',
+  NPC_MINING_SUPERVISOR: '/assets/elysia/ui/portrait-blacksmith.png',
+  NPC_LUMBERJACK_MASTER: '/assets/elysia/ui/portrait-trainer.png',
+};
+
+const SPRITE_PORTRAIT_FALLBACKS: Record<string, string> = {
+  npc_blacksmith: '/assets/elysia/ui/portrait-blacksmith.png',
+  npc_hunter: '/assets/elysia/ui/portrait-hunter.png',
+  npc_priestess: '/assets/elysia/ui/portrait-priestess.png',
+  npc_high_priest: '/assets/elysia/ui/portrait-high-priest.png',
+  npc_trainer: '/assets/elysia/ui/portrait-trainer.png',
+  npc_merchant: '/assets/elysia/ui/portrait-merchant.png',
+  npc_villager_elder: '/assets/elysia/ui/portrait-elder.png',
 };
 
 /**
@@ -318,7 +341,10 @@ export class ElysiaHUD {
     dialogueTopics: Array<{ keyword: string; label: string; isHiddenHint?: boolean }> = []
   ) {
     if (!this.dialogBox || !this.dialogText) return;
-    const portraitUrl = NPC_PORTRAITS[npc.id];
+    const portraitUrl =
+      NPC_PORTRAITS[npc.id] ||
+      SPRITE_PORTRAIT_FALLBACKS[npc.spriteId] ||
+      '/assets/elysia/ui/portrait-elder.png';
     if (this.dialogPortrait) {
       if (portraitUrl) {
         this.dialogPortrait.src = portraitUrl;

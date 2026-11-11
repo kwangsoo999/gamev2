@@ -3339,7 +3339,7 @@
         "expReward": 2621,
         "goldReward": 1110,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(-30deg) saturate(1.45)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 14,
         "ty": 13
@@ -3353,7 +3353,7 @@
         "expReward": 2621,
         "goldReward": 1110,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(-30deg) saturate(1.45)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 16,
         "ty": 13
@@ -3367,7 +3367,7 @@
         "expReward": 2621,
         "goldReward": 1110,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(-30deg) saturate(1.45)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 20,
         "ty": 21
@@ -3381,7 +3381,7 @@
         "expReward": 2621,
         "goldReward": 1110,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(-30deg) saturate(1.45)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 22,
         "ty": 21
@@ -3395,7 +3395,7 @@
         "expReward": 2825,
         "goldReward": 1189,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(-35deg) saturate(1.4) contrast(1.08)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 27,
         "ty": 11
@@ -3409,7 +3409,7 @@
         "expReward": 2825,
         "goldReward": 1189,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(-35deg) saturate(1.4) contrast(1.08)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 29,
         "ty": 11
@@ -3423,7 +3423,7 @@
         "expReward": 2825,
         "goldReward": 1189,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(-35deg) saturate(1.4) contrast(1.08)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 27,
         "ty": 13
@@ -3437,7 +3437,7 @@
         "expReward": 2825,
         "goldReward": 1189,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(-35deg) saturate(1.4) contrast(1.08)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 32,
         "ty": 22
@@ -3451,7 +3451,7 @@
         "expReward": 2825,
         "goldReward": 1189,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(-35deg) saturate(1.4) contrast(1.08)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 34,
         "ty": 22
@@ -3465,7 +3465,7 @@
         "expReward": 2825,
         "goldReward": 1189,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(-35deg) saturate(1.4) contrast(1.08)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 32,
         "ty": 24
@@ -3479,7 +3479,7 @@
         "expReward": 3035,
         "goldReward": 1269,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(15deg) saturate(1.5) brightness(0.92)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 38,
         "ty": 14
@@ -3493,7 +3493,7 @@
         "expReward": 3035,
         "goldReward": 1269,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(15deg) saturate(1.5) brightness(0.92)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 40,
         "ty": 14
@@ -3507,7 +3507,7 @@
         "expReward": 3035,
         "goldReward": 1269,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(15deg) saturate(1.5) brightness(0.92)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 40,
         "ty": 22
@@ -3521,7 +3521,7 @@
         "expReward": 3035,
         "goldReward": 1269,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(15deg) saturate(1.5) brightness(0.92)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 42,
         "ty": 22
@@ -3535,7 +3535,7 @@
         "expReward": 17193,
         "goldReward": 10429,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(-55deg) saturate(1.8)",
+        "visualFilter": "",
         "isBoss": true,
         "tx": 41,
         "ty": 9
@@ -3551,7 +3551,7 @@
         "category": "WORLD_BOSS",
         "portraitUrl": "/assets/elysia/ui/portrait-ignis-dragon.png",
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(-55deg) saturate(1.9) brightness(1.05)",
+        "visualFilter": "",
         "isBoss": true,
         "isElite": true,
         "tx": 38,
@@ -3566,8 +3566,8 @@
         "expReward": 3306,
         "goldReward": 1872,
         "category": "ELITE",
-        "spriteId": "monster_goblin",
-        "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+        "spriteId": "boss_dark_dragon",
+        "visualFilter": "",
         "isBoss": false,
         "isElite": true,
         "tx": 31,
@@ -3584,7 +3584,7 @@
         "category": "MINI_BOSS",
         "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "saturate(1.45) contrast(1.12)",
+        "visualFilter": "",
         "isBoss": true,
         "isElite": true,
         "tx": 36,

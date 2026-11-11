@@ -3436,7 +3436,7 @@
         "district": "blacksmith_district",
         "regionId": "city_drakhen",
         "serviceType": "crafting",
-        "spriteId": "npc_trainer",
+        "spriteId": "npc_blacksmith",
         "tx": 14,
         "ty": 13,
         "direction": "south",

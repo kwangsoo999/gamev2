@@ -37,9 +37,50 @@ export class SpriteManager {
   }
 
   public getMeta(spriteId: string): SpriteSheetMeta {
-    const meta = this.registry[spriteId];
+    const meta = this.registry[spriteId] || this.registry.player_adventurer;
     if (!meta) throw new Error(`Thiếu sprite thật cho ${spriteId}`);
     return meta;
+  }
+
+  private resolveEffectiveSpriteId(entity: Entity): string {
+    if (entity.kind === 'player') {
+      const p: any = entity;
+      const cls = String(p.advancedJobId || p.classId || p.remoteClassId || '').toLowerCase();
+      const jobMap: Record<string, string> = {
+        warrior: 'job_warrior',
+        fighter: 'job_warrior',
+        berserker: 'job_warrior',
+        martial_artist: 'job_warrior',
+        swordsman: 'job_swordsman',
+        sword_saint: 'job_swordsman',
+        duelist: 'job_swordsman',
+        mage: 'job_mage',
+        elementalist: 'job_mage',
+        arcanist: 'job_mage',
+        assassin: 'job_assassin',
+        shadowblade: 'job_assassin',
+        phantom: 'job_assassin',
+        archer: 'job_archer',
+        sniper: 'job_archer',
+        ranger: 'job_archer',
+        monk: 'job_priest',
+        priest: 'job_priest',
+        saint: 'job_priest',
+        exorcist: 'job_priest',
+        knight: 'job_paladin',
+        paladin: 'job_paladin',
+        guardian: 'job_paladin',
+        spearman: 'job_lancer',
+        lancer: 'job_lancer',
+        dragoon: 'job_lancer',
+        warlancer: 'job_lancer',
+      };
+      const mapped = jobMap[cls];
+      if (mapped && this.registry[mapped]) {
+        return mapped;
+      }
+    }
+    return this.registry[entity.spriteId] ? entity.spriteId : 'player_adventurer';
   }
 
   public setEquipment(equipment: Partial<Record<EquipSlotKey, InventoryItemDef>>) {
@@ -61,7 +102,8 @@ export class SpriteManager {
   }
 
   public drawEntity(ctx: CanvasRenderingContext2D, entity: Entity, x: number, y: number, _timeMs: number) {
-    const meta = this.getMeta(entity.spriteId);
+    const effectiveSpriteId = this.resolveEffectiveSpriteId(entity);
+    const meta = this.getMeta(effectiveSpriteId);
     const clip = meta.animations[entity.state];
     const column = meta.directionColumns[entity.direction] + Math.min(entity.frameIndex, clip.frames - 1);
     const width = meta.drawHeight * meta.frameWidth / meta.frameHeight;
@@ -110,7 +152,23 @@ export class SpriteManager {
   public drawMonsterOrEntity(ctx: CanvasRenderingContext2D, entity: Entity, x: number, y: number, timeMs: number) {
     if (entity.kind === 'monster') {
       const mon: any = entity;
-      const uniqueAssetId = mon.monsterId ? `monsters/${mon.monsterId}` : null;
+      const rawId =
+        mon.monsterId ||
+        (mon.id ? String(mon.id).replace(/__x3_\d+$/, '').replace(/_\d+_\d+$/, '') : null);
+      const fallbackBySheet: Record<string, string> = {
+        monster_slime: 'MONSTER_GREEN_SLIME',
+        monster_goblin: 'MONSTER_GOBLIN_SCOUT',
+        monster_rabbit: 'mon_forest_rabbit',
+        monster_wolf: 'mon_wild_wolf',
+        monster_boar: 'mon_wild_boar',
+        monster_bee: 'mon_giant_bee',
+        boss_dark_dragon: 'BOSS_DARK_DRAGON_STARTER',
+      };
+      const resolvedId =
+        rawId && this.artwork.has(`monsters/${rawId}`)
+          ? rawId
+          : fallbackBySheet[entity.spriteId] || rawId;
+      const uniqueAssetId = resolvedId ? `monsters/${resolvedId}` : null;
       const uniqueImg = uniqueAssetId ? this.artwork.getOptional(uniqueAssetId) : undefined;
       if (uniqueImg && uniqueImg.complete && uniqueImg.naturalWidth > 0) {
         this.drawUniqueMonsterSprite(ctx, entity, uniqueImg, x, y, timeMs);
@@ -160,7 +218,7 @@ export class SpriteManager {
     // Procedural multi-state anime motion (idle breathe / walk hop / attack lunge / hurt flash / death fade)
     let offsetX = 0;
     let offsetY = 0;
-    let scaleX = entity.direction === 'west' ? -1 : 1;
+    let scaleX = entity.direction === 'east' ? -1 : 1;
     let scaleY = 1;
     let rotRad = 0;
     let alpha = 1;

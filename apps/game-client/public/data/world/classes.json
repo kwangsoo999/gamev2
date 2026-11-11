@@ -71,7 +71,7 @@
       "weaponItemId": "ITEM_SWORD_AWAKENED_BLADE",
       "armorItemId": "ITEM_ARMOR_SWORDSMAN_PLATE"
     },
-    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "artworkUrl": "/assets/elysia/characters/jobs/swordsman.png",
     "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
     "status": "published",
     "description": "Lấy Sức Mạnh (STR) làm chủ đạo và Khéo Léo (DEX) để tung những nhát chém chuẩn xác uy lực.",
@@ -119,7 +119,7 @@
       "weaponItemId": "ITEM_SPEAR_IRON",
       "armorItemId": "ITEM_ARMOR_SPEARMAN_MAIL"
     },
-    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "artworkUrl": "/assets/elysia/characters/jobs/spearman.png",
     "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
     "status": "published",
     "description": "Kết hợp Nhanh Nhẹn (AGI) vượt trội cùng Sức Mạnh (STR) để xoay chuyển ngọn thương tầm dài.",
@@ -166,7 +166,7 @@
       "weaponItemId": "ITEM_SHIELD_IRON",
       "armorItemId": "ITEM_ARMOR_KNIGHT_AEGIS"
     },
-    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "artworkUrl": "/assets/elysia/characters/jobs/knight.png",
     "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
     "status": "published",
     "description": "Rèn luyện Thể Chất (CON) kiên cố kết hợp Sức Mạnh (STR) để bảo vệ đồng đội bằng kiếm và khiên.",
@@ -212,7 +212,7 @@
       "weaponItemId": "ITEM_STAFF_SANCTUM_ORB",
       "armorItemId": "ITEM_ARMOR_MONK_VESTMENT"
     },
-    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "artworkUrl": "/assets/elysia/characters/jobs/monk.png",
     "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
     "status": "published",
     "description": "Thân thể bền bỉ (CON) hòa quyện cùng Trí Tuệ thánh linh (INT) để chữa lành và thanh tẩy.",
@@ -259,7 +259,7 @@
       "weaponItemId": "ITEM_SPELLBOOK_ARCANE",
       "armorItemId": "ITEM_ARMOR_MAGE_ROBE"
     },
-    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "artworkUrl": "/assets/elysia/characters/jobs/mage.png",
     "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
     "status": "published",
     "description": "Trí Tuệ uyên bác (INT) và độ tinh tế Khéo Léo (DEX) giúp thi triển ma pháp hủy diệt diện rộng.",
@@ -305,7 +305,7 @@
       "weaponItemId": "ITEM_DAGGER_HUNTER",
       "armorItemId": "ITEM_ARMOR_ASSASSIN_GARB"
     },
-    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "artworkUrl": "/assets/elysia/characters/jobs/assassin.png",
     "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
     "status": "published",
     "description": "Nhanh Nhẹn (AGI) cực đỉnh kết hợp Khéo Léo (DEX) để ra đòn chí mạng bằng Song Chủy Thủ.",
@@ -351,7 +351,7 @@
       "weaponItemId": "ITEM_GAUNTLET_IRON_FIST",
       "armorItemId": "ITEM_ARMOR_FIGHTER_GI"
     },
-    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "artworkUrl": "/assets/elysia/characters/jobs/fighter.png",
     "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
     "status": "published",
     "description": "Sức Mạnh cơ bắp (STR) và Thể Chất sắt thép (CON) tạo nên đấu sĩ cận chiến bất khuất.",
@@ -397,7 +397,7 @@
       "weaponItemId": "ITEM_BOW_RANGER",
       "armorItemId": "ITEM_ARMOR_ARCHER_TUNIC"
     },
-    "artworkUrl": "/assets/elysia/ui/paperdoll-player.png",
+    "artworkUrl": "/assets/elysia/characters/jobs/archer.png",
     "weaponArtworkUrl": "/assets/elysia/ui/portrait-player.png",
     "status": "published",
     "description": "Khéo Léo chuẩn xác (DEX) hòa cùng Nhanh Nhẹn (AGI) để bách phát bách trúng bằng Cung và Nỏ.",

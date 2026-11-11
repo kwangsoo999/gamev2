@@ -3352,7 +3352,7 @@
         "expReward": 372,
         "goldReward": 186,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(205deg) brightness(1.12)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 19,
         "ty": 10
@@ -3366,7 +3366,7 @@
         "expReward": 372,
         "goldReward": 186,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(205deg) brightness(1.12)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 21,
         "ty": 10
@@ -3380,7 +3380,7 @@
         "expReward": 372,
         "goldReward": 186,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(205deg) brightness(1.12)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 29,
         "ty": 22
@@ -3394,7 +3394,7 @@
         "expReward": 372,
         "goldReward": 186,
         "spriteId": "monster_goblin",
-        "visualFilter": "hue-rotate(205deg) brightness(1.12)",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 31,
         "ty": 22

@@ -491,7 +491,14 @@ export class BaloEquipModal {
               </div>
 
               <div class="tk-paperdoll-pedestal">
-                <img src="/assets/elysia/ui/paperdoll-player.png" alt="${snap.playerName}" class="tk-paperdoll-img" />
+                <img src="${
+                  [
+                    'warrior', 'fighter', 'swordsman', 'mage', 'assassin', 'archer', 'priest', 'monk', 'paladin', 'knight', 'lancer', 'spearman',
+                    'sword_saint', 'berserker', 'dragoon', 'warlancer', 'guardian', 'saint', 'exorcist', 'elementalist', 'arcanist', 'shadowblade', 'phantom', 'martial_artist', 'duelist', 'sniper', 'ranger',
+                  ].includes(String((snap as any).advancedJobId || snap.classId || '').toLowerCase())
+                    ? `/assets/elysia/characters/jobs/${String((snap as any).advancedJobId || snap.classId).toLowerCase()}.png`
+                    : '/assets/elysia/ui/paperdoll-player.png'
+                }" alt="${snap.playerName}" class="tk-paperdoll-img" />
               </div>
 
               <div class="tk-equip-col-stack">

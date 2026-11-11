@@ -1,4 +1,4 @@
-import { EquipSlotKey, InventoryItemDef } from '../engine/types';
+import type { EquipSlotKey, InventoryItemDef } from '../engine/types';
 
 /**
  * High-craft SVG artwork generators unified with the "Thôn Khởi Nguyên"
@@ -6,55 +6,170 @@ import { EquipSlotKey, InventoryItemDef } from '../engine/types';
  */
 
 export function getSkillIconSvg(iconKey: string): string {
-  switch (iconKey) {
-    case 'skill_azure_wave':
-      return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-        <defs>
-          <radialGradient id="skBg1" cx="50%" cy="50%" r="55%">
-            <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.95"/>
-            <stop offset="60%" stop-color="#0369a1"/>
-            <stop offset="100%" stop-color="#082f49"/>
-          </radialGradient>
-        </defs>
-        <rect width="64" height="64" rx="6" fill="url(#skBg1)"/>
-        <path d="M10 52 C22 40 36 22 54 10 C42 28 30 42 16 54 Z" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
-        <path d="M16 14 L46 44" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-        <circle cx="48" cy="16" r="4" fill="#ffffff" opacity="0.9"/>
-      </svg>`;
-    case 'skill_flame_slash':
-      return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-        <defs>
-          <radialGradient id="skBg2" cx="50%" cy="50%" r="55%">
-            <stop offset="0%" stop-color="#f97316"/>
-            <stop offset="60%" stop-color="#b91c1c"/>
-            <stop offset="100%" stop-color="#450a0a"/>
-          </radialGradient>
-        </defs>
-        <rect width="64" height="64" rx="6" fill="url(#skBg2)"/>
-        <path d="M12 48 C20 28 34 16 52 12 C42 28 34 40 16 52 Z" fill="#fef08a" stroke="#f59e0b" stroke-width="2"/>
-        <path d="M18 52 C28 38 40 28 54 22" stroke="#fdba74" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-        <circle cx="24" cy="24" r="3" fill="#fde047"/>
-      </svg>`;
-    case 'skill_golden_aura':
-      return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-        <defs>
-          <radialGradient id="skBg3" cx="50%" cy="45%" r="55%">
-            <stop offset="0%" stop-color="#fef08a"/>
-            <stop offset="55%" stop-color="#d97706"/>
-            <stop offset="100%" stop-color="#451a03"/>
-          </radialGradient>
-        </defs>
-        <rect width="64" height="64" rx="6" fill="url(#skBg3)"/>
-        <path d="M32 8 L39 24 L56 26 L43 38 L46 54 L32 46 L18 54 L21 38 L8 26 L25 24 Z" fill="#fef9c3" opacity="0.3"/>
-        <circle cx="32" cy="22" r="7" fill="#291a0d" stroke="#fef08a" stroke-width="2"/>
-        <path d="M19 52 C19 37 25 32 32 32 C39 32 45 37 45 52 Z" fill="#291a0d" stroke="#fde047" stroke-width="2"/>
-      </svg>`;
-    default:
-      return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-        <rect width="64" height="64" rx="6" fill="#2b2117"/>
-        <circle cx="32" cy="32" r="14" fill="none" stroke="#a68246" stroke-width="2.5"/>
-      </svg>`;
+  const k = String(iconKey || '').toLowerCase();
+
+  if (k === 'skill_flame_slash' || k.includes('fire') || k.includes('flame') || k.includes('meteor') || k.includes('berserker')) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skFire" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#f97316"/>
+          <stop offset="60%" stop-color="#b91c1c"/>
+          <stop offset="100%" stop-color="#450a0a"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skFire)"/>
+      <path d="M32 10 C42 20 48 30 44 42 C41 50 32 54 24 50 C16 46 16 34 22 24 C24 30 28 30 32 10 Z" fill="#fef08a" stroke="#f59e0b" stroke-width="2"/>
+      <circle cx="31" cy="38" r="7" fill="#ffffff" opacity="0.85"/>
+      <circle cx="20" cy="18" r="2.5" fill="#fde047"/>
+      <circle cx="46" cy="20" r="2" fill="#fdba74"/>
+    </svg>`;
   }
+
+  if (k.includes('ice') || k.includes('frost') || k.includes('blizzard')) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skIce" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#38bdf8"/>
+          <stop offset="65%" stop-color="#0284c7"/>
+          <stop offset="100%" stop-color="#082f49"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skIce)"/>
+      <polygon points="32,8 40,26 54,32 40,38 32,56 24,38 10,32 24,26" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2"/>
+      <polygon points="32,16 36,28 48,32 36,36 32,48 28,36 16,32 28,28" fill="#ffffff"/>
+    </svg>`;
+  }
+
+  if (k.includes('lightning') || k.includes('thunder') || k.includes('railshot')) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skLight" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#fde047"/>
+          <stop offset="60%" stop-color="#4f46e5"/>
+          <stop offset="100%" stop-color="#1e1b4b"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skLight)"/>
+      <polygon points="36,8 18,34 30,34 24,56 46,28 34,28" fill="#fef9c3" stroke="#facc15" stroke-width="2"/>
+    </svg>`;
+  }
+
+  if (
+    k === 'skill_golden_aura' ||
+    k.includes('holy') ||
+    k.includes('heal') ||
+    k.includes('divine') ||
+    k.includes('blessing') ||
+    k.includes('resurrection') ||
+    k.includes('saint') ||
+    k.includes('exorcist') ||
+    k.includes('sunburst')
+  ) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skHoly" cx="50%" cy="45%" r="55%">
+          <stop offset="0%" stop-color="#fef08a"/>
+          <stop offset="55%" stop-color="#d97706"/>
+          <stop offset="100%" stop-color="#451a03"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skHoly)"/>
+      <path d="M28 12 H36 V26 H50 V34 H36 V52 H28 V34 H14 V26 H28 Z" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+      <circle cx="32" cy="30" r="6" fill="#ffffff"/>
+    </svg>`;
+  }
+
+  if (k.includes('shadow') || k.includes('dagger') || k.includes('poison') || k.includes('phantom') || k.includes('dark') || k.includes('assassin')) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skShadow" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#a855f7"/>
+          <stop offset="65%" stop-color="#4c1d95"/>
+          <stop offset="100%" stop-color="#1e1b4b"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skShadow)"/>
+      <path d="M14 50 L46 14 L50 18 L18 54 Z" fill="#e9d5ff" stroke="#c084fc" stroke-width="1.8"/>
+      <path d="M50 50 L18 14 L14 18 L46 54 Z" fill="#d8b4fe" stroke="#9333ea" stroke-width="1.8"/>
+      <circle cx="32" cy="32" r="5" fill="#fde047"/>
+    </svg>`;
+  }
+
+  if (k.includes('arrow') || k.includes('bow') || k.includes('ranger') || k.includes('sniper') || k.includes('leaf') || k.includes('nature')) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skBow" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#22c55e"/>
+          <stop offset="65%" stop-color="#15803d"/>
+          <stop offset="100%" stop-color="#052e16"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skBow)"/>
+      <path d="M20 12 C44 18 44 46 20 52" fill="none" stroke="#fde047" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="12" y1="32" x2="50" y2="32" stroke="#dcfce7" stroke-width="3"/>
+      <polygon points="54,32 44,26 44,38" fill="#ffffff"/>
+    </svg>`;
+  }
+
+  if (k.includes('spear') || k.includes('thrust') || k.includes('dragoon') || k.includes('warlancer') || k.includes('lance')) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skSpear" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#38bdf8"/>
+          <stop offset="65%" stop-color="#1d4ed8"/>
+          <stop offset="100%" stop-color="#0f172a"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skSpear)"/>
+      <line x1="12" y1="52" x2="46" y2="18" stroke="#fde047" stroke-width="4" stroke-linecap="round"/>
+      <polygon points="54,10 38,18 46,26" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.8"/>
+    </svg>`;
+  }
+
+  if (k.includes('shield') || k.includes('guardian') || k.includes('bastion') || k.includes('aegis') || k.includes('paladin')) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skShield" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#fbbf24"/>
+          <stop offset="65%" stop-color="#1e40af"/>
+          <stop offset="100%" stop-color="#0f172a"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skShield)"/>
+      <path d="M16 14 L32 10 L48 14 L46 36 C44 46 32 54 32 54 C32 54 20 46 18 36 Z" fill="#e2e8f0" stroke="#f59e0b" stroke-width="3"/>
+      <path d="M32 16 V48 M22 28 H42" stroke="#d97706" stroke-width="3"/>
+    </svg>`;
+  }
+
+  if (k.includes('arcane') || k.includes('star') || k.includes('mana') || k.includes('arcanist') || k.includes('elementalist')) {
+    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <defs>
+        <radialGradient id="skArcane" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#818cf8"/>
+          <stop offset="65%" stop-color="#4338ca"/>
+          <stop offset="100%" stop-color="#1e1b4b"/>
+        </radialGradient>
+      </defs>
+      <rect width="64" height="64" rx="6" fill="url(#skArcane)"/>
+      <circle cx="32" cy="32" r="18" fill="none" stroke="#c7d2fe" stroke-width="2" stroke-dasharray="4 2"/>
+      <polygon points="32,12 37,26 52,26 40,35 44,49 32,40 20,49 24,35 12,26 27,26" fill="#fef08a" stroke="#f59e0b" stroke-width="1.5"/>
+    </svg>`;
+  }
+
+  // Default / Sword / Slash / Azure Wave
+  return `<svg viewBox="0 0 64 64" width="100%" height="100%">
+    <defs>
+      <radialGradient id="skBg1" cx="50%" cy="50%" r="55%">
+        <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.95"/>
+        <stop offset="60%" stop-color="#0369a1"/>
+        <stop offset="100%" stop-color="#082f49"/>
+      </radialGradient>
+    </defs>
+    <rect width="64" height="64" rx="6" fill="url(#skBg1)"/>
+    <path d="M10 52 C22 40 36 22 54 10 C42 28 30 42 16 54 Z" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M16 14 L46 44" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="48" cy="16" r="4" fill="#ffffff" opacity="0.9"/>
+  </svg>`;
 }
 
 export function getBackpackIconSvg(): string {
@@ -224,8 +339,41 @@ export function getItemIconSvg(iconKey: string): string {
       <circle cx="32" cy="32" r="11" fill="#fbbf24" stroke="#7c2d12" stroke-width="2"/>
       <circle cx="28" cy="28" r="3" fill="#fffbeb"/>
     </svg>`,
+    excalibur_sword_icon: `<svg viewBox="0 0 64 64" width="100%" height="100%">
+      <path d="M51 9 L55 13 L29 39 L25 35 Z" fill="#fef08a" stroke="#b45309" stroke-width="2"/>
+      <path d="M51 9 L25 35 L27 37 L53 11 Z" fill="#ffffff"/>
+      <path d="M17 29 L35 47 L31 51 L13 33 Z" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
+      <path d="M22 42 L12 52 L16 56 L26 46 Z" fill="#1e40af" stroke="#1e1b4b" stroke-width="1.8"/>
+      <circle cx="26" cy="38" r="3.5" fill="#38bdf8" stroke="#ffffff" stroke-width="1.2"/>
+    </svg>`,
   };
-  return map[iconKey] || map.sword_novice;
+  if (map[iconKey]) return map[iconKey];
+  const k = String(iconKey || '').toLowerCase();
+  if (k.includes('herb') || k.includes('leaf') || k.includes('flower')) return map.herb_green;
+  if (k.includes('potion_mp') || k.includes('mana')) return map.potion_mp;
+  if (k.includes('potion') || k.includes('elixir') || k.includes('panacea')) return map.potion_hp;
+  if (k.includes('bow')) return map.bow_ranger;
+  if (k.includes('dagger')) return map.dual_daggers;
+  if (k.includes('spear') || k.includes('lance') || k.includes('halberd')) return map.spear_iron;
+  if (k.includes('staff') || k.includes('scepter') || k.includes('rod')) return map.staff_holy;
+  if (k.includes('book') || k.includes('tome') || k.includes('grimoire')) return map.spellbook_arcane;
+  if (k.includes('shield')) return map.shield_oak;
+  if (k.includes('helm') || k.includes('crown') || k.includes('hat')) return map.helm_bronze;
+  if (k.includes('boot') || k.includes('shoe') || k.includes('greave')) return map.boots_leather;
+  if (k.includes('glove') || k.includes('gauntlet')) return map.gloves_leather;
+  if (k.includes('shoulder') || k.includes('pauldron')) return map.shoulder_plate;
+  if (k.includes('cloak') || k.includes('cape') || k.includes('mantle')) return map.cloak_wind;
+  if (k.includes('ring')) return map.ring_band;
+  if (k.includes('amulet') || k.includes('necklace') || k.includes('pendant')) return map.amulet_jade;
+  if (k.includes('armor') || k.includes('plate') || k.includes('mail')) return map.armor_plate;
+  if (k.includes('tunic') || k.includes('robe') || k.includes('coat')) return map.tunic_explorer;
+  if (k.includes('scroll') || k.includes('cert') || k.includes('seal')) return map.scroll_town;
+  if (k.includes('ore') || k.includes('ingot') || k.includes('bar') || k.includes('stone')) return map.ore_iron;
+  if (k.includes('wood') || k.includes('timber') || k.includes('plank') || k.includes('branch')) return map.wood_oak;
+  if (k.includes('gem') || k.includes('crystal') || k.includes('pearl')) return map.gem_amethyst;
+  if (k.includes('bread') || k.includes('food') || k.includes('stew') || k.includes('feast') || k.includes('wheat') || k.includes('apple')) return map.bread_loaf;
+  if (k.includes('core') || k.includes('heart') || k.includes('scale')) return map.boss_core;
+  return map.sword_novice;
 }
 
 export function getPaperdollSvg(equipment: Partial<Record<EquipSlotKey, InventoryItemDef>>): string {

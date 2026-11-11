@@ -420,7 +420,892 @@
       "frameHeight": 160,
       "anchorX": 0.5,
       "anchorY": 0.92,
+      "drawHeight": 88,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "monster_rabbit": {
+      "assetId": "characters/animations/rabbit",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 62,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "monster_wolf": {
+      "assetId": "characters/animations/wolf",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 74,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "monster_boar": {
+      "assetId": "characters/animations/boar",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 72,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "monster_bee": {
+      "assetId": "characters/animations/bee",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 68,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "npc_blacksmith": {
+      "assetId": "characters/animations/blacksmith",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
       "drawHeight": 86,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "npc_hunter": {
+      "assetId": "characters/animations/hunter",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 84,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "npc_priestess": {
+      "assetId": "characters/animations/priestess",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 82,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "job_warrior": {
+      "assetId": "characters/animations/job_warrior",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 88,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "job_swordsman": {
+      "assetId": "characters/animations/job_swordsman",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 86,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "job_mage": {
+      "assetId": "characters/animations/job_mage",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 88,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "job_assassin": {
+      "assetId": "characters/animations/job_assassin",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 84,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "job_archer": {
+      "assetId": "characters/animations/job_archer",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 86,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "job_priest": {
+      "assetId": "characters/animations/job_priest",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 86,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "job_paladin": {
+      "assetId": "characters/animations/job_paladin",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 88,
+      "directionColumns": {
+        "south": 0,
+        "west": 2,
+        "east": 4,
+        "north": 6
+      },
+      "equipmentLayers": {},
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 2,
+          "fps": 8,
+          "loop": true
+        },
+        "run": {
+          "row": 2,
+          "frames": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "attack": {
+          "row": 3,
+          "frames": 2,
+          "fps": 7,
+          "loop": false
+        },
+        "skill": {
+          "row": 4,
+          "frames": 2,
+          "fps": 5,
+          "loop": false
+        },
+        "hurt": {
+          "row": 5,
+          "frames": 2,
+          "fps": 6,
+          "loop": false
+        },
+        "death": {
+          "row": 6,
+          "frames": 2,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
+    "job_lancer": {
+      "assetId": "characters/animations/job_lancer",
+      "frameWidth": 192,
+      "frameHeight": 160,
+      "anchorX": 0.5,
+      "anchorY": 0.92,
+      "drawHeight": 90,
       "directionColumns": {
         "south": 0,
         "west": 2,

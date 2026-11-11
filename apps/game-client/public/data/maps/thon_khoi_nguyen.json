@@ -3892,11 +3892,50 @@
         "dialogue": "Trang bị, dược phẩm và Kho lưu trữ làng luôn sẵn sàng hỗ trợ mạo hiểm giả.",
         "x": 936,
         "y": 840
+      },
+      {
+        "id": "NPC_SANCTUARY_PRIESTESS",
+        "name": "Thánh Nữ Aria · Sứ Giả Thánh Đường",
+        "role": "Sứ Giả Thánh Đường & Cầu Nguyện",
+        "district": "holy_sanctuary_district",
+        "regionId": "THON_KHOI_NGUYEN",
+        "spriteId": "npc_priestess",
+        "tx": 9,
+        "ty": 7,
+        "direction": "south",
+        "interactionRadius": 92,
+        "movementBehavior": "stationary",
+        "idleAnimation": "pray_idle",
+        "associatedBuildingId": "obj_cathedral_novice",
+        "dialogueId": "dlg_sanctuary_priestess",
+        "dialogue": "Bước qua cánh cửa Đại Thánh Đường phía sau ta để vào Nội Điện gặp Linh Mục Điện Thánh Seraphiel và thực hiện Nghi Lễ Chuyển Chức!",
+        "x": 456,
+        "y": 360
+      },
+      {
+        "id": "NPC_HUNTER_KAEL",
+        "name": "Thợ Săn Kael · Trạm Săn Bắn",
+        "role": "Bậc Thầy Săn Bắn & Thảo Phạt",
+        "district": "adventurer_district",
+        "regionId": "THON_KHOI_NGUYEN",
+        "spriteId": "npc_hunter",
+        "tx": 23,
+        "ty": 20,
+        "direction": "east",
+        "interactionRadius": 92,
+        "movementBehavior": "stationary",
+        "idleAnimation": "guard_idle",
+        "associatedBuildingId": "obj_dummy_4",
+        "dialogueId": "dlg_hunter_kael",
+        "dialogue": "Bên kia cầu gỗ phía Đông là bãi săn Thỏ Rừng, Sói Hoang và Goblin. Hãy kiểm tra vũ khí và dược phẩm trước khi xuất kích!",
+        "x": 1128,
+        "y": 984
       }
     ],
     "monsters": [
       {
         "id": "mon_slime_1",
+        "monsterId": "MONSTER_GREEN_SLIME",
         "name": "Slime Thảo Nguyên",
         "level": 1,
         "hp": 120,
@@ -3906,6 +3945,7 @@
       },
       {
         "id": "mon_slime_2",
+        "monsterId": "MONSTER_GREEN_SLIME",
         "name": "Slime Rêu Xanh",
         "level": 2,
         "hp": 140,
@@ -3915,6 +3955,7 @@
       },
       {
         "id": "mon_slime_3",
+        "monsterId": "mon_meadow_slime",
         "type": "slime",
         "name": "Slime Tinh Nghịch",
         "level": 2,
@@ -3924,7 +3965,28 @@
         "ty": 19
       },
       {
+        "id": "mon_rabbit_1",
+        "monsterId": "mon_forest_rabbit",
+        "name": "Thỏ Rừng Khởi Nguyên",
+        "level": 2,
+        "hp": 150,
+        "spriteId": "monster_rabbit",
+        "tx": 38,
+        "ty": 22
+      },
+      {
+        "id": "mon_wolf_1",
+        "monsterId": "mon_wild_wolf",
+        "name": "Sói Thảo Nguyên",
+        "level": 3,
+        "hp": 190,
+        "spriteId": "monster_wolf",
+        "tx": 40,
+        "ty": 12
+      },
+      {
         "id": "mon_goblin_1",
+        "monsterId": "MONSTER_GOBLIN_SCOUT",
         "name": "Goblin Trinh Sát",
         "level": 4,
         "hp": 210,
@@ -3934,6 +3996,7 @@
       },
       {
         "id": "mon_goblin_2",
+        "monsterId": "mon_forest_goblin",
         "name": "Goblin Hang Đá",
         "level": 5,
         "hp": 240,

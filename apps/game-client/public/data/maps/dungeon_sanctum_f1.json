@@ -3341,8 +3341,8 @@
         "hp": 1712,
         "expReward": 328,
         "goldReward": 166,
-        "spriteId": "monster_slime",
-        "visualFilter": "hue-rotate(190deg) brightness(1.18)",
+        "spriteId": "monster_goblin",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 18,
         "ty": 13
@@ -3355,8 +3355,8 @@
         "hp": 1712,
         "expReward": 328,
         "goldReward": 166,
-        "spriteId": "monster_slime",
-        "visualFilter": "hue-rotate(190deg) brightness(1.18)",
+        "spriteId": "monster_goblin",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 20,
         "ty": 13
@@ -3369,8 +3369,8 @@
         "hp": 1712,
         "expReward": 328,
         "goldReward": 166,
-        "spriteId": "monster_slime",
-        "visualFilter": "hue-rotate(190deg) brightness(1.18)",
+        "spriteId": "monster_goblin",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 30,
         "ty": 19
@@ -3383,8 +3383,8 @@
         "hp": 1712,
         "expReward": 328,
         "goldReward": 166,
-        "spriteId": "monster_slime",
-        "visualFilter": "hue-rotate(190deg) brightness(1.18)",
+        "spriteId": "monster_goblin",
+        "visualFilter": "",
         "isBoss": false,
         "tx": 32,
         "ty": 19

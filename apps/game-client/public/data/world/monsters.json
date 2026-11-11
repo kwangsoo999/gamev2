@@ -43,7 +43,7 @@
     "dropTableId": "DROP_MON_MEADOW_SLIME",
     "spriteAsset": "/assets/elysia/monsters/mon_meadow_slime.png",
     "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(-10deg) saturate(1.1)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_meadow_slime.png",
@@ -112,12 +112,12 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_HORN_RABBIT",
     "spriteAsset": "/assets/elysia/monsters/mon_horn_rabbit.png",
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(28deg) sepia(0.35) brightness(1.08)",
+    "spriteId": "monster_rabbit",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_horn_rabbit.png",
-      "archetypeFallbackSheet": "monster_slime",
+      "archetypeFallbackSheet": "monster_rabbit",
       "states": [
         "idle",
         "walk",
@@ -182,12 +182,12 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_GRASSLAND_WOLF",
     "spriteAsset": "/assets/elysia/monsters/mon_grassland_wolf.png",
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-25deg) brightness(1.06)",
+    "spriteId": "monster_wolf",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_grassland_wolf.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "monster_wolf",
       "states": [
         "idle",
         "walk",
@@ -252,12 +252,12 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_GRAY_WOLF",
     "spriteAsset": "/assets/elysia/monsters/mon_gray_wolf.png",
-    "spriteId": "monster_goblin",
-    "visualFilter": "saturate(0.35) brightness(1.08)",
+    "spriteId": "monster_wolf",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_gray_wolf.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "monster_wolf",
       "states": [
         "idle",
         "walk",
@@ -322,12 +322,12 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_GIANT_BEE",
     "spriteAsset": "/assets/elysia/monsters/mon_giant_bee.png",
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(38deg) saturate(1.5) brightness(1.05)",
+    "spriteId": "monster_bee",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_giant_bee.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "monster_bee",
       "states": [
         "idle",
         "walk",
@@ -393,7 +393,7 @@
     "dropTableId": "DROP_MON_CARNIVOROUS_PLANT",
     "spriteAsset": "/assets/elysia/monsters/mon_carnivorous_plant.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(95deg) saturate(1.3)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_carnivorous_plant.png",
@@ -463,7 +463,7 @@
     "dropTableId": "DROP_MON_FOREST_GOBLIN",
     "spriteAsset": "/assets/elysia/monsters/mon_forest_goblin.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(15deg) saturate(1.15)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_forest_goblin.png",
@@ -532,8 +532,8 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_POISON_SPIDER",
     "spriteAsset": "/assets/elysia/monsters/mon_poison_spider.png",
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(245deg) saturate(1.4) brightness(0.9)",
+    "spriteId": "monster_goblin",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_poison_spider.png",
@@ -603,7 +603,7 @@
     "dropTableId": "DROP_MON_MUSHROOM_BEAST",
     "spriteAsset": "/assets/elysia/monsters/mon_mushroom_beast.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(290deg) saturate(1.25)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_mushroom_beast.png",
@@ -673,11 +673,11 @@
     "dropTableId": "DROP_MON_FOREST_SPIRIT",
     "spriteAsset": "/assets/elysia/monsters/mon_forest_spirit.png",
     "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(120deg) brightness(1.12) saturate(1.25)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_forest_spirit.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "monster_slime",
       "states": [
         "idle",
         "walk",
@@ -742,12 +742,12 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_SOUL_WOLF",
     "spriteAsset": "/assets/elysia/monsters/mon_soul_wolf.png",
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(185deg) saturate(1.3)",
+    "spriteId": "monster_wolf",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_soul_wolf.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "monster_wolf",
       "states": [
         "idle",
         "walk",
@@ -813,11 +813,11 @@
     "dropTableId": "DROP_MON_ANCIENT_TREANT",
     "spriteAsset": "/assets/elysia/monsters/mon_ancient_treant.png",
     "spriteId": "boss_dark_dragon",
-    "visualFilter": "hue-rotate(95deg) sepia(0.25) saturate(1.2)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_ancient_treant.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "boss_dark_dragon",
       "states": [
         "idle",
         "walk",
@@ -883,7 +883,7 @@
     "dropTableId": "DROP_MON_WATER_SLIME",
     "spriteAsset": "/assets/elysia/monsters/mon_water_slime.png",
     "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(155deg) saturate(1.4) brightness(1.06)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_water_slime.png",
@@ -953,11 +953,11 @@
     "dropTableId": "DROP_MON_GIANT_FROG",
     "spriteAsset": "/assets/elysia/monsters/mon_giant_frog.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(140deg) saturate(1.3)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_giant_frog.png",
-      "archetypeFallbackSheet": "monster_slime",
+      "archetypeFallbackSheet": "monster_goblin",
       "states": [
         "idle",
         "walk",
@@ -1022,8 +1022,8 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_WATER_PHANTOM",
     "spriteAsset": "/assets/elysia/monsters/mon_water_phantom.png",
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(195deg) brightness(1.12) saturate(1.25)",
+    "spriteId": "monster_slime",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_water_phantom.png",
@@ -1093,7 +1093,7 @@
     "dropTableId": "DROP_MON_SKELETON_WARRIOR",
     "spriteAsset": "/assets/elysia/monsters/mon_skeleton_warrior.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "grayscale(0.75) brightness(1.12)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_skeleton_warrior.png",
@@ -1163,11 +1163,11 @@
     "dropTableId": "DROP_MON_STONE_GOLEM",
     "spriteAsset": "/assets/elysia/monsters/mon_stone_golem.png",
     "spriteId": "boss_dark_dragon",
-    "visualFilter": "grayscale(0.8) brightness(0.95) contrast(1.12)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_stone_golem.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "boss_dark_dragon",
       "states": [
         "idle",
         "walk",
@@ -1233,7 +1233,7 @@
     "dropTableId": "DROP_MON_ANCIENT_MAGE",
     "spriteAsset": "/assets/elysia/monsters/mon_ancient_mage.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(250deg) saturate(1.3) brightness(0.9)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_ancient_mage.png",
@@ -1303,7 +1303,7 @@
     "dropTableId": "DROP_MON_FIRE_LIZARD",
     "spriteAsset": "/assets/elysia/monsters/mon_fire_lizard.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-45deg) saturate(1.6) brightness(1.05)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_fire_lizard.png",
@@ -1372,8 +1372,8 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_LAVA_BAT",
     "spriteAsset": "/assets/elysia/monsters/mon_lava_bat.png",
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(-55deg) saturate(1.75) brightness(0.96)",
+    "spriteId": "monster_goblin",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_lava_bat.png",
@@ -1442,12 +1442,12 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_FLAME_SPIRIT",
     "spriteAsset": "/assets/elysia/monsters/mon_flame_spirit.png",
-    "spriteId": "boss_dark_dragon",
-    "visualFilter": "hue-rotate(35deg) saturate(1.7) brightness(1.12)",
+    "spriteId": "monster_slime",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_flame_spirit.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "monster_slime",
       "states": [
         "idle",
         "walk",
@@ -1513,11 +1513,11 @@
     "dropTableId": "DROP_MON_YOUNG_DRAGON",
     "spriteAsset": "/assets/elysia/monsters/mon_young_dragon.png",
     "spriteId": "boss_dark_dragon",
-    "visualFilter": "hue-rotate(-30deg) saturate(1.45)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_young_dragon.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "boss_dark_dragon",
       "states": [
         "idle",
         "walk",
@@ -1583,7 +1583,7 @@
     "dropTableId": "DROP_MON_DRAGONKIN",
     "spriteAsset": "/assets/elysia/monsters/mon_dragonkin.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-35deg) saturate(1.4) contrast(1.08)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_dragonkin.png",
@@ -1653,11 +1653,11 @@
     "dropTableId": "DROP_MON_DRAGON_KNIGHT",
     "spriteAsset": "/assets/elysia/monsters/mon_dragon_knight.png",
     "spriteId": "boss_dark_dragon",
-    "visualFilter": "hue-rotate(15deg) saturate(1.5) brightness(0.92)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_dragon_knight.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "boss_dark_dragon",
       "states": [
         "idle",
         "walk",
@@ -1722,8 +1722,8 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_BLOOD_SCORPION",
     "spriteAsset": "/assets/elysia/monsters/mon_blood_scorpion.png",
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(-65deg) saturate(1.8) brightness(0.88)",
+    "spriteId": "monster_goblin",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_blood_scorpion.png",
@@ -1793,7 +1793,7 @@
     "dropTableId": "DROP_MON_SAND_WRAITH",
     "spriteAsset": "/assets/elysia/monsters/mon_sand_wraith.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "sepia(0.75) hue-rotate(-10deg) brightness(1.05)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_sand_wraith.png",
@@ -1863,11 +1863,11 @@
     "dropTableId": "DROP_MON_DESERT_GUARDIAN",
     "spriteAsset": "/assets/elysia/monsters/mon_desert_guardian.png",
     "spriteId": "boss_dark_dragon",
-    "visualFilter": "sepia(0.85) saturate(1.4) brightness(0.95)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_desert_guardian.png",
-      "archetypeFallbackSheet": "monster_goblin",
+      "archetypeFallbackSheet": "boss_dark_dragon",
       "states": [
         "idle",
         "walk",
@@ -1932,8 +1932,8 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_VOID_CREATURE",
     "spriteAsset": "/assets/elysia/monsters/mon_void_creature.png",
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(225deg) contrast(1.2) brightness(0.75)",
+    "spriteId": "monster_goblin",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_void_creature.png",
@@ -2003,7 +2003,7 @@
     "dropTableId": "DROP_MON_SHADOW_SPIRIT",
     "spriteAsset": "/assets/elysia/monsters/mon_shadow_spirit.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(240deg) saturate(1.6) brightness(0.8)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_shadow_spirit.png",
@@ -2072,8 +2072,8 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_DARK_KNIGHT",
     "spriteAsset": "/assets/elysia/monsters/mon_dark_knight.png",
-    "spriteId": "boss_dark_dragon",
-    "visualFilter": "hue-rotate(265deg) contrast(1.22) brightness(0.78)",
+    "spriteId": "monster_goblin",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_dark_knight.png",
@@ -2344,8 +2344,8 @@
     "respawnTimeSeconds": 9,
     "dropTableId": "DROP_MON_SANCTUM_SENTINEL",
     "spriteAsset": "/assets/elysia/monsters/mon_sanctum_sentinel.png",
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(190deg) brightness(1.18)",
+    "spriteId": "monster_goblin",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_sanctum_sentinel.png",
@@ -2415,7 +2415,7 @@
     "dropTableId": "DROP_MON_SANCTUM_ACOLYTE",
     "spriteAsset": "/assets/elysia/monsters/mon_sanctum_acolyte.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(205deg) brightness(1.12)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/mon_sanctum_acolyte.png",
@@ -2477,7 +2477,7 @@
     "dropTableId": "DROP_BOSS_GUARDIAN_OF_AWAKENING",
     "spriteAsset": "/assets/elysia/monsters/boss_guardian_of_awakening.png",
     "spriteId": "boss_dark_dragon",
-    "visualFilter": "hue-rotate(42deg) saturate(1.45) brightness(1.18)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/boss_guardian_of_awakening.png",
@@ -2539,7 +2539,7 @@
     "dropTableId": "DROP_BOSS_CRIMSON_OVERLORD",
     "spriteAsset": "/assets/elysia/monsters/boss_crimson_overlord.png",
     "spriteId": "boss_dark_dragon",
-    "visualFilter": "hue-rotate(-55deg) saturate(1.8)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/boss_crimson_overlord.png",
@@ -2601,7 +2601,7 @@
     "dropTableId": "DROP_BOSS_ABYSSAL_SOVEREIGN",
     "spriteAsset": "/assets/elysia/monsters/boss_abyssal_sovereign.png",
     "spriteId": "boss_dark_dragon",
-    "visualFilter": "hue-rotate(270deg) contrast(1.25) brightness(0.75)",
+    "visualFilter": "",
     "animationAssets": {
       "mode": "unique_rgba_animated_v1",
       "staticSprite": "/assets/elysia/monsters/boss_abyssal_sovereign.png",
@@ -2666,13 +2666,15 @@
     "spriteAsset": "/assets/elysia/monsters/boss_ancient_treant.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-ancient-treant.png",
-    "visualFilter": "hue-rotate(105deg) saturate(1.35) brightness(1.06)",
+    "visualFilter": "",
     "telegraphColor": "#10b981",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/boss_ancient_treant.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.5
   },
@@ -2715,13 +2717,15 @@
     "spriteAsset": "/assets/elysia/monsters/boss_moon_hydra.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-moon-hydra.png",
-    "visualFilter": "hue-rotate(195deg) saturate(1.45) brightness(1.15)",
+    "visualFilter": "",
     "telegraphColor": "#38bdf8",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/boss_moon_hydra.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.5
   },
@@ -2764,13 +2768,15 @@
     "spriteAsset": "/assets/elysia/monsters/boss_ancient_titan.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-ancient-titan.png",
-    "visualFilter": "sepia(0.55) saturate(1.4) brightness(1.08)",
+    "visualFilter": "",
     "telegraphColor": "#f59e0b",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/boss_ancient_titan.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.5
   },
@@ -2813,13 +2819,15 @@
     "spriteAsset": "/assets/elysia/monsters/boss_ignis_dragon.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-ignis-dragon.png",
-    "visualFilter": "hue-rotate(-55deg) saturate(1.9) brightness(1.05)",
+    "visualFilter": "",
     "telegraphColor": "#ef4444",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/boss_ignis_dragon.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.65
   },
@@ -2862,13 +2870,15 @@
     "spriteAsset": "/assets/elysia/monsters/boss_abyss_overlord.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-abyss-overlord.png",
-    "visualFilter": "hue-rotate(270deg) contrast(1.3) brightness(0.85)",
+    "visualFilter": "",
     "telegraphColor": "#a855f7",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/boss_abyss_overlord.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.65
   },
@@ -2908,13 +2918,15 @@
     "respawnTimeSeconds": 45,
     "dropTableId": "DROP_ELITE_WHISPERING_MEADOW",
     "spriteAsset": "/assets/elysia/monsters/elite_whispering_meadow.png",
-    "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "spriteId": "monster_wolf",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_whispering_meadow.png",
+      "archetypeFallbackSheet": "monster_wolf"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_whispering_meadow.png",
     "visualScale": 1.25
@@ -2955,14 +2967,16 @@
     "respawnTimeSeconds": 120,
     "dropTableId": "DROP_MINIBOSS_WHISPERING_MEADOW",
     "spriteAsset": "/assets/elysia/monsters/miniboss_whispering_meadow.png",
-    "spriteId": "boss_dark_dragon",
+    "spriteId": "monster_wolf",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_whispering_meadow.png",
+      "archetypeFallbackSheet": "monster_wolf"
     },
     "visualScale": 1.32
   },
@@ -3002,13 +3016,15 @@
     "respawnTimeSeconds": 45,
     "dropTableId": "DROP_ELITE_WINDMILL_PLAINS",
     "spriteAsset": "/assets/elysia/monsters/elite_windmill_plains.png",
-    "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "spriteId": "monster_boar",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_windmill_plains.png",
+      "archetypeFallbackSheet": "monster_boar"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_windmill_plains.png",
     "visualScale": 1.25
@@ -3049,14 +3065,16 @@
     "respawnTimeSeconds": 120,
     "dropTableId": "DROP_MINIBOSS_WINDMILL_PLAINS",
     "spriteAsset": "/assets/elysia/monsters/miniboss_windmill_plains.png",
-    "spriteId": "boss_dark_dragon",
+    "spriteId": "monster_boar",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_windmill_plains.png",
+      "archetypeFallbackSheet": "monster_boar"
     },
     "visualScale": 1.32
   },
@@ -3097,12 +3115,14 @@
     "dropTableId": "DROP_ELITE_SPIRIT_OUTSKIRTS",
     "spriteAsset": "/assets/elysia/monsters/elite_spirit_outskirts.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_spirit_outskirts.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_spirit_outskirts.png",
     "visualScale": 1.25
@@ -3143,14 +3163,16 @@
     "respawnTimeSeconds": 120,
     "dropTableId": "DROP_MINIBOSS_SPIRIT_OUTSKIRTS",
     "spriteAsset": "/assets/elysia/monsters/miniboss_spirit_outskirts.png",
-    "spriteId": "boss_dark_dragon",
+    "spriteId": "monster_goblin",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_spirit_outskirts.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "visualScale": 1.32
   },
@@ -3190,13 +3212,15 @@
     "respawnTimeSeconds": 45,
     "dropTableId": "DROP_ELITE_SPIRIT_FOREST",
     "spriteAsset": "/assets/elysia/monsters/elite_spirit_forest.png",
-    "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "spriteId": "boss_dark_dragon",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_spirit_forest.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_spirit_forest.png",
     "visualScale": 1.25
@@ -3239,12 +3263,14 @@
     "spriteAsset": "/assets/elysia/monsters/miniboss_spirit_forest.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_spirit_forest.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.32
   },
@@ -3284,13 +3310,15 @@
     "respawnTimeSeconds": 45,
     "dropTableId": "DROP_ELITE_MOONLIT_LAKE",
     "spriteAsset": "/assets/elysia/monsters/elite_moonlit_lake.png",
-    "spriteId": "monster_slime",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "spriteId": "monster_goblin",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/slime.png"
+      "sheet": "/assets/elysia/characters/animations/slime.png",
+      "staticSprite": "/assets/elysia/monsters/elite_moonlit_lake.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_moonlit_lake.png",
     "visualScale": 1.25
@@ -3333,12 +3361,14 @@
     "spriteAsset": "/assets/elysia/monsters/miniboss_moonlit_lake.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_moonlit_lake.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.32
   },
@@ -3379,12 +3409,14 @@
     "dropTableId": "DROP_ELITE_ANCIENT_RUINS",
     "spriteAsset": "/assets/elysia/monsters/elite_ancient_ruins.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_ancient_ruins.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_ancient_ruins.png",
     "visualScale": 1.25
@@ -3425,14 +3457,16 @@
     "respawnTimeSeconds": 120,
     "dropTableId": "DROP_MINIBOSS_ANCIENT_RUINS",
     "spriteAsset": "/assets/elysia/monsters/miniboss_ancient_ruins.png",
-    "spriteId": "boss_dark_dragon",
+    "spriteId": "monster_goblin",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_ancient_ruins.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "visualScale": 1.32
   },
@@ -3473,12 +3507,14 @@
     "dropTableId": "DROP_ELITE_EMBER_CANYON",
     "spriteAsset": "/assets/elysia/monsters/elite_ember_canyon.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_ember_canyon.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_ember_canyon.png",
     "visualScale": 1.25
@@ -3519,14 +3555,16 @@
     "respawnTimeSeconds": 120,
     "dropTableId": "DROP_MINIBOSS_EMBER_CANYON",
     "spriteAsset": "/assets/elysia/monsters/miniboss_ember_canyon.png",
-    "spriteId": "boss_dark_dragon",
+    "spriteId": "monster_slime",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_ember_canyon.png",
+      "archetypeFallbackSheet": "monster_slime"
     },
     "visualScale": 1.32
   },
@@ -3566,13 +3604,15 @@
     "respawnTimeSeconds": 45,
     "dropTableId": "DROP_ELITE_DRAGON_VALLEY",
     "spriteAsset": "/assets/elysia/monsters/elite_dragon_valley.png",
-    "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "spriteId": "boss_dark_dragon",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_dragon_valley.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_dragon_valley.png",
     "visualScale": 1.25
@@ -3615,12 +3655,14 @@
     "spriteAsset": "/assets/elysia/monsters/miniboss_dragon_valley.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_dragon_valley.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.32
   },
@@ -3661,12 +3703,14 @@
     "dropTableId": "DROP_ELITE_CRIMSON_DESERT",
     "spriteAsset": "/assets/elysia/monsters/elite_crimson_desert.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_crimson_desert.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_crimson_desert.png",
     "visualScale": 1.25
@@ -3709,12 +3753,14 @@
     "spriteAsset": "/assets/elysia/monsters/miniboss_crimson_desert.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_crimson_desert.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.32
   },
@@ -3755,12 +3801,14 @@
     "dropTableId": "DROP_ELITE_SHADOW_BORDER",
     "spriteAsset": "/assets/elysia/monsters/elite_shadow_border.png",
     "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.6) hue-rotate(-30deg) brightness(1.12)",
+    "visualFilter": "",
     "isBoss": false,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/elite_shadow_border.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/elite_shadow_border.png",
     "visualScale": 1.25
@@ -3803,12 +3851,14 @@
     "spriteAsset": "/assets/elysia/monsters/miniboss_shadow_border.png",
     "spriteId": "boss_dark_dragon",
     "portraitUrl": "/assets/elysia/ui/portrait-dragon.png",
-    "visualFilter": "saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "isBoss": true,
     "isElite": true,
     "status": "published",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/miniboss_shadow_border.png",
+      "archetypeFallbackSheet": "boss_dark_dragon"
     },
     "visualScale": 1.32
   },
@@ -3864,7 +3914,7 @@
     "maxAlive": 8,
     "respawnTimeSeconds": 6,
     "spriteId": "monster_slime",
-    "visualFilter": "brightness(1.06) saturate(1.1)",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 12,
       "guaranteedGoldMax": 24,
@@ -3875,7 +3925,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_green_slime.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/slime.png"
+      "sheet": "/assets/elysia/characters/animations/slime.png",
+      "staticSprite": "/assets/elysia/monsters/mon_green_slime.png",
+      "archetypeFallbackSheet": "monster_slime"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_green_slime.png",
     "visualScale": 1
@@ -3933,7 +3985,7 @@
     "maxAlive": 8,
     "respawnTimeSeconds": 10,
     "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(-88deg) saturate(1.75) brightness(1.04)",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 18,
       "guaranteedGoldMax": 34,
@@ -3944,7 +3996,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_red_slime.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/slime.png"
+      "sheet": "/assets/elysia/characters/animations/slime.png",
+      "staticSprite": "/assets/elysia/monsters/mon_red_slime.png",
+      "archetypeFallbackSheet": "monster_slime"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_red_slime.png",
     "visualScale": 1
@@ -4000,8 +4054,8 @@
     "spawnCount": 8,
     "maxAlive": 8,
     "respawnTimeSeconds": 7,
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(42deg) saturate(1.15) brightness(1.08)",
+    "spriteId": "monster_rabbit",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 26,
       "guaranteedGoldMax": 46,
@@ -4012,7 +4066,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_forest_rabbit.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/slime.png"
+      "sheet": "/assets/elysia/characters/animations/slime.png",
+      "staticSprite": "/assets/elysia/monsters/mon_forest_rabbit.png",
+      "archetypeFallbackSheet": "monster_rabbit"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_forest_rabbit.png",
     "visualScale": 1
@@ -4069,8 +4125,8 @@
     "spawnCount": 7,
     "maxAlive": 7,
     "respawnTimeSeconds": 11,
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(145deg) saturate(1.3) brightness(1.06)",
+    "spriteId": "monster_rabbit",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 36,
       "guaranteedGoldMax": 62,
@@ -4081,7 +4137,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_one_horned_rabbit.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/slime.png"
+      "sheet": "/assets/elysia/characters/animations/slime.png",
+      "staticSprite": "/assets/elysia/monsters/mon_one_horned_rabbit.png",
+      "archetypeFallbackSheet": "monster_rabbit"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_one_horned_rabbit.png",
     "visualScale": 1
@@ -4130,8 +4188,8 @@
     "spawnCount": 2,
     "maxAlive": 2,
     "respawnTimeSeconds": 70,
-    "spriteId": "monster_slime",
-    "visualFilter": "hue-rotate(-28deg) saturate(1.75) brightness(1.12)",
+    "spriteId": "monster_rabbit",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 130,
       "guaranteedGoldMax": 210,
@@ -4142,7 +4200,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_elite_rabbit.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/slime.png"
+      "sheet": "/assets/elysia/characters/animations/slime.png",
+      "staticSprite": "/assets/elysia/monsters/mon_elite_rabbit.png",
+      "archetypeFallbackSheet": "monster_rabbit"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_elite_rabbit.png",
     "visualScale": 1.25
@@ -4198,8 +4258,8 @@
     "spawnCount": 8,
     "maxAlive": 8,
     "respawnTimeSeconds": 8,
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-45deg) saturate(1.45) brightness(1.1)",
+    "spriteId": "monster_bee",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 48,
       "guaranteedGoldMax": 82,
@@ -4210,7 +4270,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_hardwing_bee.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_hardwing_bee.png",
+      "archetypeFallbackSheet": "monster_bee"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_hardwing_bee.png",
     "visualScale": 1
@@ -4267,8 +4329,8 @@
     "spawnCount": 7,
     "maxAlive": 7,
     "respawnTimeSeconds": 12,
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-72deg) saturate(1.55) brightness(1.02)",
+    "spriteId": "monster_bee",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 66,
       "guaranteedGoldMax": 110,
@@ -4279,7 +4341,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_guardian_bee.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_guardian_bee.png",
+      "archetypeFallbackSheet": "monster_bee"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_guardian_bee.png",
     "visualScale": 1
@@ -4328,8 +4392,8 @@
     "spawnCount": 2,
     "maxAlive": 2,
     "respawnTimeSeconds": 75,
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-32deg) saturate(1.85) contrast(1.12)",
+    "spriteId": "monster_bee",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 195,
       "guaranteedGoldMax": 310,
@@ -4340,7 +4404,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_elite_bee.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_elite_bee.png",
+      "archetypeFallbackSheet": "monster_bee"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_elite_bee.png",
     "visualScale": 1.25
@@ -4397,8 +4463,8 @@
     "spawnCount": 8,
     "maxAlive": 8,
     "respawnTimeSeconds": 8,
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(195deg) saturate(0.75) brightness(0.96)",
+    "spriteId": "monster_wolf",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 88,
       "guaranteedGoldMax": 140,
@@ -4409,7 +4475,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_wild_wolf.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_wild_wolf.png",
+      "archetypeFallbackSheet": "monster_wolf"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_wild_wolf.png",
     "visualScale": 1
@@ -4458,8 +4526,8 @@
     "spawnCount": 2,
     "maxAlive": 2,
     "respawnTimeSeconds": 90,
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(175deg) saturate(1.4) contrast(1.12)",
+    "spriteId": "monster_wolf",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 260,
       "guaranteedGoldMax": 395,
@@ -4470,7 +4538,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_elite_wolf.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_elite_wolf.png",
+      "archetypeFallbackSheet": "monster_wolf"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_elite_wolf.png",
     "visualScale": 1.25
@@ -4519,9 +4589,9 @@
     "spawnCount": 1,
     "maxAlive": 1,
     "respawnTimeSeconds": 300,
-    "spriteId": "boss_dark_dragon",
+    "spriteId": "monster_wolf",
     "portraitUrl": "/assets/elysia/ui/portrait-blood-wolf.png",
-    "visualFilter": "hue-rotate(-135deg) saturate(1.75) brightness(1.04)",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 620,
       "guaranteedGoldMax": 920,
@@ -4532,7 +4602,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_blood_wolf.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/mon_blood_wolf.png",
+      "archetypeFallbackSheet": "monster_wolf"
     },
     "visualScale": 1.32
   },
@@ -4587,8 +4659,8 @@
     "spawnCount": 8,
     "maxAlive": 8,
     "respawnTimeSeconds": 9,
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-75deg) sepia(0.35) brightness(0.92)",
+    "spriteId": "monster_boar",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 120,
       "guaranteedGoldMax": 185,
@@ -4599,7 +4671,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_wild_boar.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_wild_boar.png",
+      "archetypeFallbackSheet": "monster_boar"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_wild_boar.png",
     "visualScale": 1
@@ -4648,8 +4722,8 @@
     "spawnCount": 2,
     "maxAlive": 2,
     "respawnTimeSeconds": 95,
-    "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-45deg) saturate(1.7) contrast(1.15)",
+    "spriteId": "monster_boar",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 340,
       "guaranteedGoldMax": 520,
@@ -4660,7 +4734,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_elite_boar.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_elite_boar.png",
+      "archetypeFallbackSheet": "monster_boar"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_elite_boar.png",
     "visualScale": 1.25
@@ -4717,7 +4793,7 @@
     "maxAlive": 8,
     "respawnTimeSeconds": 9,
     "spriteId": "monster_goblin",
-    "visualFilter": "saturate(1.15) brightness(0.98)",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 155,
       "guaranteedGoldMax": 240,
@@ -4728,7 +4804,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_outpost_goblin.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_outpost_goblin.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_outpost_goblin.png",
     "visualScale": 1
@@ -4786,7 +4864,7 @@
     "maxAlive": 8,
     "respawnTimeSeconds": 13,
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-38deg) saturate(1.4) contrast(1.08)",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 205,
       "guaranteedGoldMax": 315,
@@ -4797,7 +4875,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_goblin_warrior.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_goblin_warrior.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_goblin_warrior.png",
     "visualScale": 1
@@ -4847,7 +4927,7 @@
     "maxAlive": 2,
     "respawnTimeSeconds": 110,
     "spriteId": "monster_goblin",
-    "visualFilter": "hue-rotate(-118deg) saturate(1.85) contrast(1.15)",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 540,
       "guaranteedGoldMax": 820,
@@ -4858,7 +4938,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/mon_elite_goblin.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/goblin.png"
+      "sheet": "/assets/elysia/characters/animations/goblin.png",
+      "staticSprite": "/assets/elysia/monsters/mon_elite_goblin.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "portraitUrl": "/assets/elysia/monsters/mon_elite_goblin.png",
     "visualScale": 1.25
@@ -4908,9 +4990,9 @@
     "spawnCount": 1,
     "maxAlive": 1,
     "respawnTimeSeconds": 900,
-    "spriteId": "boss_dark_dragon",
+    "spriteId": "monster_goblin",
     "portraitUrl": "/assets/elysia/ui/portrait-goblin-chieftain.png",
-    "visualFilter": "hue-rotate(-140deg) saturate(1.45) contrast(1.12)",
+    "visualFilter": "",
     "lootConfig": {
       "guaranteedGoldMin": 1800,
       "guaranteedGoldMax": 2600,
@@ -4921,7 +5003,9 @@
     "status": "published",
     "spriteAsset": "/assets/elysia/monsters/boss_goblin_chieftain.png",
     "animationAssets": {
-      "sheet": "/assets/elysia/characters/animations/dark_dragon.png"
+      "sheet": "/assets/elysia/characters/animations/dark_dragon.png",
+      "staticSprite": "/assets/elysia/monsters/boss_goblin_chieftain.png",
+      "archetypeFallbackSheet": "monster_goblin"
     },
     "visualScale": 1.5
   }

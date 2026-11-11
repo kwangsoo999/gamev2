@@ -3352,7 +3352,7 @@
         "expReward": 2563,
         "goldReward": 1831,
         "spriteId": "boss_dark_dragon",
-        "visualFilter": "hue-rotate(42deg) saturate(1.45) brightness(1.18)",
+        "visualFilter": "",
         "isBoss": true,
         "tx": 26,
         "ty": 16
