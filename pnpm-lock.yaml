@@ -198,6 +198,9 @@ importers:
       '@elysia/game-types':
         specifier: workspace:*
         version: link:../game-types
+      '@elysia/vfx-engine':
+        specifier: workspace:*
+        version: link:../vfx-engine
     devDependencies:
       typescript:
         specifier: ^5.7.3
