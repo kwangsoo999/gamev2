@@ -1,577 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elysia no Densetsu (エリシアの伝説) — MMORPG Client</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html, body {
-        background: #080a0f !important;
-        background-color: #080a0f !important;
-        overflow: hidden;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #ffffff;
-        user-select: none;
-      }
-      #game-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-      }
-      #three-vfx-canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        pointer-events: none;
-        z-index: 10;
-      }
-
-      /* ==================================================== */
-      /* CHARACTER CREATION MODAL STYLES                     */
-      /* ==================================================== */
-      .char-creator-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(5, 7, 12, 0.85);
-        backdrop-filter: blur(12px);
-        z-index: 1000;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-      }
-      .char-creator-card {
-        background: #10141f;
-        border: 1px solid #323b52;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(212, 175, 55, 0.2);
-        border-radius: 12px;
-        width: 950px;
-        max-width: 95vw;
-        max-height: 92vh;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-      }
-      .creator-header {
-        background: #151a28;
-        padding: 16px 24px;
-        border-bottom: 1px solid #232a3d;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .creator-title-badge {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .creator-title-badge .badge-icon {
-        font-size: 24px;
-      }
-      .creator-title-badge h2 {
-        font-size: 16px;
-        font-weight: bold;
-        color: #f5d061;
-        letter-spacing: 0.5px;
-      }
-      .creator-title-badge p {
-        font-size: 11px;
-        color: #94a3b8;
-        margin-top: 2px;
-      }
-      .btn-icon-close {
-        background: transparent;
-        border: none;
-        color: #94a3b8;
-        font-size: 18px;
-        cursor: pointer;
-        padding: 4px 8px;
-        border-radius: 4px;
-      }
-      .btn-icon-close:hover {
-        color: white;
-        background: #232a3d;
-      }
-
-      .creator-body {
-        display: flex;
-        flex: 1;
-        overflow: hidden;
-      }
-
-      /* LEFT COLUMN: PREVIEW */
-      .creator-preview-col {
-        width: 320px;
-        background: #0d1019;
-        border-right: 1px solid #202738;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .preview-box {
-        width: 240px;
-        height: 250px;
-        background: radial-gradient(circle, #1a2236 0%, #0c0e17 75%);
-        border: 1px solid #2d374d;
-        border-radius: 12px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
-      }
-      .preview-glow {
-        position: absolute;
-        width: 140px;
-        height: 140px;
-        background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
-        border-radius: 50%;
-      }
-      .chibi-sprite-render {
-        max-width: 90%;
-        max-height: 90%;
-        object-fit: contain;
-        position: relative;
-        z-index: 2;
-        filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.8));
-      }
-      .preview-tag {
-        position: absolute;
-        top: 8px;
-        left: 8px;
-        background: rgba(0, 0, 0, 0.6);
-        border: 1px solid #2e384e;
-        color: #cbd5e1;
-        font-size: 10px;
-        padding: 2px 6px;
-        border-radius: 4px;
-        z-index: 3;
-      }
-      .eye-color-indicator {
-        position: absolute;
-        bottom: 8px;
-        right: 8px;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        border: 2px solid #ffffff;
-        box-shadow: 0 0 6px rgba(0,0,0,0.8);
-        z-index: 3;
-      }
-      .preview-info-card {
-        width: 100%;
-        background: #141824;
-        border: 1px solid #252e42;
-        border-radius: 8px;
-        padding: 12px 14px;
-        text-align: center;
-        margin-top: 14px;
-      }
-      .preview-name {
-        font-size: 15px;
-        font-weight: bold;
-        color: #f1f5f9;
-      }
-      .preview-class {
-        font-size: 12px;
-        color: #f5d061;
-        margin-top: 2px;
-        font-weight: 500;
-      }
-      .preview-weapons {
-        font-size: 11px;
-        color: #94a3b8;
-        margin-top: 6px;
-      }
-      .preview-weapons span {
-        color: #64748b;
-      }
-      .btn-random-name {
-        width: 100%;
-        margin-top: 12px;
-        background: #1e2435;
-        border: 1px solid #313b54;
-        color: #cbd5e1;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 12px;
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-      .btn-random-name:hover {
-        background: #283046;
-        color: white;
-      }
-
-      /* RIGHT COLUMN: CONTROLS & STATS */
-      .creator-controls-col {
-        flex: 1;
-        padding: 20px 24px;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .control-section {
-        background: #141926;
-        border: 1px solid #232b3d;
-        border-radius: 8px;
-        padding: 14px 16px;
-      }
-      .section-title {
-        font-size: 12px;
-        font-weight: bold;
-        color: #e2e8f0;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 10px;
-      }
-      .section-header-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
-      }
-      .bonus-points-badge {
-        font-size: 11px;
-        padding: 3px 8px;
-        border-radius: 4px;
-      }
-      .bonus-points-badge.balanced {
-        background: rgba(16, 185, 129, 0.15);
-        color: #34d399;
-        border: 1px solid rgba(16, 185, 129, 0.3);
-      }
-      .bonus-points-badge.pending {
-        background: rgba(245, 158, 11, 0.15);
-        color: #fbbf24;
-        border: 1px solid rgba(245, 158, 11, 0.3);
-      }
-
-      /* Inputs & Toggles */
-      .name-input-group {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        margin-bottom: 10px;
-      }
-      .name-input {
-        background: #0d1019;
-        border: 1px solid #2d374d;
-        color: white;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 13px;
-        outline: none;
-      }
-      .name-input:focus {
-        border-color: #d4af37;
-      }
-      .name-input.input-error {
-        border-color: #ef4444;
-      }
-      .validation-msg {
-        font-size: 11px;
-      }
-      .validation-msg.error {
-        color: #f87171;
-      }
-      .validation-msg.success {
-        color: #34d399;
-      }
-
-      .gender-toggle-group {
-        display: flex;
-        gap: 8px;
-      }
-      .btn-toggle {
-        flex: 1;
-        background: #0d1019;
-        border: 1px solid #262e40;
-        color: #94a3b8;
-        padding: 7px;
-        border-radius: 6px;
-        font-size: 12px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-      .btn-toggle.active {
-        background: rgba(212, 175, 55, 0.15);
-        border-color: #d4af37;
-        color: #f5d061;
-        font-weight: bold;
-      }
-
-      /* 7 Classes Grid */
-      .class-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 6px;
-      }
-      .class-card {
-        background: #0d1019;
-        border: 1px solid #262e40;
-        padding: 8px 6px;
-        border-radius: 6px;
-        cursor: pointer;
-        text-align: center;
-        transition: all 0.2s;
-      }
-      .class-card:hover {
-        background: #182030;
-      }
-      .class-card.active {
-        background: rgba(212, 175, 55, 0.15);
-        border-color: #d4af37;
-        box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-      }
-      .class-card-name {
-        font-size: 12px;
-        font-weight: bold;
-        color: white;
-      }
-      .class-card.active .class-card-name {
-        color: #f5d061;
-      }
-      .class-card-sub {
-        font-size: 9px;
-        color: #64748b;
-        margin-top: 2px;
-      }
-      .class-desc-box {
-        margin-top: 8px;
-        background: #0b0e16;
-        border: 1px solid #1e2536;
-        border-radius: 6px;
-        padding: 8px 10px;
-        font-size: 11px;
-        color: #94a3b8;
-      }
-      .class-skills-list {
-        margin-top: 4px;
-        color: #38bdf8;
-      }
-
-      /* Appearance Row */
-      .appearance-row {
-        display: flex;
-        gap: 20px;
-      }
-      .appearance-group {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
-      .appearance-group label {
-        font-size: 11px;
-        color: #94a3b8;
-      }
-      .color-swatches {
-        display: flex;
-        gap: 8px;
-      }
-      .swatch {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        border: 2px solid #2b3347;
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-      .swatch:hover {
-        transform: scale(1.15);
-      }
-      .swatch.selected {
-        border-color: #ffffff;
-        box-shadow: 0 0 8px #ffffff;
-      }
-
-      /* Stats Allocator */
-      .stats-allocator-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
-      .stat-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: #0d1019;
-        border: 1px solid #202738;
-        padding: 6px 12px;
-        border-radius: 6px;
-      }
-      .stat-meta {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 12px;
-      }
-      .stat-name {
-        color: #cbd5e1;
-        width: 130px;
-      }
-      .stat-details {
-        color: #64748b;
-        font-size: 11px;
-      }
-      .bonus-highlight {
-        color: #38bdf8;
-        font-weight: bold;
-      }
-      .stat-meta strong {
-        color: white;
-        font-size: 13px;
-      }
-      .stat-actions {
-        display: flex;
-        gap: 4px;
-      }
-      .btn-stat-adj {
-        width: 26px;
-        height: 26px;
-        background: #1c2333;
-        border: 1px solid #2d3850;
-        color: white;
-        border-radius: 4px;
-        font-size: 14px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.15s;
-      }
-      .btn-stat-adj:hover:not(:disabled) {
-        background: #2a354d;
-        border-color: #d4af37;
-      }
-      .btn-stat-adj:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-      }
-
-      /* Anti-stacking Panel */
-      .anti-stacking-panel {
-        margin-top: 10px;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 11px;
-        border: 1px solid;
-      }
-      .anti-stacking-panel.valid {
-        background: rgba(16, 185, 129, 0.08);
-        border-color: rgba(16, 185, 129, 0.25);
-        color: #6ee7b7;
-      }
-      .anti-stacking-panel.warning {
-        background: rgba(239, 68, 68, 0.08);
-        border-color: rgba(239, 68, 68, 0.3);
-        color: #fca5a5;
-      }
-      .anti-stacking-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: 500;
-      }
-      .badge-ok {
-        background: rgba(16, 185, 129, 0.2);
-        color: #34d399;
-        padding: 1px 6px;
-        border-radius: 4px;
-      }
-      .badge-alert {
-        background: rgba(239, 68, 68, 0.2);
-        color: #f87171;
-        padding: 1px 6px;
-        border-radius: 4px;
-      }
-      .meter-details {
-        display: flex;
-        gap: 16px;
-        margin-top: 4px;
-        font-size: 10px;
-        color: #94a3b8;
-      }
-      .error-msg-box {
-        margin-top: 4px;
-        color: #ef4444;
-        font-weight: bold;
-        font-size: 10px;
-      }
-
-      /* FOOTER */
-      .creator-footer {
-        background: #151a28;
-        padding: 14px 24px;
-        border-top: 1px solid #232a3d;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .footer-note {
-        font-size: 11px;
-        color: #64748b;
-      }
-      .footer-buttons {
-        display: flex;
-        gap: 10px;
-      }
-      .btn-secondary {
-        background: #1f2638;
-        border: 1px solid #333e59;
-        color: #94a3b8;
-        padding: 8px 16px;
-        border-radius: 6px;
-        font-size: 12px;
-        cursor: pointer;
-      }
-      .btn-secondary:hover {
-        background: #2a344c;
-        color: white;
-      }
-      .btn-primary {
-        background: linear-gradient(135deg, #d4af37, #b8860b);
-        border: none;
-        color: #0c0e14;
-        padding: 8px 20px;
-        border-radius: 6px;
-        font-size: 13px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
-        transition: all 0.2s;
-      }
-      .btn-primary:hover:not(:disabled) {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 16px rgba(212, 175, 55, 0.5);
-      }
-      .btn-primary:disabled {
-        opacity: 0.4;
-        cursor: not-allowed;
-      }
-    </style>
+    <meta name="theme-color" content="#294b39" />
+    <title>ELYSIA NO DENSETSU · Elysia Frontier — Become Wibu, Save the Worlds.</title>
   </head>
   <body>
-    <div id="game-container"></div>
-    <canvas id="three-vfx-canvas"></canvas>
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Elysia hand-painted fantasy interface overlay -->
+    <div id="hud-overlay">
+      <!-- TOP-LEFT: Player Avatar, HP, MP & EXP Bars -->
+      <section class="hud-player-panel hud-interactive" id="hud-player-panel" title="Nhấp để mở Nhân Vật, Trang Bị & Balo [B]" style="cursor: pointer;">
+        <div class="hud-avatar-frame">
+          <img src="/assets/elysia/ui/portrait-player.png" alt="Lữ Khách" class="hud-avatar-img" />
+        </div>
+        <div class="hud-vitals">
+          <div class="hud-name-row">
+            <span style="display:flex;align-items:center;gap:5px;min-width:0;">
+              <span class="hud-conn-dot online" id="hud-conn-dot" title="Trạng thái máy chủ"></span>
+              <span id="hud-player-name">Lữ Khách</span>
+            </span>
+            <span style="display:flex;align-items:center;gap:4px;">
+              <span class="hud-stat-points-badge zero" id="hud-stat-points-badge" title="Điểm tiềm năng chưa phân bổ"></span>
+              <span class="hud-level-pill" id="hud-player-lvl">Lv.1</span>
+            </span>
+          </div>
+          <div class="hud-job-row">
+            <span class="hud-job-badge" id="hud-player-job">Tân Thủ (Novice)</span>
+            <span class="hud-death-debuff-pill hidden" id="hud-death-penalty-pill" title="Hiệu ứng suy yếu tạm thời sau khi hồi sinh">💀 -3% · 59:59</span>
+          </div>
+          <div class="hud-bar-track" title="Sinh lực (HP)">
+            <div class="hud-bar-fill hud-bar-hp" id="hud-hp-bar" style="width: 100%"></div>
+            <span class="hud-bar-label" id="hud-hp-text">320/320</span>
+          </div>
+          <div class="hud-bar-track" title="Ma lực (MP)">
+            <div class="hud-bar-fill hud-bar-mp" id="hud-mp-bar" style="width: 100%"></div>
+            <span class="hud-bar-label" id="hud-mp-text">180/180</span>
+          </div>
+          <div class="hud-bar-track hud-bar-track-exp" title="Kinh nghiệm (EXP)">
+            <div class="hud-bar-fill hud-bar-exp" id="hud-exp-bar" style="width: 0%"></div>
+            <span class="hud-bar-label" id="hud-exp-text">0/100 EXP</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOP-CENTER: Zone Banner & Boss Encounter Bar -->
+      <header class="hud-zone-banner" id="hud-zone-banner">
+        <h1 id="hud-zone-title">Thôn Khởi Nguyên</h1>
+      </header>
+      <section class="hud-boss-bar hidden" id="hud-boss-bar" aria-live="polite">
+        <img id="hud-boss-portrait" class="hud-boss-portrait" src="/assets/elysia/ui/portrait-ancient-treant.png" alt="Boss" />
+        <div class="hud-boss-meta">
+          <div class="hud-boss-head">
+            <span id="hud-boss-name">Boss</span>
+            <span class="hud-boss-tag" id="hud-boss-tag">BOSS</span>
+          </div>
+          <div class="hud-boss-track">
+            <div class="hud-boss-fill" id="hud-boss-fill" style="width: 100%"></div>
+            <span class="hud-bar-label" id="hud-boss-hp-text">0 / 0</span>
+          </div>
+          <div class="hud-boss-telegraph hidden" id="hud-boss-telegraph"></div>
+        </div>
+      </section>
+
+      <!-- TOP-RIGHT: Minimap Container & Quick Controls -->
+      <aside class="hud-top-right">
+        <div class="hud-top-icons hud-interactive">
+          <button type="button" class="retro-icon-btn" id="btn-hud-account" title="Tài Khoản &amp; Tạo Nhân Vật">👤</button>
+          <button type="button" class="retro-icon-btn" id="btn-hud-social" title="Cộng Đồng, Tổ Đội &amp; Giao Dịch [P]">👥<span class="hud-social-badge hidden" id="hud-social-badge">0</span></button>
+          <button type="button" class="retro-icon-btn" id="btn-hud-events" title="Sự Kiện &amp; Quà 7 Ngày">🎉</button>
+          <button type="button" class="retro-icon-btn" id="btn-hud-worldmap" title="Bản Đồ Thế Giới &amp; Dịch Chuyển [M]">🗺️</button>
+          <button type="button" class="retro-icon-btn" id="btn-toggle-quest" title="Ẩn/Hiện Nhiệm Vụ">📜</button>
+          <button type="button" class="retro-icon-btn" id="btn-hud-skills" title="Bảng Kỹ Năng [K]">⚔️</button>
+          <button type="button" class="retro-icon-btn" id="btn-hud-settings" title="Cài Đặt Hệ Thống">⚙️</button>
+        </div>
+        <div class="hud-server-telemetry hud-interactive" id="hud-server-telemetry">
+          <span id="hud-channel-label">CH-1</span>
+          <span>· Online: <strong id="hud-online-count">1</strong></span>
+          <span>· <span id="hud-ping-ms">--ms</span></span>
+        </div>
+        <div class="hud-reconnect-banner hidden" id="hud-reconnect-banner">Đang kết nối lại máy chủ...</div>
+        <div class="hud-minimap-box hud-interactive">
+          <div class="hud-minimap-ring">
+            <canvas id="minimap-canvas" width="128" height="128"></canvas>
+          </div>
+          <span class="hud-minimap-coords" id="hud-coords">X:11 Y:20</span>
+        </div>
+      </aside>
+
+      <!-- RIGHT-CENTER: Single-Quest Tracking Log & Vertical Rail -->
+      <aside class="hud-right-quest-dock hud-interactive" aria-label="Nhiệm vụ">
+        <div class="hud-quest-log-card" id="hud-quest-card" data-tracked-quest-id="">
+          <div class="quest-card-head">
+            <span id="hud-quest-title">Chưa theo dõi nhiệm vụ</span>
+            <span id="hud-quest-badge">·</span>
+          </div>
+          <div id="hud-quest-objectives-list">
+            <div class="quest-card-obj">
+              <span id="hud-quest-obj">Mở Nhật Ký [L] để chọn 1 nhiệm vụ theo dõi</span>
+              <strong id="hud-quest-count"></strong>
+            </div>
+          </div>
+          <div class="quest-card-actions" id="hud-quest-actions" style="display:flex;gap:4px;margin-top:6px;">
+            <button type="button" class="retro-action-btn" id="btn-hud-quest-find" style="flex:1;padding:3px 6px;font-size:10px;" title="Tìm đường đến mục tiêu nhiệm vụ">🧭 Tìm Mục Tiêu</button>
+            <button type="button" class="retro-action-btn" id="btn-hud-quest-journal" style="flex:1;padding:3px 6px;font-size:10px;" title="Mở Nhật Ký Nhiệm Vụ [L]">📜 Nhật Ký</button>
+            <button type="button" class="retro-action-btn hidden" id="btn-hud-quest-untrack" style="padding:3px 6px;font-size:10px;" title="Bỏ theo dõi nhiệm vụ hiện tại">✕</button>
+          </div>
+        </div>
+        <div class="hud-right-rail">
+          <button type="button" class="retro-icon-btn" id="btn-rail-worldmap" title="Bản Đồ Thế Giới & Cổng Dịch Chuyển [M]">🗺️</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-guild" title="Bang Hội, Thương Hội, Chợ &amp; Lãnh Thổ [G]">🏰</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-profession" title="Kỹ Năng Sống &amp; 8 Nghề Nghiệp [O]">🌿</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-job" title="Thánh Điện & Chuyển Chức Lv.15">👑</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-craft" title="Lò Rèn Chế Tác, Đổi Mảnh Set & Cường Hóa [C]">⚒️</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-quest" title="Nhật Ký Nhiệm Vụ [L]">❗</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-shop" title="Tiệm Tạp Hóa &amp; Trang Bị">🏪</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-storage" title="Kho Lưu Trữ Làng">📦</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-bag" title="Nhân Vật, Balo &amp; Trang Bị [B]">🎒</button>
+        </div>
+      </aside>
+
+      <!-- BOTTOM-LEFT: Multi-Channel Live Chat Window -->
+      <section class="hud-chat-dock hud-interactive" id="hud-chat-dock" aria-label="Cửa sổ Trò Chuyện">
+        <div class="hud-chat-header">
+          <div class="hud-chat-tabs" id="hud-chat-tabs">
+            <button type="button" class="hud-chat-tab active" data-channel="all">Tổng</button>
+            <button type="button" class="hud-chat-tab" data-channel="general">Khu</button>
+            <button type="button" class="hud-chat-tab" data-channel="global">Thế Giới</button>
+            <button type="button" class="hud-chat-tab" data-channel="party">Nhóm</button>
+            <button type="button" class="hud-chat-tab" data-channel="guild">Bang</button>
+            <button type="button" class="hud-chat-tab" data-channel="merchant">Thương</button>
+            <button type="button" class="hud-chat-tab" data-channel="whisper">Mật</button>
+          </div>
+          <button type="button" class="hud-chat-collapse" id="btn-chat-collapse" title="Thu gọn / Mở rộng Chat">−</button>
+        </div>
+        <div class="hud-chat-log" id="hud-chat-log"></div>
+        <form class="hud-chat-form" id="hud-chat-form">
+          <input type="text" class="hud-chat-whisper hidden" id="hud-chat-whisper-target" placeholder="Tên..." maxlength="24" />
+          <input type="text" class="hud-chat-input" id="hud-chat-input" placeholder="Nhấn Enter để chat..." maxlength="220" autocomplete="off" />
+          <button type="submit" class="hud-chat-send">Gửi</button>
+        </form>
+      </section>
+
+      <!-- BOTTOM-CENTER: NPC Dialogue Toast & Thôn Khởi Nguyên Skill Hotbar -->
+      <footer class="hud-hotbar-wrapper">
+        <div class="hud-npc-dialog hud-interactive hidden" id="hud-npc-dialog">
+          <img id="hud-npc-portrait" class="hud-npc-portrait hidden" alt="" />
+          <div class="hud-npc-body">
+            <span id="hud-npc-text"></span>
+            <div class="hud-npc-actions" id="hud-npc-actions"></div>
+          </div>
+          <button type="button" class="hud-npc-close" id="hud-npc-close">Đóng</button>
+        </div>
+        <div class="hud-hotbar hud-interactive" id="hud-hotbar"></div>
+        <div class="hud-autocombat-strip hud-interactive" id="hud-autocombat-strip">
+          <button type="button" class="hud-autocombat-btn" id="btn-hud-autocombat-toggle" title="Bật / Tắt Tự Động Chiến Đấu [Z]">⚔️ Auto: TẮT [Z]</button>
+          <button type="button" class="hud-autocombat-cfg-btn" id="btn-hud-autocombat-cfg" title="Cấu hình Tự Động Chiến Đấu">⚙️</button>
+          <span class="hud-checkpoint-pill" id="hud-checkpoint-pill" title="Điểm Lưu Làng An Toàn hiện tại">🏰 Thôn Khởi Nguyên</span>
+        </div>
+        <div class="hud-autocombat-panel hud-interactive hidden" id="hud-autocombat-panel">
+          <div class="hud-autocombat-head">
+            <strong>CÀI ĐẶT TỰ ĐỘNG CHIẾN ĐẤU [Z]</strong>
+            <button type="button" id="btn-close-autocombat-cfg">✕</button>
+          </div>
+          <label><input type="checkbox" id="ac-attack" checked /> Tự đánh thường</label>
+          <label><input type="checkbox" id="ac-skill" checked /> Tự thi triển kỹ năng</label>
+          <label><input type="checkbox" id="ac-target" checked /> Tự tìm mục tiêu trong vùng</label>
+          <label><input type="checkbox" id="ac-loot" checked /> Tự nhặt chiến lợi phẩm &amp; Vàng</label>
+          <label><input type="checkbox" id="ac-return" checked /> Tự quay lại điểm luyện cấp gốc</label>
+          <label><input type="checkbox" id="ac-hp-pot" checked /> Tự uống bình HP dưới <input type="number" id="ac-hp-pct" min="15" max="90" value="55" style="width:46px;" />%</label>
+          <label><input type="checkbox" id="ac-mp-pot" checked /> Tự uống bình MP dưới <input type="number" id="ac-mp-pct" min="15" max="90" value="35" style="width:46px;" />%</label>
+          <label>Ưu tiên mục tiêu:
+            <select id="ac-priority">
+              <option value="nearest">Gần nhất</option>
+              <option value="lowest_hp">HP thấp nhất</option>
+              <option value="prefer_elite">Ưu tiên Tinh Anh</option>
+              <option value="avoid_boss">Tránh Boss lớn</option>
+            </select>
+          </label>
+        </div>
+        <div class="hud-controls-hint">WASD / Click · J / 1-2 Chiến đấu · Z Auto · O Nghề nghiệp · G Bang/Chợ · B Balo · K Kỹ năng · L Nhiệm vụ · E Tương tác</div>
+      </footer>
+    </div>
+
+    <div id="hud-transition-curtain" class="hud-transition-curtain hidden" aria-hidden="true">
+      <div class="hud-transition-card">
+        <div class="hud-transition-ring">✦</div>
+        <div class="hud-transition-brand">ELYSIA NO DENSETSU · Elysia Frontier</div>
+        <h2 id="hud-transition-title">Thôn Khởi Nguyên</h2>
+        <p id="hud-transition-subtitle">Become Wibu, Save the Worlds.</p>
+      </div>
+    </div>
+
+    <div id="hud-toast-container" aria-live="polite"></div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

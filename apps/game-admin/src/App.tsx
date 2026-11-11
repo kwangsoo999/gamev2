@@ -20,6 +20,11 @@ import {
   UserPlus,
   Scale,
   Package,
+  Layers,
+  Skull,
+  Award,
+  MapPin,
+  TrendingUp,
 } from 'lucide-react';
 import { HealthResponse, CharacterEntity, PrimaryAttributes } from '@elysia/game-types';
 import { fetchHealth, fetchCharacters } from './services/apiClient';
@@ -36,9 +41,41 @@ import { CharacterAssetCreator } from './components/CharacterAssetCreator';
 import { SkillVfxManager } from './components/SkillVfxManager';
 import { ItemManager } from './components/ItemManager';
 import { WeaponManager } from './components/WeaponManager';
+import { WorldContentManager } from './components/WorldContentManager';
+import { JobManager } from './components/JobManager';
+import { EquipmentSetManager } from './components/EquipmentSetManager';
+import { BossManager } from './components/BossManager';
+import { QuestTitleDebugManager } from './components/QuestTitleDebugManager';
+import { SpawnZoneManager } from './components/SpawnZoneManager';
+import { ExpBalanceManager } from './components/ExpBalanceManager';
+import { ProfessionEconomyManager } from './components/ProfessionEconomyManager';
+import { OperationsPersistenceManager } from './components/OperationsPersistenceManager';
+import { NpcPlacementEditor } from './components/NpcPlacementEditor';
 
 export function App() {
-  const [currentTab, setCurrentTab] = useState<'dashboard' | 'characters' | 'classes' | 'skills' | 'monsters' | 'items' | 'weapons' | 'testlab'>('dashboard');
+  const [currentTab, setCurrentTab] = useState<
+    | 'dashboard'
+    | 'characters'
+    | 'classes'
+    | 'skills'
+    | 'maps'
+    | 'npc_layout'
+    | 'cities'
+    | 'monsters'
+    | 'spawn_zones'
+    | 'bosses'
+    | 'dungeons'
+    | 'quests'
+    | 'quests_titles'
+    | 'exp_balance'
+    | 'economy_orgs'
+    | 'operations'
+    | 'items'
+    | 'equipment_sets'
+    | 'weapons'
+    | 'testlab'
+  >('dashboard');
+  const [focusedSpawnMapId, setFocusedSpawnMapId] = useState<string | undefined>(undefined);
   const [activeMasterChar, setActiveMasterChar] = useState<'novice_female' | 'swordsman_female'>('novice_female');
   const [isCreatingAsset, setIsCreatingAsset] = useState(false);
   const [health, setHealth] = useState<HealthResponse | null>(null);
@@ -122,10 +159,22 @@ export function App() {
             {[
               { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
               { id: 'characters', label: 'Character Manager', icon: Users },
-              { id: 'classes', label: 'Class Manager', icon: Shield },
-              { id: 'skills', label: 'Skill & VFX Manager', icon: Zap },
-              { id: 'monsters', label: 'Monster Manager', icon: Sparkles },
+              { id: 'classes', label: 'Job Manager (8+1)', icon: Shield },
+              { id: 'skills', label: 'Skill & VFX Manager (105)', icon: Zap },
+              { id: 'maps', label: 'Map Manager (25)', icon: MapIcon },
+              { id: 'npc_layout', label: 'NPC & Portal Layout Editor', icon: MapPin },
+              { id: 'cities', label: 'City Manager (3)', icon: Shield },
+              { id: 'monsters', label: 'Monster Manager (80)', icon: Sparkles },
+              { id: 'spawn_zones', label: 'Spawn Zone Manager', icon: MapPin },
+              { id: 'bosses', label: 'Boss & Drop Manager (7)', icon: Skull },
+              { id: 'exp_balance', label: 'EXP & Level Manager', icon: TrendingUp },
+              { id: 'economy_orgs', label: 'Professions, Guilds & Market', icon: Scale },
+              { id: 'operations', label: 'Operations, AI & Persistence', icon: Shield },
+              { id: 'dungeons', label: 'Dungeon Manager', icon: FolderOpen },
+              { id: 'quests', label: 'Quest Manager', icon: CheckCircle2 },
+              { id: 'quests_titles', label: 'GoblinEvo Quests & Titles', icon: Award },
               { id: 'items', label: 'Item Manager', icon: Package },
+              { id: 'equipment_sets', label: 'Equipment Set Manager (29)', icon: Layers },
               { id: 'weapons', label: 'Weapon Manager', icon: Sword },
               { id: 'testlab', label: 'Game Test Lab', icon: FlaskConical },
             ].map((item) => {
@@ -493,98 +542,33 @@ export function App() {
             </div>
           )}
 
-          {currentTab === 'classes' && (
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-lg font-bold text-white">{INITIAL_CLASSES.length} Master Classes</h2>
-                  <p className="text-xs text-slate-400">Các hệ phái với trang bị và bộ kỹ năng VFX 256px khởi đầu tương ứng</p>
-                </div>
-                <button
-                  onClick={() => setCurrentTab('skills')}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 transition-all"
-                >
-                  <Zap className="w-3.5 h-3.5" /> Quản Lý Tất Cả Kỹ Năng & VFX
-                </button>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {INITIAL_CLASSES.map((cls) => (
-                  <div key={cls.id} className="p-4 rounded-lg bg-[#141722] border border-[#222738] space-y-3">
-                    <div className="flex justify-between items-center">
-                      <h4 className="font-bold text-sm text-amber-300">{cls.name}</h4>
-                      <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-[#1e2332] text-slate-300">
-                        {cls.id}
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-400">{cls.description}</p>
-                    <div className="text-xs text-slate-300">
-                      <span className="text-slate-500">Vũ khí cho phép: </span>
-                      <span className="text-slate-200">{cls.allowedWeapons.join(', ')}</span>
-                    </div>
-
-                    {/* Starting Skills & 256px VFX */}
-                    <div className="pt-2 border-t border-[#1e2332]">
-                      <span className="text-[11px] text-slate-400 block mb-2 font-medium">Kỹ năng khởi đầu & Hiệu ứng 256px:</span>
-                      <div className="flex flex-wrap gap-2">
-                        {cls.startingSkills.map((skillId) => {
-                          const sk = INITIAL_SKILLS.find((s) => s.id === skillId);
-                          return (
-                            <div
-                              key={skillId}
-                              onClick={() => setCurrentTab('skills')}
-                              className="flex items-center gap-2 p-1.5 px-2.5 rounded bg-[#0d1017] border border-[#252c3d] hover:border-amber-500/50 cursor-pointer transition-all text-xs"
-                            >
-                              {sk && (
-                                <img
-                                  src={sk.vfx.thumbnail}
-                                  alt={sk.name}
-                                  className="w-5 h-5 object-contain rounded bg-[#07090f] p-0.5 border border-[#1e2332]"
-                                  onError={(e) => {
-                                    (e.target as any).src = sk?.vfx.spriteSheet;
-                                  }}
-                                />
-                              )}
-                              <div>
-                                <span className="text-amber-300 font-semibold block leading-tight">{sk ? sk.nameVi : skillId}</span>
-                                <span className="text-[10px] text-slate-400 font-mono">[{sk ? sk.vfx.key : 'vfx'}]</span>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          {currentTab === 'classes' && <JobManager />}
 
           {currentTab === 'skills' && <SkillVfxManager />}
 
-          {currentTab === 'monsters' && (
-            <div className="space-y-4">
-              <h2 className="text-lg font-bold text-white">Monsters & Bosses</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {INITIAL_MONSTERS.map((mon) => (
-                  <div key={mon.id} className="p-4 rounded-lg bg-[#141722] border border-[#222738] space-y-2">
-                    <div className="flex justify-between items-center">
-                      <h4 className="font-bold text-sm text-amber-300">{mon.name}</h4>
-                      <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-[#1e2332] text-slate-300">
-                        {mon.id}
-                      </span>
-                    </div>
-                    <div className="text-xs text-slate-300">
-                      <div>Level: {mon.level} | Race: {mon.race} | Element: {mon.element}</div>
-                      <div>HP: {mon.stats.hp} | ATK: {mon.stats.atk} | DEF: {mon.stats.def}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {currentTab === 'maps' && (
+            <WorldContentManager
+              domain="maps"
+              onOpenMapSpawnPlacer={(mapId) => {
+                setFocusedSpawnMapId(mapId);
+                setCurrentTab('spawn_zones');
+              }}
+            />
           )}
+          {currentTab === 'npc_layout' && <NpcPlacementEditor />}
+          {currentTab === 'cities' && <WorldContentManager domain="cities" />}
+          {currentTab === 'monsters' && <WorldContentManager domain="monsters" />}
+          {currentTab === 'spawn_zones' && <SpawnZoneManager initialMapId={focusedSpawnMapId} />}
+          {currentTab === 'bosses' && <BossManager />}
+          {currentTab === 'exp_balance' && <ExpBalanceManager />}
+          {currentTab === 'economy_orgs' && <ProfessionEconomyManager />}
+          {currentTab === 'operations' && <OperationsPersistenceManager />}
+          {currentTab === 'dungeons' && <WorldContentManager domain="dungeons" />}
+          {currentTab === 'quests' && <WorldContentManager domain="quests" />}
+          {currentTab === 'quests_titles' && <QuestTitleDebugManager />}
 
           {currentTab === 'items' && <ItemManager />}
+          {currentTab === 'equipment_sets' && <EquipmentSetManager />}
 
           {currentTab === 'weapons' && <WeaponManager />}
 

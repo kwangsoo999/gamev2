@@ -35,6 +35,14 @@ import {
   VFXPaletteConfig,
   DEFAULT_SKILL_VFX_CONFIGS,
 } from '@elysia/vfx-engine';
+import {
+  fetchAdminWorld,
+  createAdminWorld,
+  updateAdminWorld,
+  duplicateAdminWorld,
+  transitionAdminWorldStatus,
+  deleteAdminWorld,
+} from '../services/apiClient';
 import { VfxCombatSandbox } from './VfxCombatSandbox';
 import { VfxPaletteEditor } from './VfxPaletteEditor';
 import { VfxSkillMappingModal } from './VfxSkillMappingModal';
@@ -115,30 +123,39 @@ export function SkillVfxManager() {
       });
   }, []);
 
+const getSkillVfxKey = (s: SkillDefinition): string =>
+  s.vfxKey || (typeof s.vfx === 'string' ? s.vfx : s.vfx?.key) || 'vfx_sword_slash';
+
   // Map INITIAL_SKILLS by key for quick lookup of rich combat metadata
-  const initialSkillsMap = new Map<string, SkillDefinition>(INITIAL_SKILLS.map((s) => [s.vfx.key, s]));
+  const initialSkillsMap = new Map<string, SkillDefinition>(
+    INITIAL_SKILLS.map((s) => [getSkillVfxKey(s), s])
+  );
 
   // Combine manifest items or initial skills
   const displayList: VfxManifestItem[] =
     manifestItems.length > 0
       ? manifestItems
-      : INITIAL_SKILLS.map((s) => ({
-          key: s.vfx.key,
-          id: s.id,
-          category: s.classId,
-          name: s.name,
-          desc: s.description,
-          frames: s.vfx.totalFrames,
-          fps: s.vfx.fps,
-          frameWidth: s.vfx.frameWidth,
-          frameHeight: s.vfx.frameHeight,
-          pivot: s.vfx.pivot,
-          pivotNorm: s.vfx.pivotNorm,
-          scale: s.vfx.scale,
-          image: `${s.vfx.key}.png`,
-          thumbnail: s.vfx.thumbnail,
-          json: `${s.vfx.key}.json`,
-        }));
+      : INITIAL_SKILLS.map((s) => {
+          const vKey = getSkillVfxKey(s);
+          const vObj = typeof s.vfx === 'object' ? s.vfx : undefined;
+          return {
+            key: vKey,
+            id: s.id,
+            category: s.classId,
+            name: s.name,
+            desc: s.description,
+            frames: vObj?.totalFrames || 24,
+            fps: vObj?.fps || 30,
+            frameWidth: vObj?.frameWidth || 256,
+            frameHeight: vObj?.frameHeight || 256,
+            pivot: vObj?.pivot || [0.5, 0.5],
+            pivotNorm: vObj?.pivotNorm || [0.5, 0.5],
+            scale: vObj?.scale || 1,
+            image: `${vKey}.png`,
+            thumbnail: vObj?.thumbnail || `${vKey}_thumb.png`,
+            json: `${vKey}.json`,
+          };
+        });
 
   // Filtering
   const filteredList = displayList.filter((item) => {
@@ -196,22 +213,40 @@ export function SkillVfxManager() {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            onClick={() => setActiveTab('all_vfx')}
+            className={`px-3.5 py-1.5 rounded-lg text-xs font-bold border transition-all ${
+              activeTab === 'all_vfx'
+                ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                : 'bg-[#141722] text-slate-400 border-[#222738] hover:text-white'
+            }`}
+          >
+            🌟 Kho Hiệu Ứng VFX ({totalCount})
+          </button>
+          <button
+            onClick={() => setActiveTab('class_skills')}
+            className={`px-3.5 py-1.5 rounded-lg text-xs font-bold border transition-all ${
+              activeTab === 'class_skills'
+                ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+                : 'bg-[#141722] text-slate-400 border-[#222738] hover:text-white'
+            }`}
+          >
+            ⚔️ Cây Kỹ Năng 8 Nghề (105 Skills)
+          </button>
           <button
             onClick={() => setIsJsonModalOpen(true)}
             className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/20 transition-all"
           >
-            <FileCode className="w-4 h-4" /> Quản Lý JSON Config
+            <FileCode className="w-4 h-4" /> JSON Config
           </button>
-          <div className="px-3 py-1.5 rounded-lg bg-[#141722] border border-[#222738] text-xs">
-            <span className="text-slate-400">Tổng kho VFX: </span>
-            <strong className="text-amber-400 font-mono text-sm">{totalCount} Hiệu ứng</strong>
-          </div>
-          <div className="px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5" /> Full HD 256px Ready
-          </div>
         </div>
       </div>
+
+      {activeTab === 'class_skills' ? (
+        <ClassSkillsCrudPanel />
+      ) : (
+        <>
 
       {/* CATEGORY QUICK TABS */}
       <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-thin text-xs">
@@ -378,6 +413,8 @@ export function SkillVfxManager() {
           <Search className="w-8 h-8 mx-auto text-slate-600" />
           <p className="text-sm">Không tìm thấy hiệu ứng hoặc kỹ năng nào phù hợp.</p>
         </div>
+      )}
+        </>
       )}
 
       {/* INSPECTOR & LIVE ANIMATION PLAYER MODAL */}
@@ -796,6 +833,309 @@ function SkillInspectorModal({
           }}
           onClose={() => setIsMappingOpen(false)}
         />
+      )}
+    </div>
+  );
+}
+
+function ClassSkillsCrudPanel() {
+  const [skills, setSkills] = useState<SkillDefinition[]>([]);
+  const [classFilter, setClassFilter] = useState('all');
+  const [search, setSearch] = useState('');
+  const [statusFilter, setStatusFilter] = useState('all');
+  const [banner, setBanner] = useState<{ kind: 'ok' | 'err'; text: string } | null>(null);
+  const [editing, setEditing] = useState<Partial<SkillDefinition> | null>(null);
+  const [isNew, setIsNew] = useState(false);
+
+  const loadSkills = async () => {
+    try {
+      const res = await fetchAdminWorld('skills', {
+        classId: classFilter,
+        search: search.trim() || undefined,
+        status: statusFilter,
+        limit: 200,
+      });
+      setSkills(Array.isArray(res.data) ? res.data : []);
+    } catch (err: any) {
+      setBanner({ kind: 'err', text: err.message });
+    }
+  };
+
+  useEffect(() => {
+    const t = setTimeout(loadSkills, 150);
+    return () => clearTimeout(t);
+  }, [classFilter, search, statusFilter]);
+
+  const handleSave = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editing) return;
+    try {
+      if (isNew) {
+        await createAdminWorld('skills', { ...editing, status: 'draft' });
+        setBanner({ kind: 'ok', text: `Đã tạo kỹ năng "${editing.id}" (Draft).` });
+      } else {
+        await updateAdminWorld('skills', String(editing.id), editing);
+        setBanner({ kind: 'ok', text: `Đã cập nhật kỹ năng "${editing.nameVi || editing.name}".` });
+      }
+      setEditing(null);
+      await loadSkills();
+    } catch (err: any) {
+      setBanner({ kind: 'err', text: err.message });
+    }
+  };
+
+  return (
+    <div className="space-y-4">
+      {banner && (
+        <div
+          className={`px-4 py-2 rounded border text-xs flex justify-between items-center ${
+            banner.kind === 'ok'
+              ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300'
+              : 'bg-rose-500/10 border-rose-500/30 text-rose-300'
+          }`}
+        >
+          <span>{banner.text}</span>
+          <button onClick={() => setBanner(null)}>✕</button>
+        </div>
+      )}
+
+      <div className="p-3.5 rounded-lg bg-[#141722] border border-[#222738] flex flex-wrap gap-3 items-center text-xs">
+        <div className="relative flex-1 min-w-[220px]">
+          <Search className="w-4 h-4 absolute left-3 top-2 text-slate-500" />
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Tìm kỹ năng theo tên, ID, công thức..."
+            className="w-full pl-9 pr-3 py-1.5 rounded bg-[#0d1018] border border-[#242b3d] text-slate-200"
+          />
+        </div>
+        <select
+          value={classFilter}
+          onChange={(e) => setClassFilter(e.target.value)}
+          className="px-3 py-1.5 rounded bg-[#0d1018] border border-[#242b3d] text-slate-200"
+        >
+          <option value="all">Tất Cả Nghề (8+1)</option>
+          {INITIAL_CLASSES.map((c) => (
+            <option key={c.id} value={c.id}>
+              {c.nameVi || c.name}
+            </option>
+          ))}
+        </select>
+        <select
+          value={statusFilter}
+          onChange={(e) => setStatusFilter(e.target.value)}
+          className="px-3 py-1.5 rounded bg-[#0d1018] border border-[#242b3d] text-slate-200"
+        >
+          <option value="all">Tất cả trạng thái</option>
+          <option value="published">Published</option>
+          <option value="testing">Testing</option>
+          <option value="draft">Draft</option>
+          <option value="archived">Archived</option>
+        </select>
+        <button
+          onClick={() => {
+            setIsNew(true);
+            setEditing({
+              id: `skill_custom_${Date.now().toString().slice(-4)}`,
+              name: 'Custom Skill',
+              nameVi: 'Kỹ Năng Tùy Chỉnh',
+              description: 'Kỹ năng mới được tạo trong Admin Studio.',
+              classId: 'swordsman',
+              tier: 'basic',
+              skillType: 'active',
+              requiredLevel: 15,
+              mpCost: 20,
+              cooldown: 3,
+              castTime: 0.2,
+              range: 120,
+              targetType: 'single',
+              damageMultiplier: 1.8,
+              damageFormula: 'ATK * 1.8 + STR * 1.0',
+              element: 'fire',
+              icon: 'skill_sword_slash',
+              vfxKey: 'vfx_sword_slash',
+              maxLevel: 5,
+              skillPointCost: 1,
+            });
+          }}
+          className="px-3 py-1.5 rounded bg-amber-500 text-black font-bold"
+        >
+          + Thêm Kỹ Năng
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        {skills.map((sk) => {
+          const st = String(sk.status || 'published').toLowerCase();
+          return (
+            <div key={sk.id} className="p-3.5 rounded-lg bg-[#141722] border border-[#222738] flex flex-col justify-between gap-2 text-xs">
+              <div>
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <h4 className="font-bold text-white">{sk.nameVi || sk.name}</h4>
+                    <p className="text-[10px] font-mono text-amber-300">
+                      {sk.id} · {sk.classId.toUpperCase()} · {sk.tier || 'basic'}
+                    </p>
+                  </div>
+                  <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 text-[10px] uppercase">{st}</span>
+                </div>
+                <p className="text-[11px] text-slate-400 mt-1.5 line-clamp-2">{sk.description}</p>
+                <div className="text-[10px] font-mono text-sky-300 mt-1.5">
+                  Formula: {sk.damageFormula || `x${sk.damageMultiplier}`} · MP {sk.mpCost} · CD {sk.cooldown}s · Lv.{sk.requiredLevel}+
+                </div>
+              </div>
+              <div className="pt-2 border-t border-[#1e2433] flex flex-wrap gap-1 justify-end text-[11px]">
+                <button
+                  onClick={() => {
+                    setIsNew(false);
+                    setEditing({ ...sk });
+                  }}
+                  className="px-2 py-1 rounded bg-[#1d2232] text-slate-200"
+                >
+                  Sửa
+                </button>
+                <button
+                  onClick={async () => {
+                    await duplicateAdminWorld('skills', sk.id);
+                    await loadSkills();
+                  }}
+                  className="px-2 py-1 rounded bg-[#1d2232] text-slate-200"
+                >
+                  Nhân bản
+                </button>
+                {st !== 'testing' && (
+                  <button
+                    onClick={async () => {
+                      await transitionAdminWorldStatus('skills', sk.id, 'testing');
+                      await loadSkills();
+                    }}
+                    className="px-2 py-1 rounded bg-sky-500/15 text-sky-300"
+                  >
+                    Testing
+                  </button>
+                )}
+                {st !== 'published' && (
+                  <button
+                    onClick={async () => {
+                      await transitionAdminWorldStatus('skills', sk.id, 'publish');
+                      await loadSkills();
+                    }}
+                    className="px-2 py-1 rounded bg-emerald-500/15 text-emerald-300"
+                  >
+                    Publish
+                  </button>
+                )}
+                <button
+                  onClick={async () => {
+                    await deleteAdminWorld('skills', sk.id);
+                    await loadSkills();
+                  }}
+                  className="px-2 py-1 rounded bg-rose-500/15 text-rose-300"
+                >
+                  Xóa
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {editing && (
+        <div className="fixed inset-0 z-50 bg-black/75 flex items-center justify-center p-4">
+          <form onSubmit={handleSave} className="w-full max-w-xl bg-[#121622] border border-[#2a334a] rounded-xl overflow-hidden text-xs">
+            <div className="px-5 py-3 bg-[#161a28] border-b border-[#242c40] flex justify-between items-center">
+              <h3 className="font-bold text-white">{isNew ? 'Tạo Kỹ Năng Mới' : `Chỉnh sửa ${editing.id}`}</h3>
+              <button type="button" onClick={() => setEditing(null)}>✕</button>
+            </div>
+            <div className="p-5 grid grid-cols-2 gap-3 max-h-[70vh] overflow-y-auto">
+              <div>
+                <label className="text-slate-400 block mb-1">Skill ID</label>
+                <input type="text" disabled={!isNew} value={editing.id || ''} onChange={(e) => setEditing({ ...editing, id: e.target.value })} className="w-full px-3 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-amber-300 font-mono" />
+              </div>
+              <div>
+                <label className="text-slate-400 block mb-1">Tên Kỹ Năng</label>
+                <input type="text" value={editing.nameVi || ''} onChange={(e) => setEditing({ ...editing, nameVi: e.target.value })} className="w-full px-3 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-white" />
+              </div>
+              <div>
+                <label className="text-slate-400 block mb-1">Class</label>
+                <select value={editing.classId || 'swordsman'} onChange={(e) => setEditing({ ...editing, classId: e.target.value as any })} className="w-full px-3 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-white">
+                  {INITIAL_CLASSES.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+                </select>
+              </div>
+              <div>
+                <label className="text-slate-400 block mb-1">MP / CD / DMG Mult</label>
+                <div className="flex gap-1.5">
+                  <input type="number" value={editing.mpCost ?? 15} onChange={(e) => setEditing({ ...editing, mpCost: Number(e.target.value) })} className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-white" title="MP" />
+                  <input type="number" step="0.5" value={editing.cooldown ?? 2} onChange={(e) => setEditing({ ...editing, cooldown: Number(e.target.value) })} className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-white" title="CD" />
+                  <input type="number" step="0.1" value={editing.damageMultiplier ?? 1.5} onChange={(e) => setEditing({ ...editing, damageMultiplier: Number(e.target.value) })} className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-amber-300" title="Multiplier" />
+                </div>
+              </div>
+              <div>
+                <label className="text-slate-400 block mb-1">Loại Sát Thương / Tỉ Lệ / Tầm</label>
+                <div className="flex gap-1.5">
+                  <select value={editing.damageType || 'physical'} onChange={(e) => setEditing({ ...editing, damageType: e.target.value as any })} className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-white">
+                    <option value="physical">Vật Lý</option>
+                    <option value="magic">Phép Thuật</option>
+                  </select>
+                  <input type="number" step="0.05" value={editing.damageRatio ?? editing.damageMultiplier ?? 1.25} onChange={(e) => setEditing({ ...editing, damageRatio: Number(e.target.value) })} className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-emerald-300" title="damageRatio" />
+                  <input type="number" value={editing.range ?? 100} onChange={(e) => setEditing({ ...editing, range: Number(e.target.value) })} className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-sky-300" title="Range Px" />
+                </div>
+              </div>
+              <div>
+                <label className="text-slate-400 block mb-1">Hitbox Length / Width / Projectile Speed</label>
+                <div className="flex gap-1.5">
+                  <input
+                    type="number"
+                    value={editing.hitbox?.lengthPx ?? 96}
+                    onChange={(e) => setEditing({
+                      ...editing,
+                      hitbox: { shape: editing.hitbox?.shape || 'arc', widthPx: editing.hitbox?.widthPx ?? 68, lengthPx: Number(e.target.value) },
+                    })}
+                    className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-white"
+                    title="Hitbox lengthPx"
+                  />
+                  <input
+                    type="number"
+                    value={editing.hitbox?.widthPx ?? 68}
+                    onChange={(e) => setEditing({
+                      ...editing,
+                      hitbox: { shape: editing.hitbox?.shape || 'arc', lengthPx: editing.hitbox?.lengthPx ?? 96, widthPx: Number(e.target.value) },
+                    })}
+                    className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-white"
+                    title="Hitbox widthPx"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Projectile speed"
+                    value={editing.projectile?.speedPxPerSec ?? 0}
+                    onChange={(e) => {
+                      const sp = Number(e.target.value);
+                      setEditing({
+                        ...editing,
+                        projectile: sp > 0 ? { radiusPx: 14, trailColor: '#fb923c', explosionRadiusPx: 64, ...(editing.projectile || {}), speedPxPerSec: sp } : undefined,
+                      });
+                    }}
+                    className="w-1/3 px-2 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-orange-300"
+                    title="Projectile speed (0 = melee)"
+                  />
+                </div>
+              </div>
+              <div className="col-span-2">
+                <label className="text-slate-400 block mb-1">Công Thức (Formula)</label>
+                <input type="text" value={editing.damageFormula || ''} onChange={(e) => setEditing({ ...editing, damageFormula: e.target.value })} className="w-full px-3 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-sky-300 font-mono" />
+              </div>
+              <div className="col-span-2">
+                <label className="text-slate-400 block mb-1">Mô Tả</label>
+                <textarea rows={2} value={editing.description || ''} onChange={(e) => setEditing({ ...editing, description: e.target.value })} className="w-full px-3 py-1.5 rounded bg-[#0c0e16] border border-[#252e44] text-white" />
+              </div>
+            </div>
+            <div className="px-5 py-3 bg-[#161a28] border-t border-[#242c40] flex justify-end gap-2">
+              <button type="button" onClick={() => setEditing(null)} className="px-4 py-1.5 rounded bg-[#1d2232] text-slate-300">Hủy</button>
+              <button type="submit" className="px-4 py-1.5 rounded bg-amber-500 text-black font-bold">Lưu Kỹ Năng</button>
+            </div>
+          </form>
+        </div>
       )}
     </div>
   );

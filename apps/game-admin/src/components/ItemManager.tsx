@@ -35,6 +35,7 @@ import {
   deleteAdminItem,
   duplicateAdminItem,
   archiveAdminItem,
+  testingAdminItem,
   publishAdminItem,
   uploadAssetFile,
   replaceAssetFile,
@@ -62,15 +63,29 @@ const CATEGORIES: { id: ItemCategory; name: string }[] = [
 ];
 
 const ALL_CLASSES: { id: ClassId; name: string }[] = [
-  { id: 'novice', name: 'Tân Thủ (Novice)' },
+  { id: 'adventurer', name: 'Thám Hiểm Giả (Adventurer)' },
   { id: 'swordsman', name: 'Kiếm Sĩ (Swordsman)' },
   { id: 'spearman', name: 'Thương Thủ (Spearman)' },
   { id: 'knight', name: 'Hiệp Sĩ (Knight)' },
-  { id: 'priest', name: 'Tu Sĩ (Priest)' },
+  { id: 'monk', name: 'Tu Sĩ (Monk)' },
   { id: 'mage', name: 'Pháp Sư (Mage)' },
   { id: 'assassin', name: 'Thích Khách (Assassin)' },
   { id: 'fighter', name: 'Đấu Sĩ (Fighter)' },
   { id: 'archer', name: 'Cung Thủ (Archer)' },
+];
+
+const EQUIP_SLOTS = [
+  { id: '', label: 'Không áp dụng (Phi trang bị)' },
+  { id: 'weapon', label: 'weapon · Vũ Khí' },
+  { id: 'head', label: 'head · Mũ / Nón' },
+  { id: 'armor', label: 'armor · Áo Giáp' },
+  { id: 'gloves', label: 'gloves · Găng Tay' },
+  { id: 'boots', label: 'boots · Ủng / Giày' },
+  { id: 'shoulder', label: 'shoulder · Cầu Vai' },
+  { id: 'necklace', label: 'necklace · Dây Chuyền' },
+  { id: 'ring1', label: 'ring1 · Nhẫn 1' },
+  { id: 'ring2', label: 'ring2 · Nhẫn 2' },
+  { id: 'cloak', label: 'cloak · Áo Choàng' },
 ];
 
 export function ItemManager() {
@@ -303,6 +318,17 @@ export function ItemManager() {
       loadItems(meta.page);
     } catch (err: any) {
       notifyError(err.message || 'Không thể archive vật phẩm.');
+    }
+  };
+
+  // Testing Item
+  const handleTesting = async (item: ItemEntity) => {
+    try {
+      await testingAdminItem(item.itemId);
+      notifySuccess(`Đã chuyển "${item.name}" sang trạng thái Testing.`);
+      loadItems(meta.page);
+    } catch (err: any) {
+      notifyError(err.message || 'Không thể chuyển sang Testing.');
     }
   };
 
@@ -580,6 +606,15 @@ export function ItemManager() {
                     >
                       <Copy className="w-3.5 h-3.5" />
                     </button>
+                    {item.status !== 'TESTING' && (
+                      <button
+                        onClick={() => handleTesting(item)}
+                        className="px-1.5 py-1 rounded bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 text-[10px] font-bold"
+                        title="Chuyển sang Testing"
+                      >
+                        Test
+                      </button>
+                    )}
                     {item.status !== 'PUBLISHED' && (
                       <button
                         onClick={() => handlePublish(item)}
@@ -869,10 +904,50 @@ export function ItemManager() {
                       <input
                         type="number"
                         min="1"
-                        max="100"
+                        max="110"
                         value={formData.requiredLevel || 1}
                         onChange={(e) => setFormData({ ...formData, requiredLevel: parseInt(e.target.value, 10) })}
                         className="w-full p-2.5 rounded-lg bg-[#0c0e16] border border-[#262f44] text-xs text-white"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="text-xs text-slate-300 font-semibold block mb-1">Ô Trang Bị (10-Slot System)</label>
+                      <select
+                        value={(formData as any).equipSlot || ''}
+                        onChange={(e) => setFormData({ ...formData, equipSlot: (e.target.value || undefined) as any })}
+                        className="w-full p-2.5 rounded-lg bg-[#0c0e16] border border-[#262f44] text-xs text-white"
+                      >
+                        {EQUIP_SLOTS.map((sl) => (
+                          <option key={sl.id || 'none'} value={sl.id}>{sl.label}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="text-xs text-slate-300 font-semibold block mb-1">Thuộc Bộ Trang Bị (Set ID)</label>
+                      <input
+                        type="text"
+                        value={(formData as any).setId || ''}
+                        onChange={(e) => setFormData({ ...formData, setId: e.target.value || undefined } as any)}
+                        placeholder="VD: set_swordsman_blade_master"
+                        className="w-full p-2.5 rounded-lg bg-[#0c0e16] border border-[#262f44] text-xs text-amber-300 font-mono"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs text-slate-300 font-semibold block mb-1">Nguồn Rơi (Boss / Map ID)</label>
+                      <input
+                        type="text"
+                        value={Array.isArray((formData as any).dropSources) ? (formData as any).dropSources.join(', ') : ''}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            dropSources: e.target.value.split(',').map((s) => s.trim()).filter(Boolean),
+                          } as any)
+                        }
+                        placeholder="boss_ancient_treant, map_spirit_forest"
+                        className="w-full p-2.5 rounded-lg bg-[#0c0e16] border border-[#262f44] text-xs text-sky-300 font-mono"
                       />
                     </div>
                   </div>

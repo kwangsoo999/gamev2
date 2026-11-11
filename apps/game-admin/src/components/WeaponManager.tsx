@@ -225,7 +225,7 @@ export function WeaponManager() {
     setFormDesc(wp.item?.description || '');
     setFormLevel(wp.item?.requiredLevel || 1);
     setFormRarity((wp.item?.rarity as any) || 'common');
-    setFormClasses(wp.item?.requiredClasses || ['swordsman']);
+    setFormClasses((wp.item?.requiredClasses || ['swordsman']).filter((c): c is ClassId => c !== 'any'));
     setActiveTab('basic');
     setIsModalOpen(true);
   };

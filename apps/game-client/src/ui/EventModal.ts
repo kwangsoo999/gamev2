@@ -1,119 +1,179 @@
-/**
- * ELYSIA NO DENSETSU — MASTER EVENTS WINDOW
- * Daily Login & World Boss Event Architecture
- */
+import { modalManager } from './ModalManager';
+
+interface EventDayReward {
+  day: number;
+  icon: string;
+  label: string;
+  goldBonus: number;
+}
+
+const SEVEN_DAY_REWARDS: EventDayReward[] = [
+  { day: 1, icon: '🪙', label: '1,500 Vàng Tân Thủ', goldBonus: 1500 },
+  { day: 2, icon: '🧪', label: '2,000 Vàng + Túi HP', goldBonus: 2000 },
+  { day: 3, icon: '💎', label: '3,000 Vàng Khởi Nguyên', goldBonus: 3000 },
+  { day: 4, icon: '⚔️', label: '4,000 Vàng Rèn Vũ Khí', goldBonus: 4000 },
+  { day: 5, icon: '💠', label: '5,500 Vàng Hổ Phách', goldBonus: 5500 },
+  { day: 6, icon: '🛡️', label: '7,000 Vàng Gia Cố', goldBonus: 7000 },
+  { day: 7, icon: '👑', label: '12,000 Vàng Truyền Thuyết', goldBonus: 12000 },
+];
+
+const CLAIMED_DAYS_STORAGE = 'elysia_event_days_v1';
 
 export class EventModal {
-  private backdrop: HTMLElement | null = null;
+  public static readonly MODAL_ID = 'events';
+  private backdrop: HTMLElement;
   private isOpen = false;
+  private characterId = 'default';
+  private claimedDays: number[] = [];
 
-  private days = [
-    { day: 1, reward: '10,000 Vàng', icon: '🪙', claimed: true },
-    { day: 2, reward: '50 Bình Máu Nhỏ', icon: '🧪', claimed: true },
-    { day: 3, reward: '5 Đá Cường Hóa', icon: '💎', claimed: false, current: true },
-    { day: 4, reward: 'Thời Trang Tân Thủ', icon: '👘', claimed: false },
-    { day: 5, reward: '100 Kim Cương', icon: '💠', claimed: false },
-    { day: 6, reward: 'Bao Tên Hoàng Kim', icon: '🏹', claimed: false },
-    { day: 7, reward: 'Thần Kiếm Tuyệt Phẩm', icon: '⚔️', claimed: false },
-  ];
+  public onClaimEventGold?: (amount: number, label: string) => void;
+  public onToast?: (msg: string, variant?: 'info' | 'success' | 'error') => void;
 
   constructor() {
-    this.createDom();
-  }
+    this.backdrop = document.createElement('div');
+    this.backdrop.id = 'modal-events';
+    this.backdrop.className = 'tk-modal-backdrop hidden';
+    this.backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(this.backdrop);
 
-  private createDom() {
-    const backdrop = document.createElement('div');
-    backdrop.className = 'elysia-modal-backdrop';
-    backdrop.id = 'modal-events';
+    modalManager.registerBackdrop(this.backdrop, () => ({
+      id: EventModal.MODAL_ID,
+      onRequestClose: () => this.close(),
+      closeOnBackdrop: true,
+    }));
 
-    backdrop.innerHTML = `
-      <div class="elysia-modal-window" style="width: 820px; max-width: 95vw; height: 540px; max-height: 90vh;">
-        <!-- HEADER -->
-        <div class="elysia-window-header">
-          <div class="elysia-window-title">
-            <span>🎉</span>
-            <span>TRUNG TÂM HOẠT ĐỘNG & SỰ KIỆN (EVENTS CENTER)</span>
-          </div>
-          <button class="elysia-btn-close" id="btn-close-events">✕</button>
-        </div>
+    this.backdrop.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement | null;
+      if (!target || target === this.backdrop) return;
+      e.stopPropagation();
 
-        <!-- BODY -->
-        <div style="flex: 1; padding: 20px; background: #0c101a; display: flex; flex-direction: column; gap: 16px; overflow-y: auto;">
-          <!-- EVENT 1: 7-DAY LOGIN REWARDS -->
-          <div style="background: radial-gradient(circle, #1a243b 0%, #0d1322 85%); border: 1.5px solid var(--elysia-gold-border); border-radius: 12px; padding: 16px;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-              <div>
-                <span style="font-family: var(--elysia-font-title); font-size: 14px; font-weight: 700; color: var(--elysia-gold);">Điểm Danh 7 Ngày Nhận Thần Khí</span>
-                <span style="font-size: 11px; color: #94a3b8; margin-left: 8px;">Đăng nhập mỗi ngày để nhận quà tặng giá trị</span>
-              </div>
-              <button class="inv-action-btn" id="btn-claim-today" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; border-color: #34d399; font-weight: 700;">Nhận Quà Ngày 3</button>
-            </div>
+      if (target.closest('[data-close-modal="events"], #btn-close-events')) {
+        this.close();
+        return;
+      }
 
-            <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px;">
-              ${this.days
-                .map(
-                  (d) => `
-                <div style="background: rgba(0,0,0,0.4); border: 1.5px solid ${d.current ? '#facc15' : d.claimed ? '#10b981' : 'rgba(255,255,255,0.1)'}; border-radius: 8px; padding: 10px 6px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; position: relative;">
-                  ${d.claimed ? '<span style="position: absolute; top: 4px; right: 4px; color: #10b981; font-size: 10px;">✓</span>' : ''}
-                  <span style="font-size: 10px; font-weight: 700; color: #94a3b8;">Ngày ${d.day}</span>
-                  <span style="font-size: 24px;">${d.icon}</span>
-                  <span style="font-size: 10px; color: #e2e8f0; font-weight: 600; line-height: 1.2;">${d.reward}</span>
-                </div>
-              `
-                )
-                .join('')}
-            </div>
-          </div>
-
-          <!-- EVENT 2: WORLD BOSS & DUNGEONS -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-            <div style="background: radial-gradient(circle, #2d1218 0%, #130a0d 85%); border: 1.5px solid rgba(239, 68, 68, 0.5); border-radius: 12px; padding: 14px; display: flex; align-items: center; gap: 12px;">
-              <span style="font-size: 36px;">🐉</span>
-              <div style="flex: 1;">
-                <div style="font-size: 13px; font-weight: 700; color: #fca5a5;">Ma Long Thức Tỉnh (World Boss)</div>
-                <div style="font-size: 11px; color: #94a3b8;">Xuất hiện tại Hẻm Núi Hỏa Long lúc 20:00 hằng ngày.</div>
-                <div style="font-size: 11px; font-weight: 700; color: #facc15; margin-top: 4px;">Đếm ngược: 04:35:12</div>
-              </div>
-            </div>
-
-            <div style="background: radial-gradient(circle, #1a1e38 0%, #0a0d18 85%); border: 1.5px solid rgba(96, 165, 250, 0.5); border-radius: 12px; padding: 14px; display: flex; align-items: center; gap: 12px;">
-              <span style="font-size: 36px;">🏰</span>
-              <div style="flex: 1;">
-                <div style="font-size: 13px; font-weight: 700; color: #93c5fd;">Hầm Ngục Tinh Tú (Dungeon)</div>
-                <div style="font-size: 11px; color: #94a3b8;">Vượt ải tổ đội săn trang bị thần thoại (3/3 lượt/ngày).</div>
-                <div style="font-size: 11px; font-weight: 700; color: #34d399; margin-top: 4px;">Trạng thái: Đang Mở</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-
-    document.body.appendChild(backdrop);
-    this.backdrop = backdrop;
-
-    document.getElementById('btn-close-events')?.addEventListener('click', () => this.close());
-    document.getElementById('btn-claim-today')?.addEventListener('click', () => {
-      alert('Đã nhận thành công quà tặng Ngày 3: [5 Đá Cường Hóa Thần Cấp]!');
+      const claimBtn = target.closest('[data-claim-event-day]');
+      if (claimBtn) {
+        const day = Number(claimBtn.getAttribute('data-claim-event-day'));
+        this.claimDay(day);
+      }
     });
   }
 
-  public open() {
-    if (this.backdrop) {
-      this.backdrop.style.display = 'flex';
-      this.isOpen = true;
+  private loadClaimed(charId: string) {
+    this.characterId = charId || 'default';
+    try {
+      const raw = localStorage.getItem(`${CLAIMED_DAYS_STORAGE}:${this.characterId}`);
+      const parsed = raw ? JSON.parse(raw) : [];
+      this.claimedDays = Array.isArray(parsed) ? parsed : [];
+    } catch {
+      this.claimedDays = [];
     }
+  }
+
+  private saveClaimed() {
+    try {
+      localStorage.setItem(`${CLAIMED_DAYS_STORAGE}:${this.characterId}`, JSON.stringify(this.claimedDays));
+    } catch {
+      // ignore
+    }
+  }
+
+  private claimDay(day: number) {
+    const def = SEVEN_DAY_REWARDS.find((d) => d.day === day);
+    if (!def || this.claimedDays.includes(day)) return;
+    this.claimedDays.push(day);
+    this.saveClaimed();
+    this.onClaimEventGold?.(def.goldBonus, def.label);
+    this.onToast?.(`Đã nhận quà Điểm Danh Ngày ${day}: ${def.label}!`, 'success');
+    this.render();
+  }
+
+  public open(characterId = 'default') {
+    this.loadClaimed(characterId);
+    this.isOpen = true;
+    modalManager.open({
+      id: EventModal.MODAL_ID,
+      backdrop: this.backdrop,
+      onClose: () => {
+        this.isOpen = false;
+      },
+    });
+    this.render();
   }
 
   public close() {
-    if (this.backdrop) {
-      this.backdrop.style.display = 'none';
-      this.isOpen = false;
-    }
+    this.isOpen = false;
+    modalManager.close(EventModal.MODAL_ID);
   }
 
-  public toggle() {
+  public toggle(characterId = 'default') {
     if (this.isOpen) this.close();
-    else this.open();
+    else this.open(characterId);
+  }
+
+  private render() {
+    const nextUnclaimed = SEVEN_DAY_REWARDS.find((d) => !this.claimedDays.includes(d.day))?.day ?? 999;
+
+    this.backdrop.innerHTML = `
+      <div class="tk-window" style="width:min(840px,95vw);" role="dialog" aria-modal="true" aria-label="Trung tâm Sự kiện">
+        <div class="tk-window-header">
+          <div class="tk-header-title-group">
+            <span class="tk-header-crest">🎉</span>
+            <div>
+              <h2>TRUNG TÂM HOẠT ĐỘNG &amp; SỰ KIỆN ELYSIA</h2>
+              <p>Điểm danh 7 ngày nhận tài nguyên &amp; Theo dõi thời gian Boss xuất hiện</p>
+            </div>
+          </div>
+          <button type="button" class="tk-btn-close" id="btn-close-events" data-close-modal="events" title="Đóng [ESC]">✕</button>
+        </div>
+
+        <div class="tk-modal-scroll-body">
+          <div class="tk-panel-inset" style="display:flex;flex-direction:column;gap:10px;">
+            <div class="tk-section-heading"><span>QUÀ ĐIỂM DANH 7 NGÀY TÂN THỦ</span><span class="tk-heading-pill">${this.claimedDays.length}/7 Ngày</span></div>
+            <div class="tk-event-grid">
+              ${SEVEN_DAY_REWARDS.map((item) => {
+                const claimed = this.claimedDays.includes(item.day);
+                const isNext = item.day === nextUnclaimed;
+                return `
+                  <div class="tk-event-day-card ${claimed ? 'claimed' : isNext ? 'current' : ''}">
+                    <strong>Ngày ${item.day}</strong>
+                    <span style="font-size:24px;">${item.icon}</span>
+                    <span>${item.label}</span>
+                    ${
+                      claimed
+                        ? `<span class="tk-heading-pill">Đã Nhận</span>`
+                        : `<button type="button" class="tk-action-btn" data-claim-event-day="${item.day}" ${isNext ? '' : 'disabled'}>${isNext ? 'Nhận Quà' : 'Chưa Tới'}</button>`
+                    }
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+
+          <div class="tk-panel-inset" style="display:flex;flex-direction:column;gap:8px;">
+            <div class="tk-section-heading"><span>LỊCH SĂN BOSS KHU VỰC &amp; THẾ GIỚI</span></div>
+            <div class="tk-quest-list" style="padding:0;">
+              <div class="tk-quest-item">
+                <div><strong>🐺 Huyết Lang (Mini Boss Lv.9)</strong><div class="tk-inspector-desc">Thung Lũng Sói Hoang (map_wild_wolf_valley) · Rớt Bùa Hộ Mệnh Huyết Lang &amp; Đá Cường Hóa</div></div>
+                <span class="tk-heading-pill">Hồi sinh: 5 phút</span>
+              </div>
+              <div class="tk-quest-item">
+                <div><strong>👹 Goblin Thủ Lĩnh (Field Boss Lv.15)</strong><div class="tk-inspector-desc">Hang Goblin (map_goblin_cave) · Rớt Huy Chương Độc Nhất &amp; Danh Hiệu Thủ Lĩnh Sát</div></div>
+                <span class="tk-heading-pill">Hồi sinh: 15 phút</span>
+              </div>
+              <div class="tk-quest-item">
+                <div><strong>🌳 Ancient Treant (Field Boss Lv.42)</strong><div class="tk-inspector-desc">Khu Rừng Linh Hồn (map_spirit_forest) · Trận chiến Party Contribution</div></div>
+                <span class="tk-heading-pill">Hồi sinh: 5 phút</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tk-modal-footer">
+          <button type="button" class="tk-tab-btn" data-close-modal="events">Đóng [ESC]</button>
+        </div>
+      </div>
+    `;
   }
 }
