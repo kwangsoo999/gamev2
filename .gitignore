@@ -25,3 +25,13 @@ pnpm-debug.log*
 .env.local
 .env.*.local
 *.pem
+*.key
+
+# Temporary & Test Artifacts
+*.tmp
+apps/game-server/data/*.tmp
+coverage/
+playwright-report/
+test-results/
+.vscode/
+.idea/
