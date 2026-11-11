@@ -71,3 +71,53 @@ export function validateStatAllocation(stats: PrimaryAttributes): ValidationResu
   }
   return { isValid: true, valid: true, errors: [] };
 }
+
+export const CREATION_BONUS_POOL = 6;
+export const MAX_BASE_STAT_LIMIT = 250;
+
+export function validatePendingStatAllocations(
+  allocations: Partial<Record<keyof PrimaryAttributes, number>>,
+  unspentPoints: number,
+  currentBaseStats?: PrimaryAttributes,
+  maxStatLimit: number = MAX_BASE_STAT_LIMIT
+): ValidationResult {
+  if (!allocations || typeof allocations !== 'object') {
+    return {
+      isValid: false,
+      valid: false,
+      error: 'Dữ liệu phân bổ chỉ số không hợp lệ.',
+      errors: ['Dữ liệu phân bổ chỉ số không hợp lệ.'],
+    };
+  }
+  const allowed = ['str', 'dex', 'agi', 'int', 'con'] as const;
+  const errors: string[] = [];
+  let totalSpent = 0;
+
+  for (const key of Object.keys(allocations)) {
+    if (!allowed.includes(key as keyof PrimaryAttributes)) {
+      errors.push(`Thuộc tính không hợp lệ: ${key}`);
+      continue;
+    }
+    const delta = Number((allocations as any)[key] ?? 0);
+    if (!Number.isInteger(delta) || delta < 0) {
+      errors.push(`Điểm cộng cho ${key.toUpperCase()} phải là số nguyên không âm.`);
+      continue;
+    }
+    if (currentBaseStats && Number(currentBaseStats[key as keyof PrimaryAttributes] || 10) + delta > maxStatLimit) {
+      errors.push(`Chỉ số ${key.toUpperCase()} không được vượt quá giới hạn tối đa (${maxStatLimit}).`);
+    }
+    totalSpent += delta;
+  }
+
+  if (totalSpent <= 0 && errors.length === 0) {
+    errors.push('Cần phân bổ ít nhất 1 điểm tiềm năng.');
+  }
+  if (totalSpent > Math.max(0, Number(unspentPoints || 0))) {
+    errors.push(`Không đủ điểm thuộc tính! Yêu cầu ${totalSpent}, hiện có ${unspentPoints}.`);
+  }
+
+  if (errors.length > 0) {
+    return { isValid: false, valid: false, errors, error: errors[0] };
+  }
+  return { isValid: true, valid: true, errors: [] };
+}

@@ -1,7 +1,15 @@
+import { EXTENDED_SKILL_VFX_CONFIGS } from './profiles.js';
+import { LayeredVFXManager } from './runtime.js';
+
+export * from './profiles.js';
+export * from './runtime.js';
+export * from './jobRituals.js';
+
 export type VFXType = 'projectile' | 'aoe' | 'slash' | 'impact' | 'buff' | 'beam' | 'summon' | string;
 
 export interface VFXPaletteConfig {
   primaryColor?: string;
+  secondaryColor?: string;
   glowColor?: string;
   tint?: string;
   intensity?: number;
@@ -41,6 +49,11 @@ export interface VFXSkillConfig {
   thumbnail?: string;
   spriteSheet?: string;
   palette?: VFXPaletteConfig;
+  element?: string;
+  directional?: boolean;
+  hitStopFrames?: number;
+  screenShakeIntensity?: number;
+  particleCount?: number;
 }
 
 export interface VFXWorldTarget {
@@ -122,7 +135,7 @@ export const DEFAULT_SKILL_VFX_CONFIGS: Record<string, VFXSkillConfig> = {
 export class VFXRegistry {
   private static instance: VFXRegistry;
   private configs = new Map<string, VFXSkillConfig>(
-    Object.entries(DEFAULT_SKILL_VFX_CONFIGS)
+    Object.entries({ ...DEFAULT_SKILL_VFX_CONFIGS, ...EXTENDED_SKILL_VFX_CONFIGS })
   );
 
   static getInstance(): VFXRegistry {
@@ -202,72 +215,30 @@ export class VFXRegistry {
   }
 }
 
-export class VFXManager {
-  private canvas: HTMLCanvasElement;
-  private width: number;
-  private height: number;
-
-  constructor(canvas: HTMLCanvasElement, width: number, height: number) {
-    this.canvas = canvas;
-    this.width = width;
-    this.height = height;
-  }
-
+export class VFXManager extends LayeredVFXManager {
   public async spawnSkillVfx(
     skillId: string,
     source: VFXWorldTarget,
     target?: VFXWorldTarget,
     callbacks?: VFXCombatCallbacks
   ): Promise<void> {
-    if (callbacks?.onHit) {
-      setTimeout(() => callbacks.onHit!(target || source), 150);
-    }
-    if (callbacks?.onImpact) {
-      setTimeout(() => callbacks.onImpact!(target || source), 200);
-    }
-    if (callbacks?.onDamageFrame) {
-      setTimeout(() => callbacks.onDamageFrame!(target || source), 250);
-    }
-    if (callbacks?.onComplete) {
-      setTimeout(() => callbacks.onComplete!(), 400);
-    }
+    const config = VFXRegistry.getInstance().get(skillId);
+    this.playSkill(skillId, source, target, callbacks, config);
   }
 
-  public spawnCombatNumber(
+  public spawnCombatNumberLegacy(
     x: number,
     y: number,
     amount: number | string,
     type: 'damage' | 'crit' | 'heal' | 'miss' = 'damage'
   ): void {
-    // Combat number overlay handler
-  }
-
-  public triggerHitStop(frames: number = 3): void {
-    // Hit stop freeze frame logic
-  }
-
-  public triggerScreenShake(intensity: number = 6, duration: number = 0.2): void {
-    // Screen shake logic
-  }
-
-  public spawnMonsterDeath(worldPos: VFXWorldTarget): void {
-    // Monster death disintegration particles
-  }
-
-  public setCameraPosition(cameraX: number, cameraY: number, zoom: number = 1.0): void {
-    // Camera sync
-  }
-
-  public update(deltaSeconds: number): void {
-    // Update active particle effects
-  }
-
-  public resize(width: number, height: number): void {
-    this.width = width;
-    this.height = height;
-  }
-
-  public dispose(): void {
-    // Cleanup
+    const numVal = typeof amount === 'number' ? amount : Number(amount) || 0;
+    this.spawnCombatNumber(
+      { x, y },
+      numVal,
+      type === 'crit',
+      type === 'heal',
+      type === 'miss' ? '#94a3b8' : undefined
+    );
   }
 }
