@@ -7,7 +7,7 @@ import {
   SpriteSheetMeta,
   WorldPoint,
 } from '../engine/types';
-import { ATTRIBUTE_POINTS_PER_LEVEL, computeExpRequiredForLevel } from '@elysia/game-data-schema';
+import { ATTRIBUTE_POINTS_PER_LEVEL, computeExpRequiredForLevel, getPotentialPointsPerLevel } from '@elysia/game-data-schema';
 
 export interface EntityInit {
   id: string;
@@ -150,7 +150,12 @@ export class PlayerEntity extends Entity {
       this.maxMp += 26;
       this.hp = this.maxHp;
       this.mp = this.maxMp;
-      this.potentialPoints += ATTRIBUTE_POINTS_PER_LEVEL;
+      this.potentialPoints += getPotentialPointsPerLevel({
+        classId: this.classId,
+        jobAdvancementCompleted: this.jobAdvancementCompleted,
+        evolutionTier: this.evolutionTier,
+        level: this.level,
+      });
       levelsGained++;
     }
     return levelsGained;

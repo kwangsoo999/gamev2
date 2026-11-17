@@ -261,7 +261,7 @@ export interface QuestProgressState {
   claimed?: boolean;
 }
 
-export type ItemCategory = 'equip' | 'consumable' | 'material';
+export type ItemCategory = 'equip' | 'consumable' | 'material' | 'quest';
 export type ItemRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary' | 'mythic';
 export type EquipSlotKey =
   | 'weapon'
@@ -294,6 +294,10 @@ export interface InventoryItemDef {
   isUnique?: boolean;
   isAccountBound?: boolean;
   isCharacterBound?: boolean;
+  isLocked?: boolean;
+  bound?: boolean;
+  durability?: number;
+  maxDurability?: number;
   passiveEffects?: Array<{ id: string; label?: string; description: string }>;
   acquisitionCondition?: string;
   atkBonus?: number;

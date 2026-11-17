@@ -3239,8 +3239,17 @@ export class GameEngine {
       return false;
     }
     const item = this.inventory[idx];
-    if (item.isUnique || item.id === 'ITEM_AWAKENING_CERTIFICATE' || item.id.startsWith('QUEST_')) {
-      this.onToast?.('Không thể vứt bỏ vật phẩm nhiệm vụ hoặc trang bị Độc Nhất.');
+    if (
+      item.isUnique ||
+      item.isLocked ||
+      item.bound ||
+      item.isCharacterBound ||
+      item.isAccountBound ||
+      item.category === 'quest' ||
+      item.id === 'ITEM_AWAKENING_CERTIFICATE' ||
+      item.id.startsWith('QUEST_')
+    ) {
+      this.onToast?.('Không thể vứt bỏ vật phẩm nhiệm vụ hoặc trang bị đã khoá / Độc Nhất.');
       return false;
     }
     const discardQty = Math.min(qty, Number(item.qty || 1));
@@ -3259,7 +3268,29 @@ export class GameEngine {
   }
 
   public sortInventory(): void {
-    const catRank: Record<string, number> = { equip: 1, consumable: 2, material: 3 };
+    // 1. Stack identical stackable items (potions, consumables, materials)
+    const mergedList: InventoryItemDef[] = [];
+    for (const item of this.inventory) {
+      const isStackable = item.category === 'consumable' || item.category === 'material' || (item as any).stackable === true;
+      if (isStackable) {
+        const existing = mergedList.find((m) => m.id === item.id && (m.qty || 1) < 99);
+        if (existing) {
+          const space = 99 - (existing.qty || 1);
+          const add = Math.min(space, item.qty || 1);
+          existing.qty = (existing.qty || 1) + add;
+          const remaining = (item.qty || 1) - add;
+          if (remaining > 0) {
+            mergedList.push({ ...item, qty: remaining });
+          }
+          continue;
+        }
+      }
+      mergedList.push({ ...item });
+    }
+    this.inventory = mergedList;
+
+    // 2. Sort by category (equip -> consumable -> material -> quest), then rarity, then level & name
+    const catRank: Record<string, number> = { equip: 1, consumable: 2, material: 3, quest: 4 };
     const rarRank: Record<string, number> = { mythic: 1, legendary: 2, epic: 3, rare: 4, uncommon: 5, common: 6 };
     this.inventory.sort((a, b) => {
       const ca = catRank[a.category] || 9;
@@ -3268,13 +3299,16 @@ export class GameEngine {
       const ra = rarRank[a.rarity] || 9;
       const rb = rarRank[b.rarity] || 9;
       if (ra !== rb) return ra - rb;
+      const la = a.requiredLevel ?? 0;
+      const lb = b.requiredLevel ?? 0;
+      if (la !== lb) return lb - la;
       return String(a.name || a.id).localeCompare(String(b.name || b.id), 'vi');
     });
     if (this.serverCharacterId) {
       void sortInventoryApi(this.serverCharacterId);
     }
     this.saveLocalProgress();
-    this.onToast?.('Đã sắp xếp túi đồ gọn gàng.');
+    this.onToast?.('Đã gộp vật phẩm & sắp xếp túi đồ gọn gàng.');
     this.emitHudSnapshot();
   }
 
@@ -3284,7 +3318,22 @@ export class GameEngine {
       this.onToast?.('Chưa có trang bị nào đang mặc để sửa chữa.');
       return false;
     }
-    const repairFee = Math.min(this.gold, equippedList.length * 15);
+    let totalDamagedCount = 0;
+    for (const item of equippedList) {
+      const curDur = item.durability ?? 100;
+      const maxDur = item.maxDurability ?? 100;
+      if (curDur < maxDur) {
+        totalDamagedCount++;
+      }
+      item.durability = maxDur;
+      item.maxDurability = maxDur;
+    }
+
+    const repairFee = Math.min(this.gold, totalDamagedCount > 0 ? totalDamagedCount * 20 : 15);
+    if (this.gold < repairFee && totalDamagedCount > 0) {
+      this.onToast?.(`Không đủ vàng để sửa chữa (Cần ${repairFee} Vàng).`);
+      return false;
+    }
     this.gold = Math.max(0, this.gold - repairFee);
     if (this.serverCharacterId) {
       void repairEquipmentApi(this.serverCharacterId);

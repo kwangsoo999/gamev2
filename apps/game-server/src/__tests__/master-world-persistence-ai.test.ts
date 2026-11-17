@@ -264,14 +264,9 @@ test('Master Suite 3 — Normal AI State Machine, Random Elite Spawn/AI & Live F
       chasedElite && (chasedElite.aiState === 'CHASE' || chasedElite.aiState === 'ATTACK' || chasedElite.aiState === 'DETECT'),
       `Expected active AI engage state for nearby Elite, got ${chasedElite?.aiState}`
     );
-    // Ensure the Elite physically moved beyond the 16px home snap threshold before testing leash RETURN
-    if (Math.hypot(forcedElite.x - forcedElite.originX, forcedElite.y - forcedElite.originY) <= 18) {
-      combat.tickAi(500, 'map_whispering_meadow');
-    }
-
     // Step 2: Move player beyond leash distance -> next tick transitions to RETURN
-    playerCombat.x = forcedElite.originX + 1200;
-    combat.tickAi(500, 'map_whispering_meadow');
+    playerCombat.x = forcedElite.originX + 1600;
+    combat.tickAi(100, 'map_whispering_meadow');
     const returnedElite = combat.getRegionMonsters('map_whispering_meadow').find((m) => m.id === forcedElite.id);
     assert.equal(returnedElite?.aiState, 'RETURN');
 

@@ -45,6 +45,9 @@ export class BaloEquipModal {
   private isOpen = false;
   private activeFilter: 'all' | ItemCategory = 'all';
   private selectedItemId: string | null = null;
+  private selectedSource: 'inventory' | 'equipment' = 'inventory';
+  private selectedEquipSlot: EquipSlotKey | null = null;
+  private discardConfirmItem: InventoryItemDef | null = null;
   private latestSnapshot: HudSnapshot | null = null;
 
   private pendingAllocations: Record<keyof PrimaryAttributesState, number> = {
@@ -84,10 +87,33 @@ export class BaloEquipModal {
       closeOnBackdrop: true,
     }));
 
+    this.setupEventListeners();
+  }
+
+  private setupEventListeners() {
+    // Single Click delegation
     this.backdrop.addEventListener('click', (e) => {
       const target = e.target as HTMLElement | null;
-      if (!target || target === this.backdrop) return;
+      if (!target) return;
+      if (target === this.backdrop) return;
       e.stopPropagation();
+
+      // Discard confirmation dialog buttons
+      const confirmDiscardYes = target.closest('#btn-confirm-discard-yes');
+      if (confirmDiscardYes && this.discardConfirmItem) {
+        const idToDiscard = this.discardConfirmItem.id;
+        this.discardConfirmItem = null;
+        this.onDiscardItem?.(idToDiscard);
+        this.render();
+        return;
+      }
+
+      const confirmDiscardNo = target.closest('#btn-confirm-discard-no');
+      if (confirmDiscardNo) {
+        this.discardConfirmItem = null;
+        this.render();
+        return;
+      }
 
       const closeBtn = target.closest('[data-close-modal="balo-equip"], #btn-close-balo');
       if (closeBtn) {
@@ -100,6 +126,7 @@ export class BaloEquipModal {
         const filter = (tabBtn.getAttribute('data-filter') as 'all' | ItemCategory) || 'all';
         this.activeFilter = filter;
         this.selectedItemId = null;
+        this.selectedSource = 'inventory';
         this.render();
         return;
       }
@@ -137,28 +164,70 @@ export class BaloEquipModal {
         return;
       }
 
-      const itemCell = target.closest('[data-item-id]');
-      if (itemCell) {
-        const id = itemCell.getAttribute('data-item-id');
-        if (!id) return;
-        if (this.selectedItemId === id) {
-          this.onUseOrEquipItem?.(id);
-        } else {
-          this.selectedItemId = id;
+      // Click on Equipped Slot
+      const equipSlotBtn = target.closest('[data-equip-slot-btn]');
+      if (equipSlotBtn) {
+        const slot = equipSlotBtn.getAttribute('data-equip-slot-btn') as EquipSlotKey | null;
+        if (slot) {
+          const gear = this.latestSnapshot?.equipment[slot];
+          this.selectedSource = 'equipment';
+          this.selectedEquipSlot = slot;
+          this.selectedItemId = gear ? gear.id : null;
           this.render();
         }
         return;
       }
 
+      // Click on Inventory Item Cell
+      const itemCell = target.closest('[data-item-id]');
+      if (itemCell) {
+        const id = itemCell.getAttribute('data-item-id');
+        if (!id) return;
+        this.selectedSource = 'inventory';
+        this.selectedItemId = id;
+        this.selectedEquipSlot = null;
+        this.render();
+        return;
+      }
+
+      // Use / Equip Button in Inspector
       const useBtn = target.closest('#btn-balo-use-item');
-      if (useBtn && this.selectedItemId) {
+      if (useBtn && this.selectedItemId && this.selectedSource === 'inventory') {
         this.onUseOrEquipItem?.(this.selectedItemId);
         return;
       }
 
+      // Unequip Button in Inspector
+      const unequipInspectorBtn = target.closest('#btn-balo-unequip-item');
+      if (unequipInspectorBtn && this.selectedEquipSlot) {
+        this.onUnequipSlot?.(this.selectedEquipSlot);
+        this.selectedSource = 'inventory';
+        this.selectedItemId = null;
+        this.selectedEquipSlot = null;
+        return;
+      }
+
+      // Discard Button in Inspector
       const discardBtn = target.closest('#btn-balo-discard');
-      if (discardBtn && this.selectedItemId) {
-        this.onDiscardItem?.(this.selectedItemId);
+      if (discardBtn && this.selectedItemId && this.selectedSource === 'inventory') {
+        const item = this.latestSnapshot?.inventory.find((i) => i.id === this.selectedItemId);
+        if (item) {
+          if (
+            item.isUnique ||
+            item.isLocked ||
+            item.bound ||
+            item.isCharacterBound ||
+            item.isAccountBound ||
+            item.category === 'quest' ||
+            item.id === 'ITEM_AWAKENING_CERTIFICATE' ||
+            item.id.startsWith('QUEST_')
+          ) {
+            this.onToast?.('Không thể vứt bỏ vật phẩm nhiệm vụ hoặc vật phẩm bị khoá!', 'error');
+            return;
+          }
+          this.discardConfirmItem = item;
+          this.render();
+        }
         return;
       }
 
@@ -173,22 +242,118 @@ export class BaloEquipModal {
         this.onRepairEquipment?.();
         return;
       }
+    });
 
-      const unequipBtn = target.closest('[data-unequip-slot]');
-      if (unequipBtn) {
-        const slot = unequipBtn.getAttribute('data-unequip-slot') as EquipSlotKey | null;
-        if (slot) this.onUnequipSlot?.(slot);
+    // Double-Click delegation: rapid equip/use for bag items & instant unequip for gear
+    this.backdrop.addEventListener('dblclick', (e) => {
+      const target = e.target as HTMLElement | null;
+      if (!target || target === this.backdrop) return;
+      e.stopPropagation();
+
+      // Double click an inventory item cell -> equip or use directly
+      const itemCell = target.closest('[data-item-id]');
+      if (itemCell) {
+        const id = itemCell.getAttribute('data-item-id');
+        if (id) {
+          this.onUseOrEquipItem?.(id);
+        }
+        return;
       }
+
+      // Double click an equipped slot -> unequip directly
+      const equipSlotBtn = target.closest('[data-equip-slot-btn]');
+      if (equipSlotBtn) {
+        const slot = equipSlotBtn.getAttribute('data-equip-slot-btn') as EquipSlotKey | null;
+        if (slot && this.latestSnapshot?.equipment[slot]) {
+          this.onUnequipSlot?.(slot);
+        }
+        return;
+      }
+    });
+
+    // HTML5 Drag and Drop delegation
+    this.backdrop.addEventListener('dragstart', (e: DragEvent) => {
+      const target = e.target as HTMLElement | null;
+      const cell = target?.closest('[data-item-id]') as HTMLElement | null;
+      if (!cell || !e.dataTransfer) return;
+
+      const itemId = cell.getAttribute('data-item-id');
+      if (!itemId) return;
+
+      cell.classList.add('is-dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', itemId);
+    });
+
+    this.backdrop.addEventListener('dragend', (e: DragEvent) => {
+      const target = e.target as HTMLElement | null;
+      const cell = target?.closest('[data-item-id]') as HTMLElement | null;
+      if (cell) {
+        cell.classList.remove('is-dragging');
+      }
+      this.backdrop.querySelectorAll('.drag-over-valid, .drag-over-invalid').forEach((el) => {
+        el.classList.remove('drag-over-valid', 'drag-over-invalid');
+      });
+    });
+
+    this.backdrop.addEventListener('dragover', (e: DragEvent) => {
+      const target = e.target as HTMLElement | null;
+      const slotCell = target?.closest('[data-equip-slot-target]') as HTMLElement | null;
+      if (slotCell && e.dataTransfer) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+      }
+    });
+
+    this.backdrop.addEventListener('dragenter', (e: DragEvent) => {
+      const target = e.target as HTMLElement | null;
+      const slotCell = target?.closest('[data-equip-slot-target]') as HTMLElement | null;
+      if (slotCell) {
+        const slotKey = slotCell.getAttribute('data-equip-slot-target');
+        slotCell.classList.add('drag-over-valid');
+      }
+    });
+
+    this.backdrop.addEventListener('dragleave', (e: DragEvent) => {
+      const target = e.target as HTMLElement | null;
+      const slotCell = target?.closest('[data-equip-slot-target]') as HTMLElement | null;
+      if (slotCell) {
+        slotCell.classList.remove('drag-over-valid', 'drag-over-invalid');
+      }
+    });
+
+    this.backdrop.addEventListener('drop', (e: DragEvent) => {
+      const target = e.target as HTMLElement | null;
+      const slotCell = target?.closest('[data-equip-slot-target]') as HTMLElement | null;
+      if (!slotCell || !e.dataTransfer) return;
+      e.preventDefault();
+      slotCell.classList.remove('drag-over-valid', 'drag-over-invalid');
+
+      const itemId = e.dataTransfer.getData('text/plain');
+      if (!itemId || !this.latestSnapshot) return;
+
+      const item = this.latestSnapshot.inventory.find((i) => i.id === itemId);
+      if (!item) return;
+
+      const targetSlot = slotCell.getAttribute('data-equip-slot-target') as EquipSlotKey | null;
+      if (!targetSlot) return;
+
+      if (item.category !== 'equip' || item.equipSlot !== targetSlot) {
+        this.onToast?.(`Không thể trang bị "${item.name}" vào ô này (Cần ô ${item.equipSlot || 'khác'})!`, 'error');
+        return;
+      }
+
+      if (item.requiredLevel && this.latestSnapshot.level < item.requiredLevel) {
+        this.onToast?.(`Cần đạt Cấp ${item.requiredLevel} để trang bị "${item.name}"!`, 'error');
+        return;
+      }
+
+      this.onUseOrEquipItem?.(itemId);
     });
   }
 
   private getTotalPending(): number {
     return STAT_KEYS.reduce((sum, key) => sum + Number(this.pendingAllocations[key] || 0), 0);
-  }
-
-  private getRemainingPreview(): number {
-    const committed = Math.max(0, Number(this.latestSnapshot?.stats.potentialPoints ?? 0));
-    return Math.max(0, committed - this.getTotalPending());
   }
 
   private incrementPendingStat(stat: keyof PrimaryAttributesState) {
@@ -239,7 +404,6 @@ export class BaloEquipModal {
     if (totalPending <= 0) return;
 
     if (!this.onConfirmStatAllocations) {
-      // Fallback single allocation if wired without async handler
       for (const k of STAT_KEYS) {
         for (let i = 0; i < this.pendingAllocations[k]; i++) {
           this.onAllocateAttr?.(k);
@@ -274,6 +438,8 @@ export class BaloEquipModal {
     }
   }
 
+  private lastRenderHash = '';
+
   public sync(snapshot: HudSnapshot) {
     this.latestSnapshot = snapshot;
     const committed = Math.max(0, Number(snapshot.stats.potentialPoints ?? 0));
@@ -282,19 +448,24 @@ export class BaloEquipModal {
       this.onPendingPointsPreview?.(null);
     }
     if (this.isOpen) {
-      this.render();
+      const currentHash = `${snapshot.stats.potentialPoints}_${snapshot.level}_${snapshot.stats.gold}_${snapshot.inventory.length}_${Object.keys(snapshot.equipment).join(',')}_${JSON.stringify(snapshot.baseStats)}`;
+      if (currentHash !== this.lastRenderHash && this.getTotalPending() === 0) {
+        this.render();
+      }
     }
   }
 
   public open(snapshot?: HudSnapshot | null) {
     if (snapshot) this.latestSnapshot = snapshot;
     this.isOpen = true;
+    this.discardConfirmItem = null;
     modalManager.open({
       id: BaloEquipModal.MODAL_ID,
       backdrop: this.backdrop,
       onClose: () => {
         this.isOpen = false;
         this.isSubmittingStats = false;
+        this.discardConfirmItem = null;
         for (const k of STAT_KEYS) this.pendingAllocations[k] = 0;
         this.onPendingPointsPreview?.(null);
       },
@@ -304,6 +475,7 @@ export class BaloEquipModal {
 
   public close() {
     this.isOpen = false;
+    this.discardConfirmItem = null;
     modalManager.close(BaloEquipModal.MODAL_ID);
   }
 
@@ -313,20 +485,28 @@ export class BaloEquipModal {
   }
 
   private renderEquipSlotBtn(slot: EquipSlotKey, label: string, hintSvg: string, gear?: InventoryItemDef): string {
+    const isSelected = this.selectedSource === 'equipment' && this.selectedEquipSlot === slot;
     const upg = gear?.upgradeLevel ? `<span class="tk-upgrade-badge">+${gear.upgradeLevel}</span>` : '';
     const artHtml = gear?.iconUrl
       ? `<img src="${gear.iconUrl}" alt="${gear.name}" class="tk-slot-img" />`
       : getItemIconSvg(gear ? gear.iconKey : hintSvg);
+
+    const dur = gear?.durability ?? 100;
+    const maxDur = gear?.maxDurability ?? 100;
+    const durPct = Math.max(0, Math.min(100, Math.round((dur / maxDur) * 100)));
+
     return `
       <button
         type="button"
-        class="tk-slot-cell tk-equip-slot ${gear ? `rarity-${gear.rarity}` : 'empty'}"
-        data-unequip-slot="${slot}"
-        title="${gear ? `${gear.name}${gear.upgradeLevel ? ` (+${gear.upgradeLevel})` : ''} [${RARITY_LABELS[gear.rarity] || gear.rarity}] · Nhấp để tháo vào Balo` : `Trống · ${label}`}"
+        class="tk-slot-cell tk-equip-slot ${gear ? `rarity-${gear.rarity}` : 'empty'} ${isSelected ? 'selected' : ''}"
+        data-equip-slot-btn="${slot}"
+        data-equip-slot-target="${slot}"
+        title="${gear ? `${gear.name}${gear.upgradeLevel ? ` (+${gear.upgradeLevel})` : ''} [${RARITY_LABELS[gear.rarity] || gear.rarity}] · Nhấp xem chi tiết · Nhấp đúp để tháo` : `Trống · ${label} · Kéo trang bị vào đây`}"
       >
         <div class="tk-slot-art ${gear ? '' : 'ghost'}">${artHtml}</div>
         ${upg}
         <span class="tk-slot-subtag">${label}</span>
+        ${gear ? `<div class="tk-slot-dur-indicator" style="position:absolute;bottom:0;left:2px;right:2px;height:2px;background:#e2e8f0;border-radius:1px;"><div style="height:100%;width:${durPct}%;background:${durPct < 30 ? '#ef4444' : '#22c55e'};"></div></div>` : ''}
       </button>
     `;
   }
@@ -343,9 +523,20 @@ export class BaloEquipModal {
         ? snap.inventory
         : snap.inventory.filter((it) => it.category === this.activeFilter);
 
-    const selectedItem =
-      filteredItems.find((i) => i.id === this.selectedItemId) || filteredItems[0] || null;
-    if (selectedItem) this.selectedItemId = selectedItem.id;
+    // Resolve selected item: can be from inventory OR from equipment
+    let inspectedItem: InventoryItemDef | null = null;
+    let isInspectingEquipped = false;
+
+    if (this.selectedSource === 'equipment' && this.selectedEquipSlot) {
+      inspectedItem = snap.equipment[this.selectedEquipSlot] || null;
+      isInspectingEquipped = true;
+    } else {
+      inspectedItem = filteredItems.find((i) => i.id === this.selectedItemId) || filteredItems[0] || null;
+      if (inspectedItem) {
+        this.selectedItemId = inspectedItem.id;
+        this.selectedSource = 'inventory';
+      }
+    }
 
     const totalSlots = 30;
     let gridHtml = '';
@@ -354,7 +545,7 @@ export class BaloEquipModal {
       if (!item) {
         gridHtml += `<div class="tk-slot-cell empty"></div>`;
       } else {
-        const isSel = selectedItem?.id === item.id;
+        const isSel = this.selectedSource === 'inventory' && inspectedItem?.id === item.id;
         const artHtml = item.iconUrl
           ? `<img src="${item.iconUrl}" alt="${item.name}" class="tk-slot-img" />`
           : getItemIconSvg(item.iconKey);
@@ -363,7 +554,8 @@ export class BaloEquipModal {
             type="button"
             class="tk-slot-cell rarity-${item.rarity} ${isSel ? 'selected' : ''}"
             data-item-id="${item.id}"
-            title="${item.name} [${RARITY_LABELS[item.rarity] || item.rarity}]"
+            draggable="true"
+            title="${item.name} [${RARITY_LABELS[item.rarity] || item.rarity}] · Nhấp xem · Nhấp đúp dùng/mặc · Kéo để trang bị"
           >
             <div class="tk-slot-art">${artHtml}</div>
             ${item.qty > 1 ? `<span class="tk-item-qty">${item.qty}</span>` : ''}
@@ -373,18 +565,11 @@ export class BaloEquipModal {
       }
     }
 
-    const actionLabel =
-      selectedItem?.category === 'equip'
-        ? 'Trang Bị'
-        : selectedItem?.category === 'consumable'
-        ? 'Sử Dụng'
-        : 'Nguyên Liệu';
-
     const committedPoints = Math.max(0, Number(snap.stats.potentialPoints ?? 0));
     const totalPending = this.getTotalPending();
     const remainingPoints = Math.max(0, committedPoints - totalPending);
 
-    // Live projected combat preview powered by unified Stat Aggregator (Job Affinity + DR + Hard Caps)
+    // Live projected combat preview powered by Stat Aggregator
     const pStr = this.pendingAllocations.str;
     const pDex = this.pendingAllocations.dex;
     const pInt = this.pendingAllocations.int;
@@ -464,8 +649,94 @@ export class BaloEquipModal {
       `
       : '';
 
+    // Build Item Comparison Section if inspecting an equipment item from bag
+    let compareHtml = '';
+    if (inspectedItem && inspectedItem.category === 'equip' && inspectedItem.equipSlot && !isInspectingEquipped) {
+      const currentlyEquipped = snap.equipment[inspectedItem.equipSlot];
+      if (currentlyEquipped) {
+        const diffAtk = (inspectedItem.atkBonus || 0) - (currentlyEquipped.atkBonus || 0);
+        const diffDef = (inspectedItem.defBonus || 0) - (currentlyEquipped.defBonus || 0);
+        const diffMatk = (inspectedItem.matkBonus || 0) - (currentlyEquipped.matkBonus || 0);
+        const diffHp = (inspectedItem.hpBonus || 0) - (currentlyEquipped.hpBonus || 0);
+        const diffCrit = (inspectedItem.critRate || 0) - (currentlyEquipped.critRate || 0);
+
+        const formatDiff = (label: string, diff: number, suffix = '') => {
+          if (diff === 0) return `<span class="tk-stat-diff neutral">${label}: =</span>`;
+          const isPos = diff > 0;
+          return `<span class="tk-stat-diff ${isPos ? 'positive' : 'negative'}">${label}: ${isPos ? '+' : ''}${diff}${suffix}</span>`;
+        };
+
+        compareHtml = `
+          <div class="tk-compare-card">
+            <div class="tk-compare-title">
+              <span>So sánh với đồ đang mặc (${currentlyEquipped.name}):</span>
+            </div>
+            <div class="tk-compare-grid">
+              ${formatDiff('ATK', diffAtk)}
+              ${formatDiff('DEF', diffDef)}
+              ${formatDiff('MATK', diffMatk)}
+              ${formatDiff('HP', diffHp)}
+              ${formatDiff('Crit', diffCrit, '%')}
+            </div>
+          </div>
+        `;
+      } else {
+        compareHtml = `
+          <div class="tk-compare-card" style="background:#f0fdf4;border-color:#86efac;">
+            <div class="tk-compare-title" style="color:#166534;">
+              <span>Ô này đang trống · Nhận toàn bộ chỉ số khi trang bị!</span>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Build Durability & Requirement tags
+    let durReqHtml = '';
+    if (inspectedItem && inspectedItem.category === 'equip') {
+      const curDur = inspectedItem.durability ?? 100;
+      const maxDur = inspectedItem.maxDurability ?? 100;
+      const pct = Math.max(0, Math.min(100, Math.round((curDur / maxDur) * 100)));
+      const isLow = pct < 30;
+
+      const reqLv = inspectedItem.requiredLevel || 1;
+      const meetsLv = snap.level >= reqLv;
+
+      durReqHtml = `
+        <div class="tk-durability-box">
+          <span>Độ bền: <b>${curDur}/${maxDur}</b></span>
+          <div class="tk-durability-track">
+            <div class="tk-durability-fill ${isLow ? 'low' : ''}" style="width:${pct}%;"></div>
+          </div>
+        </div>
+        <div class="tk-req-row">
+          <span class="tk-req-tag ${meetsLv ? 'valid' : 'invalid'}">Cấp yêu cầu: Lv.${reqLv}</span>
+          ${inspectedItem.allowedClasses?.length ? `<span class="tk-req-tag valid">Hệ: ${inspectedItem.allowedClasses.join(', ')}</span>` : '<span class="tk-req-tag valid">Mọi hệ</span>'}
+        </div>
+      `;
+    }
+
+    // Discard Confirmation Dialog overlay if active
+    let discardDialogHtml = '';
+    if (this.discardConfirmItem) {
+      discardDialogHtml = `
+        <div class="tk-confirm-dialog-backdrop">
+          <div class="tk-confirm-dialog-box">
+            <h3>XÁC NHẬN VỨT BỎ</h3>
+            <p>Bạn có chắc chắn muốn vứt bỏ vật phẩm <b>${this.discardConfirmItem.name}</b> x1?</p>
+            <p class="tk-confirm-warning">⚠ Vật phẩm sẽ biến mất vĩnh viễn khỏi hành trang!</p>
+            <div class="tk-confirm-btn-row">
+              <button type="button" class="tk-action-btn tk-danger" id="btn-confirm-discard-yes">Xác Nhận Vứt</button>
+              <button type="button" class="tk-tab-btn" id="btn-confirm-discard-no">Hủy Bỏ</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     this.backdrop.innerHTML = `
       <div class="tk-window tk-balo-window" role="dialog" aria-modal="true" aria-label="Nhân vật, Trang bị và Balo">
+        ${discardDialogHtml}
         <div class="tk-window-header">
           <div class="tk-header-title-group">
             <span class="tk-header-crest">${getBackpackIconSvg()}</span>
@@ -630,40 +901,63 @@ export class BaloEquipModal {
 
             <div class="tk-inspector-bar">
               ${
-                selectedItem
+                inspectedItem
                   ? `
                 <div class="tk-inspector-info">
-                  <div class="tk-inspector-name rarity-text-${selectedItem.rarity}">
-                    ${selectedItem.name}
-                    ${selectedItem.isUnique ? `<span class="tk-rarity-tag rarity-mythic">UNIQUE</span>` : ''}
-                    ${selectedItem.isCharacterBound ? `<span class="tk-heading-pill">Khoá Nhân Vật</span>` : ''}
-                    ${selectedItem.isAccountBound ? `<span class="tk-heading-pill">Khoá Tài Khoản</span>` : ''}
-                    <span class="tk-rarity-tag rarity-${selectedItem.rarity}">${RARITY_LABELS[selectedItem.rarity] || selectedItem.rarity}</span>
-                    ${selectedItem.setId ? `<span class="tk-heading-pill">Bộ: ${selectedItem.setId}</span>` : ''}
+                  <div class="tk-inspector-name rarity-text-${inspectedItem.rarity}">
+                    ${inspectedItem.name}
+                    ${isInspectingEquipped ? `<span class="tk-heading-pill" style="background:#dbeafe;border-color:#60a5fa;color:#1e40af;">ĐANG MẶC</span>` : ''}
+                    ${inspectedItem.isUnique ? `<span class="tk-rarity-tag rarity-mythic">UNIQUE</span>` : ''}
+                    ${inspectedItem.isCharacterBound ? `<span class="tk-heading-pill">Khoá Nhân Vật</span>` : ''}
+                    ${inspectedItem.isAccountBound ? `<span class="tk-heading-pill">Khoá Tài Khoản</span>` : ''}
+                    <span class="tk-rarity-tag rarity-${inspectedItem.rarity}">${RARITY_LABELS[inspectedItem.rarity] || inspectedItem.rarity}</span>
+                    ${inspectedItem.setId ? `<span class="tk-heading-pill">Bộ: ${inspectedItem.setId}</span>` : ''}
                   </div>
                   <div class="tk-inspector-desc">
-                    ${selectedItem.desc}${selectedItem.atkBonus ? ` · +${selectedItem.atkBonus} ATK` : ''}${selectedItem.matkBonus ? ` · +${selectedItem.matkBonus} MATK` : ''}${selectedItem.defBonus ? ` · +${selectedItem.defBonus} DEF` : ''}${selectedItem.hpBonus ? ` · +${selectedItem.hpBonus} HP` : ''}${selectedItem.critRate ? ` · +${selectedItem.critRate}% Crit` : ''}
-                    ${selectedItem.passiveEffects?.length ? `<div style="margin-top:4px;color:#fbbf24;font-size:11px;">✦ Nội Tại Unique: ${selectedItem.passiveEffects.map((p) => p.description).join(' · ')}</div>` : ''}
+                    ${inspectedItem.desc}${inspectedItem.atkBonus ? ` · +${inspectedItem.atkBonus} ATK` : ''}${inspectedItem.matkBonus ? ` · +${inspectedItem.matkBonus} MATK` : ''}${inspectedItem.defBonus ? ` · +${inspectedItem.defBonus} DEF` : ''}${inspectedItem.hpBonus ? ` · +${inspectedItem.hpBonus} HP` : ''}${inspectedItem.critRate ? ` · +${inspectedItem.critRate}% Crit` : ''}
+                    ${inspectedItem.passiveEffects?.length ? `<div style="margin-top:4px;color:#fbbf24;font-size:11px;">✦ Nội Tại Unique: ${inspectedItem.passiveEffects.map((p) => p.description).join(' · ')}</div>` : ''}
                   </div>
+                  ${durReqHtml}
+                  ${compareHtml}
                 </div>
-                <div style="display:flex;gap:6px;flex-wrap:wrap;">
-                  <button
-                    type="button"
-                    class="tk-action-btn"
-                    id="btn-balo-use-item"
-                    ${selectedItem.category === 'material' ? 'disabled' : ''}
-                  >${actionLabel}</button>
-                  <button
-                    type="button"
-                    class="tk-tab-btn"
-                    id="btn-balo-discard"
-                    style="color:#fca5a5;"
-                    ${selectedItem.isUnique ? 'disabled' : ''}
-                    title="Vứt bỏ 1 vật phẩm đã chọn"
-                  >🗑 Vứt Bỏ</button>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;align-self:flex-start;">
+                  ${
+                    isInspectingEquipped
+                      ? `
+                    <button
+                      type="button"
+                      class="tk-action-btn"
+                      id="btn-balo-unequip-item"
+                      title="Tháo trang bị này về hành trang"
+                    >Tháo Trang Bị</button>
+                  `
+                      : `
+                    <button
+                      type="button"
+                      class="tk-action-btn"
+                      id="btn-balo-use-item"
+                      ${inspectedItem.category === 'material' ? 'disabled' : ''}
+                    >${inspectedItem.category === 'equip' ? 'Trang Bị' : inspectedItem.category === 'consumable' ? 'Sử Dụng' : 'Nguyên Liệu'}</button>
+                    <button
+                      type="button"
+                      class="tk-tab-btn"
+                      id="btn-balo-discard"
+                      style="color:#fca5a5;"
+                      ${inspectedItem.isUnique || inspectedItem.isLocked || inspectedItem.bound || inspectedItem.isCharacterBound || inspectedItem.isAccountBound ? 'disabled' : ''}
+                      title="Vứt bỏ 1 vật phẩm đã chọn"
+                    >🗑 Vứt Bỏ</button>
+                  `
+                  }
                 </div>
               `
-                  : `<div class="tk-inspector-desc">Chọn vật phẩm để xem chi tiết hoặc trang bị.</div>`
+                  : this.selectedSource === 'equipment' && this.selectedEquipSlot
+                  ? `
+                <div class="tk-inspector-info">
+                  <div class="tk-inspector-name">Ô Trang Bị: ${this.selectedEquipSlot.toUpperCase()} (Đang Trống)</div>
+                  <div class="tk-inspector-desc">Chưa có trang bị nào được gắn vào ô này. Hãy chọn một trang bị phù hợp từ Balo hoặc kéo thả vào ô.</div>
+                </div>
+              `
+                  : `<div class="tk-inspector-desc">Chọn vật phẩm để xem chi tiết hoặc trang bị. Nhấp đúp để dùng/mặc nhanh. Kéo thả vào ô trang bị.</div>`
               }
             </div>
 
@@ -673,8 +967,8 @@ export class BaloEquipModal {
                 <div class="tk-coin-pill"><span class="tk-coin-dot silver"></span>Bạc: <strong>${snap.stats.silver.toLocaleString()}</strong></div>
               </div>
               <div style="display:flex;gap:6px;">
-                <button type="button" class="tk-tab-btn" id="btn-balo-sort" title="Gộp gọn &amp; sắp xếp hành trang">⇅ Sắp Xếp</button>
-                <button type="button" class="tk-tab-btn" id="btn-balo-repair" title="Sửa chữa độ bền trang bị đang mặc">🔧 Sửa Chữa</button>
+                <button type="button" class="tk-tab-btn" id="btn-balo-sort" title="Gộp vật phẩm &amp; sắp xếp hành trang">⇅ Sắp Xếp</button>
+                <button type="button" class="tk-tab-btn" id="btn-balo-repair" title="Sửa chữa độ bền trang bị đang mặc (100%)">🔧 Sửa Chữa</button>
               </div>
             </div>
           </section>

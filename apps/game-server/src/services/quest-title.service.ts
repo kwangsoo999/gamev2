@@ -11,6 +11,7 @@ import {
 } from '@elysia/game-types';
 import {
   ATTRIBUTE_POINTS_PER_LEVEL,
+  getPotentialPointsPerLevel,
   INITIAL_ITEMS,
   checkUniqueEquipmentBinding,
   computeExpRequiredForLevel,
@@ -866,7 +867,8 @@ export class QuestTitleService {
         char.exp -= computeExpRequiredForLevel(char.level);
         char.level += 1;
         levelsGained += 1;
-        char.availableAttributePoints = Number(char.availableAttributePoints ?? char.unspentStatPoints ?? 0) + ATTRIBUTE_POINTS_PER_LEVEL;
+        const ptsPerLevel = getPotentialPointsPerLevel(char);
+        char.availableAttributePoints = Number(char.availableAttributePoints ?? char.unspentStatPoints ?? 0) + ptsPerLevel;
         char.unspentStatPoints = char.availableAttributePoints;
         char.skillPoints = Number(char.skillPoints || 0) + 1;
       }

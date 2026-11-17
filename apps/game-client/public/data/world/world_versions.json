@@ -9732,5 +9732,1293 @@
         "version": 3
       }
     }
+  ],
+  "spawn_zones:ZONE_VERIFY_mwkjxguq": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:30:42.703Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkjxguq",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:30:42.699Z",
+        "status": "draft",
+        "createdAt": "2026-11-17T10:30:42.699Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:30:42.719Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkjxguq",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:30:42.714Z",
+        "status": "testing",
+        "createdAt": "2026-11-17T10:30:42.699Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:30:42.735Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkjxguq",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:30:42.731Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:30:42.699Z",
+        "version": 3
+      }
+    },
+    {
+      "version": 4,
+      "timestamp": "2026-11-17T10:30:42.748Z",
+      "note": "Updated attributes",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkjxguq",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 648,
+        "y": 648,
+        "radius": 90,
+        "maxAlive": 7,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:30:42.745Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:30:42.699Z",
+        "version": 4
+      }
+    },
+    {
+      "version": 5,
+      "timestamp": "2026-11-17T10:30:42.765Z",
+      "note": "Rollback to v3",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkjxguq",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:30:42.765Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:30:42.699Z",
+        "version": 5
+      }
+    }
+  ],
+  "equipment_sets:set_admin_test_1794911454798": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:30:54.801Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "set_admin_test_1794911454798",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:30:54.798Z",
+        "status": "draft",
+        "createdAt": "2026-11-17T10:30:54.798Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:30:54.811Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "set_admin_test_1794911454798",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:30:54.808Z",
+        "status": "testing",
+        "createdAt": "2026-11-17T10:30:54.798Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:30:54.820Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "set_admin_test_1794911454798",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:30:54.817Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:30:54.798Z",
+        "version": 3
+      }
+    }
+  ],
+  "monsters:mon_test_1794911458014": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:30:58.018Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "mon_test_1794911458014",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "draft",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:30:58.015Z",
+        "createdAt": "2026-11-17T10:30:58.015Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:30:58.026Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "mon_test_1794911458014",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "testing",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:30:58.026Z",
+        "createdAt": "2026-11-17T10:30:58.015Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:30:58.034Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "mon_test_1794911458014",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "published",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:30:58.034Z",
+        "createdAt": "2026-11-17T10:30:58.015Z",
+        "version": 3
+      }
+    }
+  ],
+  "spawn_zones:ZONE_VERIFY_mwkk6vyt": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:38:02.201Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkk6vyt",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:38:02.197Z",
+        "status": "draft",
+        "createdAt": "2026-11-17T10:38:02.197Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:38:02.217Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkk6vyt",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:38:02.212Z",
+        "status": "testing",
+        "createdAt": "2026-11-17T10:38:02.197Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:38:02.230Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkk6vyt",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:38:02.227Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:38:02.197Z",
+        "version": 3
+      }
+    },
+    {
+      "version": 4,
+      "timestamp": "2026-11-17T10:38:02.244Z",
+      "note": "Updated attributes",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkk6vyt",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 648,
+        "y": 648,
+        "radius": 90,
+        "maxAlive": 7,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:38:02.241Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:38:02.197Z",
+        "version": 4
+      }
+    },
+    {
+      "version": 5,
+      "timestamp": "2026-11-17T10:38:02.261Z",
+      "note": "Rollback to v3",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkk6vyt",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:38:02.261Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:38:02.197Z",
+        "version": 5
+      }
+    }
+  ],
+  "equipment_sets:set_admin_test_1794911894193": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:38:14.197Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "set_admin_test_1794911894193",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:38:14.193Z",
+        "status": "draft",
+        "createdAt": "2026-11-17T10:38:14.193Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:38:14.208Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "set_admin_test_1794911894193",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:38:14.204Z",
+        "status": "testing",
+        "createdAt": "2026-11-17T10:38:14.193Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:38:14.219Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "set_admin_test_1794911894193",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:38:14.216Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:38:14.193Z",
+        "version": 3
+      }
+    }
+  ],
+  "monsters:mon_test_1794911897621": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:38:17.625Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "mon_test_1794911897621",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "draft",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:38:17.621Z",
+        "createdAt": "2026-11-17T10:38:17.621Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:38:17.632Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "mon_test_1794911897621",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "testing",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:38:17.632Z",
+        "createdAt": "2026-11-17T10:38:17.621Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:38:17.639Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "mon_test_1794911897621",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "published",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:38:17.639Z",
+        "createdAt": "2026-11-17T10:38:17.621Z",
+        "version": 3
+      }
+    }
+  ],
+  "spawn_zones:ZONE_VERIFY_mwkkiow7": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:47:12.931Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkiow7",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:47:12.927Z",
+        "status": "draft",
+        "createdAt": "2026-11-17T10:47:12.927Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:47:12.950Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkiow7",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:47:12.944Z",
+        "status": "testing",
+        "createdAt": "2026-11-17T10:47:12.927Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:47:12.969Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkiow7",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:47:12.963Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:47:12.927Z",
+        "version": 3
+      }
+    },
+    {
+      "version": 4,
+      "timestamp": "2026-11-17T10:47:12.992Z",
+      "note": "Updated attributes",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkiow7",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 648,
+        "y": 648,
+        "radius": 90,
+        "maxAlive": 7,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:47:12.987Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:47:12.927Z",
+        "version": 4
+      }
+    },
+    {
+      "version": 5,
+      "timestamp": "2026-11-17T10:47:13.017Z",
+      "note": "Rollback to v3",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkiow7",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:47:13.017Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:47:12.927Z",
+        "version": 5
+      }
+    }
+  ],
+  "equipment_sets:set_admin_test_1794912446176": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:47:26.180Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "set_admin_test_1794912446176",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:47:26.177Z",
+        "status": "draft",
+        "createdAt": "2026-11-17T10:47:26.177Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:47:26.202Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "set_admin_test_1794912446176",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:47:26.196Z",
+        "status": "testing",
+        "createdAt": "2026-11-17T10:47:26.177Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:47:26.217Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "set_admin_test_1794912446176",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:47:26.212Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:47:26.177Z",
+        "version": 3
+      }
+    }
+  ],
+  "monsters:mon_test_1794912449826": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:47:29.831Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "mon_test_1794912449826",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "draft",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:47:29.827Z",
+        "createdAt": "2026-11-17T10:47:29.827Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:47:29.838Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "mon_test_1794912449826",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "testing",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:47:29.838Z",
+        "createdAt": "2026-11-17T10:47:29.827Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:47:29.845Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "mon_test_1794912449826",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "published",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:47:29.845Z",
+        "createdAt": "2026-11-17T10:47:29.827Z",
+        "version": 3
+      }
+    }
+  ],
+  "spawn_zones:ZONE_VERIFY_mwkkml0s": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:50:14.517Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkml0s",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:50:14.513Z",
+        "status": "draft",
+        "createdAt": "2026-11-17T10:50:14.513Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:50:14.532Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkml0s",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:50:14.529Z",
+        "status": "testing",
+        "createdAt": "2026-11-17T10:50:14.513Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:50:14.547Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkml0s",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:50:14.543Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:50:14.513Z",
+        "version": 3
+      }
+    },
+    {
+      "version": 4,
+      "timestamp": "2026-11-17T10:50:14.561Z",
+      "note": "Updated attributes",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkml0s",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 648,
+        "y": 648,
+        "radius": 90,
+        "maxAlive": 7,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:50:14.558Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:50:14.513Z",
+        "version": 4
+      }
+    },
+    {
+      "version": 5,
+      "timestamp": "2026-11-17T10:50:14.580Z",
+      "note": "Rollback to v3",
+      "snapshot": {
+        "id": "ZONE_VERIFY_mwkkml0s",
+        "regionId": "map_beginner_meadow",
+        "monsterId": "mon_green_slime",
+        "name": "Verify Temp Spawn Zone",
+        "zoneTier": "entrance",
+        "x": 640,
+        "y": 640,
+        "radius": 90,
+        "maxAlive": 3,
+        "respawnTime": 8,
+        "tx": 13,
+        "ty": 13,
+        "levelMin": 1,
+        "levelMax": 1,
+        "enabled": true,
+        "updatedAt": "2026-11-17T10:50:14.580Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:50:14.513Z",
+        "version": 5
+      }
+    }
+  ],
+  "equipment_sets:set_admin_test_1794912628433": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:50:28.436Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "set_admin_test_1794912628433",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:50:28.433Z",
+        "status": "draft",
+        "createdAt": "2026-11-17T10:50:28.433Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:50:28.447Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "set_admin_test_1794912628433",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:50:28.444Z",
+        "status": "testing",
+        "createdAt": "2026-11-17T10:50:28.433Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:50:28.457Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "set_admin_test_1794912628433",
+        "name": "Admin Test Set",
+        "nameVi": "Bộ Test Admin",
+        "description": "Verification set",
+        "classId": "swordsman",
+        "tierLevel": 15,
+        "rarity": "rare",
+        "category": "class_set",
+        "pieceItemIds": [],
+        "bonusTiers": [
+          {
+            "requiredPieces": 2,
+            "summary": "+10 ATK",
+            "bonuses": {
+              "atk": 10
+            }
+          }
+        ],
+        "updatedAt": "2026-11-17T10:50:28.454Z",
+        "status": "published",
+        "createdAt": "2026-11-17T10:50:28.433Z",
+        "version": 3
+      }
+    }
+  ],
+  "monsters:mon_test_1794912632214": [
+    {
+      "version": 1,
+      "timestamp": "2026-11-17T10:50:32.219Z",
+      "note": "Created record",
+      "snapshot": {
+        "id": "mon_test_1794912632214",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "draft",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:50:32.215Z",
+        "createdAt": "2026-11-17T10:50:32.215Z",
+        "version": 1
+      }
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-11-17T10:50:32.229Z",
+      "note": "Transition -> testing",
+      "snapshot": {
+        "id": "mon_test_1794912632214",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "testing",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:50:32.229Z",
+        "createdAt": "2026-11-17T10:50:32.215Z",
+        "version": 2
+      }
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-11-17T10:50:32.239Z",
+      "note": "Transition -> published",
+      "snapshot": {
+        "id": "mon_test_1794912632214",
+        "name": "Test Mirage Slime",
+        "internalName": "test_mirage_slime",
+        "regionId": "map_whispering_meadow",
+        "levelMin": 15,
+        "levelMax": 16,
+        "hp": 1500,
+        "expReward": 200,
+        "goldReward": 50,
+        "status": "published",
+        "category": "NORMAL",
+        "isBoss": false,
+        "isElite": false,
+        "mp": 50,
+        "physicalAttack": 10,
+        "physicalDefense": 5,
+        "magicalAttack": 5,
+        "magicalDefense": 5,
+        "agi": 10,
+        "movementSpeed": 95,
+        "attackRange": 58,
+        "spawnCount": 3,
+        "respawnTimeSeconds": 10,
+        "updatedAt": "2026-11-17T10:50:32.239Z",
+        "createdAt": "2026-11-17T10:50:32.215Z",
+        "version": 3
+      }
+    }
   ]
 }

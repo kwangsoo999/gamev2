@@ -316,3 +316,37 @@ export function validateWorldDesignBible(): { valid: boolean; errors: string[] }
 
   return { valid: errors.length === 0, errors };
 }
+
+export interface PotentialPointsCharacterContext {
+  classId?: string | null;
+  jobAdvancementCompleted?: boolean;
+  evolutionTier?: number;
+  evolutionStage?: number;
+  level?: number;
+}
+
+/**
+ * Standardized Potential Points per Level Formula:
+ * - Tân thủ (Novice/Adventurer): +1 point per level
+ * - Chuyển Job lần 1 (First Job): +2 points per level
+ * - Chuyển Job lần 3 (Third Job / Master): +3 points per level
+ */
+export function getPotentialPointsPerLevel(char?: PotentialPointsCharacterContext | null): number {
+  if (!char) return 1;
+  const rawClass = (char.classId || '').toLowerCase().trim();
+  const isNovice = !rawClass || rawClass === 'novice' || rawClass === 'adventurer' || rawClass === 'tan_thu';
+
+  if (isNovice && !char.jobAdvancementCompleted) {
+    return 1;
+  }
+
+  const tier = Math.max(1, Number(char.evolutionTier ?? char.evolutionStage ?? (char.jobAdvancementCompleted ? 1 : 0)));
+  if (tier >= 3) {
+    return 3;
+  }
+  if (tier >= 1 || char.jobAdvancementCompleted || !isNovice) {
+    return 2;
+  }
+  return 1;
+}
+

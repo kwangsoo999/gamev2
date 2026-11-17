@@ -1,6 +1,7 @@
 import { randomUUID } from 'crypto';
 import {
   ATTRIBUTE_POINTS_PER_LEVEL,
+  getPotentialPointsPerLevel,
   INITIAL_BOSS_CONFIGS,
   INITIAL_BOSS_DROP_TABLES,
   INITIAL_ELITE_AND_BOSS_MONSTERS,
@@ -1614,7 +1615,8 @@ export class CombatService {
       char.exp -= expRequired(char.level);
       char.level += 1;
       levelsGained.push(char.level);
-      char.availableAttributePoints = Number(char.availableAttributePoints ?? char.unspentStatPoints ?? 0) + ATTRIBUTE_POINTS_PER_LEVEL;
+      const ptsPerLevel = getPotentialPointsPerLevel(char);
+      char.availableAttributePoints = Number(char.availableAttributePoints ?? char.unspentStatPoints ?? 0) + ptsPerLevel;
       char.unspentStatPoints = char.availableAttributePoints;
       char.skillPoints = Number(char.skillPoints || 0) + 1;
       if (state) {
