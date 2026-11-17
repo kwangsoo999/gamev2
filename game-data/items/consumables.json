@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "items": [
+    {
+      "id": "ITEM_POTION_HP_SMALL",
+      "canonicalKey": "potion_hp",
+      "defaultHotkey": "Q",
+      "nameKey": "item.potion_hp_small.name",
+      "descKey": "item.potion_hp_small.desc",
+      "type": "CONSUMABLE",
+      "subtype": "POTION_HEALTH",
+      "restoreHp": 85,
+      "restoreMp": 0,
+      "cooldownMs": 3000,
+      "maxStack": 99,
+      "price": 12,
+      "rarity": "COMMON",
+      "icon": "🧪"
+    },
+    {
+      "id": "ITEM_POTION_MP_SMALL",
+      "canonicalKey": "potion_mp",
+      "defaultHotkey": "R",
+      "nameKey": "item.potion_mp_small.name",
+      "descKey": "item.potion_mp_small.desc",
+      "type": "CONSUMABLE",
+      "subtype": "POTION_MANA",
+      "restoreHp": 0,
+      "restoreMp": 65,
+      "cooldownMs": 3000,
+      "maxStack": 99,
+      "price": 15,
+      "rarity": "COMMON",
+      "icon": "💧"
+    },
+    {
+      "id": "ITEM_TOWN_SCROLL",
+      "canonicalKey": "scroll_town",
+      "defaultHotkey": "T",
+      "nameKey": "item.town_scroll.name",
+      "descKey": "item.town_scroll.desc",
+      "type": "CONSUMABLE",
+      "subtype": "TELEPORT_SCROLL",
+      "targetMap": "MAP_EMBER_VILLAGE",
+      "targetCoord": { "tx": 15, "ty": 18 },
+      "channelTimeMs": 2000,
+      "cooldownMs": 10000,
+      "maxStack": 20,
+      "price": 50,
+      "rarity": "UNCOMMON",
+      "icon": "📜"
+    }
+  ]
+}

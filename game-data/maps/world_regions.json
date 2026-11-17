@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "regions": [
+    {
+      "id": "MAP_ELYSIA_CAPITAL",
+      "nameKey": "region.elysia_capital.name",
+      "descriptionKey": "region.elysia_capital.desc",
+      "type": "METROPOLIS_HUB",
+      "recommendedLevel": { "min": 1, "max": 99 },
+      "isSafeZone": true,
+      "bgmTrack": "bgm_elysia_capital",
+      "biome": "castle_city",
+      "connections": ["MAP_EMBER_VILLAGE", "MAP_MISTY_LAKE", "MAP_EMBER_WASTES"]
+    },
+    {
+      "id": "MAP_EMBER_VILLAGE",
+      "nameKey": "region.ember_village.name",
+      "descriptionKey": "region.ember_village.desc",
+      "type": "NOVICE_VILLAGE",
+      "recommendedLevel": { "min": 1, "max": 10 },
+      "isSafeZone": true,
+      "bgmTrack": "bgm_ember_village",
+      "biome": "village_sakura",
+      "connections": ["MAP_WHISPERING_FOREST", "MAP_DEXICA_SANCTUARY", "MAP_ELYSIA_CAPITAL"]
+    },
+    {
+      "id": "MAP_DEXICA_SANCTUARY",
+      "nameKey": "region.dexica_sanctuary.name",
+      "descriptionKey": "region.dexica_sanctuary.desc",
+      "type": "HOLY_SANCTUARY",
+      "recommendedLevel": { "min": 10, "max": 99 },
+      "isSafeZone": true,
+      "bgmTrack": "bgm_dexica_sanctuary",
+      "biome": "cathedral_sanctuary",
+      "connections": ["MAP_EMBER_VILLAGE"]
+    },
+    {
+      "id": "MAP_WHISPERING_FOREST",
+      "nameKey": "region.whispering_forest.name",
+      "descriptionKey": "region.whispering_forest.desc",
+      "type": "HUNTING_FIELD",
+      "recommendedLevel": { "min": 1, "max": 8 },
+      "isSafeZone": false,
+      "bgmTrack": "bgm_whispering_forest",
+      "biome": "temperate_forest",
+      "connections": ["MAP_EMBER_VILLAGE", "MAP_GOBLIN_OUTPOST", "MAP_MISTY_LAKE"]
+    },
+    {
+      "id": "MAP_GOBLIN_OUTPOST",
+      "nameKey": "region.goblin_outpost.name",
+      "descriptionKey": "region.goblin_outpost.desc",
+      "type": "ENEMY_STRONGHOLD",
+      "recommendedLevel": { "min": 8, "max": 12 },
+      "isSafeZone": false,
+      "bgmTrack": "bgm_goblin_outpost",
+      "biome": "fortified_encampment",
+      "connections": ["MAP_WHISPERING_FOREST"]
+    },
+    {
+      "id": "MAP_MISTY_LAKE",
+      "nameKey": "region.misty_lake.name",
+      "descriptionKey": "region.misty_lake.desc",
+      "type": "HUNTING_FIELD",
+      "recommendedLevel": { "min": 10, "max": 15 },
+      "isSafeZone": false,
+      "bgmTrack": "bgm_misty_lake",
+      "biome": "misty_wetlands",
+      "connections": ["MAP_WHISPERING_FOREST", "MAP_ELYSIA_CAPITAL"]
+    },
+    {
+      "id": "MAP_EMBER_WASTES",
+      "nameKey": "region.ember_wastes.name",
+      "descriptionKey": "region.ember_wastes.desc",
+      "type": "WILDERNESS",
+      "recommendedLevel": { "min": 15, "max": 20 },
+      "isSafeZone": false,
+      "bgmTrack": "bgm_ember_wastes",
+      "biome": "volcanic_badlands",
+      "connections": ["MAP_ELYSIA_CAPITAL", "MAP_FLAME_CAVERN"]
+    },
+    {
+      "id": "MAP_FLAME_CAVERN",
+      "nameKey": "region.flame_cavern.name",
+      "descriptionKey": "region.flame_cavern.desc",
+      "type": "DUNGEON",
+      "recommendedLevel": { "min": 18, "max": 24 },
+      "isSafeZone": false,
+      "bgmTrack": "bgm_flame_cavern",
+      "biome": "magma_dungeon",
+      "connections": ["MAP_EMBER_WASTES"]
+    },
+    {
+      "id": "MAP_FROSTVEIL_HIGHLANDS",
+      "nameKey": "region.frostveil_highlands.name",
+      "descriptionKey": "region.frostveil_highlands.desc",
+      "type": "WILDERNESS",
+      "recommendedLevel": { "min": 22, "max": 30 },
+      "isSafeZone": false,
+      "bgmTrack": "bgm_frostveil_highlands",
+      "biome": "snowy_mountains",
+      "connections": ["MAP_ELYSIA_CAPITAL"]
+    },
+    {
+      "id": "MAP_GRAVEVEIL",
+      "nameKey": "region.graveveil.name",
+      "descriptionKey": "region.graveveil.desc",
+      "type": "CURSED_LAND",
+      "recommendedLevel": { "min": 30, "max": 42 },
+      "isSafeZone": false,
+      "bgmTrack": "bgm_graveveil",
+      "biome": "undead_valley",
+      "connections": ["MAP_ELYSIA_CAPITAL"]
+    }
+  ]
+}

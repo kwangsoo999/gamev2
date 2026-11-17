@@ -23,6 +23,7 @@ export * from './combatSimulator.js';
 export * from './worldSystems.js';
 export * from './worldPlacementValidator.js';
 export * from './characterBalanceAndCombatPolish.js';
+export * from './worldDesignBible.js';
 
 export const ATTRIBUTE_POINTS_PER_LEVEL = 4;
 

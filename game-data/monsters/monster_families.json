@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "families": [
+    {
+      "id": "SLIME",
+      "nameKey": "family.slime.name",
+      "primaryElement": "EARTH",
+      "weakness": "FIRE",
+      "resistance": "WATER",
+      "loreKey": "family.slime.lore"
+    },
+    {
+      "id": "FUNGUS",
+      "nameKey": "family.fungus.name",
+      "primaryElement": "NATURE",
+      "weakness": "FIRE",
+      "resistance": "EARTH",
+      "loreKey": "family.fungus.lore"
+    },
+    {
+      "id": "BEAST",
+      "nameKey": "family.beast.name",
+      "primaryElement": "EARTH",
+      "weakness": "FIRE",
+      "resistance": "WIND",
+      "loreKey": "family.beast.lore"
+    },
+    {
+      "id": "INSECT",
+      "nameKey": "family.insect.name",
+      "primaryElement": "EARTH",
+      "weakness": "WIND",
+      "resistance": "EARTH",
+      "loreKey": "family.insect.lore"
+    },
+    {
+      "id": "CANINE",
+      "nameKey": "family.canine.name",
+      "primaryElement": "WIND",
+      "weakness": "EARTH",
+      "resistance": "WATER",
+      "loreKey": "family.canine.lore"
+    },
+    {
+      "id": "GOBLIN",
+      "nameKey": "family.goblin.name",
+      "primaryElement": "METAL",
+      "weakness": "NATURE",
+      "resistance": "PHYSICAL",
+      "loreKey": "family.goblin.lore"
+    },
+    {
+      "id": "ANCIENT_GUARDIAN",
+      "nameKey": "family.ancient_guardian.name",
+      "primaryElement": "NATURE",
+      "weakness": "FIRE",
+      "resistance": "WATER",
+      "loreKey": "family.ancient_guardian.lore"
+    }
+  ]
+}

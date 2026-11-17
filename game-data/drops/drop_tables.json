@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "tables": [
+    {
+      "id": "DROP_MOSS_SLIME",
+      "goldRange": [3, 8],
+      "drops": [
+        { "itemId": "MAT_SLIME_JELLY", "chance": 0.65, "qtyRange": [1, 2] },
+        { "itemId": "ITEM_POTION_HP_SMALL", "chance": 0.20, "qtyRange": [1, 1] }
+      ]
+    },
+    {
+      "id": "DROP_WILD_MUSHROOM",
+      "goldRange": [4, 10],
+      "drops": [
+        { "itemId": "MAT_MUSHROOM_SPORE", "chance": 0.60, "qtyRange": [1, 2] },
+        { "itemId": "MAT_MUSHROOM_STEM", "chance": 0.35, "qtyRange": [1, 1] }
+      ]
+    },
+    {
+      "id": "DROP_FOREST_RABBIT",
+      "goldRange": [5, 12],
+      "drops": [
+        { "itemId": "MAT_RABBIT_FUR", "chance": 0.70, "qtyRange": [1, 2] },
+        { "itemId": "MAT_RAW_MEAT", "chance": 0.40, "qtyRange": [1, 1] }
+      ]
+    },
+    {
+      "id": "DROP_THORN_BOAR",
+      "goldRange": [8, 18],
+      "drops": [
+        { "itemId": "MAT_THICK_BOAR_HIDE", "chance": 0.55, "qtyRange": [1, 1] },
+        { "itemId": "MAT_THORN_TUSK", "chance": 0.35, "qtyRange": [1, 2] }
+      ]
+    },
+    {
+      "id": "DROP_BARK_BEETLE",
+      "goldRange": [10, 22],
+      "drops": [
+        { "itemId": "MAT_CHITIN_SHELL", "chance": 0.50, "qtyRange": [1, 1] },
+        { "itemId": "MAT_BEETLE_PINCER", "chance": 0.30, "qtyRange": [1, 1] }
+      ]
+    },
+    {
+      "id": "DROP_FOREST_WOLF",
+      "goldRange": [14, 28],
+      "drops": [
+        { "itemId": "MAT_WOLF_CLAW", "chance": 0.45, "qtyRange": [1, 2] },
+        { "itemId": "MAT_WOLF_PELT", "chance": 0.40, "qtyRange": [1, 1] }
+      ]
+    },
+    {
+      "id": "DROP_POISON_MUSHROOM",
+      "goldRange": [25, 45],
+      "drops": [
+        { "itemId": "MAT_TOXIC_SPORE", "chance": 0.85, "qtyRange": [1, 3] },
+        { "itemId": "EQ_POISON_WARD_RING", "chance": 0.12, "qtyRange": [1, 1] }
+      ]
+    },
+    {
+      "id": "DROP_GOBLIN_SCOUT",
+      "goldRange": [18, 32],
+      "drops": [
+        { "itemId": "MAT_GOBLIN_EAR", "chance": 0.60, "qtyRange": [1, 1] },
+        { "itemId": "EQ_RUSTY_DAGGER", "chance": 0.15, "qtyRange": [1, 1] }
+      ]
+    },
+    {
+      "id": "DROP_GOBLIN_WARRIOR",
+      "goldRange": [30, 55],
+      "drops": [
+        { "itemId": "MAT_GOBLIN_IRON_SCRAP", "chance": 0.55, "qtyRange": [1, 2] },
+        { "itemId": "EQ_GOBLIN_CLEAVER", "chance": 0.15, "qtyRange": [1, 1] },
+        { "itemId": "GEM_ENHANCE_SHARD", "chance": 0.08, "qtyRange": [1, 1] }
+      ]
+    },
+    {
+      "id": "DROP_VERDANT_GUARDIAN",
+      "goldRange": [150, 300],
+      "drops": [
+        { "itemId": "EQ_VERDANT_STAFF", "chance": 0.25, "qtyRange": [1, 1] },
+        { "itemId": "EQ_ANCIENT_BARK_SHIELD", "chance": 0.25, "qtyRange": [1, 1] },
+        { "itemId": "EQ_FOREST_GUARDIAN_BLADE", "chance": 0.25, "qtyRange": [1, 1] },
+        { "itemId": "SET_VERDANT_FRAGMENT", "chance": 1.0, "qtyRange": [3, 5] }
+      ]
+    }
+  ]
+}

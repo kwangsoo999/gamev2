@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "awakeningNpc": "NPC_SERAPHINE",
+  "awakeningMap": "MAP_DEXICA_SANCTUARY",
+  "awakeningRequiredLevel": 10,
+  "jobs": [
+    {
+      "id": "JOB_SWORDSMAN",
+      "nameKey": "job.swordsman.name",
+      "titleKey": "job.swordsman.title",
+      "weaponTypes": ["sword", "greatsword"],
+      "combatStyle": "melee_physical",
+      "primaryStat": "STR",
+      "secondaryStat": "VIT",
+      "statGrowths": { "hp": 45, "mp": 15, "atk": 5.2, "def": 3.2, "matk": 1.0, "mdef": 1.5, "speed": 1.0 },
+      "vfxColor": "#e2e8f0",
+      "awakeningVfx": "vfx_swordsman_awakening"
+    },
+    {
+      "id": "JOB_SPEARMAN",
+      "nameKey": "job.spearman.name",
+      "titleKey": "job.spearman.title",
+      "weaponTypes": ["spear", "halberd"],
+      "combatStyle": "reach_physical",
+      "primaryStat": "STR",
+      "secondaryStat": "AGI",
+      "statGrowths": { "hp": 40, "mp": 18, "atk": 5.0, "def": 2.8, "matk": 1.2, "mdef": 1.8, "speed": 1.2 },
+      "vfxColor": "#a855f7",
+      "awakeningVfx": "vfx_spearman_awakening"
+    },
+    {
+      "id": "JOB_KNIGHT",
+      "nameKey": "job.knight.name",
+      "titleKey": "job.knight.title",
+      "weaponTypes": ["sword", "shield"],
+      "combatStyle": "tank_defense",
+      "primaryStat": "VIT",
+      "secondaryStat": "STR",
+      "statGrowths": { "hp": 55, "mp": 20, "atk": 3.8, "def": 4.5, "matk": 1.0, "mdef": 2.8, "speed": 0.8 },
+      "vfxColor": "#eab308",
+      "awakeningVfx": "vfx_knight_awakening"
+    },
+    {
+      "id": "JOB_MONK",
+      "nameKey": "job.monk.name",
+      "titleKey": "job.monk.title",
+      "weaponTypes": ["staff", "fist"],
+      "combatStyle": "holy_support",
+      "primaryStat": "INT",
+      "secondaryStat": "WIS",
+      "statGrowths": { "hp": 38, "mp": 35, "atk": 2.8, "def": 2.2, "matk": 4.2, "mdef": 3.8, "speed": 1.0 },
+      "vfxColor": "#f8fafc",
+      "awakeningVfx": "vfx_monk_awakening"
+    },
+    {
+      "id": "JOB_MAGE",
+      "nameKey": "job.mage.name",
+      "titleKey": "job.mage.title",
+      "weaponTypes": ["staff", "spellbook"],
+      "combatStyle": "elemental_magic",
+      "primaryStat": "INT",
+      "secondaryStat": "AGI",
+      "statGrowths": { "hp": 30, "mp": 45, "atk": 2.0, "def": 1.8, "matk": 5.8, "mdef": 3.5, "speed": 1.0 },
+      "vfxColor": "#3b82f6",
+      "awakeningVfx": "vfx_mage_awakening"
+    },
+    {
+      "id": "JOB_ASSASSIN",
+      "nameKey": "job.assassin.name",
+      "titleKey": "job.assassin.title",
+      "weaponTypes": ["daggers", "throwing_knives"],
+      "combatStyle": "speed_burst",
+      "primaryStat": "AGI",
+      "secondaryStat": "LUK",
+      "statGrowths": { "hp": 35, "mp": 22, "atk": 4.8, "def": 2.0, "matk": 1.5, "mdef": 1.8, "speed": 2.0 },
+      "vfxColor": "#1e1b4b",
+      "awakeningVfx": "vfx_assassin_awakening"
+    },
+    {
+      "id": "JOB_FIGHTER",
+      "nameKey": "job.fighter.name",
+      "titleKey": "job.fighter.title",
+      "weaponTypes": ["gauntlets", "knuckles"],
+      "combatStyle": "martial_arts_brawler",
+      "primaryStat": "STR",
+      "secondaryStat": "VIT",
+      "statGrowths": { "hp": 48, "mp": 16, "atk": 5.4, "def": 3.0, "matk": 1.0, "mdef": 1.5, "speed": 1.4 },
+      "vfxColor": "#ef4444",
+      "awakeningVfx": "vfx_fighter_awakening"
+    }
+  ]
+}

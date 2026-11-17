@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "skills": [
+    {
+      "id": "SKILL_NOVICE_SLASH",
+      "hotkey": "1",
+      "nameKey": "skill.novice_slash.name",
+      "descKey": "skill.novice_slash.desc",
+      "mpCost": 8,
+      "cooldownSeconds": 2.2,
+      "damageMultiplier": 1.15,
+      "range": 72,
+      "element": "PHYSICAL",
+      "vfxKey": "slash_physical",
+      "type": "ACTIVE_ATTACK"
+    },
+    {
+      "id": "SKILL_NOVICE_FIREBALL",
+      "hotkey": "2",
+      "nameKey": "skill.novice_fireball.name",
+      "descKey": "skill.novice_fireball.desc",
+      "mpCost": 14,
+      "cooldownSeconds": 4.0,
+      "damageMultiplier": 1.45,
+      "range": 180,
+      "element": "FIRE",
+      "vfxKey": "fireball_projectile",
+      "type": "RANGED_SPELL"
+    },
+    {
+      "id": "SKILL_NOVICE_DASH",
+      "hotkey": "3",
+      "nameKey": "skill.novice_dash.name",
+      "descKey": "skill.novice_dash.desc",
+      "mpCost": 10,
+      "cooldownSeconds": 5.0,
+      "dashDistance": 130,
+      "element": "WIND",
+      "vfxKey": "dash_wind",
+      "type": "MOBILITY"
+    },
+    {
+      "id": "SKILL_NOVICE_SPIN",
+      "hotkey": "4",
+      "nameKey": "skill.novice_spin.name",
+      "descKey": "skill.novice_spin.desc",
+      "mpCost": 22,
+      "cooldownSeconds": 6.5,
+      "damageMultiplier": 1.6,
+      "radius": 120,
+      "element": "PHYSICAL",
+      "vfxKey": "whirlwind_spin",
+      "type": "AOE_ATTACK"
+    },
+    {
+      "id": "SKILL_NOVICE_SHIELD",
+      "hotkey": "5",
+      "nameKey": "skill.novice_shield.name",
+      "descKey": "skill.novice_shield.desc",
+      "mpCost": 18,
+      "cooldownSeconds": 12.0,
+      "shieldHp": 65,
+      "defenseBuffPercent": 25,
+      "durationSeconds": 8.0,
+      "element": "EARTH",
+      "vfxKey": "shield_golden_barrier",
+      "type": "DEFENSIVE_BUFF"
+    }
+  ]
+}

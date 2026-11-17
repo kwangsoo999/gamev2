@@ -1,0 +1,70 @@
+{
+  "system": {
+    "game_title": "ELYSIA NO DENSETSU – ELYSIA FRONTIER",
+    "connecting": "Connecting to server...",
+    "auto_combat_on": "⚡ AUTO COMBAT ⚡",
+    "auto_combat_off": "Auto Combat Off",
+    "level_up": "Level Up! You gained +4 Attribute Points!"
+  },
+  "job": {
+    "swordsman": { "name": "Swordsman", "title": "Blade Master" },
+    "spearman": { "name": "Spearman", "title": "Dragon Lancer" },
+    "knight": { "name": "Knight", "title": "Golden Guardian" },
+    "monk": { "name": "Monk", "title": "Holy Priest" },
+    "mage": { "name": "Mage", "title": "Elemental Archmage" },
+    "assassin": { "name": "Assassin", "title": "Phantom Slayer" },
+    "fighter": { "name": "Fighter", "title": "Iron Fist Brawler" }
+  },
+  "character": {
+    "novice_male": { "name": "Male Adventurer (Novice)" },
+    "novice_female": { "name": "Female Adventurer (Novice)" }
+  },
+  "monster": {
+    "moss_slime": { "name": "Moss Slime", "lore": "A bouncy slime born from moist moss in the Whispering Forest." },
+    "wild_mushroom": { "name": "Wild Mushroom", "lore": "A mobile fungus that charges aggressively at forest trespassers." },
+    "forest_rabbit": { "name": "Forest Rabbit", "lore": "A nimble rabbit that flees swiftly when gravely wounded." },
+    "thorn_boar": { "name": "Thorn Boar", "lore": "A ferocious wild boar covered in sharp defensive quills." },
+    "bark_beetle": { "name": "Bark Beetle", "lore": "A sturdy beetle armored with thick tree-bark chitin." },
+    "forest_wolf": { "name": "Forest Wolf", "lore": "A nocturnal pack hunter whose howl boosts pack attack power." },
+    "poison_mushroom": { "name": "Poison Mushroom", "lore": "An ancient toxic fungus emitting deadly poisonous spores." },
+    "goblin_scout": { "name": "Goblin Scout", "lore": "A sneaky scout armed with slingshots and glue traps." },
+    "goblin_warrior": { "name": "Goblin Warrior", "lore": "A brutal frontline fighter wielding a cleaving axe." },
+    "verdant_guardian": { "name": "Verdant Guardian", "lore": "The colossal treant protector of the Whispering Forest." }
+  },
+  "npc": {
+    "aldric": { "name": "Aldric", "title": "Village Elder" },
+    "brom": { "name": "Brom", "title": "Master Blacksmith" },
+    "lyra": { "name": "Lyra", "title": "Nomadic Merchant" },
+    "kael": { "name": "Kael", "title": "Deep Forest Hunter" },
+    "elin": { "name": "Elin", "title": "Herbalist" },
+    "seraphine": { "name": "Seraphine", "title": "Dexica High Priestess" },
+    "mira": { "name": "Mira", "title": "Moonlit Innkeeper" },
+    "rowan": { "name": "Rowan", "title": "Guard Captain" },
+    "orwen": { "name": "Orwen", "title": "Arcane Scholar" },
+    "felix": { "name": "Felix", "title": "Continental Transporter" }
+  },
+  "region": {
+    "elysia_capital": { "name": "Elysia Capital", "desc": "The glorious capital and economic heart of the realm." },
+    "ember_village": { "name": "Ember Village", "desc": "A peaceful starter village nestled under cherry blossoms." },
+    "dexica_sanctuary": { "name": "Dexica Sanctuary", "desc": "The sacred holy cathedral where Level 10 First Job Awakening occurs." },
+    "whispering_forest": { "name": "Whispering Forest", "desc": "A lush beginner hunting ground teeming with nature spirits." },
+    "goblin_outpost": { "name": "Goblin Outpost", "desc": "A fortified stockade built by savage goblin clans." },
+    "misty_lake": { "name": "Misty Lake", "desc": "A fog-shrouded lake connecting the frontier to the capital." },
+    "ember_wastes": { "name": "Ember Wastes", "desc": "Barren scorched badlands under smoking volcanic peaks." },
+    "flame_cavern": { "name": "Flame Cavern", "desc": "A hazardous molten dungeon full of rare minerals and drakes." },
+    "frostveil_highlands": { "name": "Frostveil Highlands", "desc": "Glacial highlands enveloped in eternal snowstorms." },
+    "graveveil": { "name": "Graveveil", "desc": "A haunted valley of tombs walked by restless spirits." }
+  },
+  "item": {
+    "potion_hp_small": { "name": "Small Health Potion", "desc": "Instantly restores +85 HP. [Key Q]" },
+    "potion_mp_small": { "name": "Small Mana Potion", "desc": "Instantly restores +65 MP. [Key R]" },
+    "town_scroll": { "name": "Town Return Scroll", "desc": "Teleports the user back to Ember Village. [Key T]" }
+  },
+  "skill": {
+    "novice_slash": { "name": "Novice Slash", "desc": "A physical sword strike dealing 115% physical damage. [Key 1]" },
+    "novice_fireball": { "name": "Lesser Fireball", "desc": "Hurls a flame sphere dealing 145% fire damage. [Key 2]" },
+    "novice_dash": { "name": "Swift Step", "desc": "Dashes 130px forward, evading enemy strikes. [Key 3]" },
+    "novice_spin": { "name": "Whirlwind Spin", "desc": "Spins in a 360-degree radius hitting all nearby foes. [Key 4]" },
+    "novice_shield": { "name": "Diamond Barrier", "desc": "Creates a 65 HP shield and grants +25% DEF for 8s. [Key 5]" }
+  }
+}

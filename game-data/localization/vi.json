@@ -1,0 +1,70 @@
+{
+  "system": {
+    "game_title": "ELYSIA NO DENSETSU – ELYSIA FRONTIER",
+    "connecting": "Đang kết nối máy chủ...",
+    "auto_combat_on": "⚡ ĐANG AUTO ⚡",
+    "auto_combat_off": "Auto Đã Tắt",
+    "level_up": "Thăng cấp! Nhận +4 điểm tiềm năng!"
+  },
+  "job": {
+    "swordsman": { "name": "Kiếm Sĩ", "title": "Bậc Thầy Kiếm Thuật" },
+    "spearman": { "name": "Thương Thủ", "title": "Long Kích Chiến Binh" },
+    "knight": { "name": "Hiệp Sĩ", "title": "Hộ Vệ Hoàng Kim" },
+    "monk": { "name": "Tu Sĩ", "title": "Thánh Quang Tế Tư" },
+    "mage": { "name": "Pháp Sư", "title": "Đại Hiền Giả Ngũ Hành" },
+    "assassin": { "name": "Thích Khách", "title": "Huyễn Ảnh Sát Thủ" },
+    "fighter": { "name": "Đấu Sĩ", "title": "Bá Vương Quyền Vương" }
+  },
+  "character": {
+    "novice_male": { "name": "Lữ Khách Nam (Novice)" },
+    "novice_female": { "name": "Lữ Khách Nữ (Novice)" }
+  },
+  "monster": {
+    "moss_slime": { "name": "Chất Nhầy Rêu", "lore": "Khối nhầy sinh ra từ thảm rêu ẩm ướt trong rừng thì thầm." },
+    "wild_mushroom": { "name": "Nấm Hoang", "lore": "Cây nấm di động thích húc đầu vào những kẻ xâm phạm lãnh địa." },
+    "forest_rabbit": { "name": "Thỏ Rừng", "lore": "Loài thỏ có đôi chân dài nhanh nhẹn, luôn bỏ chạy khi bị thương nặng." },
+    "thorn_boar": { "name": "Lợn Rừng Gai", "lore": "Loài lợn rừng có hàng gai nhọn dọc sống lưng, tính khí hung dữ." },
+    "bark_beetle": { "name": "Bọ Vỏ Cây", "lore": "Bọ cánh cứng với lớp vỏ kitin dày như vỏ cây cổ thụ." },
+    "forest_wolf": { "name": "Sói Rừng", "lore": "Thợ săn bóng đêm di chuyển theo đàn, tiếng hú gọi bầy tăng nhuệ khí." },
+    "poison_mushroom": { "name": "Nấm Độc Tinh Anh", "lore": "Cây nấm hấp thụ độc tố ngàn năm, tỏa ra làn sương chết chóc." },
+    "goblin_scout": { "name": "Goblin Trinh Sát", "lore": "Tên trinh sát ranh mãnh chuyên rình rập và bắn súng cao su quấy rối." },
+    "goblin_warrior": { "name": "Goblin Chiến Binh", "lore": "Chiến binh tinh nhuệ của bộ tộc, cầm rìu bổ củi cuồng bạo." },
+    "verdant_guardian": { "name": "Hộ Vệ Rừng Xanh", "lore": "Thủ hộ cổ thụ khổng lồ ngự trị tại trung tâm Rừng Thì Thầm." }
+  },
+  "npc": {
+    "aldric": { "name": "Aldric", "title": "Trưởng Thôn Khởi Nguyên" },
+    "brom": { "name": "Brom", "title": "Thợ Rèn Bậc Thầy" },
+    "lyra": { "name": "Lyra", "title": "Thương Nhân Du Mục" },
+    "kael": { "name": "Kael", "title": "Thợ Săn Rừng Sâu" },
+    "elin": { "name": "Elin", "title": "Nhà Thảo Dược" },
+    "seraphine": { "name": "Seraphine", "title": "Đại Tư Tế Dexica" },
+    "mira": { "name": "Mira", "title": "Chủ Quán Trọ Trăng Rằm" },
+    "rowan": { "name": "Rowan", "title": "Đội Trưởng Lính Gác" },
+    "orwen": { "name": "Orwen", "title": "Nhà Nghiên Cứu Ma Thuật" },
+    "felix": { "name": "Felix", "title": "Người Vận Chuyển Xuyên Lục Địa" }
+  },
+  "region": {
+    "elysia_capital": { "name": "Kinh Đô Elysia", "desc": "Trung tâm quyền lực và thịnh vượng của toàn cõi Elysia." },
+    "ember_village": { "name": "Thôn Khởi Nguyên", "desc": "Ngôi làng bình yên dưới chân rặng hoa anh đào dành cho tân thủ." },
+    "dexica_sanctuary": { "name": "Thánh Đường Dexica", "desc": "Thánh điện thiêng liêng nơi người chơi thực hiện nghi thức chuyển chức Cấp 10." },
+    "whispering_forest": { "name": "Rừng Thì Thầm", "desc": "Bãi săn dã ngoại xanh mát ngập tràn linh khí thiên nhiên." },
+    "goblin_outpost": { "name": "Trại Tiền Đồn Goblin", "desc": "Căn cứ kiên cố bằng gỗ gai của tộc Goblin man rợ." },
+    "misty_lake": { "name": "Hồ Sương Mù", "desc": "Mặt hồ phủ sương mờ ảo huyền bí nối liền làng và kinh đô." },
+    "ember_wastes": { "name": "Hoang Mạc Tro", "desc": "Vùng đất lửa cằn cỗi dưới chân núi lửa rực đỏ." },
+    "flame_cavern": { "name": "Hỏa Diệm Động", "desc": "Hầm ngục dung nham nguy hiểm chứa đầy khoáng sản quý hiếm." },
+    "frostveil_highlands": { "name": "Cao Nguyên Băng", "desc": "Những sườn núi băng giá vĩnh cửu phủ tuyết trắng xóa." },
+    "graveveil": { "name": "Thung Lũng Tử Linh", "desc": "Vùng tử địa u ám bị ám ảnh bởi các linh hồn lang thang." }
+  },
+  "item": {
+    "potion_hp_small": { "name": "Bình Sinh Lực Nhỏ", "desc": "Hồi phục ngay lập tức +85 HP. [Phím Q]" },
+    "potion_mp_small": { "name": "Bình Ma Pháp Nhỏ", "desc": "Hồi phục ngay lập tức +65 MP. [Phím R]" },
+    "town_scroll": { "name": "Cuộn Dịch Chuyển Về Làng", "desc": "Dịch chuyển tức thời về trung tâm Thôn Khởi Nguyên. [Phím T]" }
+  },
+  "skill": {
+    "novice_slash": { "name": "Trảm Kích", "desc": "Chém một nhát kiếm khí uy lực gây 115% sát thương vật lý. [Phím 1]" },
+    "novice_fireball": { "name": "Tiểu Hỏa Cầu", "desc": "Bắn cầu lửa tầm xa gây 145% sát thương hỏa diễm. [Phím 2]" },
+    "novice_dash": { "name": "Thần Tốc Bộ", "desc": "Lướt nhanh 130px theo hướng nhìn né tránh đòn đánh. [Phím 3]" },
+    "novice_spin": { "name": "Toàn Phong Trảm", "desc": "Xoay kiếm 360 độ quét sạch kẻ địch xung quanh. [Phím 4]" },
+    "novice_shield": { "name": "Kim Cang Hộ Thể", "desc": "Tạo lá chắn 65 HP và tăng 25% phòng thủ trong 8 giây. [Phím 5]" }
+  }
+}

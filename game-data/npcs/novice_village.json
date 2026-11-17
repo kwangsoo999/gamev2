@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "mapId": "MAP_EMBER_VILLAGE",
+  "npcs": [
+    {
+      "id": "NPC_ALDRIC",
+      "nameKey": "npc.aldric.name",
+      "titleKey": "npc.aldric.title",
+      "gridCoord": { "tx": 15, "ty": 17 },
+      "direction": "south",
+      "role": "village_chief",
+      "questIds": ["QUEST_VILLAGE_ONBOARDING_01", "QUEST_FOREST_INVESTIGATION"],
+      "services": ["main_quest", "village_guidance"],
+      "dialogueTreeId": "DLG_ALDRIC",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_aldric.png", "portrait": "/assets/elysia/ui/portrait-aldric.png" }
+    },
+    {
+      "id": "NPC_BROM",
+      "nameKey": "npc.brom.name",
+      "titleKey": "npc.brom.title",
+      "gridCoord": { "tx": 24, "ty": 12 },
+      "direction": "west",
+      "role": "blacksmith",
+      "questIds": ["QUEST_BLACKSMITH_IRON_ORE"],
+      "services": ["forge_weapon", "armor_craft", "equipment_upgrade", "repair"],
+      "dialogueTreeId": "DLG_BROM",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_brom.png", "portrait": "/assets/elysia/ui/portrait-brom.png" }
+    },
+    {
+      "id": "NPC_LYRA",
+      "nameKey": "npc.lyra.name",
+      "titleKey": "npc.lyra.title",
+      "gridCoord": { "tx": 19, "ty": 14 },
+      "direction": "south",
+      "role": "merchant",
+      "questIds": ["QUEST_MERCHANT_CARAVAN"],
+      "services": ["general_shop", "potions", "scrolls", "bag_expansion"],
+      "dialogueTreeId": "DLG_LYRA",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_lyra.png", "portrait": "/assets/elysia/ui/portrait-lyra.png" }
+    },
+    {
+      "id": "NPC_KAEL",
+      "nameKey": "npc.kael.name",
+      "titleKey": "npc.kael.title",
+      "gridCoord": { "tx": 32, "ty": 18 },
+      "direction": "south_west",
+      "role": "hunter",
+      "questIds": ["QUEST_DAILY_HUNT_BOAR", "QUEST_DAILY_HUNT_WOLF"],
+      "services": ["hunting_bounties", "leather_tanning"],
+      "dialogueTreeId": "DLG_KAEL",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_kael.png", "portrait": "/assets/elysia/ui/portrait-kael.png" }
+    },
+    {
+      "id": "NPC_ELIN",
+      "nameKey": "npc.elin.name",
+      "titleKey": "npc.elin.title",
+      "gridCoord": { "tx": 8, "ty": 14 },
+      "direction": "east",
+      "role": "herbalist",
+      "questIds": ["QUEST_GATHER_HEALING_HERBS"],
+      "services": ["herbalism_training", "alchemy_craft", "antidote_brew"],
+      "dialogueTreeId": "DLG_ELIN",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_elin.png", "portrait": "/assets/elysia/ui/portrait-elin.png" }
+    },
+    {
+      "id": "NPC_SERAPHINE",
+      "nameKey": "npc.seraphine.name",
+      "titleKey": "npc.seraphine.title",
+      "gridCoord": { "tx": 16, "ty": 8 },
+      "direction": "south",
+      "role": "dexica_high_priestess",
+      "questIds": ["QUEST_JOB_AWAKENING_LV10"],
+      "services": ["first_job_awakening", "sanctuary_blessing", "sin_cleanse"],
+      "dialogueTreeId": "DLG_SERAPHINE",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_seraphine.png", "portrait": "/assets/elysia/ui/portrait-seraphine.png" }
+    },
+    {
+      "id": "NPC_MIRA",
+      "nameKey": "npc.mira.name",
+      "titleKey": "npc.mira.title",
+      "gridCoord": { "tx": 12, "ty": 22 },
+      "direction": "south",
+      "role": "innkeeper",
+      "questIds": [],
+      "services": ["save_point", "hp_mp_restoration", "rumor_board"],
+      "dialogueTreeId": "DLG_MIRA",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_mira.png", "portrait": "/assets/elysia/ui/portrait-mira.png" }
+    },
+    {
+      "id": "NPC_ROWAN",
+      "nameKey": "npc.rowan.name",
+      "titleKey": "npc.rowan.title",
+      "gridCoord": { "tx": 16, "ty": 29 },
+      "direction": "south",
+      "role": "guard_captain",
+      "questIds": ["QUEST_OUTSKIRTS_DEFENSE"],
+      "services": ["gate_clearance", "wilderness_warning"],
+      "dialogueTreeId": "DLG_ROWAN",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_rowan.png", "portrait": "/assets/elysia/ui/portrait-rowan.png" }
+    },
+    {
+      "id": "NPC_ORWEN",
+      "nameKey": "npc.orwen.name",
+      "titleKey": "npc.orwen.title",
+      "gridCoord": { "tx": 28, "ty": 9 },
+      "direction": "west",
+      "role": "scholar_mage",
+      "questIds": ["QUEST_ELEMENTAL_ESSENCE"],
+      "services": ["stat_respec", "skill_respec", "item_appraisal"],
+      "dialogueTreeId": "DLG_ORWEN",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_orwen.png", "portrait": "/assets/elysia/ui/portrait-orwen.png" }
+    },
+    {
+      "id": "NPC_FELIX",
+      "nameKey": "npc.felix.name",
+      "titleKey": "npc.felix.title",
+      "gridCoord": { "tx": 16, "ty": 4 },
+      "direction": "south",
+      "role": "transporter",
+      "questIds": [],
+      "services": ["fast_travel", "carriage_transport", "elysia_capital_portal"],
+      "dialogueTreeId": "DLG_FELIX",
+      "assets": { "sprite": "/assets/elysia/sprites/npcs/npc_felix.png", "portrait": "/assets/elysia/ui/portrait-felix.png" }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "starters": [
+    {
+      "id": "CHR_NOVICE_MALE_01",
+      "nameKey": "character.novice_male.name",
+      "gender": "male",
+      "role": "novice",
+      "awakeningLevel": 10,
+      "baseStats": {
+        "hp": 280,
+        "mp": 185,
+        "atk": 25,
+        "def": 12,
+        "matk": 20,
+        "mdef": 10,
+        "speed": 100,
+        "critRate": 5,
+        "critDamage": 150
+      },
+      "starterEquipment": {
+        "weapon": "ITEM_WOODEN_SHORT_SWORD",
+        "armor": "ITEM_NOVICE_LEATHER_VEST",
+        "boots": "ITEM_NOVICE_SOFT_BOOTS"
+      },
+      "starterSkills": [
+        "SKILL_NOVICE_SLASH",
+        "SKILL_NOVICE_FIREBALL",
+        "SKILL_NOVICE_DASH",
+        "SKILL_NOVICE_SPIN",
+        "SKILL_NOVICE_SHIELD"
+      ],
+      "sprite": {
+        "sheet": "/assets/elysia/sprites/characters/novice_male.png",
+        "frameWidth": 64,
+        "frameHeight": 64,
+        "pivot": { "x": 32, "y": 56 },
+        "directions": 8
+      }
+    },
+    {
+      "id": "CHR_NOVICE_FEMALE_01",
+      "nameKey": "character.novice_female.name",
+      "gender": "female",
+      "role": "novice",
+      "awakeningLevel": 10,
+      "baseStats": {
+        "hp": 270,
+        "mp": 195,
+        "atk": 24,
+        "def": 11,
+        "matk": 22,
+        "mdef": 12,
+        "speed": 105,
+        "critRate": 6,
+        "critDamage": 150
+      },
+      "starterEquipment": {
+        "weapon": "ITEM_WOODEN_SHORT_SWORD",
+        "armor": "ITEM_NOVICE_LEATHER_VEST",
+        "boots": "ITEM_NOVICE_SOFT_BOOTS"
+      },
+      "starterSkills": [
+        "SKILL_NOVICE_SLASH",
+        "SKILL_NOVICE_FIREBALL",
+        "SKILL_NOVICE_DASH",
+        "SKILL_NOVICE_SPIN",
+        "SKILL_NOVICE_SHIELD"
+      ],
+      "sprite": {
+        "sheet": "/assets/elysia/sprites/characters/novice_female.png",
+        "frameWidth": 64,
+        "frameHeight": 64,
+        "pivot": { "x": 32, "y": 56 },
+        "directions": 8
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "id": "MAP_EMBER_VILLAGE",
+  "nameKey": "region.ember_village.name",
+  "grid": {
+    "cols": 48,
+    "rows": 32,
+    "tileSize": 48,
+    "widthPx": 2304,
+    "heightPx": 1536
+  },
+  "isSafeZone": true,
+  "defaultSpawn": { "tx": 15, "ty": 18 },
+  "npcs": [
+    { "npcId": "NPC_ALDRIC", "tx": 15, "ty": 17, "dir": "south" },
+    { "npcId": "NPC_BROM", "tx": 24, "ty": 12, "dir": "west" },
+    { "npcId": "NPC_LYRA", "tx": 19, "ty": 14, "dir": "south" },
+    { "npcId": "NPC_KAEL", "tx": 32, "ty": 18, "dir": "south_west" },
+    { "npcId": "NPC_ELIN", "tx": 8, "ty": 14, "dir": "east" },
+    { "npcId": "NPC_MIRA", "tx": 12, "ty": 22, "dir": "south" },
+    { "npcId": "NPC_ROWAN", "tx": 16, "ty": 29, "dir": "south" },
+    { "npcId": "NPC_ORWEN", "tx": 28, "ty": 9, "dir": "west" },
+    { "npcId": "NPC_FELIX", "tx": 16, "ty": 4, "dir": "south" }
+  ],
+  "portals": [
+    {
+      "id": "PORTAL_TO_FOREST_EAST",
+      "tx": 47,
+      "ty": 16,
+      "targetMap": "MAP_WHISPERING_FOREST",
+      "targetCoord": { "tx": 2, "ty": 16 },
+      "requiredLevel": 1
+    },
+    {
+      "id": "PORTAL_TO_DEXICA_NORTH",
+      "tx": 15,
+      "ty": 0,
+      "targetMap": "MAP_DEXICA_SANCTUARY",
+      "targetCoord": { "tx": 16, "ty": 28 },
+      "requiredLevel": 10
+    },
+    {
+      "id": "PORTAL_TO_CAPITAL",
+      "tx": 16,
+      "ty": 3,
+      "targetMap": "MAP_ELYSIA_CAPITAL",
+      "targetCoord": { "tx": 20, "ty": 40 },
+      "requiredLevel": 10
+    }
+  ],
+  "gatheringNodes": [
+    { "id": "NODE_HERB_01", "type": "herb_green", "tx": 7, "ty": 15, "respawnSeconds": 60 },
+    { "id": "NODE_HERB_02", "type": "herb_green", "tx": 9, "ty": 13, "respawnSeconds": 60 },
+    { "id": "NODE_MINE_01", "type": "ore_copper", "tx": 26, "ty": 10, "respawnSeconds": 90 }
+  ]
+}

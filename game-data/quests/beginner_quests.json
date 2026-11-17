@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "quests": [
+    {
+      "id": "QUEST_VILLAGE_ONBOARDING_01",
+      "giverNpcId": "NPC_ALDRIC",
+      "nameKey": "quest.onboarding.name",
+      "descKey": "quest.onboarding.desc",
+      "minLevel": 1,
+      "objectives": [
+        { "type": "TALK_NPC", "target": "NPC_BROM", "count": 1 },
+        { "type": "TALK_NPC", "target": "NPC_LYRA", "count": 1 }
+      ],
+      "rewards": { "exp": 120, "gold": 50, "items": [{ "id": "ITEM_POTION_HP_SMALL", "qty": 5 }] }
+    },
+    {
+      "id": "QUEST_GATHER_HEALING_HERBS",
+      "giverNpcId": "NPC_ELIN",
+      "nameKey": "quest.gather_herbs.name",
+      "descKey": "quest.gather_herbs.desc",
+      "minLevel": 2,
+      "objectives": [
+        { "type": "GATHER", "target": "NODE_HERB_01", "count": 3 }
+      ],
+      "rewards": { "exp": 180, "gold": 65, "items": [{ "id": "ITEM_POTION_HP_SMALL", "qty": 10 }] }
+    },
+    {
+      "id": "QUEST_DAILY_HUNT_SLIME",
+      "giverNpcId": "NPC_KAEL",
+      "nameKey": "quest.hunt_slime.name",
+      "descKey": "quest.hunt_slime.desc",
+      "minLevel": 2,
+      "objectives": [
+        { "type": "KILL_MONSTER", "target": "MON_MOSS_SLIME", "count": 5 }
+      ],
+      "rewards": { "exp": 250, "gold": 80, "items": [{ "id": "ITEM_POTION_MP_SMALL", "qty": 5 }] }
+    },
+    {
+      "id": "QUEST_BLACKSMITH_IRON_ORE",
+      "giverNpcId": "NPC_BROM",
+      "nameKey": "quest.blacksmith_ore.name",
+      "descKey": "quest.blacksmith_ore.desc",
+      "minLevel": 4,
+      "objectives": [
+        { "type": "GATHER", "target": "NODE_MINE_01", "count": 4 }
+      ],
+      "rewards": { "exp": 420, "gold": 120 }
+    },
+    {
+      "id": "QUEST_JOB_AWAKENING_LV10",
+      "giverNpcId": "NPC_SERAPHINE",
+      "nameKey": "quest.job_awakening.name",
+      "descKey": "quest.job_awakening.desc",
+      "minLevel": 10,
+      "objectives": [
+        { "type": "REACH_LEVEL", "target": "LEVEL_10", "count": 1 },
+        { "type": "KILL_MONSTER", "target": "BOSS_VERDANT_GUARDIAN", "count": 1 },
+        { "type": "TALK_NPC", "target": "NPC_SERAPHINE", "count": 1 }
+      ],
+      "rewards": {
+        "exp": 2000,
+        "gold": 500,
+        "jobUnlock": true,
+        "items": [{ "id": "ITEM_TOWN_SCROLL", "qty": 5 }]
+      }
+    }
+  ]
+}

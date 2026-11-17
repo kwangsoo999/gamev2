@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "id": "MAP_WHISPERING_FOREST",
+  "nameKey": "region.whispering_forest.name",
+  "grid": {
+    "cols": 64,
+    "rows": 48,
+    "tileSize": 48,
+    "widthPx": 3072,
+    "heightPx": 2304
+  },
+  "isSafeZone": false,
+  "defaultSpawn": { "tx": 3, "ty": 16 },
+  "spawnZones": [
+    { "zoneId": "SPAWN_MOSS_SLIMES", "monsterId": "MON_MOSS_SLIME", "tx": 10, "ty": 14, "radius": 6, "maxCount": 8, "respawnSeconds": 15 },
+    { "zoneId": "SPAWN_WILD_MUSHROOMS", "monsterId": "MON_WILD_MUSHROOM", "tx": 18, "ty": 12, "radius": 6, "maxCount": 6, "respawnSeconds": 18 },
+    { "zoneId": "SPAWN_FOREST_RABBITS", "monsterId": "MON_FOREST_RABBIT", "tx": 14, "ty": 26, "radius": 7, "maxCount": 6, "respawnSeconds": 20 },
+    { "zoneId": "SPAWN_THORN_BOARS", "monsterId": "MON_THORN_BOAR", "tx": 28, "ty": 18, "radius": 8, "maxCount": 5, "respawnSeconds": 25 },
+    { "zoneId": "SPAWN_BARK_BEETLES", "monsterId": "MON_BARK_BEETLE", "tx": 36, "ty": 24, "radius": 7, "maxCount": 5, "respawnSeconds": 30 },
+    { "zoneId": "SPAWN_FOREST_WOLVES", "monsterId": "MON_FOREST_WOLF", "tx": 42, "ty": 16, "radius": 8, "maxCount": 6, "respawnSeconds": 35 },
+    { "zoneId": "SPAWN_POISON_MUSHROOMS", "monsterId": "MON_POISON_MUSHROOM", "tx": 24, "ty": 38, "radius": 5, "maxCount": 3, "respawnSeconds": 50 },
+    { "zoneId": "SPAWN_GOBLIN_PATROL", "monsterId": "MON_GOBLIN_SCOUT", "tx": 50, "ty": 28, "radius": 8, "maxCount": 4, "respawnSeconds": 45 },
+    { "zoneId": "SPAWN_GOBLIN_VANGUARD", "monsterId": "MON_GOBLIN_WARRIOR", "tx": 54, "ty": 34, "radius": 6, "maxCount": 3, "respawnSeconds": 60 },
+    { "zoneId": "SPAWN_VERDANT_SANCTUM", "monsterId": "BOSS_VERDANT_GUARDIAN", "tx": 45, "ty": 40, "radius": 4, "maxCount": 1, "respawnSeconds": 600 }
+  ],
+  "portals": [
+    {
+      "id": "PORTAL_TO_VILLAGE_WEST",
+      "tx": 1,
+      "ty": 16,
+      "targetMap": "MAP_EMBER_VILLAGE",
+      "targetCoord": { "tx": 46, "ty": 16 },
+      "requiredLevel": 1
+    },
+    {
+      "id": "PORTAL_TO_GOBLIN_OUTPOST",
+      "tx": 62,
+      "ty": 36,
+      "targetMap": "MAP_GOBLIN_OUTPOST",
+      "targetCoord": { "tx": 4, "ty": 20 },
+      "requiredLevel": 8
+    }
+  ],
+  "gatheringNodes": [
+    { "id": "NODE_HERB_FOREST_01", "type": "herb_valerian", "tx": 12, "ty": 18, "respawnSeconds": 45 },
+    { "id": "NODE_HERB_FOREST_02", "type": "herb_moonlight", "tx": 22, "ty": 30, "respawnSeconds": 75 },
+    { "id": "NODE_MINE_FOREST_01", "type": "ore_iron", "tx": 38, "ty": 20, "respawnSeconds": 90 }
+  ]
+}
