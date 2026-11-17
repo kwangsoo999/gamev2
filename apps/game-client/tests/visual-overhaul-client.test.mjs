@@ -8,6 +8,38 @@ import { getSkillIconSvg, getItemIconSvg } from '../src/ui/FantasyArtIcons.ts';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = path.resolve(__dirname, '../public');
 
+test('Hand-painted icons resolve catalog aliases to existing PNG artwork', () => {
+  const examples = {
+    mushroom_cap: 'mushroom_cap',
+    helm_bronze: 'helm_bronze',
+    potion_hp_small_icon: 'potion_hp',
+    potion_mp: 'potion_mp',
+    boots_traveler: 'boots_leather',
+    scroll_return: 'scroll_town',
+    excalibur_sword_icon: 'excalibur_sword_icon',
+    gauntlets_fist: 'gauntlets_fist',
+    gem_blue: 'gem_blue',
+  };
+  for (const [catalogKey, artworkKey] of Object.entries(examples)) {
+    const svg = getItemIconSvg(catalogKey);
+    const url = `/assets/elysia/ui/items/${artworkKey}.png`;
+    assert.ok(svg.includes(`href="${url}"`), `Wrong artwork for ${catalogKey}`);
+    const png = fs.readFileSync(path.join(PUBLIC_DIR, url));
+    assert.equal(png.subarray(1, 4).toString(), 'PNG');
+    assert.ok(png.readUInt32BE(16) >= 128, `Icon too small: ${url}`);
+  }
+});
+
+test('Catalog keys cannot inject markup into icon image paths', () => {
+  for (const render of [getItemIconSvg, getSkillIconSvg]) {
+    const svg = render('\"><script>alert(1)</script>');
+    assert.ok(!svg.includes('<script>'));
+    const url = /href="([^"]+)"/.exec(svg)?.[1];
+    assert.ok(url?.startsWith('/assets/elysia/ui/'));
+    assert.ok(fs.existsSync(path.join(PUBLIC_DIR, url)));
+  }
+});
+
 test('Client Visual Overhaul: FantasyArtIcons renders distinct SVG icons for all skill categories and item keys', () => {
   const skillKeys = [
     'skill_flame_slash',

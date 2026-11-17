@@ -17,7 +17,7 @@ export interface CharacterSheetConfig {
   atlasPath: string;
   frameWidth: number;
   frameHeight: number;
-  directions: 4 | 8;
+  directions: 1 | 4 | 8;
   directionMap: Record<EightDirection, number>;
   animations: Record<
     AnimState,
@@ -114,8 +114,8 @@ export class SpriteAssetManager {
         gender: 'male',
         jobId: job,
         atlasPath: maleAtlas,
-        frameWidth: 64,
-        frameHeight: 64,
+        frameWidth: 192,
+        frameHeight: 160,
         directions: 4,
         directionMap: {
           south: 0,
@@ -128,26 +128,16 @@ export class SpriteAssetManager {
           south_east: 2, // fallback to east
         },
         animations: {
-          idle: { row: 0, frames: 6, fps: 8, loop: true },
-          walk: { row: 1, frames: 8, fps: 12, loop: true },
-          run: { row: 2, frames: 8, fps: 15, loop: true },
-          attack: { row: 3, frames: 6, fps: 16, loop: false },
-          skill: { row: 4, frames: 8, fps: 16, loop: false },
-          hurt: { row: 5, frames: 3, fps: 12, loop: false },
-          death: { row: 6, frames: 6, fps: 10, loop: false },
+          idle: { row: 0, frames: 2, fps: 8, loop: true },
+          walk: { row: 1, frames: 2, fps: 10, loop: true },
+          run: { row: 2, frames: 2, fps: 12, loop: true },
+          attack: { row: 3, frames: 2, fps: 12, loop: false },
+          skill: { row: 4, frames: 2, fps: 12, loop: false },
+          hurt: { row: 5, frames: 2, fps: 10, loop: false },
+          death: { row: 6, frames: 2, fps: 8, loop: false },
         },
         anchorX: 0.5,
-        anchorY: 0.85,
-        modularLayers: {
-          head: {
-            helm_bronze: '/assets/weapons/test_shield_icon_1794157321383.png',
-          },
-          weapon: {
-            sword_novice: '/assets/weapons/wooden_sword_sprite.png',
-            sword_excalibur: '/assets/weapons/excalibur_sword_sprite.png',
-            bow_novice: '/assets/weapons/novice_bow_sprite.png',
-          },
-        },
+        anchorY: 0.94,
       });
 
       // Female default config
@@ -156,25 +146,24 @@ export class SpriteAssetManager {
           ? '/assets/characters/female/novice/animations/novice_female_master_atlas.png'
           : maleAtlas; // graceful fallback to high-quality master job atlas
 
+      const male = this.getConfig('male', job);
+      const novice = job === 'novice';
+
       this.registerConfig({
         id: `char_female_${job}`,
         gender: 'female',
         jobId: job,
         atlasPath: femaleAtlas,
-        frameWidth: 64,
-        frameHeight: 64,
-        directions: 8,
-        directionMap: {
-          south: 0,
-          south_west: 1,
-          west: 2,
-          north_west: 3,
-          north: 4,
-          north_east: 5,
-          east: 6,
-          south_east: 7,
-        },
-        animations: {
+        frameWidth: novice ? 128 : male.frameWidth,
+        frameHeight: novice ? 128 : male.frameHeight,
+        directions: novice ? 1 : 4,
+        // The female novice source contains six front-facing frames per row.
+        // All requested facings fall back to that authored view.
+        directionMap: novice ? {
+          south: 0, south_west: 0, west: 0, north_west: 0,
+          north: 0, north_east: 0, east: 0, south_east: 0,
+        } : { ...male.directionMap },
+        animations: novice ? {
           idle: { row: 0, frames: 6, fps: 8, loop: true },
           walk: { row: 1, frames: 6, fps: 12, loop: true },
           run: { row: 2, frames: 6, fps: 15, loop: true },
@@ -182,9 +171,9 @@ export class SpriteAssetManager {
           skill: { row: 4, frames: 5, fps: 16, loop: false },
           hurt: { row: 5, frames: 5, fps: 12, loop: false },
           death: { row: 6, frames: 6, fps: 10, loop: false },
-        },
+        } : { ...male.animations },
         anchorX: 0.5,
-        anchorY: 0.85,
+        anchorY: 0.94,
       });
     }
   }
@@ -300,8 +289,8 @@ export class SpriteAssetManager {
 
     const zoom = options.zoom || 1.0;
     const scale = (options.scale || 1.0) * zoom;
-    const drawW = targetWidth * scale;
     const drawH = targetHeight * scale;
+    const drawW = drawH * config.frameWidth / config.frameHeight;
     const renderX = destX - (drawW * config.anchorX);
     const renderY = destY - (drawH * config.anchorY);
 
@@ -360,10 +349,8 @@ export class SpriteAssetManager {
       const item = options.equipment[slot];
       if (!item) continue;
 
-      const layerPath =
-        config.modularLayers?.[slot]?.[item.iconKey] ||
-        (slot === 'weapon' && item.iconKey.includes('sword') ? '/assets/weapons/wooden_sword_sprite.png' : null) ||
-        (slot === 'head' && item.iconKey.includes('helm') ? '/assets/weapons/test_shield_icon_1794157321383.png' : null);
+      // Only registered layers are compatible with the authored character.
+      const layerPath = config.modularLayers?.[slot]?.[item.iconKey];
 
       if (!layerPath) continue;
 

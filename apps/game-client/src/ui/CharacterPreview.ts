@@ -303,7 +303,7 @@ export class CharacterPreview {
       frameIndex: this.currentFrameIndex,
       equipment: this.equipment,
       zoom: this.zoomLevel,
-      scale: 2.2, // Crisp 2.2x pixel art magnification for portrait inspection
+      scale: 3.0,
     };
 
     spriteAssetManager.renderPaperDoll(

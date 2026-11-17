@@ -5,14 +5,14 @@
    ========================================================================== */
 
 :root {
-  --elysia-bg-dark: #060913;
-  --elysia-bg-card: rgba(10, 16, 32, 0.88);
-  --elysia-bg-glass: rgba(15, 23, 42, 0.72);
-  --elysia-border-gold: rgba(245, 158, 11, 0.45);
+  --elysia-bg-dark: #102825;
+  --elysia-bg-card: rgba(18, 45, 40, 0.92);
+  --elysia-bg-glass: rgba(25, 59, 51, 0.78);
+  --elysia-border-gold: rgba(197, 166, 108, 0.5);
   --elysia-border-cyan: rgba(6, 182, 212, 0.35);
   --elysia-border-subtle: rgba(148, 163, 184, 0.18);
-  --elysia-gold-bright: #fbbf24;
-  --elysia-gold-deep: #d97706;
+  --elysia-gold-bright: #e7cc91;
+  --elysia-gold-deep: #a68a52;
   --elysia-cyan-glow: #22d3ee;
   --elysia-blue-royal: #2563eb;
   --elysia-violet-arcane: #8b5cf6;
@@ -25,7 +25,9 @@
 
 /* Base resets & typography */
 .elysia-landing-root {
-  position: relative;
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
   width: 100%;
   min-height: 100vh;
   background-color: var(--elysia-bg-dark);
@@ -33,6 +35,8 @@
   font-family: var(--elysia-font-sans);
   line-height: 1.6;
   overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   box-sizing: border-box;
 }
 
@@ -283,8 +287,7 @@
   align-items: center;
   padding: 100px 2rem 3rem 2rem;
   overflow: hidden;
-  background: radial-gradient(circle at 75% 30%, rgba(30, 58, 138, 0.3) 0%, rgba(6, 9, 19, 0.95) 70%),
-              url('/assets/elysia/landing/hero/hero_keyart.jpg') center/cover no-repeat;
+  background: url('/assets/elysia/landing/hero/hero_keyart.webp') center/cover no-repeat;
 }
 
 .elysia-hero-canvas-particles {
@@ -297,8 +300,8 @@
 .elysia-hero-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 25% 50%, rgba(6, 9, 19, 0.92) 0%, rgba(6, 9, 19, 0.65) 50%, rgba(6, 9, 19, 0.85) 100%),
-              linear-gradient(to top, #060913 0%, transparent 35%);
+  background: linear-gradient(90deg, #102825ed 0%, #102825bd 40%, #10282530 75%, #10282510 100%),
+              linear-gradient(to top, #102825 0%, transparent 35%);
   pointer-events: none;
   z-index: 2;
 }
@@ -1499,6 +1502,16 @@
 }
 
 @media (max-width: 768px) {
+  .elysia-nav-brand { flex: 1; min-width: 0; }
+  .elysia-nav-actions { gap: .5rem; }
+  .elysia-lang-toggle, #btn-nav-login { display: none; }
+  .elysia-nav-header .btn-elysia-primary { padding: .5rem .7rem; font-size: .7rem; }
+  .elysia-mobile-toggle { flex-shrink: 0; }
+  .elysia-hero-section { padding: 100px 1rem 2rem; }
+  .elysia-hero-container { grid-template-columns: minmax(0, 1fr); }
+  .elysia-hero-content { min-width: 0; }
+  .elysia-hero-stats-bar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-character-portal { width: min(360px, 100%); }
   .elysia-nav-header {
     padding: 0 1rem;
   }

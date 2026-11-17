@@ -51,7 +51,7 @@ export class EquipmentLayerMapper {
 
     EquipmentLayerMapper.register({
       itemId: 'arm_cloth_tunic',
-      slot: 'chest',
+      slot: 'armor',
       layer: 'armor',
       anchorProfile: 'torso',
       texturePath: '/assets/equipment/armor/cloth_tunic.png',
@@ -60,7 +60,7 @@ export class EquipmentLayerMapper {
 
     EquipmentLayerMapper.register({
       itemId: 'arm_iron_chainmail',
-      slot: 'chest',
+      slot: 'armor',
       layer: 'armor',
       anchorProfile: 'torso',
       texturePath: '/assets/equipment/armor/iron_chainmail.png',
@@ -78,7 +78,7 @@ export class EquipmentLayerMapper {
 
     EquipmentLayerMapper.register({
       itemId: 'shld_wooden_buckler',
-      slot: 'offhand',
+      slot: 'cloak',
       layer: 'front_equipment',
       anchorProfile: 'left_hand',
       texturePath: '/assets/equipment/shields/wooden_buckler.png',
