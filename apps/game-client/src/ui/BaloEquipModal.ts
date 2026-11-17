@@ -1,5 +1,6 @@
 import { HudSnapshot } from '../engine/GameEngine';
 import { EquipSlotKey, InventoryItemDef, ItemCategory, PrimaryAttributesState } from '../engine/types';
+import { CharacterPreview } from './CharacterPreview';
 import { getBackpackIconSvg, getItemIconSvg } from './FantasyArtIcons';
 import { modalManager } from './ModalManager';
 
@@ -15,19 +16,19 @@ const ATTR_LABELS: { key: keyof PrimaryAttributesState; short: string; label: st
 ];
 
 const EQUIP_LEFT: { slot: EquipSlotKey; label: string; hintSvg: string }[] = [
-  { slot: 'weapon', label: 'Vũ Khí', hintSvg: 'sword_novice' },
   { slot: 'head', label: 'Mũ / Nón', hintSvg: 'helm_bronze' },
+  { slot: 'weapon', label: 'Vũ Khí', hintSvg: 'sword_novice' },
   { slot: 'armor', label: 'Áo Giáp', hintSvg: 'tunic_explorer' },
   { slot: 'gloves', label: 'Găng Tay', hintSvg: 'gloves_leather' },
   { slot: 'boots', label: 'Ủng / Giày', hintSvg: 'boots_leather' },
 ];
 
 const EQUIP_RIGHT: { slot: EquipSlotKey; label: string; hintSvg: string }[] = [
-  { slot: 'shoulder', label: 'Cầu Vai', hintSvg: 'shoulder_plate' },
+  { slot: 'cloak', label: 'Áo Choàng', hintSvg: 'cloak_wind' },
   { slot: 'necklace', label: 'Dây Chuyền', hintSvg: 'amulet_jade' },
   { slot: 'ring1', label: 'Nhẫn 1', hintSvg: 'ring_band' },
   { slot: 'ring2', label: 'Nhẫn 2', hintSvg: 'ring_band' },
-  { slot: 'cloak', label: 'Áo Choàng', hintSvg: 'cloak_wind' },
+  { slot: 'shoulder', label: 'Cầu Vai', hintSvg: 'shoulder_plate' },
 ];
 
 const RARITY_LABELS: Record<string, string> = {
@@ -49,6 +50,7 @@ export class BaloEquipModal {
   private selectedEquipSlot: EquipSlotKey | null = null;
   private discardConfirmItem: InventoryItemDef | null = null;
   private latestSnapshot: HudSnapshot | null = null;
+  private characterPreview: CharacterPreview = new CharacterPreview();
 
   private pendingAllocations: Record<keyof PrimaryAttributesState, number> = {
     str: 0,
@@ -447,6 +449,12 @@ export class BaloEquipModal {
       for (const k of STAT_KEYS) this.pendingAllocations[k] = 0;
       this.onPendingPointsPreview?.(null);
     }
+    this.characterPreview.updateData({
+      level: snapshot.level,
+      jobId: (snapshot as any).advancedJobId || snapshot.classId,
+      playerName: snapshot.playerName,
+      equipment: snapshot.equipment,
+    });
     if (this.isOpen) {
       const currentHash = `${snapshot.stats.potentialPoints}_${snapshot.level}_${snapshot.stats.gold}_${snapshot.inventory.length}_${Object.keys(snapshot.equipment).join(',')}_${JSON.stringify(snapshot.baseStats)}`;
       if (currentHash !== this.lastRenderHash && this.getTotalPending() === 0) {
@@ -459,6 +467,7 @@ export class BaloEquipModal {
     if (snapshot) this.latestSnapshot = snapshot;
     this.isOpen = true;
     this.discardConfirmItem = null;
+    this.characterPreview.startAnimation();
     modalManager.open({
       id: BaloEquipModal.MODAL_ID,
       backdrop: this.backdrop,
@@ -466,6 +475,7 @@ export class BaloEquipModal {
         this.isOpen = false;
         this.isSubmittingStats = false;
         this.discardConfirmItem = null;
+        this.characterPreview.stopAnimation();
         for (const k of STAT_KEYS) this.pendingAllocations[k] = 0;
         this.onPendingPointsPreview?.(null);
       },
@@ -476,6 +486,7 @@ export class BaloEquipModal {
   public close() {
     this.isOpen = false;
     this.discardConfirmItem = null;
+    this.characterPreview.stopAnimation();
     modalManager.close(BaloEquipModal.MODAL_ID);
   }
 
@@ -518,6 +529,13 @@ export class BaloEquipModal {
     const prevCols = this.backdrop.querySelector('.tk-balo-columns') as HTMLElement | null;
     const savedScrollTop = prevCols ? prevCols.scrollTop : 0;
 
+    this.characterPreview.updateData({
+      level: snap.level,
+      jobId: (snap as any).advancedJobId || snap.classId,
+      playerName: snap.playerName,
+      equipment: snap.equipment,
+    });
+
     const filteredItems =
       this.activeFilter === 'all'
         ? snap.inventory
@@ -538,7 +556,7 @@ export class BaloEquipModal {
       }
     }
 
-    const totalSlots = 30;
+    const totalSlots = 48;
     let gridHtml = '';
     for (let i = 0; i < totalSlots; i++) {
       const item = filteredItems[i];
@@ -761,16 +779,7 @@ export class BaloEquipModal {
                 ${EQUIP_LEFT.map((s) => this.renderEquipSlotBtn(s.slot, s.label, s.hintSvg, snap.equipment[s.slot])).join('')}
               </div>
 
-              <div class="tk-paperdoll-pedestal">
-                <img src="${
-                  [
-                    'warrior', 'fighter', 'swordsman', 'mage', 'assassin', 'archer', 'priest', 'monk', 'paladin', 'knight', 'lancer', 'spearman',
-                    'sword_saint', 'berserker', 'dragoon', 'warlancer', 'guardian', 'saint', 'exorcist', 'elementalist', 'arcanist', 'shadowblade', 'phantom', 'martial_artist', 'duelist', 'sniper', 'ranger',
-                  ].includes(String((snap as any).advancedJobId || snap.classId || '').toLowerCase())
-                    ? `/assets/elysia/characters/jobs/${String((snap as any).advancedJobId || snap.classId).toLowerCase()}.png`
-                    : '/assets/elysia/ui/paperdoll-player.png'
-                }" alt="${snap.playerName}" class="tk-paperdoll-img" />
-              </div>
+              <div class="tk-paperdoll-pedestal" id="tk-character-preview-mount"></div>
 
               <div class="tk-equip-col-stack">
                 ${EQUIP_RIGHT.map((s) => this.renderEquipSlotBtn(s.slot, s.label, s.hintSvg, snap.equipment[s.slot])).join('')}
@@ -886,12 +895,13 @@ export class BaloEquipModal {
           <!-- RIGHT: BALO ITEM GRID FRAME -->
           <section class="tk-panel-inset tk-items-column">
             <div class="tk-section-heading">
-              <span>BALO · TÚI ĐỒ (${snap.inventory.length}/30)</span>
+              <span>BALO · TÚI ĐỒ (${snap.inventory.length}/48)</span>
               <div class="tk-filter-tabs">
                 <button type="button" class="tk-tab-btn ${this.activeFilter === 'all' ? 'active' : ''}" data-filter="all">Tất cả</button>
                 <button type="button" class="tk-tab-btn ${this.activeFilter === 'equip' ? 'active' : ''}" data-filter="equip">Trang bị</button>
                 <button type="button" class="tk-tab-btn ${this.activeFilter === 'consumable' ? 'active' : ''}" data-filter="consumable">Tiêu hao</button>
                 <button type="button" class="tk-tab-btn ${this.activeFilter === 'material' ? 'active' : ''}" data-filter="material">Nguyên liệu</button>
+                <button type="button" class="tk-tab-btn ${this.activeFilter === 'quest' ? 'active' : ''}" data-filter="quest">Nhiệm vụ</button>
               </div>
             </div>
 
@@ -980,9 +990,17 @@ export class BaloEquipModal {
       </div>
     `;
 
+    // Mount live interactive CharacterPreview canvas into pedestal stage
+    const mount = this.backdrop.querySelector('#tk-character-preview-mount');
+    if (mount) {
+      mount.replaceChildren(this.characterPreview.getElement());
+    }
+
     const nextCols = this.backdrop.querySelector('.tk-balo-columns') as HTMLElement | null;
     if (nextCols && savedScrollTop > 0) {
       nextCols.scrollTop = savedScrollTop;
     }
+
+    this.lastRenderHash = `${snap.stats.potentialPoints}_${snap.level}_${snap.stats.gold}_${snap.inventory.length}_${Object.keys(snap.equipment).join(',')}_${JSON.stringify(snap.baseStats)}`;
   }
 }

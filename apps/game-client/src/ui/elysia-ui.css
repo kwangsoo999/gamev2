@@ -639,3 +639,233 @@ body { background: #7b8a66; }
 @keyframes fadeInModal { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
 
 
+
+
+/* ========================================================
+   PREMIUM ANIME FANTASY CHARACTER PREVIEW & BALO STYLING
+   ======================================================== */
+.tk-window.tk-balo-window {
+  width: min(1040px, 98vw);
+  background: radial-gradient(ellipse at 50% 0%, #152238, #0b1329 80%) !important;
+  border: 1px solid #d4af37 !important;
+  outline: 1px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), inset 0 0 60px rgba(212, 175, 55, 0.08) !important;
+  color: #fffbeb !important;
+}
+.tk-window.tk-balo-window .tk-window-header {
+  background: linear-gradient(90deg, #0e172a, #1e293b 50%, #0e172a) !important;
+  border-bottom: 1px solid #d4af37 !important;
+}
+.tk-window.tk-balo-window .tk-header-title-group h2 {
+  color: #fbbf24 !important;
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.4);
+}
+.tk-window.tk-balo-window .tk-header-title-group p {
+  color: #cbd5e1 !important;
+}
+.tk-window.tk-balo-window .tk-panel-inset {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  color: #f8fafc !important;
+}
+.tk-window.tk-balo-window .tk-section-heading {
+  color: #fde047 !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+
+/* Character Preview Stage & Controls */
+.tk-character-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 6px;
+  position: relative;
+}
+.tk-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2px 8px;
+  font-size: 11px;
+}
+.tk-preview-title {
+  font-weight: 700;
+  color: #fde047;
+  text-shadow: 0 0 8px rgba(253, 224, 71, 0.5);
+}
+.tk-preview-gender-toggle {
+  display: flex;
+  gap: 4px;
+}
+.tk-gender-btn {
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid #475569;
+  background: #1e293b;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.tk-gender-btn.active {
+  background: linear-gradient(135deg, #b45309, #d97706);
+  border-color: #fde047;
+  color: #fffbeb;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+.tk-preview-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  min-height: 220px;
+}
+.tk-preview-pedestal-glow {
+  position: absolute;
+  width: 180px;
+  height: 80px;
+  bottom: 24px;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.28) 0%, rgba(212, 175, 55, 0.08) 55%, transparent 75%);
+  pointer-events: none;
+}
+.tk-character-preview-canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  cursor: grab;
+  touch-action: none;
+  max-width: 100%;
+  max-height: 220px;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.65));
+}
+.tk-character-preview-canvas:active {
+  cursor: grabbing;
+}
+.tk-preview-compass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  font-size: 10px;
+}
+.tk-rotate-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #334155, #1e293b);
+  border: 1px solid #d4af37;
+  color: #fde047;
+  font-size: 10px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.tk-rotate-btn:hover {
+  filter: brightness(1.2);
+  transform: scale(1.08);
+}
+.tk-direction-label {
+  color: #e2e8f0;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+}
+.tk-preview-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2px 4px;
+  gap: 6px;
+}
+.tk-zoom-group {
+  display: flex;
+  gap: 3px;
+}
+.tk-zoom-btn {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #cbd5e1;
+  font-size: 9px;
+  cursor: pointer;
+}
+.tk-zoom-btn.active {
+  background: #d97706;
+  border-color: #fde047;
+  color: #fff;
+  font-weight: 700;
+}
+.tk-job-preview-select {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #0f172a;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #fde047;
+  font-size: 9.5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 48-Slot Inventory Grid Styling */
+.tk-items-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 5px !important;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+.tk-slot-cell {
+  background: linear-gradient(145deg, #1e293b, #0f172a) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+.tk-slot-cell.empty {
+  background: rgba(15, 23, 42, 0.4) !important;
+  border: 1px dashed rgba(100, 116, 139, 0.35) !important;
+}
+.tk-slot-cell:not(.empty):hover, .tk-slot-cell.selected {
+  border-color: #fde047 !important;
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.45) !important;
+}
+.tk-slot-cell .tk-item-qty {
+  color: #f8fafc !important;
+  text-shadow: 0 1px 2px #000;
+}
+.tk-slot-subtag {
+  background: rgba(15, 23, 42, 0.88) !important;
+  color: #cbd5e1 !important;
+}
+.tk-durability-box {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border-color: rgba(212, 175, 55, 0.3) !important;
+  color: #e2e8f0 !important;
+}
+.tk-inspector-bar {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(212, 175, 55, 0.35) !important;
+  color: #f8fafc !important;
+}
+.tk-inspector-name {
+  color: #fde047 !important;
+}
+.tk-inspector-desc {
+  color: #cbd5e1 !important;
+}
+.tk-paperdoll-pedestal {
+  min-height: 270px !important;
+  height: auto !important;
+  background: radial-gradient(ellipse at 50% 67%, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.95) 70%) !important;
+  border: 1px solid rgba(212, 175, 55, 0.4) !important;
+}
