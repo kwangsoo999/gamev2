@@ -272,69 +272,102 @@ export class SpriteManager {
 
   private drawOverlayLabels(ctx: CanvasRenderingContext2D, entity: Entity, x: number, y: number, height: number) {
     ctx.save();
-    ctx.font = '700 11px "Segoe UI", "DM Sans", sans-serif';
-    ctx.textAlign = 'center';
-    ctx.lineWidth = 3;
-    ctx.strokeStyle = 'rgba(20, 34, 25, 0.85)';
     const mon: any = entity;
     const isLocalPlayer = entity.kind === 'player' && entity.id === 'player_main';
     const isRemotePlayer = entity.kind === 'player' && entity.id !== 'player_main';
     const isElite = entity.kind === 'monster' && Boolean(mon.isElite || mon.isRandomElite || mon.category === 'ELITE');
     const isBoss = entity.kind === 'monster' && Boolean(entity.isBoss || entity.spriteId === 'boss_dark_dragon');
-    const displayName = isRemotePlayer ? `${entity.name} · Lv.${entity.level}` : entity.name;
-    ctx.strokeText(displayName, x, y + 16);
-    ctx.fillStyle = isLocalPlayer
-      ? '#fff3bd'
-      : isRemotePlayer
-      ? '#7dd3fc'
-      : entity.kind === 'npc'
-      ? '#f5eed8'
-      : isBoss
-      ? '#e9d5ff'
-      : isElite
-      ? '#fcd34d'
-      : '#ffd8c2';
-    ctx.fillText(displayName, x, y + 16);
 
-    if (isRemotePlayer) {
-      const jobLabel = (entity as any).remoteJobLabel || 'Tân Thủ';
-      ctx.font = '700 10px "Segoe UI", sans-serif';
-      ctx.strokeText(`[${jobLabel}]`, x, y - height - 15);
-      ctx.fillStyle = '#fde68a';
-      ctx.fillText(`[${jobLabel}]`, x, y - height - 15);
-      const barW = 44;
-      const ratio = Math.max(0, Math.min(1, entity.hp / Math.max(1, entity.maxHp)));
-      ctx.fillStyle = '#0f172add';
-      ctx.fillRect(x - barW / 2, y - height - 9, barW, 5);
-      ctx.fillStyle = '#22c55e';
-      ctx.fillRect(x - barW / 2 + 1, y - height - 8, (barW - 2) * ratio, 3);
-    } else if (isLocalPlayer && (entity as any).cosmeticTitleLabel) {
-      const titleTag = `« ${(entity as any).cosmeticTitleLabel} »`;
-      ctx.font = '700 10px "Segoe UI", sans-serif';
-      ctx.strokeText(titleTag, x, y - height - 8);
-      ctx.fillStyle = '#fde047';
-      ctx.fillText(titleTag, x, y - height - 8);
-    }
     if (entity.kind === 'monster' && entity.alive) {
-      const width = isBoss ? 68 : isElite ? 54 : 44;
+      // 1. Monster Name & Level above sprite (e.g. "Báo Hoa Lv25" or "Slime Thảo Nguyên Lv.1")
+      const monLabel = `${entity.name} Lv.${entity.level || 1}`;
+      ctx.font = '700 11px "Segoe UI", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = '#000000';
+      ctx.strokeText(monLabel, x, y - height - 12);
+      ctx.fillStyle = isBoss ? '#f472b6' : isElite ? '#fbbf24' : '#fffdf0';
+      ctx.fillText(monLabel, x, y - height - 12);
+
+      // 2. Red Health Bar with dark border
+      const barW = isBoss ? 68 : isElite ? 54 : 44;
+      const barH = 5;
+      const barY = y - height - 8;
+      const ratio = Math.max(0, Math.min(1, entity.hp / Math.max(1, entity.maxHp)));
+      ctx.fillStyle = '#0f172acc';
+      ctx.fillRect(x - barW / 2 - 1, barY - 1, barW + 2, barH + 2);
+      ctx.strokeStyle = '#475569';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(x - barW / 2 - 1, barY - 1, barW + 2, barH + 2);
+      ctx.fillStyle = isBoss ? '#a855f7' : isElite ? '#f59e0b' : '#dc2626';
+      ctx.fillRect(x - barW / 2, barY, barW * ratio, barH);
+
+      // 3. Small circular elemental badge next to health bar (e.g. Thổ / Kim / Hỏa)
+      const badgeX = x + barW / 2 + 7;
+      const badgeY = barY + barH / 2;
+      ctx.beginPath();
+      ctx.arc(badgeX, badgeY, 5.5, 0, Math.PI * 2);
+      ctx.fillStyle = '#1e293b';
+      ctx.fill();
+      ctx.strokeStyle = '#f59e0b';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.font = '700 7px sans-serif';
+      ctx.fillStyle = '#fde047';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('Thổ', badgeX, badgeY);
+
       if (isElite && !isBoss) {
         ctx.font = '800 9px "Segoe UI", sans-serif';
         const tag = mon.isRandomElite ? '★ TINH ANH HIẾM' : '★ TINH ANH';
-        ctx.strokeText(tag, x, y - height - 14);
+        ctx.strokeText(tag, x, y - height - 26);
         ctx.fillStyle = '#fbbf24';
-        ctx.fillText(tag, x, y - height - 14);
+        ctx.fillText(tag, x, y - height - 26);
       }
-      ctx.fillStyle = '#1f3728dd';
-      ctx.fillRect(x - width / 2, y - height - 9, width, 6);
-      ctx.fillStyle = isBoss ? '#a855f7' : isElite ? '#f59e0b' : '#d96b57';
-      ctx.fillRect(x - width / 2 + 1, y - height - 8, (width - 2) * entity.hp / Math.max(1, entity.maxHp), 4);
-    } else if (entity.kind === 'npc') {
-      const marker: '!' | '?' | null | undefined = (entity as any).questMarker;
-      if (marker === '?' || marker === '!') {
-        ctx.font = '800 18px Georgia, serif';
-        ctx.strokeText(marker, x, y - height - 5);
-        ctx.fillStyle = marker === '?' ? '#4ade80' : '#ffe18c';
-        ctx.fillText(marker, x, y - height - 5);
+    } else {
+      ctx.font = '700 11px "Segoe UI", "DM Sans", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = 'rgba(20, 34, 25, 0.85)';
+      const displayName = isRemotePlayer ? `${entity.name} · Lv.${entity.level}` : entity.name;
+      ctx.strokeText(displayName, x, y + 16);
+      ctx.fillStyle = isLocalPlayer
+        ? '#fff3bd'
+        : isRemotePlayer
+        ? '#7dd3fc'
+        : entity.kind === 'npc'
+        ? '#f5eed8'
+        : '#ffd8c2';
+      ctx.fillText(displayName, x, y + 16);
+
+      if (isRemotePlayer) {
+        const jobLabel = (entity as any).remoteJobLabel || 'Tân Thủ';
+        ctx.font = '700 10px "Segoe UI", sans-serif';
+        ctx.strokeText(`[${jobLabel}]`, x, y - height - 15);
+        ctx.fillStyle = '#fde68a';
+        ctx.fillText(`[${jobLabel}]`, x, y - height - 15);
+        const barW = 44;
+        const ratio = Math.max(0, Math.min(1, entity.hp / Math.max(1, entity.maxHp)));
+        ctx.fillStyle = '#0f172add';
+        ctx.fillRect(x - barW / 2, y - height - 9, barW, 5);
+        ctx.fillStyle = '#22c55e';
+        ctx.fillRect(x - barW / 2 + 1, y - height - 8, (barW - 2) * ratio, 3);
+      } else if (isLocalPlayer && (entity as any).cosmeticTitleLabel) {
+        const titleTag = `« ${(entity as any).cosmeticTitleLabel} »`;
+        ctx.font = '700 10px "Segoe UI", sans-serif';
+        ctx.strokeText(titleTag, x, y - height - 8);
+        ctx.fillStyle = '#fde047';
+        ctx.fillText(titleTag, x, y - height - 8);
+      } else if (entity.kind === 'npc') {
+        const marker: '!' | '?' | null | undefined = (entity as any).questMarker;
+        if (marker === '?' || marker === '!') {
+          ctx.font = '800 18px Georgia, serif';
+          ctx.strokeText(marker, x, y - height - 5);
+          ctx.fillStyle = marker === '?' ? '#4ade80' : '#ffe18c';
+          ctx.fillText(marker, x, y - height - 5);
+        }
       }
     }
     ctx.restore();

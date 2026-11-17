@@ -15,6 +15,14 @@
       "passwordHash": "$2a$10$YNCsh8UW/tSfpKKN2Uxk9eM9ZWR7VD.Yw19AjHk0aYGxa0rbAc.IC",
       "role": "player",
       "createdAt": "2026-11-09T04:49:22.516Z"
+    },
+    {
+      "id": "USR_1794908743971_530",
+      "username": "hero2026_521",
+      "email": "hero2026_521@elysia.com",
+      "passwordHash": "$2a$10$8Ko/KkJYgb.TSpEB0raFUOQ3q9IXJ7flS3ajIi2VW8uucjBQdnxcS",
+      "role": "player",
+      "createdAt": "2026-11-17T09:45:43.971Z"
     }
   ],
   "characters": [
@@ -164,7 +172,7 @@
           "maxPctExpBonus": 35,
           "maxPctGoldBonus": 35
         },
-        "recalculatedAt": "2026-11-11T12:42:11.466Z"
+        "recalculatedAt": "2026-11-17T09:42:33.059Z"
       },
       "unspentStatPoints": 3,
       "stats": {
@@ -206,6 +214,404 @@
         "searchRadiusPx": 420
       },
       "lastLoginAt": "2026-11-11T10:22:01.664Z"
+    },
+    {
+      "id": "CHAR_1794908763561_702",
+      "userId": "USR_1794908743971_530",
+      "name": "ElysiaKnight",
+      "gender": "male",
+      "classId": "adventurer",
+      "jobAdvancementCompleted": false,
+      "evolutionTier": 0,
+      "sanctumCompleted": false,
+      "availableAttributePoints": 24,
+      "unspentStatPoints": 24,
+      "skillPoints": 5,
+      "skillLevels": {
+        "SKILL_NOVICE_SLASH": 1,
+        "SKILL_NOVICE_FIREBALL": 1
+      },
+      "pityCounters": {},
+      "completedQuests": [],
+      "activeQuests": {
+        "QUEST_001_SLIME_CLEAR": {
+          "questId": "QUEST_001_SLIME_CLEAR",
+          "startedAt": "2026-11-17T09:47:09.419Z",
+          "objectives": {
+            "obj_1": 3
+          },
+          "completed": true,
+          "hiddenDiscovered": false
+        }
+      },
+      "discoveredHiddenQuests": [],
+      "questChainProgress": {},
+      "visitedMaps": [
+        "THON_KHOI_NGUYEN",
+        "map_beginner_meadow"
+      ],
+      "monsterKillCounts": {
+        "mon_green_slime": 93
+      },
+      "dialogueFlags": [
+        "npc_elder"
+      ],
+      "ownedUniqueEquipmentIds": [],
+      "unlockedTitles": [],
+      "equippedCosmeticTitleId": null,
+      "claimedRewardKeys": [],
+      "unlockedSkills": [
+        "SKILL_NOVICE_SLASH",
+        "SKILL_NOVICE_FIREBALL"
+      ],
+      "level": 6,
+      "exp": 941,
+      "gold": 1774,
+      "initialAttributes": {
+        "str": 11,
+        "dex": 9,
+        "agi": 8,
+        "int": 9,
+        "con": 9
+      },
+      "initialAttributesGeneratedAt": "2026-11-17T09:46:03.561Z",
+      "baseStats": {
+        "str": 13,
+        "dex": 9,
+        "agi": 8,
+        "int": 9,
+        "con": 9
+      },
+      "attributes": {
+        "str": 13,
+        "dex": 9,
+        "agi": 8,
+        "int": 9,
+        "con": 9
+      },
+      "allocatedStats": {
+        "str": 2,
+        "dex": 0,
+        "agi": 0,
+        "int": 0,
+        "con": 0
+      },
+      "stats": {
+        "str": 13,
+        "dex": 9,
+        "agi": 8,
+        "int": 9,
+        "con": 9
+      },
+      "appearance": {
+        "gender": "male",
+        "faceId": "face_01",
+        "hairstyleId": "m_short",
+        "hairColor": "#231f28",
+        "eyeColor": "#2563eb",
+        "outfitId": "adventurer_tunic"
+      },
+      "equipment": {
+        "weapon": "ITEM_SWORD_WOODEN_NOVICE"
+      },
+      "inventory": [
+        {
+          "slotId": 0,
+          "itemId": "MAT_SLIME_JELLY",
+          "name": "Tinh Chất Slime",
+          "category": "material",
+          "rarity": "common",
+          "quantity": 135
+        },
+        {
+          "slotId": 1,
+          "itemId": "inv_helm_bronze",
+          "name": "Mũ Đồng Tân Thủ",
+          "category": "equip",
+          "rarity": "rare",
+          "quantity": 1
+        },
+        {
+          "slotId": 2,
+          "itemId": "inv_gloves_leather",
+          "name": "Găng Tay Da Săn",
+          "category": "equip",
+          "rarity": "uncommon",
+          "quantity": 1
+        },
+        {
+          "slotId": 3,
+          "itemId": "inv_boots_leather",
+          "name": "Ủng Da Thảo Nguyên",
+          "category": "equip",
+          "rarity": "rare",
+          "quantity": 1
+        },
+        {
+          "slotId": 4,
+          "itemId": "inv_amulet_jade",
+          "name": "Dây Chuyền Ngọc Lục Bảo",
+          "category": "equip",
+          "rarity": "epic",
+          "quantity": 1
+        },
+        {
+          "slotId": 5,
+          "itemId": "inv_ring_novice",
+          "name": "Nhẫn Đồng Khởi Nguyên",
+          "category": "equip",
+          "rarity": "uncommon",
+          "quantity": 1
+        },
+        {
+          "slotId": 6,
+          "itemId": "ITEM_UPGRADE_STONE_BASIC",
+          "name": "Đá Cường Hóa Sơ Cấp",
+          "category": "material",
+          "rarity": "uncommon",
+          "quantity": 4
+        },
+        {
+          "slotId": 7,
+          "itemId": "FRAG_APPRENTICE_SET",
+          "name": "Mảnh Bộ Tập Sự Lv.15",
+          "category": "material",
+          "rarity": "uncommon",
+          "quantity": 10
+        },
+        {
+          "slotId": 8,
+          "itemId": "inv_potion_hp",
+          "name": "Bình Sinh Lực Nhỏ",
+          "category": "consumable",
+          "rarity": "common",
+          "quantity": 15
+        },
+        {
+          "slotId": 9,
+          "itemId": "inv_potion_mp",
+          "name": "Bình Ma Pháp Nhỏ",
+          "category": "consumable",
+          "rarity": "common",
+          "quantity": 8
+        },
+        {
+          "slotId": 10,
+          "itemId": "inv_bread",
+          "name": "Bánh Mì Nướng Ấm",
+          "category": "consumable",
+          "rarity": "common",
+          "quantity": 5
+        },
+        {
+          "slotId": 11,
+          "itemId": "inv_scroll_town",
+          "name": "Cuộn Giấy Hồi Thành",
+          "category": "consumable",
+          "rarity": "rare",
+          "quantity": 4
+        },
+        {
+          "slotId": 12,
+          "itemId": "inv_herb",
+          "name": "Thảo Dược Xanh",
+          "category": "material",
+          "rarity": "common",
+          "quantity": 12
+        },
+        {
+          "slotId": 13,
+          "itemId": "inv_wood",
+          "name": "Gỗ Sồi Thôn Làng",
+          "category": "material",
+          "rarity": "common",
+          "quantity": 20
+        },
+        {
+          "slotId": 14,
+          "itemId": "inv_ore",
+          "name": "Quặng Sắt Thô",
+          "category": "material",
+          "rarity": "common",
+          "quantity": 6
+        },
+        {
+          "slotId": 15,
+          "itemId": "inv_gem",
+          "name": "Thủy Tinh Tím Cổ",
+          "category": "material",
+          "rarity": "epic",
+          "quantity": 1
+        },
+        {
+          "slotId": 16,
+          "itemId": "ITEM_POTION_HP_SMALL",
+          "name": "Bình Máu Nhỏ",
+          "category": "material",
+          "rarity": "common",
+          "quantity": 51
+        },
+        {
+          "slotId": 17,
+          "itemId": "TOOL_WOOD_AXE_T1",
+          "name": "Rìu Tiều Phu Sơ Cấp",
+          "category": "material",
+          "rarity": "common",
+          "quantity": 1
+        }
+      ],
+      "regionId": "map_beginner_meadow",
+      "x": 456,
+      "y": 492,
+      "saveVersion": 54,
+      "lastSavedAt": "2026-11-17T10:14:20.347Z",
+      "discoveredVillageIds": [
+        "THON_KHOI_NGUYEN"
+      ],
+      "latestVillageCheckpointId": "THON_KHOI_NGUYEN",
+      "checkpointUpdatedAt": "2026-11-17T10:10:31.248Z",
+      "deathPenalty": null,
+      "deathCount": 0,
+      "autoCombatConfig": {
+        "enabled": true,
+        "autoAttack": true,
+        "autoSkill": true,
+        "selectedSkillIds": [],
+        "autoPotionHp": true,
+        "hpThresholdPct": 55,
+        "autoPotionMp": true,
+        "mpThresholdPct": 35,
+        "autoLoot": true,
+        "autoTarget": true,
+        "targetPriority": "nearest",
+        "returnToAnchor": true,
+        "anchorX": 264,
+        "anchorY": 744,
+        "anchorRegionId": "map_beginner_meadow",
+        "anchorRadiusPx": 260,
+        "searchRadiusPx": 420
+      },
+      "createdAt": "2026-11-17T09:46:03.561Z",
+      "lastLoginAt": "2026-11-17T10:09:51.221Z",
+      "updatedAt": "2026-11-17T10:14:20.347Z",
+      "cachedTitleBonuses": {
+        "unlockedTitleIds": [],
+        "equippedCosmeticTitleId": null,
+        "uncappedTotals": {
+          "atk": 0,
+          "matk": 0,
+          "def": 0,
+          "mdef": 0,
+          "maxHp": 0,
+          "maxMp": 0,
+          "str": 0,
+          "dex": 0,
+          "agi": 0,
+          "int": 0,
+          "con": 0,
+          "critRatePct": 0,
+          "atkPct": 0,
+          "matkPct": 0,
+          "defPct": 0,
+          "mdefPct": 0,
+          "hpPct": 0,
+          "mpPct": 0,
+          "skillDamagePct": 0,
+          "critDamagePct": 0,
+          "damageReductionPct": 0,
+          "healingPowerPct": 0,
+          "moveSpeedPct": 0,
+          "expBonusPct": 0,
+          "goldBonusPct": 0
+        },
+        "cappedTotals": {
+          "atk": 0,
+          "matk": 0,
+          "def": 0,
+          "mdef": 0,
+          "maxHp": 0,
+          "maxMp": 0,
+          "str": 0,
+          "dex": 0,
+          "agi": 0,
+          "int": 0,
+          "con": 0,
+          "critRatePct": 0,
+          "atkPct": 0,
+          "matkPct": 0,
+          "defPct": 0,
+          "mdefPct": 0,
+          "hpPct": 0,
+          "mpPct": 0,
+          "skillDamagePct": 0,
+          "critDamagePct": 0,
+          "damageReductionPct": 0,
+          "healingPowerPct": 0,
+          "moveSpeedPct": 0,
+          "expBonusPct": 0,
+          "goldBonusPct": 0
+        },
+        "limitsApplied": {
+          "maxFlatAtk": 350,
+          "maxFlatMatk": 350,
+          "maxFlatDef": 250,
+          "maxFlatMdef": 250,
+          "maxFlatMaxHp": 4500,
+          "maxFlatMaxMp": 2200,
+          "maxFlatPrimaryAttr": 60,
+          "maxFlatCritRatePct": 20,
+          "maxPctAtk": 40,
+          "maxPctMatk": 40,
+          "maxPctDef": 40,
+          "maxPctHp": 45,
+          "maxPctMp": 45,
+          "maxPctSkillDamage": 40,
+          "maxPctCritDamage": 60,
+          "maxPctDamageReduction": 25,
+          "maxPctHealingPower": 40,
+          "maxPctMoveSpeed": 30,
+          "maxPctExpBonus": 35,
+          "maxPctGoldBonus": 35
+        },
+        "recalculatedAt": "2026-11-17T10:14:20.202Z"
+      },
+      "maxHp": 370,
+      "hp": 370,
+      "maxMp": 225,
+      "mp": 225,
+      "passivePoints": 0,
+      "passivePointsSpent": 0,
+      "completedQuestHistory": {},
+      "trackedQuestId": "QUEST_001_SLIME_CLEAR",
+      "professions": {
+        "woodcutter": {
+          "professionId": "woodcutter",
+          "level": 1,
+          "exp": 0,
+          "nextLevelExp": 139,
+          "rank": "apprentice",
+          "learnedRecipeIds": [
+            "REC_WOOD_TIMBER_BUNDLE"
+          ],
+          "recipeCraftCounts": {},
+          "equippedToolId": "TOOL_WOOD_AXE_T1",
+          "toolDurability": 85,
+          "maxToolDurability": 85,
+          "totalGathered": 0,
+          "totalCrafted": 0,
+          "completedQuestIds": [],
+          "dailyQuestsDateKey": "2026-11-17",
+          "dailyCompletedQuestIds": [],
+          "productionHistory": []
+        }
+      },
+      "unlockedProfessionSlots": 3,
+      "professionDailyStats": {
+        "dateKey": "2026-11-17",
+        "gatherActions": 0,
+        "craftActions": 0,
+        "questsCompleted": []
+      }
     }
   ],
   "items": [
@@ -11222,9 +11628,10 @@
       "rewardReputation": 50,
       "rewardMerchantExp": 160,
       "id": "CTR_729f29a3",
-      "deliveredQty": 0,
-      "status": "open",
-      "createdAt": "2026-11-11T12:23:17.316Z"
+      "deliveredQty": 4,
+      "status": "completed",
+      "createdAt": "2026-11-11T12:23:17.316Z",
+      "claimedByCharacterId": "CHAR_1794908391173_254"
     },
     {
       "title": "Đơn Thu Mua Lá Dược Thảo (Herbalist)",
@@ -11244,6 +11651,25 @@
       "deliveredQty": 0,
       "status": "open",
       "createdAt": "2026-11-11T12:42:00.802Z"
+    },
+    {
+      "title": "Hợp Đồng Cung Ứng Dược Phẩm Vương Đô",
+      "contractKind": "potion_supply",
+      "issuerType": "npc",
+      "issuerId": "NPC_ALCHEMIST_MASTER",
+      "issuerName": "Tổng Quản Quân Y",
+      "professionId": "herbalist",
+      "requiredItemId": "ITEM_POTION_HP_SMALL",
+      "requiredItemName": "Bình Sinh Lực Nhỏ",
+      "minQuality": "common",
+      "requiredQty": 4,
+      "rewardGold": 680,
+      "rewardReputation": 50,
+      "rewardMerchantExp": 160,
+      "id": "CTR_f28d4168",
+      "deliveredQty": 0,
+      "status": "open",
+      "createdAt": "2026-11-17T09:39:53.400Z"
     }
   ],
   "caravanMissions": [],
@@ -11261,7 +11687,7 @@
       "taxRatePct": 5,
       "maxTaxRatePct": 10,
       "accumulatedTaxGold": 0,
-      "seasonNumber": 15,
+      "seasonNumber": 16,
       "capturedAt": null,
       "buildings": [
         {
@@ -11291,7 +11717,7 @@
       "taxRatePct": 5,
       "maxTaxRatePct": 10,
       "accumulatedTaxGold": 0,
-      "seasonNumber": 15,
+      "seasonNumber": 16,
       "capturedAt": null,
       "buildings": [
         {
@@ -11321,7 +11747,7 @@
       "taxRatePct": 5,
       "maxTaxRatePct": 10,
       "accumulatedTaxGold": 0,
-      "seasonNumber": 15,
+      "seasonNumber": 16,
       "capturedAt": null,
       "buildings": [
         {
@@ -11351,7 +11777,7 @@
       "taxRatePct": 5,
       "maxTaxRatePct": 8,
       "accumulatedTaxGold": 0,
-      "seasonNumber": 15,
+      "seasonNumber": 16,
       "capturedAt": null,
       "buildings": [
         {
@@ -11381,7 +11807,7 @@
       "taxRatePct": 5,
       "maxTaxRatePct": 10,
       "accumulatedTaxGold": 0,
-      "seasonNumber": 15,
+      "seasonNumber": 16,
       "capturedAt": null,
       "buildings": [
         {
@@ -14650,6 +15076,231 @@
       "itemId": "PROF_ITEM_CARP_STEW",
       "quantity": 2,
       "details": "Chế tạo Canh Cá Chép Suối Bạc x1 -> thành công 1, sản lượng 2 (+0 extra)"
+    },
+    {
+      "id": "AUD_c63e51de-d",
+      "timestamp": "2026-11-17T09:39:50.924Z",
+      "txId": "TX_48e2fb91-a6a3-4514-b373-d8085c817c3e",
+      "category": "guild_bank",
+      "actorCharacterId": "CHAR_1794908390580_487",
+      "goldDelta": -500000,
+      "itemId": "ITEM_GUILD_CREATION_SEAL",
+      "quantity": 1,
+      "details": "Thành lập Bang Hội \"Vanguard_426b\" [V6B] với 5 thành viên sáng lập"
+    },
+    {
+      "id": "AUD_71a86eaa-0",
+      "timestamp": "2026-11-17T09:39:50.955Z",
+      "txId": "GDEP_426fbe37",
+      "category": "guild_storage",
+      "actorCharacterId": "CHAR_1794908390580_487",
+      "goldDelta": 0,
+      "itemId": "MAT_PROF_IRON_INGOT",
+      "quantity": 2,
+      "details": "Nạp MAT_PROF_IRON_INGOT x2 vào Kho Bang Vanguard_426b"
+    },
+    {
+      "id": "AUD_627f2d07-a",
+      "timestamp": "2026-11-17T09:39:50.991Z",
+      "txId": "GDON_02c2efdc",
+      "category": "guild_bank",
+      "actorCharacterId": "CHAR_1794908390580_487",
+      "goldDelta": -40000,
+      "details": "Quyên góp 40000G vào Bang Vanguard_426b (+1600 Cống Hiến)"
+    },
+    {
+      "id": "AUD_bae51ea8-b",
+      "timestamp": "2026-11-17T09:39:51.084Z",
+      "txId": "TERR_SIEGE_572740f9",
+      "category": "territory",
+      "actorCharacterId": "CHAR_1794908390580_487",
+      "goldDelta": 0,
+      "details": "Bang [V6B] Vanguard_426b đã chiếm đóng Thung Lũng Dược Thảo Lục Bảo!"
+    },
+    {
+      "id": "AUD_b75cd09d-1",
+      "timestamp": "2026-11-17T09:39:51.392Z",
+      "txId": "TX_0c68df49-5692-4da0-9abe-1c2d1f03481a",
+      "category": "caravan",
+      "actorCharacterId": "CHAR_1794908391173_254",
+      "goldDelta": -300000,
+      "itemId": "ITEM_MERCHANT_SEAL",
+      "quantity": 1,
+      "details": "Thành lập Thương Hội \"TradeGuild_42je\" [MJE] với 5 thương nhân sáng lập"
+    },
+    {
+      "id": "AUD_7f327ed1-d",
+      "timestamp": "2026-11-17T09:39:51.458Z",
+      "txId": "TX_e99c792d-dc85-4c91-946c-d6849cd859d2",
+      "category": "marketplace",
+      "actorCharacterId": "CHAR_1794908391173_254",
+      "goldDelta": 0,
+      "itemId": "PROF_ITEM_STEEL_SWORD",
+      "quantity": 1,
+      "details": "Niêm yết Trường Kiếm Thép Elysia x1 giá 1000G"
+    },
+    {
+      "id": "AUD_703b3ee5-c",
+      "timestamp": "2026-11-17T09:39:51.521Z",
+      "txId": "TX_f795136c-fce7-41ba-8dd4-a17ee1b77707",
+      "category": "marketplace",
+      "actorCharacterId": "CHAR_1794908391205_483",
+      "targetCharacterId": "CHAR_1794908391173_254",
+      "goldDelta": -1000,
+      "itemId": "PROF_ITEM_STEEL_SWORD",
+      "quantity": 1,
+      "details": "Mua Trường Kiếm Thép Elysia x1 giá 1000G (Thuế 50G, Người bán nhận 950G)"
+    },
+    {
+      "id": "AUD_9fe79d16-2",
+      "timestamp": "2026-11-17T09:39:51.599Z",
+      "txId": "AUC_END_AUC_aea873f1",
+      "category": "auction",
+      "actorCharacterId": "CHAR_1794908391240_564",
+      "targetCharacterId": "CHAR_1794908391173_254",
+      "goldDelta": 1164,
+      "itemId": "PROF_ITEM_STEEL_SWORD",
+      "quantity": 1,
+      "details": "Đấu giá Trường Kiếm Thép Elysia hoàn tất giá 1200G (Thuế 36G)"
+    },
+    {
+      "id": "AUD_870124ec-6",
+      "timestamp": "2026-11-17T09:39:51.624Z",
+      "txId": "CTR_CTR_729f29a3",
+      "category": "contract",
+      "actorCharacterId": "CHAR_1794908391173_254",
+      "goldDelta": 680,
+      "itemId": "ITEM_POTION_HP_SMALL",
+      "quantity": 4,
+      "details": "Hoàn thành hợp đồng cung ứng \"Hợp Đồng Cung Ứng Dược Phẩm Vương Đô\" nhận 680G"
+    },
+    {
+      "id": "AUD_7f56bde4-4",
+      "timestamp": "2026-11-17T09:39:51.658Z",
+      "txId": "CRV_DONE_CRV_e941aa1d",
+      "category": "caravan",
+      "actorCharacterId": "CHAR_1794908391173_254",
+      "goldDelta": 3200,
+      "details": "Đoàn xe Thôn Khởi Nguyên -> Vương Đô Elysia cập bến thành công (+3200G, Thuế lãnh thổ 0G)"
+    },
+    {
+      "id": "AUD_b93e3325-0",
+      "timestamp": "2026-11-17T09:40:04.054Z",
+      "txId": "PROF_LEARN_f5c1fe36",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908403943_272",
+      "goldDelta": -500,
+      "details": "Học nghề Thảo Dược Sư + trang bị Liềm Đồng Hái Thuốc"
+    },
+    {
+      "id": "AUD_07f86162-1",
+      "timestamp": "2026-11-17T09:40:04.070Z",
+      "txId": "PROF_LEARN_c51ffeae",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908403943_272",
+      "goldDelta": -800,
+      "details": "Học nghề Thợ Rèn + trang bị Búa Rèn Sơ Cấp"
+    },
+    {
+      "id": "AUD_3f667d86-f",
+      "timestamp": "2026-11-17T09:40:04.088Z",
+      "txId": "PROF_LEARN_e22d368c",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908403943_272",
+      "goldDelta": -350,
+      "details": "Học nghề Nông Phu + trang bị Cuốc Đất Gỗ Sồi"
+    },
+    {
+      "id": "AUD_9a860098-0",
+      "timestamp": "2026-11-17T09:40:04.115Z",
+      "txId": "GTH_GTH_137b6b06-b",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908403943_272",
+      "goldDelta": 0,
+      "itemId": "MAT_PROF_HERB_GREEN",
+      "quantity": 3,
+      "details": "Thu thập Bụi Dược Thảo Khởi Nguyên nhận 3 MAT_PROF_HERB_GREEN"
+    },
+    {
+      "id": "AUD_f6751d90-5",
+      "timestamp": "2026-11-17T09:40:04.214Z",
+      "txId": "TX_PROF_DEDUPE_1794908404209",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908403943_272",
+      "goldDelta": -50,
+      "itemId": "ITEM_POTION_HP_SMALL",
+      "quantity": 4,
+      "details": "Chế tạo Bình Sinh Lực Thảo Dược x2 -> thành công 2, sản lượng 4 (+0 extra)"
+    },
+    {
+      "id": "AUD_fc06c11d-c",
+      "timestamp": "2026-11-17T09:40:04.239Z",
+      "txId": "PQ_a4fc32ac",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908403943_272",
+      "goldDelta": 5000,
+      "details": "Hoàn thành nhiệm vụ nghề \"Bí Truyền Thụ Thần (Ẩn)\""
+    },
+    {
+      "id": "AUD_728287f9-0",
+      "timestamp": "2026-11-17T09:40:04.248Z",
+      "txId": "PROF_LEARN_6a94cb36",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908403943_272",
+      "goldDelta": -600,
+      "details": "Học nghề Bếp Trưởng + trang bị Chảo Gang Bếp Trưởng"
+    },
+    {
+      "id": "AUD_125b2f9f-2",
+      "timestamp": "2026-11-17T09:40:04.340Z",
+      "txId": "PROF_LEARN_cbe6e536",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908404307_480",
+      "goldDelta": -600,
+      "details": "Học nghề Bếp Trưởng + trang bị Chảo Gang Bếp Trưởng"
+    },
+    {
+      "id": "AUD_a4605fbc-9",
+      "timestamp": "2026-11-17T09:40:04.396Z",
+      "txId": "TX_b3a3bdbc-f52d-4603-a812-3eaf2708e7da",
+      "category": "marketplace",
+      "actorCharacterId": "CHAR_1794908404273_557",
+      "goldDelta": 0,
+      "itemId": "MAT_PROF_CARP",
+      "quantity": 2,
+      "details": "Niêm yết Cá Chép Suối Bạc x2 giá 60G"
+    },
+    {
+      "id": "AUD_d45d0057-b",
+      "timestamp": "2026-11-17T09:40:04.447Z",
+      "txId": "TX_7ed5fd7c-1b7b-4a2a-854f-dc72aaa5610b",
+      "category": "marketplace",
+      "actorCharacterId": "CHAR_1794908404307_480",
+      "targetCharacterId": "CHAR_1794908404273_557",
+      "goldDelta": -60,
+      "itemId": "MAT_PROF_CARP",
+      "quantity": 2,
+      "details": "Mua Cá Chép Suối Bạc x2 giá 60G (Thuế 3G, Người bán nhận 57G)"
+    },
+    {
+      "id": "AUD_ce0c9d1a-5",
+      "timestamp": "2026-11-17T09:40:04.496Z",
+      "txId": "TX_7a648888-5d57-47f4-ada5-c45c7a64e8aa",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908404307_480",
+      "goldDelta": -95,
+      "itemId": "PROF_ITEM_CARP_STEW",
+      "quantity": 2,
+      "details": "Chế tạo Canh Cá Chép Suối Bạc x1 -> thành công 1, sản lượng 2 (+0 extra)"
+    },
+    {
+      "id": "AUD_80774572-9",
+      "timestamp": "2026-11-17T09:52:26.445Z",
+      "txId": "PROF_LEARN_a3b5bab4",
+      "category": "profession",
+      "actorCharacterId": "CHAR_1794908763561_702",
+      "goldDelta": -400,
+      "details": "Học nghề Tiều Phu + trang bị Rìu Tiều Phu Sơ Cấp"
     }
   ],
   "processedTxIds": [
@@ -14669,6 +15320,7 @@
     "TX_PROF_DEDUPE_1794397216677",
     "TX_PROF_DEDUPE_1794397281266",
     "TX_PROF_DEDUPE_1794399802913",
-    "TX_PROF_DEDUPE_1794400928123"
+    "TX_PROF_DEDUPE_1794400928123",
+    "TX_PROF_DEDUPE_1794908404209"
   ]
 }

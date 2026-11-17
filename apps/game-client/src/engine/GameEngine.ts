@@ -173,6 +173,20 @@ interface FloatingText {
   text: string;
   color: string;
   ttlMs: number;
+  maxTtlMs?: number;
+  isCrit?: boolean;
+  comboCount?: number;
+}
+
+interface EnergyBeamEffect {
+  startX: number;
+  startY: number;
+  targetX: number;
+  targetY: number;
+  color: string;
+  width: number;
+  ttlMs: number;
+  maxTtlMs: number;
 }
 
 interface PetalParticle {
@@ -230,6 +244,7 @@ interface RemotePlayerView extends RemotePlayerState {
 export interface HudSnapshot {
   playerName: string;
   classId: string;
+  fps?: number;
   secondJobName?: string | null;
   advancedJobId?: string | null;
   advancedJobName?: string | null;
@@ -457,6 +472,10 @@ export class GameEngine {
   private floatingTexts: FloatingText[] = [];
   private petals: PetalParticle[] = [];
   private cooldowns: Record<string, number> = {};
+  private energyBeams: EnergyBeamEffect[] = [];
+  public currentFps = 60;
+  public joystickVector: { dx: number; dy: number } | null = null;
+  public onLootDrop?: (text: string) => void;
 
   public readonly skills: SkillSlotDef[] = [
     {
@@ -490,6 +509,60 @@ export class GameEngine {
       vfxKey: 'vfx_fireball',
       iconUrl: '/assets/elysia/vfx/vfx_fireball_thumb.png',
       color: '#f97316',
+      tier: 'starter',
+      skillType: 'active',
+      skillLevel: 1,
+      maxLevel: 5,
+    },
+    {
+      id: 'SKILL_NOVICE_DASH',
+      key: '3',
+      name: 'Thần Tốc Bộ',
+      desc: 'Lướt nhanh về phía trước tăng tốc độ di chuyển và độ né tránh.',
+      mpCost: 8,
+      cooldownSec: 4.0,
+      rangePx: 140,
+      damage: 0,
+      iconKey: 'skill_sonic_thrust',
+      vfxKey: 'vfx_sword_slash',
+      iconUrl: '/assets/elysia/vfx/vfx_sword_slash_thumb.png',
+      color: '#34d399',
+      tier: 'starter',
+      skillType: 'active',
+      skillLevel: 1,
+      maxLevel: 5,
+    },
+    {
+      id: 'SKILL_NOVICE_SPIN',
+      key: '4',
+      name: 'Toàn Phong Trảm',
+      desc: 'Xoay kiếm quét quanh bản thân gây sát thương diện rộng lên toàn bộ quái xung quanh.',
+      mpCost: 18,
+      cooldownSec: 5.5,
+      rangePx: 120,
+      damage: 65,
+      iconKey: 'skill_cyclone_slash',
+      vfxKey: 'vfx_sword_slash',
+      iconUrl: '/assets/elysia/vfx/vfx_sword_slash_thumb.png',
+      color: '#a78bfa',
+      tier: 'starter',
+      skillType: 'active',
+      skillLevel: 1,
+      maxLevel: 5,
+    },
+    {
+      id: 'SKILL_NOVICE_SHIELD',
+      key: '5',
+      name: 'Kim Cang Hộ Thể',
+      desc: 'Ngưng tụ chân khí tạo lớp khiên bảo hộ giảm sát thương nhận vào.',
+      mpCost: 20,
+      cooldownSec: 8.0,
+      rangePx: 0,
+      damage: 0,
+      iconKey: 'skill_iron_defense',
+      vfxKey: 'vfx_sword_slash',
+      iconUrl: '/assets/elysia/vfx/vfx_sword_slash_thumb.png',
+      color: '#fbbf24',
       tier: 'starter',
       skillType: 'active',
       skillLevel: 1,
@@ -4128,6 +4201,7 @@ export class GameEngine {
     this.onHudSync?.({
       playerName: this.player.name,
       classId: this.player.classId,
+      fps: this.currentFps,
       secondJobName: getActiveCharacterCache()?.secondJobName || null,
       advancedJobId: this.advancedJobId,
       advancedJobName: this.advancedJobName,
@@ -4551,6 +4625,61 @@ export class GameEngine {
       return;
     }
 
+    // Novice Skill 3: Thần Tốc Bộ (Dash / Sprint)
+    if (skill.id === 'SKILL_NOVICE_DASH') {
+      this.player.setState('walk');
+      const dir = this.getFacingVector();
+      const targetX = this.player.x + dir.dx * 130;
+      const targetY = this.player.y + dir.dy * 130;
+      const moved = this.tilemap.resolveMove(this.player.x, this.player.y, targetX, targetY);
+      this.player.x = moved.x;
+      this.player.y = moved.y;
+      this.spawnVfx('vfx_sword_slash', this.player.x, this.player.y - 14, 96);
+      this.floatingTexts.push({ x: this.player.x, y: this.player.y - 48, text: 'Thần Tốc Bộ!', color: '#34d399', ttlMs: 700 });
+      this.multiplayer?.emitCombatAction('skill', skill.id);
+      return;
+    }
+
+    // Novice Skill 4: Toàn Phong Trảm (Whirlwind AoE)
+    if (skill.id === 'SKILL_NOVICE_SPIN') {
+      this.player.setState('attack');
+      this.player.attackLockMs = 380;
+      this.spawnVfx('vfx_sword_slash', this.player.x, this.player.y - 16, 160);
+      const isCrit = Math.random() * 100 < (stats.critRate ?? 8);
+      const dmg = Math.round(stats.atk * 1.6 + 24) * (isCrit ? 1.5 : 1);
+      let hitAny = false;
+      for (const m of this.monsters) {
+        if (!m.alive) continue;
+        if (Math.hypot(m.x - this.player.x, m.y - this.player.y) <= 125) {
+          this.applyDamageToMonster(m, dmg, isCrit ? '#f97316' : '#a78bfa', 'vfx_sword_slash');
+          this.spawnEnergyBeam(this.player.x, this.player.y - 18, m.x, m.y - 16, '#a78bfa', 6, 260);
+          hitAny = true;
+        }
+      }
+      if (!hitAny) {
+        this.floatingTexts.push({ x: this.player.x, y: this.player.y - 48, text: 'Toàn Phong Trảm!', color: '#a78bfa', ttlMs: 700 });
+      }
+      this.multiplayer?.emitCombatAction('skill', skill.id);
+      return;
+    }
+
+    // Novice Skill 5: Kim Cang Hộ Thể (Shield / Barrier)
+    if (skill.id === 'SKILL_NOVICE_SHIELD') {
+      this.player.setState('skill');
+      this.player.attackLockMs = 280;
+      this.shieldHp = Math.min(this.player.maxHp, this.shieldHp + 65);
+      this.spawnVfx('vfx_sword_slash', this.player.x, this.player.y - 16, 120);
+      this.floatingTexts.push({ x: this.player.x, y: this.player.y - 56, text: '+65 Khiên Hộ Thể!', color: '#fbbf24', ttlMs: 1100 });
+      this.activeBuffs['buff_sacred_shield'] = {
+        stat: 'def',
+        valuePct: 25,
+        expiresAt: Date.now() + 12000,
+      };
+      this.emitHudSnapshot();
+      this.multiplayer?.emitCombatAction('skill', skill.id);
+      return;
+    }
+
     this.player.setState('skill');
     this.player.attackLockMs = 420;
     const facingX = this.player.x + (this.player.facing >= 0 ? 54 : -54);
@@ -4694,6 +4823,23 @@ export class GameEngine {
     this.onToast?.('Hãy lại gần Dân Làng, Điểm Tài Nguyên [O], Vật Thể Thánh Điện hoặc Cổng Chuyển Vùng để tương tác [E].');
   }
 
+  public spawnEnergyBeam(startX: number, startY: number, targetX: number, targetY: number, color = '#fbbf24', width = 6, durationMs = 280) {
+    this.energyBeams.push({
+      startX,
+      startY,
+      targetX,
+      targetY,
+      color,
+      width,
+      ttlMs: durationMs,
+      maxTtlMs: durationMs,
+    });
+  }
+
+  public setJoystickVector(vec: { dx: number; dy: number } | null) {
+    this.joystickVector = vec;
+  }
+
   private applyDamageToMonster(
     m: MonsterEntity,
     damage: number,
@@ -4708,7 +4854,8 @@ export class GameEngine {
     }
     const defeated = m.applyDamage(damage);
     if (vfxKey) this.spawnVfx(vfxKey, m.x, m.y - 20, m.isBoss ? 148 : 98);
-    this.floatingTexts.push({ x: m.x, y: m.y - 44, text: `-${damage}`, color, ttlMs: 800 });
+    this.spawnEnergyBeam(this.player.x, this.player.y - 18, m.x, m.y - 16, color.startsWith('#ef') || color.startsWith('#f9') ? '#f97316' : '#fde047', 7, 280);
+    this.floatingTexts.push({ x: m.x, y: m.y - 44, text: `-${damage}`, color, ttlMs: 850, isCrit: color === '#f97316' || color === '#ef4444', comboCount: 7 });
 
     if (!defeated && dotSpec) {
       this.monsterDoTs.set(m.id, { ...dotSpec });
@@ -4780,6 +4927,7 @@ export class GameEngine {
     this.gold += goldDrop;
     const lvls = this.player.gainExp(expGain);
     this.floatingTexts.push({ x: m.x, y: m.y - 62, text: `+${expGain} EXP +${goldDrop}G`, color: '#fde047', ttlMs: 950 });
+    this.onLootDrop?.(`Nhặt ${goldDrop} bạc`);
     if (lvls > 0) this.onLevelUp();
 
     if (m.monsterId === 'boss_guardian_of_awakening' && !this.dungeonState.bossDefeated) {
@@ -4850,6 +4998,7 @@ export class GameEngine {
         const existing = def.category !== 'equip' ? this.inventory.find((i) => i.id === def.id) : null;
         if (existing) existing.qty += def.qty;
         else if (this.inventory.length < 30) this.inventory.unshift(def);
+        this.onLootDrop?.(`Nhặt ${def.name} x${def.qty}`);
 
         const beamColor = RARITY_CONFIGS[def.rarity]?.borderHex || '#38bdf8';
         this.lootBeams.push({ x: m.x, y: m.y, color: beamColor, label: `${def.name} x${def.qty}`, ttlMs: 3200 });
@@ -5017,12 +5166,21 @@ export class GameEngine {
   }
 
   private update(dtSec: number, nowMs: number) {
+    if (dtSec > 0) {
+      const instantFps = 1 / dtSec;
+      this.currentFps = Math.round(this.currentFps * 0.92 + instantFps * 0.08);
+    }
     this.vfxEngine.update(dtSec);
     // Decrement active skill cooldowns
     for (const key of Object.keys(this.cooldowns)) {
       if (this.cooldowns[key] > 0) {
         this.cooldowns[key] = Math.max(0, this.cooldowns[key] - dtSec);
       }
+    }
+    for (let i = this.energyBeams.length - 1; i >= 0; i--) {
+      const b = this.energyBeams[i];
+      b.ttlMs -= dtSec * 1000;
+      if (b.ttlMs <= 0) this.energyBeams.splice(i, 1);
     }
     // Prune expired buffs
     const nowEpoch = Date.now();
@@ -5040,6 +5198,10 @@ export class GameEngine {
       if (this.keysDown.has('KeyD') || this.keysDown.has('ArrowRight')) vx += 1;
       if (this.keysDown.has('KeyW') || this.keysDown.has('ArrowUp')) vy -= 1;
       if (this.keysDown.has('KeyS') || this.keysDown.has('ArrowDown')) vy += 1;
+      if (this.joystickVector) {
+        vx += this.joystickVector.dx;
+        vy += this.joystickVector.dy;
+      }
     }
 
     this.sprites.setEquipment(this.equipment);
@@ -5458,6 +5620,34 @@ export class GameEngine {
       }
       ctx.restore();
     }
+    // 3g. Vibrant Golden Energy Beams
+    for (const b of this.energyBeams) {
+      const sx = b.startX - this.camX;
+      const sy = b.startY - this.camY;
+      const ex = b.targetX - this.camX;
+      const ey = b.targetY - this.camY;
+      const alpha = Math.max(0, b.ttlMs / Math.max(1, b.maxTtlMs));
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = b.color;
+      ctx.lineWidth = b.width;
+      ctx.shadowColor = b.color;
+      ctx.shadowBlur = 14;
+      ctx.beginPath();
+      ctx.moveTo(sx, sy);
+      ctx.lineTo(ex, ey);
+      ctx.stroke();
+
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = Math.max(2, b.width * 0.35);
+      ctx.shadowBlur = 0;
+      ctx.beginPath();
+      ctx.moveTo(sx, sy);
+      ctx.lineTo(ex, ey);
+      ctx.stroke();
+      ctx.restore();
+    }
     ctx.restore();
 
     // 4. Floating Sakura Petals & Damage Numbers
@@ -5469,19 +5659,91 @@ export class GameEngine {
         const sy = p.y - this.camY;
         if (sx < 0 || sx > worldViewW || sy < 0 || sy > worldViewH) continue;
         ctx.globalAlpha = p.alpha;
-        ctx.drawImage(petalImage,sx,sy,p.size*2,p.size*2);
+        ctx.drawImage(petalImage, sx, sy, p.size * 2, p.size * 2);
       }
     }
-    if (this.showDamageNumbers) {
-      ctx.globalAlpha = 1;
-      ctx.font = '800 13px "Segoe UI", sans-serif';
-      ctx.textAlign = 'center';
-      for (const ft of this.floatingTexts) {
-        ctx.fillStyle = '#0f172a';
-        ctx.fillText(ft.text, ft.x - this.camX + 1, ft.y - this.camY + 1);
-        ctx.fillStyle = ft.color;
-        ctx.fillText(ft.text, ft.x - this.camX, ft.y - this.camY);
+
+    // 4b. Floating "ĐANG AUTO" Banner above player
+    if (this.autoCombatConfig.enabled) {
+      ctx.save();
+      const autoX = this.player.x - this.camX;
+      const autoY = this.player.y - this.camY - 82;
+      const pulse = 0.88 + 0.12 * Math.sin(timeMs * 0.007);
+      ctx.globalAlpha = pulse;
+
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.88)';
+      ctx.beginPath();
+      if (typeof (ctx as any).roundRect === 'function') {
+        (ctx as any).roundRect(autoX - 58, autoY - 14, 116, 26, 13);
+      } else {
+        ctx.rect(autoX - 58, autoY - 14, 116, 26);
       }
+      ctx.fill();
+      ctx.strokeStyle = '#f59e0b';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      ctx.font = '900 13px "Cinzel", "Segoe UI", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = '#fde047';
+      ctx.shadowColor = '#f59e0b';
+      ctx.shadowBlur = 8;
+      ctx.fillText('⚡ ĐANG AUTO ⚡', autoX, autoY);
+      ctx.restore();
+    }
+
+    // 4c. Stylized High-Impact Floating Combat Damage Numbers
+    if (this.showDamageNumbers) {
+      ctx.save();
+      for (const ft of this.floatingTexts) {
+        const sx = ft.x - this.camX;
+        const sy = ft.y - this.camY;
+        if (sx < -80 || sx > worldViewW + 80 || sy < -80 || sy > worldViewH + 80) continue;
+
+        const isDmg = ft.text.startsWith('-') || /^\d+$/.test(ft.text);
+        if (isDmg) {
+          const numStr = ft.text.replace(/^-/, '');
+          ctx.font = '900 24px "Cinzel", "Impact", "Segoe UI", sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.lineWidth = 4.5;
+          ctx.strokeStyle = '#000000';
+          ctx.strokeText(numStr, sx, sy);
+
+          const grad = ctx.createLinearGradient(sx, sy - 14, sx, sy + 14);
+          if (ft.color === '#ef4444' || ft.isCrit) {
+            grad.addColorStop(0, '#ffffff');
+            grad.addColorStop(0.35, '#ff7875');
+            grad.addColorStop(1, '#cf1322');
+          } else {
+            grad.addColorStop(0, '#ffffff');
+            grad.addColorStop(0.35, '#fff566');
+            grad.addColorStop(1, '#d48806');
+          }
+          ctx.fillStyle = grad;
+          ctx.fillText(numStr, sx, sy);
+
+          if (ft.comboCount || ft.isCrit) {
+            ctx.font = '900 13px "Segoe UI", sans-serif';
+            ctx.fillStyle = '#52c41a';
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 3;
+            ctx.strokeText(`+${ft.comboCount || 7}`, sx + 32, sy - 7);
+            ctx.fillText(`+${ft.comboCount || 7}`, sx + 32, sy - 7);
+          }
+        } else {
+          ctx.font = '800 12px "Segoe UI", sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.lineWidth = 3;
+          ctx.strokeStyle = '#000000';
+          ctx.strokeText(ft.text, sx, sy);
+          ctx.fillStyle = ft.color;
+          ctx.fillText(ft.text, sx, sy);
+        }
+      }
+      ctx.restore();
     }
     ctx.restore();
     ctx.restore();
@@ -5529,14 +5791,21 @@ export class GameEngine {
 
       this.keysDown.add(e.code);
       if (e.code === 'KeyJ' || e.code === 'Space') this.performBasicAttack();
-      if (e.code === 'KeyE') this.interactNearestNpc();
+      if (e.code === 'KeyE') {
+        const nearNpc = this.npcs.find((n) => Math.hypot(n.x - this.player.x, n.y - this.player.y) <= 84);
+        if (nearNpc) {
+          this.interactNearestNpc();
+        } else {
+          this.quickUseConsumable('potion_mp');
+        }
+      }
+      if (e.code === 'KeyF') this.interactNearestNpc();
       const digitMap: Record<string, string> = {
         Digit1: '1',
         Digit2: '2',
         Digit3: '3',
         Digit4: '4',
         Digit5: '5',
-        Digit6: '6',
       };
       const hotKey = digitMap[e.code];
       if (hotKey) {

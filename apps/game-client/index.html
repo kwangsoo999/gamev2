@@ -37,7 +37,7 @@
 
     <!-- Elysia hand-painted fantasy interface overlay -->
     <div id="hud-overlay">
-      <!-- TOP-LEFT: Player Avatar, HP, MP & EXP Bars -->
+      <!-- TOP-LEFT: Player Avatar, HP, MP, EXP Bars, Buffs & FPS -->
       <section class="hud-player-panel hud-interactive" id="hud-player-panel" title="Nhấp để mở Nhân Vật, Trang Bị & Balo [B]" style="cursor: pointer;">
         <div class="hud-avatar-frame">
           <img src="/assets/elysia/ui/portrait-player.png" alt="Lữ Khách" class="hud-avatar-img" />
@@ -46,33 +46,40 @@
           <div class="hud-name-row">
             <span style="display:flex;align-items:center;gap:5px;min-width:0;">
               <span class="hud-conn-dot online" id="hud-conn-dot" title="Trạng thái máy chủ"></span>
-              <span id="hud-player-name">Lữ Khách</span>
+              <span id="hud-player-name">Thiên Vương Test</span>
             </span>
             <span style="display:flex;align-items:center;gap:4px;">
               <span class="hud-stat-points-badge zero" id="hud-stat-points-badge" title="Điểm tiềm năng chưa phân bổ"></span>
-              <span class="hud-level-pill" id="hud-player-lvl">Lv.1</span>
+              <span class="hud-level-pill" id="hud-player-lvl">Cấp 1</span>
             </span>
           </div>
           <div class="hud-job-row">
             <span class="hud-job-badge" id="hud-player-job">Tân Thủ (Novice)</span>
-            <span class="hud-death-debuff-pill hidden" id="hud-death-penalty-pill" title="Hiệu ứng suy yếu tạm thời sau khi hồi sinh">💀 -3% · 59:59</span>
+            <span class="hud-death-debuff-pill hidden" id="hud-death-penalty-pill" title="Hiệu ứng suy yếu">💀 -3% · 59:59</span>
           </div>
-          <div class="hud-bar-track" title="Sinh lực (HP)">
+          <div class="hud-bar-track hud-bar-track-hp" title="Sinh lực (HP)">
             <div class="hud-bar-fill hud-bar-hp" id="hud-hp-bar" style="width: 100%"></div>
-            <span class="hud-bar-label" id="hud-hp-text">320/320</span>
+            <span class="hud-bar-label" id="hud-hp-text">280 / 280</span>
           </div>
-          <div class="hud-bar-track" title="Ma lực (MP)">
+          <div class="hud-bar-track hud-bar-track-mp" title="Ma lực (MP)">
             <div class="hud-bar-fill hud-bar-mp" id="hud-mp-bar" style="width: 100%"></div>
-            <span class="hud-bar-label" id="hud-mp-text">180/180</span>
+            <span class="hud-bar-label" id="hud-mp-text">185 / 185</span>
           </div>
           <div class="hud-bar-track hud-bar-track-exp" title="Kinh nghiệm (EXP)">
             <div class="hud-bar-fill hud-bar-exp" id="hud-exp-bar" style="width: 0%"></div>
-            <span class="hud-bar-label" id="hud-exp-text">0/100 EXP</span>
+            <span class="hud-bar-label" id="hud-exp-text">EXP 0%</span>
+          </div>
+          <!-- Mini Buffs row with timers -->
+          <div class="hud-buffs-strip" id="hud-buffs-strip">
+            <span class="hud-buff-chip" title="Gia Hộ Kiếm Khí (1s)"><span class="buff-chip-icon">⚔️</span> 1s</span>
+            <span class="hud-buff-chip" title="Phúc Lành Thôn Khởi Nguyên (8p)"><span class="buff-chip-icon">✨</span> 8p</span>
+            <span class="hud-buff-chip" title="Ngự Phong Bộ (8p)"><span class="buff-chip-icon">💨</span> 8p</span>
           </div>
         </div>
       </section>
 
-      <!-- TOP-CENTER: Zone Banner & Boss Encounter Bar -->
+      <!-- TOP-CENTER: FPS Counter Badge & Zone Banner -->
+      <div class="hud-fps-indicator" id="hud-fps-badge">FPS 60</div>
       <header class="hud-zone-banner" id="hud-zone-banner">
         <h1 id="hud-zone-title">Thôn Khởi Nguyên</h1>
       </header>
@@ -91,16 +98,29 @@
         </div>
       </section>
 
-      <!-- TOP-RIGHT: Minimap Container & Quick Controls -->
+      <!-- TOP-RIGHT: Minimap Container & Utility Icons -->
       <aside class="hud-top-right">
-        <div class="hud-top-icons hud-interactive">
-          <button type="button" class="retro-icon-btn" id="btn-hud-account" title="Tài Khoản &amp; Tạo Nhân Vật">👤</button>
-          <button type="button" class="retro-icon-btn" id="btn-hud-social" title="Cộng Đồng, Tổ Đội &amp; Giao Dịch [P]">👥<span class="hud-social-badge hidden" id="hud-social-badge">0</span></button>
-          <button type="button" class="retro-icon-btn" id="btn-hud-events" title="Sự Kiện &amp; Quà 7 Ngày">🎉</button>
-          <button type="button" class="retro-icon-btn" id="btn-hud-worldmap" title="Bản Đồ Thế Giới &amp; Dịch Chuyển [M]">🗺️</button>
-          <button type="button" class="retro-icon-btn" id="btn-toggle-quest" title="Ẩn/Hiện Nhiệm Vụ">📜</button>
-          <button type="button" class="retro-icon-btn" id="btn-hud-skills" title="Bảng Kỹ Năng [K]">⚔️</button>
-          <button type="button" class="retro-icon-btn" id="btn-hud-settings" title="Cài Đặt Hệ Thống">⚙️</button>
+        <div class="hud-utility-buttons hud-interactive">
+          <button type="button" class="retro-icon-btn hud-util-btn" id="btn-hud-rank" title="Bảng Xếp Hạng">
+            <span class="util-btn-icon">👑</span>
+            <span class="util-btn-text">Xếp hạng</span>
+          </button>
+          <button type="button" class="retro-icon-btn hud-util-btn" id="btn-hud-shop" title="Kỳ Trân Các (Shop)">
+            <span class="util-btn-icon">⛩️</span>
+            <span class="util-btn-text">Kỳ Trân Các</span>
+          </button>
+          <button type="button" class="retro-icon-btn hud-util-btn" id="btn-hud-info" title="Thông Tin Nhân Vật">
+            <span class="util-btn-icon">📖</span>
+            <span class="util-btn-text">Thông tin</span>
+          </button>
+          <button type="button" class="retro-icon-btn hud-util-btn" id="btn-hud-settings" title="Cài Đặt / Lưu Game">
+            <span class="util-btn-icon">⚙️</span>
+            <span class="util-btn-text">Lưu game</span>
+          </button>
+          <button type="button" class="retro-icon-btn hud-util-btn" id="btn-hud-worldmap" title="Bản Đồ Lớn [M]">
+            <span class="util-btn-icon">🗺️</span>
+            <span class="util-btn-text">Bản đồ</span>
+          </button>
         </div>
         <div class="hud-server-telemetry hud-interactive" id="hud-server-telemetry">
           <span id="hud-channel-label">CH-1</span>
@@ -109,10 +129,23 @@
         </div>
         <div class="hud-reconnect-banner hidden" id="hud-reconnect-banner">Đang kết nối lại máy chủ...</div>
         <div class="hud-minimap-box hud-interactive">
+          <div class="hud-minimap-header" id="hud-minimap-header">Thôn Khởi Nguyên</div>
           <div class="hud-minimap-ring">
             <canvas id="minimap-canvas" width="128" height="128"></canvas>
           </div>
           <span class="hud-minimap-coords" id="hud-coords">X:11 Y:20</span>
+        </div>
+      </aside>
+
+      <!-- MID-LEFT: Real-Time Drop & Combat Log Dock -->
+      <aside class="hud-loot-log-dock hud-interactive" id="hud-loot-log-dock">
+        <button type="button" class="hud-loot-toggle-btn" id="btn-toggle-loot-log" title="Thu gọn / Mở rộng Nhật Ký Nhặt">‹</button>
+        <div class="hud-loot-log-list" id="hud-loot-log-list">
+          <div class="hud-loot-item gold">Nhặt 19 bạc</div>
+          <div class="hud-loot-item gold">Nhặt 20 bạc</div>
+          <div class="hud-loot-item gold">Nhặt 21 bạc</div>
+          <div class="hud-loot-item gold">Nhặt 19 bạc</div>
+          <div class="hud-loot-item gold">Nhặt 18 bạc</div>
         </div>
       </aside>
 
@@ -139,7 +172,7 @@
           <button type="button" class="retro-icon-btn" id="btn-rail-worldmap" title="Bản Đồ Thế Giới & Cổng Dịch Chuyển [M]">🗺️</button>
           <button type="button" class="retro-icon-btn" id="btn-rail-guild" title="Bang Hội, Thương Hội, Chợ &amp; Lãnh Thổ [G]">🏰</button>
           <button type="button" class="retro-icon-btn" id="btn-rail-profession" title="Kỹ Năng Sống &amp; 8 Nghề Nghiệp [O]">🌿</button>
-          <button type="button" class="retro-icon-btn" id="btn-rail-job" title="Thánh Điện & Chuyển Chức Lv.15">👑</button>
+          <button type="button" class="retro-icon-btn" id="btn-rail-job" title="Thánh Điện & Chuyển Chức Lv.10">👑</button>
           <button type="button" class="retro-icon-btn" id="btn-rail-craft" title="Lò Rèn Chế Tác, Đổi Mảnh Set & Cường Hóa [C]">⚒️</button>
           <button type="button" class="retro-icon-btn" id="btn-rail-quest" title="Nhật Ký Nhiệm Vụ [L]">❗</button>
           <button type="button" class="retro-icon-btn" id="btn-rail-shop" title="Tiệm Tạp Hóa &amp; Trang Bị">🏪</button>
@@ -148,7 +181,35 @@
         </div>
       </aside>
 
-      <!-- BOTTOM-LEFT: Multi-Channel Live Chat Window -->
+      <!-- BOTTOM-LEFT: 8-Directional Virtual Touch Joystick & Action Menu -->
+      <aside class="hud-joystick-dock hud-interactive" id="hud-joystick-dock">
+        <div class="hud-joystick-base" id="hud-joystick-base">
+          <div class="hud-joystick-petals"></div>
+          <div class="hud-joystick-thumb" id="hud-joystick-thumb">
+            <span class="hud-joystick-symbol">✦</span>
+          </div>
+        </div>
+        <div class="hud-bottom-action-pills">
+          <button type="button" class="hud-dock-pill" id="btn-dock-pk" title="Trạng Thái PK">
+            <span class="pill-icon">⚔️</span>
+            <span class="pill-label">PK</span>
+          </button>
+          <button type="button" class="hud-dock-pill" id="btn-dock-bag" title="Túi Đồ &amp; Balo [B]">
+            <span class="pill-icon">🎒</span>
+            <span class="pill-label">Balo</span>
+          </button>
+          <button type="button" class="hud-dock-pill" id="btn-dock-skills" title="Kỹ Năng [K]">
+            <span class="pill-icon">📖</span>
+            <span class="pill-label">Kỹ Năng</span>
+          </button>
+          <button type="button" class="hud-dock-pill" id="btn-dock-menu" title="Menu Tính Năng">
+            <span class="pill-icon">📜</span>
+            <span class="pill-label">Menu</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- BOTTOM-CENTER: Multi-Channel Live Chat Window -->
       <section class="hud-chat-dock hud-interactive" id="hud-chat-dock" aria-label="Cửa sổ Trò Chuyện">
         <div class="hud-chat-header">
           <div class="hud-chat-tabs" id="hud-chat-tabs">
@@ -170,45 +231,86 @@
         </form>
       </section>
 
-      <!-- BOTTOM-CENTER: NPC Dialogue Toast & Thôn Khởi Nguyên Skill Hotbar -->
-      <footer class="hud-hotbar-wrapper">
-        <div class="hud-npc-dialog hud-interactive hidden" id="hud-npc-dialog">
-          <img id="hud-npc-portrait" class="hud-npc-portrait hidden" alt="" />
-          <div class="hud-npc-body">
-            <span id="hud-npc-text"></span>
-            <div class="hud-npc-actions" id="hud-npc-actions"></div>
+      <!-- BOTTOM-RIGHT: Action Cluster (Auto Toggle, Quick Consumables & Skill Wheel) -->
+      <aside class="hud-action-cluster hud-interactive" id="hud-action-cluster">
+        <!-- Auto Combat Button Group -->
+        <div class="hud-autocombat-group">
+          <button type="button" class="hud-autocombat-btn" id="btn-hud-autocombat-toggle" title="Bật / Tắt Tự Động Chiến Đấu [Z]">
+            <span class="auto-btn-swords">⚔️</span>
+            <span class="auto-btn-text">Auto</span>
+          </button>
+          <button type="button" class="hud-autocombat-cfg-btn" id="btn-hud-autocombat-cfg" title="Cài Auto">
+            <span class="cfg-gear-icon">⚙️</span>
+            <span class="cfg-btn-text">Cài Auto</span>
+          </button>
+        </div>
+
+        <!-- Quick Consumables Bar: Q (HP), R (MP), T (Scroll) -->
+        <div class="hud-quick-consumables" id="hud-quick-bar">
+          <button type="button" class="hud-quick-slot" id="btn-quick-hp" title="Dùng Bình Sinh Lực [Q]">
+            <span class="quick-icon">🧪</span>
+            <span class="quick-key-tag">Q</span>
+            <span class="quick-qty-tag" data-quick-qty="potion_hp">15</span>
+          </button>
+          <button type="button" class="hud-quick-slot" id="btn-quick-mp" title="Dùng Bình Ma Pháp [R]">
+            <span class="quick-icon">💧</span>
+            <span class="quick-key-tag">R</span>
+            <span class="quick-qty-tag" data-quick-qty="potion_mp">8</span>
+          </button>
+          <button type="button" class="hud-quick-slot" id="btn-quick-tp" title="Cuộn Hồi Thành / Phù [T]">
+            <span class="quick-icon">📜</span>
+            <span class="quick-key-tag">T</span>
+            <span class="quick-qty-tag" data-quick-qty="scroll_town">4</span>
+          </button>
+        </div>
+
+        <!-- Skill Wheel: Big Primary Attack Button + 5 Arc Skills -->
+        <div class="hud-skill-wheel" id="hud-skill-wheel">
+          <button type="button" class="hud-main-attack-btn" id="btn-main-attack" title="Đánh Thường [Space / J]">
+            <div class="attack-glow-ring"></div>
+            <span class="attack-burst-icon">⚔️</span>
+            <span class="attack-key-tag">J</span>
+          </button>
+          <div class="hud-hotbar" id="hud-hotbar">
+            <!-- Populated dynamically with 5 skill slots -->
           </div>
-          <button type="button" class="hud-npc-close" id="hud-npc-close">Đóng</button>
         </div>
-        <div class="hud-hotbar hud-interactive" id="hud-hotbar"></div>
-        <div class="hud-autocombat-strip hud-interactive" id="hud-autocombat-strip">
-          <button type="button" class="hud-autocombat-btn" id="btn-hud-autocombat-toggle" title="Bật / Tắt Tự Động Chiến Đấu [Z]">⚔️ Auto: TẮT [Z]</button>
-          <button type="button" class="hud-autocombat-cfg-btn" id="btn-hud-autocombat-cfg" title="Cấu hình Tự Động Chiến Đấu">⚙️</button>
-          <span class="hud-checkpoint-pill" id="hud-checkpoint-pill" title="Điểm Lưu Làng An Toàn hiện tại">🏰 Thôn Khởi Nguyên</span>
+      </aside>
+
+      <!-- NPC Dialogue Window -->
+      <div class="hud-npc-dialog hud-interactive hidden" id="hud-npc-dialog">
+        <img id="hud-npc-portrait" class="hud-npc-portrait hidden" alt="" />
+        <div class="hud-npc-body">
+          <span id="hud-npc-text"></span>
+          <div class="hud-npc-actions" id="hud-npc-actions"></div>
         </div>
-        <div class="hud-autocombat-panel hud-interactive hidden" id="hud-autocombat-panel">
-          <div class="hud-autocombat-head">
-            <strong>CÀI ĐẶT TỰ ĐỘNG CHIẾN ĐẤU [Z]</strong>
-            <button type="button" id="btn-close-autocombat-cfg">✕</button>
-          </div>
-          <label><input type="checkbox" id="ac-attack" checked /> Tự đánh thường</label>
-          <label><input type="checkbox" id="ac-skill" checked /> Tự thi triển kỹ năng</label>
-          <label><input type="checkbox" id="ac-target" checked /> Tự tìm mục tiêu trong vùng</label>
-          <label><input type="checkbox" id="ac-loot" checked /> Tự nhặt chiến lợi phẩm &amp; Vàng</label>
-          <label><input type="checkbox" id="ac-return" checked /> Tự quay lại điểm luyện cấp gốc</label>
-          <label><input type="checkbox" id="ac-hp-pot" checked /> Tự uống bình HP dưới <input type="number" id="ac-hp-pct" min="15" max="90" value="55" style="width:46px;" />%</label>
-          <label><input type="checkbox" id="ac-mp-pot" checked /> Tự uống bình MP dưới <input type="number" id="ac-mp-pct" min="15" max="90" value="35" style="width:46px;" />%</label>
-          <label>Ưu tiên mục tiêu:
-            <select id="ac-priority">
-              <option value="nearest">Gần nhất</option>
-              <option value="lowest_hp">HP thấp nhất</option>
-              <option value="prefer_elite">Ưu tiên Tinh Anh</option>
-              <option value="avoid_boss">Tránh Boss lớn</option>
-            </select>
-          </label>
+        <button type="button" class="hud-npc-close" id="hud-npc-close">Đóng</button>
+      </div>
+
+      <!-- Auto Combat Configuration Popup -->
+      <div class="hud-autocombat-panel hud-interactive hidden" id="hud-autocombat-panel">
+        <div class="hud-autocombat-head">
+          <strong>CÀI ĐẶT TỰ ĐỘNG CHIẾN ĐẤU [Z]</strong>
+          <button type="button" id="btn-close-autocombat-cfg">✕</button>
         </div>
-        <div class="hud-controls-hint">WASD / Click · J / 1-2 Chiến đấu · Z Auto · O Nghề nghiệp · G Bang/Chợ · B Balo · K Kỹ năng · L Nhiệm vụ · E Tương tác</div>
-      </footer>
+        <label><input type="checkbox" id="ac-attack" checked /> Tự đánh thường</label>
+        <label><input type="checkbox" id="ac-skill" checked /> Tự thi triển kỹ năng</label>
+        <label><input type="checkbox" id="ac-target" checked /> Tự tìm mục tiêu trong vùng</label>
+        <label><input type="checkbox" id="ac-loot" checked /> Tự nhặt chiến lợi phẩm &amp; Vàng</label>
+        <label><input type="checkbox" id="ac-return" checked /> Tự quay lại điểm luyện cấp gốc</label>
+        <label><input type="checkbox" id="ac-hp-pot" checked /> Tự uống bình HP dưới <input type="number" id="ac-hp-pct" min="15" max="90" value="55" style="width:46px;" />%</label>
+        <label><input type="checkbox" id="ac-mp-pot" checked /> Tự uống bình MP dưới <input type="number" id="ac-mp-pct" min="15" max="90" value="35" style="width:46px;" />%</label>
+        <label>Ưu tiên mục tiêu:
+          <select id="ac-priority">
+            <option value="nearest">Gần nhất</option>
+            <option value="lowest_hp">HP thấp nhất</option>
+            <option value="prefer_elite">Ưu tiên Tinh Anh</option>
+            <option value="avoid_boss">Tránh Boss lớn</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="hud-controls-hint">WASD / Touch · J / 1-5 Kỹ Năng · Q/R/T Vật Phẩm · Z Auto · O Nghề · G Bang · B Balo · K Kỹ Năng · L Nhiệm Vụ · E/F Tương Tác</div>
     </div>
 
     <div id="hud-transition-curtain" class="hud-transition-curtain hidden" aria-hidden="true">

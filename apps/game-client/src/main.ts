@@ -194,6 +194,9 @@ async function bootstrapGame() {
   };
   hud.onToggleAutoCombat = () => engine.toggleAutoCombat();
   hud.onUpdateAutoCombatConfig = (patch) => engine.updateAutoCombatConfig(patch);
+  hud.onPerformBasicAttack = () => engine.performBasicAttack();
+  engine.onLootDrop = (text) => hud.appendLootDrop(text);
+  hud.setupVirtualJoystick((vec) => engine.setJoystickVector(vec));
 
   window.addEventListener('beforeunload', () => engine.flushServerSyncOnUnload());
   document.addEventListener('visibilitychange', () => {

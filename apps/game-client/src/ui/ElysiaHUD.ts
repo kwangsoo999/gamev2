@@ -96,6 +96,10 @@ export class ElysiaHUD {
   private hotbarEl = document.getElementById('hud-hotbar') as HTMLElement;
   private minimapCanvas = document.getElementById('minimap-canvas') as HTMLCanvasElement;
   private minimapCtx = this.minimapCanvas.getContext('2d')!;
+  private fpsBadgeEl = document.getElementById('hud-fps-badge') as HTMLElement | null;
+  private minimapHeaderEl = document.getElementById('hud-minimap-header') as HTMLElement | null;
+  private lootLogListEl = document.getElementById('hud-loot-log-list') as HTMLElement | null;
+  private lootLogDockEl = document.getElementById('hud-loot-log-dock') as HTMLElement | null;
 
   private dialogBox = document.getElementById('hud-npc-dialog') as HTMLElement;
   private dialogPortrait = document.getElementById('hud-npc-portrait') as HTMLImageElement;
@@ -114,6 +118,7 @@ export class ElysiaHUD {
   private slotElems = new Map<string, HTMLElement>();
   private quickCountElems = new Map<string, HTMLElement>();
 
+  public onPerformBasicAttack?: () => void;
   public onCastSkill?: (skillId: string) => void;
   public onQuickUse?: (iconKey: 'potion_hp' | 'potion_mp' | 'scroll_town') => void;
   public onOpenAccount?: () => void;
@@ -160,6 +165,23 @@ export class ElysiaHUD {
       e.stopPropagation();
       this.onTrackQuest?.(null);
     });
+    document.getElementById('btn-main-attack')?.addEventListener('click', () => this.onPerformBasicAttack?.());
+    document.getElementById('btn-quick-hp')?.addEventListener('click', () => this.onQuickUse?.('potion_hp'));
+    document.getElementById('btn-quick-mp')?.addEventListener('click', () => this.onQuickUse?.('potion_mp'));
+    document.getElementById('btn-quick-tp')?.addEventListener('click', () => this.onQuickUse?.('scroll_town'));
+    document.getElementById('btn-hud-rank')?.addEventListener('click', () => this.onOpenEvents?.());
+    document.getElementById('btn-hud-shop')?.addEventListener('click', () => this.onOpenShop?.());
+    document.getElementById('btn-hud-info')?.addEventListener('click', () => this.onOpenBag?.());
+    document.getElementById('btn-dock-pk')?.addEventListener('click', () => this.showToast('Chế độ Hòa Bình / Luyện Cấp (Không rơi trang bị)'));
+    document.getElementById('btn-dock-bag')?.addEventListener('click', () => this.onOpenBag?.());
+    document.getElementById('btn-dock-skills')?.addEventListener('click', () => this.onOpenSkills?.());
+    document.getElementById('btn-dock-menu')?.addEventListener('click', () => this.onOpenSettings?.());
+    document.getElementById('btn-toggle-loot-log')?.addEventListener('click', () => {
+      this.lootLogDockEl?.classList.toggle('collapsed');
+      const btn = document.getElementById('btn-toggle-loot-log');
+      if (btn) btn.textContent = this.lootLogDockEl?.classList.contains('collapsed') ? '›' : '‹';
+    });
+
     document.getElementById('btn-hud-account')?.addEventListener('click', () => this.onOpenAccount?.());
     document.getElementById('btn-hud-social')?.addEventListener('click', () => this.onOpenSocial?.());
     document.getElementById('btn-hud-events')?.addEventListener('click', () => this.onOpenEvents?.());
@@ -739,11 +761,13 @@ export class ElysiaHUD {
     }
 
     for (const key of ['potion_hp', 'potion_mp', 'scroll_town'] as const) {
-      const badge = this.quickCountElems.get(key);
-      if (!badge) continue;
+      const badges = document.querySelectorAll(`[data-quick-qty="${key}"]`);
       const totalQty = snap.inventory.filter((it) => it.iconKey === key).reduce((sum, it) => sum + it.qty, 0);
-      badge.textContent = String(totalQty);
+      badges.forEach((b) => (b.textContent = String(totalQty)));
     }
+
+    if (this.fpsBadgeEl) this.fpsBadgeEl.textContent = `FPS ${snap.fps || 60}`;
+    if (this.minimapHeaderEl && snap.regionName) this.minimapHeaderEl.textContent = snap.regionName;
 
     const activeBoss = (snap as HudSnapshot & { activeBoss?: any }).activeBoss || null;
     if (this.bossBar) {
@@ -852,9 +876,8 @@ export class ElysiaHUD {
     if (!this.hotbarEl) return;
     this.hotbarEl.innerHTML = '';
     this.slotElems.clear();
-    this.quickCountElems.clear();
 
-    const hotbarSkills = skills.filter((s) => s.skillType !== 'passive' && s.tier !== 'passive').slice(0, 6);
+    const hotbarSkills = skills.filter((s) => s.skillType !== 'passive' && s.tier !== 'passive').slice(0, 5);
     for (const skill of hotbarSkills) {
       const slot = document.createElement('button');
       slot.type = 'button';
@@ -887,46 +910,100 @@ export class ElysiaHUD {
       this.slotElems.set(skill.id, mask);
       this.hotbarEl.appendChild(slot);
     }
+  }
 
-    const sep = document.createElement('div');
-    sep.className = 'hotbar-bronze-divider';
-    this.hotbarEl.appendChild(sep);
-
-    // Quick Consumables Bar (HP Potion, MP Potion, Town Scroll)
-    const quickItems: { iconKey: 'potion_hp' | 'potion_mp' | 'scroll_town'; key: string; label: string }[] = [
-      { iconKey: 'potion_hp', key: 'Q', label: 'Dùng Bình Sinh Lực [Q]' },
-      { iconKey: 'potion_mp', key: 'R', label: 'Dùng Bình Ma Pháp [R]' },
-      { iconKey: 'scroll_town', key: 'T', label: 'Cuộn Giấy Hồi Thành [T]' },
-    ];
-    for (const q of quickItems) {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'hotbar-slot tk-quick-slot';
-      btn.title = q.label;
-      btn.innerHTML = `
-        <div class="hotbar-art-layer">${getItemIconSvg(q.iconKey)}</div>
-        <span class="hotbar-key-tag">${q.key}</span>
-        <span class="hotbar-mp-tag" data-quick-qty="${q.iconKey}">0</span>
-      `;
-      btn.addEventListener('click', () => this.onQuickUse?.(q.iconKey));
-      this.quickCountElems.set(q.iconKey, btn.querySelector(`[data-quick-qty="${q.iconKey}"]`) as HTMLElement);
-      this.hotbarEl.appendChild(btn);
+  public appendLootDrop(text: string) {
+    if (!this.lootLogListEl) return;
+    const item = document.createElement('div');
+    item.className = 'hud-loot-item gold';
+    item.textContent = text;
+    this.lootLogListEl.prepend(item);
+    while (this.lootLogListEl.children.length > 20) {
+      this.lootLogListEl.lastElementChild?.remove();
     }
+  }
 
-    const sep2 = document.createElement('div');
-    sep2.className = 'hotbar-bronze-divider';
-    this.hotbarEl.appendChild(sep2);
+  public setupVirtualJoystick(onMoveVector: (vec: { dx: number; dy: number } | null) => void) {
+    const base = document.getElementById('hud-joystick-base');
+    const thumb = document.getElementById('hud-joystick-thumb');
+    if (!base || !thumb) return;
 
-    const bagBtn = document.createElement('button');
-    bagBtn.type = 'button';
-    bagBtn.id = 'btn-hotbar-balo';
-    bagBtn.className = 'hotbar-slot tk-hotbar-balo';
-    bagBtn.title = 'Mở Nhân Vật, Trang Bị & Balo [B]';
-    bagBtn.innerHTML = `
-      <div class="hotbar-art-layer">${getBackpackIconSvg()}</div>
-      <span class="hotbar-key-tag">B</span>
-    `;
-    bagBtn.addEventListener('click', () => this.onOpenBag?.());
-    this.hotbarEl.appendChild(bagBtn);
+    let activeTouchId: number | null = null;
+    let isMouseDown = false;
+
+    const handleMove = (clientX: number, clientY: number) => {
+      const rect = base.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const dx = clientX - centerX;
+      const dy = clientY - centerY;
+      const dist = Math.hypot(dx, dy);
+      const maxRadius = 36;
+      const clampedDist = Math.min(maxRadius, dist);
+      const angle = Math.atan2(dy, dx);
+
+      const thumbX = Math.cos(angle) * clampedDist;
+      const thumbY = Math.sin(angle) * clampedDist;
+      thumb.style.transform = `translate(${thumbX}px, ${thumbY}px)`;
+
+      if (dist > 7) {
+        const octant = Math.round((angle * 4) / Math.PI);
+        const quantizedAngle = (octant * Math.PI) / 4;
+        onMoveVector({ dx: Math.cos(quantizedAngle), dy: Math.sin(quantizedAngle) });
+      } else {
+        onMoveVector(null);
+      }
+    };
+
+    const handleEnd = () => {
+      thumb.style.transform = 'translate(0px, 0px)';
+      onMoveVector(null);
+    };
+
+    base.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      if (activeTouchId !== null) return;
+      const t = e.changedTouches[0];
+      activeTouchId = t.identifier;
+      handleMove(t.clientX, t.clientY);
+    }, { passive: false });
+
+    window.addEventListener('touchmove', (e) => {
+      if (activeTouchId === null) return;
+      for (let i = 0; i < e.changedTouches.length; i++) {
+        const t = e.changedTouches[i];
+        if (t.identifier === activeTouchId) {
+          e.preventDefault();
+          handleMove(t.clientX, t.clientY);
+          break;
+        }
+      }
+    }, { passive: false });
+
+    window.addEventListener('touchend', (e) => {
+      if (activeTouchId === null) return;
+      for (let i = 0; i < e.changedTouches.length; i++) {
+        if (e.changedTouches[i].identifier === activeTouchId) {
+          activeTouchId = null;
+          handleEnd();
+          break;
+        }
+      }
+    });
+
+    base.addEventListener('mousedown', (e) => {
+      isMouseDown = true;
+      handleMove(e.clientX, e.clientY);
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      handleMove(e.clientX, e.clientY);
+    });
+    window.addEventListener('mouseup', () => {
+      if (isMouseDown) {
+        isMouseDown = false;
+        handleEnd();
+      }
+    });
   }
 }
