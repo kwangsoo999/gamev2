@@ -1,0 +1,96 @@
+/* Shared materials frame the artwork without competing with its silhouettes. */
+:root {
+  --art-forest: #132d2b;
+  --art-jade: #23544c;
+  --art-gold: #c5a66c;
+  --art-ivory: #f4edda;
+  --paper-shadow: 0 18px 60px #10252360;
+}
+
+.hud-player-panel,
+.hud-zone-banner,
+.hud-quest-log-card,
+.hud-right-rail,
+.hud-controls-hint,
+.hud-npc-dialog {
+  background: linear-gradient(145deg, #183a36f5, #102522f5);
+  border-color: #c5a66c99;
+  color: var(--art-ivory);
+  box-shadow: 0 8px 24px #071d2445, inset 0 1px 0 #fff5d51a;
+}
+
+.hud-avatar-frame {
+  border-color: #d6bc82;
+  outline-color: #274f44;
+  background: #e9e3d1;
+  box-shadow: 0 2px 8px #081e2555;
+}
+.hud-avatar-img { object-fit: cover; }
+.hud-art-icon { display: block; width: 26px; height: 26px; object-fit: contain; pointer-events: none; }
+.util-btn-icon .hud-art-icon { width: 24px; height: 24px; }
+.pill-icon .hud-art-icon { width: 23px; height: 23px; }
+.quick-icon .hud-art-icon { width: 30px; height: 30px; }
+.attack-burst-icon .hud-art-icon { width: 58px; height: 58px; }
+.hud-right-rail { border-radius: 12px; gap: 5px; padding: 6px; }
+.hud-right-rail .retro-icon-btn {
+  width: 32px; height: 32px; display: grid; place-items: center;
+  border: 1px solid #bda36b66; border-radius: 7px;
+  background: linear-gradient(145deg, #32594c, #17362f);
+}
+.quest-card-head, .quest-card-obj, #hud-quest-title, #hud-quest-obj { color: #e4e3cd; }
+
+.tk-window, .tk-window.tk-balo-window {
+  border-color: #b29a66;
+  background: radial-gradient(ellipse at 50% 0, #214740, #102825 75%) !important;
+  box-shadow: var(--paper-shadow), inset 0 0 0 1px #f3e6be18 !important;
+}
+.tk-window-header, .tk-window.tk-balo-window .tk-window-header, .tk-modal-footer {
+  background: linear-gradient(100deg, #183d37, #244d42, #183d37) !important;
+  border-color: #bda36b66 !important;
+}
+.tk-window-header h2 { color: #f5e8c8 !important; }
+.tk-header-title-group p { color: #b5c7b7 !important; }
+.tk-panel-inset, .tk-window.tk-balo-window .tk-panel-inset {
+  background: #0c201f55 !important;
+  border-color: #bda36b40 !important;
+}
+.tk-slot-cell {
+  background: radial-gradient(ellipse at 40% 30%, #355346, #152c29) !important;
+  border-color: #c5a66c70 !important;
+  box-shadow: inset 0 1px 0 #f5e7ba18;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.tk-slot-cell.empty {
+  background: #10282570 !important;
+  border-color: #a9b39b30 !important;
+}
+.tk-slot-cell:not(.empty):hover, .tk-slot-cell.selected {
+  border-color: #e6ce94 !important;
+  box-shadow: 0 0 0 2px #d4b87833, inset 0 0 14px #e4c47718 !important;
+}
+.tk-slot-art {
+  position: absolute; inset: 7%; width: 86%; height: 86%; overflow: hidden;
+  filter: drop-shadow(0 2px 2px #031b1b66);
+}
+.tk-slot-art svg, .tk-slot-art img {
+  display: block; width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain;
+}
+.tk-slot-subtag { background: #102825ed !important; color: #e0ddc9 !important; }
+.tk-paperdoll-pedestal {
+  background: radial-gradient(ellipse at 50% 60%, #3f6655, #112c28 72%) !important;
+  border-color: #c5a66c66 !important;
+}
+.tk-durability-box, .tk-inspector-bar {
+  background: #102825db !important;
+  border-color: #bda36b55 !important;
+}
+.tk-inspector-name { color: #ead4a0 !important; }
+.tk-inspector-desc { color: #c5d0bf !important; }
+.tk-skill-vfx-thumb { object-fit: cover; border-radius: 5px; }
+.hud-bar-hp { background: linear-gradient(90deg, #a83d48, #e77377); }
+.hud-bar-mp { background: linear-gradient(90deg, #286d98, #68bfd2); }
+.hud-bar-exp { background: linear-gradient(90deg, #a18142, #ead091); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-slot-cell { transition: none; }
+}

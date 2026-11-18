@@ -1,186 +1,35 @@
 import type { EquipSlotKey, InventoryItemDef } from '../engine/types';
 
 /**
- * High-craft SVG artwork generators unified with the "Thôn Khởi Nguyên"
- * dark bronze-wood & classic Japanese fantasy aesthetic (zero blurry external PNG crops).
+ * Shared hand-painted icon artwork for HUD, inventory and skill panels.
+ * SVG wrappers retain the existing UI API and scale the local PNGs cleanly.
  */
 
+/** Fixed local artwork paths keep catalog keys out of HTML attributes. */
+function artworkIcon(group: 'items' | 'skills', name: string): string {
+  return `<svg viewBox="0 0 64 64" width="100%" height="100%" aria-hidden="true" focusable="false"><image href="/assets/elysia/ui/${group}/${name}.png" width="64" height="64" preserveAspectRatio="xMidYMid meet" /></svg>`;
+}
+
 export function getSkillIconSvg(iconKey: string): string {
-  const k = String(iconKey || '').toLowerCase();
-
-  if (k === 'skill_flame_slash' || k.includes('fire') || k.includes('flame') || k.includes('meteor') || k.includes('berserker')) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skFire" cx="50%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#f97316"/>
-          <stop offset="60%" stop-color="#b91c1c"/>
-          <stop offset="100%" stop-color="#450a0a"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skFire)"/>
-      <path d="M32 10 C42 20 48 30 44 42 C41 50 32 54 24 50 C16 46 16 34 22 24 C24 30 28 30 32 10 Z" fill="#fef08a" stroke="#f59e0b" stroke-width="2"/>
-      <circle cx="31" cy="38" r="7" fill="#ffffff" opacity="0.85"/>
-      <circle cx="20" cy="18" r="2.5" fill="#fde047"/>
-      <circle cx="46" cy="20" r="2" fill="#fdba74"/>
-    </svg>`;
-  }
-
-  if (k.includes('ice') || k.includes('frost') || k.includes('blizzard')) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skIce" cx="50%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#38bdf8"/>
-          <stop offset="65%" stop-color="#0284c7"/>
-          <stop offset="100%" stop-color="#082f49"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skIce)"/>
-      <polygon points="32,8 40,26 54,32 40,38 32,56 24,38 10,32 24,26" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2"/>
-      <polygon points="32,16 36,28 48,32 36,36 32,48 28,36 16,32 28,28" fill="#ffffff"/>
-    </svg>`;
-  }
-
-  if (k.includes('lightning') || k.includes('thunder') || k.includes('railshot')) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skLight" cx="50%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#fde047"/>
-          <stop offset="60%" stop-color="#4f46e5"/>
-          <stop offset="100%" stop-color="#1e1b4b"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skLight)"/>
-      <polygon points="36,8 18,34 30,34 24,56 46,28 34,28" fill="#fef9c3" stroke="#facc15" stroke-width="2"/>
-    </svg>`;
-  }
-
-  if (
-    k === 'skill_golden_aura' ||
-    k.includes('holy') ||
-    k.includes('heal') ||
-    k.includes('divine') ||
-    k.includes('blessing') ||
-    k.includes('resurrection') ||
-    k.includes('saint') ||
-    k.includes('exorcist') ||
-    k.includes('sunburst')
-  ) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skHoly" cx="50%" cy="45%" r="55%">
-          <stop offset="0%" stop-color="#fef08a"/>
-          <stop offset="55%" stop-color="#d97706"/>
-          <stop offset="100%" stop-color="#451a03"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skHoly)"/>
-      <path d="M28 12 H36 V26 H50 V34 H36 V52 H28 V34 H14 V26 H28 Z" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
-      <circle cx="32" cy="30" r="6" fill="#ffffff"/>
-    </svg>`;
-  }
-
-  if (k.includes('shadow') || k.includes('dagger') || k.includes('poison') || k.includes('phantom') || k.includes('dark') || k.includes('assassin')) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skShadow" cx="50%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#a855f7"/>
-          <stop offset="65%" stop-color="#4c1d95"/>
-          <stop offset="100%" stop-color="#1e1b4b"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skShadow)"/>
-      <path d="M14 50 L46 14 L50 18 L18 54 Z" fill="#e9d5ff" stroke="#c084fc" stroke-width="1.8"/>
-      <path d="M50 50 L18 14 L14 18 L46 54 Z" fill="#d8b4fe" stroke="#9333ea" stroke-width="1.8"/>
-      <circle cx="32" cy="32" r="5" fill="#fde047"/>
-    </svg>`;
-  }
-
-  if (k.includes('arrow') || k.includes('bow') || k.includes('ranger') || k.includes('sniper') || k.includes('leaf') || k.includes('nature')) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skBow" cx="50%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#22c55e"/>
-          <stop offset="65%" stop-color="#15803d"/>
-          <stop offset="100%" stop-color="#052e16"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skBow)"/>
-      <path d="M20 12 C44 18 44 46 20 52" fill="none" stroke="#fde047" stroke-width="3.5" stroke-linecap="round"/>
-      <line x1="12" y1="32" x2="50" y2="32" stroke="#dcfce7" stroke-width="3"/>
-      <polygon points="54,32 44,26 44,38" fill="#ffffff"/>
-    </svg>`;
-  }
-
-  if (k.includes('spear') || k.includes('thrust') || k.includes('dragoon') || k.includes('warlancer') || k.includes('lance')) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skSpear" cx="50%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#38bdf8"/>
-          <stop offset="65%" stop-color="#1d4ed8"/>
-          <stop offset="100%" stop-color="#0f172a"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skSpear)"/>
-      <line x1="12" y1="52" x2="46" y2="18" stroke="#fde047" stroke-width="4" stroke-linecap="round"/>
-      <polygon points="54,10 38,18 46,26" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.8"/>
-    </svg>`;
-  }
-
-  if (k.includes('shield') || k.includes('guardian') || k.includes('bastion') || k.includes('aegis') || k.includes('paladin')) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skShield" cx="50%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#fbbf24"/>
-          <stop offset="65%" stop-color="#1e40af"/>
-          <stop offset="100%" stop-color="#0f172a"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skShield)"/>
-      <path d="M16 14 L32 10 L48 14 L46 36 C44 46 32 54 32 54 C32 54 20 46 18 36 Z" fill="#e2e8f0" stroke="#f59e0b" stroke-width="3"/>
-      <path d="M32 16 V48 M22 28 H42" stroke="#d97706" stroke-width="3"/>
-    </svg>`;
-  }
-
-  if (k.includes('arcane') || k.includes('star') || k.includes('mana') || k.includes('arcanist') || k.includes('elementalist')) {
-    return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <defs>
-        <radialGradient id="skArcane" cx="50%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#818cf8"/>
-          <stop offset="65%" stop-color="#4338ca"/>
-          <stop offset="100%" stop-color="#1e1b4b"/>
-        </radialGradient>
-      </defs>
-      <rect width="64" height="64" rx="6" fill="url(#skArcane)"/>
-      <circle cx="32" cy="32" r="18" fill="none" stroke="#c7d2fe" stroke-width="2" stroke-dasharray="4 2"/>
-      <polygon points="32,12 37,26 52,26 40,35 44,49 32,40 20,49 24,35 12,26 27,26" fill="#fef08a" stroke="#f59e0b" stroke-width="1.5"/>
-    </svg>`;
-  }
-
-  // Default / Sword / Slash / Azure Wave
-  return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-    <defs>
-      <radialGradient id="skBg1" cx="50%" cy="50%" r="55%">
-        <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.95"/>
-        <stop offset="60%" stop-color="#0369a1"/>
-        <stop offset="100%" stop-color="#082f49"/>
-      </radialGradient>
-    </defs>
-    <rect width="64" height="64" rx="6" fill="url(#skBg1)"/>
-    <path d="M10 52 C22 40 36 22 54 10 C42 28 30 42 16 54 Z" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M16 14 L46 44" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-    <circle cx="48" cy="16" r="4" fill="#ffffff" opacity="0.9"/>
-  </svg>`;
+  const key = String(iconKey || '').toLowerCase();
+  const rules: [string, RegExp][] = [
+    ['resurrection', /resurrect|angel/], ['double-slash', /double|triple/],
+    ['whirlwind', /spin|whirlwind/], ['cleave', /cleave|heavy|break/],
+    ['fire', /fire|flame|meteor|berserk/], ['ice', /ice|frost|blizzard/],
+    ['lightning', /lightning|thunder|railshot/],
+    ['holy', /holy|heal|divine|bless|saint|exorcist|sunburst|golden_aura/],
+    ['shadow', /shadow|dagger|poison|phantom|dark|assassin/],
+    ['bow', /arrow|bow|ranger|sniper/], ['spear', /spear|thrust|lance|dragoon/],
+    ['shield', /shield|guardian|aegis|paladin|bastion/],
+    ['arcane', /arcane|star|mana|arcanist|elementalist/],
+    ['nature', /root|leaf|nature|vine/], ['water', /water|wave|hydro/],
+    ['wind', /wind|tornado/],
+  ];
+  return artworkIcon('skills', rules.find(([, pattern]) => pattern.test(key))?.[0] || 'cleave');
 }
 
 export function getBackpackIconSvg(): string {
-  return `<svg viewBox="0 0 64 64" width="100%" height="100%">
-    <rect width="64" height="64" rx="6" fill="#251c14"/>
-    <path d="M23 16 C23 10 41 10 41 16" fill="none" stroke="#c59f59" stroke-width="4" stroke-linecap="round"/>
-    <rect x="14" y="18" width="36" height="34" rx="8" fill="#8b5a2b" stroke="#3b220d" stroke-width="2.5"/>
-    <path d="M14 25 C14 18 50 18 50 25 L50 32 C42 35 22 35 14 32 Z" fill="#a46e38" stroke="#3b220d" stroke-width="2"/>
-    <rect x="20" y="34" width="24" height="13" rx="3" fill="#6e4321" stroke="#3b220d" stroke-width="1.8"/>
-    <rect x="28" y="29" width="8" height="9" rx="2" fill="#e6c675" stroke="#45270c" stroke-width="1.5"/>
-  </svg>`;
+  return artworkIcon('items', 'backpack');
 }
 
 export function getPadlockSmallSvg(): string {
@@ -192,188 +41,38 @@ export function getPadlockSmallSvg(): string {
 }
 
 export function getItemIconSvg(iconKey: string): string {
-  const map: Record<string, string> = {
-    sword_novice: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M49 11 L53 15 L29 39 L25 35 Z" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
-      <path d="M49 11 L25 35 L27 37 L51 13 Z" fill="#94a3b8"/>
-      <path d="M19 31 L33 45 L30 48 L16 34 Z" fill="#d97706" stroke="#451a03" stroke-width="1.8"/>
-      <path d="M22 42 L13 51 L16 54 L25 45 Z" fill="#78350f" stroke="#451a03" stroke-width="1.8"/>
-      <circle cx="13" cy="52" r="3.2" fill="#f59e0b" stroke="#451a03" stroke-width="1.5"/>
-    </svg>`,
-    shield_oak: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M16 14 L32 10 L48 14 L46 36 C44 46 32 54 32 54 C32 54 20 46 18 36 Z" fill="#8b5a2b" stroke="#cbd5e1" stroke-width="3.2"/>
-      <path d="M32 14 L32 50 M20 26 L44 26" stroke="#5c3818" stroke-width="2.5"/>
-      <circle cx="32" cy="27" r="6" fill="#eab308" stroke="#451a03" stroke-width="2"/>
-    </svg>`,
-    tunic_explorer: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M18 15 L26 12 C28 16 36 16 38 12 L46 15 L53 27 L45 31 L42 25 L42 51 L22 51 L22 25 L19 31 L11 27 Z" fill="#2f6f44" stroke="#142d1c" stroke-width="2.2"/>
-      <rect x="21" y="34" width="22" height="5" fill="#78350f" stroke="#3b1d07" stroke-width="1.4"/>
-      <rect x="29" y="33" width="6" height="7" rx="1" fill="#facc15" stroke="#451a03" stroke-width="1.2"/>
-    </svg>`,
-    helm_bronze: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M14 38 C14 21 22 14 32 14 C42 14 50 21 50 38 L52 44 L42 44 L40 34 L32 37 L24 34 L22 44 L12 44 Z" fill="#94a3b8" stroke="#1e293b" stroke-width="2.2"/>
-      <path d="M29 12 L35 12 L34 29 L30 29 Z" fill="#d97706"/>
-    </svg>`,
-    gloves_leather: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M14 24 C14 19 22 19 24 22 L28 19 L30 33 L30 48 L14 48 Z" fill="#8b5a2b" stroke="#3b220d" stroke-width="2"/>
-      <path d="M35 22 C37 19 46 19 46 24 L48 48 L33 48 L33 33 Z" fill="#a46e38" stroke="#3b220d" stroke-width="2"/>
-      <rect x="13" y="40" width="18" height="7" rx="2" fill="#d97706" stroke="#451a03" stroke-width="1.5"/>
-      <rect x="32" y="40" width="18" height="7" rx="2" fill="#d97706" stroke="#451a03" stroke-width="1.5"/>
-    </svg>`,
-    boots_leather: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M14 14 L26 14 L26 42 L34 45 L34 52 L14 52 Z" fill="#7c4a21" stroke="#3b220d" stroke-width="2"/>
-      <path d="M36 18 L48 18 L48 44 L55 47 L55 52 L36 52 Z" fill="#925829" stroke="#3b220d" stroke-width="2"/>
-      <rect x="13" y="14" width="14" height="6" fill="#d97706"/>
-      <rect x="35" y="18" width="14" height="6" fill="#d97706"/>
-    </svg>`,
-    amulet_jade: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M22 12 C22 24 42 24 42 12" fill="none" stroke="#eab308" stroke-width="3"/>
-      <circle cx="32" cy="36" r="14" fill="#d97706" stroke="#451a03" stroke-width="2"/>
-      <circle cx="32" cy="36" r="8" fill="#10b981" stroke="#a7f3d0" stroke-width="1.8"/>
-    </svg>`,
-    potion_hp: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <rect x="27" y="10" width="10" height="7" rx="2" fill="#a46e38" stroke="#451a03" stroke-width="1.8"/>
-      <path d="M25 17 L39 17 L38 25 C46 28 49 36 47 45 C45 51 39 54 32 54 C25 54 19 51 17 45 C15 36 18 28 26 25 Z" fill="#dc2626" stroke="#f8fafc" stroke-width="2.2"/>
-      <path d="M22 36 C21 42 23 47 28 49" fill="none" stroke="#fecaca" stroke-width="2.8" stroke-linecap="round"/>
-    </svg>`,
-    potion_mp: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <rect x="27" y="10" width="10" height="7" rx="2" fill="#a46e38" stroke="#451a03" stroke-width="1.8"/>
-      <path d="M25 17 L39 17 L38 25 C46 28 49 36 47 45 C45 51 39 54 32 54 C25 54 19 51 17 45 C15 36 18 28 26 25 Z" fill="#2563eb" stroke="#f8fafc" stroke-width="2.2"/>
-      <path d="M22 36 C21 42 23 47 28 49" fill="none" stroke="#bfdbfe" stroke-width="2.8" stroke-linecap="round"/>
-    </svg>`,
-    bread_loaf: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <ellipse cx="32" cy="35" rx="20" ry="13" transform="rotate(-15 32 35)" fill="#d97706" stroke="#451a03" stroke-width="2.2"/>
-      <path d="M22 30 L27 36 M30 27 L35 33 M38 25 L43 31" stroke="#fef3c7" stroke-width="2.5" stroke-linecap="round"/>
-    </svg>`,
-    herb_green: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M16 50 C26 38 38 26 48 14" stroke="#3f6212" stroke-width="3" fill="none"/>
-      <ellipse cx="26" cy="34" rx="8" ry="4.5" transform="rotate(-35 26 34)" fill="#65a30d" stroke="#1a2e05" stroke-width="1.5"/>
-      <ellipse cx="38" cy="24" rx="8" ry="4.5" transform="rotate(-35 38 24)" fill="#84cc16" stroke="#1a2e05" stroke-width="1.5"/>
-      <ellipse cx="34" cy="40" rx="7.5" ry="4" transform="rotate(20 34 40)" fill="#4d7c0f" stroke="#1a2e05" stroke-width="1.5"/>
-    </svg>`,
-    wood_oak: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M14 40 L38 16 L50 28 L26 52 Z" fill="#7c4a21" stroke="#2d1706" stroke-width="2.2"/>
-      <ellipse cx="20" cy="46" rx="8" ry="6" transform="rotate(45 20 46)" fill="#e7c697" stroke="#2d1706" stroke-width="2"/>
-    </svg>`,
-    ore_iron: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <polygon points="16,44 20,22 36,14 50,24 46,46 30,52" fill="#64748b" stroke="#1e293b" stroke-width="2.2"/>
-      <polygon points="24,25 35,18 42,27 30,36" fill="#cbd5e1"/>
-    </svg>`,
-    mushroom_cap: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <rect x="26" y="34" width="12" height="17" rx="4" fill="#fef3c7" stroke="#451a03" stroke-width="2"/>
-      <path d="M12 36 C12 20 20 14 32 14 C44 14 52 20 52 36 Z" fill="#b45309" stroke="#451a03" stroke-width="2.2"/>
-      <circle cx="24" cy="24" r="3.5" fill="#fef3c7"/>
-      <circle cx="38" cy="22" r="2.8" fill="#fef3c7"/>
-    </svg>`,
-    gem_amethyst: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <polygon points="32,10 48,25 42,50 22,50 16,25" fill="#9333ea" stroke="#f3e8ff" stroke-width="2"/>
-      <polygon points="32,10 41,25 32,44 23,25" fill="#c084fc" opacity="0.65"/>
-    </svg>`,
-    scroll_town: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <rect x="18" y="18" width="28" height="28" rx="3" fill="#fef3c7" stroke="#78350f" stroke-width="2"/>
-      <rect x="14" y="14" width="36" height="7" rx="3" fill="#b45309" stroke="#451a03" stroke-width="1.8"/>
-      <rect x="14" y="43" width="36" height="7" rx="3" fill="#b45309" stroke="#451a03" stroke-width="1.8"/>
-      <path d="M24 27 H40 M24 34 H36" stroke="#78350f" stroke-width="2.2" stroke-linecap="round"/>
-    </svg>`,
-    spear_iron: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M12 52 L44 20" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
-      <path d="M40 16 L54 10 L48 24 L42 22 Z" fill="#e2e8f0" stroke="#1e293b" stroke-width="2"/>
-      <circle cx="42" cy="22" r="3" fill="#f59e0b"/>
-    </svg>`,
-    staff_holy: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M18 54 L42 22" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
-      <circle cx="46" cy="17" r="9" fill="#fef08a" stroke="#b45309" stroke-width="2.2"/>
-      <circle cx="46" cy="17" r="4.5" fill="#38bdf8"/>
-    </svg>`,
-    spellbook_arcane: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <rect x="14" y="12" width="36" height="40" rx="5" fill="#4338ca" stroke="#1e1b4b" stroke-width="2.4"/>
-      <rect x="19" y="14" width="28" height="36" rx="3" fill="#6366f1" stroke="#c7d2fe" stroke-width="1.5"/>
-      <polygon points="33,21 39,32 33,43 27,32" fill="#fde047" stroke="#fef9c3" stroke-width="1.4"/>
-    </svg>`,
-    dual_daggers: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M12 50 L36 16 L39 21 L17 52 Z" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.8"/>
-      <path d="M52 50 L28 16 L25 21 L47 52 Z" fill="#94a3b8" stroke="#0f172a" stroke-width="1.8"/>
-      <circle cx="15" cy="49" r="3" fill="#9333ea"/>
-      <circle cx="49" cy="49" r="3" fill="#9333ea"/>
-    </svg>`,
-    gauntlets_fist: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <rect x="15" y="16" width="34" height="32" rx="7" fill="#b91c1c" stroke="#450a0a" stroke-width="2.4"/>
-      <rect x="17" y="20" width="30" height="10" rx="3" fill="#f59e0b" stroke="#451a03" stroke-width="1.5"/>
-      <path d="M22 36 H42" stroke="#fef3c7" stroke-width="3" stroke-linecap="round"/>
-    </svg>`,
-    bow_ranger: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M22 10 C48 16 48 48 22 54" fill="none" stroke="#92400e" stroke-width="4.2" stroke-linecap="round"/>
-      <line x1="22" y1="11" x2="22" y2="53" stroke="#e2e8f0" stroke-width="1.8"/>
-      <line x1="14" y1="32" x2="50" y2="32" stroke="#10b981" stroke-width="2.4"/>
-      <polygon points="52,32 45,28 45,36" fill="#e2e8f0"/>
-    </svg>`,
-    armor_plate: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M16 14 L26 11 L32 16 L38 11 L48 14 L54 26 L44 30 L42 52 L22 52 L20 30 L10 26 Z" fill="#475569" stroke="#f59e0b" stroke-width="2.2"/>
-      <path d="M25 24 L32 30 L39 24" fill="none" stroke="#fde047" stroke-width="2.2"/>
-    </svg>`,
-    shoulder_plate: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M10 30 C12 16 26 14 30 22 L28 42 L12 40 Z" fill="#64748b" stroke="#1e293b" stroke-width="2.2"/>
-      <path d="M54 30 C52 16 38 14 34 22 L36 42 L52 40 Z" fill="#64748b" stroke="#1e293b" stroke-width="2.2"/>
-      <circle cx="21" cy="28" r="3" fill="#fbbf24"/>
-      <circle cx="43" cy="28" r="3" fill="#fbbf24"/>
-    </svg>`,
-    ring_band: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <ellipse cx="32" cy="36" rx="16" ry="14" fill="none" stroke="#f59e0b" stroke-width="6"/>
-      <ellipse cx="32" cy="36" rx="16" ry="14" fill="none" stroke="#78350f" stroke-width="1.5"/>
-      <polygon points="32,12 40,22 32,30 24,22" fill="#38bdf8" stroke="#0f172a" stroke-width="2"/>
-    </svg>`,
-    cloak_wind: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M20 12 L44 12 L52 52 L32 46 L12 52 Z" fill="#365314" stroke="#14532d" stroke-width="2.4"/>
-      <path d="M24 16 L40 16 L36 30 L28 30 Z" fill="#d97706" stroke="#78350f" stroke-width="1.5"/>
-    </svg>`,
-    fragment_crystal: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <polygon points="32,8 48,24 42,54 22,54 16,24" fill="#c084fc" stroke="#4c1d95" stroke-width="2.2"/>
-      <polygon points="32,12 42,26 32,48 22,26" fill="#f3e8ff" opacity="0.65"/>
-    </svg>`,
-    upgrade_stone: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <polygon points="32,10 52,26 44,52 20,52 12,26" fill="#38bdf8" stroke="#0c4a6e" stroke-width="2.2"/>
-      <path d="M26 32 L32 20 L38 32 L32 44 Z" fill="#fef08a"/>
-    </svg>`,
-    boss_core: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <circle cx="32" cy="32" r="20" fill="#dc2626" stroke="#450a0a" stroke-width="2.5"/>
-      <circle cx="32" cy="32" r="11" fill="#fbbf24" stroke="#7c2d12" stroke-width="2"/>
-      <circle cx="28" cy="28" r="3" fill="#fffbeb"/>
-    </svg>`,
-    excalibur_sword_icon: `<svg viewBox="0 0 64 64" width="100%" height="100%">
-      <path d="M51 9 L55 13 L29 39 L25 35 Z" fill="#fef08a" stroke="#b45309" stroke-width="2"/>
-      <path d="M51 9 L25 35 L27 37 L53 11 Z" fill="#ffffff"/>
-      <path d="M17 29 L35 47 L31 51 L13 33 Z" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
-      <path d="M22 42 L12 52 L16 56 L26 46 Z" fill="#1e40af" stroke="#1e1b4b" stroke-width="1.8"/>
-      <circle cx="26" cy="38" r="3.5" fill="#38bdf8" stroke="#ffffff" stroke-width="1.2"/>
-    </svg>`,
-  };
-  if (map[iconKey]) return map[iconKey];
-  const k = String(iconKey || '').toLowerCase();
-  if (k.includes('herb') || k.includes('leaf') || k.includes('flower')) return map.herb_green;
-  if (k.includes('potion_mp') || k.includes('mana')) return map.potion_mp;
-  if (k.includes('potion') || k.includes('elixir') || k.includes('panacea')) return map.potion_hp;
-  if (k.includes('bow')) return map.bow_ranger;
-  if (k.includes('dagger')) return map.dual_daggers;
-  if (k.includes('spear') || k.includes('lance') || k.includes('halberd')) return map.spear_iron;
-  if (k.includes('staff') || k.includes('scepter') || k.includes('rod')) return map.staff_holy;
-  if (k.includes('book') || k.includes('tome') || k.includes('grimoire')) return map.spellbook_arcane;
-  if (k.includes('shield')) return map.shield_oak;
-  if (k.includes('helm') || k.includes('crown') || k.includes('hat')) return map.helm_bronze;
-  if (k.includes('boot') || k.includes('shoe') || k.includes('greave')) return map.boots_leather;
-  if (k.includes('glove') || k.includes('gauntlet')) return map.gloves_leather;
-  if (k.includes('shoulder') || k.includes('pauldron')) return map.shoulder_plate;
-  if (k.includes('cloak') || k.includes('cape') || k.includes('mantle')) return map.cloak_wind;
-  if (k.includes('ring')) return map.ring_band;
-  if (k.includes('amulet') || k.includes('necklace') || k.includes('pendant')) return map.amulet_jade;
-  if (k.includes('armor') || k.includes('plate') || k.includes('mail')) return map.armor_plate;
-  if (k.includes('tunic') || k.includes('robe') || k.includes('coat')) return map.tunic_explorer;
-  if (k.includes('scroll') || k.includes('cert') || k.includes('seal')) return map.scroll_town;
-  if (k.includes('ore') || k.includes('ingot') || k.includes('bar') || k.includes('stone')) return map.ore_iron;
-  if (k.includes('wood') || k.includes('timber') || k.includes('plank') || k.includes('branch')) return map.wood_oak;
-  if (k.includes('gem') || k.includes('crystal') || k.includes('pearl')) return map.gem_amethyst;
-  if (k.includes('bread') || k.includes('food') || k.includes('stew') || k.includes('feast') || k.includes('wheat') || k.includes('apple')) return map.bread_loaf;
-  if (k.includes('core') || k.includes('heart') || k.includes('scale')) return map.boss_core;
-  return map.sword_novice;
+  const key = String(iconKey || '').toLowerCase();
+  const canonical = new Set([
+    'sword_novice', 'excalibur_sword_icon', 'shield_oak', 'tunic_explorer', 'helm_bronze',
+    'gloves_leather', 'boots_leather', 'amulet_jade', 'potion_hp', 'potion_mp', 'bread_loaf',
+    'herb_green', 'wood_oak', 'ore_iron', 'mushroom_cap', 'gem_amethyst', 'scroll_town',
+    'spear_iron', 'staff_holy', 'spellbook_arcane', 'dual_daggers', 'gauntlets_fist',
+    'bow_ranger', 'armor_plate', 'shoulder_plate', 'cloak_wind', 'ring_band', 'gold_coins',
+    'gem_blue', 'gem_amber', 'fish', 'leather', 'flower_purple', 'tea_leaves', 'arrows', 'backpack',
+  ]);
+  if (canonical.has(key)) return artworkIcon('items', key);
+  const rules: [string, RegExp][] = [
+    ['excalibur_sword_icon', /excalibur|holy_sword/],
+    ['potion_hp', /potion.*hp|hp.*potion|health|healing_potion/],
+    ['potion_mp', /potion.*mp|mp.*potion|mana_potion/],
+    ['dual_daggers', /dagger|knife/], ['bow_ranger', /bow/], ['arrows', /arrow|quiver/],
+    ['spear_iron', /spear|lance|halberd/], ['staff_holy', /staff|wand|scepter/],
+    ['spellbook_arcane', /book|tome/], ['gauntlets_fist', /fist|knuckle/],
+    ['sword_novice', /sword|blade/], ['shield_oak', /shield|buckler/],
+    ['helm_bronze', /helm|crown|hat|cap/], ['boots_leather', /boot|shoe|greave/],
+    ['gloves_leather', /glove|gauntlet/], ['shoulder_plate', /shoulder|pauldron/],
+    ['cloak_wind', /cloak|cape|mantle/], ['ring_band', /ring/],
+    ['amulet_jade', /amulet|necklace|pendant/], ['armor_plate', /armor|plate|mail/],
+    ['tunic_explorer', /tunic|robe|coat/], ['scroll_town', /scroll|cert|seal/],
+    ['gem_blue', /blue.*gem|sapphire/], ['gem_amber', /amber|topaz/],
+    ['gem_amethyst', /gem|crystal|pearl|core|heart|scale/],
+    ['ore_iron', /ore|ingot|stone/], ['wood_oak', /wood|timber|plank|branch/],
+    ['mushroom_cap', /mushroom/], ['flower_purple', /flower/], ['tea_leaves', /tea/],
+    ['herb_green', /herb|leaf|leaves/], ['fish', /fish/], ['leather', /leather|hide|pelt/],
+    ['bread_loaf', /bread|food|stew|feast|wheat|apple/], ['gold_coins', /gold|coin/],
+    ['backpack', /bag|pack/],
+  ];
+  return artworkIcon('items', rules.find(([, pattern]) => pattern.test(key))?.[0] || 'gem_amethyst');
 }
 
 export function getPaperdollSvg(equipment: Partial<Record<EquipSlotKey, InventoryItemDef>>): string {

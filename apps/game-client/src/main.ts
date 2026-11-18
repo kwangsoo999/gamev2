@@ -1,4 +1,5 @@
 import './ui/elysia-ui.css';
+import './ui/asset-theme.css';
 import { GameEngine } from './engine/GameEngine';
 import { SpriteRegistryDoc, VillageMapData } from './engine/types';
 import { BaloEquipModal } from './ui/BaloEquipModal';
